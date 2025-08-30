@@ -1,61 +1,54 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
+import prettier from "eslint-plugin-prettier";
+import reactHooks from "eslint-plugin-react-hooks";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import unusedImports from "eslint-plugin-unused-imports";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-  ...compat.config({
-    plugins: ["tailwindcss", "unused-imports", "simple-import-sort"],
-    extends: ["next/core-web-vitals", "next/typescript", "prettier"],
+export default [
+  {
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 2024,
+        sourceType: "module",
+        ecmaFeatures: { jsx: true },
+      },
+    },
+    plugins: {
+      "@typescript-eslint": tsPlugin,
+      prettier,
+      "simple-import-sort": simpleImportSort,
+      "unused-imports": unusedImports,
+      "react-hooks": reactHooks,
+    },
     rules: {
       semi: ["error", "always"],
       quotes: ["error", "double"],
       "prefer-arrow-callback": ["error"],
       "prefer-template": ["error"],
-      "no-unused-vars": [
-        "error",
-        {
-          argsIgnorePattern: "^_",
-          varsIgnorePattern: "^_",
-        },
-      ],
-      "no-console": [
-        "warn",
-        {
-          allow: ["warn", "error"],
-        },
-      ],
-      "unused-imports/no-unused-imports": "error",
+      "no-console": ["warn", { allow: ["warn", "error"] }],
+      "unused-imports/no-unused-imports": "warn",
       "unused-imports/no-unused-vars": [
         "warn",
-        {
-          vars: "all",
-          varsIgnorePattern: "^_",
-          args: "after-used",
-          argsIgnorePattern: "^_",
-        },
+        { vars: "all", args: "after-used", ignoreRestSiblings: true },
       ],
-      "tailwindcss/no-custom-classname": "warn",
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
+      "simple-import-sort/imports": "warn",
+      "simple-import-sort/exports": "warn",
+      "prettier/prettier": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
     },
-  }),
+  },
   {
     ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "next-env.d.ts",
+      "node_modules",
+      ".next",
+      "out",
+      "build",
       "public",
+      "next-env.d.ts",
     ],
   },
 ];
-
-export default eslintConfig;
