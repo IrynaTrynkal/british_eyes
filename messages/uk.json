@@ -1,6 +1,16 @@
 {
-  "HomePage": {
-    "title": "Привіт світе!",
-    "description": "Привіт світе!"
-  }
+    "HomePage": {
+        "title": "Привіт світе!",
+        "description": "Привіт світе!"
+    },
+    "Menu": {
+        "services": "послуги",
+        "prices": "ціни",
+        "offers": "акції",
+        "doctors": "лікарі",
+        "about": "про клініку",
+        "patients": "пацієнтам",
+        "reviews": "відгуки",
+        "contacts": "контакти"
+    }
 }
