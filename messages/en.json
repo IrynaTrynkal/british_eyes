@@ -1,6 +1,16 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "description": "Hello world!"
-  }
+    "HomePage": {
+        "title": "Hello world!",
+        "description": "Hello world!"
+    },
+    "Menu": {
+        "services": "Services",
+        "prices": "Prices",
+        "offers": "offers",
+        "doctors": "Doctors",
+        "about": "About Clinic",
+        "patients": "For Patients",
+        "reviews": "Reviews",
+        "contacts": "Contacts"
+    }
 }

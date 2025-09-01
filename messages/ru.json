@@ -1,6 +1,16 @@
 {
-  "HomePage": {
-    "title": "Привет мир!",
-    "description": "Привет мир!"
-  }
+    "HomePage": {
+        "title": "Привет мир!",
+        "description": "Привет мир!"
+    },
+    "Menu": {
+        "services": "Услуги",
+        "prices": "Цены",
+        "offers": "Акции",
+        "doctors": "Врачи",
+        "about": "О клинике",
+        "patients": "Пациентам",
+        "reviews": "Отзывы",
+        "contacts": "Контакты"
+    }
 }
