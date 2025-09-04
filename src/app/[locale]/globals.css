@@ -22,6 +22,9 @@
     /* 📱 Breakpoints */
     --breakpoint-tab: 768px;
     --breakpoint-pc: 1440px;
+
+    /* 🪞 Тіні */
+    --shadow-button: 4px 4px 0 0 var(--color-black);
 }
 
 body {
@@ -32,6 +35,25 @@ body {
 
 @layer components {
     .content {
-        @apply tab:px-6 pc:px-12 tab:max-w-full max-w-[540px] px-4;
+        @apply tab:px-6 pc:px-12 tab:max-w-full mx-auto max-w-[540px] px-4;
     }
+}
+
+button {
+    cursor: pointer;
+}
+.link-gradient {
+    @apply transition-all duration-500;
+    background: none;
+}
+
+.link-gradient:hover {
+    background: linear-gradient(
+        170deg,
+        #0b7556,
+        #09684b,
+        #023f2c,
+        #003626,
+        #08654a
+    );
 }

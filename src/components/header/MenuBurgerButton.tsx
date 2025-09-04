@@ -17,14 +17,14 @@ export const MenuBurgerButton = ({
             }
             type="button"
             onClick={toggleHeaderMenuOpen}
-            className="relative z-10 flex h-11 w-11 items-center justify-center p-1"
+            className="tab:h-12 tab:w-12 tab:p-3 relative z-10 flex h-6 w-6 items-center justify-center rounded-sm border border-transparent p-1 transition-all duration-300 ease-in-out hover:border-black"
         >
             <IconMenu
-                className={`absolute transition-opacity duration-300 ${isHeaderMenuOpened ? "pointer-events-none opacity-0" : "pointer-events-auto opacity-100"}`}
+                className={`tab:w-8 tab:h-8 absolute transition-opacity duration-300 ${isHeaderMenuOpened ? "pointer-events-none opacity-0" : "pointer-events-auto opacity-100"}`}
             />
 
             <IconClose
-                className={`absolute transition-opacity duration-300 ${isHeaderMenuOpened ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
+                className={`tab:w-6 tab:h-6 absolute transition-opacity duration-300 ${isHeaderMenuOpened ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
             />
         </button>
     );

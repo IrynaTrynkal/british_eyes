@@ -20,7 +20,7 @@ export default function LanguageSwitcherMob() {
 
     return (
         <div className="font-oswald relative font-medium">
-            <ul className="text-grey mt-2 w-full">
+            <ul className="text-grey w-full">
                 {locales.map(curLocale => (
                     <li key={curLocale} className="mb-2">
                         <Link
@@ -35,7 +35,7 @@ export default function LanguageSwitcherMob() {
                             className={`font-oswald font-medium uppercase ${
                                 curLocale === locale
                                     ? "pointer-events-none text-black underline"
-                                    : "text-grey transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:underline"
+                                    : "text-grey transition-all duration-[300ms] ease-in-out hover:underline"
                             }`}
                         >
                             {curLocale === "uk" ? "ua" : curLocale}

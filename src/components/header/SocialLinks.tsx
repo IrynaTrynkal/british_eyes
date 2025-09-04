@@ -1,40 +1,23 @@
-import { useLocale } from "next-intl";
+import { socialLinks } from "../assets/contacts";
+import { IconFacebook } from "../shared/icons/IconFacebook";
+import { IconInsta } from "../shared/icons/IconInsta";
 
 export const SocialLinks = ({ className }: { className?: string }) => {
-    const whatsapp = "https://wa.me/380955076901";
-    const LDLink = "https://www.linkedin.com/";
-    const telegram = "https://t.me/anvil_drone";
-
-    const locale = useLocale();
-
-    const socialList = [
-        {
-            name: "linkedin",
-            href: LDLink,
-        },
-        {
-            name: "telegram",
-            href: telegram,
-        },
-        {
-            name: "whatsapp",
-            href: whatsapp,
-        },
-    ];
     return (
-        <ul className={`${className} flex justify-between`}>
-            {socialList.map(content => (
-                <li
-                    key={content.name}
-                    className="text-title font-bold uppercase"
-                >
+        <ul className={`${className} flex gap-2`}>
+            {socialLinks.map(content => (
+                <li key={content.name} className="">
                     <a
-                        href={content.href}
+                        href={content.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=""
+                        className="pc:w-12 pc:h-12 pc:p-[9.6px] flex h-8 w-8 items-center justify-center rounded-sm p-[6px] hover:border"
                     >
-                        {content.name}
+                        {content.name === "instagram" ? (
+                            <IconInsta />
+                        ) : (
+                            <IconFacebook />
+                        )}
                     </a>
                 </li>
             ))}

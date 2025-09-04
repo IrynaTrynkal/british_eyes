@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
     const renderLabel = (lang: string) => (lang === "uk" ? "ua" : lang);
 
     return (
-        <div className="font-oswald relative font-medium">
+        <div className="pc:block font-oswald relative hidden font-medium">
             <button
                 type="button"
                 onClick={() => setOpen(prev => !prev)}
@@ -50,7 +50,7 @@ export default function LanguageSwitcher() {
                                 replace
                                 locale={curLocale}
                                 scroll={false}
-                                className="block px-3 py-[3px] uppercase transition hover:underline"
+                                className="block px-3 py-[3px] uppercase transition-all duration-[300ms] ease-in-out hover:underline"
                                 onClick={() => setOpen(false)}
                             >
                                 {renderLabel(curLocale)}
