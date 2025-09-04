@@ -14,9 +14,7 @@ export const PhoneButton = ({
             aria-label="button that opens the phone list"
             type="button"
             onClick={togglePhoneListOpen}
-            className={
-                "group pc:h-12 pc:w-12 relative z-10 flex h-8 w-8 items-center justify-center rounded-sm border border-black p-1 transition-colors duration-[300ms] ease-in-out hover:bg-black focus:bg-black active:bg-black"
-            }
+            className={`group pc:h-12 pc:w-12 relative z-10 flex h-8 w-8 items-center justify-center rounded-sm border border-black p-1 transition-colors duration-[300ms] ease-in-out ${isPhoneListOpened ? "text-ivory bg-black" : "hover:bg-black focus:bg-black active:bg-black"} hover:bg-black focus:bg-black active:bg-black`}
         >
             <IconPhone
                 className={
