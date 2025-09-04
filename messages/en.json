@@ -1,6 +1,45 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "description": "Hello world!"
-  }
+    "HomePage": {
+        "title": "Hello world!",
+        "description": "Hello world!"
+    },
+    "Menu": {
+        "onlineButtonMob": "online booking",
+        "onlineButtonPC": "Book consultation",
+        "services": "Services",
+        "service-prices": "Prices",
+        "offers": "offers",
+        "doctors": "Doctors",
+        "about-clinic": "About Clinic",
+        "patient-information": "For Patients",
+        "reviews": "Reviews",
+        "contacts": "Contacts",
+        "socialMedia": "social networks",
+        "laser-vision-correction": "Лазерна корекція зору",
+        "eye-exam": "Перевірка зору",
+        "cataract-treatment": "Лікування катаракти",
+        "dry-eye-syndrome": "Лікування синдрому сухого ока",
+        "children-department": "Дитяче відділення",
+        "keratoconus-treatment": "Лікування кератоконусу",
+        "laser-treatment-of-eye-diseases": "Лазерне лікування захворювань ока",
+        "refractive-lensectomy": "Рефракційна ленсектомія",
+        "vitreoretinal-surgery": "Вітреоретинальна хірургія",
+        "intravitreal-injections": "Інтравітреальні ін’єкції",
+        "surgical-glaucoma-treatment": "Хірургічне лікування глаукоми",
+        "strabismus-treatment": "Лікування косоокості",
+        "eyelid-and-conjunctival-surgery": "Хірургія повік і кон’юнктиви",
+        "anesthesia-benefit": "Анестезіологічний посібник",
+        "xenon-therapy": "Ксенонотерапія",
+        "information-for-nonresident-patients": "Для іногородніх пацієнтів",
+        "reminders-and-instructions": "Пам’ятки та інструкції для пацієнтів",
+        "eye-disease": "захворювання очей",
+        "laser-vision-correction-smalText": "Програма «живий зір» після операції з приводу катаракти, пресбіопії і з рефракційної метою.",
+        "cataract-treatment-smalText": "Програма «живий зір» після операції з приводу катаракти, пресбіопії і з рефракційної метою.",
+        "eye-exam-smalText": "Програма «живий зір» після операції з приводу катаракти, пресбіопії і з рефракційної метою.",
+        "dry-eye-syndrome-smalText": "Програма «живий зір» після операції з приводу катаракти, пресбіопії і з рефракційної метою."
+    },
+    "Modals": {
+        "callUs": "Contact us",
+        "hotLine": "free hotline in Ukraine"
+    }
 }

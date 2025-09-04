@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
+import { Header } from "@/components/header/Header";
 import { routing } from "@/i18n/routing";
 
 const oswald = Oswald({
@@ -61,11 +62,14 @@ export default async function RootLayout({
     }
     return (
         <html lang={locale} suppressHydrationWarning>
-            <body
-                className={`${oswald.variable} ${arimo.variable} antialiased `}
-            >
-                <NextIntlClientProvider>{children}</NextIntlClientProvider>
-            </body>
+            <NextIntlClientProvider>
+                <body
+                    className={`${oswald.variable} ${arimo.variable} antialiased`}
+                >
+                    <Header />
+                    <main>{children}</main>
+                </body>
+            </NextIntlClientProvider>
         </html>
     );
 }
