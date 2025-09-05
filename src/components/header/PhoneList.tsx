@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 
 import { normalizePhone } from "@/utils/normalizePhone";
 
-import { hotLineNumber, phoneList } from "../assets/contacts";
+import { hotLineNumber } from "../assets/contacts";
 import { ButtonClose } from "../shared/ButtonClose";
 import { PhoneNumberList } from "../shared/PhoneNumberList";
 
@@ -34,7 +34,6 @@ export const PhoneList = ({
                     {t("callUs")}
                 </h3>
                 <PhoneNumberList
-                    phoneList={phoneList}
                     onClick={() => setIsPhoneListOpened(false)}
                     className="mb-8 flex flex-col items-center gap-3 leading-none font-medium"
                 />

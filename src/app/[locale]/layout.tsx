@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
+import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
 import { routing } from "@/i18n/routing";
 
@@ -68,6 +69,7 @@ export default async function RootLayout({
                 >
                     <Header />
                     <main>{children}</main>
+                    <Footer />
                 </body>
             </NextIntlClientProvider>
         </html>

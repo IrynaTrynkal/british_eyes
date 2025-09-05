@@ -5,7 +5,6 @@ export default function Home() {
     return (
         <div className="">
             <p>{t("title")}</p>
-            <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]"></footer>
         </div>
     );
 }
