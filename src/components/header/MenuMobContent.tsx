@@ -8,9 +8,9 @@ import { Link } from "@/i18n/navigation";
 import { menuList } from "../assets/menu";
 import { IconChevron } from "../shared/icons/IconChevron";
 import LanguageSwitcherMob from "../shared/LanguageSwitcherMob";
+import { SocialLinks } from "../shared/SocialLinks";
 import { PatientsMenu } from "./PatientsMenu";
 import { ServicesMenu } from "./ServicesMenu";
-import { SocialLinks } from "./SocialLinks";
 
 export const MenuMobContent = ({
     className,

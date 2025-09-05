@@ -41,3 +41,14 @@ export const patientsList = [
     "reminders-and-instructions",
     "eye-disease",
 ];
+
+export const footerMainMenu = [
+    { key: "main" },
+    { key: "service-prices" },
+    { key: "offers" },
+    { key: "doctors" },
+    { key: "about-clinic" },
+    { key: "patient-information" },
+    { key: "reviews" },
+    { key: "news" },
+];

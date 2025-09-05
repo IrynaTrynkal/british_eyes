@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 import { ButtonAction } from "../shared/ButtonAction";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import { Logo } from "../shared/Logo";
+import { SocialLinks } from "../shared/SocialLinks";
 import { MenuBurgerButton } from "./MenuBurgerButton";
 import { MenuMobWindow } from "./MenuMobWindow";
 import { MenuPC } from "./MenuPC";
 import { PhoneButton } from "./PhoneButton";
 import { PhoneList } from "./PhoneList";
-import { SocialLinks } from "./SocialLinks";
 
 const Navbar = () => {
     const [isHeaderMenuOpened, setIsHeaderMenuOpened] = useState(false);

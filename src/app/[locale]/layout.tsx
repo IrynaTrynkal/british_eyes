@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
+import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
 import { routing } from "@/i18n/routing";
 
@@ -64,10 +65,11 @@ export default async function RootLayout({
         <html lang={locale} suppressHydrationWarning>
             <NextIntlClientProvider>
                 <body
-                    className={`${oswald.variable} ${arimo.variable} antialiased`}
+                    className={`${oswald.variable} ${arimo.variable} flex min-h-screen flex-col antialiased`}
                 >
                     <Header />
-                    <main>{children}</main>
+                    <main className="flex-1">{children}</main>
+                    <Footer />
                 </body>
             </NextIntlClientProvider>
         </html>

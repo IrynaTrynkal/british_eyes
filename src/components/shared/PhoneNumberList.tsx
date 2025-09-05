@@ -1,11 +1,11 @@
 import { normalizePhone } from "@/utils/normalizePhone";
 
+import { phoneList } from "../assets/contacts";
+
 export const PhoneNumberList = ({
-    phoneList,
     className,
     onClick,
 }: {
-    phoneList: string[];
     className?: string;
     onClick?: () => void;
 }) => {

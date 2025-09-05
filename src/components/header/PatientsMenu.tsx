@@ -41,7 +41,7 @@ export const PatientsMenu = ({
                                 }
                             >
                                 {t(item)}
-                                <div className="flex h-11 w-11 items-center justify-center">
+                                <div className="pc:flex hidden h-11 w-11 items-center justify-center">
                                     <IconArrow className="h-6 w-6" />
                                 </div>
                             </Link>

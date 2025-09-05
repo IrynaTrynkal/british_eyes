@@ -1,11 +1,23 @@
 {
     "HomePage": {
         "title": "Hello world!",
-        "description": "Hello world!"
+        "description": "Hello world!",
+        "footerSlogan": "Лазерна корекція зору, лікування астигматизму, катаракти та глаукоми — наше завдання, яке ми вирішуємо безпечно, професійно і ефективно.",
+        "navigation": "navigation",
+        "services": "Services",
+        "socialMedia": "we are on social media",
+        "contacts": "Contacts",
+        "mode": "operating mode",
+        "modeDay": "Mon - Sun 9:00 – 19:00",
+        "modeRest": "we work without days off",
+        "policy": "Privacy Policy",
+        "license": "License",
+        "german": "German corps"
     },
     "Menu": {
         "onlineButtonMob": "online booking",
         "onlineButtonPC": "Book consultation",
+        "main": "main page",
         "services": "Services",
         "service-prices": "Prices",
         "offers": "offers",
@@ -14,6 +26,7 @@
         "patient-information": "For Patients",
         "reviews": "Reviews",
         "contacts": "Contacts",
+        "news": "news",
         "socialMedia": "social networks",
         "laser-vision-correction": "Лазерна корекція зору",
         "eye-exam": "Перевірка зору",
