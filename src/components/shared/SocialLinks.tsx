@@ -17,7 +17,7 @@ export const SocialLinks = ({
                         href={content.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${footer ? "bg-ivory border-ivory hover:text-ivory h-8 w-8 rounded-full text-black hover:bg-black" : "pc:w-12 border-ivory pc:h-12 h-8 w-8 rounded-sm hover:border-black"} pc:p-[9.6px] flex items-center justify-center border p-[6px] transition-all duration-300 ease-in-out`}
+                        className={`${footer ? "bg-ivory border-ivory hover:text-ivory h-8 w-8 rounded-full text-black hover:bg-black" : "pc:w-12 pc:p-[9.6px] border-ivory pc:h-12 h-8 w-8 rounded-sm hover:border-black"} flex items-center justify-center border p-[6px] transition-all duration-300 ease-in-out`}
                     >
                         {content.name === "instagram" ? (
                             <IconInsta />

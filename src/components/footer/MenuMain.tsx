@@ -14,21 +14,21 @@ export const MenuMain = ({
     const t = useTranslations("Menu");
 
     return (
-        <ul className={`relative flex flex-col gap-4 ${className} `}>
+        <ul
+            className={`pc:grid-cols-1 relative grid grid-cols-2 gap-2 ${className} `}
+        >
             {footerMainMenu.map((item, idx) => {
                 return (
-                    <li key={idx}>
-                        <div className={""}>
-                            <Link
-                                href={
-                                    item.key === "main" ? "/" : `/${item.key}`
-                                }
-                                onClick={onClick}
-                                className="flex-1"
-                            >
-                                {t(item.key)}
-                            </Link>
-                        </div>
+                    <li
+                        key={idx}
+                        className="pc:leading-[16.8px] text-sm leading-[15px] font-medium"
+                    >
+                        <Link
+                            href={item.key === "main" ? "/" : `/${item.key}`}
+                            onClick={onClick}
+                        >
+                            {t(item.key)}
+                        </Link>
                     </li>
                 );
             })}

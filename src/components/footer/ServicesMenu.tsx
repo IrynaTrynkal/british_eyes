@@ -14,19 +14,20 @@ export const ServicesMenu = ({
     const t = useTranslations("Menu");
 
     return (
-        <ul className={`relative flex flex-col gap-4 ${className} `}>
+        <ul className={`pc:gap-9 relative columns-2 gap-2 ${className} `}>
             {servicesList.map((item, idx) => {
                 return (
-                    <li key={idx}>
-                        <div className={""}>
-                            <Link
-                                href={`/${item.key}`}
-                                onClick={onClick}
-                                className="flex-1"
-                            >
-                                {t(item.key)}
-                            </Link>
-                        </div>
+                    <li
+                        key={idx}
+                        className="pc:leading-[16.8px] pc:mb-2 mb-4 text-sm font-medium"
+                    >
+                        <Link
+                            href={`/${item.key}`}
+                            onClick={onClick}
+                            className="flex-1"
+                        >
+                            {t(item.key)}
+                        </Link>
                     </li>
                 );
             })}

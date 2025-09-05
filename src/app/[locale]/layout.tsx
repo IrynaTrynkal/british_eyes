@@ -65,10 +65,10 @@ export default async function RootLayout({
         <html lang={locale} suppressHydrationWarning>
             <NextIntlClientProvider>
                 <body
-                    className={`${oswald.variable} ${arimo.variable} antialiased`}
+                    className={`${oswald.variable} ${arimo.variable} flex min-h-screen flex-col antialiased`}
                 >
                     <Header />
-                    <main>{children}</main>
+                    <main className="flex-1">{children}</main>
                     <Footer />
                 </body>
             </NextIntlClientProvider>
