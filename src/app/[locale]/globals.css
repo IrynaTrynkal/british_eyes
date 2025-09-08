@@ -49,11 +49,11 @@ button {
 
 .link-gradient:hover {
     background: linear-gradient(
-        170deg,
-        #0b7556,
-        #09684b,
-        #023f2c,
-        #003626,
-        #08654a
+        -10deg,
+        #023f2c 0%,
+        #09684b 21%,
+        #0b7556 35%,
+        #08654a 52%,
+        #003626 83%
     );
 }
