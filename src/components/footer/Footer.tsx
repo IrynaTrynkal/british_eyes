@@ -79,7 +79,7 @@ export const Footer = () => {
                         alt="map"
                         width={1344}
                         height={585}
-                        className="pc:aspect-[1344/287] pc:object-cover pc:object-center max-h-[287px] overflow-hidden"
+                        className="pc:aspect-[1344/287] pc:object-cover pc:object-center mx-auto max-h-[287px] overflow-hidden"
                     />
                     <IconPin className="pc:w-11 pc:max-w-11 pc:-translate-y-8 absolute bottom-1/2 left-1/2 h-auto w-[10%] max-w-9 -translate-x-1/2 -translate-y-2" />
                     <div className="tab:block pc:px-2 pc:py-0.5 absolute top-1/2 left-1/2 hidden w-46 -translate-x-1/2 -translate-y-3 rounded-sm bg-white/10 text-sm">
