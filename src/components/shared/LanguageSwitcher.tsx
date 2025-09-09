@@ -28,20 +28,17 @@ export default function LanguageSwitcher() {
     const renderLabel = (lang: string) => (lang === "uk" ? "ua" : lang);
     const cleanPath = pathName.replace(/^\/(uk|en|ru)/, "");
     const segments = pathName.split("/").filter(Boolean);
-    let baseSegment: string | undefined;
     let slug: string | undefined;
 
     if (
         segments[0] &&
         ["poslugy", "uslugi", "services"].includes(segments[0])
     ) {
-        baseSegment = segments[0];
         slug = segments[1];
     } else if (
         segments[1] &&
         ["poslugy", "uslugi", "services"].includes(segments[1])
     ) {
-        baseSegment = segments[1];
         slug = segments[2];
     }
     return (
