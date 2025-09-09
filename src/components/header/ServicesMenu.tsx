@@ -78,7 +78,7 @@ export const ServicesMenu = ({
                     );
                 })}
             </ul>
-            <ul className="border-grey pc:px-12 pc:border-0 pc:py-3 pc:gap-4 pc:flex-wrap pc:justify-center pc:flex-row pc:flex hidden border">
+            <ul className="border-grey pc:px-12 pc:border-0 pc:pt-3 pc:pb-16 pc:gap-4 pc:flex-wrap pc:justify-center pc:flex-row pc:flex hidden border">
                 {servicesList.map(item => {
                     return (
                         <li key={item.key} className="group">

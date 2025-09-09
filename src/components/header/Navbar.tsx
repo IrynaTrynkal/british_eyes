@@ -33,7 +33,7 @@ const Navbar = () => {
     }, [isHeaderMenuOpened]);
     const t = useTranslations("Menu");
     return (
-        <nav className="pc:gap-8 border-grey flex items-center justify-between gap-6 border-b">
+        <nav className="pc:h-[72px] pc:gap-8 border-grey flex h-12 items-center justify-between gap-6 border-b">
             <div className="pc:gap-4 flex items-center justify-center">
                 <Logo />
                 <MenuPC className="pc:flex hidden" />

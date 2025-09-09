@@ -10,3 +10,5 @@ export const socialLinks = [
     { name: "instagram", link: "https://www.instagram.com/" },
     { name: "facebook", link: "https://www.facebook.com/" },
 ];
+
+export const gogleMapLink = "https://maps.app.goo.gl/4SRz8f9eztXPxMJ9A";

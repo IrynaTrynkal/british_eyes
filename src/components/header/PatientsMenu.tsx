@@ -28,7 +28,7 @@ export const PatientsMenu = ({
                 />
             </div>
             <ul
-                className={`pc:py-0 pc:gap-8 flex flex-col gap-2 py-4 ${className}`}
+                className={`pc:pt-0 pc:pb-16 pc:gap-8 flex flex-col gap-2 py-4 ${className}`}
             >
                 {patientsList.map((item, idx) => {
                     return (
