@@ -5,7 +5,7 @@ import { IconLogo } from "./icons/IconLogo";
 export const Logo = () => {
     return (
         <Link
-            href="/"
+            href={"/" as any}
             onClick={e => {
                 const target = e.currentTarget;
                 setTimeout(() => target.blur(), 1000);
