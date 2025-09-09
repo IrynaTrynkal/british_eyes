@@ -39,7 +39,8 @@ body {
     }
 }
 
-button {
+button,
+a {
     cursor: pointer;
 }
 .link-gradient {

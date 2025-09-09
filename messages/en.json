@@ -1,18 +1,26 @@
 {
     "HomePage": {
-        "title": "Hello world!",
-        "description": "Hello world!",
-        "footerSlogan": "Лазерна корекція зору, лікування астигматизму, катаракти та глаукоми — наше завдання, яке ми вирішуємо безпечно, професійно і ефективно.",
+        "title": "British Ophthalmological Center",
+        "description": "Laser vision correction, treatment of cataract, retinal diseases and glaucoma – our mission, which we solve safely, professionally and effectively.",
+        "slogan": "Laser vision correction, treatment of cataract, retinal diseases and glaucoma – our mission, which we solve safely, professionally and effectively.",
         "navigation": "navigation",
         "services": "Services",
         "socialMedia": "we are on social media",
         "contacts": "Contacts",
         "mode": "operating mode",
         "modeDay": "Mon - Sun 9:00 – 19:00",
-        "modeRest": "we work without days off",
+        "modeRest": "We work seven days a week",
         "policy": "Privacy Policy",
         "license": "License",
-        "german": "German corps"
+        "german": "German corps",
+        "heroTitle": "British Ophthalmological Center",
+        "adress": "Kiev, \n3a Krutyi Uzviz Str.",
+        "goToMap": "look at the map",
+        "raynerText": "<bold>the world's #1</bold> lens for cataract treatment",
+        "raynerTextPC": "<bold>the world's #1</bold> intraocular lens for cataract treatment",
+
+        "feedTitle": "1 M +",
+        "feedText": "satisfied customers"
     },
     "Menu": {
         "onlineButtonMob": "online booking",
