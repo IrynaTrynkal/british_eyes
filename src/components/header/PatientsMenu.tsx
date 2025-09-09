@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
+import { LocaleType } from "@/types/LocaleType";
 
 import { patientsList } from "../assets/menu";
 import { IconArrow } from "../shared/icons/IconArrow";
@@ -15,13 +16,14 @@ export const PatientsMenu = ({
     onClick?: () => void;
 }) => {
     const t = useTranslations("Menu");
+    const locale = useLocale();
 
     return (
         <div className="pc:mt-8 pc:px-12 pc:flex pc:gap-8">
             <div className="pc:block hidden h-[225px] w-[437px]">
                 <Image
                     src="/images/patients-menu.jpg"
-                    alt={t("patient-information")}
+                    alt={t("informatsiya-dlya-patsiyentiv")}
                     width={1024}
                     height={701}
                     className="h-full w-full object-cover object-center"
@@ -34,13 +36,15 @@ export const PatientsMenu = ({
                     return (
                         <li key={idx}>
                             <Link
-                                href={`/patient-information/${item}`}
+                                href={
+                                    `/${item.slug[locale as LocaleType]}` as any
+                                }
                                 onClick={onClick}
                                 className={
                                     "pc:px-3 pc:py-1 pc:justify-between pc:w-[662px] pc:leading-7 pc:border pc:border-grey font-oswald pc:text-2xl hover:text-ivory link-gradient flex items-center gap-2 rounded-lg pl-2 text-xs font-medium text-black uppercase transition-all duration-500"
                                 }
                             >
-                                {t(item)}
+                                {t(item.key)}
                                 <div className="pc:flex hidden h-11 w-11 items-center justify-center">
                                     <IconArrow className="h-6 w-6" />
                                 </div>

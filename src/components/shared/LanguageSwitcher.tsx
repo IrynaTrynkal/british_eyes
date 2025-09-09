@@ -5,7 +5,9 @@ import { useEffect, useState } from "react";
 
 import { Link, usePathname } from "@/i18n/navigation";
 import { locales } from "@/i18n/routing";
+import { LocaleType } from "@/types/LocaleType";
 
+import { servicesList } from "../assets/menu";
 import { IconChevron } from "./icons/IconChevron";
 
 export default function LanguageSwitcher() {
@@ -20,10 +22,28 @@ export default function LanguageSwitcher() {
             setHash(window.location.hash);
         }
     }, [pathName, searchParams]);
+
     const otherLocales = locales.filter(l => l !== locale);
 
     const renderLabel = (lang: string) => (lang === "uk" ? "ua" : lang);
+    const cleanPath = pathName.replace(/^\/(uk|en|ru)/, "");
+    const segments = pathName.split("/").filter(Boolean);
+    let baseSegment: string | undefined;
+    let slug: string | undefined;
 
+    if (
+        segments[0] &&
+        ["poslugy", "uslugi", "services"].includes(segments[0])
+    ) {
+        baseSegment = segments[0];
+        slug = segments[1];
+    } else if (
+        segments[1] &&
+        ["poslugy", "uslugi", "services"].includes(segments[1])
+    ) {
+        baseSegment = segments[1];
+        slug = segments[2];
+    }
     return (
         <div className="pc:block font-oswald relative hidden font-medium">
             <button
@@ -39,24 +59,42 @@ export default function LanguageSwitcher() {
 
             {open && (
                 <ul className="text-grey bg-ivory absolute z-10 mt-2 w-full">
-                    {otherLocales.map(curLocale => (
-                        <li key={curLocale} className="mb-2">
-                            <Link
-                                href={{
-                                    hash: hash,
-                                    search: searchParams.toString(),
-                                    pathname: pathName,
-                                }}
-                                replace
-                                locale={curLocale}
-                                scroll={false}
-                                className="block px-3 py-[3px] uppercase transition-all duration-[300ms] ease-in-out hover:underline"
-                                onClick={() => setOpen(false)}
-                            >
-                                {renderLabel(curLocale)}
-                            </Link>
-                        </li>
-                    ))}
+                    {otherLocales.map(curLocale => {
+                        const localizedSlug = slug
+                            ? servicesList.find(service =>
+                                  Object.values(service.slug).includes(slug)
+                              )?.slug[curLocale as LocaleType]
+                            : undefined;
+                        return (
+                            <li key={curLocale} className="mb-2">
+                                <Link
+                                    href={
+                                        slug
+                                            ? ({
+                                                  pathname: "/poslugy/[slug]",
+                                                  params: {
+                                                      slug: localizedSlug,
+                                                  },
+                                                  search: searchParams.toString(),
+                                                  hash,
+                                              } as any)
+                                            : ({
+                                                  pathname: cleanPath,
+                                                  search: searchParams.toString(),
+                                                  hash,
+                                              } as any)
+                                    }
+                                    replace
+                                    locale={curLocale}
+                                    scroll={false}
+                                    className="block px-3 py-[3px] uppercase transition-all duration-[300ms] ease-in-out hover:underline"
+                                    onClick={() => setOpen(false)}
+                                >
+                                    {renderLabel(curLocale)}
+                                </Link>
+                            </li>
+                        );
+                    })}
                 </ul>
             )}
         </div>

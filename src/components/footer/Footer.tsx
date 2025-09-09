@@ -30,9 +30,7 @@ export const Footer = () => {
                         <MenuMain />
                     </div>
                     <div className="pc:w-[445px] pc:mb-0 mb-6">
-                        <h3 className={`${footerH3} mb-1.5`}>
-                            {t("services")}
-                        </h3>
+                        <h3 className={`${footerH3} mb-1.5`}>{t("poslugy")}</h3>
                         <div className="bg-grey pc:hidden mb-1.5 h-[1px] w-full" />
                         <ServicesMenu />
                     </div>
@@ -48,7 +46,7 @@ export const Footer = () => {
                     <div className="pc:mr-[14.3%] flex">
                         <div className="pc:w-[145px] w-1/2">
                             <h3 className={`${footerH3} mb-3`}>
-                                {t("contacts")}
+                                {t("kontakty")}
                             </h3>
                             <PhoneNumberList className="pc:text-base pc:leading-none flex flex-col gap-2 text-sm leading-[15px] font-medium" />
                         </div>

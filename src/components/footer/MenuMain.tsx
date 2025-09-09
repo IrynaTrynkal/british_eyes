@@ -24,7 +24,11 @@ export const MenuMain = ({
                         className="pc:leading-[16.8px] text-sm leading-[15px] font-medium"
                     >
                         <Link
-                            href={item.key === "main" ? "/" : `/${item.key}`}
+                            href={
+                                (item.key === "main"
+                                    ? "/"
+                                    : `/${item.key}`) as any
+                            }
                             onClick={onClick}
                         >
                             {t(item.key)}

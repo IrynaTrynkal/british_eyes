@@ -9,4 +9,46 @@ export const routing = defineRouting({
     localeDetection: false,
     // Used when no locale matches
     defaultLocale: "uk",
+    pathnames: {
+        "/poslugy": {
+            en: "/services",
+            ru: "/uslugi",
+        },
+        "/poslugy/[slug]": {
+            en: "/services/[slug]",
+            ru: "/uslugi/[slug]",
+        },
+        "/aktsiyi": {
+            en: "/offers",
+            ru: "/akcii",
+        },
+        "/viddilennya": {
+            en: "/branches",
+            ru: "/otdeleniya",
+        },
+        "/zakhvoryuvannya-ochey": {
+            en: "/eye-diseases",
+            ru: "/glaznye-bolezni",
+        },
+        "/tsiny": {
+            en: "/service-prices",
+            ru: "/ceny",
+        },
+        "/informatsiya-dlya-patsiyentiv": {
+            en: "/patient-information",
+            ru: "/informatsiya-dlya-patsiyentov",
+        },
+        "/pro-kliniku": {
+            en: "/about-clinic",
+            ru: "/o-klinike",
+        },
+        "/vidhuky": {
+            en: "/reviews",
+            ru: "/otzyvy",
+        },
+        "/kontakty": {
+            en: "/contacts",
+            ru: "/kontakty",
+        },
+    },
 });

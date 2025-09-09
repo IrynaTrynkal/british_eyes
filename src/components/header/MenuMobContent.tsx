@@ -22,8 +22,8 @@ export const MenuMobContent = ({
     const t = useTranslations("Menu");
 
     const [openMenus, setOpenMenus] = useState<{ [key: string]: boolean }>({
-        services: true,
-        "patient-information": false,
+        poslugy: true,
+        "informatsiya-dlya-patsiyentiv": false,
     });
 
     const toggleSubmenu = (key: string) => {
@@ -34,19 +34,19 @@ export const MenuMobContent = ({
         <ul className={`relative flex flex-col gap-4 ${className} `}>
             {menuList.map((item, idx) => {
                 const hasSubmenu =
-                    item.key === "services" ||
-                    item.key === "patient-information";
+                    item.key === "poslugy" ||
+                    item.key === "informatsiya-dlya-patsiyentiv";
 
                 return (
                     <li
                         key={idx}
-                        className={` ${item.key === "service-prices" ? "relative" : ""}`}
+                        className={` ${item.key === "tsiny" ? "relative" : ""}`}
                     >
                         <div
-                            className={`${item.key === "services" ? "w-full" : "w-1/3"} font-oswald flex items-center justify-between ${item.key === "services" ? "h-10 px-2 text-sm" : "text-base"} font-medium uppercase ${(item.key === "services" && openMenus.services) || (item.key === "patient-information" && openMenus["patient-information"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
+                            className={`${item.key === "poslugy" ? "w-full" : "w-1/3"} font-oswald flex items-center justify-between ${item.key === "poslugy" ? "h-10 px-2 text-sm" : "text-base"} font-medium uppercase ${(item.key === "poslugy" && openMenus.poslugy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
                         >
                             <Link
-                                href={`/${item.key}`}
+                                href={`/${item.key}` as any}
                                 onClick={onClick}
                                 className="flex-1"
                             >
@@ -63,16 +63,16 @@ export const MenuMobContent = ({
                                 </button>
                             )}
                         </div>
-                        {item.key === "service-prices" && (
+                        {item.key === "tsiny" && (
                             <div className="absolute top-0 right-0">
                                 <LanguageSwitcherMob />
                             </div>
                         )}
 
                         <AnimatePresence initial={false}>
-                            {item.key === "services" && openMenus.services && (
+                            {item.key === "poslugy" && openMenus.poslugy && (
                                 <motion.div
-                                    key="services"
+                                    key="poslugy"
                                     initial={{ height: 0 }}
                                     animate={{ height: "auto" }}
                                     exit={{ height: 0 }}
@@ -86,8 +86,8 @@ export const MenuMobContent = ({
                                 </motion.div>
                             )}
 
-                            {item.key === "patient-information" &&
-                                openMenus["patient-information"] && (
+                            {item.key === "informatsiya-dlya-patsiyentiv" &&
+                                openMenus["informatsiya-dlya-patsiyentiv"] && (
                                     <motion.div
                                         key="patients"
                                         initial={{ height: 0, opacity: 0 }}
