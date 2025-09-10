@@ -19,8 +19,8 @@ export const MenuPC = ({
 }) => {
     const t = useTranslations("Menu");
     const [openMenus, setOpenMenus] = useState<{ [key: string]: boolean }>({
-        services: false,
-        "patient-information": false,
+        poslugy: false,
+        "informatsiya-dlya-patsiyentiv": false,
     });
 
     const toggleSubmenu = (key: string) => {
@@ -39,20 +39,27 @@ export const MenuPC = ({
         });
     };
 
+    const closeSubmenus = () => {
+        setOpenMenus({
+            poslugy: false,
+            "informatsiya-dlya-patsiyentiv": false,
+        });
+    };
+
     return (
         <ul className={`${className}`}>
             {menuList.map((item, idx) => {
                 const hasSubmenu =
-                    item.key === "services" ||
-                    item.key === "patient-information";
+                    item.key === "poslugy" ||
+                    item.key === "informatsiya-dlya-patsiyentiv";
                 return (
                     <li key={idx}>
                         <div
-                            className={`pc:px-3 flex items-center justify-center ${(item.key === "services" && openMenus.services) || (item.key === "patient-information" && openMenus["patient-information"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
+                            className={`pc:px-3 flex items-center justify-center ${(item.key === "poslugy" && openMenus.poslugy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
                         >
                             <Link
-                                href={`/${item.key}`}
-                                onClick={onClick}
+                                href={`/${item.key}` as any}
+                                onClick={hasSubmenu ? closeSubmenus : onClick}
                                 className={
                                     "font-oswald pc:text-base pc:h-[72px] flex h-12 items-center text-xs font-medium uppercase"
                                 }
@@ -70,7 +77,7 @@ export const MenuPC = ({
                             )}
                         </div>
                         <AnimatePresence initial={false}>
-                            {item.key === "services" && openMenus.services && (
+                            {item.key === "poslugy" && openMenus.poslugy && (
                                 <motion.div
                                     initial={{ height: 0 }}
                                     animate={{ height: "auto" }}
@@ -81,14 +88,14 @@ export const MenuPC = ({
                                     }}
                                     className="bg-ivory absolute top-full left-0 z-10 w-full overflow-hidden"
                                 >
-                                    <ServicesMenu onClick={onClick} />
+                                    <ServicesMenu onClick={closeSubmenus} />
                                 </motion.div>
                             )}
 
-                            {item.key === "patient-information" &&
-                                openMenus["patient-information"] && (
+                            {item.key === "informatsiya-dlya-patsiyentiv" &&
+                                openMenus["informatsiya-dlya-patsiyentiv"] && (
                                     <motion.div
-                                        key="patients"
+                                        key="informatsiya-dlya-patsiyentiv"
                                         initial={{ height: 0 }}
                                         animate={{ height: "auto" }}
                                         exit={{ height: 0 }}
@@ -98,7 +105,7 @@ export const MenuPC = ({
                                         }}
                                         className="bg-ivory absolute top-full left-0 z-10 w-full overflow-hidden"
                                     >
-                                        <PatientsMenu onClick={onClick} />
+                                        <PatientsMenu onClick={closeSubmenus} />
                                     </motion.div>
                                 )}
                         </AnimatePresence>

@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
+import { LocaleType } from "@/types/LocaleType";
 
 import { servicesList } from "../assets/menu";
 import { IconArrow } from "../shared/icons/IconArrow";
@@ -15,7 +16,7 @@ export const ServicesMenu = ({
     onClick?: () => void;
 }) => {
     const t = useTranslations("Menu");
-
+    const locale = useLocale();
     return (
         <>
             <ul
@@ -29,7 +30,11 @@ export const ServicesMenu = ({
                         >
                             {item.image ? (
                                 <Link
-                                    href={`/services/${item.key}`}
+                                    href={
+                                        {
+                                            pathname: `/poslugy/${item.slug[locale as LocaleType]}`,
+                                        } as any
+                                    }
                                     onClick={onClick}
                                     className={
                                         "pc:px-0 pc:h-[180px] pc:rounded-lg pc:overflow-hidden pc:border border-grey hover:bg-green-10 flex h-10 items-center justify-between border-b pl-2 text-black"
@@ -58,7 +63,11 @@ export const ServicesMenu = ({
                                 </Link>
                             ) : (
                                 <Link
-                                    href={`/services/${item.key}`}
+                                    href={
+                                        {
+                                            pathname: `/poslugy/${item.slug[locale as LocaleType]}`,
+                                        } as any
+                                    }
                                     onClick={onClick}
                                     className={
                                         "pc:hidden font-oswald pc:text-lg pc:pl-0 flex items-center gap-2 pl-2 text-xs font-medium text-black uppercase hover:underline"
@@ -85,7 +94,11 @@ export const ServicesMenu = ({
                             {item.icon && (
                                 <div className="flex gap-4">
                                     <Link
-                                        href={`/services/${item.key}`}
+                                        href={
+                                            {
+                                                pathname: `/poslugy/${item.slug[locale as LocaleType]}`,
+                                            } as any
+                                        }
                                         onClick={onClick}
                                         className={
                                             "pc:px-1 font-oswald pc:text-lg pc:pl-0 flex items-center gap-2 pl-2 text-xs font-medium text-black uppercase hover:underline"

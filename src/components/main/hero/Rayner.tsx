@@ -34,7 +34,7 @@ export const Rayner = ({
                     <ButtonArrow className="pc:flex mt-1 mr-1 hidden" white />
                 </div>
                 <p className="pc:hidden text-sm leading-4 uppercase">{text}</p>
-                <p className="pc:text-base pc:leading-5 text-sm leading-4 uppercase">
+                <p className="pc:text-base pc:block pc:leading-5 hidden text-sm leading-4 uppercase">
                     {textPC}
                 </p>
             </div>
