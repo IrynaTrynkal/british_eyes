@@ -18,8 +18,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
         notFound();
     }
 
-    console.log("title=", displayedService.key);
-
     return (
         <div className="content py-24">
             <h1 className="font-oswald font-bold uppercase">
