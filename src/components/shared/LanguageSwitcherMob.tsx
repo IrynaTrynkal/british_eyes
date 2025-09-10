@@ -58,7 +58,7 @@ export default function LanguageSwitcherMob() {
                                               hash,
                                           } as any)
                                         : ({
-                                              pathname: cleanPath,
+                                              pathname: cleanPath || "/",
                                               search: searchParams.toString(),
                                               hash,
                                           } as any)
