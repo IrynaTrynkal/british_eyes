@@ -63,7 +63,7 @@ export const Footer = () => {
                     <div className="pc:block hidden">
                         <h3 className={`${footerH3} pc:mb-9`}>{t("mode")}</h3>
                         <p className="pc:text-base pc:leading-none pc:mb-2.5 mb-1.5 text-sm leading-[15px] font-medium whitespace-pre-line uppercase">
-                            {t("modeRest")}
+                            {t("modeDay")}
                         </p>
                         <p className="pc:text-base pc:leading-none text-sm leading-[15px] font-medium uppercase">
                             {t("modeRest")}
