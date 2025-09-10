@@ -52,22 +52,21 @@ export const Footer = () => {
                         </div>
                         <div className="pc:hidden w-1/2">
                             <h3 className={`${footerH3} mb-3`}>{t("mode")}</h3>
-                            <p className="mb-1.5 text-sm leading-[15px] font-medium uppercase">
-                                ПН - Нд <br />
-                                9:00 – 19:00
+                            <p className="mb-1.5 text-sm leading-[15px] font-medium whitespace-pre-line uppercase">
+                                {t("modeDay")}
                             </p>
                             <p className="pc:text-base pc:leading-none text-sm leading-[15px] font-medium uppercase">
-                                працюємо без вихідних
+                                {t("modeRest")}
                             </p>
                         </div>
                     </div>
                     <div className="pc:block hidden">
                         <h3 className={`${footerH3} pc:mb-9`}>{t("mode")}</h3>
-                        <p className="pc:text-base pc:leading-none pc:mb-2.5 mb-1.5 text-sm leading-[15px] font-medium uppercase">
-                            ПН - Нд 9:00 – 19:00
+                        <p className="pc:text-base pc:leading-none pc:mb-2.5 mb-1.5 text-sm leading-[15px] font-medium whitespace-pre-line uppercase">
+                            {t("modeRest")}
                         </p>
                         <p className="pc:text-base pc:leading-none text-sm leading-[15px] font-medium uppercase">
-                            працюємо без вихідних
+                            {t("modeRest")}
                         </p>
                     </div>
                 </div>
@@ -87,7 +86,7 @@ export const Footer = () => {
                     />
                     <IconPin className="pc:w-11 pc:max-w-11 tab:-translate-y-8 absolute bottom-1/2 left-1/2 h-auto w-[10%] max-w-9 -translate-x-1/2 -translate-y-2" />
                     <div className="tab:block tab:px-2 tab:py-0.5 absolute top-1/2 left-1/2 hidden w-46 -translate-x-1/2 -translate-y-3 rounded-sm bg-white/10 text-sm">
-                        Британський Офтальмологічний Центр
+                        {t("title")}
                     </div>
                 </a>
                 <div className="tab:flex tab:justify-between pc:justify-normal tab:items-center text-center">
