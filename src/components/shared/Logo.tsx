@@ -12,7 +12,7 @@ export const Logo = () => {
             }}
             className="group tab:h-12 tab:w-12 flex items-center justify-center rounded-sm border-black focus:border focus-visible:border"
         >
-            <IconLogo className="relative z-10 w-[30px] transition-transform duration-300 ease-in-out group-hover:scale-[137%] group-focus:scale-100" />
+            <IconLogo className="text-emerald relative z-10 w-[30px] transition-transform duration-300 ease-in-out group-hover:scale-[137%] group-focus:scale-100" />
         </Link>
     );
 };

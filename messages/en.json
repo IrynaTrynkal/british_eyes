@@ -18,9 +18,11 @@
         "goToMap": "look at the map",
         "raynerText": "<bold>the world's #1</bold> lens for cataract treatment",
         "raynerTextPC": "<bold>the world's #1</bold> intraocular lens for cataract treatment",
-
         "feedTitle": "1 M +",
-        "feedText": "satisfied customers"
+        "feedText": "satisfied customers",
+        "advantagesSubtitle": "Advantages of our ophthalmology clinic in Kyiv",
+        "advantagesTitle": "The specialists of our British Eye Clinic strive to give every patient the opportunity to see the world in all its brightness and clarity ",
+        "advantagesText": "In our medical center, each patient is provided with a full range of ophthalmological services. The appointment is carried out by qualified doctors."
     },
     "Menu": {
         "onlineButtonMob": "online booking",
