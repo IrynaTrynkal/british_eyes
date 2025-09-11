@@ -22,7 +22,12 @@
         "feedText": "satisfied customers",
         "advantagesSubtitle": "Advantages of our ophthalmology clinic in Kyiv",
         "advantagesTitle": "The specialists of our British Eye Clinic strive to give every patient the opportunity to see the world in all its brightness and clarity ",
-        "advantagesText": "In our medical center, each patient is provided with a full range of ophthalmological services. The appointment is carried out by qualified doctors."
+        "advantagesText": "In our medical center, each patient is provided with a full range of ophthalmological services. The appointment is carried out by qualified doctors.",
+        "onlineButton": "Book consultation",
+        "choiceTitle": "Choosing an eye clinic is important for everyone",
+        "choiceText1": "Many people don’t realize how important it is to have good vision. Usually, this only becomes clear once they face vision problems or deterioration themselves.",
+        "choiceText2": "Vision issues can appear at any age, so it’s crucial to see a specialist as soon as the first symptoms occur.",
+        "choiceGreen": "If you’ve been planning to undergo a full examination, now is the perfect time."
     },
     "Menu": {
         "onlineButtonMob": "online booking",

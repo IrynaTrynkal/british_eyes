@@ -8,7 +8,7 @@ import { AdvantageCard } from "./AdvantageCard";
 export const AdvantagesListTab = () => {
     const locale = useLocale();
     return (
-        <ul className="tab:flex tab:flex-wrap tab:justify-center mx-auto hidden gap-5">
+        <ul className="tab:flex tab:flex-wrap tab:justify-between tab:max-w-[1150px] pc:max-w-full mx-auto hidden gap-5">
             {advantagesList.map((advantage, ind) => (
                 <li
                     key={advantage.en.title}

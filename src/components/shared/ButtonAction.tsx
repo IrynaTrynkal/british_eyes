@@ -17,7 +17,7 @@ export const ButtonAction = ({
 }) => {
     return (
         <button
-            className={`font-oswald flex items-center justify-center rounded-sm border border-black font-medium uppercase transition-all duration-300 ease-in-out ${secondary ? `hover:text-ivory shadow-button hover:translate-y-1 hover:bg-black hover:shadow-none active:translate-y-1 active:shadow-none ${mob ? "h-10" : "h-11"} ${mob ? (small ? "w-[140px]" : "w-[288px]") : "w-[200px]"}` : `text-ivory hover:bg-ivory active:bg-ivory hover:shadow-button bg-black hover:scale-[0.99] hover:text-black active:translate-y-[2px] active:scale-[0.99] active:text-black active:shadow-none ${mob ? (header ? "h-8" : "h-11") : "h-12"} ${mob ? (header ? "w-[132px]" : small ? "w-[140px]" : "w-[288px]") : "w-[200px]"} `} ${className}`}
+            className={`font-oswald flex items-center justify-center rounded-sm border border-black font-medium uppercase transition-all duration-300 ease-in-out ${secondary ? `hover:text-ivory shadow-button tab:h-11 h-10 hover:translate-y-1 hover:bg-black hover:shadow-none active:translate-y-1 active:shadow-none ${small ? "pc:w-[200px] w-[140px]" : "pc:w-[200px] w-[288px]"}` : `text-ivory hover:bg-ivory active:bg-ivory hover:shadow-button bg-black hover:scale-[0.99] hover:text-black active:translate-y-[2px] active:scale-[0.99] active:text-black active:shadow-none ${header ? "pc:h-12 h-8" : "pc:h-12 h-11"} ${header ? "pc:w-[200px] w-[132px]" : small ? "pc:w-[200px] w-[140px]" : "pc:w-[200px] w-[288px]"} `} ${className}`}
             onClick={onClick}
         >
             {name}
