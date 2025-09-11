@@ -14,6 +14,7 @@
     --color-green-20: #cddfd9;
     --color-green-10: #f5f9f7;
     --color-error: #900b09;
+    --color-light-logo: #f9f9f9;
 
     /* 🔠 Шрифти */
     --font-oswald: var(--font-oswald);
@@ -37,6 +38,13 @@ body {
     .content {
         @apply tab:px-6 pc:px-12 tab:max-w-full mx-auto max-w-[540px] px-4;
     }
+
+    .slider-dot {
+        @apply m-0 inline-flex h-3 w-3 cursor-pointer appearance-none rounded-xs border border-black bg-transparent p-0;
+    }
+    .slider-dot--selected {
+        @apply justify-center bg-black;
+    }
 }
 
 button,
@@ -58,3 +66,26 @@ a {
         #003626 83%
     );
 }
+
+.subtitle {
+    @apply font-oswald text-grey tab:text-base text-sm leading-none font-medium uppercase;
+}
+
+.title-section {
+    @apply font-oswald tab:text-4xl pc:text-5xl text-[28px] leading-none text-black;
+}
+
+.green-gradient {
+    background: linear-gradient(
+        -45deg,
+        #023f2c 0%,
+        #09684b 21%,
+        #0b7556 35%,
+        #08654a 52%,
+        #003626 83%
+    );
+}
+
+/* * {
+    outline: 1px solid red;
+} */
