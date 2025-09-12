@@ -29,7 +29,18 @@
         "choiceText2": "Vision issues can appear at any age, so it’s crucial to see a specialist as soon as the first symptoms occur.",
         "choiceGreen": "If you’ve been planning to undergo a full examination, now is the perfect time.",
         "approachTitle": "We adhere to an individual approach: for some it is laser vision correction, for others it is conservative treatment.",
-        "approachSubtitle": "our approach"
+        "approachSubtitle": "our approach",
+        "aboutSubtitle": "about us",
+        "aboutTitle": "“British Ophthalmology Center” combines professionalism and advanced technologies in caring for your vision",
+        "aboutText1": "From the very first day, our goal has been to provide patients with only the best that modern ophthalmology has to offer.",
+        "aboutText2": "Our mission is to help you in every possible way to keep your vision in perfect condition.",
+        "aboutYears": "years of experience",
+        "aboutBtn": "read about us",
+        "aboutGreen": "The clinic is accredited with the highest category and certified according to the <link>ISO 9001 valid since: 2015</link>.",
+        "aboutFounded": "founded",
+        "aboutFoundedIn": "in 2006",
+        "aboutCity": "city",
+        "aboutKyiv": "kyiv"
     },
     "Menu": {
         "onlineButtonMob": "online booking",
