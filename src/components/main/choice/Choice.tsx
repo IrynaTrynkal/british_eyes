@@ -7,7 +7,7 @@ import { GreenText } from "@/components/shared/GreenText";
 export const Choice = () => {
     const t = useTranslations("HomePage");
     return (
-        <section className="content tab:flex tab:items-center tab:justify-center pc:justify-start tab:gap-4 py-[60px]">
+        <section className="content tab:flex tab:items-center tab:justify-center pc:justify-start tab:gap-4 pc:py-[120px] tab:py-12 py-[60px]">
             <div className="tab:w-[65%] tab:max-w-[810px] pc:mt-10">
                 <h2 className="title-section tab:max-w-[500px] pc:max-w-[664px] pc:mb-7 mb-6">
                     {t("choiceTitle")}

@@ -2,7 +2,7 @@ export const GreenText = ({
     text,
     className,
 }: {
-    text: string;
+    text: string | React.ReactNode;
     className?: string;
 }) => {
     return (

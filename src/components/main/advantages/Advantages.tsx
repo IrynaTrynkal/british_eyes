@@ -6,7 +6,7 @@ import { AdvantagesSlider } from "./AdvantagesSlider";
 export const Advantages = () => {
     const t = useTranslations("HomePage");
     return (
-        <section className="content pt-[60px]">
+        <section className="content pc:pt-[120px] tab:pt-12 pt-[60px]">
             <h3 className="subtitle tab:max-w-[318px] tab:mx-auto tab:text-center tab:mb-4 mb-5">
                 {t("advantagesSubtitle")}
             </h3>
