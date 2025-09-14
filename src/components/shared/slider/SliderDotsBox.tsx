@@ -1,21 +1,21 @@
-import React from "react";
-
 import { SliderDots } from "./SliderDots";
 
 interface SliderDotsBoxProps {
+    ivory?: boolean;
     scrollSnaps: number[];
     selectedIndex: number;
     onDotButtonClick: (index: number) => void;
 }
 
 export const SliderDotsBox = <T,>({
+    ivory,
     scrollSnaps,
     selectedIndex,
     sliders,
     onDotButtonClick,
 }: SliderDotsBoxProps & { sliders: T[] }) => {
     return (
-        <div className="tab:hidden embla__dots flex items-center gap-3">
+        <div className="embla__dots flex items-center gap-3">
             {scrollSnaps.map((_, index) => (
                 <SliderDots
                     key={index}
@@ -36,8 +36,10 @@ export const SliderDotsBox = <T,>({
                                     : "",
                     }}
                     onClick={() => onDotButtonClick(index)}
-                    className={`slider-dot ${
-                        index === selectedIndex ? "slider-dot--selected" : ""
+                    className={`${ivory ? "slider-dot-ivory" : "slider-dot"} ${
+                        index === selectedIndex
+                            ? `${ivory ? "slider-dot-ivory--selected" : "slider-dot--selected"}`
+                            : ""
                     } ${index > selectedIndex + 1 || index < selectedIndex - 1 ? "hidden" : ""} `}
                 />
             ))}

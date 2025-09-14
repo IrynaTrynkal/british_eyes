@@ -26,6 +26,7 @@
 
     /* 🪞 Тіні */
     --shadow-button: 4px 4px 0 0 var(--color-black);
+    --shadow-button-ivory: 4px 4px 0 0 var(--color-ivory);
 }
 
 body {
@@ -44,6 +45,12 @@ body {
     }
     .slider-dot--selected {
         @apply justify-center bg-black;
+    }
+    .slider-dot-ivory {
+        @apply border-ivory m-0 inline-flex h-3 w-3 cursor-pointer appearance-none rounded-xs border bg-transparent p-0;
+    }
+    .slider-dot-ivory--selected {
+        @apply bg-ivory justify-center;
     }
 }
 
@@ -70,6 +77,9 @@ a {
 .subtitle {
     @apply font-oswald text-grey tab:text-base text-sm leading-none font-medium uppercase;
 }
+.subtitle-ivory {
+    @apply font-oswald text-ivory tab:text-base text-sm leading-none font-medium uppercase;
+}
 
 .title-section {
     @apply font-oswald tab:text-4xl pc:text-5xl text-[28px] leading-none text-black;
@@ -87,6 +97,16 @@ a {
         #08654a 52%,
         #003626 83%
     );
+}
+
+.hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    overflow: auto; /* або overflow-x/y */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }
 
 /* * {

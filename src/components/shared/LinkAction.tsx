@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 
 export const LinkAction = ({
+    ivory,
     secondary,
     header,
     small,
@@ -8,6 +9,7 @@ export const LinkAction = ({
     href,
     className,
 }: {
+    ivory?: boolean;
     secondary?: boolean;
     header?: boolean;
     small?: boolean;
@@ -18,7 +20,7 @@ export const LinkAction = ({
     return (
         <Link
             href={href as any}
-            className={`font-oswald flex items-center justify-center rounded-sm border border-black font-medium uppercase transition-all duration-300 ease-in-out ${secondary ? `hover:text-ivory shadow-button tab:h-11 h-10 hover:translate-y-1 hover:bg-black hover:shadow-none active:translate-y-1 active:shadow-none ${small ? "pc:w-[200px] w-[140px]" : "pc:w-[200px] w-[288px]"}` : `text-ivory hover:bg-ivory active:bg-ivory hover:shadow-button bg-black hover:scale-[0.99] hover:text-black active:translate-y-[2px] active:scale-[0.99] active:text-black active:shadow-none ${header ? "pc:h-12 h-8" : "pc:h-12 h-11"} ${header ? "pc:w-[200px] w-[132px]" : small ? "pc:w-[200px] w-[140px]" : "pc:w-[200px] w-[288px]"} `} ${className}`}
+            className={`font-oswald flex items-center justify-center rounded-sm border ${ivory ? "border-ivory" : "border-black"} font-medium uppercase transition-all duration-300 ease-in-out ${secondary ? ` ${ivory ? "text-ivory hover:bg-ivory active:bg-ivory shadow-button-ivory hover:text-black active:text-black" : "hover:text-ivory active:text-ivory shadow-button hover:bg-black active:bg-black"} tab:h-11 h-10 hover:translate-y-1 hover:shadow-none active:translate-y-1 active:shadow-none ${small ? "tab:w-[200px] w-[140px]" : "tab:w-[200px] w-[288px]"}` : `text-ivory hover:bg-ivory active:bg-ivory hover:shadow-button bg-black hover:scale-[0.99] hover:text-black active:translate-y-[2px] active:scale-[0.99] active:text-black active:shadow-none ${header ? "tab:h-12 h-8" : "tab:h-12 h-11"} ${header ? "tab:w-[200px] w-[132px]" : small ? "tab:w-[200px] w-[140px]" : "tab:w-[200px] w-[288px]"} `} ${className}`}
         >
             {name}
         </Link>
