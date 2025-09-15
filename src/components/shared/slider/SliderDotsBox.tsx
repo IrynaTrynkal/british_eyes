@@ -15,7 +15,7 @@ export const SliderDotsBox = <T,>({
     onDotButtonClick,
 }: SliderDotsBoxProps & { sliders: T[] }) => {
     return (
-        <div className="embla__dots flex items-center gap-3">
+        <div className="embla__dots tab:hidden flex items-center gap-3">
             {scrollSnaps.map((_, index) => (
                 <SliderDots
                     key={index}

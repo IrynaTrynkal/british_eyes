@@ -43,7 +43,7 @@ export const DoctorsSlider = ({ doctors }: { doctors: DoctorProps[] }) => {
                     ))}
                 </div>
                 <div className="embla__controls tab:absolute tab:bottom-0 pc:bottom-[14px] tab:right-0 mt-4">
-                    <div className="embla__buttons text-ivory flex justify-center gap-4">
+                    <div className="embla__buttons text-ivory flex justify-between gap-4">
                         <PrevButton
                             onClick={onPrevButtonClick}
                             disabled={prevBtnDisabled}

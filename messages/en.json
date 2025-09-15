@@ -45,7 +45,13 @@
         "doctorsTitle": "Our team consists of doctors and candidates of medical sciences, top-category specialists.",
         "doctorsText": "Appointments are conducted by some of the best specialists in the field of ophthalmology, as confirmed by dozens of scientific publications and tens of thousands of surgeries performed!",
         "doctorsTextDown": "experts",
-        "doctorsBtn": "all specialists"
+        "doctorsBtn": "all specialists",
+        "feedbacksSubtitle": "reviews",
+        "feedbacksTitle": "What our patients say about us",
+        "feedbacksText": "Our center has performed over 1 million successful laser vision corrections and more than 5 million consultations.",
+        "feedbacksTextUp": "1.5M",
+        "feedbacksTextDown": "happy \nclients",
+        "feedbacksBtn": "all reviews"
     },
     "Menu": {
         "onlineButtonMob": "online booking",

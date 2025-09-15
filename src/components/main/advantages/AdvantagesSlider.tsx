@@ -50,7 +50,7 @@ export const AdvantagesSlider = () => {
                     ))}
                 </div>
                 <div className="embla__controls mt-[16px]">
-                    <div className="embla__buttons flex justify-center gap-4">
+                    <div className="embla__buttons flex justify-between gap-4">
                         <PrevButton
                             onClick={onPrevButtonClick}
                             disabled={prevBtnDisabled}

@@ -9,8 +9,25 @@ export const menuList = [
     { key: "kontakty" },
 ];
 
+export type ServicesKeyType =
+    | "lazerna-korekcziya-zoru"
+    | "perevirka-zoru"
+    | "likuvannya-katarakti"
+    | "syndrom-sukhoho-oka"
+    | "dityache-viddilennya"
+    | "likuvannya-keratokonusa"
+    | "lazerne-likuvannya-zahvoryuvan-oka"
+    | "refrakczijna-lensektomiya"
+    | "vitreoretinalna-hirurgiya"
+    | "intravitrealni-inekczii"
+    | "hirurgichne-likuvannya-glaukomi"
+    | "likuvannya-kosookosti"
+    | "hirurgiya-povik-i-konyunktivi"
+    | "anesteziologichnij-posibnik"
+    | "ksenonoterapiya";
+
 export type ServicesListProps = {
-    key: string;
+    key: ServicesKeyType;
     image?: string;
     icon?: string;
     slug: { uk: string; ru: string; en: string };
