@@ -36,7 +36,7 @@ export const DoctorsSlider = ({ doctors }: { doctors: DoctorProps[] }) => {
                     {doctors.map(doctor => (
                         <div
                             key={doctor.en.name}
-                            className="embla__slide tab:flex-[0_0_250px] tab:pr-3 pc:pr-5 w-full flex-[0_0_220px] pr-[14px]"
+                            className="embla__slide tab:flex-[0_0_250px] tab:pr-3 pc:pr-5 w-full flex-[0_0_240px] pr-[14px]"
                         >
                             <DoctorCard data={doctor} />
                         </div>

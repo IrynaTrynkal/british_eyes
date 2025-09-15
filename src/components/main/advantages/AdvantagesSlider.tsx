@@ -39,7 +39,7 @@ export const AdvantagesSlider = () => {
                     {advantagesList.map((advantage, ind) => (
                         <div
                             key={advantage.en.title}
-                            className="embla__slide w-full flex-[0_0_220px]"
+                            className="embla__slide w-full flex-[0_0_240px]"
                         >
                             <AdvantageCard
                                 text={advantage[locale as LocaleType].text}
