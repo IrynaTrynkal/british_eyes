@@ -27,7 +27,7 @@ export const Approach = () => {
                                         {item[locale as LocaleType].title}
                                     </h4>
                                 </div>
-                                <p className="tab:w-[56%] pc:text-lg pc:leading-6 text-sm leading-[18px]">
+                                <p className="tab:w-[56%] pc:text-lg pc:leading-6 leading-[18px]">
                                     {item[locale as LocaleType].text}
                                 </p>
                             </li>
