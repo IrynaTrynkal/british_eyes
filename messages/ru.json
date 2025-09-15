@@ -51,7 +51,11 @@
         "feedbacksText": "В нашем центре проведено более 1 миллиона успешных лазерных коррекций зрения и более 5 миллионов консультаций.",
         "feedbacksTextUp": "1,5 МЛН",
         "feedbacksTextDown": "довольных \nклиентов",
-        "feedbacksBtn": "все отзывы"
+        "feedbacksBtn": "все отзывы",
+        "newsSubtitle": "новости",
+        "newsTitle": "Мы учимся и делимся опытом",
+        "newsBtn": "все новости",
+        "readMore": "читать дальше"
     },
     "Menu": {
         "onlineButtonMob": "онлайн запись",

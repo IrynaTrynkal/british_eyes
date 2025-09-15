@@ -51,7 +51,11 @@
         "feedbacksText": "Our center has performed over 1 million successful laser vision corrections and more than 5 million consultations.",
         "feedbacksTextUp": "1.5M",
         "feedbacksTextDown": "happy \nclients",
-        "feedbacksBtn": "all reviews"
+        "feedbacksBtn": "all reviews",
+        "newsSubtitle": "news",
+        "newsTitle": "We teach and share experiences",
+        "newsBtn": "all news",
+        "readMore": "read more"
     },
     "Menu": {
         "onlineButtonMob": "online booking",

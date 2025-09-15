@@ -5,6 +5,7 @@ import { Choice } from "@/components/main/choice/Choice";
 import { Doctors } from "@/components/main/doctors/Doctors";
 import { Feedbacks } from "@/components/main/feedbacks/Feedbacks";
 import { HeroMain } from "@/components/main/hero/HeroMain";
+import { News } from "@/components/main/news/News";
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
             <AboutMain />
             <Doctors />
             <Feedbacks />
+            <News />
         </>
     );
 }
