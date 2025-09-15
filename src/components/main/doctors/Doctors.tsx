@@ -56,7 +56,7 @@ export const Doctors = () => {
 
             <div className="tab:flex tab:flex-row-reverse tab:justify-between relative">
                 <div className="hide-scrollbar tab:h-full tab:w-[28%] pc:max-w-[23.5%] tab:bg-transparent mb-4 h-11 w-full overflow-x-auto bg-white/10">
-                    <p className="pc:text-lg text-ivory tab:text-right tab:block pc:leading-[22px] pc:mb-[66px] mb-5 hidden leading-5">
+                    <p className="pc:text-lg text-ivory tab:text-justify tab:block pc:leading-[22px] pc:mb-[66px] mb-5 hidden leading-5">
                         {t("doctorsText")}
                     </p>
                     <ul className="tab:flex-col tab:w-[258px] tab:mr-0 tab:ml-auto tab:items-end tab:gap-3 pc:gap-4 tab:whitespace-normal tab:pl-0 flex h-full items-center pl-4 whitespace-nowrap">
