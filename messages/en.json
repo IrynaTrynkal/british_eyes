@@ -40,7 +40,12 @@
         "aboutFounded": "founded",
         "aboutFoundedIn": "in 2006",
         "aboutCity": "city",
-        "aboutKyiv": "kyiv"
+        "aboutKyiv": "kyiv",
+        "doctorsSubtitle": "doctors",
+        "doctorsTitle": "Our team consists of doctors and candidates of medical sciences, top-category specialists.",
+        "doctorsText": "Appointments are conducted by some of the best specialists in the field of ophthalmology, as confirmed by dozens of scientific publications and tens of thousands of surgeries performed!",
+        "doctorsTextDown": "experts",
+        "doctorsBtn": "all specialists"
     },
     "Menu": {
         "onlineButtonMob": "online booking",
@@ -82,5 +87,9 @@
     "Modals": {
         "callUs": "Contact us",
         "hotLine": "free hotline in Ukraine"
+    },
+    "Doctors": {
+        "experienceSince": "Experience since {year}",
+        "details": "more details"
     }
 }

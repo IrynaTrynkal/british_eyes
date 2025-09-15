@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { aboutSertification } from "@/components/assets/contacts";
+import { Fraction } from "@/components/shared/Fraction";
 import { GreenText } from "@/components/shared/GreenText";
 import { LinkAction } from "@/components/shared/LinkAction";
 
@@ -94,15 +95,7 @@ export const AboutMain = () => {
                         className="tab:block tab:w-[70%] pc:mb-1 pc:max-w-54 mb-7 hidden max-w-[333px]"
                     />
                     <div className="pc:flex-row-reverse pc:items-end flex justify-between">
-                        <div className="pc:gap-2 flex flex-col gap-1">
-                            <p className="font-oswald pc:text-5xl text-center text-xl leading-none font-medium uppercase">
-                                20
-                            </p>
-                            <div className="h-[1px] w-full bg-black" />
-                            <p className="tab:text-sm pc:text-base text-xs leading-none uppercase">
-                                {t("aboutYears")}
-                            </p>
-                        </div>
+                        <Fraction textUp="20" textDown={t("aboutYears")} />
                         <LinkAction
                             href="/pro-kliniku"
                             secondary

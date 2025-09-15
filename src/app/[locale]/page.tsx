@@ -2,6 +2,7 @@ import { AboutMain } from "@/components/main/about/AboutMain";
 import { Advantages } from "@/components/main/advantages/Advantages";
 import { Approach } from "@/components/main/approach/Approach";
 import { Choice } from "@/components/main/choice/Choice";
+import { Doctors } from "@/components/main/doctors/Doctors";
 import { HeroMain } from "@/components/main/hero/HeroMain";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
             <Choice />
             <Approach />
             <AboutMain />
+            <Doctors />
         </>
     );
 }
