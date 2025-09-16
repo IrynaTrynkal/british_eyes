@@ -10,7 +10,6 @@ const MAX_NEWS = 3;
 export const News = () => {
     const t = useTranslations("HomePage");
     const showNews = newsList.slice(0, MAX_NEWS);
-    console.log("showNews length:", showNews?.length, showNews);
 
     return (
         <section className="content pc:pb-[120px] tab:pb-12 pb-[60px]">
