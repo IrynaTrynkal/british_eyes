@@ -8,6 +8,7 @@ import { FAQ } from "@/components/main/faq/FAQ";
 import { Feedbacks } from "@/components/main/feedbacks/Feedbacks";
 import { HeroMain } from "@/components/main/hero/HeroMain";
 import { News } from "@/components/main/news/News";
+import { Booking } from "@/components/shared/booking/Booking";
 
 export default function Home() {
     return (
@@ -21,6 +22,7 @@ export default function Home() {
             <Feedbacks />
             <News />
             <FAQ faqList={faqMainList} />
+            <Booking />
         </>
     );
 }

@@ -55,7 +55,10 @@
         "newsSubtitle": "news",
         "newsTitle": "We teach and share experiences",
         "newsBtn": "all news",
-        "readMore": "read more"
+        "readMore": "read more",
+        "bookingSubtitle": "appointment booking",
+        "bookingTitle": "Convenient booking and transparent consultation cost",
+        "bookingText": "We have made the process of contacting the clinic as simple as possible. You only need to book an appointment with an ophthalmologist in Kyiv online or by phone."
     },
     "Menu": {
         "onlineButtonMob": "online booking",
@@ -101,5 +104,35 @@
     "Doctors": {
         "experienceSince": "Experience since {year}",
         "details": "more details"
+    },
+    "Form": {
+        "title": "book a consultation",
+        "required": "required fields",
+        "name": "Your name*",
+        "surname": "Surname",
+        "phone": "Phone number",
+        "email": "Email",
+        "date": "Preferred appointment date",
+        "chooseDate": "Choose a date",
+        "close": "Close",
+        "cancel": "Cancel",
+        "topic": "Select visit topic*",
+        "messege": "Message",
+        "nameNull": "Enter your name",
+        "nameInvalid": "Letters, hyphens, apostrophes, quotes are allowed",
+        "phoneNull": "Enter your phone number",
+        "phoneInvalid": "Should be 380ХХХХХХХХХХ (12 digits))",
+        "topicNull": "Choose a topic for your visit",
+        "messegeInvalid": "Maximum length 300 characters",
+        "consent": "By filling out the form, you agree to the processing of your personal data",
+        "submit": "Submit",
+        "successMessageTitle": "your request has been successfully sent",
+        "successMessage": "Our administrator will contact you shortly",
+        "errorMessageTitle": "something went wrong",
+        "errorMessage": "Please try again later or call us.",
+        "vision-diagnostics": "Vision diagnostics",
+        "cataract-treatment": "Cataract treatment",
+        "laser-vision-correction": "Laser vision correction",
+        "other": "Other"
     }
 }
