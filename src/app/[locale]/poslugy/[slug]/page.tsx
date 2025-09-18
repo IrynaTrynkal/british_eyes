@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
+import { Booking } from "@/components/shared/booking/Booking";
 import { LocaleType } from "@/types/LocaleType";
 
 interface ServicePageProps {
@@ -19,10 +20,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
     }
 
     return (
-        <div className="content py-24">
-            <h1 className="font-oswald font-bold uppercase">
-                {displayedService.key}
-            </h1>
-        </div>
+        <>
+            <div className="content py-24">
+                <h1 className="font-oswald font-bold uppercase">
+                    {displayedService.key}
+                </h1>
+            </div>
+            <Booking />
+        </>
     );
 }
