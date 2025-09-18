@@ -12,6 +12,7 @@
     --color-grey-70: #dddddd;
     --color-green-100: #2f7d31;
     --color-green-20: #cddfd9;
+    --color-green-30: #eef4f2;
     --color-green-10: #f5f9f7;
     --color-error: #900b09;
     --color-light-logo: #f9f9f9;
@@ -99,6 +100,18 @@ a {
     );
 }
 
+.book-gradient {
+    background: radial-gradient(
+        57.19% 63.11% at 50% 49.2%,
+        #003626 50%,
+        rgba(0, 54, 38, 0) 89%
+    );
+}
+
+.book-height {
+    height: 723px;
+}
+
 .hide-scrollbar {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
@@ -109,6 +122,105 @@ a {
     display: none; /* Chrome, Safari */
 }
 
+.booking-image {
+    aspect-ratio: 1440/935;
+    background-image:
+        linear-gradient(#065d43, #065d43), url("/images/booking.png");
+
+    background-blend-mode: hard-light;
+    background-size: cover;
+    background-position: center;
+}
+.react-datepicker__header {
+    background-color: #fffff0 !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+}
+.react-datepicker__triangle {
+    fill: #fffff0 !important;
+    color: #fffff0 !important;
+}
+.react-datepicker__day--today--selected,
+.react-datepicker__day--selected {
+    background-color: #151515 !important;
+    color: #fffff0 !important;
+    border-radius: 9999px !important;
+    transition: all 0.2s ease;
+}
+
+.react-datepicker__day--today {
+    border: 1px solid #151515;
+    background-color: transparent;
+    color: #151515;
+    border-radius: 9999px !important;
+}
+
+.react-datepicker__day--today:hover,
+.react-datepicker__day--selected:hover,
+.react-datepicker__day:hover {
+    border: 1px solid #151515;
+    background-color: transparent !important;
+    border-radius: 9999px !important;
+    color: #151515 !important;
+}
+.react-datepicker__day {
+    border: 1px solid transparent;
+    border-radius: 9999px;
+}
+.react-datepicker__day-names {
+    color: #151515 !important;
+    margin-left: 10px !important;
+}
+
+input,
+textarea,
+select,
+option {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    box-shadow: none;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .book-height {
+        height: 240px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .book-height {
+        height: 100px;
+    }
+}
+@media (min-width: 1440px) {
+    .book-height {
+        height: 0px;
+    }
+    .booking-image {
+        aspect-ratio: 1440/785;
+    }
+    .book-gradient {
+        background:
+            linear-gradient(
+                90.43deg,
+                rgba(11, 117, 86, 0.5) 0.37%,
+                rgba(0, 54, 38, 0.7) 40.4%,
+                #003626 44.79%,
+                #003626 54.71%,
+                rgba(0, 54, 38, 0.7) 59.66%,
+                rgba(11, 117, 86, 0.5) 99.63%
+            ),
+            radial-gradient(
+                42.77% 50% at 50% 0%,
+                #003626 46.98%,
+                rgba(0, 54, 38, 0) 88.89%
+            );
+    }
+    #booking.book-gradient {
+        background: none;
+    }
+}
 /* * {
     outline: 1px solid red;
 } */

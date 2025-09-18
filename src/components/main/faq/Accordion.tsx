@@ -19,7 +19,7 @@ export function Accordion({ item }: AccordionProps) {
 
     return (
         <li
-            className={`border-grey-70 group tab:px-3 tab:pt-3 tab:pb-2 rounded-md border p-2 transition-all duration-500 ${isAccordionOpen ? "bg-green-10" : "bg-white"}`}
+            className={`border-grey-70 group tab:px-3 tab:pt-3 tab:pb-2 rounded-md border p-2 transition-all duration-500 hover:border-black ${isAccordionOpen ? "bg-green-10" : "bg-white"}`}
         >
             <button
                 aria-label="open answer button"
@@ -33,11 +33,7 @@ export function Accordion({ item }: AccordionProps) {
                         {question}
                     </summary>
                 </div>
-                <div
-                    className={
-                        "h-[40px] w-[40px] rounded-sm p-2.5 transition-transform duration-300 ease-out group-hover:border"
-                    }
-                >
+                <div className={"h-[40px] w-[40px] p-2.5"}>
                     <IconArrow
                         className={`h-5 w-5 transition-transform duration-300 ease-out ${isAccordionOpen ? "-rotate-90" : "rotate-90"}`}
                     />
