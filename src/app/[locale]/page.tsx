@@ -8,12 +8,14 @@ import { FAQ } from "@/components/main/faq/FAQ";
 import { Feedbacks } from "@/components/main/feedbacks/Feedbacks";
 import { HeroMain } from "@/components/main/hero/HeroMain";
 import { News } from "@/components/main/news/News";
+import { Services } from "@/components/main/services/Services";
 import { Booking } from "@/components/shared/booking/Booking";
 
 export default function Home() {
     return (
         <>
             <HeroMain />
+            <Services />
             <Advantages />
             <Choice />
             <Approach />

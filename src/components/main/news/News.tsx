@@ -29,7 +29,7 @@ export const News = () => {
                 {showNews.map(news => (
                     <li
                         key={news.en.title}
-                        className="tab:w-[calc(50%-10px)] tab:max-w-[395px] pc:max-w-[434px] h-full overflow-hidden rounded-sm"
+                        className="tab:w-[calc(50%-10px)] tab:max-w-[395px] pc:max-w-[434px] h-full overflow-hidden rounded-tl rounded-tr"
                     >
                         <NewCard btnName={t("readMore")} news={news} />
                     </li>

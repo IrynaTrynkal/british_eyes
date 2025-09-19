@@ -41,14 +41,6 @@ export const NewCard = ({
                         }}
                     />
                 )}
-
-                {/* <Image
-                    src={news.img ? news.img : "/images/blog.jpg"}
-                    alt={news[locale as LocaleType].title}
-                    width={435}
-                    height={220}
-                    className="h-auto w-full object-cover"
-                /> */}
             </div>
             <h3 className="font-oswald tab:text-2xl pc:min-h-24 pc:mb-3 tab:leading-7 tab:min-h-[57px] pc:line-clamp-3 mb-6 line-clamp-2 [display:-webkit-box] overflow-hidden leading-5 font-medium break-words uppercase">
                 {news[locale as LocaleType].title}
@@ -64,7 +56,7 @@ export const NewCard = ({
                     href={news.link as any}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-oswald tab:text-sm pc:underline pc:decoration-1 pc:underline-offset-[2.5px] pc:text-base text-sm leading-none font-medium whitespace-nowrap uppercase"
+                    className="font-oswald tab:text-sm pc:text-base pc:hover:underline-offset-[2.5px] text-sm leading-none font-medium whitespace-nowrap uppercase hover:underline hover:decoration-1 hover:underline-offset-[1.5px]"
                 >
                     {btnName}
                 </Link>
