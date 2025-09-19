@@ -84,8 +84,10 @@ export const ServicesList = () => {
                                 <p className="tab:leading-5 pc:text-lg pc:leading-[22px] w-[80%]">
                                     {service[locale as LocaleType].textMain}
                                 </p>
-                                <div className="flex h-12 w-12 items-center justify-center rounded group-hover:border">
-                                    <IconArrow className="h-6 w-6" />
+                                <div className="group-hover:bg-ivory border-ivory flex h-12 w-12 items-center justify-center rounded border transition-all duration-300 ease-in-out">
+                                    <IconArrow
+                                        className={`h-6 w-6 transition-all duration-300 ease-in-out group-hover:text-black ${index === 4 ? "text-ivory" : ""} `}
+                                    />
                                 </div>
                             </div>
                         </div>
