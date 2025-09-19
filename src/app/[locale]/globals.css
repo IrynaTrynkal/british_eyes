@@ -100,6 +100,21 @@ a {
     );
 }
 
+.hover-green-gradient {
+    background: transparent;
+}
+
+.hover-green-gradient:hover {
+    background: linear-gradient(
+        -45deg,
+        #023f2c 0%,
+        #09684b 21%,
+        #0b7556 35%,
+        #08654a 52%,
+        #003626 83%
+    );
+}
+
 .book-gradient {
     background: radial-gradient(
         57.19% 63.11% at 50% 49.2%,
