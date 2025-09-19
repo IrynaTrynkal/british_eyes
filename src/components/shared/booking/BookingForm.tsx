@@ -126,7 +126,7 @@ export const BookingForm = () => {
     const inputClass =
         "font-oswald tab:py-3 tab:px-5 placeholder:text-grey focus:bg-white-100  block w-full rounded border px-3 py-2 leading-none group-focus:outline-none";
     const errorClass =
-        "text-error text-sm leading-none absolute bottom-[-18px] pc:bottom-[-10px] left-0 mt-1";
+        "text-error text-sm leading-none absolute bottom-[-18px] left-0 mt-1";
 
     return (
         <div className="bg-ivory tab:max-w-[1044px] tab:w-[90%] pc:px-5 pc:pt-5 pc:pb-[38px] mx-auto -mt-1 w-full max-w-[420px] rounded-sm px-4 py-8">
