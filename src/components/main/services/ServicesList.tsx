@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { servicesData } from "@/components/assets/servicesData";
 import { Fraction } from "@/components/shared/Fraction";
 import { IconArrow } from "@/components/shared/icons/IconArrow";
+import { IconPercent } from "@/components/shared/icons/IconPercent";
 import { LinkAction } from "@/components/shared/LinkAction";
 import { Link } from "@/i18n/navigation";
 import { LocaleType } from "@/types/LocaleType";
@@ -48,13 +49,13 @@ export const ServicesList = () => {
                         <div className="tab:h-full tab:flex tab:flex-col tab:justify-between">
                             <div className="tab:flex tab:justify-between">
                                 <h4
-                                    className={`font-oswald tab:text-lg pc:text-2xl pc:leading-7 tab:leading-5 text-sm leading-4 font-medium uppercase ${service.price.discountPrice ? "tab:w-[55%] w-[75%]" : "tab:w-[70%] w-full"} `}
+                                    className={`font-oswald tab:text-lg pc:text-2xl pc:leading-7 tab:leading-5 leading-4 font-medium uppercase ${service.price.discountPrice ? "tab:w-[55%] w-[75%]" : "tab:w-[70%] w-full"} `}
                                 >
                                     {tMenu(service.name.key)}
                                 </h4>
                                 {service.price.discountPrice && (
                                     <div className="text-ivory font-oswald pc:text-3xl tab:-mt-3 tab:w-9 tab:h-10 tab:text-xl tab:flex pc:h-12 pc:w-11 hidden items-center justify-center bg-black leading-none font-bold uppercase">
-                                        %
+                                        <IconPercent className="pc:w-4 pc:h-[22px] tab:w-[14px] tab:h-5 h-4 w-3" />
                                     </div>
                                 )}
 
@@ -109,7 +110,7 @@ export const ServicesList = () => {
                         </div>
                         {service.price.discountPrice && (
                             <div className="text-ivory font-oswald tab:hidden pc:right-auto tab:w-9 tab:h-10 pc:left-[61.5%] tab:right-[120px] tab:text-xl absolute top-0 right-0 flex h-8 w-8 items-center justify-center bg-black leading-none font-bold uppercase">
-                                %
+                                <IconPercent className="h-4 w-3" />
                             </div>
                         )}
                     </Link>

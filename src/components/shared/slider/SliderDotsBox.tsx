@@ -2,6 +2,7 @@ import { SliderDots } from "./SliderDots";
 
 interface SliderDotsBoxProps {
     ivory?: boolean;
+    tabVisible?: boolean;
     scrollSnaps: number[];
     selectedIndex: number;
     onDotButtonClick: (index: number) => void;
@@ -9,13 +10,16 @@ interface SliderDotsBoxProps {
 
 export const SliderDotsBox = <T,>({
     ivory,
+    tabVisible,
     scrollSnaps,
     selectedIndex,
     sliders,
     onDotButtonClick,
 }: SliderDotsBoxProps & { sliders: T[] }) => {
     return (
-        <div className="embla__dots tab:hidden flex items-center gap-3">
+        <div
+            className={`embla__dots flex items-center gap-3 ${tabVisible ? "" : "tab:hidden"}`}
+        >
             {scrollSnaps.map((_, index) => (
                 <SliderDots
                     key={index}
