@@ -17,7 +17,7 @@ export const MenuBurgerButton = ({
             }
             type="button"
             onClick={toggleHeaderMenuOpen}
-            className="tab:h-12 tab:w-12 tab:p-3 relative z-10 flex h-6 w-6 items-center justify-center rounded-sm border border-transparent p-1 transition-all duration-300 ease-in-out hover:border-black"
+            className="tab:h-8 tab:w-8 tab:p-3 relative z-10 flex h-6 w-6 items-center justify-center rounded-sm border border-transparent p-1 transition-all duration-300 ease-in-out hover:border-black"
         >
             <IconMenu
                 className={`tab:w-8 tab:h-8 absolute transition-opacity duration-300 ${isHeaderMenuOpened ? "pointer-events-none opacity-0" : "pointer-events-auto opacity-100"}`}

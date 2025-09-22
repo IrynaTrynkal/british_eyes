@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+import { Link } from "@/i18n/navigation";
+
 import { gogleMapLink } from "../assets/contacts";
 import { IconBigLogo } from "../shared/icons/IconBigLogo";
 import { IconPin } from "../shared/icons/IconPin";
@@ -48,7 +50,9 @@ export const Footer = () => {
                             <h3 className={`${footerH3} mb-3`}>
                                 {t("kontakty")}
                             </h3>
-                            <PhoneNumberList className="pc:text-base pc:leading-none flex flex-col gap-2 text-sm leading-[15px] font-medium" />
+                            <div>
+                                <PhoneNumberList className="pc:text-base group pc:leading-none flex w-fit flex-col gap-2 text-sm leading-[15px] font-medium" />
+                            </div>
                         </div>
                         <div className="pc:hidden w-1/2">
                             <h3 className={`${footerH3} mb-3`}>{t("mode")}</h3>
@@ -90,12 +94,24 @@ export const Footer = () => {
                     </div>
                 </a>
                 <div className="tab:flex tab:justify-between pc:justify-normal tab:items-center text-center">
-                    <button className="pc:text-base pc:px-2.5 pc:mr-[45.5%] pc:mb-0 mb-6 border px-3 py-2.5 text-sm font-medium uppercase">
+                    <Link
+                        href={"/pro-kliniku#german" as any}
+                        className="pc:text-base pc:px-2.5 pc:mr-[45.5%] hover:bg-ivory pc:mb-0 mb-6 border px-3 py-2.5 text-sm font-medium uppercase transition-all duration-300 ease-in-out hover:text-black"
+                    >
                         {t("german")}
-                    </button>
+                    </Link>
                     <div className="tab:flex-row pc:w-[418px] pc:mb-0 tab:gap-12 mb-4 flex flex-col gap-3 text-sm leading-[18px]">
-                        <p>{t("policy")}</p>
-                        <p>{t("license")}</p>
+                        <p className="transition-all duration-300 ease-in-out hover:underline">
+                            {t("policy")}
+                        </p>
+                        <a
+                            href="https://eyes.ua/wp-content/uploads/2021/05/-%D0%91%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B8%CC%86-%D0%BE%D1%84%D1%82%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B8%CC%86-%D1%86%D0%B5%D0%BD%D1%82%D1%80.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="transition-all duration-300 ease-in-out hover:underline"
+                        >
+                            {t("license")}
+                        </a>
                     </div>
                     <p className="pc:ml-auto pc:mr-0 text-sm leading-[18px]">
                         &copy; 2025 БОЦ

@@ -33,22 +33,22 @@ const Navbar = () => {
     }, [isHeaderMenuOpened]);
     const t = useTranslations("Menu");
     return (
-        <nav className="pc:h-[72px] pc:gap-8 border-grey flex h-12 items-center justify-between gap-6 border-b">
-            <div className="pc:gap-4 flex items-center justify-center">
+        <nav className="prepc:h-[72px] prepc:gap-8 border-grey flex h-12 items-center justify-between gap-6 border-b">
+            <div className="prepc:gap-4 flex items-center justify-center">
                 <Logo />
-                <MenuPC className="pc:flex hidden" />
+                <MenuPC className="prepc:flex hidden" />
             </div>
-            <div className="pc:flex hidden items-center gap-4">
+            <div className="prepc:flex hidden items-center gap-4">
                 <SocialLinks />
                 <PhoneButton
                     togglePhoneListOpen={togglePhoneListOpen}
                     isPhoneListOpened={isPhoneListOpened}
                 />
-                <ButtonAction name={t("onlineButtonPC")} />
+                <ButtonAction header name={t("onlineButtonPC")} />
                 <LanguageSwitcher />
             </div>
 
-            <div className="pc:hidden flex items-center gap-6">
+            <div className="prepc:hidden flex items-center gap-6">
                 <PhoneButton
                     togglePhoneListOpen={togglePhoneListOpen}
                     isPhoneListOpened={isPhoneListOpened}

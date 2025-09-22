@@ -19,8 +19,8 @@ export const PatientsMenu = ({
     const locale = useLocale();
 
     return (
-        <div className="pc:mt-8 pc:px-12 pc:flex pc:gap-8">
-            <div className="pc:block hidden h-[225px] w-[437px]">
+        <div className="prepc:mt-8 prepc:px-12 prepc:flex prepc:gap-8">
+            <div className="prepc:block hidden h-[225px] w-[437px]">
                 <Image
                     src="/images/patients-menu.jpg"
                     alt={t("informatsiya-dlya-patsiyentiv")}
@@ -30,7 +30,7 @@ export const PatientsMenu = ({
                 />
             </div>
             <ul
-                className={`pc:pt-0 pc:pb-16 pc:gap-8 flex flex-col gap-2 py-4 ${className}`}
+                className={`prepc:pt-0 prepc:pb-16 prepc:gap-8 flex flex-col gap-2 py-4 ${className}`}
             >
                 {patientsList.map((item, idx) => {
                     return (
@@ -41,11 +41,11 @@ export const PatientsMenu = ({
                                 }
                                 onClick={onClick}
                                 className={
-                                    "pc:px-3 pc:py-1 pc:justify-between pc:w-[662px] pc:leading-7 pc:border pc:border-grey font-oswald pc:text-2xl hover:text-ivory link-gradient flex items-center gap-2 rounded-lg pl-2 text-xs font-medium text-black uppercase transition-all duration-500"
+                                    "prepc:px-3 prepc:py-1 prepc:justify-between prepc:w-[662px] prepc:leading-7 prepc:border prepc:border-grey font-oswald prepc:text-2xl hover:text-ivory link-gradient flex items-center gap-2 rounded-lg pl-2 text-xs font-medium text-black uppercase transition-all duration-500"
                                 }
                             >
                                 {t(item.key)}
-                                <div className="pc:flex hidden h-11 w-11 items-center justify-center">
+                                <div className="prepc:flex hidden h-11 w-11 items-center justify-center">
                                     <IconArrow className="h-6 w-6" />
                                 </div>
                             </Link>

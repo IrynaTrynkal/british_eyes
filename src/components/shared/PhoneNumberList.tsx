@@ -16,7 +16,7 @@ export const PhoneNumberList = ({
                     <a
                         onClick={onClick}
                         href={`tel:${normalizePhone(item)}`}
-                        className=""
+                        className="group-hover:text-grey-90 hover:!text-ivory transition-colors duration-300"
                     >
                         {item}
                     </a>

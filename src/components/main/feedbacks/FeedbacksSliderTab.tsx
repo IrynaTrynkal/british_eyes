@@ -45,11 +45,13 @@ export const FeedbacksSliderTab = () => {
                 <div className="embla__controls tab:mt-9">
                     <div className="embla__buttons flex justify-center gap-4">
                         <PrevButton
+                            black
                             onClick={onPrevButtonClick}
                             disabled={prevBtnDisabled}
                         />
 
                         <NextButton
+                            black
                             onClick={onNextButtonClick}
                             disabled={nextBtnDisabled}
                         />

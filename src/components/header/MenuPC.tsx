@@ -23,19 +23,11 @@ export const MenuPC = ({
         "informatsiya-dlya-patsiyentiv": false,
     });
 
-    const toggleSubmenu = (key: string) => {
-        setOpenMenus(prev => {
-            const newState: { [key: string]: boolean } = Object.keys(
-                prev
-            ).reduce(
-                (acc, k) => {
-                    acc[k] = false;
-                    return acc;
-                },
-                {} as { [key: string]: boolean }
-            );
-            newState[key] = !prev[key];
-            return newState;
+    const handleOpen = (key: string) => {
+        setOpenMenus({
+            poslugy: key === "poslugy",
+            "informatsiya-dlya-patsiyentiv":
+                key === "informatsiya-dlya-patsiyentiv",
         });
     };
 
@@ -53,15 +45,19 @@ export const MenuPC = ({
                     item.key === "poslugy" ||
                     item.key === "informatsiya-dlya-patsiyentiv";
                 return (
-                    <li key={idx}>
+                    <li
+                        key={idx}
+                        onMouseEnter={() => hasSubmenu && handleOpen(item.key)}
+                        onMouseLeave={() => hasSubmenu && closeSubmenus()}
+                    >
                         <div
-                            className={`pc:px-3 flex items-center justify-center ${(item.key === "poslugy" && openMenus.poslugy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
+                            className={`prepc:px-2.5 pc:px-3 flex items-center justify-center ${(item.key === "poslugy" && openMenus.poslugy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
                         >
                             <Link
                                 href={`/${item.key}` as any}
                                 onClick={hasSubmenu ? closeSubmenus : onClick}
                                 className={
-                                    "font-oswald pc:text-base pc:h-[72px] flex h-12 items-center text-xs font-medium uppercase"
+                                    "font-oswald prepc:text-base prepc:h-[72px] flex h-12 items-center text-xs font-medium uppercase"
                                 }
                             >
                                 {t(item.key)}
@@ -69,8 +65,7 @@ export const MenuPC = ({
                             {hasSubmenu && (
                                 <button
                                     type="button"
-                                    onClick={() => toggleSubmenu(item.key)}
-                                    className="flex h-6 w-6 items-center justify-center rounded-sm transition-all duration-300 ease-in-out hover:border"
+                                    className="flex h-6 w-6 items-center justify-center"
                                 >
                                     <IconChevron />
                                 </button>

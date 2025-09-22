@@ -64,7 +64,7 @@ export const Doctors = () => {
                             <li
                                 key={item.key}
                                 onClick={() => toggleSubmenu(item.key)}
-                                className={`font-oswald text-ivory tab:pr-0 tab:text-right cursor-pointer pr-5 text-sm leading-4 uppercase transition-all duration-300 ${item.key === openedDepartment ? "font-medium underline" : " "} `}
+                                className={`font-oswald text-ivory tab:pr-0 tab:text-right cursor-pointer pr-5 text-sm leading-4 uppercase transition-all duration-300 hover:underline ${item.key === openedDepartment ? "font-medium underline" : " "} `}
                             >
                                 {item.translations[locale as LocaleType]}
                             </li>

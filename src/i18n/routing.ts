@@ -50,5 +50,9 @@ export const routing = defineRouting({
             en: "/contacts",
             ru: "/kontakty",
         },
+        "/rayner-galaxy-ua": {
+            en: "/rayner-galaxy-a-new-level-of-vision-is-now-available-at-our-clinic",
+            ru: "/rayner-galaxy-novoe-izmerenie-zreniya-uzhe-v-nashej-klinike",
+        },
     },
 });

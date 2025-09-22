@@ -61,36 +61,42 @@ type ButtonType = PropsWithChildren<
         React.ButtonHTMLAttributes<HTMLButtonElement>,
         HTMLButtonElement
     >
->;
+> & {
+    black?: boolean;
+};
 
 export const PrevButton: React.FC<ButtonType> = props => {
-    const { disabled, ...restProps } = props;
+    const { disabled, black = false, ...restProps } = props;
 
     return (
         <button
             disabled={disabled}
             aria-label="show previous slide button"
-            className="embla__button--prev group tab:h-11 tab:border tab:w-11 relative flex h-6 w-6 rotate-180 items-center justify-center rounded-sm hover:border active:border disabled:pointer-events-none disabled:opacity-60"
+            className="embla__button--prev group tab:h-11 tab:border tab:w-11 relative flex h-6 w-6 rotate-180 items-center justify-center rounded transition-colors duration-300 ease-in-out hover:border-black hover:bg-black disabled:pointer-events-none disabled:opacity-60"
             type="button"
             {...restProps}
         >
-            <IconArrow />
+            <IconArrow
+                className={` ${black ? "group-hover:text-ivory text-black" : "text-ivory"}`}
+            />
         </button>
     );
 };
 
 export const NextButton: React.FC<ButtonType> = props => {
-    const { disabled, ...restProps } = props;
+    const { disabled, black = false, ...restProps } = props;
 
     return (
         <button
             disabled={disabled}
             aria-label="show next slide button"
-            className="embla__button--prev group tab:h-11 tab:border tab:w-11 relative flex h-6 w-6 items-center justify-center rounded-sm hover:border active:border disabled:pointer-events-none disabled:opacity-60"
+            className="embla__button--prev group tab:h-11 tab:border tab:w-11 relative flex h-6 w-6 items-center justify-center rounded-sm transition-colors duration-300 ease-in-out hover:border hover:border-black hover:bg-black active:border disabled:pointer-events-none disabled:opacity-60"
             type="button"
             {...restProps}
         >
-            <IconArrow />
+            <IconArrow
+                className={` ${black ? "group-hover:text-ivory text-black" : "text-ivory"}`}
+            />
         </button>
     );
 };

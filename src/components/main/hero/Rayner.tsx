@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { ButtonArrow } from "@/components/shared/ButtonArrow";
+import { Link } from "@/i18n/navigation";
 
 export const Rayner = ({
     text,
@@ -12,8 +13,9 @@ export const Rayner = ({
     className?: string;
 }) => {
     return (
-        <div
-            className={`text-ivory tab:rounded-lg pc:p-3 pc:flex pc:gap-2 rounded-sm bg-white/10 p-2 ${className}`}
+        <Link
+            href="/rayner-galaxy-ua"
+            className={`text-ivory tab:rounded-lg group pc:p-3 pc:flex pc:gap-2 rounded-sm bg-white/10 p-2 ${className}`}
         >
             <div className="pc:w-[131px] mb-1 flex justify-between">
                 <div className="pc:w-[131px] pc:h-[132px] relative h-[51px] w-[51px]">
@@ -38,6 +40,6 @@ export const Rayner = ({
                     {textPC}
                 </p>
             </div>
-        </div>
+        </Link>
     );
 };

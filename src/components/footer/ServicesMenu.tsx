@@ -28,7 +28,7 @@ export const ServicesMenu = ({
                                     } as any
                                 }
                                 onClick={onClick}
-                                className="flex-1"
+                                className="flex-1 transition-all duration-300 ease-in-out hover:underline hover:decoration-1 hover:underline-offset-[3.5px]"
                             >
                                 {t(item.key)}
                             </Link>
