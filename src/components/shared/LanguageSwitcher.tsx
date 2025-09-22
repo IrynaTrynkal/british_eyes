@@ -42,7 +42,7 @@ export default function LanguageSwitcher() {
         slug = segments[2];
     }
     return (
-        <div className="pc:block font-oswald relative hidden font-medium">
+        <div className="prepc:block font-oswald relative hidden font-medium">
             <button
                 type="button"
                 onClick={() => setOpen(prev => !prev)}

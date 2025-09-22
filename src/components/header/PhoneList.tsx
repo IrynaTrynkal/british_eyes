@@ -24,7 +24,7 @@ export const PhoneList = ({
             transition={{ duration: 1, ease: "easeInOut" }}
             className="bg-ivory tab:top-[72px] tab:right-68 tab:left-auto absolute top-12 left-0 z-[7] overflow-hidden"
         >
-            <div className="pc:px-8 px-5 py-8">
+            <div className="prepc:px-8 px-5 py-8">
                 <ButtonClose
                     small
                     className="absolute top-0 right-0"

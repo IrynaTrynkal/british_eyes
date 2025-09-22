@@ -16,7 +16,7 @@ export const HeroMain = () => {
         <section className="pc:bg-[url(/images/main-hero.jpg)] tab:mt-0 mt-12 bg-[url(/images/main-hero-tab.jpg)] bg-cover bg-top-left bg-no-repeat">
             <div className="content tab:flex tab:pb-9 pc:pb-10 tab:pt-[176px] pt-4 pb-7">
                 <AdressHero
-                    className="tab:max-w-[312px] tab:p-0 tab:rounded-lg tab:mb-0 tab:mt-auto tab:w-1/3"
+                    className="tab:max-w-[312px] tab:aspect-[240/84] tab:p-0 tab:rounded-lg tab:mb-0 tab:mt-auto tab:w-1/3"
                     text={t("goToMap")}
                     textAdress={t("adress")}
                 />

@@ -29,7 +29,7 @@ export type ServicesKeyType =
 export type ServicesListProps = {
     key: ServicesKeyType;
     image?: string;
-    icon?: string;
+    icon?: boolean;
     slug: { uk: string; ru: string; en: string };
 };
 
@@ -72,7 +72,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "dityache-viddilennya",
-        icon: "dityache-viddilennya.svg",
+        icon: true,
         slug: {
             uk: "dityache-viddilennya",
             en: "children-department",
@@ -81,7 +81,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "likuvannya-keratokonusa",
-        icon: "likuvannya-keratokonusa.svg",
+        icon: true,
         slug: {
             uk: "likuvannya-keratokonusa",
             en: "keratoconus-treatment",
@@ -90,7 +90,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "lazerne-likuvannya-zahvoryuvan-oka",
-        icon: "lazerne-likuvannya-zahvoryuvan-oka.svg",
+        icon: true,
         slug: {
             uk: "lazerne-likuvannya-zahvoryuvan-oka",
             en: "laser-treatment-of-eye-diseases",
@@ -99,7 +99,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "refrakczijna-lensektomiya",
-        icon: "refrakczijna-lensektomiya.svg",
+        icon: true,
         slug: {
             uk: "refrakczijna-lensektomiya",
             en: "refractive-lensectomy",
@@ -108,7 +108,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "vitreoretinalna-hirurgiya",
-        icon: "vitreoretinalna-hirurgiya.svg",
+        icon: true,
         slug: {
             uk: "vitreoretinalna-hirurgiya",
             en: "vitreoretinal-surgery",
@@ -117,7 +117,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "intravitrealni-inekczii",
-        icon: "intravitrealni-inekczii.svg",
+        icon: true,
         slug: {
             uk: "intravitrealni-inekczii",
             en: "intravitreal-injections",
@@ -126,7 +126,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "hirurgichne-likuvannya-glaukomi",
-        icon: "hirurgichne-likuvannya-glaukomi.svg",
+        icon: true,
         slug: {
             uk: "hirurgichne-likuvannya-glaukomi",
             en: "surgical-glaucoma-treatment",
@@ -135,7 +135,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "likuvannya-kosookosti",
-        icon: "likuvannya-kosookosti.svg",
+        icon: true,
         slug: {
             uk: "likuvannya-kosookosti",
             en: "strabismus-treatment",
@@ -144,7 +144,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "hirurgiya-povik-i-konyunktivi",
-        icon: "hirurgiya-povik-i-konyunktivi.svg",
+        icon: true,
         slug: {
             uk: "hirurgiya-povik-i-konyunktivi",
             en: "eyelid-and-conjunctival-surgery",
@@ -153,7 +153,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "anesteziologichnij-posibnik",
-        icon: "anesteziologichnij-posibnik.svg",
+        icon: true,
         slug: {
             uk: "anesteziologichnij-posibnik",
             en: "anesthesia-benefit",
@@ -162,7 +162,7 @@ export const servicesList: ServicesListProps[] = [
     },
     {
         key: "ksenonoterapiya",
-        icon: "xenon-therapy.svg",
+        icon: true,
         slug: {
             uk: "ksenonoterapiya",
             en: "xenon-therapy",

@@ -16,7 +16,7 @@ export const MenuMobWindow = ({
             initial={{ height: 0 }}
             animate={{ height: isHeaderMenuOpened ? "100vh" : 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="pc:hidden bg-ivory pc:top-[72px] absolute top-12 left-0 z-[7] w-[100vw] overflow-y-auto px-4"
+            className="prepc:hidden bg-ivory prepc:top-[72px] absolute top-12 left-0 z-[7] w-[100vw] overflow-y-auto px-4"
         >
             <MenuMobContent
                 className="mx-auto max-w-[500px] pb-24"

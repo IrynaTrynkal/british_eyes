@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 import { feedbacksPhotoList } from "@/components/assets/feedbacksData";
+import { Link } from "@/i18n/navigation";
 
 export const Feedbacks = ({
     text,
@@ -32,7 +33,8 @@ export const Feedbacks = ({
         return () => window.removeEventListener("resize", updateCount);
     }, []);
     return (
-        <button
+        <Link
+            href="/vidhuky"
             className={`text-ivory tab:rounded-lg pc:p-3 flex flex-col justify-start rounded-sm bg-white/10 p-2 ${className}`}
         >
             <h3 className="font-oswald pc:text-[28px] mb-2 text-left text-xl leading-none font-medium">
@@ -57,6 +59,6 @@ export const Feedbacks = ({
                     </li>
                 ))}
             </ul>
-        </button>
+        </Link>
     );
 };

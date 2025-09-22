@@ -15,13 +15,13 @@ export const MenuMain = ({
 
     return (
         <ul
-            className={`pc:grid-cols-1 relative grid grid-cols-2 gap-2 ${className} `}
+            className={`pc:grid-cols-1 group relative grid grid-cols-2 gap-2 ${className} `}
         >
             {footerMainMenu.map((item, idx) => {
                 return (
                     <li
                         key={idx}
-                        className="pc:leading-[16.8px] text-sm leading-[15px] font-medium"
+                        className="pc:leading-[16.8px] group-hover:text-grey-90 hover:!text-ivory text-sm leading-[15px] font-medium transition-colors duration-300"
                     >
                         <Link
                             href={
@@ -30,6 +30,7 @@ export const MenuMain = ({
                                     : `/${item.key}`) as any
                             }
                             onClick={onClick}
+                            className="block"
                         >
                             {t(item.key)}
                         </Link>
