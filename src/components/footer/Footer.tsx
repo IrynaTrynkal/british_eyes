@@ -96,7 +96,7 @@ export const Footer = () => {
                 <div className="tab:flex tab:justify-between pc:justify-normal tab:items-center text-center">
                     <Link
                         href={"/pro-kliniku#german" as any}
-                        className="pc:text-base pc:px-2.5 pc:mr-[45.5%] hover:bg-ivory pc:mb-0 mb-6 border px-3 py-2.5 text-sm font-medium uppercase transition-all duration-300 ease-in-out hover:text-black"
+                        className="pc:text-base pc:px-2.5 pc:mr-[45.5%] hover:bg-ivory pc:mb-0 mx-auto mb-6 block w-fit border px-3 py-2.5 text-sm font-medium uppercase transition-all duration-300 ease-in-out hover:text-black"
                     >
                         {t("german")}
                     </Link>
