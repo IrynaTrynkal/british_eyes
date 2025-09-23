@@ -39,7 +39,7 @@ export default function DateInput({
                 type="button"
                 onClick={onClick}
                 ref={ref as React.RefObject<HTMLButtonElement>}
-                className={` ${value ? "bg-white-100 text-black" : "text-grey"} font-oswald border-grey tab:py-3 tab:px-5 placeholder:text-grey focus:bg-white-100 pointer-events-auto flex w-full min-w-[288px] items-center justify-between rounded border px-3 py-2 leading-none transition-all duration-300 ease-in-out group-focus:outline-none ${className}`}
+                className={` ${value ? "bg-white-100 text-black" : "text-grey"} font-oswald border-grey tab:py-3 tab:px-5 placeholder:text-grey focus:bg-white-100 pointer-events-auto flex w-full items-center justify-between rounded border px-3 py-2 leading-none transition-all duration-300 ease-in-out group-focus:outline-none ${className}`}
             >
                 <span>{value || t("date")}</span>
                 <IconCalendar />
@@ -143,7 +143,7 @@ export default function DateInput({
                 );
             }}
             calendarContainer={({ children }) => (
-                <div className="bg-ivory relative">
+                <div className="bg-ivory relative z-[11]">
                     <div className="border-grey-90 flex flex-col rounded-sm border">
                         {children}
 

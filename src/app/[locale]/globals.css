@@ -187,6 +187,9 @@ a {
     color: #151515 !important;
     margin-left: 10px !important;
 }
+.react-datepicker-popper {
+    z-index: 20 !important;
+}
 
 input,
 textarea,

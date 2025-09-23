@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-import { BookingForm } from "./BookingForm";
+import { BookingConsultation } from "./BookingConsultation";
 
 export const Booking = () => {
     const t = useTranslations("HomePage");
@@ -27,7 +27,7 @@ export const Booking = () => {
                         {t("bookingText")}
                     </p>
                 </div>
-                <BookingForm />
+                <BookingConsultation />
             </div>
             <div className="book-height w-full" />
             <div className="tab:aspect-auto mx-auto aspect-[1440/935] w-full max-w-[420px]"></div>

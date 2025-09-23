@@ -49,7 +49,7 @@ export const Doctors = () => {
                     ivory
                     secondary
                     className="tab:flex pc:ml-auto pc:mr-0 mt-auto mb-0 hidden"
-                    href="/viddilennya"
+                    href="/oftalmolohy"
                     name={t("doctorsBtn")}
                 />
             </div>
@@ -79,7 +79,7 @@ export const Doctors = () => {
                 ivory
                 secondary
                 className="tab:hidden mx-auto"
-                href="/viddilennya"
+                href="/oftalmolohy"
                 name={t("doctorsBtn")}
             />
         </section>

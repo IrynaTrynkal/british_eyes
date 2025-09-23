@@ -22,10 +22,6 @@ export const routing = defineRouting({
             en: "/offers",
             ru: "/akcii",
         },
-        "/viddilennya": {
-            en: "/branches",
-            ru: "/otdeleniya",
-        },
         "/zakhvoryuvannya-ochey": {
             en: "/eye-diseases",
             ru: "/glaznye-bolezni",
@@ -53,6 +49,10 @@ export const routing = defineRouting({
         "/rayner-galaxy-ua": {
             en: "/rayner-galaxy-a-new-level-of-vision-is-now-available-at-our-clinic",
             ru: "/rayner-galaxy-novoe-izmerenie-zreniya-uzhe-v-nashej-klinike",
+        },
+        "/oftalmolohy": {
+            en: "/ophthalmologists",
+            ru: "/oftalmologi",
         },
     },
 });
