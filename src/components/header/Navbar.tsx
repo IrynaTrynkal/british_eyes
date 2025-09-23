@@ -2,7 +2,7 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
-import { ButtonAction } from "../shared/ButtonAction";
+import { BookingOnlineForm } from "../shared/booking/BookingOnlineForm";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import { Logo } from "../shared/Logo";
 import { SocialLinks } from "../shared/SocialLinks";
@@ -44,7 +44,7 @@ const Navbar = () => {
                     togglePhoneListOpen={togglePhoneListOpen}
                     isPhoneListOpened={isPhoneListOpened}
                 />
-                <ButtonAction header name={t("onlineButtonPC")} />
+                <BookingOnlineForm />
                 <LanguageSwitcher />
             </div>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
                     togglePhoneListOpen={togglePhoneListOpen}
                     isPhoneListOpened={isPhoneListOpened}
                 />
-                <ButtonAction mob header name={t("onlineButtonMob")} />
+                <BookingOnlineForm />
                 <MenuBurgerButton
                     isHeaderMenuOpened={isHeaderMenuOpened}
                     toggleHeaderMenuOpen={toggleHeaderMenuOpen}

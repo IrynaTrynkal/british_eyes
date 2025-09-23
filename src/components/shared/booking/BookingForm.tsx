@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { LocaleType } from "@/types/LocaleType";
+import { FormInModalProps } from "@/types/modalProps";
 
 import { ButtonAction } from "../ButtonAction";
 import { IconDrag } from "../icons/IconDrag";
@@ -12,9 +13,14 @@ import DateInput from "./DateInput";
 
 const nameRegex =
     /^(?=(.*\S.*\S))[^\-\s][a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻіІїЇґҐєЄа-яА-Я'"`\-\sʼ’]+$/;
-const phoneRegex = /^\+?380\d{9}$/;
+const phoneRegex = /^[+\d\s-]+$/;
 
-export const BookingForm = () => {
+export const BookingForm = ({
+    notificationHandler,
+    className,
+    online,
+    title,
+}: FormInModalProps) => {
     const t = useTranslations("Form");
     const locale = useLocale();
     const topicOptions = [
@@ -57,10 +63,12 @@ export const BookingForm = () => {
             ((newErrors.name = t("nameInvalid")), (valid = false));
         }
 
+        const digitsOnly = formData.phone.replace(/\D/g, "");
+
         if (!formData.phone.trim()) {
             newErrors.phone = t("phoneNull");
             valid = false;
-        } else if (!phoneRegex.test(formData.phone)) {
+        } else if (!phoneRegex.test(formData.phone) || digitsOnly.length < 10) {
             newErrors.phone = t("phoneInvalid");
             valid = false;
         }
@@ -77,31 +85,43 @@ export const BookingForm = () => {
         setErrors(newErrors);
         return valid;
     };
+
+    // TODO: const onSendData = async () => {
+    //     const data = {
+    //         name: formData.name,
+    //         phone: formData.phone,
+    //         age: formData.age,
+    //         group: formData.group,
+    //         online: formData.online,
+    //         language: formData.language,
+    //     };
+
+    //     await axios.post("/api/application", data, {
+    //         headers: { "Content-Type": "application/json" },
+    //     });
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!validate()) return;
-
-        console.log(formData);
 
         const formattedData = {
             ...formData,
             date: formData.date ? format(formData.date, "dd.MM.yyyy") : "",
         };
-        console.log("🚀 ~ handleSubmit ~ formattedData:", formattedData);
 
-        // const onSendData = async () => {
-        //     const data = {
-        //         name: formData.name,
-        //         phone: formData.phone,
-        //         age: formData.age,
-        //         group: formData.group,
-        //         online: formData.online,
-        //         language: formData.language,
-        //     };
+        // TODO тимчасова заглушка замість реального onSendData
+        const onSendData = async (): Promise<void> => {
+            return;
+        };
 
-        //     await axios.post("/api/application", data, {
-        //         headers: { "Content-Type": "application/json" },
-        //     });
+        try {
+            setLoading(true);
+            await notificationHandler(onSendData);
+        } catch (error) {
+            console.error("Відправка не вдалася:", error);
+        } finally {
+            setLoading(false);
+        }
 
         setFormData({
             name: "",
@@ -114,25 +134,18 @@ export const BookingForm = () => {
         });
     };
 
-    //     try {
-    //         setLoading(true);
-    //         await notificationHandler(onSendData);
-    //     } catch (error) {
-    //         console.error("Відправка не вдалася:", error);
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // };
     const inputClass =
         "font-oswald tab:py-3 tab:px-5 placeholder:text-grey focus:bg-white-100  block w-full rounded border px-3 py-2 leading-none group-focus:outline-none";
     const errorClass =
         "text-error text-sm leading-none absolute bottom-[-18px] left-0 mt-1";
 
     return (
-        <div className="bg-ivory tab:max-w-[1044px] tab:w-[90%] pc:px-5 pc:pt-5 pc:pb-[38px] mx-auto -mt-1 w-full max-w-[420px] rounded-sm px-4 py-8">
+        <div
+            className={`bg-ivory pc:px-5 pc:pt-5 pc:pb-[38px] mx-auto -mt-1 w-full max-w-[420px] rounded-sm px-4 py-8 ${className}`}
+        >
             <div className="pc:flex pc:justify-between pc:items-end pc:mb-6">
                 <h2 className="font-oswald pc:text-2xl pc:leading-7 pc:mb-0 mb-4 text-center text-lg leading-5 font-medium uppercase">
-                    {t("title")}
+                    {title}
                 </h2>
                 <p className="pc:w-[318px] pc:mb-0 mb-4 leading-5">
                     “<span className="text-error">*</span>” {t("required")}
@@ -257,8 +270,16 @@ export const BookingForm = () => {
                     )}
                 </div>
 
-                <div className="tab:w-[48%] pc:w-[318px]">
-                    <div className="pc:text-right pc:text-base pc:leading-5 mx-auto mb-8 flex max-w-[380px] gap-3 text-sm leading-4">
+                <div
+                    className={
+                        online
+                            ? "tab:w-[48%] pc:w-full pc:flex pc:justify-between"
+                            : "tab:w-[48%] pc:w-[318px]"
+                    }
+                >
+                    <div
+                        className={`pc:text-right pc:text-base pc:leading-5 mx-auto mb-8 flex max-w-[380px] gap-3 text-sm leading-4 ${online ? "pc:mx-0 pc:mb-0 pc:w-[50%]" : ""}`}
+                    >
                         <p>*</p> <p className="text-justify">{t("consent")}</p>
                     </div>
 

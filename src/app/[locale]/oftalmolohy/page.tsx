@@ -1,6 +1,6 @@
 import { Booking } from "@/components/shared/booking/Booking";
 
-export default function DoctorsPage() {
+export default function OftalmolohyPage() {
     return (
         <>
             <div className="content py-24">
