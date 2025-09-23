@@ -37,7 +37,7 @@ export const ServicesList = () => {
                         className={`group tab:p-3 relative flex h-full w-full flex-col justify-between p-2 transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
                     >
                         {service.name.key === "lazerna-korekcziya-zoru" && (
-                            <div className="absolute inset-0 z-[-1] transform overflow-hidden transition-transform duration-500 ease-in-out group-hover:scale-110">
+                            <div className="absolute inset-0 z-[-1] transform overflow-hidden transition-transform duration-500 ease-in-out group-hover:scale-110 group-active:scale-110">
                                 <Image
                                     src="/images/main-service.jpg"
                                     alt={service.name.key}
