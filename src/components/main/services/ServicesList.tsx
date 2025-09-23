@@ -17,11 +17,11 @@ export const ServicesList = () => {
     const serviceStyles: Record<string, string> = {
         "lazerna-korekcziya-zoru": "text-ivory",
         "perevirka-zoru":
-            "bg-cover bg-center hover:bg-[url(/images/perevirka-zoru.jpg)] text-black hover:text-ivory",
+            "bg-cover bg-center hover:bg-[url(/images/perevirka-zoru.jpg)] active:bg-[url(/images/perevirka-zoru.jpg)] text-black hover:text-ivory",
         "likuvannya-katarakti":
-            "bg-cover bg-center hover:bg-[url(/images/likuvannya-katarakti.jpg)] text-black hover:text-ivory",
+            "bg-cover bg-center hover:bg-[url(/images/likuvannya-katarakti.jpg)] active:bg-[url(/images/likuvannya-katarakti.jpg)] text-black hover:text-ivory",
         "syndrom-sukhoho-oka":
-            "bg-cover bg-center hover:bg-[url(/images/syndrom-sukhoho-oka.jpg)] text-black hover:text-ivory",
+            "bg-cover bg-center hover:bg-[url(/images/syndrom-sukhoho-oka.jpg)] active:bg-[url(/images/syndrom-sukhoho-oka.jpg)] text-black hover:text-ivory",
         default: "hover-green-gradient text-black hover:text-ivory",
     };
 
