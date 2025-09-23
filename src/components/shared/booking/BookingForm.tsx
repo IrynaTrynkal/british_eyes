@@ -244,6 +244,9 @@ export const BookingForm = ({
                         placeholder={t("topic")}
                         className={` ${inputClass} tab:h-[50px] h-[41.5px] ${formData.topic ? "bg-white-100 text-black" : "text-grey"} ${errors.topic ? "border-error bg-white-100" : "border-grey"}`}
                     />
+                    {errors.topic && (
+                        <p className={errorClass}>{errors.topic}</p>
+                    )}
                 </div>
                 <div className="group tab:w-[48%] pc:w-[660px] relative">
                     <label htmlFor="comment" className="sr-only">
