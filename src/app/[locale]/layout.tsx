@@ -63,6 +63,10 @@ export default async function RootLayout({
     }
     return (
         <html lang={locale} suppressHydrationWarning>
+            <head>
+                <link rel="icon" href="/favicon.ico" sizes="any" />
+                <meta property="og:image" content="<generated>" />
+            </head>
             <NextIntlClientProvider>
                 <body
                     className={`${oswald.variable} ${arimo.variable} flex min-h-screen flex-col antialiased`}
