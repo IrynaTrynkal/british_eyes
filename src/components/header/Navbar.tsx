@@ -1,5 +1,4 @@
 "use client";
-import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 import { BookingOnlineForm } from "../shared/booking/BookingOnlineForm";
@@ -31,7 +30,6 @@ const Navbar = () => {
             document.body.style.overflow = "";
         }
     }, [isHeaderMenuOpened]);
-    const t = useTranslations("Menu");
     return (
         <nav className="prepc:h-[72px] prepc:gap-8 border-grey flex h-12 items-center justify-between gap-6 border-b">
             <div className="prepc:gap-4 flex items-center justify-center">
