@@ -17,12 +17,13 @@ export const ServicesList = () => {
     const serviceStyles: Record<string, string> = {
         "lazerna-korekcziya-zoru": "text-ivory",
         "perevirka-zoru":
-            "bg-cover bg-center hover:bg-[url(/images/perevirka-zoru.jpg)] text-black hover:text-ivory",
+            "bg-cover bg-center hover:bg-[url(/images/perevirka-zoru.jpg)] active:bg-[url(/images/perevirka-zoru.jpg)] text-black hover:text-ivory active:text-ivory",
         "likuvannya-katarakti":
-            "bg-cover bg-center hover:bg-[url(/images/likuvannya-katarakti.jpg)] text-black hover:text-ivory",
+            "bg-cover bg-center hover:bg-[url(/images/likuvannya-katarakti.jpg)] active:bg-[url(/images/likuvannya-katarakti.jpg)] text-black hover:text-ivory active:text-ivory",
         "syndrom-sukhoho-oka":
-            "bg-cover bg-center hover:bg-[url(/images/syndrom-sukhoho-oka.jpg)] text-black hover:text-ivory",
-        default: "hover-green-gradient text-black hover:text-ivory",
+            "bg-cover bg-center hover:bg-[url(/images/syndrom-sukhoho-oka.jpg)] active:bg-[url(/images/syndrom-sukhoho-oka.jpg)] text-black hover:text-ivory active:text-ivory",
+        default:
+            "hover-green-gradient text-black hover:text-ivory active:text-ivory",
     };
 
     return (
@@ -37,7 +38,7 @@ export const ServicesList = () => {
                         className={`group tab:p-3 relative flex h-full w-full flex-col justify-between p-2 transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
                     >
                         {service.name.key === "lazerna-korekcziya-zoru" && (
-                            <div className="absolute inset-0 z-[-1] transform overflow-hidden transition-transform duration-500 ease-in-out group-hover:scale-110">
+                            <div className="absolute inset-0 z-[-1] transform overflow-hidden transition-transform duration-500 ease-in-out group-hover:scale-110 group-active:scale-110">
                                 <Image
                                     src="/images/main-service.jpg"
                                     alt={service.name.key}
@@ -85,9 +86,9 @@ export const ServicesList = () => {
                                 <p className="tab:leading-5 pc:text-lg pc:leading-[22px] w-[80%]">
                                     {service[locale as LocaleType].textMain}
                                 </p>
-                                <div className="group-hover:bg-ivory border-ivory flex h-12 w-12 items-center justify-center rounded border transition-all duration-300 ease-in-out">
+                                <div className="group-hover:bg-ivory group-active:bg-ivory border-ivory flex h-12 w-12 items-center justify-center rounded border transition-all duration-300 ease-in-out">
                                     <IconArrow
-                                        className={`h-6 w-6 transition-all duration-300 ease-in-out group-hover:text-black ${index === 4 ? "text-ivory" : ""} `}
+                                        className={`h-6 w-6 transition-all duration-300 ease-in-out group-hover:text-black group-active:text-black ${index === 4 ? "text-ivory" : ""} `}
                                     />
                                 </div>
                             </div>
