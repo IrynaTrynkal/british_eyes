@@ -10,6 +10,7 @@ import { PhoneNumberList } from "../shared/PhoneNumberList";
 import { SocialLinks } from "../shared/SocialLinks";
 import { MenuMain } from "./MenuMain";
 import { ServicesMenu } from "./ServicesMenu";
+import { UpButton } from "./UpButton";
 
 export const Footer = () => {
     const t = useTranslations("HomePage");
@@ -32,7 +33,10 @@ export const Footer = () => {
                         <MenuMain />
                     </div>
                     <div className="pc:w-[445px] pc:mb-0 mb-6">
-                        <h3 className={`${footerH3} mb-1.5`}>{t("poslugy")}</h3>
+                        <div className="mb-1.5 flex items-center justify-between">
+                            <h3 className={`${footerH3} `}>{t("poslugy")}</h3>{" "}
+                            <UpButton />
+                        </div>
                         <div className="bg-grey pc:hidden mb-1.5 h-[1px] w-full" />
                         <ServicesMenu />
                     </div>
