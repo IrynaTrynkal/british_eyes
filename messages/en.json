@@ -77,7 +77,8 @@
     "Menu": {
         "onlineButtonMob": "online booking",
         "onlineButtonPC": "Book consultation",
-        "main": "Home",
+        "main": "Home page",
+        "home": "Home",
         "poslugy": "Services",
         "tsiny": "Prices",
         "aktsiyi": "Offers",
