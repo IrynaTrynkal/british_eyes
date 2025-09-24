@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 
 import { FeedbackType } from "@/components/assets/feedbacksData";
-import { IconLogo } from "@/components/shared/icons/IconLogo";
 import { LocaleType } from "@/types/LocaleType";
 
 export const FeedbackCard = ({
@@ -22,17 +21,17 @@ export const FeedbackCard = ({
                         !isFirst ? "blur-0" : "blur-xs"
                     }`}
                 >
-                    {feedback.photo ? (
-                        <Image
-                            src={feedback.photo}
-                            alt={feedback[locale as LocaleType].name}
-                            width={330}
-                            height={330}
-                            className="object-cover object-center"
-                        />
-                    ) : (
-                        <IconLogo className="text-emerald h-20 w-20" />
-                    )}
+                    <Image
+                        src={
+                            feedback.photo
+                                ? feedback.photo
+                                : "/images/feedback-default.jpg"
+                        }
+                        alt={feedback[locale as LocaleType].name}
+                        width={330}
+                        height={330}
+                        className="object-cover object-center"
+                    />
                 </div>
 
                 <div className="tab:justify-normal tab:p-3 flex w-[51.4%] flex-col justify-between px-[7px] py-3">
