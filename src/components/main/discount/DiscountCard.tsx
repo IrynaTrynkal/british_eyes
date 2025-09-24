@@ -29,14 +29,14 @@ export const DiscountCard = ({ data }: { data: DiscountType }) => {
                 }}
             >
                 <div>
-                    <div className="tab:flex-col tab:gap-16 mb-3 flex justify-between">
+                    <div className="tab:flex-col tab:gap-16 tab:mb-6 pc:mb-3 mb-3 flex justify-between">
                         <h4
-                            className={`font-oswald tab:max-w-[288px] max-w-[60%] font-medium uppercase ${data.premium ? "tab:mt-3 tab:text-[42px] tab:leading-12 mt-2 text-xl" : "tab:text-2xl tab:leading-7"}`}
+                            className={`font-oswald tab:max-w-[288px] max-w-[60%] font-medium uppercase ${data.premium ? "tab:mt-3 tab:text-3xl tab:leading-9 pc:text-[42px] pc:leading-12 mt-2 text-xl" : "pc:text-2xl tab:text-[22px] tab:leading-7"}`}
                         >
                             {data.localeText[locale as LocaleType].title}
                         </h4>
                         {data.period && (
-                            <p className="font-oswald tab:text-2xl tab:leading-7 text-sm leading-4 font-bold uppercase">
+                            <p className="font-oswald pc:text-2xl tab:text-xl tab:leading-5 pc:leading-7 text-sm leading-4 font-bold uppercase">
                                 {t("discountPeriod", { date: data.period })}
                             </p>
                         )}
@@ -52,7 +52,7 @@ export const DiscountCard = ({ data }: { data: DiscountType }) => {
                         <p className="tab:text-base tab:leading-5 text-sm leading-4 uppercase">
                             {t("discountOnly")}
                         </p>
-                        <p className="font-oswald tab:text-5xl tab:font-medium tab:leading-none text-[32px] leading-9 uppercase">
+                        <p className="font-oswald pc:text-5xl tab:text-4xl tab:font-medium tab:leading-none text-[32px] leading-9 uppercase">
                             {data.price}{" "}
                             <span className="tab:text-2xl tab:leading-8 text-base uppercase">
                                 {t("discountUAH")}

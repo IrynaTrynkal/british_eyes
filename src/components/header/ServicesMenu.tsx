@@ -51,7 +51,7 @@ export const ServicesMenu = ({
                                             className="prepc:aspect-[319/180] prepc:h-full prepc:w-auto h-10 w-[71px] rounded-tr-xs rounded-br-xs object-cover"
                                         />
                                         <div className="prepc:p-3 prepc:w-[calc(100%-319px)] prepc:h-full prepc:flex prepc:flex-col prepc:justify-between">
-                                            <p className="font-oswald prepc:text-2xl text-xs font-medium uppercase">
+                                            <p className="font-oswald prepc:text-2xl text-sm font-medium uppercase">
                                                 {t(item.key)}
                                             </p>
                                             <p className="prepc:[display:-webkit-box] line-clamp-3 hidden h-[50%] overflow-hidden break-words">
@@ -72,7 +72,7 @@ export const ServicesMenu = ({
                                     }
                                     onClick={onClick}
                                     className={
-                                        "prepc:hidden group font-oswald prepc:text-lg prepc:pl-0 flex items-center gap-2 pl-2 text-xs font-medium text-black uppercase hover:underline"
+                                        "prepc:hidden group font-oswald prepc:text-lg prepc:pl-0 flex items-center gap-2 pl-2 text-sm font-medium text-black uppercase hover:underline"
                                     }
                                 >
                                     <div className="border-ivory rounded-full border transition-all duration-300 ease-in-out group-hover:border-black">
@@ -102,7 +102,7 @@ export const ServicesMenu = ({
                                         }
                                         onClick={onClick}
                                         className={
-                                            "prepc:px-1 font-oswald prepc:text-lg prepc:pl-0 flex items-center gap-2 pl-2 text-xs font-medium text-black uppercase hover:underline"
+                                            "prepc:px-1 font-oswald prepc:text-lg prepc:pl-0 flex items-center gap-2 pl-2 text-sm font-medium text-black uppercase hover:underline"
                                         }
                                     >
                                         <div className="border-ivory rounded-full border transition-all duration-300 ease-in-out group-hover:border-black">
