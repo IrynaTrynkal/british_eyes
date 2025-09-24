@@ -70,7 +70,9 @@
         "readMore": "read more",
         "bookingSubtitle": "appointment booking",
         "bookingTitle": "Convenient booking and transparent consultation cost",
-        "bookingText": "We have made the process of contacting the clinic as simple as possible. You only need to book an appointment with an ophthalmologist in Kyiv online or by phone."
+        "bookingText": "We have made the process of contacting the clinic as simple as possible. You only need to book an appointment with an ophthalmologist in Kyiv online or by phone.",
+        "upButtonHint": "To the top of the page",
+        "upButtonAria": "Return to top of page"
     },
     "Menu": {
         "onlineButtonMob": "online booking",
