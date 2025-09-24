@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
 import { Booking } from "@/components/shared/booking/Booking";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { LocaleType } from "@/types/LocaleType";
 
 interface ServicePageProps {
@@ -18,6 +19,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
     if (!displayedService) {
         notFound();
     }
+    const breadcrumb = [
+        { name: "poslugy", href: "/poslugy" },
+        { name: displayedService.key, href: `/${displayedService.key}` },
+    ];
 
     return (
         <>
@@ -25,6 +30,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 <h1 className="font-oswald font-bold uppercase">
                     {displayedService.key}
                 </h1>
+                <Breadcrumbs breadcrumbsList={breadcrumb} />
             </div>
             <Booking />
         </>
