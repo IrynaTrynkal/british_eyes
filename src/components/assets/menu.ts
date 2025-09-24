@@ -210,7 +210,7 @@ export const footerMainMenu = [
     { key: "pro-kliniku" },
     { key: "informatsiya-dlya-patsiyentiv" },
     { key: "vidhuky" },
-    { key: "news" },
+    { key: "blog" },
 ];
 export type ServiceKey = keyof typeof serviceSlugs;
 export const serviceSlugs = {
