@@ -76,7 +76,11 @@ export const Modal = ({
                         >
                             <button
                                 onClick={onClose}
-                                className="hover:border-ivory absolute top-3 right-3 flex h-6 w-6 items-center justify-center rounded border border-transparent transition-all duration-300 ease-in-out"
+                                className={`${
+                                    variant === "center"
+                                        ? "hover:border-ivory"
+                                        : "hover:border-black"
+                                } absolute top-3 right-3 flex h-6 w-6 items-center justify-center rounded border border-transparent transition-all duration-300 ease-in-out`}
                                 aria-label="Close modal"
                             >
                                 <IconClose
