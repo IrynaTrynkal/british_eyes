@@ -15,65 +15,67 @@ import { UpButton } from "./UpButton";
 export const Footer = () => {
     const t = useTranslations("HomePage");
     const footerH3 =
-        "font-oswald text-grey text-sm pc:text-base leading-none font-medium uppercase";
+        "font-oswald text-grey text-sm prepc:text-base leading-none font-medium uppercase";
     return (
         <footer className="text-ivory bg-black py-8">
             <section className="content">
-                <div className="pc:flex pc:mb-5">
-                    <div className="pc:mr-[17.2%] w-[224px]">
+                <div className="prepc:flex prepc:mb-5">
+                    <div className="prepc:mr-[17.2%] w-[224px]">
                         <IconBigLogo />
                         <p className="mt-4 mb-6 text-sm leading-[16.8px]">
                             {t("slogan")}
                         </p>
                     </div>
-                    <div className="pc:mb-0 pc:mr-[14.3%] pc:w-[145px] mb-[30px]">
+                    <div className="prepc:mb-0 prepc:mr-[14.3%] prepc:w-[145px] mb-[30px]">
                         <h3 className={`${footerH3} mb-[14px]`}>
                             {t("navigation")}
                         </h3>
                         <MenuMain />
                     </div>
-                    <div className="pc:w-[445px] pc:mb-0 mb-6">
+                    <div className="prepc:w-[445px] prepc:mb-0 mb-6">
                         <div className="mb-1.5 flex items-center justify-between">
                             <h3 className={`${footerH3} `}>{t("poslugy")}</h3>{" "}
                             <UpButton />
                         </div>
-                        <div className="bg-grey pc:hidden mb-1.5 h-[1px] w-full" />
+                        <div className="bg-grey prepc:hidden mb-1.5 h-[1px] w-full" />
                         <ServicesMenu />
                     </div>
                 </div>
 
-                <div className="pc:flex">
-                    <div className="pc:flex-col pc:items-start pc:justify-between pc:h-[98px] pc:mr-[17.2%] pc:w-[224px] pc:mb-0 mb-6 flex items-center">
-                        <h3 className={`${footerH3} pc:w-fit w-1/2`}>
+                <div className="prepc:flex">
+                    <div className="prepc:flex-col prepc:items-start prepc:justify-between prepc:h-[98px] prepc:mr-[17.2%] prepc:w-[224px] prepc:mb-0 mb-6 flex items-center">
+                        <h3 className={`${footerH3} prepc:w-fit w-1/2`}>
                             {t("socialMedia")}
                         </h3>
                         <SocialLinks className="w-1/2" footer />
                     </div>
-                    <div className="pc:mr-[14.3%] flex">
-                        <div className="pc:w-[145px] w-1/2">
+                    <div className="prepc:mr-[14.3%] flex">
+                        <div className="prepc:w-[145px] w-1/2">
                             <h3 className={`${footerH3} mb-3`}>
                                 {t("kontakty")}
                             </h3>
                             <div>
-                                <PhoneNumberList className="pc:text-base group pc:leading-none flex w-fit flex-col gap-2 text-sm leading-[15px] font-medium" />
+                                <PhoneNumberList className="prepc:text-base group prepc:leading-none flex w-fit flex-col gap-2 text-sm leading-[15px] font-medium" />
                             </div>
                         </div>
-                        <div className="pc:hidden w-1/2">
+                        <div className="prepc:hidden w-1/2">
                             <h3 className={`${footerH3} mb-3`}>{t("mode")}</h3>
                             <p className="mb-1.5 text-sm leading-[15px] font-medium whitespace-pre-line uppercase">
                                 {t("modeDay")}
                             </p>
-                            <p className="pc:text-base pc:leading-none text-sm leading-[15px] font-medium uppercase">
+                            <p className="prepc:text-base prepc:leading-none text-sm leading-[15px] font-medium uppercase">
                                 {t("modeRest")}
                             </p>
                         </div>
                     </div>
-                    <div className="pc:block hidden">
-                        <h3 className={`${footerH3} pc:mb-3`}>{t("mode")}</h3>
-                        <p className="pc:text-base pc:leading-none pc:mb-2.5 mb-1.5 text-sm leading-[15px] font-medium whitespace-pre-line uppercase">
+                    <div className="prepc:block hidden">
+                        <h3 className={`${footerH3} prepc:mb-3`}>
+                            {t("mode")}
+                        </h3>
+                        <p className="prepc:text-base prepc:leading-none prepc:mb-2.5 mb-1.5 text-sm leading-[15px] font-medium whitespace-pre-line uppercase">
                             {t("modeDay")}
                         </p>
-                        <p className="pc:text-base pc:leading-none text-sm leading-[15px] font-medium uppercase">
+                        <p className="prepc:text-base prepc:leading-none text-sm leading-[15px] font-medium uppercase">
                             {t("modeRest")}
                         </p>
                     </div>
@@ -90,9 +92,9 @@ export const Footer = () => {
                         alt="map"
                         width={1344}
                         height={585}
-                        className="pc:aspect-[1344/287] tab:object-cover tab:object-center mx-auto max-h-[287px] overflow-hidden"
+                        className="prepc:aspect-[1344/287] tab:object-cover tab:object-center mx-auto max-h-[287px] overflow-hidden"
                     />
-                    <IconPin className="pc:w-11 pc:max-w-11 tab:-translate-y-8 absolute bottom-1/2 left-1/2 h-auto w-[10%] max-w-9 -translate-x-1/2 -translate-y-2" />
+                    <IconPin className="prepc:w-11 prepc:max-w-11 tab:-translate-y-8 absolute bottom-1/2 left-1/2 h-auto w-[10%] max-w-9 -translate-x-1/2 -translate-y-2" />
                     <div className="tab:block tab:px-2 tab:py-0.5 absolute top-1/2 left-1/2 hidden w-46 -translate-x-1/2 -translate-y-3 rounded-sm bg-white/10 text-sm backdrop-blur-2xl">
                         {t("title")}
                     </div>
@@ -100,11 +102,11 @@ export const Footer = () => {
                 <div className="tab:flex tab:justify-between pc:justify-normal tab:items-center text-center">
                     <Link
                         href={"/pro-kliniku#german" as any}
-                        className="pc:text-base pc:px-2.5 pc:mr-[45.5%] hover:bg-ivory pc:mb-0 tab:mx-0 tab:mb-0 mx-auto mb-6 block w-fit border px-3 py-2.5 text-sm font-medium uppercase transition-all duration-300 ease-in-out hover:text-black"
+                        className="prepc:text-base prepc:px-2.5 pc:mr-[45.5%] hover:bg-ivory tab:mx-0 tab:mb-0 mx-auto mb-6 block w-fit border px-3 py-2.5 text-sm font-medium uppercase transition-all duration-300 ease-in-out hover:text-black"
                     >
                         {t("german")}
                     </Link>
-                    <div className="tab:flex-row pc:w-[418px] tab:mb-0 tab:gap-12 mb-4 flex flex-col gap-3 text-sm leading-[18px]">
+                    <div className="tab:flex-row prepc:w-[418px] tab:mb-0 tab:gap-12 mb-4 flex flex-col gap-3 text-sm leading-[18px]">
                         <p className="transition-all duration-300 ease-in-out hover:underline">
                             {t("policy")}
                         </p>
