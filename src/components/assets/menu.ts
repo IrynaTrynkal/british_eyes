@@ -24,7 +24,8 @@ export type ServicesKeyType =
     | "likuvannya-kosookosti"
     | "hirurgiya-povik-i-konyunktivi"
     | "anesteziologichnij-posibnik"
-    | "ksenonoterapiya";
+    | "ksenonoterapiya"
+    | "all";
 
 export type ServicesListProps = {
     key: ServicesKeyType;

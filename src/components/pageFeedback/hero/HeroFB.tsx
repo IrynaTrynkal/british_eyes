@@ -12,7 +12,7 @@ export const HeroFB = () => {
                     {t("title")}
                 </h1>
             </div>
-            <div className="green-gradient tab:w-[60%] prepc:w-[56%] pc:w-[54.5%] tab:mb-0 mb-8 pt-4">
+            <div className="green-gradient tab:w-[60%] prepc:w-[56%] pc:w-[54.5%] pt-4">
                 <div className="tab:max-w-full relative mx-auto max-w-[540px]">
                     <div className="text-ivory bg-white-100/10 tab:w-[68%] prepc:w-[70%] pc:w-[74%] tab:absolute tab:bottom-20 prepc:bottom-6 tab:right-4 prepc:right-8 pc:right-12 tab:mx-0 prepc:p-5 pc:px-7 pc:py-5 mx-4 rounded-lg p-3 backdrop-blur-[2px]">
                         <div className="tab:w-[72%] prepc:w-[75%] tab:ml-auto tab:mr-0">
