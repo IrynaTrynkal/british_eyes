@@ -23,7 +23,7 @@ export const HeroMain = () => {
 
                 <div className="tab:w-[50%] tab:min-w-[444px] pc:w-[662px] mr-0 ml-auto">
                     <div className="tab:w-[444px] pc:w-[544px] tab:mb-[68px] mb-5 w-[289px]">
-                        <h1 className="font-oswald pc:text-7xl tab:text-5xl text-ivory tab:mb-5 pc:mb-11 mb-3 text-4xl leading-[90%]">
+                        <h1 className="title-h1 text-ivory tab:mb-5 pc:mb-11 mb-3">
                             {t("heroTitle")}
                         </h1>
                         <p className="text-ivory pc:text-[20px] tab:text-lg pc:leading-6 leading-5">

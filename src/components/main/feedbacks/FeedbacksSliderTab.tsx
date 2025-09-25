@@ -2,7 +2,7 @@
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 
-import { feedbacksList } from "@/components/assets/feedbacksData";
+import { FeedbackType } from "@/components/assets/feedbacksData";
 import {
     NextButton,
     PrevButton,
@@ -11,9 +11,13 @@ import {
 
 import { FeedbackCard } from "./FeedbackCard";
 
-const FEEDBACKS_SLIDES_TO_SHOW = 4;
-
-export const FeedbacksSliderTab = () => {
+export const FeedbacksSliderTab = ({
+    list,
+    slideAmount,
+}: {
+    list: FeedbackType[];
+    slideAmount: number;
+}) => {
     const options: EmblaOptionsType = {
         loop: true,
         align: "start",
@@ -27,7 +31,7 @@ export const FeedbacksSliderTab = () => {
         onNextButtonClick,
     } = usePrevNextButtons(emblaApi);
 
-    const feedbacksToShow = feedbacksList.slice(0, FEEDBACKS_SLIDES_TO_SHOW);
+    const feedbacksToShow = list.slice(0, slideAmount);
 
     return (
         <div className="embla tab:block tab:px-0 tab:mb-0 mb-8 hidden min-w-full px-4">

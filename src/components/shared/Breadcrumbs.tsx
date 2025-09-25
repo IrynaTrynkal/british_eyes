@@ -20,7 +20,7 @@ export const Breadcrumbs = ({
     const t = useTranslations("Menu");
 
     return (
-        <nav aria-label="Breadcrumb" className={className}>
+        <nav aria-label="Breadcrumb" className={`content ${className}`}>
             <ul className="tab:text-base tab:gap-1.5 flex items-center gap-1 text-sm leading-none">
                 <li key="home" className="flex items-center gap-2">
                     <Link

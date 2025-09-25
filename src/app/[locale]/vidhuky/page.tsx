@@ -1,3 +1,4 @@
+import { HeroFB } from "@/components/pageFeedback/hero/HeroFB";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
@@ -5,12 +6,16 @@ export default function ReviewsPage() {
     const breadcrumb = [{ name: "vidhuky", href: "/vidhuky" }];
     return (
         <>
-            <div className="content py-24">
-                <h1 className="font-oswald font-bold uppercase">
-                    Сторінка Reviews в розробці
-                </h1>
-                <Breadcrumbs breadcrumbsList={breadcrumb} />
-            </div>
+            <Breadcrumbs
+                breadcrumbsList={breadcrumb}
+                className="tab:hidden mt-[72px] mb-6"
+            />
+            <HeroFB />
+            <Breadcrumbs
+                breadcrumbsList={breadcrumb}
+                className="tab:block mt-[72px] hidden"
+            />
+
             <Booking />
         </>
     );

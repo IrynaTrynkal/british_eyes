@@ -150,5 +150,11 @@
         "cataract-treatment": "Cataract treatment",
         "laser-vision-correction": "Laser vision correction",
         "other": "Other"
+    },
+    "FeedbackPage": {
+        "title": "reviews of our patients",
+        "subtitle": "Leave your review",
+        "description": "Join tens of thousands of our patients who have already helped us become the best in our field!",
+        "leaveFeedbackBtn": "leave a review"
     }
 }

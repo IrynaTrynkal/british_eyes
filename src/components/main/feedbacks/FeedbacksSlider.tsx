@@ -2,40 +2,41 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import { feedbacksList } from "@/components/assets/feedbacksData";
+import { FeedbackType } from "@/components/assets/feedbacksData";
 import { IconArrow } from "@/components/shared/icons/IconArrow";
 
 import { FeedbackCard } from "./FeedbackCard";
 
-const FEEDBACKS_SLIDES_TO_SHOW = 4;
 const OFFSET_Y = 40;
 
-export const FeedbacksSlider = () => {
+export const FeedbacksSlider = ({
+    list,
+    slideAmount,
+    className,
+}: {
+    list: FeedbackType[];
+    slideAmount: number;
+    className?: string;
+}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const feedbacksToShow = feedbacksList.slice(0, FEEDBACKS_SLIDES_TO_SHOW);
-
     const prevSlide = () => {
-        setCurrentIndex(prev =>
-            prev === 0 ? feedbacksToShow.length - 1 : prev - 1
-        );
+        setCurrentIndex(prev => (prev === 0 ? list.length - 1 : prev - 1));
     };
 
     const nextSlide = () => {
-        setCurrentIndex(prev =>
-            prev === feedbacksToShow.length - 1 ? 0 : prev + 1
-        );
+        setCurrentIndex(prev => (prev === list.length - 1 ? 0 : prev + 1));
     };
     const goToSlide = (index: number) => setCurrentIndex(index);
 
     const getStackedFeedbacks = () => [
-        ...feedbacksToShow.slice(currentIndex),
-        ...feedbacksToShow.slice(0, currentIndex),
+        ...list.slice(currentIndex),
+        ...list.slice(0, currentIndex),
     ];
-    const totalHeight = OFFSET_Y * (FEEDBACKS_SLIDES_TO_SHOW - 1) + 340;
+    const totalHeight = OFFSET_Y * (slideAmount - 1) + 340;
 
     return (
-        <div className="tab:hidden relative mb-8 w-full">
+        <div className={`relative mb-8 w-full ${className}`}>
             <div
                 className="tab:mb-9 mb-4 h-full w-full overflow-hidden"
                 style={{ height: totalHeight }}
@@ -47,11 +48,9 @@ export const FeedbacksSlider = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{
                             opacity: 1,
-                            y: (feedbacksToShow.length - 1 - index) * OFFSET_Y,
+                            y: (list.length - 1 - index) * OFFSET_Y,
                             zIndex:
-                                index === 0
-                                    ? FEEDBACKS_SLIDES_TO_SHOW
-                                    : FEEDBACKS_SLIDES_TO_SHOW - index,
+                                index === 0 ? slideAmount : slideAmount - index,
                         }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -74,7 +73,7 @@ export const FeedbacksSlider = () => {
                     <IconArrow />
                 </button>
                 <div className="flex transform items-center gap-2">
-                    {feedbacksToShow.map((_, index) => (
+                    {list.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => goToSlide(index)}
