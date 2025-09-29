@@ -14,7 +14,7 @@ export const FeedbackPageCard = ({
     const t = useTranslations("Menu");
     const locale = useLocale();
     return (
-        <div className="border-grey tab:h-[240px] prepc:h-[330px] overflow-hidden rounded-sm border">
+        <div className="border-grey overflow-hidden rounded-sm border">
             <div className="tab:gap-3 flex w-full">
                 <div
                     className={`tab:aspect-[321/240] prepc:aspect-[321/330] tab:max-w-[321px] tab:min-w-[321px] flex aspect-[139/143] w-[48.6%] max-w-[160px] min-w-[139px] items-center justify-center overflow-hidden transition-[filter] duration-500 ${
@@ -30,12 +30,12 @@ export const FeedbackPageCard = ({
                         alt={feedback[locale as LocaleType].name}
                         width={330}
                         height={330}
-                        className="object-cover object-center"
+                        className="h-full w-full object-cover object-center"
                     />
                 </div>
 
                 <div className="tab:p-3 tab:w-[calc(100%-333px)] flex w-[51.4%] flex-col justify-between px-[7px] py-3">
-                    <div className="tab:flex tab:flex-row-reverse tab:justify-between">
+                    <div className="tab:flex-row-reverse flex h-full flex-col justify-between">
                         <div className="tab:w-[35%] prepc:w-[25%]">
                             <div className="tab:h-0.5 tab:w-6 tab:mb-4 mb-1 h-[1px] w-2.5 bg-black" />
                             <p className="font-oswald text-grey tab:text-base text-xs leading-none uppercase">
@@ -46,15 +46,13 @@ export const FeedbackPageCard = ({
                             {feedback[locale as LocaleType].name}
                         </p>
                     </div>
-                    <p className="tab:[display:-webkit-box] tab:text-base tab:leading-5 prepc:text-lg prepc:leading-[22px] tab:line-clamp-[7] line-clamp-[8] hidden overflow-hidden text-sm break-words">
+                    <p className="tab:block tab:text-base tab:leading-5 prepc:text-lg prepc:leading-[22px] hidden text-sm">
                         {feedback[locale as LocaleType].text}
                     </p>
                 </div>
             </div>
             <div className="tab:hidden px-2 py-3">
-                <p className="line-clamp-[8] [display:-webkit-box] overflow-hidden text-sm break-words">
-                    {feedback[locale as LocaleType].text}
-                </p>
+                <p className="text-sm">{feedback[locale as LocaleType].text}</p>
             </div>
         </div>
     );

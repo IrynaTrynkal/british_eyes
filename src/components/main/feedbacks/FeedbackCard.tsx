@@ -30,7 +30,7 @@ export const FeedbackCard = ({
                         alt={feedback[locale as LocaleType].name}
                         width={330}
                         height={330}
-                        className="object-cover object-center"
+                        className="h-full w-full object-cover object-center"
                     />
                 </div>
 

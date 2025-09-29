@@ -20,10 +20,41 @@ export const Pagination = ({
     const params = useSearchParams();
 
     const handlePageChange = (newPage: number) => {
+        if (newPage < 1 || newPage > totalPages) return;
         const newParams = new URLSearchParams(params.toString());
         newParams.set("page", String(newPage));
-        router.push(`${pathname}?${newParams.toString()}${idScrollTo}`);
+        router.push(`${pathname}?${newParams.toString()}${idScrollTo ?? ""}`);
     };
+
+    const getPagesToDisplay = () => {
+        const pages: (number | string)[] = [];
+        if (totalPages <= 7) {
+            return Array.from({ length: totalPages }, (_, i) => i + 1);
+        }
+
+        if (currentPage > 4) {
+            pages.push(1, "...");
+        } else {
+            pages.push(1);
+        }
+
+        const start = Math.max(2, currentPage - 1);
+        const end = Math.min(totalPages - 1, currentPage + 1);
+
+        for (let i = start; i <= end; i++) {
+            pages.push(i);
+        }
+
+        if (currentPage < totalPages - 3) {
+            pages.push("...", totalPages);
+        } else if (!pages.includes(totalPages)) {
+            pages.push(totalPages);
+        }
+
+        return pages;
+    };
+
+    const pagesToDisplay = getPagesToDisplay();
 
     return (
         <div className="content prepc:mt-8 pc:mt-[60px] prepc:justify-center prepc:ml-[227px] mt-4 flex justify-between gap-2">
@@ -36,10 +67,10 @@ export const Pagination = ({
             </button>
 
             <div className="flex gap-5">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                    num => (
+                {pagesToDisplay.map((num, i) =>
+                    typeof num === "number" ? (
                         <button
-                            key={num}
+                            key={i}
                             disabled={num === currentPage}
                             onClick={() => handlePageChange(num)}
                             className={`font-oswald prepc:text-3xl tab:text-2xl text-xl leading-none font-medium transition-all duration-300 ease-in-out ${
@@ -50,6 +81,13 @@ export const Pagination = ({
                         >
                             {num}
                         </button>
+                    ) : (
+                        <span
+                            key={i}
+                            className="font-oswald text-grey prepc:text-3xl text-xl"
+                        >
+                            {num}
+                        </span>
                     )
                 )}
             </div>
