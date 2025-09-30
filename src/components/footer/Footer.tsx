@@ -18,7 +18,7 @@ export const Footer = () => {
         "font-oswald text-grey text-sm prepc:text-base leading-none font-medium uppercase";
     return (
         <footer className="text-ivory bg-black py-8">
-            <section className="content">
+            <section className="content relative">
                 <div className="prepc:flex prepc:mb-5">
                     <div className="prepc:mr-[17.2%] w-[224px]">
                         <IconBigLogo />
@@ -33,10 +33,7 @@ export const Footer = () => {
                         <MenuMain />
                     </div>
                     <div className="prepc:w-[445px] prepc:mb-0 mb-6">
-                        <div className="mb-1.5 flex items-center justify-between">
-                            <h3 className={`${footerH3} `}>{t("poslugy")}</h3>{" "}
-                            <UpButton className="prepc:hidden" />
-                        </div>
+                        <h3 className={`${footerH3} mb-1.5`}>{t("poslugy")}</h3>
                         <div className="bg-grey prepc:hidden mb-1.5 h-[1px] w-full" />
                         <ServicesMenu />
                     </div>
@@ -123,6 +120,9 @@ export const Footer = () => {
                     <p className="pc:ml-auto pc:mr-0 text-sm leading-[18px]">
                         &copy; 2025 БОЦ
                     </p>
+                </div>
+                <div className="prepc:hidden absolute top-0 right-4">
+                    <UpButton />
                 </div>
             </section>
         </footer>

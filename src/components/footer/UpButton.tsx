@@ -11,7 +11,7 @@ export const UpButton = ({ className }: { className?: string }) => {
                 aria-label="scroll to top button"
                 title={t("upButtonAria")}
                 className={
-                    "tab:h-8 tab:w-8 prepc:h-11 prepc:w-11 bg-ivory group border-ivory tab:rounded-sm flex h-6 w-6 items-center justify-center rounded-xs border transition-colors duration-300 ease-in-out group-hover:bg-black group-active:bg-black"
+                    "prepc:h-11 prepc:w-11 bg-ivory group border-ivory tab:rounded-sm flex h-8 w-8 items-center justify-center rounded-xs border transition-colors duration-300 ease-in-out group-hover:bg-black group-active:bg-black"
                 }
                 onClick={() => {
                     window.scrollTo({
@@ -20,7 +20,7 @@ export const UpButton = ({ className }: { className?: string }) => {
                     });
                 }}
             >
-                <IconArrow className="group-hover:text-ivory group-active:text-ivory tab:w-4 prepc:w-6 h-auto w-2.5 -rotate-90 text-black transition-colors duration-300 ease-in-out" />
+                <IconArrow className="group-hover:text-ivory group-active:text-ivory prepc:w-6 h-auto w-4 -rotate-90 text-black transition-colors duration-300 ease-in-out" />
             </button>
             <span className="text-ivory prepc:text-base absolute right-0 bottom-full mb-1 hidden w-max rounded bg-black py-1 text-sm group-hover:block group-active:block">
                 {t("upButtonHint")}
