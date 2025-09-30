@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 
+import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
 import { LocaleType } from "@/types/LocaleType";
 
 interface ServicePageProps {
@@ -24,14 +26,18 @@ export default async function ServicePage({ params }: ServicePageProps) {
         { name: displayedService.key, href: `/${displayedService.key}` },
     ];
 
+    const feedbackList = feedbacksList.filter(
+        fb => fb.service === displayedService.key
+    );
+
     return (
         <>
             <div className="content py-24">
-                <h1 className="font-oswald font-bold uppercase">
-                    {displayedService.key}
-                </h1>
                 <Breadcrumbs breadcrumbsList={breadcrumb} />
             </div>
+            {feedbackList.length > 0 && (
+                <FeedbackSection list={feedbackList} slideAmount={4} />
+            )}
             <Booking />
         </>
     );
