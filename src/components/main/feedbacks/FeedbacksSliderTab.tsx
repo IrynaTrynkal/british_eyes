@@ -37,9 +37,9 @@ export const FeedbacksSliderTab = ({
         <div className="embla tab:block tab:px-0 tab:mb-0 mb-8 hidden min-w-full px-4">
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex">
-                    {feedbacksToShow.map((feedback, index) => (
+                    {feedbacksToShow.map(feedback => (
                         <div
-                            key={index}
+                            key={feedback.en.name}
                             className="embla__slide tab:flex-[0_0_660px] tab:pr-3 pc:pr-5 w-full flex-[0_0_240px] pr-[14px]"
                         >
                             <FeedbackCard feedback={feedback} />

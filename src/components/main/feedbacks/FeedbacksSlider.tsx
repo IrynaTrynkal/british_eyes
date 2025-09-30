@@ -43,7 +43,7 @@ export const FeedbacksSlider = ({
             >
                 {getStackedFeedbacks().map((feedback, index) => (
                     <motion.div
-                        key={index}
+                        key={feedback.en.name}
                         className="bg-ivory absolute right-0 left-0 transition-all duration-500"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{
