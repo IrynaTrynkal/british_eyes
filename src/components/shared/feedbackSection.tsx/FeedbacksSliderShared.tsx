@@ -76,39 +76,43 @@ export const FeedbacksSliderShared = ({
                 ))}
             </div>
 
-            <div
-                className={`tab:gap-5 flex gap-4 ${isTablet ? "tab:max-w-fit absolute right-0 bottom-0" : "tab:mx-auto tab:max-w-[300px] justify-between"}`}
-            >
-                <button
-                    aria-label="show previous slide button"
-                    className="group tab:h-11 tab:border tab:w-11 relative flex h-6 w-6 rotate-180 items-center justify-center rounded-sm hover:border active:border disabled:pointer-events-none disabled:opacity-60"
-                    type="button"
-                    onClick={prevSlide}
-                >
-                    <IconArrow />
-                </button>
+            {list.length > 1 && (
                 <div
-                    className={`transform items-center gap-2 ${isTablet ? "hidden" : "flex"}`}
+                    className={`tab:gap-5 flex gap-4 ${isTablet ? "tab:max-w-fit absolute right-0 bottom-0" : "tab:mx-auto tab:max-w-[300px] justify-between"}`}
                 >
-                    {list.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => goToSlide(index)}
-                            className={`h-3 w-3 rounded-xs border border-black transition-colors ${
-                                index === currentIndex ? "bg-black" : "bg-ivory"
-                            }`}
-                        />
-                    ))}
+                    <button
+                        aria-label="show previous slide button"
+                        className="group tab:h-11 tab:border tab:w-11 relative flex h-6 w-6 rotate-180 items-center justify-center rounded-sm hover:border active:border disabled:pointer-events-none disabled:opacity-60"
+                        type="button"
+                        onClick={prevSlide}
+                    >
+                        <IconArrow />
+                    </button>
+                    <div
+                        className={`transform items-center gap-2 ${isTablet ? "hidden" : "flex"}`}
+                    >
+                        {list.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => goToSlide(index)}
+                                className={`h-3 w-3 rounded-xs border border-black transition-colors ${
+                                    index === currentIndex
+                                        ? "bg-black"
+                                        : "bg-ivory"
+                                }`}
+                            />
+                        ))}
+                    </div>
+                    <button
+                        aria-label="show next slide button"
+                        className="group tab:h-11 tab:border tab:w-11 relative flex h-6 w-6 items-center justify-center rounded-sm hover:border active:border disabled:pointer-events-none disabled:opacity-60"
+                        type="button"
+                        onClick={nextSlide}
+                    >
+                        <IconArrow />
+                    </button>
                 </div>
-                <button
-                    aria-label="show next slide button"
-                    className="group tab:h-11 tab:border tab:w-11 relative flex h-6 w-6 items-center justify-center rounded-sm hover:border active:border disabled:pointer-events-none disabled:opacity-60"
-                    type="button"
-                    onClick={nextSlide}
-                >
-                    <IconArrow />
-                </button>
-            </div>
+            )}
         </div>
     );
 };

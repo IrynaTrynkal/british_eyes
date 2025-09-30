@@ -1,25 +1,30 @@
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 
-import { feedbacksList } from "@/components/assets/feedbacksData";
+import { FeedbackType } from "@/components/assets/feedbacksData";
 import { Fraction } from "@/components/shared/Fraction";
 import { LinkAction } from "@/components/shared/LinkAction";
 import { shuffleArray } from "@/utils/shuffleArray";
 
 import { FeedbacksSliderShared } from "./FeedbacksSliderShared";
 
-const FEEDBACKS_SLIDES_TO_SHOW = 4;
-
-export const FeedbackSection = () => {
+export const FeedbackSection = ({
+    list,
+    slideAmount,
+    className,
+}: {
+    list: FeedbackType[];
+    slideAmount: number;
+    className?: string;
+}) => {
     const t = useTranslations("HomePage");
-    const shuffledFeedbacks = useMemo(() => shuffleArray(feedbacksList), []);
-    const feedbacksToShow = shuffledFeedbacks.slice(
-        0,
-        FEEDBACKS_SLIDES_TO_SHOW
-    );
+    const shuffledFeedbacks = useMemo(() => shuffleArray(list), []);
+    const feedbacksToShow = shuffledFeedbacks.slice(0, slideAmount);
 
     return (
-        <section className="content pc:py-[120px] tab:py-12 prepc:flex prepc:flex-row-reverse prepc:justify-between prepc:gap-2 py-[60px]">
+        <section
+            className={`content pc:py-[120px] tab:py-12 prepc:flex prepc:flex-row-reverse prepc:justify-between prepc:gap-2 py-[60px] ${className}`}
+        >
             <div className="tab:hidden pc:w-[321px] mb-6 flex max-w-[540px] justify-between">
                 <h3 className="subtitle">{t("feedbacksSubtitle")}</h3>
                 <Fraction
@@ -69,7 +74,7 @@ export const FeedbackSection = () => {
                 </h3>
                 <FeedbacksSliderShared
                     list={feedbacksToShow}
-                    slideAmount={FEEDBACKS_SLIDES_TO_SHOW}
+                    slideAmount={slideAmount}
                 />
             </div>
             <LinkAction
