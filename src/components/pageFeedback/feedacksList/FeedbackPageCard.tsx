@@ -38,21 +38,23 @@ export const FeedbackPageCard = ({
                     <div className="tab:flex-row-reverse flex h-full flex-col justify-between">
                         <div className="tab:w-[35%] prepc:w-[25%]">
                             <div className="tab:h-0.5 tab:w-6 tab:mb-4 mb-1 h-[1px] w-2.5 bg-black" />
-                            <p className="font-oswald text-grey tab:text-base text-xs leading-none uppercase">
+                            <p className="font-oswald text-grey tab:text-base text-sm leading-none uppercase">
                                 {t(feedback.service)}
                             </p>
                         </div>
-                        <p className="font-oswald tab:w-[63%] tab:text-2xl tab:leading-7 tab:min-h-[57px] tab:mb-5 leading-5 font-medium uppercase">
+                        <p className="font-oswald tab:w-[63%] tab:text-2xl tab:leading-7 tab:min-h-[57px] tab:mb-5 text-lg leading-5 font-medium uppercase">
                             {feedback[locale as LocaleType].name}
                         </p>
                     </div>
-                    <p className="tab:block tab:text-base tab:leading-5 prepc:text-lg prepc:leading-[22px] hidden text-sm">
+                    <p className="tab:block tab:leading-5 prepc:text-lg prepc:leading-[22px] hidden text-base">
                         {feedback[locale as LocaleType].text}
                     </p>
                 </div>
             </div>
             <div className="tab:hidden px-2 py-3">
-                <p className="text-sm">{feedback[locale as LocaleType].text}</p>
+                <p className="leading-5">
+                    {feedback[locale as LocaleType].text}
+                </p>
             </div>
         </div>
     );
