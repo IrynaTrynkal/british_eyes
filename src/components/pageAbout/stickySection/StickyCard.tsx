@@ -18,7 +18,7 @@ export const StickyCard = ({
     return (
         <>
             <div
-                className={`green-gradient text-ivory tab:h-12 tab:[clip-path:polygon(0_0,calc(100%-48px)_0,100%_48px,100%_100%,0_100%)] absolute top-0 left-0 h-10 w-full rounded-tl-lg px-4 py-[13px] [clip-path:polygon(0_0,calc(100%-40px)_0,100%_40px,100%_100%,0_100%)] ${className}`}
+                className={`green-gradient text-ivory tab:h-12 tab:[clip-path:polygon(0_0,calc(100%-32px)_0,100%_48px,100%_100%,0_100%)] absolute top-0 left-0 h-10 w-full rounded-tl-lg px-4 py-[13px] [clip-path:polygon(0_0,calc(100%-40px)_0,100%_40px,100%_100%,0_100%)] ${className}`}
                 style={style}
             >
                 <h4 className="font-oswald text-sm leading-none font-medium uppercase">

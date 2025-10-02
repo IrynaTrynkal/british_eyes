@@ -33,7 +33,7 @@ export const FeedbackSection = ({
                     textDown={t("feedbacksTextDown")}
                 />
             </div>
-            <div className="tab:flex prepc:flex-col tab:justify-between pc:gap-5 tab:mb-11 mb-5">
+            <div className="tab:flex prepc:flex-col tab:justify-between pc:gap-5 tab:mb-11 prepc:mb-0 mb-5">
                 <h3 className="subtitle prepc:hidden tab:block pc:w-[321px] hidden">
                     {t("feedbacksSubtitle")}
                 </h3>
@@ -73,6 +73,7 @@ export const FeedbackSection = ({
                     {t("feedbacksSubtitle")}
                 </h3>
                 <FeedbacksSliderShared
+                    className="prepc:mb-0"
                     list={feedbacksToShow}
                     slideAmount={slideAmount}
                 />

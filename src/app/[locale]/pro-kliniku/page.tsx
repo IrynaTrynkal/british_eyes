@@ -3,6 +3,7 @@ import { feedbacksList } from "@/components/assets/feedbacksData";
 import { Doctors } from "@/components/main/doctors/Doctors";
 import { FAQ } from "@/components/main/faq/FAQ";
 import { News } from "@/components/main/news/News";
+import { AboutSection } from "@/components/pageAbout/about/AboutSection";
 import { StickySection } from "@/components/pageAbout/stickySection/StickySection";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
@@ -22,10 +23,12 @@ export default function AboutPage() {
                 breadcrumbsList={breadcrumb}
                 className="tab:block tab:mt-5 prepc:mb-12 pc:mb-[92px] hidden"
             />
+            <AboutSection />
             <StickySection />
             <Doctors />
 
             <FeedbackSection
+                className="prepc:pb-[60px]"
                 list={feedbacksList}
                 slideAmount={FEEDBACKS_SLIDES_TO_SHOW}
             />

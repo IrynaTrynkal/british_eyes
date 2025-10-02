@@ -81,3 +81,32 @@ export const stickyList: StickyCardType[] = [
         },
     },
 ];
+
+export type AchievementsType = {
+    uk: { up: string; down: string };
+    en: { up: string; down: string };
+    ru: { up: string; down: string };
+};
+
+export const achievementsList: AchievementsType[] = [
+    {
+        uk: { up: "19", down: "років досвіду" },
+        en: { up: "19", down: "years of experience" },
+        ru: { up: "19", down: "лет опыта" },
+    },
+    {
+        uk: { up: "5 млн", down: "консультацій проведено" },
+        en: { up: "5 m", down: "consultations held" },
+        ru: { up: "5 млн", down: "консультаций проведено" },
+    },
+    {
+        uk: { up: "1.5 млн", down: "операцій проведено" },
+        en: { up: "1.5 m", down: "operations carried out" },
+        ru: { up: "1.5 млн", down: "операций проведено" },
+    },
+    {
+        uk: { up: "1 млн", down: "задоволених клієнтів" },
+        en: { up: "1 m", down: "satisfied customers" },
+        ru: { up: "1 млн", down: "довольных клиентов" },
+    },
+];
