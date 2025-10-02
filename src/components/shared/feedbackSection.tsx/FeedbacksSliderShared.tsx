@@ -50,7 +50,7 @@ export const FeedbacksSliderShared = ({
             className={`tab:mx-auto relative mb-8 w-full max-w-[898px] ${className}`}
         >
             <div
-                className="tab:mb-9 mb-4 h-full w-full overflow-hidden"
+                className="tab:mb-9 prepc:mb-0 mb-4 h-full w-full overflow-hidden"
                 style={{ height: totalHeight }}
             >
                 {getStackedFeedbacks().map((feedback, index) => (

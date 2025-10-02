@@ -8,7 +8,7 @@ import { StickyCard } from "./StickyCard";
 export const StickySection = () => {
     const locale = useLocale();
     return (
-        <div className="tab:max-w-full relative mx-auto max-w-[540px]">
+        <section className="tab:max-w-full relative mx-auto max-w-[540px]">
             {stickyList.map((card, index) => (
                 <div
                     key={card.data.en.title}
@@ -27,17 +27,15 @@ export const StickySection = () => {
                     <StickyCard
                         locale={locale as LocaleType}
                         data={card}
-                        className={
-                            "tab:w-[calc(31.5%+48px)] tab:left-[var(--card-left)]"
-                        }
+                        className={"tab:w-[33.5%] tab:left-[var(--card-left)]"}
                         style={
                             {
-                                "--card-left": `calc(32.4% * ${index})`,
+                                "--card-left": `calc(33.5% * ${index} - 16px*${index})`,
                             } as React.CSSProperties
                         }
                     />
                 </div>
             ))}
-        </div>
+        </section>
     );
 };

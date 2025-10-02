@@ -157,5 +157,16 @@
         "subtitle": "Leave your review",
         "description": "Join tens of thousands of our patients who have already helped us become the best in our field!",
         "leaveFeedbackBtn": "leave a review"
+    },
+    "AboutPage": {
+        "title": "About the Clinic",
+        "description": "Since 2006, we have been restoring vision and a full life without glasses",
+        "aboutTitle": "Our ophthalmology clinic provides a full range of eye care services",
+        "aboutTitleBig": "«British Ophthalmology Center» is an impeccable medical service with special attention to the control of the medical process.",
+        "aboutSubtitle": "about us",
+        "aboutText1": "From the very first day, our mission has been to provide patients with only the best that modern ophthalmology can offer. We employ some of the finest specialists in the field, proven by dozens of published scientific papers and tens of thousands of successful surgeries!",
+        "aboutText2": "Our mission is to help you in every possible way to preserve your vision in perfect condition without surgical intervention. And if it ever happens that you do need surgery, we guarantee that it will be performed by some of the best specialists in ophthalmology!",
+        "aboutText3": "The high qualifications of our specialists are achieved only through daily practice and continuous learning. A true doctor learns their profession throughout life, and our staff knows this well. We have every reason to be proud of our doctors.",
+        "aboutAchievements": "our achievements"
     }
 }
