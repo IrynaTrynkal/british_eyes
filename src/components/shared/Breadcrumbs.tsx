@@ -21,17 +21,17 @@ export const Breadcrumbs = ({
 
     return (
         <nav aria-label="Breadcrumb" className={`content ${className}`}>
-            <ul className="tab:text-base tab:gap-1.5 flex items-center gap-1 text-sm leading-none">
-                <li key="home" className="flex items-center gap-2">
+            <ul className="tab:text-base tab:gap-1.5 prepc:h-9 flex h-6 items-center gap-1 text-sm leading-none">
+                <li key="home" className="flex h-full items-center gap-2">
                     <Link
                         href={"/" as any}
-                        className="tab:block text-grey hidden transition-all duration-300 ease-in-out hover:underline"
+                        className="tab:flex text-grey hidden h-full items-center transition-all duration-300 ease-in-out hover:underline"
                     >
                         {t("home")}
                     </Link>
                     <Link
                         href={"/" as any}
-                        className="tab:hidden transition-all duration-300 ease-in-out hover:underline"
+                        className="tab:hidden flex h-full items-center transition-all duration-300 ease-in-out hover:underline"
                     >
                         <IconHome />
                     </Link>
@@ -43,7 +43,7 @@ export const Breadcrumbs = ({
                     return (
                         <li
                             key={crumb.name}
-                            className="flex items-center gap-2"
+                            className="flex h-full items-center gap-2"
                         >
                             {isLast ? (
                                 <span
@@ -56,7 +56,7 @@ export const Breadcrumbs = ({
                                 <>
                                     <Link
                                         href={crumb.href as any}
-                                        className="text-grey transition-all duration-300 ease-in-out hover:underline"
+                                        className="text-grey h-full transition-all duration-300 ease-in-out hover:underline"
                                     >
                                         {t(crumb.name)}
                                     </Link>

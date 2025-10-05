@@ -4,6 +4,7 @@ import { Doctors } from "@/components/main/doctors/Doctors";
 import { FAQ } from "@/components/main/faq/FAQ";
 import { News } from "@/components/main/news/News";
 import { AboutSection } from "@/components/pageAbout/about/AboutSection";
+import { HeroAbout } from "@/components/pageAbout/hero/HeroAbout";
 import { StickySection } from "@/components/pageAbout/stickySection/StickySection";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
@@ -15,13 +16,11 @@ export default function AboutPage() {
 
     return (
         <>
+            <HeroAbout />
+
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}
-                className="tab:hidden mt-[72px] mb-6"
-            />
-            <Breadcrumbs
-                breadcrumbsList={breadcrumb}
-                className="tab:block tab:mt-5 prepc:mb-12 pc:mb-[92px] hidden"
+                className="tab:mt-5 prepc:mb-12 my-5"
             />
             <AboutSection />
             <StickySection />
