@@ -127,6 +127,17 @@ a {
     );
 }
 
+.about-hero-gradient {
+    background: radial-gradient(
+        173.59% 57.64% at 18.28% 90.66%,
+        #023f2c 14.37%,
+        rgba(9, 104, 75, 0.7) 35.35%,
+        rgba(11, 117, 86, 0.5) 53.1%,
+        rgba(8, 101, 74, 0.3) 66.28%,
+        rgba(57, 166, 112, 0) 84.64%
+    );
+}
+
 .book-height {
     height: 723px;
 }

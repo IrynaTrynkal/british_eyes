@@ -26,7 +26,7 @@ export const AboutSection = () => {
     const text = [t("aboutText1"), t("aboutText2"), t("aboutText3")];
 
     return (
-        <section className="content pc:pb-30 pt-5 pb-[60px]">
+        <section className="content pc:pb-30 pc:pt-11 pt-5 pb-[60px]">
             <div className="tab:flex tab:items-stretch tab:justify-between tab:mb-[60px] pc:mb-30">
                 <div className="tab:w-[32%] tab:flex tab:flex-col tab:justify-between">
                     <h3 className="subtitle mb-5">{t("aboutSubtitle")}</h3>
@@ -42,11 +42,8 @@ export const AboutSection = () => {
                     </div>
                 </div>
                 <div className="tab:w-[65.7%]">
-                    <h2 className="title-section prepc:hidden tab:max-w-[560px] prepc:max-w-full mb-6 max-w-[440px]">
+                    <h2 className="title-section tab:max-w-[560px] prepc:max-w-full mb-6 max-w-[440px]">
                         {t("aboutTitle")}
-                    </h2>
-                    <h2 className="title-section prepc:block tab:max-w-[560px] prepc:max-w-full mb-6 hidden max-w-[440px]">
-                        {t("aboutTitleBig")}
                     </h2>
                     <div className="tab:hidden mb-5 aspect-[288/164] overflow-hidden rounded">
                         <Image
