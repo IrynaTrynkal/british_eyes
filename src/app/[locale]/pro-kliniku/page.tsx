@@ -5,6 +5,7 @@ import { FAQ } from "@/components/main/faq/FAQ";
 import { News } from "@/components/main/news/News";
 import { AboutSection } from "@/components/pageAbout/about/AboutSection";
 import { Advantages } from "@/components/pageAbout/advantages/Advantages";
+import { AboutCTA } from "@/components/pageAbout/cta/AboutCTA";
 import { GermanSection } from "@/components/pageAbout/german/GermanSection";
 import { HeroAbout } from "@/components/pageAbout/hero/HeroAbout";
 import { StickySection } from "@/components/pageAbout/stickySection/StickySection";
@@ -29,7 +30,7 @@ export default function AboutPage() {
             <GermanSection />
             <Advantages />
             <Doctors />
-
+            <AboutCTA />
             <FeedbackSection
                 className="prepc:pb-[60px]"
                 list={feedbacksList}

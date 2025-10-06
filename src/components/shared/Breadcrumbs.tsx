@@ -56,7 +56,7 @@ export const Breadcrumbs = ({
                                 <>
                                     <Link
                                         href={crumb.href as any}
-                                        className="text-grey h-full transition-all duration-300 ease-in-out hover:underline"
+                                        className="text-grey flex h-full items-center transition-all duration-300 ease-in-out hover:underline"
                                     >
                                         {t(crumb.name)}
                                     </Link>
