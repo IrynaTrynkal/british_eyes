@@ -3,7 +3,10 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { useLocale } from "next-intl";
 
-import { advantagesList } from "@/components/assets/advantagesData";
+import {
+    advantagesAboutList,
+    advantagesList,
+} from "@/components/assets/advantagesData";
 import {
     NextButton,
     PrevButton,
@@ -13,7 +16,7 @@ import { useDotButton } from "@/components/shared/slider/SliderDots";
 import { SliderDotsBox } from "@/components/shared/slider/SliderDotsBox";
 import { LocaleType } from "@/types/LocaleType";
 
-import { AdvantageCard } from "./AdvantageCard";
+import { AdvantageAboutCard } from "./AdvantageCard";
 
 export const AdvantagesSlider = () => {
     const options: EmblaOptionsType = {
@@ -31,17 +34,20 @@ export const AdvantagesSlider = () => {
     } = usePrevNextButtons(emblaApi);
 
     const locale = useLocale();
+    const mobAdvantagesAboutList = advantagesAboutList.filter(
+        (_, index) => index !== 2
+    );
 
     return (
         <div className="embla tab:hidden relative min-w-full">
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex">
-                    {advantagesList.map((advantage, ind) => (
+                    {mobAdvantagesAboutList.map((advantage, ind) => (
                         <div
                             key={advantage.en.title}
                             className="embla__slide w-full flex-[0_0_240px]"
                         >
-                            <AdvantageCard
+                            <AdvantageAboutCard
                                 text={advantage[locale as LocaleType].text}
                                 title={advantage[locale as LocaleType].title}
                                 ind={ind}

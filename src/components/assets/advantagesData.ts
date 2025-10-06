@@ -117,3 +117,118 @@ export const advantagesList: AdvantageProps[] = [
         },
     },
 ];
+
+export const advantagesAboutList: AdvantageProps[] = [
+    {
+        uk: {
+            title: "Команда професіоналів",
+            text: "Всі наші лікарі — висококваліфіковані фахівці. «Британський офтальмологічний центр» — постійно навчає своїх фахівців за кордоном.",
+        },
+        ru: {
+            title: "Команда профессионалов",
+            text: "Все наши врачи — высококвалифицированные специалисты. «Британский офтальмологический центр» постоянно обучает своих специалистов за рубежом.",
+        },
+        en: {
+            title: "Team of Professionals",
+            text: "All our doctors are highly qualified specialists. The 'British Ophthalmology Center' continuously trains its specialists abroad.",
+        },
+    },
+    {
+        uk: {
+            title: "точний діагноз",
+            text: "Ви отримуєте повну об’єктивну інформацію про своє захворювання і про всі ефективні методи лікування. При цьому, лікар будує схему лікування з урахуванням ваших індивідуальних особливостей.",
+        },
+        ru: {
+            title: "Точный диагноз",
+            text: "Вы получаете полную объективную информацию о своём заболевании и обо всех эффективных методах лечения. При этом врач строит схему лечения с учётом ваших индивидуальных особенностей.",
+        },
+        en: {
+            title: "Accurate Diagnosis",
+            text: "You receive complete and objective information about your condition and all effective treatment methods. The doctor develops a treatment plan taking into account your individual characteristics.",
+        },
+    },
+    {
+        uk: {
+            title: "",
+            text: "",
+        },
+        ru: {
+            title: "",
+            text: "",
+        },
+        en: {
+            title: "",
+            text: "",
+        },
+    },
+    {
+        uk: {
+            title: "сучасне обладнання",
+            text: "Вся техніка і матеріали, які використовують наші фахівці, мають європейські сертифікати і пройшли необхідну реєстрацію в Міністерстві охорони здоров’я України.",
+        },
+        ru: {
+            title: "Современное оборудование",
+            text: "Вся техника и материалы, которые используют наши специалисты, имеют европейские сертификаты и прошли необходимую регистрацию в Министерстве здравоохранения Украины.",
+        },
+        en: {
+            title: "Modern Equipment",
+            text: "All the equipment and materials used by our specialists have European certificates and have been duly registered with the Ministry of Health of Ukraine.",
+        },
+    },
+    {
+        uk: {
+            title: "відкритість",
+            text: "Ми надаємо пацієнтові можливість контролю якості операції. Ми записуємо і архівуємо весь процес операції для об’єктивного медичного контролю. Також ведеться аудіо і відео запис бесіди лікаря і пацієнта при постановці діагнозу і консультуванні пацієнта.",
+        },
+        ru: {
+            title: "Открытость",
+            text: "Мы предоставляем пациенту возможность контролировать качество операции. Мы записываем и архивируем весь процесс операции для объективного медицинского контроля. Также ведётся аудио- и видеозапись беседы врача и пациента при постановке диагноза и консультировании.",
+        },
+        en: {
+            title: "Transparency",
+            text: "We provide patients with the opportunity to monitor the quality of their surgery. We record and archive the entire operation process for objective medical control. Audio and video recordings of the consultation and diagnosis discussion are also made.",
+        },
+    },
+    {
+        uk: {
+            title: "Бездоганна репутація",
+            text: "Перед операцією з пацієнтом підписується договір, в якому обумовлюються всі права пацієнта і аспекти лікування.",
+        },
+        ru: {
+            title: "Безупречная репутация",
+            text: "Перед операцией с пациентом подписывается договор, в котором оговариваются все права пациента и аспекты лечения.",
+        },
+        en: {
+            title: "Impeccable Reputation",
+            text: "Before surgery, a contract is signed with the patient, specifying all patient rights and details of the treatment process.",
+        },
+    },
+    {
+        uk: {
+            title: "швидкість",
+            text: "Операції проходять амбулаторно (Вам не потрібно лягати в стаціонар), тривають лічені хвилини і абсолютно безболісні.",
+        },
+        ru: {
+            title: "Скорость",
+            text: "Операции проводятся амбулаторно (вам не нужно ложиться в стационар), длятся считанные минуты и абсолютно безболезненны.",
+        },
+        en: {
+            title: "Efficiency",
+            text: "Surgeries are performed on an outpatient basis (no need for hospital stay), take just a few minutes, and are completely painless.",
+        },
+    },
+    {
+        uk: {
+            title: "комфорт",
+            text: "Ми спостерігаємо кожного пацієнта після операції до повного одужання. У Вас є можливість у будь-який час зв’язатися з черговим лікарем.",
+        },
+        ru: {
+            title: "Комфорт",
+            text: "Мы наблюдаем каждого пациента после операции до полного выздоровления. У вас есть возможность в любое время связаться с дежурным врачом.",
+        },
+        en: {
+            title: "Comfort",
+            text: "We monitor every patient after surgery until full recovery. You can contact the on-duty doctor at any time.",
+        },
+    },
+];
