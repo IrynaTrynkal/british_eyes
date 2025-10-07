@@ -26,11 +26,11 @@ export default async function ReviewsPage({
                 breadcrumbsList={breadcrumb}
                 className="tab:block tab:mt-5 prepc:mb-12 pc:mb-[92px] hidden"
             />
-            <div className="prepc:flex prepc:flex-row-reverse prepc:justify-between prepc:px-6 tab:pb-12 pc:pb-[120px] pb-[60px]">
+            <div className="prepc:flex prepc:flex-row-reverse prepc:justify-between prepc:px-6 prepc:overflow-visible tab:pb-12 pc:pb-[120px] relative pb-[60px]">
                 <TopicFilter
                     id="feedbacks-list"
                     list={feedbacksList}
-                    className="prepc:mb-0 prepc:w-[207px] prepc:mt-0 prepc:h-fit mb-6"
+                    className="prepc:mb-0 prepc:sticky prepc:top-24 prepc:w-[207px] prepc:mt-0 prepc:h-fit mb-6"
                 />
                 <FeedbacksPageList
                     idScrollTo="#feedbacks-list"
