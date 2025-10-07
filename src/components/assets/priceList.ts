@@ -469,4 +469,74 @@ export const priceList: PriceBlockType[] = [
             },
         ],
     },
+    {
+        key: "likuvannya-kosookosti",
+        title: {
+            uk: "Лікування косоокості",
+            ru: "Лечение косоглазия",
+            en: "Strabismus Treatment",
+        },
+        linkToPage: "/poslugy/likuvannya-kosookosti",
+        list: [
+            {
+                price: 13500,
+                initialСost: true,
+                new: true,
+                data: {
+                    uk: {
+                        name: "Хірургічне лікування косоокості",
+                        description: [
+                            {
+                                text: "метод «регульованих швів»",
+                            },
+                        ],
+                    },
+                    en: {
+                        name: "Surgical Treatment of Strabismus",
+                        description: [
+                            {
+                                text: "‘Adjustable Sutures’ Method",
+                            },
+                        ],
+                    },
+
+                    ru: {
+                        name: "Хирургическое лечение косоглазия",
+                        description: [
+                            {
+                                text: "метод «регулируемых швов»",
+                            },
+                        ],
+                    },
+                },
+            },
+        ],
+    },
+    {
+        key: "refrakczijna-lensektomiya",
+        title: {
+            uk: "Рефракційна ленсектомія",
+            ru: "Рефракционная ленсэктомия",
+            en: "Refractive lensectomy",
+        },
+        linkToPage: "/poslugy/refrakczijna-lensektomiya",
+        list: [
+            {
+                price: 49100,
+                discountPrice: 34700,
+                initialСost: true,
+                data: {
+                    uk: {
+                        name: "Рефракційна заміна кришталика",
+                    },
+                    en: {
+                        name: "Refractive Lens Exchange",
+                    },
+                    ru: {
+                        name: "Рефракционная замена хрусталика",
+                    },
+                },
+            },
+        ],
+    },
 ];

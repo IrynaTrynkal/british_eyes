@@ -1,3 +1,5 @@
+import { ServiceKey } from "./menu";
+
 export type StickyCardType = {
     images: string[];
     data: {
@@ -155,6 +157,74 @@ export const methodsList: MethodType[] = [
             en: {
                 title: "iQ-Life 3D «Water Flow»",
                 text: "This is the «gold standard» in modern ophthalmology.",
+            },
+        },
+    },
+];
+
+export type AboutServicesType = {
+    key: ServiceKey;
+    link: string;
+    data: {
+        uk: { title: string; text: string };
+        en: { title: string; text: string };
+        ru: { title: string; text: string };
+    };
+};
+
+export const aboutServicesList: AboutServicesType[] = [
+    {
+        key: "vitreoretinalna-hirurgiya",
+        link: "/poslugy/vitreoretinalna-hirurgiya",
+        data: {
+            uk: {
+                title: "Вітреоретинальна хірургія",
+                text: "Це складний комбінований метод оперативного лікування патології сітківки та скловидного тіла",
+            },
+            en: {
+                title: "Vitreoretinal Surgery",
+                text: "A complex combined surgical method for treating retinal and vitreous body disorders.",
+            },
+            ru: {
+                title: "Витреоретинальная хирургия",
+                text: "Это сложный комбинированный метод оперативного лечения патологии сетчатки и стекловидного тела.",
+            },
+        },
+    },
+    {
+        key: "likuvannya-kosookosti",
+        link: "/poslugy/likuvannya-kosookosti",
+
+        data: {
+            uk: {
+                title: "Лікування косоокості методом «регульованих швів»",
+                text: "Коли проблему неможливо усунути консервативними методами",
+            },
+            en: {
+                title: "Strabismus Treatment Using the 'Adjustable Sutures' Method",
+                text: "When the problem cannot be corrected by conservative methods.",
+            },
+            ru: {
+                title: "Лечение косоглазия методом «регулируемых швов»",
+                text: "Когда проблему невозможно устранить консервативными методами.",
+            },
+        },
+    },
+    {
+        key: "refrakczijna-lensektomiya",
+        link: "/poslugy/refrakczijna-lensektomiya",
+        data: {
+            uk: {
+                title: "Альтернатива лазерної корекції зору RLE",
+                text: "Коли проблему неможливо усунути консервативними методами",
+            },
+            en: {
+                title: "Alternative to Laser Vision Correction — RLE",
+                text: "When the problem cannot be corrected by conservative methods.",
+            },
+            ru: {
+                title: "Альтернатива лазерной коррекции зрения RLE",
+                text: "Когда проблему невозможно устранить консервативными методами.",
             },
         },
     },
