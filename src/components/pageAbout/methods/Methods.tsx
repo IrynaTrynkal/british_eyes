@@ -9,7 +9,7 @@ export const Methods = () => {
     const t = useTranslations("AboutPage");
 
     return (
-        <section className="content relative pb-[60px]">
+        <section className="content pc:pb-30 relative pb-[60px]">
             <div className="prepc:mb-0 mb-6 flex w-full justify-between">
                 <h3 className="subtitle prepc:absolute prepc:top-0 prepc:left-6 pc:left-12">
                     {t("methodsSubtitle")}

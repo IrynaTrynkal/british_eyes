@@ -10,7 +10,7 @@ export const MethodCard = ({ data }: { data: MethodType }) => {
     return (
         <Link
             href={`/poslugy/lazerna-korekcziya-zoru/${data.link}` as any}
-            className="border-grey relative aspect-[288/189] w-full overflow-hidden rounded border"
+            className="border-grey group relative aspect-[288/189] w-full overflow-hidden rounded border"
         >
             <div
                 className={"aspect-[288/189] w-full bg-cover bg-blend-multiply"}
@@ -22,7 +22,7 @@ export const MethodCard = ({ data }: { data: MethodType }) => {
                     backgroundColor: "#065d43ee",
                 }}
             />
-            <h3 className="font-oswald text-white-100 prepc:text-[42px] tab:text-3xl absolute top-1/2 left-1/2 -translate-1/2 text-2xl leading-7 font-medium whitespace-nowrap uppercase">
+            <h3 className="font-oswald text-white-100 prepc:text-[42px] tab:text-3xl absolute top-1/2 left-1/2 -translate-1/2 text-2xl leading-7 font-medium whitespace-nowrap uppercase transition-transform duration-300 ease-in-out group-hover:scale-110">
                 {data.data[locale as LocaleType].title}
             </h3>
             <div className="bg-ivory tab:max-w-[447px] tab:w-full tab:left-auto tab:right-0 prepc:p-2 pc:p-3 absolute bottom-0 flex items-center rounded p-[5.2px]">
@@ -30,7 +30,7 @@ export const MethodCard = ({ data }: { data: MethodType }) => {
                     {data.data[locale as LocaleType].text}
                 </p>
                 <div className="flex h-10 w-10 items-center justify-center">
-                    <IconArrow />
+                    <IconArrow className="transition-transform duration-300 ease-in-out group-hover:-rotate-90" />
                 </div>
             </div>
         </Link>
