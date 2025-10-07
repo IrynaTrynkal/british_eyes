@@ -110,3 +110,52 @@ export const achievementsList: AchievementsType[] = [
         ru: { up: "1 млн", down: "довольных клиентов" },
     },
 ];
+
+export type MethodType = {
+    image: string;
+    link: string;
+    data: {
+        uk: { title: string; text: string };
+        en: { title: string; text: string };
+        ru: { title: string; text: string };
+    };
+};
+
+export const methodsList: MethodType[] = [
+    {
+        image: "/images/eagle.jpg",
+        link: "sportlife-lasik",
+        data: {
+            uk: {
+                title: "iQ-LASIK Oxygen 3D",
+                text: "сучасна і безпечна методика поліпшення зору рефракційним лазером.",
+            },
+            ru: {
+                title: "iQ-LASIK Oxygen 3D",
+                text: "современная и безопасная методика улучшения зрения с помощью рефракционного лазера.",
+            },
+            en: {
+                title: "iQ-LASIK Oxygen 3D",
+                text: "A modern and safe method of improving vision using a refractive laser.",
+            },
+        },
+    },
+    {
+        image: "/images/live.jpg",
+        link: "iq-lasik-oxygen-3d",
+        data: {
+            uk: {
+                title: "iQ-Life 3D «водний потік»",
+                text: "Це «золотий стандарт» в сучасній офтальмології.",
+            },
+            ru: {
+                title: "iQ-Life 3D «водный поток»",
+                text: "Это «золотой стандарт» в современной офтальмологии.",
+            },
+            en: {
+                title: "iQ-Life 3D «Water Flow»",
+                text: "This is the «gold standard» in modern ophthalmology.",
+            },
+        },
+    },
+];
