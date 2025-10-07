@@ -111,7 +111,9 @@
         "lazerna-korekcziya-zoru-smalText": "The «living vision» program after cataract, presbyopia, and refractive surgery.",
         "likuvannya-katarakti-smalText": "The «living vision» program after cataract, presbyopia, and refractive surgery.",
         "perevirka-zoru-smalText": "The «living vision» program after cataract, presbyopia, and refractive surgery.",
-        "syndrom-sukhoho-oka-smalText": "The «living vision» program after cataract, presbyopia, and refractive surgery."
+        "syndrom-sukhoho-oka-smalText": "The «living vision» program after cataract, presbyopia, and refractive surgery.",
+        "sportlife-lasik": "SportLine LASEK",
+        "iq-lasik-oxygen-3d": "iQ-LASIK Oxygen 3D"
     },
     "Modals": {
         "callUs": "Contact us",
@@ -177,9 +179,13 @@
         "advantTitle": "You can be confident in the quality of services provided at the British Ophthalmology Center",
         "advantSubtitle": "why choose us?",
         "advantText": "By choosing our clinic, you can always rely on professional and high-quality medical care.",
-        "ctaTitle": "Restore your clear vision — easily and without glasses",
         "ctaText": "Book an eye examination to learn more about the condition of your visual system!",
         "ctaBtn": "book an appointment",
-        "ctaWork": "Mon - Sun 9:00 – 19:00 \nwe work without days off"
+        "ctaWork": "Mon - Sun 9:00 – 19:00 \nwe work without days off",
+        "ctaTitle": "Take care of your vision health today!",
+        "methodsTitle": "We perform procedures using unique techniques",
+        "methodsSubtitle": "methods",
+        "methodsGreen": "For those who choose the best and accept no compromise",
+        "methodsText": "Only we use the cold laser vision correction method, ensuring maximum safety for your eyes."
     }
 }
