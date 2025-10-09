@@ -65,7 +65,8 @@ a {
     background: none;
 }
 
-.link-gradient:hover {
+.link-gradient:hover,
+.link-gradient:active {
     background: linear-gradient(
         -10deg,
         #023f2c 0%,
