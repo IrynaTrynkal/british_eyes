@@ -10,6 +10,7 @@ import { GermanSection } from "@/components/pageAbout/german/GermanSection";
 import { HeroAbout } from "@/components/pageAbout/hero/HeroAbout";
 import { Methods } from "@/components/pageAbout/methods/Methods";
 import { StickySection } from "@/components/pageAbout/stickySection/StickySection";
+import { Team } from "@/components/pageAbout/team/Team";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
@@ -31,6 +32,7 @@ export default function AboutPage() {
             <GermanSection />
             <Advantages />
             <Methods />
+            <Team />
             <Doctors />
             <AboutCTA />
             <FeedbackSection

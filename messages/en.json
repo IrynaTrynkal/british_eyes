@@ -186,6 +186,11 @@
         "methodsTitle": "We perform procedures using unique techniques",
         "methodsSubtitle": "methods",
         "methodsGreen": "For those who choose the best and accept no compromise",
-        "methodsText": "Only we use the cold laser vision correction method, ensuring maximum safety for your eyes."
+        "methodsText": "Only we use the cold laser vision correction method, ensuring maximum safety for your eyes.",
+        "teamTitle": "Our team of professionals treats the most complex eye diseases:",
+        "teamLi1": "In cases of severe eye pathologies and injuries",
+        "teamLi2": "When the problem cannot be solved by conservative methods",
+        "teamLi3": "When laser vision correction is not possible for medical reasons",
+        "teamBtn": "all services"
     }
 }
