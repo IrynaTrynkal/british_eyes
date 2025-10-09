@@ -1,3 +1,4 @@
+import { Hero } from "@/components/pageOffers/HeroOffers/Hero";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
@@ -6,12 +7,11 @@ export default function OffersPage() {
 
     return (
         <>
-            <div className="content py-24">
-                <h1 className="font-oswald font-bold uppercase">
-                    Сторінка Акцій в розробці
-                </h1>
-                <Breadcrumbs breadcrumbsList={breadcrumb} />
-            </div>
+            <Breadcrumbs
+                className="prepc:mt-[104px] mt-[72px]"
+                breadcrumbsList={breadcrumb}
+            />
+            <Hero />
             <Booking />
         </>
     );
