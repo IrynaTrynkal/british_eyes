@@ -72,7 +72,9 @@
         "bookingTitle": "Convenient booking and transparent consultation cost",
         "bookingText": "We have made the process of contacting the clinic as simple as possible. You only need to book an appointment with an ophthalmologist in Kyiv online or by phone.",
         "upButtonHint": "To the top of the page",
-        "upButtonAria": "Return to top of page"
+        "upButtonAria": "Return to top of page",
+        "lazerna-korekcziya-zoru-cold": "Cold laser vision \ncorrection",
+        "details": "more details"
     },
     "Menu": {
         "onlineButtonMob": "online booking",
@@ -199,6 +201,7 @@
     },
     "ServicesPage": {
         "title": "Ophthalmology services",
-        "description": "The British Ophthalmology Center provides a full range of modern high-tech ophthalmological services for the treatment of eye diseases in people of all ages."
+        "description": "The British Ophthalmology Center provides a full range of modern high-tech ophthalmological services for the treatment of eye diseases in people of all ages.",
+        "sectionTitle": "We diagnose all eye diseases and perform microsurgical treatment"
     }
 }

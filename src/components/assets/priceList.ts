@@ -11,7 +11,7 @@ export type PriceItemType = {
     discountPrice?: number;
     initialСost?: boolean;
     new?: boolean;
-    data: {
+    data?: {
         uk: {
             name: string;
             description?: DescriptionType[];
