@@ -139,6 +139,17 @@ a {
     );
 }
 
+.services-hero-big {
+    background: radial-gradient(
+        56.13% 262.73% at 0% 2.48%,
+        #023f2c 14.37%,
+        #09684b 41.23%,
+        #0b7556 52.66%,
+        rgba(8, 101, 74, 0.5) 63.6%,
+        rgba(0, 54, 38, 0) 83.34%
+    );
+}
+
 .book-height {
     height: 723px;
 }
