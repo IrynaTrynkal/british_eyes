@@ -14,8 +14,12 @@ export type ServicesProps = {
     ru: ServicesLocaleProps;
 };
 
-const findPriceItem = (key: ServicesKeyType): PriceItemType | undefined => {
-    return priceList.find(p => p.key === key)?.list[0];
+const findPriceItem = (key: ServicesKeyType): PriceItemType => {
+    const item = priceList.find(p => p.key === key)?.list[0];
+    if (item) return item;
+    return {
+        price: 0,
+    };
 };
 
 export const servicesData: ServicesProps[] = [
@@ -97,6 +101,157 @@ export const servicesData: ServicesProps[] = [
         ru: {
             textMain:
                 "Современные методы устранения рефракционных нарушений восстановления четкости зрения.",
+        },
+    },
+    {
+        name: servicesList.find(s => s.key === "dityache-viddilennya")!,
+        price: findPriceItem("dityache-viddilennya")!,
+        uk: {
+            textMain:
+                "Сучасні методи виправлення рефракційних порушень відновлення чіткості зору.Провідні дитячі офтальмологи – досвідчені лікарі, які знайдуть підхід до кожної дитини.",
+        },
+        en: {
+            textMain:
+                "Leading pediatric ophthalmologists are experienced doctors who will find an approach to each child.",
+        },
+        ru: {
+            textMain:
+                "Современные методы устранения рефракционных нарушений восстановления четкости зрения.Ведущие детские офтальмологи – опытные врачи, которые найдут подход к каждому ребенку.",
+        },
+    },
+    {
+        name: servicesList.find(s => s.key === "likuvannya-keratokonusa")!,
+        price: findPriceItem("likuvannya-keratokonusa")!,
+        uk: {
+            textMain:
+                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+        },
+        en: {
+            textMain:
+                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+        },
+        ru: {
+            textMain:
+                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+        },
+    },
+    {
+        name: servicesList.find(s => s.key === "refrakczijna-lensektomiya")!,
+        price: findPriceItem("refrakczijna-lensektomiya")!,
+        uk: {
+            textMain:
+                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+        },
+        en: {
+            textMain:
+                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+        },
+        ru: {
+            textMain:
+                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+        },
+    },
+    {
+        name: servicesList.find(
+            s => s.key === "lazerne-likuvannya-zahvoryuvan-oka"
+        )!,
+        price: findPriceItem("lazerne-likuvannya-zahvoryuvan-oka")!,
+        uk: {
+            textMain:
+                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+        },
+        en: {
+            textMain:
+                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+        },
+        ru: {
+            textMain:
+                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+        },
+    },
+
+    {
+        name: servicesList.find(s => s.key === "intravitrealni-inekczii")!,
+        price: findPriceItem("intravitrealni-inekczii")!,
+        uk: {
+            textMain:
+                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+        },
+        en: {
+            textMain:
+                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+        },
+        ru: {
+            textMain:
+                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+        },
+    },
+    {
+        name: servicesList.find(
+            s => s.key === "hirurgichne-likuvannya-glaukomi"
+        )!,
+        price: findPriceItem("hirurgichne-likuvannya-glaukomi")!,
+        uk: {
+            textMain:
+                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+        },
+        en: {
+            textMain:
+                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+        },
+        ru: {
+            textMain:
+                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+        },
+    },
+    {
+        name: servicesList.find(s => s.key === "likuvannya-kosookosti")!,
+        price: findPriceItem("likuvannya-kosookosti")!,
+        uk: {
+            textMain:
+                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+        },
+        en: {
+            textMain:
+                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+        },
+        ru: {
+            textMain:
+                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+        },
+    },
+    {
+        name: servicesList.find(
+            s => s.key === "hirurgiya-povik-i-konyunktivi"
+        )!,
+        price: findPriceItem("hirurgiya-povik-i-konyunktivi")!,
+        uk: {
+            textMain:
+                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+        },
+        en: {
+            textMain:
+                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+        },
+        ru: {
+            textMain:
+                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+        },
+    },
+    {
+        name: servicesList.find(s => s.key === "ksenonoterapiya")!,
+        price: findPriceItem("ksenonoterapiya")!,
+        uk: {
+            textMain:
+                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+        },
+        en: {
+            textMain:
+                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+        },
+        ru: {
+            textMain:
+                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
         },
     },
 ];
