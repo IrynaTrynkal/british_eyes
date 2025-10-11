@@ -192,5 +192,13 @@
         "teamLi2": "When the problem cannot be solved by conservative methods",
         "teamLi3": "When laser vision correction is not possible for medical reasons",
         "teamBtn": "all services"
+    },
+    "OffersPage": {
+        "title": "offers and discounts",
+        "description": "Our clinic does not pay any fees to outside doctors for referring patients for surgical treatment"
+    },
+    "ServicesPage": {
+        "title": "Ophthalmology services",
+        "description": "The British Ophthalmology Center provides a full range of modern high-tech ophthalmological services for the treatment of eye diseases in people of all ages."
     }
 }
