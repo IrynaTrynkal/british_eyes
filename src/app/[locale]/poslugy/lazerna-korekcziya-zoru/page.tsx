@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
 import { LaserMethods } from "@/components/someServiceComponents/Methods/LaserMethods";
 
-export default function LazerPage({ modal }: { modal: React.ReactNode }) {
+export default function LazerPage() {
     const displayedService: ServicesListProps | undefined = servicesList.find(
         service => service.key === "lazerna-korekcziya-zoru"
     );
@@ -34,7 +34,6 @@ export default function LazerPage({ modal }: { modal: React.ReactNode }) {
                 <Breadcrumbs breadcrumbsList={breadcrumb} />
             </div>
             <LaserMethods />
-            {modal}
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
             )}
