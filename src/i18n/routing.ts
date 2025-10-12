@@ -18,6 +18,14 @@ export const routing = defineRouting({
             en: "/services/[slug]",
             ru: "/uslugi/[slug]",
         },
+        "/poslugy/lazerna-korekcziya-zoru": {
+            en: "/services/laser-vision-correction",
+            ru: "/uslugi/lazernaya-korrekciya-zreniya",
+        },
+        "/poslugy/lazerna-korekcziya-zoru/[subpage]": {
+            en: "/services/laser-vision-correction/[subpage]",
+            ru: "/uslugi/lazernaya-korrekciya-zreniya/[subpage]",
+        },
         "/aktsiyi": {
             en: "/offers",
             ru: "/akcii",

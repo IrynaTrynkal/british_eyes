@@ -5,25 +5,23 @@ import { servicesList, ServicesListProps } from "@/components/assets/menu";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
-import { LocaleType } from "@/types/LocaleType";
+import { LaserMethods } from "@/components/someServiceComponents/Methods/LaserMethods";
 
-interface ServicePageProps {
-    params: Promise<{ locale: string; slug: string }>; // params тепер Promise
-}
-
-export default async function ServicePage({ params }: ServicePageProps) {
-    const { locale, slug } = await params;
-
+export default function LazerPage({ modal }: { modal: React.ReactNode }) {
     const displayedService: ServicesListProps | undefined = servicesList.find(
-        service => service.slug[locale as LocaleType] === slug
+        service => service.key === "lazerna-korekcziya-zoru"
     );
 
     if (!displayedService) {
         notFound();
     }
+
     const breadcrumb = [
         { name: "poslugy", href: "/poslugy" },
-        { name: displayedService.key, href: `/${displayedService.key}` },
+        {
+            name: displayedService.key,
+            href: "/poslugy/lazerna-korekcziya-zoru",
+        },
     ];
 
     const feedbackList = feedbacksList.filter(
@@ -35,6 +33,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <div className="content py-24">
                 <Breadcrumbs breadcrumbsList={breadcrumb} />
             </div>
+            <LaserMethods />
+            {modal}
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
             )}

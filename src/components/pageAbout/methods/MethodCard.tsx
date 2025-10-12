@@ -5,21 +5,30 @@ import { IconArrow } from "@/components/shared/icons/IconArrow";
 import { Link } from "@/i18n/navigation";
 import { LocaleType } from "@/types/LocaleType";
 
-export const MethodCard = ({ data }: { data: MethodType }) => {
+export const MethodCard = ({
+    data,
+    lazer,
+}: {
+    data: MethodType;
+    lazer?: boolean;
+}) => {
     const locale = useLocale();
+    const image = lazer ? data.imageLaser : data.image;
     return (
         <Link
             href={`/poslugy/lazerna-korekcziya-zoru/${data.link}` as any}
             className="border-grey group relative aspect-[288/189] w-full overflow-hidden rounded border"
         >
             <div
-                className={"aspect-[288/189] w-full bg-cover bg-blend-multiply"}
+                className={
+                    "aspect-[288/189] w-full bg-cover bg-center bg-blend-overlay transition-all duration-300 ease-in-out group-hover:bg-blend-hard-light"
+                }
                 style={{
                     backgroundImage: `
-                linear-gradient(104.29deg, rgba(0, 54, 38, 0.6) 0.79%, rgba(11, 117, 86, 0.26) 87.17%),
-                url(${data.image})
+                linear-gradient(104.29deg, rgba(0, 54, 38, 0.8) 0.79%, rgba(11, 117, 86, 0.36) 87.17%),
+                url(${image})
             `,
-                    backgroundColor: "#065d43ee",
+                    backgroundColor: "#065d43",
                 }}
             />
             <h3 className="font-oswald text-white-100 prepc:text-[42px] tab:text-3xl absolute top-1/2 left-1/2 -translate-1/2 text-2xl leading-7 font-medium whitespace-nowrap uppercase transition-transform duration-300 ease-in-out group-hover:scale-110">

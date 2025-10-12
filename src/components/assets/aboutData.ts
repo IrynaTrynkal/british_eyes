@@ -115,6 +115,7 @@ export const achievementsList: AchievementsType[] = [
 
 export type MethodType = {
     image: string;
+    imageLaser: string;
     link: string;
     data: {
         uk: { title: string; text: string };
@@ -126,6 +127,7 @@ export type MethodType = {
 export const methodsList: MethodType[] = [
     {
         image: "/images/eagle.jpg",
+        imageLaser: "/images/eagle.jpg",
         link: "sportlife-lasik",
         data: {
             uk: {
@@ -144,6 +146,7 @@ export const methodsList: MethodType[] = [
     },
     {
         image: "/images/live.jpg",
+        imageLaser: "/images/lasek.png",
         link: "iq-lasik-oxygen-3d",
         data: {
             uk: {

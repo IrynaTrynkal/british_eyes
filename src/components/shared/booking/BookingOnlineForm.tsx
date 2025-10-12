@@ -10,7 +10,13 @@ import { ErrorMessage } from "./ErrorMessage";
 import { Modal } from "./Modal";
 import { SuccessMessage } from "./SuccessMessage";
 
-export const BookingOnlineForm = ({ cta }: { cta?: boolean }) => {
+export const BookingOnlineForm = ({
+    cta,
+    btnName,
+}: {
+    cta?: boolean;
+    btnName?: string;
+}) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
@@ -41,7 +47,7 @@ export const BookingOnlineForm = ({ cta }: { cta?: boolean }) => {
         <>
             {cta ? (
                 <ButtonAction
-                    name={t("onlineButtonPC")}
+                    name={btnName ? btnName : t("onlineButtonPC")}
                     className="mx-auto"
                     onClick={() => setIsOpen(true)}
                 />
