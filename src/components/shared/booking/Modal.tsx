@@ -11,12 +11,14 @@ interface ModalProps {
     onClose: () => void;
     isOpen: boolean;
     variant?: "sidebar" | "center";
+    lazer?: boolean;
 }
 
 export const Modal = ({
     children,
     onClose,
     isOpen,
+    lazer,
     variant = "sidebar",
 }: ModalProps) => {
     useEffect(() => {
@@ -77,9 +79,11 @@ export const Modal = ({
                             <button
                                 onClick={onClose}
                                 className={`${
-                                    variant === "center"
-                                        ? "hover:border-ivory"
-                                        : "hover:border-black"
+                                    lazer
+                                        ? "bg-ivory top-10 right-4 h-10 w-10 p-2"
+                                        : variant === "center"
+                                          ? "hover:border-ivory"
+                                          : "hover:border-black"
                                 } absolute top-3 right-3 flex h-6 w-6 items-center justify-center rounded border border-transparent transition-all duration-300 ease-in-out`}
                                 aria-label="Close modal"
                             >

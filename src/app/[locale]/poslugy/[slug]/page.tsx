@@ -8,11 +8,15 @@ import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/Feedbac
 import { LocaleType } from "@/types/LocaleType";
 
 interface ServicePageProps {
-    params: Promise<{ locale: string; slug: string }>; // params тепер Promise
+    params: Promise<{ locale: string; slug: string }>;
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
     const { locale, slug } = await params;
+
+    if (slug === "lazerna-korekcziya-zoru") {
+        notFound();
+    }
 
     const displayedService: ServicesListProps | undefined = servicesList.find(
         service => service.slug[locale as LocaleType] === slug
