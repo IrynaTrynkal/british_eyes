@@ -55,7 +55,7 @@ export const Modal = ({
                         <motion.div
                             className={`bg-ivory relative z-10 ${
                                 variant === "sidebar"
-                                    ? "tab:max-w-[660px] pc:max-w-[1044px] tab:rounded-bl-lg h-fit max-h-screen max-w-[540px] min-w-[320px] overflow-y-auto rounded-bl pt-3"
+                                    ? "tab:max-w-[660px] prepc:max-w-[1210px] tab:rounded-bl-lg h-fit max-h-screen max-w-[540px] min-w-[320px] overflow-y-auto rounded-bl pt-3"
                                     : "tab:rounded-lg tab:w-[472px] w-[288px] rounded text-center"
                             }`}
                             initial={
@@ -80,11 +80,11 @@ export const Modal = ({
                                 onClick={onClose}
                                 className={`${
                                     lazer
-                                        ? "bg-ivory top-10 right-4 h-10 w-10 p-2"
+                                        ? "bg-ivory tab:right-10 pc:right-20 top-10 right-4 h-10 w-10 p-2"
                                         : variant === "center"
-                                          ? "hover:border-ivory"
-                                          : "hover:border-black"
-                                } absolute top-3 right-3 flex h-6 w-6 items-center justify-center rounded border border-transparent transition-all duration-300 ease-in-out`}
+                                          ? "hover:border-ivory top-3 right-3 h-6 w-6"
+                                          : "top-3 right-3 h-6 w-6 hover:border-black"
+                                } absolute flex items-center justify-center rounded border border-transparent transition-all duration-300 ease-in-out`}
                                 aria-label="Close modal"
                             >
                                 <IconClose

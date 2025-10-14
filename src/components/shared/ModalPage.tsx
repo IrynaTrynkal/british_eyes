@@ -19,7 +19,7 @@ export const ModalPage = ({
     const [isModalOpen, setIsModalOpen] = useState(true);
 
     const onCloseModal = () => {
-        router.push(`/${locale}/poslugy/lazerna-korekcziya-zoru`);
+        router.push(`/${locale}/poslugy/lazerna-korekcziya-zoru#lazer-methods`);
         setIsModalOpen(false);
     };
 
