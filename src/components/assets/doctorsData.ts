@@ -1,3 +1,5 @@
+import { ServicesKeyType } from "./menu";
+
 export type DepartmentsType =
     | "clinic-management"
     | "childrens-ophthalmologists"
@@ -67,6 +69,7 @@ export type DoctorProps = {
     image?: string;
     experience: number;
     departments: DepartmentsType[];
+    services: ServicesKeyType[];
     uk: LocaleDoctorProps;
     ru: LocaleDoctorProps;
     en: LocaleDoctorProps;
@@ -80,6 +83,13 @@ export const doctorsData: DoctorProps[] = [
             "clinic-management",
             "ophthalmic-surgeons",
             "consultation-and-diagnostic-ophthalmologists",
+        ],
+        services: [
+            "lazerne-likuvannya-zahvoryuvan-oka",
+            "hirurgichne-likuvannya-glaukomi",
+            "likuvannya-katarakti",
+            "ksenonoterapiya",
+            "likuvannya-keratokonusa",
         ],
         uk: {
             slug: "vitovska-oksana-petrivna",
@@ -103,6 +113,13 @@ export const doctorsData: DoctorProps[] = [
         departments: [
             "childrens-ophthalmologists",
             "consultation-and-diagnostic-ophthalmologists",
+        ],
+        services: [
+            "lazerne-likuvannya-zahvoryuvan-oka",
+            "hirurgichne-likuvannya-glaukomi",
+            "likuvannya-katarakti",
+            "lazerna-korekcziya-zoru",
+            "refrakczijna-lensektomiya",
         ],
         uk: {
             slug: "zhiharev-anatolij-yurijovich",
@@ -128,6 +145,13 @@ export const doctorsData: DoctorProps[] = [
             "ophthalmic-surgeons",
             "consultation-and-diagnostic-ophthalmologists",
         ],
+        services: [
+            "lazerne-likuvannya-zahvoryuvan-oka",
+            "hirurgichne-likuvannya-glaukomi",
+            "likuvannya-katarakti",
+            "lazerna-korekcziya-zoru",
+            "refrakczijna-lensektomiya",
+        ],
         uk: {
             slug: "dikunova-darina-vasilivna",
             name: "Дікунова Дарина Василівна",
@@ -151,6 +175,14 @@ export const doctorsData: DoctorProps[] = [
             "clinic-management",
             "ophthalmic-surgeons",
             "consultation-and-diagnostic-ophthalmologists",
+        ],
+        services: [
+            "lazerne-likuvannya-zahvoryuvan-oka",
+            "hirurgichne-likuvannya-glaukomi",
+            "likuvannya-katarakti",
+            "refrakczijna-lensektomiya",
+            "syndrom-sukhoho-oka",
+            "lazerna-korekcziya-zoru",
         ],
         uk: {
             slug: "sus-yuliya-leonidivna",
@@ -175,6 +207,13 @@ export const doctorsData: DoctorProps[] = [
             "clinic-management",
             "consultation-and-diagnostic-ophthalmologists",
         ],
+        services: [
+            "lazerne-likuvannya-zahvoryuvan-oka",
+            "hirurgichne-likuvannya-glaukomi",
+            "likuvannya-katarakti",
+            "refrakczijna-lensektomiya",
+            "syndrom-sukhoho-oka",
+        ],
         uk: {
             slug: "vitovska-oksana-petrivna",
             name: "Вітовська Оксана Петрівна",
@@ -198,7 +237,13 @@ export const doctorsData: DoctorProps[] = [
             "consultation-and-diagnostic-ophthalmologists",
             "ophthalmic-surgeons",
         ],
-
+        services: [
+            "lazerne-likuvannya-zahvoryuvan-oka",
+            "hirurgichne-likuvannya-glaukomi",
+            "likuvannya-katarakti",
+            "vitreoretinalna-hirurgiya",
+            "likuvannya-kosookosti",
+        ],
         uk: {
             slug: "zhiharev-anatolij-yurijovich",
             name: "Жихарєв Анатолій Юрійович",
@@ -222,7 +267,12 @@ export const doctorsData: DoctorProps[] = [
             "consultation-and-diagnostic-ophthalmologists",
             "ophthalmic-surgeons",
         ],
-
+        services: [
+            "hirurgichne-likuvannya-glaukomi",
+            "ksenonoterapiya",
+            "hirurgiya-povik-i-konyunktivi",
+            "perevirka-zoru",
+        ],
         uk: {
             slug: "dikunova-darina-vasilivna",
             name: "Дікунова Дарина Василівна",
@@ -243,6 +293,11 @@ export const doctorsData: DoctorProps[] = [
         image: "/doctors/sus-yuliya-leonidivna.webp",
         experience: 2020,
         departments: ["doctors-anesthesiologists", "ophthalmic-surgeons"],
+        services: [
+            "lazerne-likuvannya-zahvoryuvan-oka",
+            "intravitrealni-inekczii",
+            "lazerna-korekcziya-zoru",
+        ],
         uk: {
             slug: "sus-yuliya-leonidivna",
             name: "Сус Юлія Леонідівна",

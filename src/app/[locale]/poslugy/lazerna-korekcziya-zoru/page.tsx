@@ -5,6 +5,7 @@ import { servicesList, ServicesListProps } from "@/components/assets/menu";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
+import { DoctorsServices } from "@/components/someServiceComponents/Doctors/DoctorsServices";
 import { LaserMethods } from "@/components/someServiceComponents/Methods/LaserMethods";
 
 export default function LazerPage() {
@@ -23,7 +24,6 @@ export default function LazerPage() {
             href: "/poslugy/lazerna-korekcziya-zoru",
         },
     ];
-
     const feedbackList = feedbacksList.filter(
         fb => fb.service === displayedService.key
     );
@@ -34,6 +34,7 @@ export default function LazerPage() {
                 <Breadcrumbs breadcrumbsList={breadcrumb} />
             </div>
             <LaserMethods />
+            <DoctorsServices service="lazerna-korekcziya-zoru" />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
             )}

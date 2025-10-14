@@ -11,7 +11,7 @@ import { Fraction } from "@/components/shared/Fraction";
 import { LinkAction } from "@/components/shared/LinkAction";
 import { LocaleType } from "@/types/LocaleType";
 
-import { DoctorsSlider } from "./DoctorsSlider";
+import { DoctorsSlider } from "../../shared/doctors/DoctorsSlider";
 
 export const Doctors = () => {
     const [openedDepartment, setOpenedDepartment] =
