@@ -4,9 +4,9 @@ export const Fraction = ({
     className,
     ivory,
 }: {
-    textUp: string;
+    textUp: string | React.ReactNode;
     className?: string;
-    textDown: string;
+    textDown: string | React.ReactNode;
     ivory?: boolean;
 }) => {
     return (

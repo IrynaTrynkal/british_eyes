@@ -204,6 +204,11 @@
         "title": "Ophthalmology services",
         "description": "The British Ophthalmology Center provides a full range of modern high-tech ophthalmological services for the treatment of eye diseases in people of all ages.",
         "sectionTitle": "We diagnose all eye diseases and perform microsurgical treatment",
-        "lazerCorectionMethodsTitle": "Unique cold laser correction technology — only in our clinic"
+        "lazerCorectionMethodsTitle": "Unique cold laser correction technology — only in our clinic",
+        "doctorsSubtitle": "doctors",
+        "doctorsTitle": "Experts in laser \nvision correction",
+        "doctorsText": "Our doctors will carefully study the condition of your visual system and determine whether correction is possible in your case.",
+        "doctorsTextUp": "14 <small>years</small>",
+        "doctorsTextDown": "average work experience"
     }
 }
