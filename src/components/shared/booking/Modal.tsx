@@ -11,14 +11,14 @@ interface ModalProps {
     onClose: () => void;
     isOpen: boolean;
     variant?: "sidebar" | "center";
-    lazer?: boolean;
+    subpage?: boolean;
 }
 
 export const Modal = ({
     children,
     onClose,
     isOpen,
-    lazer,
+    subpage,
     variant = "sidebar",
 }: ModalProps) => {
     useEffect(() => {
@@ -79,7 +79,7 @@ export const Modal = ({
                             <button
                                 onClick={onClose}
                                 className={`${
-                                    lazer
+                                    subpage
                                         ? "bg-ivory tab:right-10 pc:right-20 top-10 right-4 h-10 w-10 p-2"
                                         : variant === "center"
                                           ? "hover:border-ivory top-3 right-3 h-6 w-6"

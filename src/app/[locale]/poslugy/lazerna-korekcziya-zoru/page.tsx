@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
+import { methodsLazerList } from "@/components/assets/servicesData";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
@@ -33,7 +34,7 @@ export default function LazerPage() {
             <div className="content py-24">
                 <Breadcrumbs breadcrumbsList={breadcrumb} />
             </div>
-            <LaserMethods />
+            <LaserMethods list={methodsLazerList} />
             <DoctorsServices service="lazerna-korekcziya-zoru" />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
