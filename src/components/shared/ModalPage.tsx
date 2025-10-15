@@ -25,7 +25,12 @@ export const ModalPage = ({
     };
 
     return (
-        <Modal subpage={subpage} isOpen={isModalOpen} onClose={onCloseModal}>
+        <Modal
+            key={path}
+            subpage={subpage}
+            isOpen={isModalOpen}
+            onClose={onCloseModal}
+        >
             {children}
         </Modal>
     );
