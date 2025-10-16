@@ -99,7 +99,7 @@ export const Preview = ({
                             ) : null}
                             <LinkAction
                                 className="tab:mx-0 mx-auto"
-                                href="/poslugy#booking"
+                                href="#booking"
                                 name={tH("bookingSubtitle")}
                             />
                         </div>
