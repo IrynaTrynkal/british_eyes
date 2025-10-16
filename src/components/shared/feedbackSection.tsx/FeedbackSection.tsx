@@ -40,7 +40,7 @@ export const FeedbackSection = ({
 
                 <div className="tab:max-w-[376px] tab:w-[47%] prepc:w-full pc:max-w-[440px] prepc:text-left">
                     <Fraction
-                        className="prepc:block prepc:mb-5 mr-0 ml-auto hidden w-fit text-center whitespace-pre-line"
+                        className="prepc:flex prepc:mb-5 mr-0 ml-auto hidden w-fit text-center"
                         textUp={t("feedbacksTextUp")}
                         textDown={t("feedbacksTextDown")}
                     />

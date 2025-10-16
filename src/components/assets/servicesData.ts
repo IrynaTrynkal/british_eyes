@@ -24,6 +24,7 @@ const findPriceItem = (key: ServicesKeyType): PriceItemType => {
     };
 };
 export type PreviewProps = {
+    fractionUp?: boolean;
     title: string;
     text?: string[];
     textUp?: string;
@@ -39,6 +40,7 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Комплексне обстеження та перевірка зору з використанням сучасного обладнання.",
             preview: {
+                fractionUp: true,
                 title: "Сучасне обстеження зору щодо стандартів ЄС",
                 text: [
                     "Діагностика проводиться з використанням високоточного обладнання, яке відповідає нормам Євросоюзу. Це дозволяє отримати об'єктивні дані про стан органів зору та підібрати максимально ефективне лікування як хірургічне, так і консервативне.",
@@ -46,7 +48,7 @@ export const servicesData: ServicesProps[] = [
                 ],
                 image: "/images/perevirka-zoru-preview.jpg",
                 textUp: "5 млн",
-                textDown: "консультацій проведено",
+                textDown: "консультацій \nпроведено",
             },
         },
         en: {
@@ -60,7 +62,7 @@ export const servicesData: ServicesProps[] = [
                 ],
                 image: "/images/perevirka-zoru-preview.jpg",
                 textUp: "5 m",
-                textDown: "consultations held",
+                textDown: "consultations \nheld",
             },
         },
         ru: {
@@ -74,7 +76,7 @@ export const servicesData: ServicesProps[] = [
                 ],
                 image: "/images/perevirka-zoru-preview.jpg",
                 textUp: "5 млн",
-                textDown: "консультаций проведено",
+                textDown: "консультаций \nпроведено",
             },
         },
     },
@@ -93,7 +95,7 @@ export const servicesData: ServicesProps[] = [
                 ],
                 image: "/images/cataract-preview.jpg",
                 textUp: "500 тис+",
-                textDown: "успішних вилучень катаракти",
+                textDown: "успішних \nвилучень катаракти",
             },
         },
         en: {
@@ -107,7 +109,7 @@ export const servicesData: ServicesProps[] = [
                 ],
                 image: "/images/cataract-preview.jpg",
                 textUp: "500 k+",
-                textDown: "successful cataract removals",
+                textDown: "successful \ncataract removals",
             },
         },
         ru: {
@@ -121,7 +123,7 @@ export const servicesData: ServicesProps[] = [
                 ],
                 image: "/images/cataract-preview.jpg",
                 textUp: "500 тыс+",
-                textDown: "успешных удалений катаракты",
+                textDown: "успешных \nудалений катаракты",
             },
         },
     },
@@ -170,7 +172,7 @@ export const servicesData: ServicesProps[] = [
                 ],
                 image: "/images/lazer-preview.jpg",
                 textUp: "1 млн",
-                textDown: "проведено лазерних корекцій",
+                textDown: "проведено \nлазерних корекцій",
             },
         },
         en: {
@@ -184,7 +186,7 @@ export const servicesData: ServicesProps[] = [
                 ],
                 image: "/images/lazer-preview.jpg",
                 textUp: "1 m",
-                textDown: "laser corrections performed",
+                textDown: "laser corrections \nperformed",
             },
         },
         ru: {
@@ -198,7 +200,7 @@ export const servicesData: ServicesProps[] = [
                 ],
                 image: "/images/lazer-preview.jpg",
                 textUp: "1 млн",
-                textDown: "проведено лазерных коррекций",
+                textDown: "проведено \nлазерных коррекций",
             },
         },
     },

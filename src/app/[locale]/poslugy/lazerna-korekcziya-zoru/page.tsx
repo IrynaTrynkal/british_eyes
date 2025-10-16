@@ -52,10 +52,11 @@ export default function LazerPage() {
 
     return (
         <>
-            <div className="content py-24">
-                <Breadcrumbs breadcrumbsList={breadcrumb} />
-            </div>
-            <Preview data={serviceData[locale as LocaleType].preview} />
+            <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
+            <Preview
+                price={serviceData.price}
+                data={serviceData[locale as LocaleType].preview}
+            />
             <LaserMethods data={methodsSectionText} list={methodsLazerList} />
             <DoctorsServices service="lazerna-korekcziya-zoru" />
             {feedbackList.length > 0 && (

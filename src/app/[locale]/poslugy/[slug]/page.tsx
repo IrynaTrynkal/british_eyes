@@ -44,10 +44,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
     return (
         <>
-            <div className="content py-24">
-                <Breadcrumbs breadcrumbsList={breadcrumb} />
-            </div>
-            <Preview data={serviceData[locale as LocaleType].preview} />
+            <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
+            <Preview
+                price={serviceData.price}
+                data={serviceData[locale as LocaleType].preview}
+            />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
             )}
