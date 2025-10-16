@@ -26,6 +26,18 @@ export const routing = defineRouting({
             en: "/services/laser-vision-correction/[subpage]",
             ru: "/uslugi/lazernaya-korrekciya-zreniya/[subpage]",
         },
+        "/poslugy/likuvannya-katarakti": {
+            en: "/services/cataract-treatment",
+            ru: "/uslugi/lechenie-katarakty",
+        },
+        "/poslugy/likuvannya-katarakti/[subpage]": {
+            en: "/services/cataract-treatment/[subpage]",
+            ru: "/uslugi/lechenie-katarakty/[subpage]",
+        },
+        "/poslugy/likuvannya-katarakti/iq-life-3d-vodnij-potik": {
+            en: "/services/cataract-treatment/iq-life-3d-water-flow",
+            ru: "/uslugi/lechenie-katarakty/iq-life-3d",
+        },
         "/aktsiyi": {
             en: "/offers",
             ru: "/akcii",

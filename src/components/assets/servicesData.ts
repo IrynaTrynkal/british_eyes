@@ -1,3 +1,4 @@
+import { MethodType } from "./aboutData";
 import { ServicesKeyType, servicesList, ServicesListProps } from "./menu";
 import { PriceItemType, priceList } from "./priceList";
 
@@ -252,6 +253,84 @@ export const servicesData: ServicesProps[] = [
         ru: {
             textMain:
                 "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+        },
+    },
+];
+
+export const methodsLazerList: MethodType[] = [
+    {
+        image: "/images/eagle.jpg",
+        link: "lazerna-korekcziya-zoru/iq-lasik-oxygen-3d",
+        data: {
+            uk: {
+                title: "iQ-LASIK Oxygen 3D",
+                text: "Сучасна і безпечна методика поліпшення зору рефракційним лазером.",
+            },
+            ru: {
+                title: "iQ-LASIK Oxygen 3D",
+                text: "Современная и безопасная методика улучшения зрения с помощью рефракционного лазера.",
+            },
+            en: {
+                title: "iQ-LASIK Oxygen 3D",
+                text: "A modern and safe method of improving vision using a refractive laser.",
+            },
+        },
+    },
+    {
+        image: "/images/lasek.png",
+        link: "lazerna-korekcziya-zoru/sportlife-lasik",
+        data: {
+            uk: {
+                title: "SportLine LASEK",
+                text: "Це «золотий стандарт» в сучасній офтальмології.",
+            },
+            ru: {
+                title: "SportLine LASEK",
+                text: "Это «золотой стандарт» в современной офтальмологии.",
+            },
+            en: {
+                title: "SportLine LASEK",
+                text: "This is the «gold standard» in modern ophthalmology.",
+            },
+        },
+    },
+];
+
+export const methodsCataractList: MethodType[] = [
+    {
+        image: "/images/iq-5-minute.jpg",
+        link: "likuvannya-katarakti/iq-5-minutes",
+        data: {
+            uk: {
+                title: "iq-5-minutes",
+                text: "",
+            },
+            ru: {
+                title: "iq-5-minutes",
+                text: "",
+            },
+            en: {
+                title: "iq-5-minutes",
+                text: "",
+            },
+        },
+    },
+    {
+        image: "/images/live.jpg",
+        link: "likuvannya-katarakti/iq-life-3d-vodnij-potik",
+        data: {
+            uk: {
+                title: "iQ-Life 3D «водний потік»",
+                text: "Це «золотий стандарт» в сучасній офтальмології.",
+            },
+            ru: {
+                title: "iQ-Life 3D «водный поток»",
+                text: "Это «золотой стандарт» в современной офтальмологии.",
+            },
+            en: {
+                title: "iQ-Life 3D «Water Flow»",
+                text: "This is the «gold standard» in modern ophthalmology.",
+            },
         },
     },
 ];

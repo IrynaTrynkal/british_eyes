@@ -1,30 +1,42 @@
 "use client";
-import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 import { Modal } from "./booking/Modal";
 
 export const ModalPage = ({
     children,
-    lazer,
+    subpage,
 }: {
     children: React.ReactNode;
-    lazer?: boolean;
+    subpage?: boolean;
 }) => {
     const router = useRouter();
 
-    const locale = useLocale();
+    const path = usePathname();
+    const basePath = path.substring(0, path.lastIndexOf("/"));
+    const backPath = `${basePath}`;
 
     const [isModalOpen, setIsModalOpen] = useState(true);
 
     const onCloseModal = () => {
-        router.push(`/${locale}/poslugy/lazerna-korekcziya-zoru#lazer-methods`);
         setIsModalOpen(false);
+        setTimeout(() => {
+            if (window.history.length > 1) {
+                router.back();
+            } else {
+                router.push(`${backPath}`);
+            }
+        }, 300);
     };
 
     return (
-        <Modal lazer={lazer} isOpen={isModalOpen} onClose={onCloseModal}>
+        <Modal
+            key={path}
+            subpage={subpage}
+            isOpen={isModalOpen}
+            onClose={onCloseModal}
+        >
             {children}
         </Modal>
     );

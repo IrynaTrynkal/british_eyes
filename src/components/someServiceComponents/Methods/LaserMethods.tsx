@@ -1,18 +1,15 @@
 import { useTranslations } from "next-intl";
 
-import { methodsList } from "@/components/assets/aboutData";
+import { MethodType } from "@/components/assets/aboutData";
 import { MethodCard } from "@/components/pageAbout/methods/MethodCard";
 import { GreenText } from "@/components/shared/GreenText";
 
-export const LaserMethods = () => {
+export const LaserMethods = ({ list }: { list: MethodType[] }) => {
     const t = useTranslations("AboutPage");
     const tSer = useTranslations("ServicesPage");
 
     return (
-        <section
-            id="lazer-methods"
-            className="content pc:pb-30 relative pb-[60px]"
-        >
+        <section id="methods" className="content pc:pb-30 relative pb-[60px]">
             <div className="prepc:mb-0 mb-6 flex w-full justify-between">
                 <h3 className="subtitle prepc:absolute prepc:top-0 prepc:left-6 pc:left-12">
                     {t("methodsSubtitle")}
@@ -32,8 +29,8 @@ export const LaserMethods = () => {
                 </p>
             </div>
             <div className="tab:flex-row tab:gap-3 prepc:gap-5 flex flex-col gap-2">
-                {methodsList.map(item => (
-                    <MethodCard lazer key={item.data.en.title} data={item} />
+                {list.map(item => (
+                    <MethodCard key={item.data.en.title} data={item} />
                 ))}
             </div>
         </section>

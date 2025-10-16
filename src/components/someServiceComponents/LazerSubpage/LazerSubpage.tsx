@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-import { SubLazerPageType } from "@/components/assets/laserMethodsData";
+import { SubPageType } from "@/components/assets/laserMethodsData";
 import { BookingOnlineForm } from "@/components/shared/booking/BookingOnlineForm";
 import { LocaleType } from "@/types/LocaleType";
 
@@ -10,7 +10,7 @@ export const LazerSubpage = ({
     currentMethod,
     locale,
 }: {
-    currentMethod: SubLazerPageType;
+    currentMethod: SubPageType;
     locale: LocaleType;
 }) => {
     const t = useTranslations("Menu");

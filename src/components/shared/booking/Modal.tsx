@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 import { IconClose } from "../icons/IconClose";
 import { Portal } from "./Portal";
@@ -11,21 +11,32 @@ interface ModalProps {
     onClose: () => void;
     isOpen: boolean;
     variant?: "sidebar" | "center";
-    lazer?: boolean;
+    subpage?: boolean;
 }
 
 export const Modal = ({
     children,
     onClose,
     isOpen,
-    lazer,
+    subpage,
     variant = "sidebar",
 }: ModalProps) => {
+    const [isOpenPortal, setIsOpenPortal] = useState(false);
+    const onClosePortal = () => {
+        setIsOpenPortal(false);
+    };
+
+    useEffect(() => {
+        if (isOpen) {
+            setIsOpenPortal(true);
+        }
+    }, [isOpen]);
+
     useEffect(() => {
         if (!isOpen) return;
 
         const handleEsc = (e: KeyboardEvent) => {
-            if (e.key === "Escape") onClose();
+            if (e.key === "Escape") onClosePortal();
         };
 
         document.body.style.overflow = "hidden";
@@ -37,9 +48,13 @@ export const Modal = ({
     }, [isOpen, onClose]);
 
     return (
-        <Portal id="modal">
-            <AnimatePresence>
-                {isOpen && (
+        <AnimatePresence
+            onExitComplete={() => {
+                onClose();
+            }}
+        >
+            {isOpenPortal ? (
+                <Portal id="modal">
                     <motion.div
                         className={`fixed inset-0 z-20 flex ${
                             variant === "sidebar"
@@ -79,7 +94,7 @@ export const Modal = ({
                             <button
                                 onClick={onClose}
                                 className={`${
-                                    lazer
+                                    subpage
                                         ? "bg-ivory tab:right-10 pc:right-20 top-10 right-4 h-10 w-10 p-2"
                                         : variant === "center"
                                           ? "hover:border-ivory top-3 right-3 h-6 w-6"
@@ -98,8 +113,8 @@ export const Modal = ({
                             {children}
                         </motion.div>
                     </motion.div>
-                )}
-            </AnimatePresence>
-        </Portal>
+                </Portal>
+            ) : null}
+        </AnimatePresence>
     );
 };

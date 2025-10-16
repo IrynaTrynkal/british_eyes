@@ -2,34 +2,29 @@ import { notFound } from "next/navigation";
 
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
+import { methodsCataractList } from "@/components/assets/servicesData";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
-import { LocaleType } from "@/types/LocaleType";
+import { DoctorsServices } from "@/components/someServiceComponents/Doctors/DoctorsServices";
+import { LaserMethods } from "@/components/someServiceComponents/Methods/LaserMethods";
 
-interface ServicePageProps {
-    params: Promise<{ locale: string; slug: string }>;
-}
-
-export default async function ServicePage({ params }: ServicePageProps) {
-    const { locale, slug } = await params;
-
-    if (slug === "lazerna-korekcziya-zoru" || slug === "likuvannya-katarakti") {
-        notFound();
-    }
-
+export default function CataractPage() {
     const displayedService: ServicesListProps | undefined = servicesList.find(
-        service => service.slug[locale as LocaleType] === slug
+        service => service.key === "likuvannya-katarakti"
     );
 
     if (!displayedService) {
         notFound();
     }
+
     const breadcrumb = [
         { name: "poslugy", href: "/poslugy" },
-        { name: displayedService.key, href: `/${displayedService.key}` },
+        {
+            name: displayedService.key,
+            href: "/poslugy/likuvannya-katarakti",
+        },
     ];
-
     const feedbackList = feedbacksList.filter(
         fb => fb.service === displayedService.key
     );
@@ -39,6 +34,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <div className="content py-24">
                 <Breadcrumbs breadcrumbsList={breadcrumb} />
             </div>
+            <LaserMethods list={methodsCataractList} />
+            <DoctorsServices service="likuvannya-katarakti" />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
             )}
