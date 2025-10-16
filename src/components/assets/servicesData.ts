@@ -4,6 +4,7 @@ import { PriceItemType, priceList } from "./priceList";
 
 export type ServicesLocaleProps = {
     textMain: string;
+    preview?: PreviewProps;
 };
 
 export type ServicesProps = {
@@ -22,6 +23,13 @@ const findPriceItem = (key: ServicesKeyType): PriceItemType => {
         price: 0,
     };
 };
+export type PreviewProps = {
+    title: string;
+    text?: string[];
+    textUp?: string;
+    textDown?: string;
+    image?: string;
+};
 
 export const servicesData: ServicesProps[] = [
     {
@@ -30,14 +38,44 @@ export const servicesData: ServicesProps[] = [
         uk: {
             textMain:
                 "Комплексне обстеження та перевірка зору з використанням сучасного обладнання.",
+            preview: {
+                title: "Сучасне обстеження зору щодо стандартів ЄС",
+                text: [
+                    "Діагностика проводиться з використанням високоточного обладнання, яке відповідає нормам Євросоюзу. Це дозволяє отримати об'єктивні дані про стан органів зору та підібрати максимально ефективне лікування як хірургічне, так і консервативне.",
+                    "Розшифровкою результатів займається офтальмолог найвищої кваліфікаційної категорії. Всі рекомендації лікар пояснює у зрозумілій формі, щоб пацієнт міг повністю усвідомити суть діагнозу та можливі варіанти терапії.",
+                ],
+                image: "/images/perevirka-zoru-preview.jpg",
+                textUp: "5 млн",
+                textDown: "консультацій проведено",
+            },
         },
         en: {
             textMain:
                 "Comprehensive examination and vision test using modern equipment.",
+            preview: {
+                title: "Modern eye examination according to EU standards",
+                text: [
+                    "Diagnostics is carried out using high-precision equipment that meets European Union standards. This allows you to obtain objective data on the condition of the eyes and select the most effective treatment, both surgical and conservative.",
+                    "The results are interpreted by an ophthalmologist of the highest qualification category. The doctor explains all recommendations in an understandable form so that the patient can fully understand the essence of the diagnosis and possible treatment options.",
+                ],
+                image: "/images/perevirka-zoru-preview.jpg",
+                textUp: "5 m",
+                textDown: "consultations held",
+            },
         },
         ru: {
             textMain:
                 "Комплексное обследование и проверка зрения с использованием современного оборудования.",
+            preview: {
+                title: "Современное обследование зрения по стандартам ЕС",
+                text: [
+                    "Диагностика проводится с использованием высокоточного оборудования, которое соответствует нормам Евросоюза. Это позволяет получить объективные данные о состоянии органов зрения и подобрать максимально эффективное лечение как хирургическое, так и консервативное.",
+                    "Расшифровкой результатов занимается офтальмолог высшей квалификационной категории. Все рекомендации врач объясняет в понятной форме, чтобы пациент мог полностью осознать суть диагноза и возможные варианты терапии.",
+                ],
+                image: "/images/perevirka-zoru-preview.jpg",
+                textUp: "5 млн",
+                textDown: "консультаций проведено",
+            },
         },
     },
     {
@@ -47,14 +85,44 @@ export const servicesData: ServicesProps[] = [
         uk: {
             textMain:
                 "Хірургічне лікування катаракти, косоокості, кератоконуса та інших офтальмологічних патологій.",
+            preview: {
+                title: "Катаракта в нашому центрі лікується «англійським водним потоком iQ-5 minutes»",
+                text: [
+                    "Ми використовуємо найпфередовішу методику факоемульсифікації катаракти — «Водний потік», яка вважається «золотим стандартом» в сучасній офтальмології.",
+                    "Це швидкий, безпечний і комфортний метод, що дозволяє пацієнтам повернутися до звичного життя вже за кілька днів.",
+                ],
+                image: "/images/cataract-preview.jpg",
+                textUp: "500 тис+",
+                textDown: "успішних вилучень катаракти",
+            },
         },
         en: {
             textMain:
                 "Surgical treatment of cataracts, strabismus, keratoconus and other ophthalmological pathologies.",
+            preview: {
+                title: "Cataracts in our center are treated with the 'English Water Flow iQ-5 minutes'",
+                text: [
+                    "We use the most advanced phacoemulsification technique — the 'Water Flow', which is considered the 'gold standard' in modern ophthalmology.",
+                    "It is a fast, safe and comfortable method that allows patients to return to their normal lives within a few days.",
+                ],
+                image: "/images/cataract-preview.jpg",
+                textUp: "500 k+",
+                textDown: "successful cataract removals",
+            },
         },
         ru: {
             textMain:
                 "Хирургическое лечение катаракты, косоглазия, кератоконуса и других офтальмологических патологий.",
+            preview: {
+                title: "Катаракта в нашем центре лечится «английским водным потоком iQ-5 minutes»",
+                text: [
+                    "Мы используем передовую методику факоэмульсификации катаракты — «Водный поток», которая считается «золотым стандартом» в современной офтальмологии.",
+                    "Это быстрый, безопасный и комфортный метод, позволяющий пациентам вернуться к привычной жизни уже через несколько дней.",
+                ],
+                image: "/images/cataract-preview.jpg",
+                textUp: "500 тыс+",
+                textDown: "успешных удалений катаракты",
+            },
         },
     },
     {
@@ -94,14 +162,44 @@ export const servicesData: ServicesProps[] = [
         uk: {
             textMain:
                 "Сучасні методи виправлення рефракційних порушень відновлення чіткості зору.",
+            preview: {
+                title: "Лазерна корекція зору – це  прорив у галузі офтальмології, який допомагає мільйонам людей у всьому світі покращити свій зір",
+                text: [
+                    "Цей процес включає використання точного лазера для зміни форми рогівки, що дозволяє світлу фокусуватися на сітківці і покращує зір.",
+                    "Якщо ви втомилися від окулярів або контактних лінз і хочете покращити своє життя, то лазерна корекція зору може бути ідеальним рішенням для вас.",
+                ],
+                image: "/images/lazer-preview.jpg",
+                textUp: "1 млн",
+                textDown: "проведено лазерних корекцій",
+            },
         },
         en: {
             textMain:
                 "Modern methods of correcting refractive errors and restoring visual acuity.",
+            preview: {
+                title: "Laser vision correction is a breakthrough in ophthalmology that helps millions of people worldwide improve their eyesight",
+                text: [
+                    "This process involves using a precise laser to reshape the cornea, allowing light to focus on the retina and improving vision.",
+                    "If you're tired of glasses or contact lenses and want to improve your life, laser vision correction may be the perfect solution for you.",
+                ],
+                image: "/images/lazer-preview.jpg",
+                textUp: "1 m",
+                textDown: "laser corrections performed",
+            },
         },
         ru: {
             textMain:
                 "Современные методы устранения рефракционных нарушений восстановления четкости зрения.",
+            preview: {
+                title: "Лазерная коррекция зрения – это прорыв в области офтальмологии, который помогает миллионам людей по всему миру улучшить свое зрение",
+                text: [
+                    "Этот процесс включает использование точного лазера для изменения формы роговицы, что позволяет свету фокусироваться на сетчатке и улучшает зрение.",
+                    "Если вы устали от очков или контактных линз и хотите улучшить свою жизнь, то лазерная коррекция зрения может быть идеальным решением для вас.",
+                ],
+                image: "/images/lazer-preview.jpg",
+                textUp: "1 млн",
+                textDown: "проведено лазерных коррекций",
+            },
         },
     },
     {
@@ -257,6 +355,13 @@ export const servicesData: ServicesProps[] = [
     },
 ];
 
+export type MethodsSectionType = {
+    title: string;
+    text?: string;
+    subtitle?: string;
+    greenText?: string;
+};
+
 export const methodsLazerList: MethodType[] = [
     {
         image: "/images/eagle.jpg",
@@ -303,15 +408,15 @@ export const methodsCataractList: MethodType[] = [
         data: {
             uk: {
                 title: "iq-5-minutes",
-                text: "",
+                text: "Це безшовне видалення в складних випадках і обов’язкова імплантація інтраокулярної лінзи.",
             },
             ru: {
                 title: "iq-5-minutes",
-                text: "",
+                text: "Это бесшовное удаление в сложных случаях и обязательная имплантация интраокулярной линзы.",
             },
             en: {
                 title: "iq-5-minutes",
-                text: "",
+                text: "This is sutureless removal in complex cases with mandatory intraocular lens implantation.",
             },
         },
     },
