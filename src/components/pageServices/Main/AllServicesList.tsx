@@ -32,7 +32,9 @@ export const AllServicesList = () => {
                     className={`border-grey tab:min-h-[200px] pc:min-h-[246px] pc:rounded-lg tab:max-w-[390px] prepc:max-w-[434.5px] min-h-[140px] overflow-hidden rounded border ${index === 4 ? "tab:w-[calc(50%-10px)] prepc:w-[32.2%] w-full" : "prepc:w-[32.2%] tab:w-[calc(50%-10px)] w-[calc(50%-4px)]"}`}
                 >
                     <Link
-                        href={`/poslugy/${service.name.key}` as any}
+                        href={
+                            `/poslugy/${service.name.slug[locale as LocaleType]}` as any
+                        }
                         className={`group tab:p-3 relative flex h-full w-full flex-col justify-between p-2 transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
                     >
                         {service.name.key === "dityache-viddilennya" ? (

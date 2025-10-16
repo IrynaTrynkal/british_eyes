@@ -30,7 +30,7 @@ export const AllServicesMain = () => {
             <AllServicesList />
             <LinkAction
                 className="mx-auto"
-                href="/poslugy#booking"
+                href="#booking"
                 name={t("bookingSubtitle")}
             />
         </section>

@@ -2,9 +2,11 @@ import { notFound } from "next/navigation";
 
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
+import { servicesData } from "@/components/assets/servicesData";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
+import { Preview } from "@/components/someServiceComponents/previewSection/Preview";
 import { LocaleType } from "@/types/LocaleType";
 
 interface ServicePageProps {
@@ -33,12 +35,20 @@ export default async function ServicePage({ params }: ServicePageProps) {
     const feedbackList = feedbacksList.filter(
         fb => fb.service === displayedService.key
     );
+    const serviceData = servicesData.find(
+        service => service.name.key === displayedService.key
+    );
+    if (!serviceData) {
+        notFound();
+    }
 
     return (
         <>
-            <div className="content py-24">
-                <Breadcrumbs breadcrumbsList={breadcrumb} />
-            </div>
+            <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
+            <Preview
+                price={serviceData.price}
+                data={serviceData[locale as LocaleType].preview}
+            />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
             )}
