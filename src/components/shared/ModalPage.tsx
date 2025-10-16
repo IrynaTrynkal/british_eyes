@@ -15,13 +15,19 @@ export const ModalPage = ({
 
     const path = usePathname();
     const basePath = path.substring(0, path.lastIndexOf("/"));
-    const backPath = `${basePath}#methods`;
+    const backPath = `${basePath}`;
 
     const [isModalOpen, setIsModalOpen] = useState(true);
 
     const onCloseModal = () => {
-        router.push(`${backPath}`);
         setIsModalOpen(false);
+        setTimeout(() => {
+            if (window.history.length > 1) {
+                router.back();
+            } else {
+                router.push(`${backPath}`);
+            }
+        }, 300);
     };
 
     return (
