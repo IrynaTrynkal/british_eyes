@@ -3,10 +3,11 @@ import { notFound } from "next/navigation";
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
 import { servicesData } from "@/components/assets/servicesData";
+import { AboutCTA } from "@/components/pageAbout/cta/AboutCTA";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
-import { Preview } from "@/components/someServiceComponents/previewSection/Preview";
+import { ServicePageContent } from "@/components/someServiceComponents/ServicePage";
 import { LocaleType } from "@/types/LocaleType";
 
 interface ServicePageProps {
@@ -45,10 +46,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
     return (
         <>
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
-            <Preview
-                price={serviceData.price}
-                data={serviceData[locale as LocaleType].preview}
+            <ServicePageContent
+                locale={locale as LocaleType}
+                serviceData={serviceData}
             />
+            {slug === "perevirka-zoru" && <AboutCTA />}
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
             )}
