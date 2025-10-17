@@ -50,13 +50,17 @@ export default function LazerPage() {
         notFound();
     }
 
+    const previewData =
+        serviceData[locale as LocaleType]?.sections?.find(
+            section => section.type === "preview"
+        )?.data ?? null;
+
     return (
         <>
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
-            <Preview
-                price={serviceData.price}
-                data={serviceData[locale as LocaleType].preview}
-            />
+            {previewData && (
+                <Preview price={serviceData.price} data={previewData} />
+            )}
             <LaserMethods data={methodsSectionText} list={methodsLazerList} />
             <DoctorsServices service="lazerna-korekcziya-zoru" />
             {feedbackList.length > 0 && (
