@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
 import { servicesData } from "@/components/assets/servicesData";
-import { AboutCTA } from "@/components/pageAbout/cta/AboutCTA";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
@@ -50,7 +49,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 locale={locale as LocaleType}
                 serviceData={serviceData}
             />
-            {slug === "perevirka-zoru" && <AboutCTA />}
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
             )}

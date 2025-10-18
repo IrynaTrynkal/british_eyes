@@ -4,7 +4,9 @@ import { PriceItemType, priceList } from "./priceList";
 
 export type SectionType =
     | { type: "preview"; data: PreviewProps }
-    | { type: "roundImageAndTextSection"; data: RoundImageAndTextProps[] };
+    | { type: "roundImageAndTextSection"; data: RoundImageAndTextProps[] }
+    | { type: "numberListSection"; data: NumberListProps }
+    | { type: "cta" };
 
 export type ServicesLocaleProps = {
     textMain?: string;
@@ -50,8 +52,31 @@ export type RoundBtnType = {
 export type RoundImageAndTextProps = {
     title: string;
     image: string;
+    imagePosition?: "object-left" | "object-right";
     text: RoundTextType[];
     btn?: RoundBtnType[];
+};
+
+export type NumberListItemType = {
+    itemTitle: string;
+    itemText: string[];
+    list?: boolean;
+};
+
+export type NumberListProps = {
+    paddingTop?: boolean;
+    paddingBottom?: boolean;
+    image?: string;
+    title?: string;
+    text?: string[];
+    listTitle: string;
+    list: NumberListItemType[];
+    pdfCard?: {
+        title: string;
+        description?: string;
+        link: string;
+        btnName: string;
+    };
 };
 
 export const servicesData: ServicesProps[] = [
@@ -139,6 +164,48 @@ export const servicesData: ServicesProps[] = [
                         },
                     ],
                 },
+                { type: "cta" },
+                {
+                    type: "numberListSection",
+                    data: {
+                        paddingTop: true,
+                        paddingBottom: true,
+                        image: "/images/choice.jpg",
+                        title: "Комп'ютерна діагностика зору: навіщо проводиться та як проходить процедура",
+                        text: [
+                            "Перед тим, як вибрати відповідний метод корекції порушень зору, важливо пройти детальне обстеження. ",
+                            "Одним із найбільш ефективних і щадних способів сьогодні вважається комп'ютерна діагностика.",
+                            "Цей метод забезпечує точну оцінку стану зорової системи без болючих відчуттів і займає мінімум часу.",
+                        ],
+                        listTitle: "Як проходить комп'ютерна діагностика зору",
+                        list: [
+                            {
+                                itemTitle:
+                                    "Запис на прийом та підготовка до діагностики",
+                                itemText: [
+                                    "Записатись на діагностику зору можна всього за кілька хвилин телефоном або онлайн на сайті.",
+                                    "Спеціальної підготовки не потрібно, але якщо носите м’які контактні лінзи, зніміть їх з вечора (рекомендовано за 12 годин до візиту). Окуляри необхідно взяти з собою для перевірки, а також офтальмологічні обстеження, які проходили раніше – лікар подивиться в динаміці, що змінилося за останній період. Бажано бути не за кермом, тому що буде незначний зоровий дискомфорт деякий час (зір поблизу буде не чітким).",
+                                ],
+                            },
+                            {
+                                itemTitle: "Комп’ютерна діагностика зору",
+                                itemText: [
+                                    "Саме обстеження відбувається швидко та комфортно. Використовуються прецизійні прилади, мікроскопічні методи візуалізації та адаптовані діагностичні тести, які лікар підбирає залежно від конкретної клінічної ситуації.",
+                                    "Тривалість діагностики складає 2-2,5 години. Один із найважливіших етапів обстеження — перевірка гостроти зору. Для цього пацієнт читає знаки або літери на таблицях, що розташовані на різних відстанях. Такі тести допомагають точно визначити ступінь порушення та правильно підібрати лінзи чи окуляри.",
+                                    "У ряді випадків лікар може використовувати краплі для розширення зіниць. Це необхідно, щоб тимчасово виключити вплив акомодаційної функції ока та отримати точніші дані при дослідженні очного дна.",
+                                ],
+                            },
+                            {
+                                itemTitle:
+                                    "Висновок за результатами обстеження",
+                                itemText: [
+                                    "Після проходження діагностики ви отримаєте офіційний протокол із оцінкою всіх параметрів зору та очного здоров'я. Лікар надасть рекомендації щодо подальших дій — від профілактики до конкретного плану лікування.",
+                                    "Якщо планується хірургічне втручання, то його обговорення стане ключовою частиною консультації. Усі важливі питання слід поставити та прояснити до моменту операції, щоб ухвалити виважене рішення.",
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         en: {
@@ -220,6 +287,48 @@ export const servicesData: ServicesProps[] = [
                             // ],
                         },
                     ],
+                },
+                { type: "cta" },
+                {
+                    type: "numberListSection",
+                    data: {
+                        paddingTop: true,
+                        paddingBottom: true,
+                        image: "/images/choice.jpg",
+                        title: "Computer Vision Diagnostics: Why It’s Done and How the Procedure Works",
+                        text: [
+                            "Before choosing the appropriate method of vision correction, it’s important to undergo a detailed examination.",
+                            "One of the most effective and gentle methods today is considered to be computer-based eye diagnostics.",
+                            "This method provides an accurate assessment of the visual system’s condition without any pain and takes minimal time.",
+                        ],
+                        listTitle: "How Computer Vision Diagnostics Works",
+                        list: [
+                            {
+                                itemTitle:
+                                    "Booking an Appointment and Preparing for the Diagnostics",
+                                itemText: [
+                                    "You can schedule an eye diagnostics appointment in just a few minutes by phone or online through the website.",
+                                    "No special preparation is required, but if you wear soft contact lenses, remove them the night before (it’s recommended to do so at least 12 hours before your visit). Bring your glasses for testing, as well as any previous ophthalmologic reports — the doctor will assess changes over time. It’s advisable not to drive afterward, as there may be slight visual discomfort for a short period (near vision may become blurry).",
+                                ],
+                            },
+                            {
+                                itemTitle:
+                                    "Computer Vision Diagnostics Procedure",
+                                itemText: [
+                                    "The examination itself is quick and comfortable. Precision instruments, microscopic visualization methods, and adaptive diagnostic tests are used, selected by the doctor depending on the specific clinical situation.",
+                                    "The diagnostics take about 2–2.5 hours. One of the key stages of the examination is visual acuity testing. The patient reads symbols or letters on charts placed at different distances. These tests help accurately determine the degree of impairment and select the correct lenses or glasses.",
+                                    "In some cases, the doctor may use eye drops to dilate the pupils. This is necessary to temporarily eliminate the effect of eye accommodation and obtain more accurate data when examining the retina.",
+                                ],
+                            },
+                            {
+                                itemTitle: "Results and Conclusions",
+                                itemText: [
+                                    "After the diagnostics, you will receive an official report with an assessment of all visual parameters and eye health. The doctor will provide recommendations for further actions — from prevention to a specific treatment plan.",
+                                    "If surgical intervention is planned, discussing it will be a key part of the consultation. All important questions should be clarified before the operation to make an informed decision.",
+                                ],
+                            },
+                        ],
+                    },
                 },
             ],
         },
@@ -303,6 +412,50 @@ export const servicesData: ServicesProps[] = [
                         },
                     ],
                 },
+                { type: "cta" },
+                {
+                    type: "numberListSection",
+                    data: {
+                        paddingTop: true,
+                        paddingBottom: true,
+                        image: "/images/choice.jpg",
+                        title: "Компьютерная диагностика зрения: зачем проводится и как проходит процедура",
+                        text: [
+                            "Перед тем как выбрать подходящий метод коррекции зрения, важно пройти детальное обследование.",
+                            "Одним из наиболее эффективных и щадящих методов сегодня считается компьютерная диагностика.",
+                            "Этот метод обеспечивает точную оценку состояния зрительной системы без болезненных ощущений и занимает минимум времени.",
+                        ],
+                        listTitle:
+                            "Как проходит компьютерная диагностика зрения",
+                        list: [
+                            {
+                                itemTitle:
+                                    "Запись на прием и подготовка к диагностике",
+                                itemText: [
+                                    "Записаться на диагностику зрения можно всего за несколько минут по телефону или онлайн на сайте.",
+                                    "Специальная подготовка не требуется, но если вы носите мягкие контактные линзы — снимите их накануне вечером (рекомендуется за 12 часов до визита). Очки необходимо взять с собой для проверки, а также результаты предыдущих офтальмологических обследований — врач посмотрит в динамике, что изменилось за последний период. Желательно не быть за рулем, так как некоторое время после процедуры может наблюдаться легкий зрительный дискомфорт (близкое зрение будет слегка размытым).",
+                                ],
+                            },
+                            {
+                                itemTitle:
+                                    "Процесс компьютерной диагностики зрения",
+                                itemText: [
+                                    "Сама диагностика проходит быстро и комфортно. Используются прецизионные приборы, микроскопические методы визуализации и адаптированные диагностические тесты, которые врач подбирает в зависимости от конкретной клинической ситуации.",
+                                    "Продолжительность диагностики составляет 2–2,5 часа. Один из важнейших этапов обследования — проверка остроты зрения. Для этого пациент читает знаки или буквы на таблицах, расположенных на разных расстояниях. Такие тесты помогают точно определить степень нарушения и правильно подобрать линзы или очки.",
+                                    "В некоторых случаях врач может использовать капли для расширения зрачков. Это необходимо, чтобы временно исключить влияние аккомодационной функции глаза и получить более точные данные при исследовании глазного дна.",
+                                ],
+                            },
+                            {
+                                itemTitle:
+                                    "Заключение по результатам обследования",
+                                itemText: [
+                                    "После диагностики вы получите официальный протокол с оценкой всех параметров зрения и здоровья глаз. Врач предоставит рекомендации по дальнейшим действиям — от профилактики до конкретного плана лечения.",
+                                    "Если планируется хирургическое вмешательство, его обсуждение станет ключевой частью консультации. Все важные вопросы следует задать и прояснить до момента операции, чтобы принять взвешенное решение.",
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
     },
@@ -327,9 +480,34 @@ export const servicesData: ServicesProps[] = [
                         textDown: "успішних \nвилучень катаракти",
                     },
                 },
+                {
+                    type: "roundImageAndTextSection",
+                    data: [
+                        {
+                            title: "Що таке катаракта?",
+                            image: "/images/cataract-round.jpg",
+                            imagePosition: "object-left",
+                            text: [
+                                {
+                                    content: [
+                                        "Катаракта – це захворювання, при якому порушується прозорість кришталика, що призводить до зниження гостроти зору.",
+                                        "Простіше кажучи, помутніння кришталика. При цьому його структура стає більш щільною, що створює певні труднощі при видаленні.",
+                                        "Виявити катаракту на стадії неможливо без офтальмологічного огляду. Видимих симптомів на ранній стадії взагалі немає. З розвитком захворювання погіршується зір: пацієнт починає бачити предмети нечітко, немов вони перебувають у тумані, підвищується чутливість при погляді яскраве світло, погіршується нічний зір, послаблюється колірне сприйняття.",
+                                    ],
+                                },
+                            ],
+                            btn: [
+                                {
+                                    btnName: "читати про катаракту",
+                                    btnLink: "/tsiny",
+                                    btnSecondary: true,
+                                },
+                            ],
+                        },
+                    ],
+                },
             ],
         },
-
         en: {
             textMain:
                 "Surgical treatment of cataracts, strabismus, keratoconus and other ophthalmological pathologies.",
@@ -346,6 +524,32 @@ export const servicesData: ServicesProps[] = [
                         textUp: "500 k+",
                         textDown: "successful \ncataract removals",
                     },
+                },
+                {
+                    type: "roundImageAndTextSection",
+                    data: [
+                        {
+                            title: "What is Cataract?",
+                            image: "/images/cataract-round.jpg",
+                            imagePosition: "object-left",
+                            text: [
+                                {
+                                    content: [
+                                        "A cataract is a condition in which the transparency of the eye’s lens is impaired, leading to decreased visual acuity.",
+                                        "Simply put, it’s a clouding of the lens. Its structure becomes denser, which creates certain difficulties during removal.",
+                                        "It is impossible to detect a cataract in its early stage without an ophthalmologic examination. There are no visible symptoms at first. As the disease progresses, vision deteriorates: objects appear blurry, as if seen through a fog; sensitivity to bright light increases; night vision worsens; and color perception becomes weaker.",
+                                    ],
+                                },
+                            ],
+                            btn: [
+                                {
+                                    btnName: "read about cataract",
+                                    btnLink: "/tsiny",
+                                    btnSecondary: true,
+                                },
+                            ],
+                        },
+                    ],
                 },
             ],
         },
@@ -365,6 +569,32 @@ export const servicesData: ServicesProps[] = [
                         textUp: "500 тыс+",
                         textDown: "успешных \nудалений катаракты",
                     },
+                },
+                {
+                    type: "roundImageAndTextSection",
+                    data: [
+                        {
+                            title: "Что такое катаракта?",
+                            image: "/images/cataract-round.jpg",
+                            imagePosition: "object-left",
+                            text: [
+                                {
+                                    content: [
+                                        "Катаракта — это заболевание, при котором нарушается прозрачность хрусталика глаза, что приводит к снижению остроты зрения.",
+                                        "Проще говоря, это помутнение хрусталика. Его структура становится более плотной, что создает определенные трудности при удалении.",
+                                        "Обнаружить катаракту на ранней стадии невозможно без офтальмологического осмотра. На начальном этапе видимых симптомов нет. По мере развития заболевания зрение ухудшается: предметы становятся размытыми, будто окутаны туманом; повышается чувствительность к яркому свету; ухудшается ночное зрение и ослабляется восприятие цветов.",
+                                    ],
+                                },
+                            ],
+                            btn: [
+                                {
+                                    btnName: "читать о катаракте",
+                                    btnLink: "/tsiny",
+                                    btnSecondary: true,
+                                },
+                            ],
+                        },
+                    ],
                 },
             ],
         },
@@ -419,6 +649,43 @@ export const servicesData: ServicesProps[] = [
                         image: "/images/lazer-preview.jpg",
                         textUp: "1 млн",
                         textDown: "проведено \nлазерних корекцій",
+                    },
+                },
+                {
+                    type: "numberListSection",
+                    data: {
+                        paddingTop: false,
+                        paddingBottom: true,
+                        listTitle: "Як відбувається лазерна корекція?",
+                        list: [
+                            {
+                                itemTitle: "Діагностика зору",
+                                itemText: [
+                                    "Комплексне обстеження зору дає змогу досвідченому лікарю оцінити стан вашої зорової системи, поставити точний діагноз, підібрати найбільш ефективну методику та спрогнозувати результат. Тривалість обстеження 1,5 – 2 години.",
+                                ],
+                            },
+                            {
+                                itemTitle: "лазерна корекція",
+                                itemText: [
+                                    "Підготовка, корекція та післяопераційний огляд займає, в середньому, 2-2,5 години. В операційній ви проведете 15-20 хвилин, а лазерний вплив триває всього 20-60 секунд. Процес безпечний і безболісний, повністю під контролем нашіх досвідчених фахівців. Використовується місцева крапельна анестезія, без уколів. Лікар озвучує кожен свій рух. Після огляду прооперованого ока ви повернетеся додому. Ми надамо необхідний пакет медикаментів і контакт лікаря для цілодобового зв’язку. Можна провести лазерну корекцію відразу після обстеження (узгодьте цей пункт під час запису по телефону!).",
+                                ],
+                            },
+                            {
+                                itemTitle: "контрольний огляд",
+                                list: true,
+                                itemText: [
+                                    "1-й контрольний огляд проводять через 30 хв. після лазерної корекції зору.",
+                                    "2-й контрольний огляд проводять через 1—4 дні після лазерної корекції зору (залежно від методу корекції зору).",
+                                    "3-й контрольний огляд проводять через місяць після лазерної корекції зору (при необхідності).",
+                                ],
+                            },
+                        ],
+                        // pdfCard: {
+                        //     title: "відновлення та догляд за очима після лазерної корекції зору",
+                        //     description: "інструкція",
+                        //     link: "/documents/lazerna-korektsiya-zoru.pdf",
+                        //     btnName: "завантажити",
+                        // },
                     },
                 },
             ],
