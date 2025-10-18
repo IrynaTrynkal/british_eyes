@@ -1,6 +1,8 @@
 import { LocaleType } from "@/types/LocaleType";
 
 import { ServicesProps } from "../assets/servicesData";
+import { AboutCTA } from "../pageAbout/cta/AboutCTA";
+import { NumberListSection } from "./numberListSection/NumberListSection";
 import { Preview } from "./previewSection/Preview";
 import { RoundImageAndTextSection } from "./roundImageAndText/RoundImageAndTextSection";
 
@@ -31,7 +33,15 @@ export const ServicePageContent = ({
                                 data={section.data}
                             />
                         );
-
+                    case "cta":
+                        return <AboutCTA key={index} />;
+                    case "numberListSection":
+                        return (
+                            <NumberListSection
+                                key={index}
+                                data={section.data}
+                            />
+                        );
                     default:
                         return null;
                 }

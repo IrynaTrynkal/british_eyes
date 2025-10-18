@@ -13,6 +13,7 @@ import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/Feedbac
 import { DoctorsServices } from "@/components/someServiceComponents/Doctors/DoctorsServices";
 import { LaserMethods } from "@/components/someServiceComponents/Methods/LaserMethods";
 import { Preview } from "@/components/someServiceComponents/previewSection/Preview";
+import { RoundImageAndTextSection } from "@/components/someServiceComponents/roundImageAndText/RoundImageAndTextSection";
 import { LocaleType } from "@/types/LocaleType";
 
 export default function CataractPage() {
@@ -53,6 +54,11 @@ export default function CataractPage() {
             section => section.type === "preview"
         )?.data ?? null;
 
+    const roundImageAndTextData =
+        serviceData[locale as LocaleType]?.sections?.find(
+            section => section.type === "roundImageAndTextSection"
+        )?.data ?? null;
+
     return (
         <>
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
@@ -63,6 +69,9 @@ export default function CataractPage() {
                 data={methodsSectionText}
                 list={methodsCataractList}
             />
+            {roundImageAndTextData && (
+                <RoundImageAndTextSection data={roundImageAndTextData} />
+            )}
             <DoctorsServices service="likuvannya-katarakti" />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />

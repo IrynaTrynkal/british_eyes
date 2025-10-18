@@ -12,6 +12,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
 import { DoctorsServices } from "@/components/someServiceComponents/Doctors/DoctorsServices";
 import { LaserMethods } from "@/components/someServiceComponents/Methods/LaserMethods";
+import { NumberListSection } from "@/components/someServiceComponents/numberListSection/NumberListSection";
 import { Preview } from "@/components/someServiceComponents/previewSection/Preview";
 import { LocaleType } from "@/types/LocaleType";
 
@@ -55,6 +56,11 @@ export default function LazerPage() {
             section => section.type === "preview"
         )?.data ?? null;
 
+    const numeric =
+        serviceData[locale as LocaleType]?.sections?.find(
+            section => section.type === "numberListSection"
+        )?.data ?? null;
+
     return (
         <>
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
@@ -62,6 +68,7 @@ export default function LazerPage() {
                 <Preview price={serviceData.price} data={previewData} />
             )}
             <LaserMethods data={methodsSectionText} list={methodsLazerList} />
+            {numeric && <NumberListSection data={numeric} />}
             <DoctorsServices service="lazerna-korekcziya-zoru" />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />

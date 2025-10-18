@@ -8,7 +8,7 @@ export const RoundImageAndTextSection = ({
     data: RoundImageAndTextProps[];
 }) => {
     return (
-        <section className="content flex flex-col gap-[60px]">
+        <section className="content tab:pb-12 pc:pb-[120px] flex flex-col gap-[60px] pb-[60px]">
             {data.map((item, index) => (
                 <RoundImageAndTextItem
                     key={index}
