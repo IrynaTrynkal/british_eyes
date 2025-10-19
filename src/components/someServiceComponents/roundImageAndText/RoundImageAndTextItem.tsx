@@ -47,7 +47,7 @@ export const RoundImageAndTextItem = ({
                                     return (
                                         <div key={block.textBeforeList}>
                                             {block.textBeforeList && (
-                                                <p className="pc:text-lg leading-5">
+                                                <p className="pc:text-lg pc:leading-[22px] leading-5">
                                                     {block.textBeforeList}
                                                 </p>
                                             )}
@@ -56,7 +56,7 @@ export const RoundImageAndTextItem = ({
                                                     (item, i) => (
                                                         <li
                                                             key={i}
-                                                            className="pc:text-lg leading-5"
+                                                            className="pc:text-lg pc:leading-[22px] leading-5"
                                                         >
                                                             {item}
                                                         </li>
@@ -84,7 +84,7 @@ export const RoundImageAndTextItem = ({
                                                 (paragraph, i) => (
                                                     <p
                                                         key={i}
-                                                        className="pc:text-lg leading-5"
+                                                        className="pc:text-lg pc:leading-[22px] leading-5"
                                                     >
                                                         {paragraph}
                                                     </p>

@@ -23,7 +23,7 @@ export const Booking = () => {
                     <h2 className="title-section-ivory pc:mb-5 tab:max-w-[560px] pc:max-w-full mx-auto mb-3 max-w-[290px]">
                         {t("bookingTitle")}
                     </h2>
-                    <p className="pc:text-lg text-ivory tab:max-w-[560px] pc:max-w-full mx-auto max-w-[290px] leading-5">
+                    <p className="pc:text-lg pc:leading-[22px] text-ivory tab:max-w-[560px] pc:max-w-full mx-auto max-w-[290px] leading-5">
                         {t("bookingText")}
                     </p>
                 </div>

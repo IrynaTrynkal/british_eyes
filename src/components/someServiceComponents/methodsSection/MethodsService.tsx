@@ -1,23 +1,18 @@
-import { MethodType } from "@/components/assets/aboutData";
-import { MethodsSectionType } from "@/components/assets/servicesData";
-import { MethodCard } from "@/components/pageAbout/methods/MethodCard";
+import { useTranslations } from "next-intl";
+
+import { MethodsSectionProps } from "@/components/assets/servicesData";
 import { GreenText } from "@/components/shared/GreenText";
 
-export const LaserMethods = ({
-    list,
-    data,
-}: {
-    list: MethodType[];
-    data: MethodsSectionType;
-}) => {
+import { MethodServiceCard } from "./MethodServiceCard";
+
+export const MethodsService = ({ data }: { data: MethodsSectionProps }) => {
+    const t = useTranslations("ServicesPage");
     return (
         <section id="methods" className="content pc:pb-30 relative pb-[60px]">
             <div className="prepc:mb-0 mb-6 flex w-full justify-between">
-                {data.subtitle && (
-                    <h3 className="subtitle prepc:absolute prepc:top-0 prepc:left-6 pc:left-12">
-                        {data.subtitle}
-                    </h3>
-                )}
+                <h3 className="subtitle prepc:absolute prepc:top-0 prepc:left-6 pc:left-12">
+                    {t("methodsSubtitle")}
+                </h3>
                 {data.greenText && (
                     <GreenText
                         grey
@@ -33,14 +28,14 @@ export const LaserMethods = ({
                     </h2>
                 )}
                 {data.text && (
-                    <p className="pc:text-lg pc:mx-auto pc:max-w-[611px] leading-5">
+                    <p className="pc:text-lg pc:leading-[22px] pc:mx-auto pc:max-w-[611px] leading-5">
                         {data.text}
                     </p>
                 )}
             </div>
             <div className="tab:flex-row tab:gap-3 prepc:gap-5 flex flex-col gap-2">
-                {list.map(item => (
-                    <MethodCard key={item.data.en.title} data={item} />
+                {data.list.map(item => (
+                    <MethodServiceCard key={item.title} data={item} />
                 ))}
             </div>
         </section>

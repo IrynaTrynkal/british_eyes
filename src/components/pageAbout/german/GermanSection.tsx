@@ -43,7 +43,7 @@ export const GermanSection = () => {
                     {text.map((t, i) => (
                         <p
                             key={i}
-                            className="pc:text-lg prepc:mb-0 mb-2 leading-5"
+                            className="pc:text-lg pc:leading-[22px] prepc:mb-0 mb-2 leading-5"
                         >
                             {t}
                         </p>

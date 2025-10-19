@@ -21,7 +21,7 @@ export const AdvantageCard = ({
                     {title}
                 </h4>
                 <p
-                    className={`pc:text-lg pc:leading-[21.2px] leading-4 ${ind === 5 && "mx-auto text-center"} ${ind === 2 && "backdrop-blur-xs"}`}
+                    className={`pc:text-lg pc:leading-[22px] leading-4 ${ind === 5 && "mx-auto text-center"} ${ind === 2 && "backdrop-blur-xs"}`}
                 >
                     {text}
                 </p>

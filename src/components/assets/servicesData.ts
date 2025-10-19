@@ -6,6 +6,9 @@ export type SectionType =
     | { type: "preview"; data: PreviewProps }
     | { type: "roundImageAndTextSection"; data: RoundImageAndTextProps[] }
     | { type: "numberListSection"; data: NumberListProps }
+    | { type: "methodsSection"; data: MethodsSectionProps }
+    | { type: "greenSliderSection"; data: GreenSliderSectionProps }
+    | { type: "advantages"; data: AdvantageServiceSectionProps }
     | { type: "cta" };
 
 export type ServicesLocaleProps = {
@@ -38,13 +41,26 @@ export type PreviewProps = {
     image?: string;
 };
 
+export type MethodCardProps = {
+    image: string;
+    link: string;
+    title: string;
+    text: string;
+};
+export type MethodsSectionProps = {
+    title: string;
+    text?: string;
+    greenText?: string;
+    list: MethodCardProps[];
+};
+
 export type RoundTextType = {
     list?: boolean;
     textBeforeList?: string;
     greenText?: string;
     content?: string[];
 };
-export type RoundBtnType = {
+export type BtnType = {
     btnName: string;
     btnLink: string;
     btnSecondary?: boolean;
@@ -54,7 +70,7 @@ export type RoundImageAndTextProps = {
     image: string;
     imagePosition?: "object-left" | "object-right";
     text: RoundTextType[];
-    btn?: RoundBtnType[];
+    btn?: BtnType[];
 };
 
 export type NumberListItemType = {
@@ -78,7 +94,45 @@ export type NumberListProps = {
         btnName: string;
     };
 };
+export type TitleTextType = { title: string; text: string };
 
+export type GreenSliderSectionProps = {
+    title: string;
+    text: string;
+    btn?: BtnType;
+    slider: TitleTextType[];
+};
+
+export type AdvantageServiceCardProps =
+    | {
+          title: string;
+          text: string;
+          bgTransparent?: boolean;
+          imageOnly?: never;
+          videoOnly?: never;
+      }
+    | {
+          imageOnly: string;
+          title?: never;
+          text?: never;
+          bgTransparent?: never;
+          videoOnly?: never;
+      }
+    | {
+          videoOnly: string;
+          title?: never;
+          text?: never;
+          bgTransparent?: never;
+          imageOnly?: never;
+      };
+
+export type AdvantageServiceSectionProps = {
+    paddingTop?: boolean;
+    paddingBottom?: boolean;
+    title: string;
+    text: string;
+    list: AdvantageServiceCardProps[];
+};
 export const servicesData: ServicesProps[] = [
     {
         name: servicesList.find(s => s.key === "perevirka-zoru")!,
@@ -206,6 +260,81 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                {
+                    type: "greenSliderSection",
+                    data: {
+                        title: "Комплексне обстеження зору: які \nтести проводять",
+                        text: "Під час діагностики очей виконується ціла низка досліджень, спрямованих на всебічну оцінку стану зорової системи:",
+                        btn: {
+                            btnName: "записатися на прийом",
+                            btnLink: "#booking",
+                        },
+                        slider: [
+                            {
+                                title: "Візіометрія",
+                                text: "Вимірюється гострота зору вдалині з використанням таблиць, що містять символи, цифри або літери. Це базовий тест, з якого починається перевірка зору.",
+                            },
+                            {
+                                title: "Тонометрія",
+                                text: "Вимірюється рівень внутрішньоочного тиску. Його підвищення може свідчити про розвиток глаукоми - одного з найсерйозніших захворювань очей.",
+                            },
+                            {
+                                title: "Рефрактометрія",
+                                text: "За допомогою авторефрактометра визначається заломлююча сила ока. Це дозволяє виявити такі порушення, як міопія, гіперметропія та астигматизм. Результати допомагають підібрати стратегію лікування – від консервативної терапії до лазерної корекції.",
+                            },
+                            {
+                                title: "Біометрія",
+                                text: "Проводиться точний вимір параметрів очного яблука: глибина передньої камери, товщина кришталика, довжина ока та об'єм склоподібного тіла. Процедура безконтактна, займає лічені секунди та виконується на сучасній оптичній техніці. Необхідна, зокрема, під час підбору інтраокулярної лінзи.",
+                            },
+                            {
+                                title: "Пахіметрія",
+                                text: "Сканується товщина рогівки — за допомогою світлового або ультразвукового приладу. Метод необхідний перед виконанням рефракційної хірургії та у реабілітаційний період після неї.",
+                            },
+                            {
+                                title: "Кератотопографія",
+                                text: "Визначається форма та кривизна рогівки шляхом аналізу відображеного зображення. Цей тест дозволяє виявити патології поверхні рогівки та контролювати її стан.",
+                            },
+                            {
+                                title: "Периметрія",
+                                text: "Дослідження поля зору дозволяє визначити, яку частину простору людина охоплює поглядом при нерухомій голові та фіксованому погляді. Метод широко застосовується для діагностики глаукоми, уражень зорового нерва та захворювань сітківки.",
+                            },
+                            {
+                                title: "Біомікроскопія",
+                                text: "Даний метод дає можливість ретельно вивчити передні відділи ока – такі як рогівка, райдужна оболонка, кришталик – з використанням щілинної лампи. Це спеціалізований мікроскоп, який забезпечує високу деталізацію та допомагає виявити навіть незначні зміни у структурі тканин.",
+                            },
+                            {
+                                title: "фундус-лінзою",
+                                text: "За допомогою спеціальної лінзи лікар отримує доступ до сітківки, макулярної зони та судинної системи ока. Це важливий етап у діагностиці офтальмологічних та системних порушень. Процедура проводиться з використанням крапель і зазвичай не викликає дискомфорту завдяки місцевій анестезії.",
+                            },
+                            {
+                                title: "Діоптриметрія",
+                                text: "В рамках цього дослідження визначається оптична сила окулярів, які використовує пацієнт: вимірюються діоптрії, циліндри та інші параметри. Це допомагає оцінити, наскільки ефективно вони коригують зір і чи потрібна заміна чи коригування рецепту.",
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "advantages",
+                    data: {
+                        title: "Переваги комп'ютерного обстеження очей",
+                        text: "У нашій офтальмологічній клініці у Києві діагностика проводиться із застосуванням передових технологій та обладнання, сертифікованого за стандартами ЄС.",
+                        list: [
+                            {
+                                title: "точний діагноз",
+                                text: "Цифрові методи дозволяють максимально точно визначити ключові параметри апарата очей.",
+                            },
+                            {
+                                title: "комплексний підхід",
+                                text: "Цифрові методи дозволяють провести глибоку аналітичну обробку отриманих даних",
+                            },
+                            { videoOnly: "/videos/about-advant.mp4" },
+                            {
+                                title: "індивідуальне лікування",
+                                text: "Цифрові методи дозволяють підібрати персоналізований курс лікування – від класичної терапії до лазерної корекції чи хірургічного втручання.",
+                            },
+                        ],
+                    },
+                },
             ],
         },
         en: {
@@ -326,6 +455,59 @@ export const servicesData: ServicesProps[] = [
                                     "After the diagnostics, you will receive an official report with an assessment of all visual parameters and eye health. The doctor will provide recommendations for further actions — from prevention to a specific treatment plan.",
                                     "If surgical intervention is planned, discussing it will be a key part of the consultation. All important questions should be clarified before the operation to make an informed decision.",
                                 ],
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "greenSliderSection",
+                    data: {
+                        title: "Comprehensive Eye Examination: What Tests Are Performed",
+                        text: "During an eye diagnosis, a number of tests are performed to thoroughly assess the condition of the visual system:",
+                        btn: {
+                            btnName: "make an appointment",
+                            btnLink: "#booking",
+                        },
+                        slider: [
+                            {
+                                title: "Visiometry",
+                                text: "Visual acuity at distance is measured using charts with symbols, numbers, or letters. This is a basic test that starts any vision check-up.",
+                            },
+                            {
+                                title: "Tonometry",
+                                text: "The level of intraocular pressure is measured. Its increase may indicate the development of glaucoma — one of the most serious eye diseases.",
+                            },
+                            {
+                                title: "Refractometry",
+                                text: "An autorefractometer determines the eye’s refractive power. This helps detect such disorders as myopia, hypermetropia, and astigmatism. The results help select the optimal treatment strategy — from conservative therapy to laser correction.",
+                            },
+                            {
+                                title: "Biometry",
+                                text: "Precise measurements of the eyeball parameters are performed: anterior chamber depth, lens thickness, eye length, and vitreous body volume. The procedure is contactless, takes just a few seconds, and is carried out using modern optical equipment. It is essential, in particular, for intraocular lens selection.",
+                            },
+                            {
+                                title: "Pachymetry",
+                                text: "The corneal thickness is scanned using light or ultrasound devices. This method is necessary before refractive surgery and during the postoperative rehabilitation period.",
+                            },
+                            {
+                                title: "Keratotopography",
+                                text: "The shape and curvature of the cornea are determined by analyzing reflected images. This test helps detect corneal surface pathologies and monitor its condition.",
+                            },
+                            {
+                                title: "Perimetry",
+                                text: "A visual field test determines what part of the space a person can see with a fixed gaze and stationary head. The method is widely used to diagnose glaucoma, optic nerve damage, and retinal diseases.",
+                            },
+                            {
+                                title: "Biomicroscopy",
+                                text: "This method allows for a detailed examination of the anterior parts of the eye — such as the cornea, iris, and lens — using a slit lamp. This specialized microscope provides high detail and helps detect even minor tissue structure changes.",
+                            },
+                            {
+                                title: "Fundus Lens",
+                                text: "Using a special lens, the doctor gains access to the retina, macular area, and vascular system of the eye. This is an important stage in diagnosing ophthalmic and systemic disorders. The procedure is performed with eye drops and usually causes no discomfort thanks to local anesthesia.",
+                            },
+                            {
+                                title: "Dioptrometry",
+                                text: "This test determines the optical power of the glasses the patient uses: diopters, cylinders, and other parameters are measured. It helps evaluate how effectively they correct vision and whether a replacement or prescription adjustment is needed.",
                             },
                         ],
                     },
@@ -456,6 +638,59 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                {
+                    type: "greenSliderSection",
+                    data: {
+                        title: "Комплексное обследование зрения: какие тесты проводят",
+                        text: "Во время диагностики глаз выполняется целый ряд исследований, направленных на всестороннюю оценку состояния зрительной системы:",
+                        btn: {
+                            btnName: "записаться на приём",
+                            btnLink: "#booking",
+                        },
+                        slider: [
+                            {
+                                title: "Визиометрия",
+                                text: "Измеряется острота зрения вдаль с помощью таблиц, содержащих символы, цифры или буквы. Это базовый тест, с которого начинается проверка зрения.",
+                            },
+                            {
+                                title: "Тонометрия",
+                                text: "Измеряется уровень внутриглазного давления. Его повышение может указывать на развитие глаукомы — одного из самых серьёзных заболеваний глаз.",
+                            },
+                            {
+                                title: "Рефрактометрия",
+                                text: "С помощью авторефрактометра определяется преломляющая сила глаза. Это позволяет выявить такие нарушения, как миопия, гиперметропия и астигматизм. Результаты помогают подобрать стратегию лечения — от консервативной терапии до лазерной коррекции.",
+                            },
+                            {
+                                title: "Биометрия",
+                                text: "Проводится точное измерение параметров глазного яблока: глубина передней камеры, толщина хрусталика, длина глаза и объём стекловидного тела. Процедура бесконтактная, занимает считанные секунды и выполняется на современной оптической технике. Необходима, в частности, при подборе интраокулярной линзы.",
+                            },
+                            {
+                                title: "Пахиметрия",
+                                text: "Сканируется толщина роговицы — с помощью светового или ультразвукового прибора. Метод необходим перед проведением рефракционной хирургии и в реабилитационный период после неё.",
+                            },
+                            {
+                                title: "Кератотопография",
+                                text: "Определяются форма и кривизна роговицы путём анализа отражённого изображения. Этот тест позволяет выявить патологии поверхности роговицы и контролировать её состояние.",
+                            },
+                            {
+                                title: "Периметрия",
+                                text: "Исследование поля зрения позволяет определить, какую часть пространства человек охватывает взглядом при неподвижной голове и фиксированном взоре. Метод широко применяется для диагностики глаукомы, поражений зрительного нерва и заболеваний сетчатки.",
+                            },
+                            {
+                                title: "Биомикроскопия",
+                                text: "Данный метод позволяет тщательно изучить передние отделы глаза — такие как роговица, радужка и хрусталик — с помощью щелевой лампы. Это специализированный микроскоп, обеспечивающий высокую детализацию и помогающий выявить даже незначительные изменения в структуре тканей.",
+                            },
+                            {
+                                title: "Фундус линзой",
+                                text: "С помощью специальной линзы врач получает доступ к сетчатке, макулярной зоне и сосудистой системе глаза. Это важный этап диагностики офтальмологических и системных нарушений. Процедура проводится с использованием капель и обычно не вызывает дискомфорта благодаря местной анестезии.",
+                            },
+                            {
+                                title: "Диоптриметрия",
+                                text: "В рамках этого исследования определяется оптическая сила очков, которые использует пациент: измеряются диоптрии, цилиндры и другие параметры. Это помогает оценить, насколько эффективно они корректируют зрение и нужна ли замена или корректировка рецепта.",
+                            },
+                        ],
+                    },
+                },
             ],
         },
     },
@@ -478,6 +713,27 @@ export const servicesData: ServicesProps[] = [
                         image: "/images/cataract-preview.jpg",
                         textUp: "500 тис+",
                         textDown: "успішних \nвилучень катаракти",
+                    },
+                },
+                {
+                    type: "methodsSection",
+                    data: {
+                        title: "Революційні технології лікування катаракти — тільки в нашій клініці",
+                        text: "Ми використовуємо найпередовішу методику факоемульсифікації катаракти — «Водний потік», яка вважається «золотим стандартом» в сучасній офтальмології.",
+                        list: [
+                            {
+                                image: "/images/iq-5-minute.jpg",
+                                link: "likuvannya-katarakti/iq-5-minutes",
+                                title: "iq-5-minutes",
+                                text: "Це безшовне видалення в складних випадках і обов’язкова імплантація інтраокулярної лінзи.",
+                            },
+                            {
+                                image: "/images/live.jpg",
+                                link: "likuvannya-katarakti/iq-life-3d-vodnij-potik",
+                                title: "iQ-Life 3D «водний потік»",
+                                text: "Це «золотий стандарт» в сучасній офтальмології.",
+                            },
+                        ],
                     },
                 },
                 {
@@ -506,6 +762,28 @@ export const servicesData: ServicesProps[] = [
                         },
                     ],
                 },
+                {
+                    type: "advantages",
+                    data: {
+                        title: "Переваги лікування катаракти в Києві у Британському Офтальмологічному Центрі",
+                        text: "Ви можете бути впевнені в якості послуг, що надаються, так як довіряєте свій зір сучасній клініці",
+                        list: [
+                            {
+                                title: "100% безпеки",
+                                text: "Процедура проходить без болю, без уколів і без швів. Це швидкий, безпечний і комфортний метод, що дозволяє пацієнтам повернутися до звичного життя вже за кілька днів.",
+                            },
+                            {
+                                title: "Досвідчені хірурги",
+                                text: "Видалення катаракти проводять сертифіковані хірурги з міжнародним досвідом не менше 50 000 успішних операцій.",
+                            },
+                            { videoOnly: "/videos/about-advant.mp4" },
+                            {
+                                title: "без обмежень по віку",
+                                text: "Приймаємо пацієнтів від народження до старшого віку.",
+                            },
+                        ],
+                    },
+                },
             ],
         },
         en: {
@@ -523,6 +801,27 @@ export const servicesData: ServicesProps[] = [
                         image: "/images/cataract-preview.jpg",
                         textUp: "500 k+",
                         textDown: "successful \ncataract removals",
+                    },
+                },
+                {
+                    type: "methodsSection",
+                    data: {
+                        title: "Revolutionary cataract treatment technologies — exclusively in our clinic",
+                        text: "We use the most advanced phacoemulsification technique — the 'Water Flow', which is considered the 'gold standard' in modern ophthalmology.",
+                        list: [
+                            {
+                                image: "/images/iq-5-minute.jpg",
+                                link: "likuvannya-katarakti/iq-5-minutes",
+                                title: "iq-5-minutes",
+                                text: "This is sutureless removal in complex cases with mandatory intraocular lens implantation.",
+                            },
+                            {
+                                image: "/images/live.jpg",
+                                link: "likuvannya-katarakti/iq-life-3d-vodnij-potik",
+                                title: "iQ-Life 3D «Water Flow»",
+                                text: "This is the «gold standard» in modern ophthalmology.",
+                            },
+                        ],
                     },
                 },
                 {
@@ -551,6 +850,28 @@ export const servicesData: ServicesProps[] = [
                         },
                     ],
                 },
+                {
+                    type: "advantages",
+                    data: {
+                        title: "Advantages of cataract treatment in Kyiv at the British Ophthalmological Center",
+                        text: "You can be confident in the quality of the services provided, as you are entrusting your vision to a modern clinic.",
+                        list: [
+                            {
+                                title: "100% safety",
+                                text: "The procedure is performed without pain, injections, or stitches. It’s a fast, safe, and comfortable method that allows patients to return to their normal lives within just a few days.",
+                            },
+                            {
+                                title: "Experienced surgeons",
+                                text: "Cataract removal is performed by certified surgeons with international experience and more than 50,000 successful surgeries.",
+                            },
+                            { videoOnly: "/videos/about-advant.mp4" },
+                            {
+                                title: "No age restrictions",
+                                text: "We accept patients from birth to senior age.",
+                            },
+                        ],
+                    },
+                },
             ],
         },
         ru: {
@@ -568,6 +889,27 @@ export const servicesData: ServicesProps[] = [
                         image: "/images/cataract-preview.jpg",
                         textUp: "500 тыс+",
                         textDown: "успешных \nудалений катаракты",
+                    },
+                },
+                {
+                    type: "methodsSection",
+                    data: {
+                        title: "Революционные технологии лечения катаракты — только в нашей клинике",
+                        text: "Мы используем передовую методику факоэмульсификации катаракты — «Водный поток», которая считается «золотым стандартом» в современной офтальмологии.",
+                        list: [
+                            {
+                                image: "/images/iq-5-minute.jpg",
+                                link: "likuvannya-katarakti/iq-5-minutes",
+                                title: "iq-5-minutes",
+                                text: "Это бесшовное удаление в сложных случаях и обязательная имплантация интраокулярной линзы.",
+                            },
+                            {
+                                image: "/images/live.jpg",
+                                link: "likuvannya-katarakti/iq-life-3d-vodnij-potik",
+                                title: "iQ-Life 3D «водный поток»",
+                                text: "Это «золотой стандарт» в современной офтальмологии.",
+                            },
+                        ],
                     },
                 },
                 {
@@ -595,6 +937,28 @@ export const servicesData: ServicesProps[] = [
                             ],
                         },
                     ],
+                },
+                {
+                    type: "advantages",
+                    data: {
+                        title: "Преимущества лечения катаракты в Киеве в Британском Офтальмологическом Центре",
+                        text: "Вы можете быть уверены в качестве предоставляемых услуг, ведь доверяете своё зрение современной клинике.",
+                        list: [
+                            {
+                                title: "100% безопасность",
+                                text: "Процедура проходит без боли, без уколов и без швов. Это быстрый, безопасный и комфортный метод, который позволяет пациентам вернуться к привычной жизни уже через несколько дней.",
+                            },
+                            {
+                                title: "Опытные хирурги",
+                                text: "Удаление катаракты выполняют сертифицированные хирурги с международным опытом и более чем 50 000 успешных операций.",
+                            },
+                            { videoOnly: "/videos/about-advant.mp4" },
+                            {
+                                title: "Без ограничений по возрасту",
+                                text: "Мы принимаем пациентов от рождения и до пожилого возраста.",
+                            },
+                        ],
+                    },
                 },
             ],
         },
@@ -652,6 +1016,29 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 {
+                    type: "methodsSection",
+                    data: {
+                        title: "Унікальна технологія холодної лазерної корекції — тільки в нашій клініці",
+                        text: "Лише у нас застосовується холодний метод лазерної корекції зору, що забезпечує максимальну безпеку для ваших очей.",
+                        greenText:
+                            "Для тих, хто вибирає найкраще і не готовий до компромісу",
+                        list: [
+                            {
+                                image: "/images/eagle.jpg",
+                                link: "lazerna-korekcziya-zoru/iq-lasik-oxygen-3d",
+                                title: "iQ-LASIK Oxygen 3D",
+                                text: "Сучасна і безпечна методика поліпшення зору рефракційним лазером.",
+                            },
+                            {
+                                image: "/images/lasek.png",
+                                link: "lazerna-korekcziya-zoru/sportlife-lasik",
+                                title: "SportLine LASEK",
+                                text: "Це «золотий стандарт» в сучасній офтальмології.",
+                            },
+                        ],
+                    },
+                },
+                {
                     type: "numberListSection",
                     data: {
                         paddingTop: false,
@@ -688,6 +1075,29 @@ export const servicesData: ServicesProps[] = [
                         // },
                     },
                 },
+                {
+                    type: "advantages",
+                    data: {
+                        title: "Переваги лазерної корекції зору в Києві в Британському Офтальмологічному Центрі",
+                        text: "Ви можете бути впевнені в якості послуг, що надаються, так як довіряєте свій зір сучасній клініці",
+                        paddingBottom: false,
+                        list: [
+                            {
+                                title: "100% безпеки",
+                                text: "Технологія та безпека цієї методики дають пацієнтам швидкий результат і здатність бачити світ у всіх його барвах без додаткових засобів – окулярів і контактних лінз.",
+                            },
+                            {
+                                title: "Без порушення ритму життя",
+                                text: "Не потрібно йти у відпустку, вже через кілька днів після лазерної корекції допускаються нормальні навантаження на очі.",
+                            },
+                            { imageOnly: "/images/safety3.jpg" },
+                            {
+                                title: "стабільний результат",
+                                text: "Ефект від лазерної корекції не змінюється роками, якщо на нього не вплинуть  природні вікові зміни, супутні захворювання чи травми.",
+                            },
+                        ],
+                    },
+                },
             ],
         },
         en: {
@@ -707,6 +1117,84 @@ export const servicesData: ServicesProps[] = [
                         textDown: "laser corrections \nperformed",
                     },
                 },
+                {
+                    type: "methodsSection",
+                    data: {
+                        title: "Unique cold laser correction technology — only in our clinic",
+                        text: "Only we use the cold laser vision correction method, ensuring maximum safety for your eyes.",
+                        greenText:
+                            "For those who choose the best and accept no compromise",
+
+                        list: [
+                            {
+                                image: "/images/eagle.jpg",
+                                link: "lazerna-korekcziya-zoru/iq-lasik-oxygen-3d",
+                                title: "iQ-LASIK Oxygen 3D",
+                                text: "A modern and safe method of improving vision using a refractive laser.",
+                            },
+                            {
+                                image: "/images/lasek.png",
+                                link: "lazerna-korekcziya-zoru/sportlife-lasik",
+                                title: "SportLine LASEK",
+                                text: "This is the «gold standard» in modern ophthalmology.",
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "numberListSection",
+                    data: {
+                        paddingTop: false,
+                        paddingBottom: true,
+                        listTitle: "How Does Laser Vision Correction Work?",
+                        list: [
+                            {
+                                itemTitle: "Vision Diagnostics",
+                                itemText: [
+                                    "A comprehensive eye examination allows an experienced doctor to assess the condition of your visual system, make an accurate diagnosis, choose the most effective method, and predict the result. The examination lasts 1.5–2 hours.",
+                                ],
+                            },
+                            {
+                                itemTitle: "Laser Correction",
+                                itemText: [
+                                    "Preparation, correction, and postoperative examination take on average 2–2.5 hours. You’ll spend 15–20 minutes in the operating room, while the laser exposure itself lasts only 20–60 seconds. The process is safe and painless, fully controlled by our experienced specialists. Local drop anesthesia is used — no injections. The doctor explains each step during the procedure. After the postoperative eye check, you will return home. We will provide you with the necessary medication package and a contact number for 24/7 communication with your doctor. Laser correction can be performed immediately after the examination (please confirm this when scheduling your appointment!).",
+                                ],
+                            },
+                            {
+                                itemTitle: "Follow-Up Examination",
+                                list: true,
+                                itemText: [
+                                    "1st follow-up examination — 30 minutes after laser vision correction.",
+                                    "2nd follow-up examination — 1–4 days after laser vision correction (depending on the correction method).",
+                                    "3rd follow-up examination — one month after laser vision correction (if necessary).",
+                                ],
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "advantages",
+                    data: {
+                        title: "Advantages of Laser Vision Correction in Kyiv at the British Ophthalmology Center",
+                        text: "You can be confident in the quality of the services provided, as you entrust your vision to a modern clinic.",
+                        paddingBottom: false,
+                        list: [
+                            {
+                                title: "100% Safety",
+                                text: "The technology and safety of this method give patients quick results and the ability to see the world in all its colors without additional means — glasses or contact lenses.",
+                            },
+                            {
+                                title: "No Disruption to Daily Life",
+                                text: "There’s no need to take a vacation — just a few days after laser correction, normal eye strain is allowed.",
+                            },
+                            { imageOnly: "/images/safety3.jpg" },
+                            {
+                                title: "Stable Result",
+                                text: "The effect of laser correction remains for years unless affected by natural age-related changes, accompanying diseases, or injuries.",
+                            },
+                        ],
+                    },
+                },
             ],
         },
         ru: {
@@ -724,6 +1212,83 @@ export const servicesData: ServicesProps[] = [
                         image: "/images/lazer-preview.jpg",
                         textUp: "1 млн",
                         textDown: "проведено \nлазерных коррекций",
+                    },
+                },
+                {
+                    type: "methodsSection",
+                    data: {
+                        title: "Уникальная технология холодной лазерной коррекции – только в нашей клинике",
+                        text: "Только у нас применяется холодный метод лазерной коррекции зрения, обеспечивающий максимальную безопасность для ваших глаз.",
+                        greenText:
+                            "Для тех, кто выбирает лучшее и не готов к компромиссам",
+                        list: [
+                            {
+                                image: "/images/eagle.jpg",
+                                link: "lazerna-korekcziya-zoru/iq-lasik-oxygen-3d",
+                                title: "iQ-LASIK Oxygen 3D",
+                                text: "Современная и безопасная методика улучшения зрения с помощью рефракционного лазера.",
+                            },
+                            {
+                                image: "/images/lasek.png",
+                                link: "lazerna-korekcziya-zoru/sportlife-lasik",
+                                title: "SportLine LASEK",
+                                text: "Это «золотой стандарт» в современной офтальмологии.",
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "numberListSection",
+                    data: {
+                        paddingTop: false,
+                        paddingBottom: true,
+                        listTitle: "Как проходит лазерная коррекция зрения?",
+                        list: [
+                            {
+                                itemTitle: "Диагностика зрения",
+                                itemText: [
+                                    "Комплексное обследование зрения позволяет опытному врачу оценить состояние вашей зрительной системы, поставить точный диагноз, подобрать наиболее эффективную методику и спрогнозировать результат. Продолжительность обследования 1,5–2 часа.",
+                                ],
+                            },
+                            {
+                                itemTitle: "Лазерная коррекция",
+                                itemText: [
+                                    "Подготовка, коррекция и послеоперационный осмотр занимают в среднем 2–2,5 часа. В операционной вы проведёте 15–20 минут, а воздействие лазера длится всего 20–60 секунд. Процесс безопасен и безболезнен, полностью под контролем наших опытных специалистов. Используется местная капельная анестезия, без уколов. Врач комментирует каждый свой шаг. После осмотра прооперированного глаза вы возвращаетесь домой. Мы предоставим необходимый набор медикаментов и контакт врача для круглосуточной связи. Лазерную коррекцию можно провести сразу после обследования (уточните этот момент при записи по телефону!).",
+                                ],
+                            },
+                            {
+                                itemTitle: "Контрольный осмотр",
+                                list: true,
+                                itemText: [
+                                    "1-й контрольный осмотр проводится через 30 минут после лазерной коррекции зрения.",
+                                    "2-й контрольный осмотр проводится через 1–4 дня после лазерной коррекции зрения (в зависимости от метода коррекции).",
+                                    "3-й контрольный осмотр проводится через месяц после лазерной коррекции зрения (при необходимости).",
+                                ],
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "advantages",
+                    data: {
+                        title: "Преимущества лазерной коррекции зрения в Киеве в Британском Офтальмологическом Центре",
+                        text: "Вы можете быть уверены в качестве предоставляемых услуг, так как доверяете своё зрение современной клинике.",
+                        paddingBottom: false,
+                        list: [
+                            {
+                                title: "100% безопасность",
+                                text: "Технология и безопасность этой методики обеспечивают пациентам быстрый результат и возможность видеть мир во всех его красках без дополнительных средств — очков и контактных линз.",
+                            },
+                            {
+                                title: "Без нарушения привычного ритма жизни",
+                                text: "Не нужно уходить в отпуск — уже через несколько дней после лазерной коррекции допускаются обычные нагрузки на глаза.",
+                            },
+                            { imageOnly: "/images/safety3.jpg" },
+                            {
+                                title: "Стабильный результат",
+                                text: "Эффект от лазерной коррекции сохраняется годами, если на него не повлияют естественные возрастные изменения, сопутствующие заболевания или травмы.",
+                            },
+                        ],
                     },
                 },
             ],
@@ -878,52 +1443,6 @@ export const servicesData: ServicesProps[] = [
         ru: {
             textMain:
                 "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
-        },
-    },
-];
-
-export type MethodsSectionType = {
-    title: string;
-    text?: string;
-    subtitle?: string;
-    greenText?: string;
-};
-
-export const methodsLazerList: MethodType[] = [
-    {
-        image: "/images/eagle.jpg",
-        link: "lazerna-korekcziya-zoru/iq-lasik-oxygen-3d",
-        data: {
-            uk: {
-                title: "iQ-LASIK Oxygen 3D",
-                text: "Сучасна і безпечна методика поліпшення зору рефракційним лазером.",
-            },
-            ru: {
-                title: "iQ-LASIK Oxygen 3D",
-                text: "Современная и безопасная методика улучшения зрения с помощью рефракционного лазера.",
-            },
-            en: {
-                title: "iQ-LASIK Oxygen 3D",
-                text: "A modern and safe method of improving vision using a refractive laser.",
-            },
-        },
-    },
-    {
-        image: "/images/lasek.png",
-        link: "lazerna-korekcziya-zoru/sportlife-lasik",
-        data: {
-            uk: {
-                title: "SportLine LASEK",
-                text: "Це «золотий стандарт» в сучасній офтальмології.",
-            },
-            ru: {
-                title: "SportLine LASEK",
-                text: "Это «золотой стандарт» в современной офтальмологии.",
-            },
-            en: {
-                title: "SportLine LASEK",
-                text: "This is the «gold standard» in modern ophthalmology.",
-            },
         },
     },
 ];

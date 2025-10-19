@@ -33,7 +33,7 @@ export const AdvantageAboutCardTab = ({
                             {title}
                         </h4>
                         <p
-                            className={`pc:text-lg pc:leading-[21.2px] leading-4 ${ind === 5 && "mx-auto text-center"} `}
+                            className={`pc:text-lg pc:leading-[22px] leading-4 ${ind === 5 && "mx-auto text-center"} `}
                         >
                             {text}
                         </p>
