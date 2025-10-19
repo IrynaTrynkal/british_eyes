@@ -47,7 +47,7 @@ export const FeedbackSection = ({
                     <h2 className="title-section pc:mr-[60px] tab:max-w-[560px] tab:mb-5 mb-3 max-w-[440px]">
                         {t("feedbacksTitle")}
                     </h2>
-                    <p className="tab:block pc:text-lg tab:mb-0 mb-5 hidden leading-5">
+                    <p className="tab:block pc:text-lg pc:leading-[22px] tab:mb-0 mb-5 hidden leading-5">
                         {t("feedbacksText")}
                     </p>
                 </div>
@@ -64,7 +64,7 @@ export const FeedbackSection = ({
                         name={t("feedbacksBtn")}
                     />
                 </div>
-                <p className="tab:hidden pc:text-lg mb-5 leading-5">
+                <p className="tab:hidden pc:text-lg pc:leading-[22px] mb-5 leading-5">
                     {t("feedbacksText")}
                 </p>
             </div>

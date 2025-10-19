@@ -41,7 +41,7 @@ export const Doctors = () => {
                     <h2 className="title-section-ivory tab:max-w-[560px] tab:mb-0 mb-3 max-w-[440px]">
                         {t("doctorsTitle")}
                     </h2>
-                    <p className="tab:hidden pc:text-lg text-ivory mb-5 leading-5">
+                    <p className="tab:hidden pc:text-lg text-ivory pc:leading-[22px] mb-5 leading-5">
                         {t("doctorsText")}
                     </p>
                 </div>

@@ -55,10 +55,10 @@ export const AboutMain = () => {
                 <div className="tab:w-[65%] pc:w-[49%] tab:max-w-[810px]">
                     <div className="pc:flex pc:gap-[100px] pc:mb-[92px]">
                         <div className="pc:w-[52%]">
-                            <p className="pc:text-lg pc:mb-4 mb-3 leading-5">
+                            <p className="pc:text-lg pc:mb-4 pc:leading-[22px] mb-3 leading-5">
                                 {t("aboutText1")}
                             </p>
-                            <p className="pc:text-lg pc:mb-0 mb-6 leading-5">
+                            <p className="pc:text-lg pc:mb-0 pc:leading-[22px] mb-6 leading-5">
                                 {t("aboutText2")}
                             </p>
                         </div>

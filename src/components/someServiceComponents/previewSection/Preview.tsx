@@ -64,7 +64,10 @@ export const Preview = ({
                     {data.text && (
                         <div className="prepc:mb-0 prepc:flex-row prepc:gap-4 pc:gap-6 mb-8 flex flex-col gap-2">
                             {data.text.map((item, index) => (
-                                <p key={index} className="pc:text-lg leading-5">
+                                <p
+                                    key={index}
+                                    className="pc:text-lg pc:leading-[22px] leading-5"
+                                >
                                     {item}
                                 </p>
                             ))}

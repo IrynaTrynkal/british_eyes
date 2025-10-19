@@ -24,7 +24,7 @@ export const Methods = () => {
                 <h2 className="title-section prepc:mb-7 tab:max-w-[560px] prepc:max-w-full mb-6 max-w-[440px]">
                     {t("methodsTitle")}
                 </h2>
-                <p className="pc:text-lg pc:mx-auto pc:max-w-[611px] leading-5">
+                <p className="pc:text-lg pc:leading-[22px] pc:mx-auto pc:max-w-[611px] leading-5">
                     {t("methodsText")}
                 </p>
             </div>

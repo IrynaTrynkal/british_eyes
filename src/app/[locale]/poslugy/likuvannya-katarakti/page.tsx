@@ -1,19 +1,14 @@
 import { notFound } from "next/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
-import {
-    methodsCataractList,
-    servicesData,
-} from "@/components/assets/servicesData";
+import { servicesData } from "@/components/assets/servicesData";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
 import { DoctorsServices } from "@/components/someServiceComponents/Doctors/DoctorsServices";
-import { LaserMethods } from "@/components/someServiceComponents/Methods/LaserMethods";
-import { Preview } from "@/components/someServiceComponents/previewSection/Preview";
-import { RoundImageAndTextSection } from "@/components/someServiceComponents/roundImageAndText/RoundImageAndTextSection";
+import { ServicePageContent } from "@/components/someServiceComponents/ServicePage";
 import { LocaleType } from "@/types/LocaleType";
 
 export default function CataractPage() {
@@ -36,42 +31,21 @@ export default function CataractPage() {
         fb => fb.service === displayedService.key
     );
     const locale = useLocale();
-    const t = useTranslations("AboutPage");
-    const tSer = useTranslations("ServicesPage");
-    const methodsSectionText = {
-        title: tSer("cataractMethodsTitle"),
-        subtitle: t("methodsSubtitle"),
-        text: tSer("cataractMethodsText"),
-    };
+
     const serviceData = servicesData.find(
         service => service.name.key === displayedService.key
     );
     if (!serviceData) {
         notFound();
     }
-    const previewData =
-        serviceData[locale as LocaleType]?.sections?.find(
-            section => section.type === "preview"
-        )?.data ?? null;
-
-    const roundImageAndTextData =
-        serviceData[locale as LocaleType]?.sections?.find(
-            section => section.type === "roundImageAndTextSection"
-        )?.data ?? null;
 
     return (
         <>
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
-            {previewData && (
-                <Preview price={serviceData.price} data={previewData} />
-            )}
-            <LaserMethods
-                data={methodsSectionText}
-                list={methodsCataractList}
+            <ServicePageContent
+                locale={locale as LocaleType}
+                serviceData={serviceData}
             />
-            {roundImageAndTextData && (
-                <RoundImageAndTextSection data={roundImageAndTextData} />
-            )}
             <DoctorsServices service="likuvannya-katarakti" />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />

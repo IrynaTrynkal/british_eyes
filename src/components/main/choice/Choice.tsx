@@ -19,10 +19,10 @@ export const Choice = () => {
                     height={743}
                     className="tab:hidden mb-5 rounded-sm"
                 />
-                <p className="pc:text-lg tab:max-w-[434px] pc:mb-[14px] mb-2 leading-5">
+                <p className="pc:text-lg pc:leading-[22px] tab:max-w-[434px] pc:mb-[14px] mb-2 leading-5">
                     {t("choiceText1")}
                 </p>
-                <p className="pc:text-lg tab:max-w-[434px] pc:mb-7 mb-3 leading-5">
+                <p className="pc:text-lg pc:leading-[22px] tab:max-w-[434px] pc:mb-7 mb-3 leading-5">
                     {t("choiceText2")}
                 </p>
                 <div className="pc:flex pc:gap-5">

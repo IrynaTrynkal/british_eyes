@@ -13,7 +13,7 @@ export const Advantages = () => {
             <h2 className="title-section tab:max-w-[800px] pc:max-w-[890px] tab:mx-auto tab:text-center mb-6">
                 {t("advantagesTitle")}
             </h2>
-            <p className="tab:max-w-[663px] pc:text-lg tab:mx-auto tab:text-center tab:mb-10 mb-6 leading-5">
+            <p className="tab:max-w-[663px] pc:text-lg pc:leading-[22px] tab:mx-auto tab:text-center tab:mb-10 mb-6 leading-5">
                 {t("advantagesText")}
             </p>
             <AdvantagesSlider />

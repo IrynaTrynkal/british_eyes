@@ -34,7 +34,7 @@ export const DoctorsServices = ({ service }: { service: ServicesKeyType }) => {
                     <h2 className="title-section-ivory tab:max-w-[560px] tab:mb-0 mb-3 max-w-[440px] whitespace-pre-line">
                         {t("doctorsTitle")}
                     </h2>
-                    <p className="tab:hidden pc:text-lg text-ivory mb-5 leading-5">
+                    <p className="tab:hidden pc:text-lg pc:leading-[22px] text-ivory mb-5 leading-5">
                         {t("doctorsText")}
                     </p>
                 </div>
@@ -47,7 +47,7 @@ export const DoctorsServices = ({ service }: { service: ServicesKeyType }) => {
             </div>
 
             <div className="tab:flex tab:flex-row-reverse tab:gap-4 pc:gap-5 tab:justify-between relative">
-                <p className="pc:text-lg tab:w-[28%] pc:max-w-[23.5%] text-ivory tab:text-justify tab:block pc:leading-[22px] pc:mb-[66px] mb-5 hidden leading-5">
+                <p className="pc:text-lg pc:leading-[22px] tab:w-[28%] pc:max-w-[23.5%] text-ivory tab:text-justify tab:block pc:mb-[66px] mb-5 hidden leading-5">
                     {t("doctorsText")}
                 </p>
                 <div className="tab:max-w-[71%] pc:max-w-[76%] tab:mx-0 mx-auto max-w-[540px]">

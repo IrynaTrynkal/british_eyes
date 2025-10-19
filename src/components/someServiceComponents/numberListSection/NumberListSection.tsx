@@ -46,7 +46,7 @@ export const NumberListSection = ({ data }: { data: NumberListProps }) => {
                                 {data.text.map((paragraph, i) => (
                                     <p
                                         key={i}
-                                        className="pc:text-lg break-inside-avoid leading-5"
+                                        className="pc:text-lg pc:leading-[22px] break-inside-avoid leading-5"
                                     >
                                         {paragraph}
                                     </p>

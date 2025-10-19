@@ -19,7 +19,10 @@ export const NumberListItem = ({
             {item.list ? (
                 <ul className="ml-4 list-disc">
                     {item.itemText.map((listItem, i) => (
-                        <li key={i} className="pc:text-lg leading-5">
+                        <li
+                            key={i}
+                            className="pc:text-lg pc:leading-[22px] leading-5"
+                        >
                             {listItem}
                         </li>
                     ))}
@@ -27,7 +30,10 @@ export const NumberListItem = ({
             ) : (
                 <div className="tab:gap-2 prepc:gap-3 flex flex-col gap-1">
                     {item.itemText.map((listItem, i) => (
-                        <p key={i} className="pc:text-lg leading-5">
+                        <p
+                            key={i}
+                            className="pc:text-lg pc:leading-[22px] leading-5"
+                        >
                             {listItem}
                         </p>
                     ))}

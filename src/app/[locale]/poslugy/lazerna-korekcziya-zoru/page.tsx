@@ -1,19 +1,14 @@
 import { notFound } from "next/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
-import {
-    methodsLazerList,
-    servicesData,
-} from "@/components/assets/servicesData";
+import { servicesData } from "@/components/assets/servicesData";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
 import { DoctorsServices } from "@/components/someServiceComponents/Doctors/DoctorsServices";
-import { LaserMethods } from "@/components/someServiceComponents/Methods/LaserMethods";
-import { NumberListSection } from "@/components/someServiceComponents/numberListSection/NumberListSection";
-import { Preview } from "@/components/someServiceComponents/previewSection/Preview";
+import { ServicePageContent } from "@/components/someServiceComponents/ServicePage";
 import { LocaleType } from "@/types/LocaleType";
 
 export default function LazerPage() {
@@ -36,14 +31,7 @@ export default function LazerPage() {
         fb => fb.service === displayedService.key
     );
     const locale = useLocale();
-    const t = useTranslations("AboutPage");
-    const tSer = useTranslations("ServicesPage");
-    const methodsSectionText = {
-        title: tSer("lazerCorectionMethodsTitle"),
-        subtitle: t("methodsSubtitle"),
-        greenText: t("methodsGreen"),
-        text: t("methodsText"),
-    };
+
     const serviceData = servicesData.find(
         service => service.name.key === displayedService.key
     );
@@ -51,24 +39,13 @@ export default function LazerPage() {
         notFound();
     }
 
-    const previewData =
-        serviceData[locale as LocaleType]?.sections?.find(
-            section => section.type === "preview"
-        )?.data ?? null;
-
-    const numeric =
-        serviceData[locale as LocaleType]?.sections?.find(
-            section => section.type === "numberListSection"
-        )?.data ?? null;
-
     return (
         <>
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
-            {previewData && (
-                <Preview price={serviceData.price} data={previewData} />
-            )}
-            <LaserMethods data={methodsSectionText} list={methodsLazerList} />
-            {numeric && <NumberListSection data={numeric} />}
+            <ServicePageContent
+                locale={locale as LocaleType}
+                serviceData={serviceData}
+            />
             <DoctorsServices service="lazerna-korekcziya-zoru" />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
