@@ -216,5 +216,8 @@
         "findOutPriceBtn": "дізнатись ціну",
         "preveiwSubtitle": "про послугу",
         "advantages": "переваги"
+    },
+    "PricePage": {
+        "title": "Ціни"
     }
 }

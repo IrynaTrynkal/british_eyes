@@ -216,5 +216,8 @@
         "findOutPriceBtn": "find out the price",
         "preveiwSubtitle": "about the service",
         "advantages": "advantages"
+    },
+    "PricePage": {
+        "title": "Prices"
     }
 }
