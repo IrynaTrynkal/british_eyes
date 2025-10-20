@@ -11,7 +11,7 @@ export const HeroPrice = ({
 }) => {
     const t = useTranslations("PricePage");
     return (
-        <section className="content pt-6">
+        <section className="content prepc:pt-[60px] pt-6">
             <div className="green-gradient prepc:rounded-lg tab:flex tab:items-center tab:gap-6 prepc:gap-[60px] prepc:px-5 prepc:py-8 rounded p-3">
                 <h1 className="title-h1 tab:w-[22%] prepc:w-[24%] text-ivory border-ivory tab:pt-3 tab:border-b-0 tab:border-r tab:mb-0 mb-3 border-b pb-3 uppercase">
                     {t("title")}
