@@ -218,6 +218,16 @@
         "advantages": "advantages"
     },
     "PricePage": {
-        "title": "Prices"
+        "title": "Prices",
+        "paymentTitle": "Payment in installments",
+        "paymentText": "We strive to make our services more accessible. Now you have the option to pay for your treatment in installments, without extra financial burden.",
+        "paymentBtn": "learn more",
+        "giftTitle": "Gift certificate",
+        "giftText": "In our center you can buy a great gift for family, friends and colleagues",
+        "moreAboutTheService": "more about the service",
+        "service": "service",
+        "price": "Price in UAH",
+        "newTechnology": "New technologies",
+        "specialPrice": "Special price"
     }
 }

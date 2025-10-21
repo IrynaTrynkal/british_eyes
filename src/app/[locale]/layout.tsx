@@ -72,7 +72,7 @@ export default async function RootLayout({
                     className={`${oswald.variable} ${arimo.variable} flex min-h-screen flex-col antialiased`}
                 >
                     <Header />
-                    <main className="flex-1">\ {children}</main>
+                    <main className="flex-1">{children}</main>
                     <Footer />
                 </body>
             </NextIntlClientProvider>
