@@ -10,7 +10,7 @@ import { SliderGiftPayment } from "./SliderGiftPayment";
 export const PriceList = () => {
     const locale = useLocale();
     return (
-        <section className="tab:px-6 prepc:flex prepc:justify-between prepc:items-start prepc:pt-[68px] prepc:pb-[120px] relative pt-6 pb-[60px] pl-4">
+        <section className="tab:px-6 pc:px-12 prepc:flex prepc:justify-between prepc:items-start prepc:pt-[68px] prepc:pb-[120px] relative pt-6 pb-[60px] pl-4">
             <SliderGiftPayment />
             <div className="tab:flex prepc:flex-col tab:justify-center tab:mb-8 prepc:mb-0 prepc:sticky prepc:top-24 tab:gap-3 prepc:w-[24%] prepc:gap-10 pc:gap-[60px] hidden">
                 <GiftPayment />
