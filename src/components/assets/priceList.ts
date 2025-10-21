@@ -11,6 +11,7 @@ export type PriceItemType = {
     discountPrice?: number;
     initialСost?: boolean;
     new?: boolean;
+    specialPrice?: boolean;
     data?: {
         uk: {
             name: string;
@@ -156,6 +157,7 @@ export const priceList: PriceBlockType[] = [
                 price: 20950,
                 discountPrice: 14950,
                 new: true,
+                specialPrice: true,
                 data: {
                     uk: {
                         name: "Фоторефракційна кератектомія (PRK) по стандартній програмі - одне око",
@@ -172,6 +174,7 @@ export const priceList: PriceBlockType[] = [
                 price: 20950,
                 discountPrice: 14950,
                 new: true,
+                specialPrice: true,
                 data: {
                     uk: {
                         name: "Фототерапевтична кератектомія (PТK) За спортивною номограмою - одне око",
@@ -369,6 +372,7 @@ export const priceList: PriceBlockType[] = [
             {
                 price: 2350,
                 discountPrice: 950,
+                specialPrice: true,
                 data: {
                     uk: {
                         name: "Діагностика та консультація",
@@ -399,6 +403,7 @@ export const priceList: PriceBlockType[] = [
             {
                 price: 5200,
                 discountPrice: 3500,
+                specialPrice: true,
                 data: {
                     uk: {
                         name: "Лікування IPL-терапіяи",
@@ -495,7 +500,7 @@ export const priceList: PriceBlockType[] = [
                         name: "Surgical Treatment of Strabismus",
                         description: [
                             {
-                                text: "‘Adjustable Sutures’ Method",
+                                text: "«Adjustable Sutures» Method",
                             },
                         ],
                     },

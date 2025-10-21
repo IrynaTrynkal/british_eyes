@@ -2,6 +2,7 @@ import { useLocale } from "next-intl";
 
 import { priceList } from "@/components/assets/priceList";
 import { HeroPrice } from "@/components/pagePrice/HeroPrice";
+import { PriceList } from "@/components/pagePrice/PriceList";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { LocaleType } from "@/types/LocaleType";
@@ -19,7 +20,7 @@ export default function PricesPage() {
                 breadcrumbsList={breadcrumb}
             />
             <HeroPrice list={titlesList} />
-
+            <PriceList />
             <Booking />
         </>
     );
