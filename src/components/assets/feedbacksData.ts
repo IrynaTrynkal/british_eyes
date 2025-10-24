@@ -3405,21 +3405,6 @@ export const feedbacksList: FeedbackType[] = [
     },
     {
         service: "refrakczijna-lensektomiya",
-        uk: {
-            name: "Марочкіна Світлана Володимирівна",
-            text: "Я, Марочкіна Світлана Володимирівна, зробила операцію по заміні кришталиків. \nДякую команді лікарів Британського офтальмологічного центру. \nЛікарі повернули мені можливість жити яскраво, потужно, отримати повноцінний зір – це, як отримати надможливості. Світ навколо заграв новими фарбами.",
-        },
-        ru: {
-            name: "Марочкина Светлана Владимировна",
-            text: "Я, Марочкина Светлана Владимировна, сделала операцию по замене хрусталиков. \nБлагодарю команду врачей Британского офтальмологического центра. \nВрачи вернули мне возможность жить ярко, полноценно, получить полноценное зрение – это как обрести сверхспособности. Мир вокруг заиграл новыми красками.",
-        },
-        en: {
-            name: "Marochkina Svitlana Volodymyrivna",
-            text: "I, Marochkina Svitlana Volodymyrivna, had lens replacement surgery. \nMany thanks to the team of doctors at the British Ophthalmology Center. \nThe doctors gave me back the opportunity to live brightly and fully, to gain complete vision – it feels like gaining superpowers. The world around me has come alive with new colors.",
-        },
-    },
-    {
-        service: "refrakczijna-lensektomiya",
         photo: "/feedbacks/perepiliczya-v.s.jpg",
         uk: {
             name: "Перепелиця Валентина Степанівна",
