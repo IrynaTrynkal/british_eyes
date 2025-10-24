@@ -35,6 +35,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
     const feedbackList = feedbacksList.filter(
         fb => fb.service === displayedService.key
     );
+
+    const showedFeedbacks =
+        feedbackList.length > 0 ? feedbackList : feedbacksList;
     const serviceData = servicesData.find(
         service => service.name.key === displayedService.key
     );
@@ -49,9 +52,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 locale={locale as LocaleType}
                 serviceData={serviceData}
             />
-            {feedbackList.length > 0 && (
-                <FeedbackSection list={feedbackList} slideAmount={4} />
-            )}
+            <FeedbackSection list={showedFeedbacks} slideAmount={4} />
             <Booking />
         </>
     );

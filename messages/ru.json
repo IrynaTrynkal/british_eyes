@@ -215,7 +215,9 @@
         "methodsSubtitle": "методики",
         "findOutPriceBtn": "узнать цену",
         "preveiwSubtitle": "об услуге",
-        "advantages": "преимущества"
+        "advantages": "преимущества",
+        "priceSubpage": "Цены",
+        "lazerEditionPriceText": "Методика подбирается после обследования, индивидуально для Вас, для получения наилучшего результата"
     },
     "PricePage": {
         "title": "Цены",

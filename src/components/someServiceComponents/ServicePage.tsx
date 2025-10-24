@@ -7,6 +7,7 @@ import { GreenSliderSection } from "./greenSliderSection/GreenSliderSection";
 import { MethodsService } from "./methodsSection/MethodsService";
 import { NumberListSection } from "./numberListSection/NumberListSection";
 import { Preview } from "./previewSection/Preview";
+import { PriceSection } from "./priceSection/PriceSection";
 import { RoundImageAndTextSection } from "./roundImageAndText/RoundImageAndTextSection";
 
 export const ServicePageContent = ({
@@ -62,6 +63,14 @@ export const ServicePageContent = ({
                     case "methodsSection":
                         return (
                             <MethodsService key={index} data={section.data} />
+                        );
+                    case "priceSection":
+                        return (
+                            <PriceSection
+                                key={index}
+                                slug={serviceData.name.key}
+                                data={section.data}
+                            />
                         );
                     default:
                         return null;

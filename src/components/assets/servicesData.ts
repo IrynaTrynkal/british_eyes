@@ -1,4 +1,3 @@
-import { MethodType } from "./aboutData";
 import { ServicesKeyType, servicesList, ServicesListProps } from "./menu";
 import { PriceItemType, priceList } from "./priceList";
 
@@ -9,7 +8,8 @@ export type SectionType =
     | { type: "methodsSection"; data: MethodsSectionProps }
     | { type: "greenSliderSection"; data: GreenSliderSectionProps }
     | { type: "advantages"; data: AdvantageServiceSectionProps }
-    | { type: "cta" };
+    | { type: "cta" }
+    | { type: "priceSection"; data: PriceSectionProps };
 
 export type ServicesLocaleProps = {
     textMain?: string;
@@ -133,6 +133,26 @@ export type AdvantageServiceSectionProps = {
     text: string;
     list: AdvantageServiceCardProps[];
 };
+export type DiscountText = {
+    premiumText?: string; // max 58 characters with spaces
+    title: string;
+    text?: string;
+};
+
+export type DiscountType = {
+    premium?: boolean;
+    icon?: string;
+    bgimage?: string;
+    cost?: number;
+    period?: string;
+    text: DiscountText;
+};
+
+export type PriceSectionProps = {
+    title: string;
+    card?: DiscountType;
+};
+
 export const servicesData: ServicesProps[] = [
     {
         name: servicesList.find(s => s.key === "perevirka-zoru")!,
@@ -335,6 +355,19 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на консультацію та діагностику зору у Києві",
+                        card: {
+                            cost: 950,
+                            period: "15.08.2025",
+                            text: {
+                                title: "Повне комплексне обстеження зору",
+                            },
+                        },
+                    },
+                },
             ],
         },
         en: {
@@ -510,6 +543,19 @@ export const servicesData: ServicesProps[] = [
                                 text: "This test determines the optical power of the glasses the patient uses: diopters, cylinders, and other parameters are measured. It helps evaluate how effectively they correct vision and whether a replacement or prescription adjustment is needed.",
                             },
                         ],
+                    },
+                },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for consultation and vision diagnostics in Kyiv",
+                        card: {
+                            cost: 950,
+                            period: "15.08.2025",
+                            text: {
+                                title: "Full comprehensive eye examination",
+                            },
+                        },
                     },
                 },
             ],
@@ -691,6 +737,19 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на консультацию и диагностику зрения в Киеве",
+                        card: {
+                            cost: 950,
+                            period: "15.08.2025",
+                            text: {
+                                title: "Полное комплексное обследование зрения",
+                            },
+                        },
+                    },
+                },
             ],
         },
     },
@@ -784,6 +843,23 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на видалення катаракти у Києві",
+                        card: {
+                            premium: true,
+                            icon: "/icons/iq-life-white.svg",
+                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
+                            text: {
+                                premiumText:
+                                    "Акція преміальної операції по стандартній ціні",
+                                title: "iQ-Life Живий Зір",
+                                text: "Лікування від катаракти з відновленням зору молодості, без окулярів вдалину і поблизу.",
+                            },
+                        },
+                    },
+                },
             ],
         },
         en: {
@@ -870,6 +946,23 @@ export const servicesData: ServicesProps[] = [
                                 text: "We accept patients from birth to senior age.",
                             },
                         ],
+                    },
+                },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for cataract removal in Kyiv",
+                        card: {
+                            premium: true,
+                            icon: "/icons/iq-life-white.svg",
+                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
+                            text: {
+                                premiumText:
+                                    "Premium transaction promotion at standard price",
+                                title: "iQ-Life Living Vision",
+                                text: "Cataract treatment with restoration of youthful vision, without glasses for distance and near.",
+                            },
+                        },
                     },
                 },
             ],
@@ -960,6 +1053,23 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на удаление катаракты в Киеве",
+                        card: {
+                            premium: true,
+                            icon: "/icons/iq-life-white.svg",
+                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
+                            text: {
+                                premiumText:
+                                    "Акция премиальной сделки по стандартной цене",
+                                title: "iQ-Life Живое Зрение",
+                                text: "Лечение от катаракты с восстановлением зрения молодости, без очков вдаль и поблизости.",
+                            },
+                        },
+                    },
+                },
             ],
         },
     },
@@ -969,14 +1079,38 @@ export const servicesData: ServicesProps[] = [
         uk: {
             textMain:
                 "Ми забезпечуємо ефективний та індивідуальний підхід до усунення неприємних симптомів, щоб повернути комфорт та здоров'я вашим очам.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на лікування синдрому сухого ока у Києві",
+                    },
+                },
+            ],
         },
         en: {
             textMain:
                 "We provide an effective and individual approach to eliminating unpleasant symptoms to restore comfort and health to your eyes.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for dry eye syndrome treatment in Kyiv",
+                    },
+                },
+            ],
         },
         ru: {
             textMain:
                 "Мы обеспечиваем эффективный и индивидуальный подход к устранению неприятных симптомов, чтобы вернуть комфорт и здоровье вашим глазам.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на лечение синдрома сухого глаза в Киеве",
+                    },
+                },
+            ],
         },
     },
     {
@@ -1098,6 +1232,19 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціна лазерної корекції зору у Києві",
+                        card: {
+                            cost: 14950,
+                            period: "15.08.2025",
+                            text: {
+                                title: "Лазерна корекція зору будь-яким методом",
+                            },
+                        },
+                    },
+                },
             ],
         },
         en: {
@@ -1193,6 +1340,19 @@ export const servicesData: ServicesProps[] = [
                                 text: "The effect of laser correction remains for years unless affected by natural age-related changes, accompanying diseases, or injuries.",
                             },
                         ],
+                    },
+                },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Price of laser vision correction in Kyiv",
+                        card: {
+                            cost: 14950,
+                            period: "15.08.2025",
+                            text: {
+                                title: "Laser vision correction by any method",
+                            },
+                        },
                     },
                 },
             ],
@@ -1291,6 +1451,19 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цена лазерной коррекции зрения в Киеве",
+                        card: {
+                            cost: 14950,
+                            period: "15.08.2025",
+                            text: {
+                                title: "Лазерная коррекция зрения любым методом",
+                            },
+                        },
+                    },
+                },
             ],
         },
     },
@@ -1300,6 +1473,14 @@ export const servicesData: ServicesProps[] = [
         uk: {
             textMain:
                 "Сучасні методи виправлення рефракційних порушень відновлення чіткості зору.Провідні дитячі офтальмологи – досвідчені лікарі, які знайдуть підхід до кожної дитини.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цена лазерной коррекции зрения в Киеве",
+                    },
+                },
+            ],
         },
         en: {
             textMain:
@@ -1443,45 +1624,6 @@ export const servicesData: ServicesProps[] = [
         ru: {
             textMain:
                 "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
-        },
-    },
-];
-
-export const methodsCataractList: MethodType[] = [
-    {
-        image: "/images/iq-5-minute.jpg",
-        link: "likuvannya-katarakti/iq-5-minutes",
-        data: {
-            uk: {
-                title: "iq-5-minutes",
-                text: "Це безшовне видалення в складних випадках і обов’язкова імплантація інтраокулярної лінзи.",
-            },
-            ru: {
-                title: "iq-5-minutes",
-                text: "Это бесшовное удаление в сложных случаях и обязательная имплантация интраокулярной линзы.",
-            },
-            en: {
-                title: "iq-5-minutes",
-                text: "This is sutureless removal in complex cases with mandatory intraocular lens implantation.",
-            },
-        },
-    },
-    {
-        image: "/images/live.jpg",
-        link: "likuvannya-katarakti/iq-life-3d-vodnij-potik",
-        data: {
-            uk: {
-                title: "iQ-Life 3D «водний потік»",
-                text: "Це «золотий стандарт» в сучасній офтальмології.",
-            },
-            ru: {
-                title: "iQ-Life 3D «водный поток»",
-                text: "Это «золотой стандарт» в современной офтальмологии.",
-            },
-            en: {
-                title: "iQ-Life 3D «Water Flow»",
-                text: "This is the «gold standard» in modern ophthalmology.",
-            },
         },
     },
 ];
