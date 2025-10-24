@@ -18,9 +18,9 @@ export const Gift = () => {
             <Image
                 src="/images/presents.webp"
                 alt="part image"
-                width={72}
-                height={72}
-                className="absolute right-0 -bottom-3 h-auto w-[180px]"
+                width={384}
+                height={256}
+                className="prepc:w-[260px] prepc:-bottom-5 absolute right-0 -bottom-3 h-auto w-[180px]"
             />
         </div>
     );

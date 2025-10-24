@@ -215,7 +215,9 @@
         "methodsSubtitle": "methods",
         "findOutPriceBtn": "find out the price",
         "preveiwSubtitle": "about the service",
-        "advantages": "advantages"
+        "advantages": "advantages",
+        "priceSubpage": "Prices",
+        "lazerEditionPriceText": "The technique is selected after the examination, individually for you, to obtain the best result"
     },
     "PricePage": {
         "title": "Prices",

@@ -10,31 +10,40 @@ import { IconArrow } from "../shared/icons/IconArrow";
 export const PriceCard = ({
     data,
     locale,
+    someService,
+    className,
 }: {
     data: PriceBlockType;
     locale: LocaleType;
+    someService?: boolean;
+    className?: string;
 }) => {
     const t = useTranslations("PricePage");
     const link = servicesList.find(service => service.key === data.key)?.slug[
         locale
     ];
     return (
-        <div id={data.key} className="tab:pr-0 pr-4">
-            <div className="tab:flex tab:justify-between tab:mb-3">
-                <h2 className="title-section tab:w-[calc(100%-206px)] prepc:w-[calc(100%-229px)] tab:mb-0 mb-3">
-                    {data.title[locale]}
-                </h2>
-                <Link
-                    href={`/poslugy/${link}` as any}
-                    className="group tab:w-[186px] prepc:w-[209px] flex h-10 items-center gap-2"
-                >
-                    <IconArrow className="pc:h-4 pc:w-4 h-4 w-4 transition-all duration-300 group-hover:mr-0 group-hover:translate-x-1" />
-                    <p className="font-oswald prepc:text-base relative text-sm leading-none font-medium uppercase">
-                        {t("moreAboutTheService")}
-                        <span className="absolute -bottom-[2px] left-0 h-[1.5px] w-full origin-right bg-current transition-transform duration-500 ease-in-out group-hover:scale-x-[0.1]" />
-                    </p>
-                </Link>
-            </div>
+        <div
+            id={data.key}
+            className={`${someService ? "" : "tab:pr-0 pr-4"} ${className}`}
+        >
+            {someService ? null : (
+                <div className="tab:flex tab:justify-between tab:mb-3">
+                    <h2 className="title-section tab:w-[calc(100%-206px)] prepc:w-[calc(100%-229px)] tab:mb-0 mb-3">
+                        {data.title[locale]}
+                    </h2>
+                    <Link
+                        href={`/poslugy/${link}` as any}
+                        className="group tab:w-[186px] prepc:w-[209px] flex h-10 items-center gap-2"
+                    >
+                        <IconArrow className="pc:h-4 pc:w-4 h-4 w-4 transition-all duration-300 group-hover:mr-0 group-hover:translate-x-1" />
+                        <p className="font-oswald prepc:text-base relative text-sm leading-none font-medium uppercase">
+                            {t("moreAboutTheService")}
+                            <span className="absolute -bottom-[2px] left-0 h-[1.5px] w-full origin-right bg-current transition-transform duration-500 ease-in-out group-hover:scale-x-[0.1]" />
+                        </p>
+                    </Link>
+                </div>
+            )}
             <div className="border-grey overflow-hidden rounded-lg border">
                 <div className="flex">
                     <p className="green-gradient font-oswald text-ivory prepc:w-[calc(100%-128px)] prepc:text-base prepc:px-5 prepc:py-2 w-[78%] px-2 py-[15px] text-sm leading-none font-medium uppercase">
