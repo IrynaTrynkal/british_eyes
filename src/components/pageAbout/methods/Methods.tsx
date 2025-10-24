@@ -1,12 +1,21 @@
 import { useTranslations } from "next-intl";
 
-import { methodsList } from "@/components/assets/aboutData";
+import { servicesData } from "@/components/assets/servicesData";
 import { GreenText } from "@/components/shared/GreenText";
 
 import { MethodCard } from "./MethodCard";
 
 export const Methods = () => {
     const t = useTranslations("AboutPage");
+    const itemList1 = servicesData
+        .find(item => item.name.key === "lazerna-korekcziya-zoru")
+        ?.uk.sections?.find(item => item.type === "methodsSection")?.data
+        .list[0];
+    const itemList2 = servicesData
+        .find(item => item.name.key === "likuvannya-katarakti")
+        ?.uk.sections?.find(item => item.type === "methodsSection")?.data
+        .list[1];
+    const aboutMethodsList = [itemList1, itemList2];
 
     return (
         <section className="content pc:pb-30 relative pb-[60px]">
@@ -29,9 +38,9 @@ export const Methods = () => {
                 </p>
             </div>
             <div className="tab:flex-row tab:gap-3 prepc:gap-5 flex flex-col gap-2">
-                {methodsList.map(item => (
-                    <MethodCard key={item.data.en.title} data={item} />
-                ))}
+                {aboutMethodsList.map(
+                    item => item && <MethodCard key={item.title} data={item} />
+                )}
             </div>
         </section>
     );

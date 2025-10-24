@@ -1,4 +1,3 @@
-import { MethodType } from "./aboutData";
 import { ServicesKeyType, servicesList, ServicesListProps } from "./menu";
 import { PriceItemType, priceList } from "./priceList";
 
@@ -1617,45 +1616,6 @@ export const servicesData: ServicesProps[] = [
         ru: {
             textMain:
                 "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
-        },
-    },
-];
-
-export const methodsCataractList: MethodType[] = [
-    {
-        image: "/images/iq-5-minute.jpg",
-        link: "likuvannya-katarakti/iq-5-minutes",
-        data: {
-            uk: {
-                title: "iq-5-minutes",
-                text: "Це безшовне видалення в складних випадках і обов’язкова імплантація інтраокулярної лінзи.",
-            },
-            ru: {
-                title: "iq-5-minutes",
-                text: "Это бесшовное удаление в сложных случаях и обязательная имплантация интраокулярной линзы.",
-            },
-            en: {
-                title: "iq-5-minutes",
-                text: "This is sutureless removal in complex cases with mandatory intraocular lens implantation.",
-            },
-        },
-    },
-    {
-        image: "/images/live.jpg",
-        link: "likuvannya-katarakti/iq-life-3d-vodnij-potik",
-        data: {
-            uk: {
-                title: "iQ-Life 3D «водний потік»",
-                text: "Це «золотий стандарт» в сучасній офтальмології.",
-            },
-            ru: {
-                title: "iQ-Life 3D «водный поток»",
-                text: "Это «золотой стандарт» в современной офтальмологии.",
-            },
-            en: {
-                title: "iQ-Life 3D «Water Flow»",
-                text: "This is the «gold standard» in modern ophthalmology.",
-            },
         },
     },
 ];
