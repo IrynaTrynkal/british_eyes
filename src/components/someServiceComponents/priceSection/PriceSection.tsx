@@ -21,6 +21,7 @@ export const PriceSection = ({
 
     const locale = useLocale();
     const priceListData = priceList.find(item => item.key === slug);
+    if (!priceListData && !data.card) return null;
 
     return (
         <section className="content tab:pb-12 pc:pb-[120px] relative pb-[60px]">
