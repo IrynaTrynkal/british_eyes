@@ -49,13 +49,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
     const heroData = serviceData[locale as LocaleType].sections?.find(
         item => item.type === "hero"
     );
-    if (!heroData?.data) {
-        notFound();
-    }
 
     return (
         <>
-            <HeroSomeService data={heroData?.data} />
+            {heroData?.data && <HeroSomeService data={heroData?.data} />}
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
             <ServicePageContent
                 locale={locale as LocaleType}
