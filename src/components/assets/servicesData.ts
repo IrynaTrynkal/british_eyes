@@ -920,6 +920,14 @@ export const servicesData: ServicesProps[] = [
                 "Surgical treatment of cataracts, strabismus, keratoconus and other ophthalmological pathologies.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "cataract treatment",
+                        image: "/images/cataract-hero.jpg",
+                        imgPositionMobile: "right 20% center",
+                    },
+                },
+                {
                     type: "preview",
                     data: {
                         title: "Cataracts in our center are treated with the 'English Water Flow iQ-5 minutes'",
@@ -1025,6 +1033,14 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Хирургическое лечение катаракты, косоглазия, кератоконуса и других офтальмологических патологий.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "лечение катаракты",
+                        image: "/images/cataract-hero.jpg",
+                        imgPositionMobile: "right 20% center",
+                    },
+                },
                 {
                     type: "preview",
                     data: {
@@ -1135,6 +1151,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Ми забезпечуємо ефективний та індивідуальний підхід до усунення неприємних симптомів, щоб повернути комфорт та здоров'я вашим очам.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
