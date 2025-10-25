@@ -9,7 +9,10 @@ export type SectionType =
     | { type: "greenSliderSection"; data: GreenSliderSectionProps }
     | { type: "advantages"; data: AdvantageServiceSectionProps }
     | { type: "cta" }
-    | { type: "priceSection"; data: PriceSectionProps };
+    | { type: "priceSection"; data: PriceSectionProps }
+    | { type: "doctors" }
+    | { type: "giftCTA" }
+    | { type: "hero"; data: HeroSomeServiceProps };
 
 export type ServicesLocaleProps = {
     textMain?: string;
@@ -153,6 +156,16 @@ export type PriceSectionProps = {
     card?: DiscountType;
 };
 
+export type HeroSomeServiceProps = {
+    title: string;
+    text?: string;
+    video?: string;
+    image?: string;
+    adress?: boolean;
+    imgPositionMobile?: string; // наприклад: "calc(50% - 80px) top"
+    imgPositionDesktop?: string;
+};
+
 export const servicesData: ServicesProps[] = [
     {
         name: servicesList.find(s => s.key === "perevirka-zoru")!,
@@ -161,6 +174,15 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Комплексне обстеження та перевірка зору з використанням сучасного обладнання.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "діагностика зору",
+                        text: "Багаторічний досвід наших спеціалістів та сучасне діагностичне обладнання дозволяють виявити будь-які зміни та діагностувати очну патологію.",
+                        image: "/images/perevirka-zoru-hero.jpg",
+                        imgPositionDesktop: "right -200px top -140px",
+                    },
+                },
                 {
                     type: "preview",
                     data: {
@@ -368,12 +390,22 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "giftCTA" },
+                { type: "doctors" },
             ],
         },
         en: {
             textMain:
                 "Comprehensive examination and vision test using modern equipment.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "eye diagnostics",
+                        text: "The extensive experience of our specialists and modern diagnostic equipment allow us to detect any changes and diagnose eye conditions.",
+                        image: "/images/perevirka-zoru-hero.jpg",
+                    },
+                },
                 {
                     type: "preview",
                     data: {
@@ -558,12 +590,22 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "giftCTA" },
+                { type: "doctors" },
             ],
         },
         ru: {
             textMain:
                 "Комплексное обследование и проверка зрения с использованием современного оборудования.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "диагностика зрения",
+                        text: "Многолетний опыт наших специалистов и современное диагностическое оборудование позволяют выявить любые изменения и диагностировать заболевания глаз.",
+                        image: "/images/perevirka-zoru-hero.jpg",
+                    },
+                },
                 {
                     type: "preview",
                     data: {
@@ -750,6 +792,8 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "giftCTA" },
+                { type: "doctors" },
             ],
         },
     },
@@ -761,6 +805,14 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Хірургічне лікування катаракти, косоокості, кератоконуса та інших офтальмологічних патологій.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "лікування катаракти",
+                        image: "/images/cataract-hero.jpg",
+                        imgPositionMobile: "right 20% center",
+                    },
+                },
                 {
                     type: "preview",
                     data: {
@@ -860,6 +912,7 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "doctors" },
             ],
         },
         en: {
@@ -965,6 +1018,7 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "doctors" },
             ],
         },
         ru: {
@@ -1070,6 +1124,7 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "doctors" },
             ],
         },
     },
@@ -1086,6 +1141,7 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціни на лікування синдрому сухого ока у Києві",
                     },
                 },
+                { type: "doctors" },
             ],
         },
         en: {
@@ -1098,6 +1154,7 @@ export const servicesData: ServicesProps[] = [
                         title: "Prices for dry eye syndrome treatment in Kyiv",
                     },
                 },
+                { type: "doctors" },
             ],
         },
         ru: {
@@ -1110,6 +1167,7 @@ export const servicesData: ServicesProps[] = [
                         title: "Цены на лечение синдрома сухого глаза в Киеве",
                     },
                 },
+                { type: "doctors" },
             ],
         },
     },
@@ -1119,12 +1177,39 @@ export const servicesData: ServicesProps[] = [
         price: findPriceItem("vitreoretinalna-hirurgiya")!,
         uk: {
             textMain: "Лікування захворювань сітківки та склоподібного тіла.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на лікування захворювань сітківки та склоподібного тіла в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
             textMain: "Treatment of diseases of the retina and vitreous body.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for treatment of diseases of the retina and vitreous body in Kiev",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
             textMain: "Лечение заболеваний сетчатки и стекловидного тела.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на лечение заболеваний сетчатки и стекловидного тела в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
     {
@@ -1245,6 +1330,7 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "doctors" },
             ],
         },
         en: {
@@ -1355,6 +1441,7 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "doctors" },
             ],
         },
         ru: {
@@ -1464,6 +1551,7 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "doctors" },
             ],
         },
     },
@@ -1473,22 +1561,17 @@ export const servicesData: ServicesProps[] = [
         uk: {
             textMain:
                 "Сучасні методи виправлення рефракційних порушень відновлення чіткості зору.Провідні дитячі офтальмологи – досвідчені лікарі, які знайдуть підхід до кожної дитини.",
-            sections: [
-                {
-                    type: "priceSection",
-                    data: {
-                        title: "Цена лазерной коррекции зрения в Киеве",
-                    },
-                },
-            ],
+            sections: [{ type: "doctors" }],
         },
         en: {
             textMain:
                 "Leading pediatric ophthalmologists are experienced doctors who will find an approach to each child.",
+            sections: [{ type: "doctors" }],
         },
         ru: {
             textMain:
                 "Современные методы устранения рефракционных нарушений восстановления четкости зрения.Ведущие детские офтальмологи – опытные врачи, которые найдут подход к каждому ребенку.",
+            sections: [{ type: "doctors" }],
         },
     },
     {
@@ -1497,14 +1580,41 @@ export const servicesData: ServicesProps[] = [
         uk: {
             textMain:
                 "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціна на лікування кератоконусу в Києві",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
             textMain:
                 "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Price for keratoconus treatment in Kyiv",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
             textMain:
                 "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цена на лечение кератоконуса в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
     {
@@ -1512,15 +1622,42 @@ export const servicesData: ServicesProps[] = [
         price: findPriceItem("refrakczijna-lensektomiya")!,
         uk: {
             textMain:
-                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+                "BiVision RLE (рефракційна ленсектомія) — ефективний метод корекції пресбіопії (вікова далекозорість).",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціна на рефракційну ленсектомію в Києві",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
             textMain:
-                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+                "BiVision RLE (refractive lensectomy) is an effective method of correcting presbyopia (age-related farsightedness).",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Price for refractive lensectomy in Kyiv",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
             textMain:
-                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+                "BiVision RLE (рефракционная ленсектомия) – эффективный метод коррекции пресбиопии (возрастная дальнозоркость).",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цена на рефракционную ленсектомию в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
     {
@@ -1530,15 +1667,42 @@ export const servicesData: ServicesProps[] = [
         price: findPriceItem("lazerne-likuvannya-zahvoryuvan-oka")!,
         uk: {
             textMain:
-                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+                "Можливість чітко візуалізувати патологічні зміни дозволяє лікарю виконувати процедуру гранично точно.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на лазерне лікування захворювань ока в Києві",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
             textMain:
-                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+                "The ability to clearly visualize pathological changes allows the doctor to perform the procedure with extreme precision.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for laser treatment of eye diseases in Kyiv",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
             textMain:
-                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+                "Возможность четко визуализировать патологические изменения позволяет врачу выполнять процедуру предельно точно.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на лазерное лечение заболеваний глаза в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
 
@@ -1548,14 +1712,41 @@ export const servicesData: ServicesProps[] = [
         uk: {
             textMain:
                 "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на інтравітреальні ін'єкції в Києві",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
             textMain:
                 "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for intravitreal injections in Kyiv",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
             textMain:
                 "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на интравитреальные инъекции в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
     {
@@ -1565,15 +1756,42 @@ export const servicesData: ServicesProps[] = [
         price: findPriceItem("hirurgichne-likuvannya-glaukomi")!,
         uk: {
             textMain:
-                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+                "Ми лікуємо всі види глаукоми із застосуванням найсучасніших і ефективних хірургічних методик.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на лікування глаукоми в Києві",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
             textMain:
-                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+                "We treat all types of glaucoma using the most modern and effective surgical techniques.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for glaucoma treatment in Kyiv",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
             textMain:
-                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+                "Мы лечим все виды глаукомы с применением самых современных и эффективных хирургических методик.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на лечение глаукомы в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
     {
@@ -1581,15 +1799,42 @@ export const servicesData: ServicesProps[] = [
         price: findPriceItem("likuvannya-kosookosti")!,
         uk: {
             textMain:
-                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+                "Ми пропонуємо новітні методи діагностики та лікування косоокості, а також закріплення результату.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на лікування косоокості в Києві",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
             textMain:
-                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+                "We offer the latest methods of diagnosing and treating strabismus, as well as consolidating the result.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for strabismus treatment in Kyiv",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
             textMain:
-                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+                "Мы предлагаем новейшие методы диагностики и лечения косоглазия, а также закрепление результата.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на лечение косоглазия в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
     {
@@ -1599,31 +1844,82 @@ export const servicesData: ServicesProps[] = [
         price: findPriceItem("hirurgiya-povik-i-konyunktivi")!,
         uk: {
             textMain:
-                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+                "Хірургія повік і кон’юнктиви (блефаропластика та інші втручання).",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на хірургію повік і кон'юнктиви в Києві",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
             textMain:
-                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+                "Eyelid and conjunctival surgery (blepharoplasty and other interventions).",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for eyelid and conjunctival surgery in Kyiv",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
             textMain:
-                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+                "Хирургия век и конъюнктивы (блефаропластика и другие вмешательства).",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на хирургию век и конъюнктивы в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
     {
         name: servicesList.find(s => s.key === "ksenonoterapiya")!,
         price: findPriceItem("ksenonoterapiya")!,
         uk: {
-            textMain:
-                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+            textMain: "Методика «Янгельські сни».",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на ксенонотерапію в Києві",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
-            textMain:
-                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+            textMain: "«Angel Dreams» Method.",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for xenotherapy in Kyiv",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
-            textMain:
-                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+            textMain: "Методика «Ангельские сны».",
+            sections: [
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на ксенонотерапию в Киеве",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
 ];

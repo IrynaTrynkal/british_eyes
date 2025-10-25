@@ -6,6 +6,7 @@ import { servicesData } from "@/components/assets/servicesData";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
+import { HeroSomeService } from "@/components/someServiceComponents/HeroSomeService";
 import { ServicePageContent } from "@/components/someServiceComponents/ServicePage";
 import { LocaleType } from "@/types/LocaleType";
 
@@ -45,8 +46,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
         notFound();
     }
 
+    const heroData = serviceData[locale as LocaleType].sections?.find(
+        item => item.type === "hero"
+    );
+    if (!heroData?.data) {
+        notFound();
+    }
+
     return (
         <>
+            <HeroSomeService data={heroData?.data} />
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
             <ServicePageContent
                 locale={locale as LocaleType}
