@@ -3,6 +3,8 @@ import { LocaleType } from "@/types/LocaleType";
 import { ServicesProps } from "../assets/servicesData";
 import { AboutCTA } from "../pageAbout/cta/AboutCTA";
 import { AdvantagesService } from "./advantages/AdvantagesService";
+import { DoctorsServices } from "./Doctors/DoctorsServices";
+import { GiftCard } from "./GiftCard";
 import { GreenSliderSection } from "./greenSliderSection/GreenSliderSection";
 import { MethodsService } from "./methodsSection/MethodsService";
 import { NumberListSection } from "./numberListSection/NumberListSection";
@@ -72,6 +74,16 @@ export const ServicePageContent = ({
                                 data={section.data}
                             />
                         );
+                    case "doctors":
+                        return (
+                            <DoctorsServices
+                                key={index}
+                                service={serviceData.name.key}
+                            />
+                        );
+                    case "giftCTA":
+                        return <GiftCard key={index} />;
+
                     default:
                         return null;
                 }

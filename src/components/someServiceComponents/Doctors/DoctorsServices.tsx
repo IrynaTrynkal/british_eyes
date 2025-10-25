@@ -17,6 +17,7 @@ export const DoctorsServices = ({ service }: { service: ServicesKeyType }) => {
     const upText = t.rich("doctorsTextUp", {
         small: chunk => <span className="pc:text-2xl text-sm">{chunk}</span>,
     });
+    if (filteredDoctors.length === 0) return null;
 
     return (
         <section className="green-gradient tab:px-6 pc:px-12 tab:max-w-full tab:pt-10 tab:pb-[42px] relative pt-4 pb-7">
