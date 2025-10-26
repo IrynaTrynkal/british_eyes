@@ -7,6 +7,7 @@ import { servicesData } from "@/components/assets/servicesData";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
+import { FAQService } from "@/components/someServiceComponents/faqSection/FAQService";
 import { HeroSomeService } from "@/components/someServiceComponents/HeroSomeService";
 import { ServicePageContent } from "@/components/someServiceComponents/ServicePage";
 import { LocaleType } from "@/types/LocaleType";
@@ -40,15 +41,15 @@ export default function LazerPage() {
     }
     const heroData = serviceData[locale as LocaleType].sections?.find(
         item => item.type === "hero"
-    );
-    if (!heroData?.data) {
-        notFound();
-    }
+    )?.data;
+
+    const faqList = serviceData[locale as LocaleType].sections?.find(
+        item => item.type === "faq"
+    )?.data;
 
     return (
         <>
-            {" "}
-            <HeroSomeService data={heroData?.data} />
+            {heroData && <HeroSomeService data={heroData} />}
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
             <ServicePageContent
                 locale={locale as LocaleType}
@@ -56,6 +57,9 @@ export default function LazerPage() {
             />
             {feedbackList.length > 0 && (
                 <FeedbackSection list={feedbackList} slideAmount={4} />
+            )}
+            {faqList && faqList.content.length > 0 && (
+                <FAQService faqList={faqList} />
             )}
             <Booking />
         </>
