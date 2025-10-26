@@ -805,6 +805,28 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 {
+                    type: "advantages",
+                    data: {
+                        title: "Advantages of Computerized Eye Examination",
+                        text: "In our ophthalmology clinic in Kyiv, diagnostics are performed using advanced technologies and EU-certified equipment.",
+                        list: [
+                            {
+                                title: "Accurate diagnosis",
+                                text: "Digital methods allow for highly precise determination of key parameters of the visual system.",
+                            },
+                            {
+                                title: "Comprehensive approach",
+                                text: "Digital technologies enable deep analytical processing of the obtained data.",
+                            },
+                            { videoOnly: "/videos/about-advant.mp4" },
+                            {
+                                title: "Individual treatment",
+                                text: "Digital diagnostics help select a personalized treatment plan — from classic therapy to laser correction or surgical intervention.",
+                            },
+                        ],
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for consultation and vision diagnostics in Kyiv",
@@ -1199,6 +1221,28 @@ export const servicesData: ServicesProps[] = [
                             {
                                 title: "Диоптриметрия",
                                 text: "В рамках этого исследования определяется оптическая сила очков, которые использует пациент: измеряются диоптрии, цилиндры и другие параметры. Это помогает оценить, насколько эффективно они корректируют зрение и нужна ли замена или корректировка рецепта.",
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "advantages",
+                    data: {
+                        title: "Преимущества компьютерного обследования глаз",
+                        text: "В нашей офтальмологической клинике в Киеве диагностика проводится с применением передовых технологий и оборудования, сертифицированного по стандартам ЕС.",
+                        list: [
+                            {
+                                title: "Точный диагноз",
+                                text: "Цифровые методы позволяют максимально точно определить ключевые параметры зрительного аппарата.",
+                            },
+                            {
+                                title: "Комплексный подход",
+                                text: "Цифровые технологии обеспечивают глубокую аналитическую обработку полученных данных.",
+                            },
+                            { videoOnly: "/videos/about-advant.mp4" },
+                            {
+                                title: "Индивидуальное лечение",
+                                text: "Цифровая диагностика помогает подобрать персонализированный курс лечения — от классической терапии до лазерной коррекции или хирургического вмешательства.",
                             },
                         ],
                     },

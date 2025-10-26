@@ -36,9 +36,7 @@ export const PriceSection = ({
                 </h2>
             </div>
             <div className="prepc:flex prepc:justify-between prepc:items-start">
-                <div
-                    className={`${data.card ? "prepc:hidden" : "prepc:w-[32%]"}`}
-                >
+                <div className={`${data.card ? "hidden" : "prepc:w-[32%]"}`}>
                     <h2 className="title-section tab:max-w-[700px] pc:max-w-[890px] tab:mx-auto prepc:mx-0 text-left">
                         {data.title}
                     </h2>
