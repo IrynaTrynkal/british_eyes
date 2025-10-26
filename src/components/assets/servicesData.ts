@@ -12,7 +12,8 @@ export type SectionType =
     | { type: "priceSection"; data: PriceSectionProps }
     | { type: "doctors" }
     | { type: "giftCTA" }
-    | { type: "hero"; data: HeroSomeServiceProps };
+    | { type: "hero"; data: HeroSomeServiceProps }
+    | { type: "faq"; data: FAQServiceSectionType };
 
 export type ServicesLocaleProps = {
     textMain?: string;
@@ -167,6 +168,35 @@ export type HeroSomeServiceProps = {
     imgPositionDesktop?: string;
     cataract?: string[];
     lazer?: { listTitle: string; list: string[] };
+};
+
+export type ParagraphAnswer = {
+    type: "text";
+    text: string | TextSegment[];
+    gap?: boolean;
+};
+
+export type ListAnswer = {
+    type: "list";
+    list: (string | TextSegment[])[];
+    gap?: boolean;
+};
+
+export type AnswerType = ParagraphAnswer | ListAnswer;
+
+export type TextSegment = {
+    value: string;
+    bold?: boolean;
+};
+
+export type FAQServiceListType = {
+    question: string;
+    answer: AnswerType[];
+};
+
+export type FAQServiceSectionType = {
+    title: string;
+    content: FAQServiceListType[];
 };
 
 export const servicesData: ServicesProps[] = [
@@ -395,6 +425,203 @@ export const servicesData: ServicesProps[] = [
                 },
                 { type: "giftCTA" },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Часті запитання про перевірку зору",
+                        content: [
+                            {
+                                question:
+                                    "Чому важливо пройти діагностику зору саме у Києві?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Якщо ви прагнете надовго зберегти здоров'я очей та заздалегідь виявити можливі відхилення, рекомендується пройти діагностику у професійній офтальмологічній клініці. Навіть за хорошого самопочуття та відсутності дискомфорту не варто відкладати візит до лікаря — безліч очних захворювань розвиваються непомітно і без симптомів на початкових етапах.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Регулярна діагностика дозволяє:",
+                                    },
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "уникнути розвитку серйозних патологій;",
+                                            "відстежувати динаміку стану очей при носінні оптики або після операцій;",
+                                            "вчасно підібрати лікування за перших ознак порушення.",
+                                        ],
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Не відкладайте турботу про свій зір - запишіться на комп'ютерну діагностику в Києві вже сьогодні.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "які Методи та тести використовуються при діагностиці зору?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Під час обстеження зору у Києві наші офтальмологи застосовують сучасні технології та ефективні діагностичні підходи:",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "list",
+                                        gap: true,
+                                        list: [
+                                            [
+                                                {
+                                                    value: "Візометрія",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– оцінка гостроти зору з використанням спеціальних таблиць із символами.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Тонометрія",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– визначення внутрішньоочного тиску, необхідне раннього виявлення ризику глаукоми.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Рефрактометрія",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– автоматичний аналіз заломлюючої здатності ока, що дозволяє діагностувати міопію, гіперопію та астигматизм.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Біометрія",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– вимір ключових параметрів ока: довжини очного яблука, глибини передньої камери, товщини кришталика.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Пахіметрія",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– визначення товщини рогівки за допомогою світла чи ультразвуку, особливо актуальне перед лазерною корекцією.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Кератотопографія",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– дослідження форми та кривизни рогівки для виявлення її можливих патологій.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Периметрія",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– визначення поля зору, важливе при діагностиці глаукоми, пошкоджень зорового нерва та захворювань сітківки.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Біомікроскопія",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– детальний огляд передньої частини ока під збільшенням із застосуванням щілинної лампи.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Фундус-діагностика",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– дослідження сітківки та судин очного дна за допомогою фундус-лінзи.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Діоптріметрія",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: "– аналіз діоптрій і параметрів окулярів, що вже використовуються для оцінки коректності підібраної оптики.",
+                                                },
+                                            ],
+                                        ],
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Усі методики виконуються з високою точністю, забезпечуючи повну картину стану органів зору та дозволяючи підібрати ефективне лікування.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Навіщо звертатися на перевірку зору до окуліста?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Комп'ютерна діагностика зору у спеціалізованому офтальмологічному центрі – це важливий етап на шляху збереження здоров'я очей. Навіть за відсутності явних симптомів рекомендується регулярно проходити огляд у офтальмолога, особливо тим, хто має генетичну схильність до офтальмологічних захворювань або хто проводить тривалий час за комп'ютером.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Лікар-офтальмолог не обмежується лише зовнішнім оглядом — за потреби він направляє пацієнта на розширену перевірку зору, включаючи комп'ютерні методи аналізу.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Така діагностика дозволяє вчасно виявити проблеми з рефракцією, оцінити внутрішньоочний тиск та виявити ранні ознаки захворювань, наприклад, глаукоми чи катаракти. Якщо ви шукаєте, де пройти професійне обстеження очей у Києві, наша клініка пропонує кваліфікований прийом лікаря та повний спектр сучасних діагностичних процедур.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "яка Вартість діагностики та переваги комплексного підходу?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Багатьох пацієнтів цікавить, скільки коштує комп'ютерна діагностика очей. У нашому центрі ціна перевірки зору залежить від обсягу обстеження та методик, що використовуються. Ми надаємо прозору інформацію щодо кожного етапу — від базової консультації до розширеного обстеження та лазерної діагностики. Ознайомитись з актуальними цінами можна під час запису або по телефону — також у нас регулярно діють знижки та акції.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Повна діагностика очей у нашій клініці включає як стандартні тести, а й сучасні методи діагностики зору. Такий комплексний підхід дозволяє отримати точну картину стану очей, виключити протипоказання до різних видів лікування, включаючи хірургічне втручання та мінімізувати ризики побічних ефектів. Це особливо важливо при плануванні лазерного обстеження очей та подальшої корекції.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чому нас обирають для перевірки зору у Києві?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Наш офтальмологічний центр у Києві отримав визнання пацієнтів за точну діагностику, високий рівень професіоналізму лікарів та уважне ставлення до кожного. Ми пропонуємо приватну клініку із сучасною технічною базою, досвідченою командою та комфортною атмосферою. Багато хто звертається до нас за особистими рекомендаціями, знаючи, що тут можна розраховувати на якісне обстеження та чесну медичну оцінку.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Якщо ви підбираєте клініку для проходження комп'ютерної діагностики зору, де можна отримати точні дані про стан очей, ми готові запропонувати надійний та зручний сервіс. Запишіться на прийом, щоб пройти комплексну перевірку зору без затримок та черг. Ми визначимо оптимальний підхід для вашої ситуації та складемо персональний план подальших кроків.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         en: {
@@ -581,6 +808,28 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 {
+                    type: "advantages",
+                    data: {
+                        title: "Advantages of Computerized Eye Examination",
+                        text: "In our ophthalmology clinic in Kyiv, diagnostics are performed using advanced technologies and EU-certified equipment.",
+                        list: [
+                            {
+                                title: "Accurate diagnosis",
+                                text: "Digital methods allow for highly precise determination of key parameters of the visual system.",
+                            },
+                            {
+                                title: "Comprehensive approach",
+                                text: "Digital technologies enable deep analytical processing of the obtained data.",
+                            },
+                            { videoOnly: "/videos/about-advant.mp4" },
+                            {
+                                title: "Individual treatment",
+                                text: "Digital diagnostics help select a personalized treatment plan — from classic therapy to laser correction or surgical intervention.",
+                            },
+                        ],
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for consultation and vision diagnostics in Kyiv",
@@ -595,6 +844,203 @@ export const servicesData: ServicesProps[] = [
                 },
                 { type: "giftCTA" },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Frequently Asked Questions About Eye Examination",
+                        content: [
+                            {
+                                question:
+                                    "Why is it important to undergo an eye examination in Kyiv?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "If you want to preserve your eye health for a long time and detect possible abnormalities in advance, it is recommended to undergo diagnostics in a professional ophthalmology clinic. Even with good well-being and no discomfort, it is not advisable to postpone a visit to the doctor — many eye diseases develop silently and without symptoms at the early stages.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Regular diagnostics allow you to:",
+                                    },
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "prevent the development of serious pathologies;",
+                                            "monitor the condition of the eyes when wearing optical correction or after surgery;",
+                                            "timely identify the need for treatment at the first signs of impairment.",
+                                        ],
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Don't postpone caring for your vision — book a computer eye examination in Kyiv today.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "What methods and tests are used during vision diagnostics?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "During the eye examination in Kyiv, our ophthalmologists use modern technologies and effective diagnostic approaches:",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "list",
+                                        gap: true,
+                                        list: [
+                                            [
+                                                {
+                                                    value: "Visometry",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – assessment of visual acuity using special symbol charts.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Tonometry",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – measurement of intraocular pressure, necessary for early detection of glaucoma risk.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Refractometry",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – automated analysis of the eye’s refractive power to diagnose myopia, hyperopia, and astigmatism.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Biometry",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – measurement of key ocular parameters: axial length, anterior chamber depth, and lens thickness.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Pachymetry",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – determination of corneal thickness using light or ultrasound, particularly important before laser correction.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Corneal Topography",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – study of the corneal shape and curvature to detect its possible pathologies.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Perimetry",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – field of vision assessment, important for diagnosing glaucoma, optic nerve damage, and retinal diseases.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Biomicroscopy",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – detailed examination of the anterior segment of the eye using a slit lamp.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Fundus Examination",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – examination of the retina and blood vessels using a fundus lens.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Lensometry",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – measurement of lens power and parameters of glasses already in use to verify proper optical correction.",
+                                                },
+                                            ],
+                                        ],
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "All methods are performed with high precision, providing a complete overview of the eye condition and helping to choose the most effective treatment.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Why should you visit an ophthalmologist for an eye check?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Computer diagnostics of vision in a specialized ophthalmology center is a key step in maintaining healthy eyesight. Even without noticeable symptoms, it is advised to visit an ophthalmologist regularly, especially if you have a genetic predisposition to eye diseases or spend long hours at the computer.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "An ophthalmologist does not limit the check-up to an external examination — if necessary, the doctor will recommend advanced diagnostic tests, including computer-based analysis.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Diagnostics help timely detect refractive errors, evaluate intraocular pressure, and identify early signs of diseases such as glaucoma or cataract. If you are looking for a place to undergo a professional eye examination in Kyiv, our clinic offers qualified ophthalmologist consultations and a full range of modern diagnostic procedures.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "What is the cost of diagnostics and what are the advantages of a comprehensive approach?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Many patients are interested in how much computer eye diagnostics cost. In our center, the price of the examination depends on its scope and the diagnostic methods used. We provide transparent information about each stage — from the basic consultation to advanced examinations and laser diagnostics. You can check the latest prices during registration or by phone — we also regularly offer discounts and promotions.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "A comprehensive eye examination in our clinic includes both standard tests and advanced diagnostic technologies. This approach provides an accurate picture of eye health, helps eliminate contraindications for various types of treatment — including surgery — and minimizes the risk of side effects. This is especially important when planning laser diagnostics and further correction.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Why do patients choose us for eye examination in Kyiv?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Our ophthalmology center in Kyiv is trusted for precise diagnostics, highly professional doctors, and personalized patient care. We offer a private clinic with advanced technical facilities, an experienced team, and a comfortable atmosphere. Many come to us through recommendations, knowing that they will receive a high-quality examination and an honest medical opinion.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "If you are looking for a clinic to undergo a computer vision check where you can get accurate data about your eyes, we are ready to provide reliable and convenient service. Book an appointment to have your vision examined comprehensively without delays or queues. We will determine the best approach for your case and prepare a personalized treatment plan.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         ru: {
@@ -783,6 +1229,28 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 {
+                    type: "advantages",
+                    data: {
+                        title: "Преимущества компьютерного обследования глаз",
+                        text: "В нашей офтальмологической клинике в Киеве диагностика проводится с применением передовых технологий и оборудования, сертифицированного по стандартам ЕС.",
+                        list: [
+                            {
+                                title: "Точный диагноз",
+                                text: "Цифровые методы позволяют максимально точно определить ключевые параметры зрительного аппарата.",
+                            },
+                            {
+                                title: "Комплексный подход",
+                                text: "Цифровые технологии обеспечивают глубокую аналитическую обработку полученных данных.",
+                            },
+                            { videoOnly: "/videos/about-advant.mp4" },
+                            {
+                                title: "Индивидуальное лечение",
+                                text: "Цифровая диагностика помогает подобрать персонализированный курс лечения — от классической терапии до лазерной коррекции или хирургического вмешательства.",
+                            },
+                        ],
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Цены на консультацию и диагностику зрения в Киеве",
@@ -797,6 +1265,203 @@ export const servicesData: ServicesProps[] = [
                 },
                 { type: "giftCTA" },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Частые вопросы о проверке зрения",
+                        content: [
+                            {
+                                question:
+                                    "Почему важно пройти диагностику зрения именно в Киеве?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Если вы хотите надолго сохранить здоровье глаз и заранее выявить возможные отклонения, рекомендуется проходить диагностику в профессиональной офтальмологической клинике. Даже при хорошем самочувствии и отсутствии дискомфорта не стоит откладывать визит к врачу — многие глазные заболевания развиваются незаметно и без симптомов на начальных этапах.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Регулярная диагностика позволяет:",
+                                    },
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "избежать развития серьёзных патологий;",
+                                            "отслеживать динамику состояния глаз при ношении оптики или после операций;",
+                                            "вовремя подобрать лечение при первых признаках нарушений.",
+                                        ],
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Не откладывайте заботу о своём зрении — запишитесь на компьютерную диагностику в Киеве уже сегодня.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Какие методы и тесты используются при диагностике зрения?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Во время обследования зрения в Киеве наши офтальмологи используют современные технологии и эффективные диагностические подходы:",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "list",
+                                        gap: true,
+                                        list: [
+                                            [
+                                                {
+                                                    value: "Визометрия",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – оценка остроты зрения с использованием специальных таблиц с символами.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Тонометрия",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – измерение внутриглазного давления, необходимое для раннего выявления риска глаукомы.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Рефрактометрия",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – автоматический анализ преломляющей способности глаза, позволяющий диагностировать миопию, гиперопию и астигматизм.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Биометрия",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – измерение ключевых параметров глаза: длины глазного яблока, глубины передней камеры, толщины хрусталика.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Пахиметрия",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – определение толщины роговицы с помощью света или ультразвука, особенно актуально перед лазерной коррекцией.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Кератотопография",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – исследование формы и кривизны роговицы для выявления возможных её патологий.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Периметрия",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – определение поля зрения, важное при диагностике глаукомы, повреждений зрительного нерва и заболеваний сетчатки.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Биомикроскопия",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – детальный осмотр переднего отдела глаза с увеличением с использованием щелевой лампы.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Фундус-диагностика",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – исследование сетчатки и сосудов глазного дна с помощью фундус-линзы.",
+                                                },
+                                            ],
+                                            [
+                                                {
+                                                    value: "Диоптриметрия",
+                                                    bold: true,
+                                                },
+                                                {
+                                                    value: " – анализ диоптрий и параметров уже используемых очков для оценки правильности подобранной оптики.",
+                                                },
+                                            ],
+                                        ],
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Все методики выполняются с высокой точностью, обеспечивая полную картину состояния органов зрения и позволяя подобрать эффективное лечение.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Зачем обращаться к окулисту для проверки зрения?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Компьютерная диагностика зрения в специализированном офтальмологическом центре — это важный этап сохранения здоровья глаз. Даже при отсутствии явных симптомов рекомендуется регулярно проходить осмотр у офтальмолога, особенно тем, кто имеет генетическую предрасположенность к офтальмологическим заболеваниям или проводит много времени за компьютером.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Врач-офтальмолог не ограничивается только внешним осмотром — при необходимости он направляет пациента на расширенную проверку зрения, включая компьютерные методы анализа.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Такая диагностика позволяет вовремя выявить проблемы рефракции, оценить внутриглазное давление и обнаружить ранние признаки заболеваний, например глаукомы или катаракты. Если вы ищете, где пройти профессиональное обследование глаз в Киеве, наша клиника предлагает квалифицированный приём и полный спектр современных диагностических процедур.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Какова стоимость диагностики и преимущества комплексного подхода?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Многих пациентов интересует, сколько стоит компьютерная диагностика глаз. В нашем центре цена проверки зрения зависит от объёма обследования и используемых методик. Мы предоставляем прозрачную информацию о каждом этапе — от базовой консультации до расширенной диагностики и лазерного обследования. Актуальные цены можно узнать при записи или по телефону — также у нас регулярно действуют скидки и акции.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Полная диагностика глаз в нашей клинике включает как стандартные тесты, так и современные методы диагностики зрения. Такой комплексный подход позволяет получить точную картину состояния глаз, исключить противопоказания к различным видам лечения, включая хирургическое вмешательство, и минимизировать риски побочных эффектов. Это особенно важно при планировании лазерного обследования глаз и последующей коррекции.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Почему нас выбирают для проверки зрения в Киеве?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Наш офтальмологический центр в Киеве получил признание пациентов за точную диагностику, высокий уровень профессионализма врачей и внимательное отношение к каждому человеку. Мы предлагаем частную клинику с современной технической базой, опытной командой и комфортной атмосферой. Многие обращаются к нам по личным рекомендациям, зная, что здесь можно рассчитывать на качественное обследование и честную медицинскую оценку.",
+                                        gap: true,
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Если вы выбираете клинику для прохождения компьютерной диагностики зрения, где можно получить точные данные о состоянии глаз, мы готовы предложить надёжный и удобный сервис. Запишитесь на приём, чтобы пройти комплексную проверку зрения без задержек и очередей. Мы определим оптимальный подход к вашей ситуации и составим персональный план дальнейших действий.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
     },

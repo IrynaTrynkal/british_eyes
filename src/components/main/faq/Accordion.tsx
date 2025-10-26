@@ -19,7 +19,7 @@ export function Accordion({ item }: AccordionProps) {
 
     return (
         <li
-            className={`border-grey-70 group tab:px-3 tab:pt-3 tab:pb-2 rounded-md border p-2 transition-all duration-500 hover:border-black ${isAccordionOpen ? "bg-green-10" : "bg-white"}`}
+            className={`border-grey-70 group tab:px-3 tab:pt-3 tab:pb-2 rounded-md border p-2 transition-all duration-500 group-hover:border-black ${isAccordionOpen ? "bg-green-10" : "bg-white"}`}
         >
             <button
                 aria-label="open answer button"
@@ -58,7 +58,7 @@ export function Accordion({ item }: AccordionProps) {
                     return ans.list ? (
                         <ul
                             key={index}
-                            className={`list-inside list-disc ${baseClasses}`}
+                            className={`ml-4 list-outside list-disc ${baseClasses}`}
                         >
                             {(Array.isArray(ans.text)
                                 ? ans.text

@@ -83,7 +83,6 @@ export const ServicePageContent = ({
                         );
                     case "giftCTA":
                         return <GiftCard key={index} />;
-
                     default:
                         return null;
                 }
