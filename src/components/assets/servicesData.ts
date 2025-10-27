@@ -160,11 +160,14 @@ export type PriceSectionProps = {
 export type HeroSomeServiceProps = {
     title: string;
     text?: string;
-    video?: string;
+    videoSmallScreens?: string;
+    videoBigScreens?: string;
     image?: string;
     adress?: boolean;
     imgPositionMobile?: string; // наприклад: "calc(50% - 80px) top"
     imgPositionDesktop?: string;
+    cataract?: string[];
+    lazer?: { listTitle: string; list: string[] };
 };
 
 export type ParagraphAnswer = {
@@ -1476,6 +1479,13 @@ export const servicesData: ServicesProps[] = [
                         title: "лікування катаракти",
                         image: "/images/cataract-hero.jpg",
                         imgPositionMobile: "right 20% center",
+                        adress: true,
+                        cataract: [
+                            "дітям",
+                            "травматична катаракта",
+                            "виправляємо наслідки «невдалих» операцій в інших клініках",
+                            "беремося за найскладніші випадки",
+                        ],
                     },
                 },
                 {
@@ -1590,6 +1600,13 @@ export const servicesData: ServicesProps[] = [
                         title: "cataract treatment",
                         image: "/images/cataract-hero.jpg",
                         imgPositionMobile: "right 20% center",
+                        adress: true,
+                        cataract: [
+                            "for children",
+                            "traumatic cataract",
+                            "we correct the consequences of “unsuccessful” surgeries in other clinics",
+                            "we take on the most complex cases",
+                        ],
                     },
                 },
                 {
@@ -1704,6 +1721,13 @@ export const servicesData: ServicesProps[] = [
                         title: "лечение катаракты",
                         image: "/images/cataract-hero.jpg",
                         imgPositionMobile: "right 20% center",
+                        adress: true,
+                        cataract: [
+                            "детям",
+                            "травматическая катаракта",
+                            "исправляем последствия «неудачных» операций в других клиниках",
+                            "берёмся за самые сложные случаи",
+                        ],
                     },
                 },
                 {
@@ -1819,7 +1843,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "hero",
                     data: {
-                        title: "",
+                        title: "лікування синдрому сухого ока",
                     },
                 },
                 {
@@ -1836,6 +1860,12 @@ export const servicesData: ServicesProps[] = [
                 "We provide an effective and individual approach to eliminating unpleasant symptoms to restore comfort and health to your eyes.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "dry eye syndrome treatment",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for dry eye syndrome treatment in Kyiv",
@@ -1848,6 +1878,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Мы обеспечиваем эффективный и индивидуальный подход к устранению неприятных симптомов, чтобы вернуть комфорт и здоровье вашим глазам.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "лечение синдрома сухого глаза",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -1866,6 +1902,12 @@ export const servicesData: ServicesProps[] = [
             textMain: "Лікування захворювань сітківки та склоподібного тіла.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "Вітреоретинальна хірургія",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Ціни на лікування захворювань сітківки та склоподібного тіла в Киеве",
@@ -1878,6 +1920,12 @@ export const servicesData: ServicesProps[] = [
             textMain: "Treatment of diseases of the retina and vitreous body.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "Vitreoretinal surgery",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for treatment of diseases of the retina and vitreous body in Kiev",
@@ -1889,6 +1937,12 @@ export const servicesData: ServicesProps[] = [
         ru: {
             textMain: "Лечение заболеваний сетчатки и стекловидного тела.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "Витреоретинальная хирургия",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -1908,6 +1962,25 @@ export const servicesData: ServicesProps[] = [
                 "Сучасні методи виправлення рефракційних порушень відновлення чіткості зору.",
 
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "лазерна \nкорекція зору ",
+                        text: "Цей метод дозволяє людям із поганим зором повернутися до нормального життя без окулярів та контактних лінз.",
+                        adress: true,
+                        videoSmallScreens: "/videos/lazer-hero-tab.mp4",
+                        videoBigScreens: "/videos/lazer-desk-hero.mp4",
+                        lazer: {
+                            listTitle: "рекомендовано при:",
+                            list: [
+                                "астигматизмі",
+                                "короткозорості",
+                                "міопії",
+                                "далекозорості",
+                            ],
+                        },
+                    },
+                },
                 {
                     type: "preview",
                     data: {
@@ -2025,6 +2098,16 @@ export const servicesData: ServicesProps[] = [
                 "Modern methods of correcting refractive errors and restoring visual acuity.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "Laser \nVision Correction",
+                        text: "This method allows people with poor vision to return to normal life without glasses or contact lenses.",
+                        adress: true,
+                        videoSmallScreens: "/videos/lazer-hero-tab.mp4",
+                        videoBigScreens: "/videos/lazer-desk-hero.mp4",
+                    },
+                },
+                {
                     type: "preview",
                     data: {
                         title: "Laser vision correction is a breakthrough in ophthalmology that helps millions of people worldwide improve their eyesight",
@@ -2135,6 +2218,16 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Современные методы устранения рефракционных нарушений восстановления четкости зрения.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "Лазерная \nкоррекция зрения",
+                        text: "Этот метод позволяет людям с плохим зрением вернуться к нормальной жизни без очков и контактных линз.",
+                        adress: true,
+                        videoSmallScreens: "/videos/lazer-hero-tab.mp4",
+                        videoBigScreens: "/videos/lazer-desk-hero.mp4",
+                    },
+                },
                 {
                     type: "preview",
                     data: {
@@ -2248,17 +2341,41 @@ export const servicesData: ServicesProps[] = [
         uk: {
             textMain:
                 "Сучасні методи виправлення рефракційних порушень відновлення чіткості зору.Провідні дитячі офтальмологи – досвідчені лікарі, які знайдуть підхід до кожної дитини.",
-            sections: [{ type: "doctors" }],
+            sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "Дитяче \nвідділення",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         en: {
             textMain:
                 "Leading pediatric ophthalmologists are experienced doctors who will find an approach to each child.",
-            sections: [{ type: "doctors" }],
+            sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "Paediatric \nDepartment",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
         ru: {
             textMain:
                 "Современные методы устранения рефракционных нарушений восстановления четкости зрения.Ведущие детские офтальмологи – опытные врачи, которые найдут подход к каждому ребенку.",
-            sections: [{ type: "doctors" }],
+            sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "Детское \nотделение",
+                    },
+                },
+                { type: "doctors" },
+            ],
         },
     },
     {
@@ -2268,6 +2385,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "лікування \nкератоконусу",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -2282,6 +2405,12 @@ export const servicesData: ServicesProps[] = [
                 "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "Keratoconus \ntreatment",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Price for keratoconus treatment in Kyiv",
@@ -2294,6 +2423,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "Лечение \nкератоконуса",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -2312,6 +2447,12 @@ export const servicesData: ServicesProps[] = [
                 "BiVision RLE (рефракційна ленсектомія) — ефективний метод корекції пресбіопії (вікова далекозорість).",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "рефракційна \nленсектомія",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Ціна на рефракційну ленсектомію в Києві",
@@ -2325,6 +2466,12 @@ export const servicesData: ServicesProps[] = [
                 "BiVision RLE (refractive lensectomy) is an effective method of correcting presbyopia (age-related farsightedness).",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "refractive \nlensectomy",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Price for refractive lensectomy in Kyiv",
@@ -2337,6 +2484,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "BiVision RLE (рефракционная ленсектомия) – эффективный метод коррекции пресбиопии (возрастная дальнозоркость).",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "рефракционная \nленсектомия",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -2357,6 +2510,12 @@ export const servicesData: ServicesProps[] = [
                 "Можливість чітко візуалізувати патологічні зміни дозволяє лікарю виконувати процедуру гранично точно.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "лазерне лікування захворювань ока",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Ціни на лазерне лікування захворювань ока в Києві",
@@ -2370,6 +2529,12 @@ export const servicesData: ServicesProps[] = [
                 "The ability to clearly visualize pathological changes allows the doctor to perform the procedure with extreme precision.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "laser treatment of eye diseases",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for laser treatment of eye diseases in Kyiv",
@@ -2382,6 +2547,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Возможность четко визуализировать патологические изменения позволяет врачу выполнять процедуру предельно точно.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "лазерное лечение заболеваний глаза",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -2401,6 +2572,12 @@ export const servicesData: ServicesProps[] = [
                 "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "інтравітреальні ін'єкції",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Ціни на інтравітреальні ін'єкції в Києві",
@@ -2414,6 +2591,12 @@ export const servicesData: ServicesProps[] = [
                 "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "intravitreal injections",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for intravitreal injections in Kyiv",
@@ -2426,6 +2609,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "интравитреальные инъекции",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -2446,6 +2635,12 @@ export const servicesData: ServicesProps[] = [
                 "Ми лікуємо всі види глаукоми із застосуванням найсучасніших і ефективних хірургічних методик.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "хірургічне лікування глаукоми",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Ціни на лікування глаукоми в Києві",
@@ -2459,6 +2654,12 @@ export const servicesData: ServicesProps[] = [
                 "We treat all types of glaucoma using the most modern and effective surgical techniques.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "surgical treatment of glaucoma",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for glaucoma treatment in Kyiv",
@@ -2471,6 +2672,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Мы лечим все виды глаукомы с применением самых современных и эффективных хирургических методик.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "хирургическое лечение глаукомы",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -2489,6 +2696,12 @@ export const servicesData: ServicesProps[] = [
                 "Ми пропонуємо новітні методи діагностики та лікування косоокості, а також закріплення результату.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "лікування косоокості",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Ціни на лікування косоокості в Києві",
@@ -2502,6 +2715,12 @@ export const servicesData: ServicesProps[] = [
                 "We offer the latest methods of diagnosing and treating strabismus, as well as consolidating the result.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "strabismus treatment",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for strabismus treatment in Kyiv",
@@ -2514,6 +2733,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Мы предлагаем новейшие методы диагностики и лечения косоглазия, а также закрепление результата.",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "лечение косоглазия",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -2534,6 +2759,12 @@ export const servicesData: ServicesProps[] = [
                 "Хірургія повік і кон’юнктиви (блефаропластика та інші втручання).",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "Хірургія повік і кон’юнктиви",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Ціни на хірургію повік і кон'юнктиви в Києві",
@@ -2547,6 +2778,12 @@ export const servicesData: ServicesProps[] = [
                 "Eyelid and conjunctival surgery (blepharoplasty and other interventions).",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "Eyelid and conjunctival surgery",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for eyelid and conjunctival surgery in Kyiv",
@@ -2559,6 +2796,12 @@ export const servicesData: ServicesProps[] = [
             textMain:
                 "Хирургия век и конъюнктивы (блефаропластика и другие вмешательства).",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "Хирургия век и конъюнктивы",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
@@ -2576,6 +2819,12 @@ export const servicesData: ServicesProps[] = [
             textMain: "Методика «Янгельські сни».",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "ксенонотерапія",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Ціни на ксенонотерапію в Києві",
@@ -2588,6 +2837,12 @@ export const servicesData: ServicesProps[] = [
             textMain: "«Angel Dreams» Method.",
             sections: [
                 {
+                    type: "hero",
+                    data: {
+                        title: "xenotherapy",
+                    },
+                },
+                {
                     type: "priceSection",
                     data: {
                         title: "Prices for xenotherapy in Kyiv",
@@ -2599,6 +2854,12 @@ export const servicesData: ServicesProps[] = [
         ru: {
             textMain: "Методика «Ангельские сны».",
             sections: [
+                {
+                    type: "hero",
+                    data: {
+                        title: "ксенонотерапия",
+                    },
+                },
                 {
                     type: "priceSection",
                     data: {
