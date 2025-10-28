@@ -104,6 +104,16 @@ a {
         #003626 83%
     );
 }
+.cta-green-gradient {
+    background: linear-gradient(
+        289.82deg,
+        #023f2c -2.91%,
+        #09684b 17.72%,
+        #0b7556 31.22%,
+        #08654a 47.06%,
+        #003626 77.29%
+    );
+}
 
 .hover-green-gradient {
     background: transparent;

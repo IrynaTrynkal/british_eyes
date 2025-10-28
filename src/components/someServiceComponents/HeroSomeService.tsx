@@ -12,7 +12,7 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
 
     return (
         <section
-            className={`tab:mt-0 prepc:bg-position-[var(--prepc-hero)] tab:h-120 prepc:h-[552px] relative mt-12 h-[calc(100vh-48px)] overflow-hidden bg-position-[var(--mob-hero)] ${!hasVideo && hasImage ? "" : ""} ${!hasVideo && !hasImage ? "green-gradient" : ""} ${hasVideo && !hasImage ? "bg-[#003626]" : ""}`}
+            className={`tab:mt-0 prepc:bg-position-[var(--prepc-hero)] tab:h-120 prepc:h-[552px] relative mt-12 h-[calc(100vh-48px)] overflow-hidden bg-position-[var(--mob-hero)] ${!hasVideo && hasImage ? "" : ""} ${!hasVideo && !hasImage ? "cta-green-gradient" : ""} ${hasVideo && !hasImage ? "bg-[#003626]" : ""}`}
             style={
                 !hasVideo && hasImage
                     ? ({
