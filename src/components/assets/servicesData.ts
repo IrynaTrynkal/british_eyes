@@ -1588,6 +1588,108 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Часті запитання про катаракту",
+                        content: [
+                            {
+                                question: "Що таке катаракта?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Катаракта — це захворювання ока, при якому відбувається помутніння природного кришталика, що призводить до поступового погіршення зору. У нормі кришталик є прозорим і забезпечує фокусування світлових променів на сітківці, але при катаракті цей процес порушується.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Які ознаки можуть вказувати на розвиток катаракти?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Катаракта розвивається поступово і на початкових етапах її симптоми можуть бути малопомітними. Проте з її прогресуванням людина починає відчувати труднощі із зором на різних відстанях. Спочатку це може проявлятися під час читання чи спробі розглянути дрібні деталі. Можуть виникати проблеми із зором у сутінках, відчуття туманності або димки перед очима, ніби Ви дивитесь через матове скло. При цьому навіть правильний підбір окулярів не забезпечує значного покращення гостроти зору.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Як дізнатися, чи мені потрібна операція?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Для вирішення питання проведення операції, необхідно пройти повне діагностичне обстеження, включаючи консультацію лікаря, який спрогнозує результат операції і підбере інтраокулярну лінзу, виходячи з Ваших індивідуальних особливостей очей.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Чому кришталик мутніє?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Помутніння кришталика ока відбувається через структурні та хімічні зміни в білках і волокнах, які його складають, найчастіше це пов’язано з віковими процесами в організмі, порушенням кровообігу та недостатнім живленням тканин.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чи можна вилікувати катаракту без операції?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Катаракту неможливо вилікувати без операції, оскільки це захворювання пов’язане з незворотним помутнінням природного кришталика ока. Жодні ліки, або краплі не здатні відновити прозорість кришталика. Операція по видаленню катаракти є єдиним ефективним способом лікування.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Скільки часу триває операція?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Саме завдяки високотехнологічному обладнанню та професійності хірурга, операція з видалення катаракти може займати до 5 хв. Але включаючи підготовку та післяопераційний огляд, орієнтуйтесь, що в центрі, в день операції, можете пробути 2-3 години.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чи можливо зробити операцію одночасно на лівому та правому оці?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Одночасне проведення операції з видалення катаракти на обох очах не рекомендується. Інтервал між операціями зазвичай варіюється від одного дня до місяця, залежно від індивідуальних особливостей пацієнта та рекомендацій офтальмолога.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Як відбувається операція?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Видалення катаракти проводиться амбулаторно, без швів, без уколів, за новою технологією “Англійського водного потоку iQ-5 minutes” . Це найефективніший і комфортний метод. Робиться мікропрокол, вводиться спеціально – збалансований розчин, який дробить помутнілий кришталик, його видаляють і на його місце імплантується інтраокулярна лінза. Анестезія місцева, проводиться шляхом закапування знеболюючих крапель.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Чи потрібні окуляри після операції?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Після видалення кришталика, при катаракті, імплантуються різні типи інтраокулярних лінз. Якщо під час операції пацієнту імплантують монофокальні лінзи, після операції йому знадобляться окуляри для читання. У випадку, якщо пацієнт не бажає носити окуляри, ми використовуємо мультифокальні кришталики. Вибір кришталика здійснюється лікарем, після проведення діагностичного обстеження, виходячи з індивідуальних параметрів очей.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Який період відновлення?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Відновлення після операції з видалення катаракти, як правило, проходить швидко. Однак тривалість процесу може варіюватися залежно від індивідуальних характеристик пацієнта та складності проведеної операції.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         en: {
@@ -1709,6 +1811,107 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Frequently Asked Questions About Cataracts",
+                        content: [
+                            {
+                                question: "What is a cataract?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "A cataract is an eye condition in which the natural lens becomes cloudy, leading to gradual vision deterioration. Normally, the lens is transparent and focuses light on the retina, but with cataracts this process becomes impaired.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "What symptoms may indicate the development of a cataract?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Cataracts develop gradually, and at early stages symptoms may be barely noticeable. As the condition progresses, a person may experience vision difficulties at different distances. Initially, this can appear while reading or trying to see small details. Problems with vision in low light, foggy or hazy vision, as if looking through frosted glass, may also occur. Even properly selected glasses may not significantly improve visual acuity.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "How do I know if I need surgery?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "To determine whether surgery is necessary, you must undergo a full diagnostic examination, including a consultation with the doctor who will predict the outcome of the surgery and select an intraocular lens based on your individual eye characteristics.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Why does the lens become cloudy?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Lens clouding occurs due to structural and chemical changes in the proteins and fibers that make up the lens. This is most often related to age-related processes, impaired blood circulation, and insufficient nutrition of the eye tissues.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Can a cataract be treated without surgery?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "A cataract cannot be treated without surgery, because it is associated with irreversible clouding of the natural lens. No medications or eye drops can restore its transparency. Cataract removal surgery is the only effective treatment.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "How long does the surgery take?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Thanks to advanced technologies and the surgeon’s expertise, cataract removal can take as little as 5 minutes. However, including preparation and postoperative check-up, expect to spend 2–3 hours at the center on the day of surgery.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Can cataract surgery be done on both eyes at the same time?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Simultaneous cataract surgery on both eyes is not recommended. The interval between surgeries usually varies from one day to one month, depending on the patient’s condition and the ophthalmologist’s recommendation.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "How is the surgery performed?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Cataract removal is performed on an outpatient basis, without stitches or injections, using the new “English Water Flow iQ-5 minutes” technology. It is the most effective and comfortable method. A micro-incision is made, a special balanced solution is injected to break up the cloudy lens, it is removed, and an intraocular lens is implanted in its place. Local anesthesia is provided with numbing eye drops.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Do I need glasses after surgery?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "After cataract removal, different types of intraocular lenses can be implanted. If monofocal lenses are used, glasses will be needed for reading. If the patient wishes to avoid glasses, multifocal lenses can be implanted. The choice of lens is made by the doctor after diagnostic testing, based on the individual eye parameters.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "What is the recovery period?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Recovery after cataract surgery is usually fast. However, the duration may vary depending on the patient’s individual characteristics and the complexity of the surgery.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         ru: {
@@ -1830,6 +2033,107 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Часто задаваемые вопросы о катаракте",
+                        content: [
+                            {
+                                question: "Что такое катаракта?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Катаракта — это заболевание глаза, при котором происходит помутнение естественного хрусталика, что приводит к постепенному ухудшению зрения. В норме хрусталик прозрачный и обеспечивает фокусировку света на сетчатке, но при катаракте этот процесс нарушается.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Какие признаки могут указывать на развитие катаракты?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Катаракта развивается постепенно, и на ранних стадиях её симптомы могут быть малозаметными. По мере прогрессирования возникают трудности со зрением на разных расстояниях. Сначала это может проявляться при чтении или попытке рассмотреть мелкие детали. Возможны проблемы со зрением в сумерках, ощущение туманности или дымки перед глазами, будто вы смотрите через матовое стекло. Даже правильно подобранные очки не дают значительного улучшения остроты зрения.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Как узнать, нужна ли мне операция?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Чтобы решить вопрос о необходимости операции, требуется пройти полное диагностическое обследование, включая консультацию врача, который спрогнозирует результат операции и подберёт интраокулярную линзу с учётом индивидуальных особенностей ваших глаз.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Почему хрусталик мутнеет?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Помутнение хрусталика происходит из-за структурных и химических изменений белков и волокон, из которых он состоит. Чаще всего это связано с возрастными изменениями организма, нарушением кровообращения и недостаточным питанием тканей.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Можно ли вылечить катаракту без операции?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Вылечить катаракту без операции невозможно, поскольку она связана с необратимым помутнением естественного хрусталика. Ни препараты, ни капли не способны восстановить его прозрачность. Операция по удалению катаракты — единственный эффективный метод лечения.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Сколько длится операция?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Благодаря высокотехнологичному оборудованию и профессионализму хирурга, операция по удалению катаракты может занимать до 5 минут. Однако вместе с подготовкой и послеоперационным осмотром в центре вы проведёте 2–3 часа.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Можно ли сделать операцию сразу на обоих глазах?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Одновременное проведение операции на обоих глазах не рекомендуется. Интервал между операциями может варьироваться от одного дня до месяца, в зависимости от особенностей пациента и рекомендаций офтальмолога.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Как проходит операция?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Удаление катаракты проводится амбулаторно, без швов и инъекций, по новой технологии «Английский водный поток iQ-5 minutes». Это самый эффективный и комфортный метод. Выполняется микроразрез, вводится специальный сбалансированный раствор, который дробит помутневший хрусталик, его удаляют и на его место имплантируют интраокулярную линзу. Местная анестезия проводится с помощью обезболивающих капель.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Нужны ли очки после операции?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "После удаления хрусталика могут имплантироваться различные типы интраокулярных линз. Если используются монофокальные линзы, очки для чтения будут необходимы. Если пациент хочет избежать очков, возможно использование мультифокальных хрусталиков. Выбор линзы осуществляет врач после диагностики, исходя из индивидуальных параметров глаз.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Каков период восстановления?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Восстановление после операции по удалению катаракты, как правило, проходит быстро. Однако длительность может варьироваться в зависимости от индивидуальных особенностей пациента и сложности проведённой операции.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
     },
@@ -1853,6 +2157,99 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Часті запитання про лікування синдрому сухого",
+                        content: [
+                            {
+                                question: "ІPL – це лазер?",
+                                answer: [
+                                    { type: "text", text: "Ні." },
+                                    {
+                                        type: "text",
+                                        text: "IPL (укр. інтенсивне пульсуюче світло) – дуже яскраве світло із широким діапазоном довжин хвиль. Джерелом світла є ксенонова лампа, а корисний діапазон відокремлюють із застосуваннями світлофільтрів.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Наскільки безпечна процедура?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Процедури із використанням IPL були вперше виконані ще у 1992 році. З того часу IPL терапія успішно застосовується для лікування великої кількості станів у пацієнтів всіх вікових категорій: від видалення родимих плям, пігментацій та судин до фотоомолодження.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Оскільки шкідливе випромінювання повністю «відрізається» світлофільтром, процедура цілком безпечна для пацієнта.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Чи болісна процедура?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Під час процедури IPL ви будете відчувати пощипування та бачити яскраві спалахи крізь закриті окулярами очі.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Для того, щоб процедура була комфортною, апарат обладнаний системою, що охолоджує шкіру. Відповідно до ваших відчуттів лікар налаштує параметри таким чином, щоб отримати максимальний лікувальний ефект та мінімізувати будь-які неприємні відчуття.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Скільки сеансів потрібно?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "IPL терапія активує процеси відновлення в зоні, де проводиться процедура. В результаті зменшується запалення, оновлюються тканини, нормалізується стан судин. Зміни можна помітити через 10-12 днів після сеансу, але отримання стабільної позитивної динаміки, особливо якщо є запалення або дисфункція мейбомієвих залоз, треба «закріпити» ефект.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Загальна рекомендована кількість сеансів для отримання стійкого ефекту – 3-4. Ваш лікар сформує курс з урахуванням форми та ступеню хвороби сухого ока, стану повік, шкіри периорбітальної ділянки та стану здоров’я.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Скільки займає сеанс?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "В нашій клініці процедура IPL терапії поєднана з автоматичним масажем повік для отримання стійкого та тривалого ефекту від лікувальної процедури.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Комплексна процедура IPL+автоматичний масаж повік займає до 40 хвилин.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чи буде обличчя червоним/набряклим? Коли можна повернутись до роботи?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Лікування хвороби сухого ока з використанням IPL терапія зазвичай добре переноситься пацієнтами: можна повернутись до рутинних справ одразу після виходу з маніпуляційного кабінету.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Оскільки терапія спрямована також на лікування судинних сіточок, зірочок, розацеа та будь-яких інших запальних захворювань шкіри, ділянка навколо очей може стати рожевою та злегка набрякнути. Лікар обов’язково обговорить з вами режими лікування та надасть індивідуальні рекомендації.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Чи зможу відмовитись від крапель?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Після завершення курсу IPL використання зволожуючих крапель мінімізується: більшість пацієнтів не мають потреби у використанні. Для пацієнтів, які мають високе зорове навантаження, ми пропонуємо курс підтримуючих процедур, які підтримують позитивний ефект та здоров’я очей.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         en: {
@@ -1872,6 +2269,100 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Frequently Asked Questions about Dry Eye Treatment",
+                        content: [
+                            {
+                                question: "Is IPL a laser?",
+                                answer: [
+                                    { type: "text", text: "No." },
+                                    {
+                                        type: "text",
+                                        text: "IPL (Intense Pulsed Light) is a very bright light with a broad range of wavelengths. The light source is a xenon lamp, and the useful spectrum is separated using light filters.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "How safe is the procedure?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "IPL procedures were first performed in 1992. Since then, IPL therapy has been successfully used to treat a wide range of conditions in patients of all ages: from removing birthmarks, pigmentation and vessels to photo-rejuvenation.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "As harmful radiation is fully filtered out with a light filter, the procedure is completely safe for the patient.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Is the procedure painful?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "During the IPL procedure, you may feel a tingling sensation and see bright flashes of light through protective goggles.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "To ensure comfort, the device is equipped with a skin cooling system. Depending on your sensations, the doctor will adjust the parameters to achieve maximum therapeutic effect while minimizing discomfort.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "How many sessions are needed?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "IPL therapy activates recovery processes in the treated area. As a result, inflammation decreases, tissues renew, and the condition of the vessels normalizes. Improvements can be noticed 10–12 days after a session, but to ensure stable positive progress—especially if inflammation or meibomian gland dysfunction is present—it is important to solidify the result.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "The generally recommended number of sessions for long-lasting results is 3–4. Your doctor will determine a personalized treatment plan considering the severity and type of dry eye disease, eyelid condition, periocular skin, and overall health.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "How long does one session take?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "In our clinic, IPL therapy is combined with an automated eyelid massage to achieve a stable and long-lasting treatment effect.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "A combined IPL + automated eyelid massage session takes up to 40 minutes.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Will my face be red or swollen? When can I return to work?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Dry eye treatment using IPL therapy is generally well tolerated: you can return to your routine immediately after leaving the procedure room.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Since the procedure also targets vascular issues such as telangiectasia, rosacea and other inflammatory skin conditions, the periocular area may become slightly pink and swollen. Your doctor will discuss treatment protocols and provide personalized recommendations.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Will I be able to stop using eye drops?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "After completing the IPL course, the need for lubricating eye drops is significantly reduced: most patients no longer require them. For patients with high visual load, we recommend supportive sessions to maintain the effect and eye health.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         ru: {
@@ -1891,6 +2382,99 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Частые вопросы о лечении синдрома сухого глаза",
+                        content: [
+                            {
+                                question: "IPL — это лазер?",
+                                answer: [
+                                    { type: "text", text: "Нет." },
+                                    {
+                                        type: "text",
+                                        text: "IPL (интенсивный импульсный свет) — это очень яркий свет с широким диапазоном длин волн. Источником света служит ксеноновая лампа, а полезный диапазон отделяется при помощи светофильтров.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Насколько безопасна процедура?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Процедуры IPL впервые начали применять ещё в 1992 году. С тех пор IPL-терапия успешно используется для лечения широкого спектра состояний у пациентов всех возрастных категорий: от удаления пигментации, сосудов и родимых пятен до фотоомоложения.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Поскольку вредное излучение полностью «отсекается» светофильтром, процедура абсолютно безопасна для пациента.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Процедура болезненная?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Во время IPL-процедуры вы можете ощущать лёгкое пощипывание и видеть яркие вспышки через защитные очки.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Для повышения комфорта аппарат оснащён системой охлаждения кожи. В зависимости от ощущений врач настроит параметры так, чтобы получить максимальный лечебный эффект и минимизировать дискомфорт.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Сколько сеансов необходимо?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "IPL-терапия активирует восстановительные процессы в зоне воздействия. В результате уменьшается воспаление, обновляются ткани, нормализуется состояние сосудов. Первые изменения заметны через 10–12 дней, но для устойчивого эффекта — особенно при воспалении или дисфункции мейбомиевых желез — важно закрепить результат.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Рекомендуемое количество процедур для стойкого эффекта — 3–4. Врач сформирует курс, учитывая форму и тяжесть сухого глаза, состояние век, кожи периорбитальной области и общее состояние здоровья.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Сколько длится сеанс?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "В нашей клинике IPL-терапия совмещена с автоматическим массажем век для достижения стойкого и продолжительного лечебного эффекта.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Комплексная процедура IPL + автоматический массаж век занимает до 40 минут.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Будет ли лицо красным/отёчным? Когда можно вернуться к работе?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Лечение синдрома сухого глаза с использованием IPL-терапии обычно хорошо переносится: вы можете вернуться к обычным делам сразу после процедуры.",
+                                    },
+                                    {
+                                        type: "text",
+                                        text: "Так как терапия направлена также на лечение сосудистых сеточек, розацеа и других воспалительных заболеваний кожи, область вокруг глаз может слегка порозоветь и немного отечь. Врач обязательно обсудит планы лечения и даст индивидуальные рекомендации.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Смогу ли я отказаться от капель?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "После завершения курса IPL необходимость в увлажняющих каплях значительно снижается: большинству пациентов они уже не нужны. Для пациентов с высокой зрительной нагрузкой мы предлагаем поддерживающие процедуры для сохранения результата и здоровья глаз.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
     },
@@ -1914,6 +2498,90 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Часті запитання про рефракційну заміну кришталика (RLE)",
+                        content: [
+                            {
+                                question:
+                                    "Що таке рефракційна заміна кришталика (RLE)?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "RLE — це мікроінвазивна операція, під час якої природний кришталик ока замінюють на інтраокулярну лінзу (ІОЛ). Метод коригує пресбіопію (вікову далекозорість), міопію, гіперметропію та астигматизм, і є альтернативою лазерній корекції зору при тонкій або нерівній рогівці.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чим RLE відрізняється від лазерної корекції зору?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Лазерна корекція змінює рогівку, а рефракційна заміна кришталика працює з кришталиком і не залежить від його товщини/форми. Тому RLE частіше обирають при тонкій рогівці, високих діоптріях чи комбінованих вадах зору.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Кому показана рефракційна ленсектомія?",
+                                answer: [
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "45+ із пресбіопією;",
+                                            "високі градуси міопії/гіперметропії;",
+                                            "астигматизм (корекція торичною ІОЛ);",
+                                            "протипоказання до лазера;",
+                                            "ранні зміни кришталика/ризик катаракти;",
+                                            "непереносимість контактних лінз, потреба у стабільному зорі для роботи/нічного водіння.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Скільки триває операція RLE і як проходить?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Зазвичай кілька хвилин на одне око: мікророзріз 2–2,2 мм, щадне видалення кришталика, імплантація ІОЛ у капсульний мішок. Процедура амбулаторна.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Чи справді RLE запобігає катаракті?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Так. Оскільки власний кришталик видаляється, катаракта більше не розвивається. Це одна з ключових переваг рефракційної заміни кришталика.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чи можна під час RLE виправити астигматизм?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Так, за допомогою торичних ІОЛ (наприклад, Rayner RayOne Toric) одночасно коригуємо астигматизм і отримуємо стабільний зір.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чи можна робити RLE при тонкій рогівці або після відмови в лазерній корекції?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Саме тут RLE — оптимальна альтернатива лазеру: метод не змінює рогівку і дає передбачуваний результат при тонкій чи нерівній рогівці.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         en: {
@@ -1932,6 +2600,90 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Frequently Asked Questions about Refractive Lens Exchange (RLE)",
+                        content: [
+                            {
+                                question:
+                                    "What is Refractive Lens Exchange (RLE)?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "RLE is a micro-invasive surgery in which the natural lens of the eye is replaced with an intraocular lens (IOL). The method corrects presbyopia, myopia, hyperopia, and astigmatism, and is an alternative to laser vision correction in cases of thin or irregular cornea.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "How is RLE different from laser eye correction?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Laser correction reshapes the cornea, while refractive lens exchange works with the lens and does not depend on its thickness or shape. Therefore, RLE is often chosen for thin cornea, high diopters or combined vision issues.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Who is a candidate for refractive lens exchange?",
+                                answer: [
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "People aged 45+ with presbyopia;",
+                                            "High degrees of myopia/hyperopia;",
+                                            "Astigmatism (corrected with a toric IOL);",
+                                            "Contraindications to laser correction;",
+                                            "Early lens changes / risk of cataract;",
+                                            "Contact lens intolerance, need for stable vision for work/night driving.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "How long does an RLE procedure take and how is it performed?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Usually a few minutes per eye: a 2–2.2 mm micro-incision, gentle lens removal, and IOL implantation into the capsular bag. The procedure is outpatient.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Does RLE really prevent cataracts?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Yes. Since the natural lens is removed, cataract can no longer develop. This is one of the main advantages of refractive lens exchange.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Can astigmatism be corrected during RLE?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Yes. With toric IOLs (e.g., Rayner RayOne Toric), we correct astigmatism and achieve stable vision at the same time.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Can RLE be performed in cases of thin cornea or after being rejected for laser surgery?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "This is exactly where RLE is the optimal alternative: the method does not change the cornea and provides a predictable outcome even with thin or irregular cornea.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         ru: {
@@ -1950,6 +2702,91 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Частые вопросы о рефракционной замене хрусталика (RLE)",
+                        content: [
+                            {
+                                question:
+                                    "Что такое рефракционная замена хрусталика (RLE)?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "RLE — это микроинвазивная операция, при которой природный хрусталик глаза заменяют внутри­глазной линзой (ИОЛ). Метод корректирует пресбиопию, миопию, гиперметропию и астигматизм, и является альтернативой лазерной коррекции зрения при тонкой или неровной роговице.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чем RLE отличается от лазерной коррекции зрения?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Лазерная коррекция изменяет роговицу, а рефракционная замена хрусталика работает с хрусталиком и не зависит от его толщины или формы. Поэтому RLE чаще выбирают при тонкой роговице, высоких диоптриях или комбинированных нарушениях зрения.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Кому показана рефракционная ленсэктомия?",
+                                answer: [
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "Возраст 45+ с пресбиопией;",
+                                            "Высокие степени миопии/гиперметропии;",
+                                            "Астигматизм (коррекция торической ИОЛ);",
+                                            "Противопоказания к лазеру;",
+                                            "Ранние изменения хрусталика/риск катаракты;",
+                                            "Непереносимость контактных линз, потребность в стабильном зрении для работы/ночного вождения.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Сколько длится операция RLE и как она проходит?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Обычно несколько минут на один глаз: микроразрез 2–2,2 мм, щадящее удаление хрусталика и имплантация ИОЛ в капсульный мешок. Процедура амбулаторная.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Правда ли, что RLE предотвращает катаракту?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Да. Поскольку собственный хрусталик удаляется, катаракта больше не развивается. Это одно из ключевых преимуществ RLE.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Можно ли во время RLE исправить астигматизм?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Да, с помощью торических ИОЛ (например, Rayner RayOne Toric) мы одновременно корректируем астигматизм и получаем стабильное зрение.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Можно ли делать RLE при тонкой роговице или после отказа в лазерной коррекции?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "В таких случаях RLE — оптимальная альтернатива лазеру: метод не изменяет роговицу и обеспечивает предсказуемый результат при её тонкости или неровности.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
     },
@@ -2091,6 +2928,73 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Часті запитання про лазерну корекцію зору",
+                        content: [
+                            {
+                                question:
+                                    "Що представляє собою лазерна корекція зору?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Лазерна корекція зору – це сучасна процедура, що дозволяє коригувати короткозорість, далекозорість та астигматизм. За допомогою лазера змінюється форма рогівки, що покращує фокусування світла на сітківці ока, забезпечуючи чітке зображення.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чи потрібно проходити повне комплексне обстеження перед проведенням лазерної корекції зору?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Так, для вирішення питання можливості проведення лазерної корекції необхідно пройти повне діагностичне обстеження, включаючи консультацію лікаря. Виходячи з отриманих даних лікар спрогнозує точний результат операції і підбере індивідуальну методику лазерної корекції зору.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чи є можливість пройти повне комплексне обстеження та лазерну корекцію зору в один день?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Так, в нашому центрі Ви можете пройти повне комплексне обстеження та за наявності показань, виконати лазерну корекцію зору в той самий день (у середу, четвер, п’ятницю або суботу, за попереднім записом на ранок). В такому випадку плануйте, що в нашому центрі Ви проведете близько 4-6 годин. Якщо Ви з іншого міста, заплануйте післяопераційний огляд на наступний день.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Як обрати метод корекції?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Метод лазерної корекції зору підбирає виключно лікар, зважаючи на індивідуальні особливості Вашого зору та результати обстеження.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Яка тривалість процедури лазерної корекції зору?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Завдяки новітньому обладнанню операція на обох очах триває не більше 7 хвилин. Загалом, разом із підготовкою та післяопераційним оглядом в центрі пробудете близько 2 годин.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Чи боляче робити лазерну корекцію зору?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Процедура безболісна, проводиться під місцевою анестезією у вигляді крапель, які знеболюють рогівку. Після операції можуть бути тимчасові неприємні відчуття, такі як печіння, сухість або відчуття піску в очах, але це триває зазвичай кілька годин.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         en: {
@@ -2212,6 +3116,72 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Frequently Asked Questions About Laser Vision Correction",
+                        content: [
+                            {
+                                question: "What is laser vision correction?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Laser vision correction is a modern procedure that helps correct myopia, hyperopia and astigmatism. The laser changes the shape of the cornea, improving the eye’s ability to focus light on the retina, resulting in clear vision.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Is a full comprehensive examination required before laser vision correction?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Yes, to determine whether laser correction is possible, you must undergo a full diagnostic examination, including a consultation with the doctor. Based on the results, the doctor will predict the expected outcome of the surgery and select an individual correction method.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Is it possible to have a full examination and laser vision correction on the same day?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Yes, in our center, you can undergo a full comprehensive examination and, if there are indications, have laser correction on the same day (Wednesday–Saturday by prior morning appointment). In this case, plan to spend about 4–6 hours at our clinic. If you come from another city, schedule a postoperative check-up for the next day.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "How is the correction method chosen?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "The correction method is selected exclusively by the doctor, based on your individual eye characteristics and examination results.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "How long does laser vision correction take?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Thanks to advanced equipment, surgery on both eyes takes no more than 7 minutes. In total, including preparation and postoperative check-up, you will spend about 2 hours in the center.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Is laser vision correction painful?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "The procedure is painless and performed under local anesthesia in the form of eye drops that numb the cornea. After surgery, you may experience temporary discomfort such as burning, dryness or a feeling of sand in the eyes, but this usually lasts only a few hours.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
         ru: {
@@ -2332,6 +3302,73 @@ export const servicesData: ServicesProps[] = [
                     },
                 },
                 { type: "doctors" },
+                {
+                    type: "faq",
+                    data: {
+                        title: "Часто задаваемые вопросы о лазерной коррекции зрения",
+                        content: [
+                            {
+                                question:
+                                    "Что представляет собой лазерная коррекция зрения?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Лазерная коррекция зрения — это современная процедура, позволяющая исправлять близорукость, дальнозоркость и астигматизм. С помощью лазера изменяется форма роговицы, что улучшает фокусировку света на сетчатке и обеспечивает чёткое изображение.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Нужно ли проходить полное комплексное обследование перед процедурой?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Да, чтобы принять решение о возможности проведения лазерной коррекции, необходимо пройти полное диагностическое обследование, включая консультацию врача. На основании полученных данных врач спрогнозирует результат операции и подберёт индивидуальную методику коррекции.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Можно ли пройти обследование и лазерную коррекцию в один день?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Да, в нашем центре вы можете пройти комплексное обследование и при наличии показаний выполнить лазерную коррекцию в тот же день (в среду, четверг, пятницу или субботу по предварительной записи на утро). Планируйте провести у нас 4–6 часов. Если вы из другого города, запланируйте послеоперационный осмотр на следующий день.",
+                                    },
+                                ],
+                            },
+                            {
+                                question: "Как выбрать метод коррекции?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Метод лазерной коррекции зрения подбирает исключительно врач, учитывая индивидуальные особенности вашего зрения и результаты обследования.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Сколько длится лазерная коррекция зрения?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Благодаря современному оборудованию операция на обоих глазах занимает не более 7 минут. В целом, вместе с подготовкой и послеоперационным осмотром вы проведёте в центре около 2 часов.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Больно ли делать лазерную коррекцию?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Процедура безболезненна, проводится под местной анестезией в виде капель, которые обезболивают роговицу. После операции возможны временные неприятные ощущения: жжение, сухость или ощущение песка в глазах, но обычно это проходит через несколько часов.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
             ],
         },
     },
