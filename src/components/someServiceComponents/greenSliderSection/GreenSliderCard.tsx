@@ -20,7 +20,7 @@ export const GreenSliderCard = ({
             </h4>
             <p
                 className={
-                    "pc:text-lg text-ivory pc:leading-[22px] tab:line-clamp-[12] line-clamp-[11] [display:-webkit-box] overflow-hidden leading-4 break-words"
+                    "pc:text-lg text-ivory pc:leading-[22px] tab:line-clamp-[12] line-clamp-[11] [display:-webkit-box] overflow-hidden leading-4 break-words whitespace-pre-line"
                 }
             >
                 {text}

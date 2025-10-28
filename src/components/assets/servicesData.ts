@@ -43,6 +43,7 @@ export type PreviewProps = {
     textUp?: string;
     textDown?: string;
     image?: string;
+    cta?: boolean;
 };
 
 export type MethodCardProps = {
@@ -2148,6 +2149,89 @@ export const servicesData: ServicesProps[] = [
                     type: "hero",
                     data: {
                         title: "лікування синдрому сухого ока",
+                        text: "Багаторічний досвід роботи наших фахівців і сучасне діагностичне обладнання дозволяють усунути прогресування та ускладнення хвороби.",
+                    },
+                },
+                {
+                    type: "preview",
+                    data: {
+                        title: "Синдром сухого ока: діагностика та лікування",
+                        text: [
+                            "Синдром сухого ока — це стан, коли слізна плівка втрачає стабільність і вже не захищає рогівку належним чином. Звідси сухість, печіння, «пісок», почервоніння і коливання чіткості зору, особливо наприкінці дня. Причини різні: дисфункція мейбомієвих залоз, рідке або неповне моргання за екранами, вікові та гормональні зміни, сухе повітря. Без точної діагностики симптоми закріплюються, тому важливо визначити, який шар сльози порушений, і підібрати цілеспрямоване лікування.",
+                            "В нашій клініці діагностика синдрому сухого ока здійснюється за допомогою унікального сертифікованого обладнання IDRA, яке розроблене в Італії спеціально для точного визначення всіх аспектів цієї проблеми.",
+                        ],
+                    },
+                },
+                {
+                    type: "greenSliderSection",
+                    data: {
+                        title: "Особливості діагностики:",
+                        text: "Ми використовуємо перевірені технології та індивідуально підбираємо режим лікування для кожного пацієнта, діагностика проводится на професійному офтальмологічному апараті IDRA.",
+                        slider: [
+                            {
+                                title: "Комплексний аналіз складу слізної плівки",
+                                text: "Слізна плівка складається з кількох шарів, кожен з яких має певний набір функцій. Будь-які відхилення складу або кількості певного компоненту призводить до порушення балансу і, відповідно, загостренню проявів хвороби сухого ока.",
+                            },
+                            {
+                                title: "Виявлення порушень роботи мейбомієвих залоз",
+                                text: "У повіках є залози, що виділяють жирний секрет — він захищає слізну плівку від висихання та мікробів. Порушення їхньої роботи викликає ячмінь, халязіон і блефарит. \n3D-зображення залоз допомагає лікарю оцінити їхній стан і контролювати лікування.",
+                            },
+                            {
+                                title: "Перевірка якості кліпання",
+                                text: "Моргання — важливий процес для здоров’я повік. Штучні вії, старіння, операції чи стреси можуть погіршувати змикання повік, що знижує зволоження ока й оновлення слізної плівки. Без стимуляції мейбомієві залози поступово відмирають, посилюючи сухість.",
+                            },
+                            {
+                                title: "Обстеження протягом 1 хвилини",
+                                text: "Яскраве світло подразнює око, спричинюючи надмірну сльозотечу навіть у здорових пацієнтів. \nВимірювання на апараті IDRA займає по 30 секунд для кожного ока. Таким чином дискомфорт мінімальний, а результати – максимально достовірні.",
+                            },
+                            {
+                                title: "Об’єктивний аналіз результатів",
+                                text: "Для обробки виміряний даних програмне забезпечення IDRA застосовує алгоритми із штучним інтелектом та машинним навчанням. Дані обробляються автоматично, мінімізуючи людський фактор. \nТаким чином ви отримуєте об’єктивне розуміння свого стану.",
+                            },
+                            {
+                                title: "Все задокументовано!",
+                                text: "Програмне забезпечення зберігає кожне фото та відео, відслідковує зміну параметрів для того, щоб ви були впевнені в доцільності та дієвості лікування.",
+                            },
+                        ],
+                        btn: {
+                            btnName: "записатися на прийом",
+                            btnLink: "#booking",
+                        },
+                    },
+                },
+                { type: "cta" },
+                {
+                    type: "numberListSection",
+                    data: {
+                        listTitle: "Етапи",
+                        paddingTop: true,
+                        paddingBottom: true,
+                        list: [
+                            {
+                                itemTitle:
+                                    "Запис на прийом та підготовка до діагностики",
+                                itemText: [
+                                    "Записатись на діагностику зору можна всього за кілька хвилин телефоном або онлайн на сайті.",
+                                    "Спеціальної підготовки не потрібно, але якщо носите м’які контактні лінзи, зніміть їх з вечора (рекомендовано за 12 годин до візиту). Окуляри необхідно взяти з собою для перевірки, а також офтальмологічні обстеження, які проходили раніше – лікар подивиться в динаміці, що змінилося за останній період. Бажано бути не за кермом, тому що буде незначний зоровий дискомфорт деякий час (зір поблизу буде не чітким).",
+                                ],
+                            },
+                            {
+                                itemTitle: "Комп’ютерна діагностика зору",
+                                itemText: [
+                                    "Саме обстеження відбувається швидко та комфортно. Використовуються прецизійні прилади, мікроскопічні методи візуалізації та адаптовані діагностичні тести, які лікар підбирає залежно від конкретної клінічної ситуації.",
+                                    "Тривалість діагностики складає 2-2,5 години. Один із найважливіших етапів обстеження — перевірка гостроти зору. Для цього пацієнт читає знаки або літери на таблицях, що розташовані на різних відстанях. Такі тести допомагають точно визначити ступінь порушення та правильно підібрати лінзи чи окуляри.",
+                                    "У ряді випадків лікар може використовувати краплі для розширення зіниць. Це необхідно, щоб тимчасово виключити вплив акомодаційної функції ока та отримати точніші дані при дослідженні очного дна.",
+                                ],
+                            },
+                            {
+                                itemTitle:
+                                    "Висновок за результатами обстеження",
+                                itemText: [
+                                    "Після проходження діагностики ви отримаєте офіційний протокол із оцінкою всіх параметрів зору та очного здоров'я. Лікар надасть рекомендації щодо подальших дій — від профілактики до конкретного плану лікування.",
+                                    "Якщо планується хірургічне втручання, то його обговорення стане ключовою частиною консультації. Усі важливі питання слід поставити та прояснити до моменту операції, щоб ухвалити виважене рішення.",
+                                ],
+                            },
+                        ],
                     },
                 },
                 {
@@ -2163,87 +2247,82 @@ export const servicesData: ServicesProps[] = [
                         title: "Часті запитання про лікування синдрому сухого",
                         content: [
                             {
-                                question: "ІPL – це лазер?",
-                                answer: [
-                                    { type: "text", text: "Ні." },
-                                    {
-                                        type: "text",
-                                        text: "IPL (укр. інтенсивне пульсуюче світло) – дуже яскраве світло із широким діапазоном довжин хвиль. Джерелом світла є ксенонова лампа, а корисний діапазон відокремлюють із застосуваннями світлофільтрів.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Наскільки безпечна процедура?",
+                                question:
+                                    "Сухість в очах: які симптоми і коли потрібне лікування?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Процедури із використанням IPL були вперше виконані ще у 1992 році. З того часу IPL терапія успішно застосовується для лікування великої кількості станів у пацієнтів всіх вікових категорій: від видалення родимих плям, пігментацій та судин до фотоомолодження.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Оскільки шкідливе випромінювання повністю «відрізається» світлофільтром, процедура цілком безпечна для пацієнта.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Чи болісна процедура?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Під час процедури IPL ви будете відчувати пощипування та бачити яскраві спалахи крізь закриті окулярами очі.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Для того, щоб процедура була комфортною, апарат обладнаний системою, що охолоджує шкіру. Відповідно до ваших відчуттів лікар налаштує параметри таким чином, щоб отримати максимальний лікувальний ефект та мінімізувати будь-які неприємні відчуття.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Скільки сеансів потрібно?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "IPL терапія активує процеси відновлення в зоні, де проводиться процедура. В результаті зменшується запалення, оновлюються тканини, нормалізується стан судин. Зміни можна помітити через 10-12 днів після сеансу, але отримання стабільної позитивної динаміки, особливо якщо є запалення або дисфункція мейбомієвих залоз, треба «закріпити» ефект.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Загальна рекомендована кількість сеансів для отримання стійкого ефекту – 3-4. Ваш лікар сформує курс з урахуванням форми та ступеню хвороби сухого ока, стану повік, шкіри периорбітальної ділянки та стану здоров’я.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Скільки займає сеанс?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "В нашій клініці процедура IPL терапії поєднана з автоматичним масажем повік для отримання стійкого та тривалого ефекту від лікувальної процедури.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Комплексна процедура IPL+автоматичний масаж повік займає до 40 хвилин.",
+                                        text: "Найчастіші ознаки — печіння, «пісок», почервоніння, затуманення зору наприкінці дня, світлобоязнь, дискомфорт у лінзах. Якщо відчуваєте сухість очей постійно або симптоми заважають роботі за екранами, це вже привід для обстеження й лікування ССО обох очей. Самолікування «випадковими» краплями рідко дає стабільний ефект — почніть із консультації офтальмолога.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Чи буде обличчя червоним/набряклим? Коли можна повернутись до роботи?",
+                                    "ССО — це що і як лікують «сухе око»?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Лікування хвороби сухого ока з використанням IPL терапія зазвичай добре переноситься пацієнтами: можна повернутись до рутинних справ одразу після виходу з маніпуляційного кабінету.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Оскільки терапія спрямована також на лікування судинних сіточок, зірочок, розацеа та будь-яких інших запальних захворювань шкіри, ділянка навколо очей може стати рожевою та злегка набрякнути. Лікар обов’язково обговорить з вами режими лікування та надасть індивідуальні рекомендації.",
+                                        text: "ССО (синдром сухого ока) — порушення стабільності слізної плівки. Лікування підбирають індивідуально: гігієна повік, правильно підібрані зволожувальні краплі (засоби від сухого ока), корекція звичок за комп’ютером, апаратні методи. «Лазерне лікування синдрому сухого ока» як термін використовують неточно — у сучасній офтальмології для випаровувального типу ССО ефективною є IPL-терапія, а не лазер.",
                                     },
                                 ],
                             },
                             {
-                                question: "Чи зможу відмовитись від крапель?",
+                                question:
+                                    "IPL-терапія синдрому сухого ока: що це і як працює?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Після завершення курсу IPL використання зволожуючих крапель мінімізується: більшість пацієнтів не мають потреби у використанні. Для пацієнтів, які мають високе зорове навантаження, ми пропонуємо курс підтримуючих процедур, які підтримують позитивний ефект та здоров’я очей.",
+                                        text: "IPL (інтенсивне імпульсне світло) м’яко впливає на край повік, зменшує запалення й телеангіектазії, розріджує густий секрет мейбомієвих залоз і стабілізує ліпідний шар слізної плівки. У результаті сльоза менше випаровується — зникає сухість, «пісок» і втома очей. Процедура триває 10–15 хвилин, анестезія не потрібна; за показаннями комбінується з масажем повік (ACTIVA MED) та базовим доглядом.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Скільки потрібно сеансів і коли буде ефект?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: " Класичний курс — 3–4 процедури з інтервалом 2–3 тижні. Більшість пацієнтів відчувають полегшення вже після 1–2 візитів, стабільний результат — до кінця курсу. Для контролю динаміки та точного налаштування лікування проводимо інструментальне обстеження (IDRA).",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Скільки це коштує: ціна/вартість обстеження і лікування?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Вартість залежить від обсягу обстеження та індивідуального плану (кількість сеансів IPL, супровідні процедури). Актуальні ціни, наявні акції та знижки уточнюйте під час консультації лікаря або при онлайн-реєстрації. Ми прозоро озвучуємо, що входить у прийом і курс; безкоштовно надаємо попередні рекомендації щодо підготовки до візиту.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Протипоказання, побічні ефекти, недоліки й переваги IPL",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "До типових протипоказань належать активні запальні процеси шкіри у зоні обробки, фоточутливість, деякі дерматологічні стани й вагітність/лактація — остаточно вирішує лікар після огляду. Побічні ефекти зазвичай легкі та короткочасні: почервоніння, відчуття тепла, рідше — тимчасова чутливість шкіри. Переваги — короткий час сеансу, відсутність реабілітації, вплив на першопричину (дисфункцію мейбомієвих залоз); можливий недолік — потрібен курс і підтримувальні візити.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Лікування синдрому сухого ока IPL: відгуки й рекомендації",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Відгуки пацієнтів найчастіше відзначають зменшення печіння, «піску» та втоми під кінець дня, кращу переносимість екранів і контактних лінз. Ми радимо орієнтуватися не лише на коментарі, а й на об’єктивні вимірювання під час огляду (IDRA): це дозволяє побачити реальні зміни слізної плівки та отримати персональні рекомендації.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "«Сушить очі» — що робити зараз і куди піти?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Якщо виникла сухість очей і потрібна термінова допомога — уникайте «агресивних» засобів, зніміть лінзи, зробіть перерву від екранів і запишіться на обстеження до офтальмолога. У приватній клініці ви отримаєте швидку консультацію, точний огляд, пояснення «чи варто» робити IPL саме вам і прозорий план лікування. Можна реєструватися онлайн або телефоном; під час прийому лікар відповість на запитання про переваги/недоліки, протипоказання та вартість курсу.",
                                     },
                                 ],
                             },
@@ -2260,6 +2339,85 @@ export const servicesData: ServicesProps[] = [
                     type: "hero",
                     data: {
                         title: "dry eye syndrome treatment",
+                        text: "Many years of experience of our specialists and modern diagnostic equipment allow us to eliminate the progression and complications of the disease.",
+                    },
+                },
+                {
+                    type: "preview",
+                    data: {
+                        title: "Dry Eye Syndrome: Diagnosis and Treatment",
+                        text: [
+                            "Dry eye syndrome is a condition in which the tear film loses stability and no longer properly protects the cornea. This causes dryness, burning, a “sand-like” sensation, redness, and fluctuating vision clarity, especially at the end of the day. The reasons vary: meibomian gland dysfunction, infrequent or incomplete blinking while using screens, age- and hormone-related changes, dry air. Without accurate diagnostics, symptoms become chronic, so it is crucial to determine which tear film layer is affected and choose targeted treatment.",
+                            "In our clinic, the diagnosis of dry eye syndrome is performed using unique certified equipment — IDRA — developed in Italy specifically for accurate assessment of all aspects of this condition.",
+                        ],
+                    },
+                },
+                {
+                    type: "greenSliderSection",
+                    data: {
+                        title: "Diagnostic Features:",
+                        text: "We use proven technologies and tailor the treatment approach for each patient individually. Diagnostics are performed using the professional ophthalmic device IDRA.",
+                        slider: [
+                            {
+                                title: "Comprehensive tear film composition analysis",
+                                text: "The tear film consists of several layers, each with specific functions. Any imbalance or changes in the quantity of any component disrupt stability and increase the symptoms of dry eye disease.",
+                            },
+                            {
+                                title: "Detection of meibomian gland dysfunction",
+                                text: "The eyelids contain glands that produce an oily secretion — it protects the tear film from evaporation and microbes. Dysfunction leads to stye, chalazion, and blepharitis.\n3D imaging of the glands helps the doctor assess their condition and monitor treatment.",
+                            },
+                            {
+                                title: "Blink quality evaluation",
+                                text: "Blinking is essential for healthy eyelids. False eyelashes, aging, surgery, or stress may lead to incomplete blinking, reducing eye hydration and tear film renewal. Without stimulation, meibomian glands gradually degrade, worsening dryness.",
+                            },
+                            {
+                                title: "1-minute examination",
+                                text: "Bright light irritates the eye, causing excessive tearing even in healthy patients.\nMeasurement with the IDRA device takes about 30 seconds per eye — ensuring minimal discomfort and highly accurate results.",
+                            },
+                            {
+                                title: "Objective results analysis",
+                                text: "To process measurements, IDRA software uses artificial intelligence and machine-learning algorithms. Data is analyzed automatically, minimizing the human factor.\nThis ensures a clear and objective understanding of your eye condition.",
+                            },
+                            {
+                                title: "Everything documented!",
+                                text: "The software stores all photos and videos, tracks changes in parameters so that you can clearly see the progress and effectiveness of the treatment.",
+                            },
+                        ],
+                        btn: {
+                            btnName: "book an appointment",
+                            btnLink: "#booking",
+                        },
+                    },
+                },
+                {
+                    type: "numberListSection",
+                    data: {
+                        listTitle: "Stages",
+                        list: [
+                            {
+                                itemTitle:
+                                    "Appointment and preparation for diagnostics",
+                                itemText: [
+                                    "You can schedule an eye diagnostics appointment within a few minutes by phone or online via the website.",
+                                    "No special preparation is needed, but if you wear soft contact lenses, remove them the night before (recommended 12 hours prior to the visit). Bring your eyeglasses for verification, as well as any previous ophthalmic examinations so the doctor can evaluate changes over time. It is recommended not to drive afterward because you may experience slight visual discomfort for a short time (near vision may be blurry).",
+                                ],
+                            },
+                            {
+                                itemTitle: "Computer vision diagnostics",
+                                itemText: [
+                                    "The examination is quick and comfortable. Precision devices, microscopic visualization methods, and adapted diagnostic tests are used, selected according to each specific clinical situation.",
+                                    "The diagnostics take 2–2.5 hours. One of the most important steps is visual acuity testing. The patient reads symbols or letters on charts placed at different distances. These tests help accurately determine the degree of impairment and correctly select lenses or glasses.",
+                                    "In some cases, the doctor may use eye drops to dilate the pupils. This is necessary to temporarily exclude the influence of accommodation and obtain more accurate data when examining the fundus.",
+                                ],
+                            },
+                            {
+                                itemTitle: "Diagnostics results and conclusion",
+                                itemText: [
+                                    "After completing the diagnostics, you will receive an official report with an assessment of all vision parameters and eye health. The doctor will provide recommendations for further steps — from prevention to a specific treatment plan.",
+                                    "If surgical intervention is planned, its discussion will be a key part of the consultation. It is important to ask and clarify all critical questions before the operation to make an informed decision.",
+                                ],
+                            },
+                        ],
                     },
                 },
                 {
@@ -2275,88 +2433,82 @@ export const servicesData: ServicesProps[] = [
                         title: "Frequently Asked Questions about Dry Eye Treatment",
                         content: [
                             {
-                                question: "Is IPL a laser?",
-                                answer: [
-                                    { type: "text", text: "No." },
-                                    {
-                                        type: "text",
-                                        text: "IPL (Intense Pulsed Light) is a very bright light with a broad range of wavelengths. The light source is a xenon lamp, and the useful spectrum is separated using light filters.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "How safe is the procedure?",
+                                question:
+                                    "Dry eyes: what are the symptoms and when is treatment needed?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "IPL procedures were first performed in 1992. Since then, IPL therapy has been successfully used to treat a wide range of conditions in patients of all ages: from removing birthmarks, pigmentation and vessels to photo-rejuvenation.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "As harmful radiation is fully filtered out with a light filter, the procedure is completely safe for the patient.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Is the procedure painful?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "During the IPL procedure, you may feel a tingling sensation and see bright flashes of light through protective goggles.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "To ensure comfort, the device is equipped with a skin cooling system. Depending on your sensations, the doctor will adjust the parameters to achieve maximum therapeutic effect while minimizing discomfort.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "How many sessions are needed?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "IPL therapy activates recovery processes in the treated area. As a result, inflammation decreases, tissues renew, and the condition of the vessels normalizes. Improvements can be noticed 10–12 days after a session, but to ensure stable positive progress—especially if inflammation or meibomian gland dysfunction is present—it is important to solidify the result.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "The generally recommended number of sessions for long-lasting results is 3–4. Your doctor will determine a personalized treatment plan considering the severity and type of dry eye disease, eyelid condition, periocular skin, and overall health.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "How long does one session take?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "In our clinic, IPL therapy is combined with an automated eyelid massage to achieve a stable and long-lasting treatment effect.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "A combined IPL + automated eyelid massage session takes up to 40 minutes.",
+                                        text: "The most common signs include burning, “grittiness”, redness, blurry vision by the end of the day, light sensitivity, and contact lens discomfort. If you constantly feel dryness or symptoms interfere with screen work, it’s already a reason for examination and treatment of dry eye disease in both eyes. Self-treatment with random drops rarely gives a stable effect — start with an ophthalmologist consultation.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Will my face be red or swollen? When can I return to work?",
+                                    "DED — what is dry eye disease and how is it treated?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Dry eye treatment using IPL therapy is generally well tolerated: you can return to your routine immediately after leaving the procedure room.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Since the procedure also targets vascular issues such as telangiectasia, rosacea and other inflammatory skin conditions, the periocular area may become slightly pink and swollen. Your doctor will discuss treatment protocols and provide personalized recommendations.",
+                                        text: "DED (dry eye disease) is a condition where the tear film loses stability. Treatment is personalized: eyelid hygiene, properly selected lubricating eye drops, adjusting screen habits, and instrumental therapies. The term “laser treatment for dry eye” is often used incorrectly — in modern ophthalmology, IPL therapy is effective for evaporative DED rather than laser.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Will I be able to stop using eye drops?",
+                                    "IPL therapy for dry eye: what is it and how does it work?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "After completing the IPL course, the need for lubricating eye drops is significantly reduced: most patients no longer require them. For patients with high visual load, we recommend supportive sessions to maintain the effect and eye health.",
+                                        text: "IPL (Intense Pulsed Light) gently treats the eyelid margins, reduces inflammation and telangiectasias, liquefies thick meibomian gland secretions, and stabilizes the lipid layer of the tear film. As a result, the tear evaporates less — dryness, “grittiness”, and eye fatigue decrease. The procedure takes 10–15 minutes, local anesthesia is not required; if indicated, it is combined with eyelid massage (ACTIVA MED) and standard care.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "How many sessions are needed and when will the effect appear?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "A standard course includes 3–4 procedures with an interval of 2–3 weeks. Most patients feel relief after 1–2 visits, while a stable result is achieved by the end of the course. To monitor dynamics and fine-tune treatment, we perform instrumental diagnostics (IDRA).",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "How much does it cost: price of examination and treatment?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "The cost depends on the diagnostic amount and individual plan (number of IPL sessions, additional procedures). Current prices, promotions and discounts can be clarified during consultation or with online registration. We clearly explain what is included in the visit and the course; preliminary preparation recommendations are provided free of charge.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Contraindications, side effects, disadvantages and advantages of IPL",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Typical contraindications include active skin inflammation in the treatment area, photosensitivity, certain dermatological conditions and pregnancy / breastfeeding — the final decision is made by the doctor after examination. Side effects are usually mild and short-term: redness, warmth, rarely — temporary skin sensitivity. Advantages: quick sessions, no downtime, addressing the root cause (meibomian gland dysfunction); possible drawback — a full course and maintenance visits are required.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Dry eye IPL treatment: reviews and recommendations",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Patients often report reduced burning, “grittiness” and end-of-day fatigue, and improved tolerance of screens and contact lenses. We recommend relying not only on reviews but also on objective measurements during diagnostics (IDRA): this shows real improvements in the tear film and helps personalize treatment.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "“Eyes feel dry” — what to do right now and where to go?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "If dryness appears and urgent help is needed — avoid harsh products, remove contact lenses, take a break from screens and book an eye examination. In a private clinic you receive quick consultation, accurate diagnostics, an explanation whether IPL is right for you, and a transparent treatment plan. You can register online or by phone; during the visit, the doctor will answer questions about benefits/risks, contraindications, and treatment cost.",
                                     },
                                 ],
                             },
@@ -2373,6 +2525,86 @@ export const servicesData: ServicesProps[] = [
                     type: "hero",
                     data: {
                         title: "лечение синдрома сухого глаза",
+                        text: "Многолетний опыт работы наших специалистов и современное диагностическое оборудование позволяют устранить прогрессирование и усложнение болезни.",
+                    },
+                },
+                {
+                    type: "preview",
+                    data: {
+                        title: "Синдром сухого глаза: диагностика и лечение",
+                        text: [
+                            "Синдром сухого глаза — это состояние, при котором слёзная плёнка теряет стабильность и перестаёт должным образом защищать роговицу. Из-за этого возникают сухость, жжение, ощущение «песка», покраснение и колебания чёткости зрения, особенно к концу дня. Причины разные: дисфункция мейбомиевых желез, редкое или неполное моргание при работе за экранами, возрастные и гормональные изменения, сухой воздух. Без точной диагностики симптомы закрепляются, поэтому важно определить, какой слой слезы нарушен, и подобрать целенаправленное лечение.",
+                            "В нашей клинике диагностика синдрома сухого глаза проводится с помощью уникального сертифицированного оборудования IDRA, разработанного в Италии специально для точного определения всех аспектов этого состояния.",
+                        ],
+                    },
+                },
+                {
+                    type: "greenSliderSection",
+                    data: {
+                        title: "Особенности диагностики:",
+                        text: "Мы используем проверенные технологии и индивидуально подбираем режим лечения каждому пациенту. Диагностика проводится на профессиональном офтальмологическом оборудовании IDRA.",
+                        slider: [
+                            {
+                                title: "Комплексный анализ состава слезной пленки",
+                                text: "Слезная пленка состоит из нескольких слоёв, каждый из которых выполняет важные функции. Любые отклонения состава или количества компонентов нарушают баланс и усиливают проявления синдрома сухого глаза.",
+                            },
+                            {
+                                title: "Выявление нарушений работы мейбомиевых желез",
+                                text: "В веках есть железы, выделяющие жирный секрет — он защищает слезную пленку от пересыхания и микробов. Нарушение их работы вызывает ячмень, халязион и блефарит.\n3D-изображения желез помогают врачу оценить их состояние и контролировать лечение.",
+                            },
+                            {
+                                title: "Оценка качества моргания",
+                                text: "Моргание жизненно важно для здоровья век. Искусственные ресницы, возрастные изменения, операции или стресс могут ухудшать смыкание век, что снижает увлажнение глаза и обновление слезной пленки. Без стимуляции мейбомиевые железы постепенно атрофируются, усиливая сухость.",
+                            },
+                            {
+                                title: "Обследование за 1 минуту",
+                                text: "Яркий свет раздражает глаз и вызывает обильное слезотечение даже у здоровых людей.\nИзмерение на аппарате IDRA занимает около 30 секунд на каждый глаз — минимум дискомфорта и максимальная достоверность результатов.",
+                            },
+                            {
+                                title: "Объективный анализ результатов",
+                                text: "Для обработки данных программное обеспечение IDRA использует алгоритмы искусственного интеллекта и машинного обучения. Данные анализируются автоматически, минимизируя человеческий фактор.\nТак вы получаете максимально объективное понимание состояния глаз.",
+                            },
+                            {
+                                title: "Всё задокументировано!",
+                                text: "Программа сохраняет каждое фото и видео, отслеживает динамику параметров, чтобы вы были уверены в эффективности и обоснованности лечения.",
+                            },
+                        ],
+                        btn: {
+                            btnName: "записаться на приём",
+                            btnLink: "#booking",
+                        },
+                    },
+                },
+                {
+                    type: "numberListSection",
+                    data: {
+                        listTitle: "Этапы",
+                        list: [
+                            {
+                                itemTitle:
+                                    "Запись на приём и подготовка к диагностике",
+                                itemText: [
+                                    "Записаться на диагностику зрения можно всего за несколько минут по телефону или онлайн на сайте.",
+                                    "Специальная подготовка не требуется, но если вы носите мягкие контактные линзы, снимите их с вечера (рекомендуется за 12 часов до визита). Очки необходимо взять с собой для проверки, а также предыдущие офтальмологические обследования — врач оценит, что изменилось за последнее время. Желательно не быть за рулём, так как некоторое время может сохраняться лёгкий зрительный дискомфорт (ближнее зрение будет нечётким).",
+                                ],
+                            },
+                            {
+                                itemTitle: "Компьютерная диагностика зрения",
+                                itemText: [
+                                    "Обследование проходит быстро и комфортно. Используются прецизионные приборы, микроскопические методы визуализации и адаптированные диагностические тесты, которые врач подбирает в зависимости от клинической ситуации.",
+                                    "Продолжительность диагностики составляет 2–2,5 часа. Один из важнейших этапов — проверка остроты зрения. Пациент читает знаки или буквы на таблицах на разных расстояниях. Эти тесты помогают точно определить степень нарушения и правильно подобрать линзы или очки.",
+                                    "В ряде случаев врач может использовать капли для расширения зрачков. Это необходимо, чтобы временно исключить влияние аккомодации и получить более точные данные при исследовании глазного дна.",
+                                ],
+                            },
+                            {
+                                itemTitle:
+                                    "Заключение по результатам обследования",
+                                itemText: [
+                                    "После диагностики вы получите официальный протокол с оценкой всех параметров зрения и здоровья глаз. Врач предоставит рекомендации по дальнейшим действиям — от профилактики до конкретного плана лечения.",
+                                    "Если планируется хирургическое вмешательство, его обсуждение станет ключевой частью консультации. Важно задать и прояснить все вопросы до операции, чтобы принять взвешенное решение.",
+                                ],
+                            },
+                        ],
                     },
                 },
                 {
@@ -2388,87 +2620,82 @@ export const servicesData: ServicesProps[] = [
                         title: "Частые вопросы о лечении синдрома сухого глаза",
                         content: [
                             {
-                                question: "IPL — это лазер?",
-                                answer: [
-                                    { type: "text", text: "Нет." },
-                                    {
-                                        type: "text",
-                                        text: "IPL (интенсивный импульсный свет) — это очень яркий свет с широким диапазоном длин волн. Источником света служит ксеноновая лампа, а полезный диапазон отделяется при помощи светофильтров.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Насколько безопасна процедура?",
+                                question:
+                                    "Сухость глаз: какие симптомы и когда нужно лечение?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Процедуры IPL впервые начали применять ещё в 1992 году. С тех пор IPL-терапия успешно используется для лечения широкого спектра состояний у пациентов всех возрастных категорий: от удаления пигментации, сосудов и родимых пятен до фотоомоложения.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Поскольку вредное излучение полностью «отсекается» светофильтром, процедура абсолютно безопасна для пациента.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Процедура болезненная?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Во время IPL-процедуры вы можете ощущать лёгкое пощипывание и видеть яркие вспышки через защитные очки.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Для повышения комфорта аппарат оснащён системой охлаждения кожи. В зависимости от ощущений врач настроит параметры так, чтобы получить максимальный лечебный эффект и минимизировать дискомфорт.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Сколько сеансов необходимо?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "IPL-терапия активирует восстановительные процессы в зоне воздействия. В результате уменьшается воспаление, обновляются ткани, нормализуется состояние сосудов. Первые изменения заметны через 10–12 дней, но для устойчивого эффекта — особенно при воспалении или дисфункции мейбомиевых желез — важно закрепить результат.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Рекомендуемое количество процедур для стойкого эффекта — 3–4. Врач сформирует курс, учитывая форму и тяжесть сухого глаза, состояние век, кожи периорбитальной области и общее состояние здоровья.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Сколько длится сеанс?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "В нашей клинике IPL-терапия совмещена с автоматическим массажем век для достижения стойкого и продолжительного лечебного эффекта.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Комплексная процедура IPL + автоматический массаж век занимает до 40 минут.",
+                                        text: "Наиболее частые признаки — жжение, «песок», покраснение, затуманивание зрения к концу дня, светобоязнь, дискомфорт при ношении линз. Если сухость возникает постоянно или симптомы мешают работе за компьютером — это повод для обследования и лечения синдрома сухого глаза обоих глаз. Самолечение случайными каплями редко даёт стабильный результат — начните с консультации офтальмолога.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Будет ли лицо красным/отёчным? Когда можно вернуться к работе?",
+                                    "ССГ — что это такое и как лечат «сухой глаз»?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Лечение синдрома сухого глаза с использованием IPL-терапии обычно хорошо переносится: вы можете вернуться к обычным делам сразу после процедуры.",
-                                    },
-                                    {
-                                        type: "text",
-                                        text: "Так как терапия направлена также на лечение сосудистых сеточек, розацеа и других воспалительных заболеваний кожи, область вокруг глаз может слегка порозоветь и немного отечь. Врач обязательно обсудит планы лечения и даст индивидуальные рекомендации.",
+                                        text: "ССГ (синдром сухого глаза) — нарушение стабильности слёзной плёнки. Лечение подбирается индивидуально: гигиена век, правильно подобранные увлажняющие капли, корректировка привычек при работе за экранами, аппаратные методы. Термин «лазерное лечение сухого глаза» часто используется неверно — в современной офтальмологии при испарительном типе ССГ эффективна IPL-терапия, а не лазер.",
                                     },
                                 ],
                             },
                             {
-                                question: "Смогу ли я отказаться от капель?",
+                                question:
+                                    "IPL-терапия при синдроме сухого глаза: что это и как работает?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "После завершения курса IPL необходимость в увлажняющих каплях значительно снижается: большинству пациентов они уже не нужны. Для пациентов с высокой зрительной нагрузкой мы предлагаем поддерживающие процедуры для сохранения результата и здоровья глаз.",
+                                        text: "IPL (интенсивный импульсный свет) мягко воздействует на край век, уменьшает воспаление и телеангиэктазии, разжижает густой секрет мейбомиевых желёз и стабилизирует липидный слой слёзной плёнки. В итоге слеза меньше испаряется — исчезает сухость, «песок» и усталость глаз. Процедура длится 10–15 минут, анестезия не требуется; по показаниям сочетается с массажем век (ACTIVA MED) и базовым уходом.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Сколько нужно сеансов и когда будет результат?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Классический курс — 3–4 процедуры с интервалом 2–3 недели. Большинство пациентов ощущают улучшение уже после 1–2 визитов, устойчивый результат — к концу курса. Для контроля динамики и точной настройки лечения выполняем инструментальное обследование (IDRA).",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Сколько это стоит: цена обследования и лечения?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Стоимость зависит от объёма диагностики и индивидуального плана (количество сеансов IPL, сопутствующие процедуры). Актуальные цены, акции и скидки уточняйте при консультации или при онлайн-записи. Мы прозрачно озвучиваем, что входит в приём и курс; предварительные рекомендации по подготовке предоставляем бесплатно.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Противопоказания, побочные эффекты, недостатки и преимущества IPL",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Типичные противопоказания: активные воспалительные процессы кожи в зоне обработки, фоточувствительность, некоторые дерматологические состояния, беременность/лактация — окончательное решение принимает врач после осмотра. Побочные эффекты обычно лёгкие и кратковременные: покраснение, ощущение тепла, реже — временная чувствительность кожи. Преимущества — короткий сеанс, отсутствие реабилитации, воздействие на первопричину (дисфункцию мейбомиевых желёз); возможный недостаток — необходим курс и поддерживающие визиты.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Лечение синдрома сухого глаза IPL: отзывы и рекомендации",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Пациенты чаще всего отмечают уменьшение жжения, «песка» и усталости к концу дня, лучшую переносимость экранов и контактных линз. Мы рекомендуем ориентироваться не только на отзывы, но и на объективные измерения при осмотре (IDRA): это показывает реальные изменения слёзной плёнки и помогает персонализировать лечение.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "«Сушит глаза» — что делать сейчас и куда обратиться?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Если появилась сухость глаз и нужна срочная помощь — избегайте агрессивных средств, снимите линзы, сделайте перерыв от экранов и запишитесь к офтальмологу на обследование. В частной клинике вы получите быструю консультацию, точный осмотр, объяснение — подходит ли вам IPL, и прозрачный план лечения. Можно записаться онлайн или по телефону; на приёме врач ответит на вопросы о преимуществах/недостатках, противопоказаниях и стоимости курса.",
                                     },
                                 ],
                             },

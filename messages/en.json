@@ -217,7 +217,9 @@
         "preveiwSubtitle": "about the service",
         "advantages": "advantages",
         "priceSubpage": "Prices",
-        "lazerEditionPriceText": "The technique is selected after the examination, individually for you, to obtain the best result"
+        "lazerEditionPriceText": "The technique is selected after the examination, individually for you, to obtain the best result",
+        "callUsTitle": "Contact us",
+        "callUsText": "If you have any questions, call our friendly call center or make an appointment for diagnostics with further consultation."
     },
     "PricePage": {
         "title": "Prices",

@@ -31,12 +31,18 @@ export const PriceSection = ({
                 <h3 className="subtitle tab:max-w-[318px] tab:mb-4 mb-5">
                     {t("priceSubpage")}
                 </h3>
-                <h2 className="title-section tab:max-w-[700px] pc:max-w-[890px] tab:mx-auto prepc:mx-0 tab:text-center mb-6 text-left">
+                <h2
+                    className={
+                        "title-section tab:max-w-[700px] pc:max-w-[890px] tab:mx-auto prepc:mx-0 tab:text-center mb-6 text-left"
+                    }
+                >
                     {data.title}
                 </h2>
             </div>
             <div className="prepc:flex prepc:justify-between prepc:items-start">
-                <div className={`${data.card ? "hidden" : "prepc:w-[32%]"}`}>
+                <div
+                    className={`${data.card ? "hidden" : "prepc:block prepc:w-[32%] hidden"}`}
+                >
                     <h2 className="title-section tab:max-w-[700px] pc:max-w-[890px] tab:mx-auto prepc:mx-0 text-left">
                         {data.title}
                     </h2>
