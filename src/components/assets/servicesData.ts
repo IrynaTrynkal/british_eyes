@@ -3,7 +3,7 @@ import { PriceItemType, priceList } from "./priceList";
 
 export type SectionType =
     | { type: "preview"; data: PreviewProps }
-    | { type: "roundImageAndTextSection"; data: RoundImageAndTextProps[] }
+    | { type: "roundImageAndTextSection"; data: RoundBlock }
     | { type: "numberListSection"; data: NumberListProps }
     | { type: "methodsSection"; data: MethodsSectionProps }
     | { type: "greenSliderSection"; data: GreenSliderSectionProps }
@@ -13,7 +13,8 @@ export type SectionType =
     | { type: "doctors" }
     | { type: "giftCTA" }
     | { type: "hero"; data: HeroSomeServiceProps }
-    | { type: "faq"; data: FAQServiceSectionType };
+    | { type: "faq"; data: FAQServiceSectionType }
+    | { type: "textsColumns"; data: TextsColumnsSectionType };
 
 export type ServicesLocaleProps = {
     textMain?: string;
@@ -60,10 +61,8 @@ export type MethodsSectionProps = {
 };
 
 export type RoundTextType = {
-    list?: boolean;
-    textBeforeList?: string;
     greenText?: string;
-    content?: string[];
+    content?: TextType[];
 };
 export type BtnType = {
     btnName: string;
@@ -72,10 +71,18 @@ export type BtnType = {
 };
 export type RoundImageAndTextProps = {
     title: string;
-    image: string;
+    image?: string;
+    cta?: boolean;
+    logo?: boolean;
     imagePosition?: "object-left" | "object-right";
     text: RoundTextType[];
     btn?: BtnType[];
+};
+
+export type RoundBlock = {
+    firstImageLeft?: boolean;
+    paddingTop?: boolean;
+    data: RoundImageAndTextProps[];
 };
 
 export type NumberListItemType = {
@@ -171,28 +178,42 @@ export type HeroSomeServiceProps = {
     lazer?: { listTitle: string; list: string[] };
 };
 
-export type ParagraphAnswer = {
+export type ParagraphContent = {
     type: "text";
     text: string | TextSegment[];
     gap?: boolean;
 };
 
-export type ListAnswer = {
+export type ListContent = {
     type: "list";
     list: (string | TextSegment[])[];
     gap?: boolean;
+    numeric?: boolean;
 };
 
-export type AnswerType = ParagraphAnswer | ListAnswer;
+export type TextType = ParagraphContent | ListContent;
 
 export type TextSegment = {
     value: string;
     bold?: boolean;
+    subtitle?: boolean;
+};
+
+export type BlockType = {
+    title: string;
+    text: TextType[];
+};
+
+export type TextsColumnsSectionType = {
+    title: string;
+    text?: string;
+    paddingTop?: boolean;
+    blocks: BlockType[];
 };
 
 export type FAQServiceListType = {
     question: string;
-    answer: AnswerType[];
+    answer: TextType[];
 };
 
 export type FAQServiceSectionType = {
@@ -233,66 +254,77 @@ export const servicesData: ServicesProps[] = [
                 },
                 {
                     type: "roundImageAndTextSection",
-                    data: [
-                        {
-                            title: "Повна діагностика зору включає",
-                            image: "/images/perevirka-round.jpg",
-                            text: [
-                                {
-                                    list: true,
-                                    textBeforeList:
-                                        "Під час повного обстеження зору виконуються:",
-                                    content: [
-                                        "вимірювання параметрів ока на цифрових приладах;",
-                                        "аналіз медичної документації;",
-                                        "спеціальні діагностичні тести для кожного ока окремо та у поєднаному режимі;",
-                                        "мікроскопічний огляд анатомічних структур ока із застосуванням сильного збільшення.",
-                                    ],
-                                },
-                                {
-                                    content: [
-                                        "Для перевірки гостроти зору використовуються класичні таблиці з літерами чи символами, що розташовані на різній відстані. Це допомагає визначити ступінь короткозорості, далекозорості або наявність астигматизму та підібрати відповідні лінзи.",
-                                        "Під час діагностики можуть використовуватися краплі для розширення зіниць. Вони тимчасово блокують роботу акомодаційного м'яза, дозволяючи точніше оцінити рефракцію ока та уважно вивчити стан очного дна.",
-                                        "Весь процес обстеження проходить у щадному та комфортному форматі, не вимагає контакту з поверхнею ока та підходить як дорослим, так і дітям.",
-                                    ],
-                                },
-                            ],
-                            // btn: [
-                            //     {
-                            //         btnName: "дізнатись ціну",
-                            //         btnLink: "/tsiny",
-                            //         btnSecondary: true,
-                            //     },
-                            //     {
-                            //         btnName: "запис на консультацію",
-                            //         btnLink: "#booking",
-                            //     },
-                            // ],
-                        },
-                        {
-                            title: "Регулярна перевірка зору – основа профілактики захворювань",
-                            image: "/images/choice.jpg",
-                            text: [
-                                {
-                                    content: [
-                                        "Періодична діагностика очей потрібна кожному, хто піклується про своє здоров'я. Це не просто спосіб зберегти добрий зір, а й ефективний метод раннього виявлення різних патологій, у тому числі тих, які не пов'язані безпосередньо з органами зору.",
-                                        "Під час обстеження офтальмолог може виявити ознаки загальних захворювань, оскільки стан судин сітківки відбиває роботу серцево-судинної системи. Очі — один із небагатьох органів, за якими можна отримати інформацію про вени та артерії без складних процедур.",
-                                        "Навіть за відсутності скарг важливо не пропускати профілактичних оглядів. Деякі порушення розвиваються потай і не проявляють себе на ранніх стадіях. Тільки регулярний контроль дозволяє своєчасно помітити зміни та запобігти погіршенню зору.",
-                                    ],
-                                },
-                                {
-                                    greenText:
-                                        "Оптимальна частота відвідування офтальмолога – один раз на рік. Це правило актуальне навіть для тих, хто не має проблем із зором. Профілактика завжди ефективніша, ніж лікування - особливо коли йдеться про очі.",
-                                },
-                            ],
-                            // btn: [
-                            //     {
-                            //         btnName: "запис на консультацію",
-                            //         btnLink: "#booking",
-                            //     },
-                            // ],
-                        },
-                    ],
+                    data: {
+                        data: [
+                            {
+                                title: "Повна діагностика зору включає",
+                                image: "/images/perevirka-round.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                text: "Під час повного обстеження зору виконуються:",
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "вимірювання параметрів ока на цифрових приладах;",
+                                                    "аналіз медичної документації;",
+                                                    "спеціальні діагностичні тести для кожного ока окремо та у поєднаному режимі;",
+                                                    "мікроскопічний огляд анатомічних структур ока із застосуванням сильного збільшення.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Для перевірки гостроти зору використовуються класичні таблиці з літерами чи символами, що розташовані на різній відстані. Це допомагає визначити ступінь короткозорості, далекозорості або наявність астигматизму та підібрати відповідні лінзи.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Під час діагностики можуть використовуватися краплі для розширення зіниць. Вони тимчасово блокують роботу акомодаційного м'яза, дозволяючи точніше оцінити рефракцію ока та уважно вивчити стан очного дна.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Весь процес обстеження проходить у щадному та комфортному форматі, не вимагає контакту з поверхнею ока та підходить як дорослим, так і дітям.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Регулярна перевірка зору – основа профілактики захворювань",
+                                image: "/images/choice.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Періодична діагностика очей потрібна кожному, хто піклується про своє здоров'я. Це не просто спосіб зберегти добрий зір, а й ефективний метод раннього виявлення різних патологій, у тому числі тих, які не пов'язані безпосередньо з органами зору.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Під час обстеження офтальмолог може виявити ознаки загальних захворювань, оскільки стан судин сітківки відбиває роботу серцево-судинної системи. Очі — один із небагатьох органів, за якими можна отримати інформацію про вени та артерії без складних процедур.",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Навіть за відсутності скарг важливо не пропускати профілактичних оглядів. Деякі порушення розвиваються потай і не проявляють себе на ранніх стадіях. Тільки регулярний контроль дозволяє своєчасно помітити зміни та запобігти погіршенню зору.",
+                                            },
+                                        ],
+                                    },
+                                    {
+                                        greenText:
+                                            "Оптимальна частота відвідування офтальмолога – один раз на рік. Це правило актуальне навіть для тих, хто не має проблем із зором. Профілактика завжди ефективніша, ніж лікування - особливо коли йдеться про очі.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
                 },
                 { type: "cta" },
                 {
@@ -652,66 +684,77 @@ export const servicesData: ServicesProps[] = [
                 },
                 {
                     type: "roundImageAndTextSection",
-                    data: [
-                        {
-                            title: "Comprehensive vision diagnostics include",
-                            image: "/images/perevirka-round.jpg",
-                            text: [
-                                {
-                                    list: true,
-                                    textBeforeList:
-                                        "During a complete eye examination, the following procedures are performed:",
-                                    content: [
-                                        "measurement of eye parameters using digital devices;",
-                                        "analysis of medical documentation;",
-                                        "special diagnostic tests for each eye separately and in combined mode;",
-                                        "microscopic examination of the eye’s anatomical structures using high magnification.",
-                                    ],
-                                },
-                                {
-                                    content: [
-                                        "To check visual acuity, classic charts with letters or symbols placed at different distances are used. This helps determine the degree of myopia, hyperopia, or astigmatism and select the appropriate lenses.",
-                                        "During diagnostics, eye drops may be used to dilate the pupils. They temporarily block the accommodation muscle, allowing a more accurate assessment of the eye’s refraction and a detailed examination of the retina.",
-                                        "The entire examination process is gentle and comfortable, requires no contact with the eye surface, and is suitable for both adults and children.",
-                                    ],
-                                },
-                            ],
-                            // btn: [
-                            //     {
-                            //         btnName: "find out the price",
-                            //         btnLink: "/tsiny",
-                            //         btnSecondary: true,
-                            //     },
-                            //     {
-                            //         btnName: "appointment booking",
-                            //         btnLink: "#booking",
-                            //     },
-                            // ],
-                        },
-                        {
-                            title: "Regular eye exams — the foundation of disease prevention",
-                            image: "/images/choice.jpg",
-                            text: [
-                                {
-                                    content: [
-                                        "Periodic eye diagnostics are essential for anyone who cares about their health. It’s not just a way to maintain good vision but also an effective method for early detection of various pathologies, including those not directly related to the eyes.",
-                                        "During an examination, an ophthalmologist can detect signs of general diseases since the condition of the retinal vessels reflects the state of the cardiovascular system. The eyes are one of the few organs through which information about veins and arteries can be obtained without complex procedures.",
-                                        "Even in the absence of symptoms, it’s important not to skip preventive check-ups. Some disorders develop silently and do not manifest in the early stages. Only regular monitoring allows timely detection of changes and helps prevent vision deterioration.",
-                                    ],
-                                },
-                                {
-                                    greenText:
-                                        "The optimal frequency of visiting an ophthalmologist is once a year. This rule applies even to those with no vision problems. Prevention is always more effective than treatment — especially when it comes to the eyes.",
-                                },
-                            ],
-                            // btn: [
-                            //     {
-                            //         btnName: "appointment booking",
-                            //         btnLink: "#booking",
-                            //     },
-                            // ],
-                        },
-                    ],
+                    data: {
+                        data: [
+                            {
+                                title: "Comprehensive Vision Diagnostics Includes",
+                                image: "/images/perevirka-round.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                text: "During a full vision examination, the following are performed:",
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "measurement of eye parameters using digital devices;",
+                                                    "analysis of medical records;",
+                                                    "special diagnostic tests for each eye separately and in combined mode;",
+                                                    "microscopic examination of the anatomical structures of the eye using high magnification.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "To check visual acuity, classic charts with letters or symbols placed at different distances are used. This helps determine the degree of myopia, hyperopia, or astigmatism and select appropriate lenses.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "During the diagnostics, drops may be used to dilate the pupils. They temporarily block the accommodation muscle, allowing a more accurate assessment of the eye’s refraction and a thorough examination of the fundus.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "The entire diagnostic process is gentle and comfortable, does not require contact with the eye surface, and is suitable for both adults and children.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Regular Vision Check-ups – The Foundation of Disease Prevention",
+                                image: "/images/choice.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Regular eye diagnostics are necessary for everyone who cares about their health. It is not only a way to maintain good vision but also an effective method for early detection of various pathologies, including those not directly related to the visual organs.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "During the examination, an ophthalmologist can detect signs of general diseases since the condition of the retinal vessels reflects the functioning of the cardiovascular system. The eyes are one of the few organs through which information about veins and arteries can be obtained without complex procedures.",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Even in the absence of complaints, it is important not to skip preventive examinations. Some disorders develop silently and do not manifest at early stages. Only regular monitoring allows timely detection of changes and prevention of vision deterioration.",
+                                            },
+                                        ],
+                                    },
+                                    {
+                                        greenText:
+                                            "The optimal frequency of visiting an ophthalmologist is once a year. This rule applies even to those who have no vision problems. Prevention is always more effective than treatment — especially when it comes to your eyes.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
                 },
                 { type: "cta" },
                 {
@@ -1071,66 +1114,77 @@ export const servicesData: ServicesProps[] = [
                 },
                 {
                     type: "roundImageAndTextSection",
-                    data: [
-                        {
-                            title: "Полная диагностика зрения включает",
-                            image: "/images/perevirka-round.jpg",
-                            text: [
-                                {
-                                    list: true,
-                                    textBeforeList:
-                                        "Во время полного обследования зрения выполняются:",
-                                    content: [
-                                        "измерение параметров глаза на цифровых приборах;",
-                                        "анализ медицинской документации;",
-                                        "специальные диагностические тесты для каждого глаза отдельно и в сочетанном режиме;",
-                                        "микроскопический осмотр анатомических структур глаза с использованием сильного увеличения.",
-                                    ],
-                                },
-                                {
-                                    content: [
-                                        "Для проверки остроты зрения используются классические таблицы с буквами или символами, расположенными на разном расстоянии. Это помогает определить степень близорукости, дальнозоркости или наличие астигматизма и подобрать подходящие линзы.",
-                                        "Во время диагностики могут применяться капли для расширения зрачков. Они временно блокируют работу аккомодационной мышцы, что позволяет точнее оценить рефракцию глаза и внимательно изучить состояние глазного дна.",
-                                        "Весь процесс обследования проходит в щадящем и комфортном формате, не требует контакта с поверхностью глаза и подходит как взрослым, так и детям.",
-                                    ],
-                                },
-                            ],
-                            // btn: [
-                            //     {
-                            //         btnName: "узнать цену",
-                            //         btnLink: "/tsiny",
-                            //         btnSecondary: true,
-                            //     },
-                            //     {
-                            //         btnName: "запись на консультацию",
-                            //         btnLink: "#booking",
-                            //     },
-                            // ],
-                        },
-                        {
-                            title: "Регулярная проверка зрения — основа профилактики заболеваний",
-                            image: "/images/choice.jpg",
-                            text: [
-                                {
-                                    content: [
-                                        "Периодическая диагностика глаз необходима каждому, кто заботится о своем здоровье. Это не просто способ сохранить хорошее зрение, но и эффективный метод раннего выявления различных патологий, включая те, которые не связаны напрямую с органами зрения.",
-                                        "Во время обследования офтальмолог может выявить признаки общих заболеваний, так как состояние сосудов сетчатки отражает работу сердечно-сосудистой системы. Глаза — один из немногих органов, по которым можно получить информацию о венах и артериях без сложных процедур.",
-                                        "Даже при отсутствии жалоб важно не пропускать профилактические осмотры. Некоторые нарушения развиваются скрыто и не проявляют себя на ранних стадиях. Только регулярный контроль позволяет вовремя заметить изменения и предотвратить ухудшение зрения.",
-                                    ],
-                                },
-                                {
-                                    greenText:
-                                        "Оптимальная частота посещения офтальмолога — один раз в год. Это правило актуально даже для тех, у кого нет проблем со зрением. Профилактика всегда эффективнее лечения — особенно когда речь идет о глазах.",
-                                },
-                            ],
-                            // btn: [
-                            //     {
-                            //         btnName: "запись на консультацию",
-                            //         btnLink: "#booking",
-                            //     },
-                            // ],
-                        },
-                    ],
+                    data: {
+                        data: [
+                            {
+                                title: "Полная диагностика зрения включает",
+                                image: "/images/perevirka-round.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                text: "Во время полного обследования зрения выполняются следующие процедуры:",
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "измерение параметров глаза на цифровых приборах;",
+                                                    "анализ медицинской документации;",
+                                                    "специальные диагностические тесты для каждого глаза отдельно и в комбинированном режиме;",
+                                                    "микроскопическое исследование анатомических структур глаза с применением сильного увеличения.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Для проверки остроты зрения используются классические таблицы с буквами или символами, расположенными на разных расстояниях. Это помогает определить степень близорукости, дальнозоркости или наличие астигматизма и подобрать подходящие линзы.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Во время диагностики могут применяться капли для расширения зрачков. Они временно блокируют работу аккомодационной мышцы, что позволяет точнее оценить рефракцию глаза и внимательно изучить состояние глазного дна.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Весь процесс обследования проходит в щадящем и комфортном формате, не требует контакта с поверхностью глаза и подходит как взрослым, так и детям.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Регулярная проверка зрения — основа профилактики заболеваний",
+                                image: "/images/choice.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Периодическая диагностика глаз необходима каждому, кто заботится о своём здоровье. Это не просто способ сохранить хорошее зрение, но и эффективный метод раннего выявления различных патологий, в том числе тех, которые не связаны напрямую с органами зрения.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Во время обследования офтальмолог может обнаружить признаки общих заболеваний, так как состояние сосудов сетчатки отражает работу сердечно-сосудистой системы. Глаза — один из немногих органов, по которым можно получить информацию о венах и артериях без сложных процедур.",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Даже при отсутствии жалоб важно не пропускать профилактические осмотры. Некоторые нарушения развиваются скрытно и не проявляются на ранних стадиях. Только регулярный контроль позволяет вовремя заметить изменения и предотвратить ухудшение зрения.",
+                                            },
+                                        ],
+                                    },
+                                    {
+                                        greenText:
+                                            "Оптимальная частота посещения офтальмолога — один раз в год. Это правило актуально даже для тех, у кого нет проблем со зрением. Профилактика всегда эффективнее лечения — особенно когда речь идёт о глазах.",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
                 },
                 { type: "cta" },
                 {
@@ -1525,29 +1579,43 @@ export const servicesData: ServicesProps[] = [
                 },
                 {
                     type: "roundImageAndTextSection",
-                    data: [
-                        {
-                            title: "Що таке катаракта?",
-                            image: "/images/cataract-round.jpg",
-                            imagePosition: "object-left",
-                            text: [
-                                {
-                                    content: [
-                                        "Катаракта – це захворювання, при якому порушується прозорість кришталика, що призводить до зниження гостроти зору.",
-                                        "Простіше кажучи, помутніння кришталика. При цьому його структура стає більш щільною, що створює певні труднощі при видаленні.",
-                                        "Виявити катаракту на стадії неможливо без офтальмологічного огляду. Видимих симптомів на ранній стадії взагалі немає. З розвитком захворювання погіршується зір: пацієнт починає бачити предмети нечітко, немов вони перебувають у тумані, підвищується чутливість при погляді яскраве світло, погіршується нічний зір, послаблюється колірне сприйняття.",
-                                    ],
-                                },
-                            ],
-                            btn: [
-                                {
-                                    btnName: "читати про катаракту",
-                                    btnLink: "/tsiny",
-                                    btnSecondary: true,
-                                },
-                            ],
-                        },
-                    ],
+                    data: {
+                        data: [
+                            {
+                                title: "Що таке катаракта?",
+                                image: "/images/cataract-round.jpg",
+                                imagePosition: "object-left",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                gap: true,
+                                                type: "text",
+                                                text: "Катаракта – це захворювання, при якому порушується прозорість кришталика, що призводить до зниження гостроти зору.",
+                                            },
+                                            {
+                                                gap: true,
+                                                type: "text",
+                                                text: "Простіше кажучи, помутніння кришталика. При цьому його структура стає більш щільною, що створює певні труднощі при видаленні.",
+                                            },
+                                            {
+                                                gap: true,
+                                                type: "text",
+                                                text: "Виявити катаракту на стадії неможливо без офтальмологічного огляду. Видимих симптомів на ранній стадії взагалі немає. З розвитком захворювання погіршується зір: пацієнт починає бачити предмети нечітко, немов вони перебувають у тумані, підвищується чутливість при погляді яскраве світло, погіршується нічний зір, послаблюється колірне сприйняття.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                                btn: [
+                                    {
+                                        btnName: "читати про катаракту",
+                                        btnLink: "/tsiny",
+                                        btnSecondary: true,
+                                    },
+                                ],
+                            },
+                        ],
+                    },
                 },
                 {
                     type: "advantages",
@@ -1748,29 +1816,43 @@ export const servicesData: ServicesProps[] = [
                 },
                 {
                     type: "roundImageAndTextSection",
-                    data: [
-                        {
-                            title: "What is Cataract?",
-                            image: "/images/cataract-round.jpg",
-                            imagePosition: "object-left",
-                            text: [
-                                {
-                                    content: [
-                                        "A cataract is a condition in which the transparency of the eye’s lens is impaired, leading to decreased visual acuity.",
-                                        "Simply put, it’s a clouding of the lens. Its structure becomes denser, which creates certain difficulties during removal.",
-                                        "It is impossible to detect a cataract in its early stage without an ophthalmologic examination. There are no visible symptoms at first. As the disease progresses, vision deteriorates: objects appear blurry, as if seen through a fog; sensitivity to bright light increases; night vision worsens; and color perception becomes weaker.",
-                                    ],
-                                },
-                            ],
-                            btn: [
-                                {
-                                    btnName: "read about cataract",
-                                    btnLink: "/tsiny",
-                                    btnSecondary: true,
-                                },
-                            ],
-                        },
-                    ],
+                    data: {
+                        data: [
+                            {
+                                title: "What is Cataract?",
+                                image: "/images/cataract-round.jpg",
+                                imagePosition: "object-left",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                gap: true,
+                                                type: "text",
+                                                text: "A cataract is a condition in which the transparency of the eye’s lens is impaired, leading to decreased visual acuity.",
+                                            },
+                                            {
+                                                gap: true,
+                                                type: "text",
+                                                text: "Simply put, it’s a clouding of the lens. Its structure becomes denser, which creates certain difficulties during removal.",
+                                            },
+                                            {
+                                                gap: true,
+                                                type: "text",
+                                                text: "It is impossible to detect a cataract in its early stage without an ophthalmologic examination. There are no visible symptoms at first. As the disease progresses, vision deteriorates: objects appear blurry, as if seen through a fog; sensitivity to bright light increases; night vision worsens; and color perception becomes weaker.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                                btn: [
+                                    {
+                                        btnName: "read about cataract",
+                                        btnLink: "/tsiny",
+                                        btnSecondary: true,
+                                    },
+                                ],
+                            },
+                        ],
+                    },
                 },
                 {
                     type: "advantages",
@@ -1970,29 +2052,43 @@ export const servicesData: ServicesProps[] = [
                 },
                 {
                     type: "roundImageAndTextSection",
-                    data: [
-                        {
-                            title: "Что такое катаракта?",
-                            image: "/images/cataract-round.jpg",
-                            imagePosition: "object-left",
-                            text: [
-                                {
-                                    content: [
-                                        "Катаракта — это заболевание, при котором нарушается прозрачность хрусталика глаза, что приводит к снижению остроты зрения.",
-                                        "Проще говоря, это помутнение хрусталика. Его структура становится более плотной, что создает определенные трудности при удалении.",
-                                        "Обнаружить катаракту на ранней стадии невозможно без офтальмологического осмотра. На начальном этапе видимых симптомов нет. По мере развития заболевания зрение ухудшается: предметы становятся размытыми, будто окутаны туманом; повышается чувствительность к яркому свету; ухудшается ночное зрение и ослабляется восприятие цветов.",
-                                    ],
-                                },
-                            ],
-                            btn: [
-                                {
-                                    btnName: "читать о катаракте",
-                                    btnLink: "/tsiny",
-                                    btnSecondary: true,
-                                },
-                            ],
-                        },
-                    ],
+                    data: {
+                        data: [
+                            {
+                                title: "Что такое катаракта?",
+                                image: "/images/cataract-round.jpg",
+                                imagePosition: "object-left",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                gap: true,
+                                                type: "text",
+                                                text: "Катаракта — это заболевание, при котором нарушается прозрачность хрусталика глаза, что приводит к снижению остроты зрения.",
+                                            },
+                                            {
+                                                gap: true,
+                                                type: "text",
+                                                text: "Проще говоря, это помутнение хрусталика. Его структура становится более плотной, что создает определенные трудности при удалении.",
+                                            },
+                                            {
+                                                gap: true,
+                                                type: "text",
+                                                text: "Обнаружить катаракту на ранней стадии невозможно без офтальмологического осмотра. На начальном этапе видимых симптомов нет. По мере развития заболевания зрение ухудшается: предметы становятся размытыми, будто окутаны туманом; повышается чувствительность к яркому свету; ухудшается ночное зрение и ослабляется восприятие цветов.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                                btn: [
+                                    {
+                                        btnName: "читать о катаракте",
+                                        btnLink: "/tsiny",
+                                        btnSecondary: true,
+                                    },
+                                ],
+                            },
+                        ],
+                    },
                 },
                 {
                     type: "advantages",
@@ -2199,6 +2295,123 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                {
+                    type: "roundImageAndTextSection",
+                    data: {
+                        firstImageLeft: true,
+                        paddingTop: true,
+                        data: [
+                            {
+                                title: "Як лікують синдром сухого ока в нашій клініці?",
+                                image: "/images/perevirka-round.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                text: "Ми застосовуємо схему лікування, що відповідає вимогам міжнародного товариства здоров’я очної поверхні (TFOS), яка включає:",
+                                            },
+                                            {
+                                                gap: true,
+                                                type: "list",
+                                                list: [
+                                                    [
+                                                        {
+                                                            bold: true,
+                                                            value: "Медикаментозне лікування",
+                                                        },
+                                                    ],
+                                                    [
+                                                        {
+                                                            bold: true,
+                                                            value: "Розігрів застиглого секрету та його ефективне видалення",
+                                                        },
+                                                    ],
+                                                    [
+                                                        {
+                                                            bold: true,
+                                                            value: "IPL терапія",
+                                                        },
+                                                    ],
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Після обстеження лікар пояснює результати, демонструє зображення та формує персональний план лікування: від щоденної гігієни повік до апаратних процедур і підтримувальної терапії.",
+                                            },
+                                        ],
+                                        greenText:
+                                            "Програмне забезпечення з алгоритмами штучного інтелекту автоматично обробляє дані, усуваючи суб’єктивність, а результати зберігаються у вигляді фото та відео для подальшого моніторингу.",
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Причини сухості очей",
+                                cta: true,
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Сухість очей має різні механізми. Під час діагностики на IDRA ми вимірюємо показники слізної плівки, оцінюємо мейбомієві залози та якість моргання, щоб точно визначити причину й обрати лікування.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: [
+                                                    {
+                                                        bold: true,
+                                                        subtitle: true,
+                                                        value: "Фактори, пов’язані з недостатнім виробництвом водної частини сльози",
+                                                    },
+                                                ],
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "Вікові зміни та природне зменшення секреції сльози;",
+                                                    "Гормональні коливання (менопауза, вагітність, ендокринні порушення);",
+                                                    "Системні захворювання та автоімунні стани (зокрема синдром Шегрена);",
+                                                    "Лікарські засоби, що «висушують» слизові (антигістамінні, антидепресанти, сечогінні тощо);",
+                                                    "Зневоднення, недостатній питний режим, хронічні захворювання, післяопераційні стани.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: [
+                                                    {
+                                                        bold: true,
+                                                        subtitle: true,
+                                                        value: "Фактори, пов’язані з підвищеним випаровуванням слізної плівки",
+                                                    },
+                                                ],
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "Дисфункція мейбомієвих залоз та поганий ліпідний шар;",
+                                                    "Рідке або неповне моргання під час роботи з екранами;",
+                                                    "Сухе повітря, кондиціонери, опалення, вітер, пил, дим;",
+                                                    "Контактні лінзи, декоративна косметика, нарощування вій, агресивні засоби демакіяжу;",
+                                                    "Запальні стани краю повіки (блефарит, демодекоз), розацеа шкіри.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Якщо відчуваєте «пісок», печіння чи почервоніння — запишіться на діагностику. Точне визначення причини дозволяє підібрати ефективне лікування.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
                 { type: "cta" },
                 {
                     type: "numberListSection",
@@ -2229,6 +2442,86 @@ export const servicesData: ServicesProps[] = [
                                 itemText: [
                                     "Після проходження діагностики ви отримаєте офіційний протокол із оцінкою всіх параметрів зору та очного здоров'я. Лікар надасть рекомендації щодо подальших дій — від профілактики до конкретного плану лікування.",
                                     "Якщо планується хірургічне втручання, то його обговорення стане ключовою частиною консультації. Усі важливі питання слід поставити та прояснити до моменту операції, щоб ухвалити виважене рішення.",
+                                ],
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "textsColumns",
+                    data: {
+                        title: "Інноваційне лікування методом IPL",
+                        text: "Сучасний апаратний підхід, який цілеспрямовано зменшує запалення краю повік і відновлює стабільність слізної плівки. Поєднання з діагностикою та доглядом забезпечує прогнозований результат і комфорт пацієнта.",
+                        blocks: [
+                            {
+                                title: "Показання для застосування IPL терапії:",
+                                text: [
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "Синдром сухого ока з переважно випаровувальним компонентом.",
+                                            "Дисфункція мейбомієвих залоз і застій секрету, що не коригуються лише краплями.",
+                                            "Хронічний блефарит, рецидивні ячмені та халязіони.",
+                                            "Телеангіектазії та запалення краю повік при офтальморозацеа.",
+                                            "Демодекоз як складова комбінованого лікування.",
+                                            "Зниження комфорту при роботі за екранами, відчуття «піску», печіння, почервоніння попри регулярну гігієну повік.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Переваги IPL-терапії",
+                                text: [
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "Патогенетична дія: вплив на мікросудини та запальні механізми, що підтримують сухість.",
+                                            "Короткий сеанс без анестезії та періоду реабілітації; відразу можна повернутися до справ.",
+                                            "Кероване охолодження забезпечує безпеку для чутливої періорбітальної зони та знижує дискомфорт.",
+                                            "Можливість комбінування з апаратним масажем повік для підсилення ефекту.",
+                                            "Об’єктивний моніторинг результатів за даними інструментальних вимірювань і фотофіксації.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Структура процедури IPL",
+                                text: [
+                                    {
+                                        type: "list",
+                                        numeric: true,
+                                        list: [
+                                            "Первинна консультація та оцінка показань: збір анамнезу, огляд повік, інструментальна діагностика очної поверхні.",
+                                            "Підготовка зони: очищення шкіри, захисні окуляри, нанесення контактного гелю.",
+                                            "Проведення сеансу: серія світлових імпульсів у проєкції краю повік за офтальмологічним протоколом.",
+                                            "За потреби — апаратний розігрів і видалення секрету мейбомієвих залоз, рекомендації щодо домашнього догляду.",
+                                            "Фіксація результатів та планування наступного візиту.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Курс лікування та ефект:",
+                                text: [
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "Кількість сеансів: зазвичай 3–4 процедури для стійкого результату; схема може коригуватися індивідуально.",
+                                            "Інтервали: 2–3 тижні між сеансами, щоб закріпити протизапальний ефект і відновлення залоз.",
+                                            "Тривалість: близько 10–15 хвилин на сеанс (+ час на підготовку та, за показами, масаж повік).",
+                                            "Проміжні відчуття: легке тепло або пощипування, короткочасна рожевість шкіри, що минає самостійно.",
+                                            "Очікуваний результат: зменшення сухості та подразнення, стабільніша слізна плівка, кращий комфорт під час читання та роботи за комп’ютером, рідші епізоди блефариту й ячменів.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Безпека та післяпроцедурний догляд:",
+                                text: [
+                                    {
+                                        type: "text",
+                                        text: "Метод має сприятливий профіль безпеки за умови дотримання протоколів і врахування протипоказань. Після сеансу рекомендуємо користуватися SPF 50+ у зоні обробки протягом 7–10 днів, уникати засмаги, сауни та басейну протягом 24–48 годин, відкласти агресивні пілінги чи скраби; макіяж у періорбітальній зоні — не раніше ніж через 12–24 години. Важливо підтримувати гігієну повік і призначений режим крапель. Контрольні огляди дають змогу оцінити динаміку та, за потреби, провести підтримувальні процедури раз на 6–12 місяців, щоб зберігати комфорт і стабільність результату.",
+                                    },
                                 ],
                             },
                         ],
@@ -2387,6 +2680,123 @@ export const servicesData: ServicesProps[] = [
                             btnName: "book an appointment",
                             btnLink: "#booking",
                         },
+                    },
+                },
+                {
+                    type: "roundImageAndTextSection",
+                    data: {
+                        firstImageLeft: true,
+                        paddingTop: true,
+                        data: [
+                            {
+                                title: "How is dry eye syndrome treated in our clinic?",
+                                image: "/images/perevirka-round.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                text: "We apply a treatment protocol that meets the standards of the Tear Film & Ocular Surface Society (TFOS), which includes:",
+                                            },
+                                            {
+                                                gap: true,
+                                                type: "list",
+                                                list: [
+                                                    [
+                                                        {
+                                                            bold: true,
+                                                            value: "Medication therapy",
+                                                        },
+                                                    ],
+                                                    [
+                                                        {
+                                                            bold: true,
+                                                            value: "Warming up and clearing the blocked meibomian secretion",
+                                                        },
+                                                    ],
+                                                    [
+                                                        {
+                                                            bold: true,
+                                                            value: "IPL therapy",
+                                                        },
+                                                    ],
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "After the examination, the doctor explains the results, shows the images, and creates a personalized treatment plan — from daily eyelid hygiene to hardware procedures and maintenance therapy.",
+                                            },
+                                        ],
+                                        greenText:
+                                            "AI-based software automatically processes diagnostic data, eliminating subjectivity, while the results are stored as photos and videos for follow-up monitoring.",
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Causes of dry eyes",
+                                cta: true,
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Dry eyes can have different mechanisms. During IDRA diagnostics, we measure tear film parameters, assess meibomian glands, and blinking quality to accurately determine the cause and choose proper treatment.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: [
+                                                    {
+                                                        bold: true,
+                                                        subtitle: true,
+                                                        value: "Factors related to insufficient production of the aqueous layer of the tear film",
+                                                    },
+                                                ],
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "Age-related changes and natural reduction of tear secretion;",
+                                                    "Hormonal fluctuations (menopause, pregnancy, endocrine disorders);",
+                                                    "Systemic diseases and autoimmune conditions (including Sjögren’s syndrome);",
+                                                    "Medications that ‘dry out’ mucous membranes (antihistamines, antidepressants, diuretics, etc.);",
+                                                    "Dehydration, low fluid intake, chronic illnesses, postoperative conditions.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: [
+                                                    {
+                                                        bold: true,
+                                                        subtitle: true,
+                                                        value: "Factors related to increased evaporation of the tear film",
+                                                    },
+                                                ],
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "Meibomian gland dysfunction and poor lipid layer;",
+                                                    "Rare or incomplete blinking during screen use;",
+                                                    "Dry air, air conditioners, heating, wind, dust, smoke;",
+                                                    "Contact lenses, decorative cosmetics, eyelash extensions, harsh makeup removers;",
+                                                    "Inflammatory conditions of the eyelid margin (blepharitis, demodicosis), skin rosacea.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "If you feel sandiness, burning, or redness — schedule a diagnosis. Accurate identification of the cause allows for effective treatment selection.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
                     },
                 },
                 {
@@ -2573,6 +2983,123 @@ export const servicesData: ServicesProps[] = [
                             btnName: "записаться на приём",
                             btnLink: "#booking",
                         },
+                    },
+                },
+                {
+                    type: "roundImageAndTextSection",
+                    data: {
+                        firstImageLeft: true,
+                        paddingTop: true,
+                        data: [
+                            {
+                                title: "Как лечат синдром сухого глаза в нашей клинике?",
+                                image: "/images/perevirka-round.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                text: "Мы применяем схему лечения, соответствующую рекомендациям Международного общества здоровья глазной поверхности (TFOS), которая включает:",
+                                            },
+                                            {
+                                                gap: true,
+                                                type: "list",
+                                                list: [
+                                                    [
+                                                        {
+                                                            bold: true,
+                                                            value: "Медикаментозное лечение",
+                                                        },
+                                                    ],
+                                                    [
+                                                        {
+                                                            bold: true,
+                                                            value: "Прогревание застоявшегося секрета и его эффективное удаление",
+                                                        },
+                                                    ],
+                                                    [
+                                                        {
+                                                            bold: true,
+                                                            value: "IPL-терапия",
+                                                        },
+                                                    ],
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "После обследования врач объясняет результаты, показывает изображения и формирует персональный план лечения: от ежедневной гигиены век до аппаратных процедур и поддерживающей терапии.",
+                                            },
+                                        ],
+                                        greenText:
+                                            "Программное обеспечение с алгоритмами искусственного интеллекта автоматически обрабатывает данные, устраняя субъективность, а результаты сохраняются в виде фото и видео для последующего мониторинга.",
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Причины сухости глаз",
+                                cta: true,
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Сухость глаз имеет разные механизмы. Во время диагностики на IDRA мы измеряем параметры слёзной плёнки, оцениваем мейбомиевые железы и качество моргания, чтобы точно определить причину и выбрать лечение.",
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: [
+                                                    {
+                                                        bold: true,
+                                                        subtitle: true,
+                                                        value: "Факторы, связанные с недостаточным образованием водной части слезы",
+                                                    },
+                                                ],
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "Возрастные изменения и естественное снижение секреции слёз;",
+                                                    "Гормональные колебания (менопауза, беременность, эндокринные нарушения);",
+                                                    "Системные заболевания и аутоиммунные состояния (в том числе синдром Шегрена);",
+                                                    "Лекарственные средства, «высушивающие» слизистые (антигистаминные, антидепрессанты, мочегонные и др.);",
+                                                    "Обезвоживание, недостаток питьевого режима, хронические болезни, послеоперационные состояния.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: [
+                                                    {
+                                                        bold: true,
+                                                        subtitle: true,
+                                                        value: "Факторы, связанные с повышенным испарением слёзной плёнки",
+                                                    },
+                                                ],
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "Дисфункция мейбомиевых желез и плохой липидный слой;",
+                                                    "Редкое или неполное моргание при работе за экраном;",
+                                                    "Сухой воздух, кондиционеры, отопление, ветер, пыль, дым;",
+                                                    "Контактные линзы, декоративная косметика, наращивание ресниц, агрессивные средства для демакияжа;",
+                                                    "Воспалительные заболевания края века (блефарит, демодекоз), розацеа кожи.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Если вы чувствуете «песок», жжение или покраснение — запишитесь на диагностику. Точное определение причины позволяет подобрать эффективное лечение.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
                     },
                 },
                 {
