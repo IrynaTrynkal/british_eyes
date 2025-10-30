@@ -11,6 +11,7 @@ import { NumberListSection } from "./numberListSection/NumberListSection";
 import { Preview } from "./previewSection/Preview";
 import { PriceSection } from "./priceSection/PriceSection";
 import { RoundImageAndTextSection } from "./roundImageAndText/RoundImageAndTextSection";
+import { TextsColumnsSection } from "./textsColumnsSection/TextsColumnsSection";
 
 export const ServicePageContent = ({
     serviceData,
@@ -83,6 +84,14 @@ export const ServicePageContent = ({
                         );
                     case "giftCTA":
                         return <GiftCard key={index} />;
+
+                    case "textsColumns":
+                        return (
+                            <TextsColumnsSection
+                                key={index}
+                                data={section.data}
+                            />
+                        );
                     default:
                         return null;
                 }

@@ -1,109 +1,163 @@
 import Image from "next/image";
 
-import { RoundImageAndTextProps } from "@/components/assets/servicesData";
+import {
+    RoundImageAndTextProps,
+    TextSegment,
+} from "@/components/assets/servicesData";
+import { CallUs } from "@/components/shared/CallUs";
 import { GreenText } from "@/components/shared/GreenText";
+import { IconEye } from "@/components/shared/icons/IconEye";
 import { LinkAction } from "@/components/shared/LinkAction";
 
 export const RoundImageAndTextItem = ({
     item,
+    left,
     index,
 }: {
     item: RoundImageAndTextProps;
+    left?: boolean;
     index: number;
 }) => {
+    const renderTextSegment = (text: string | TextSegment[]) => {
+        if (typeof text === "string") return text;
+        return text.map((segment, i) =>
+            segment.bold && segment.subtitle ? (
+                <span
+                    className="font-oswald prepc:text-2xl text-lg font-medium uppercase"
+                    key={i}
+                >
+                    {segment.value}
+                </span>
+            ) : segment.bold ? (
+                <span className="font-medium" key={i}>
+                    {segment.value}
+                </span>
+            ) : segment.subtitle ? (
+                <span className="font-oswald uppercase" key={i}>
+                    {segment.value}
+                </span>
+            ) : (
+                <span key={i}>{segment.value}</span>
+            )
+        );
+    };
+
     return (
         <div
             className={`${
-                index % 2 === 0 ? "tab:flex-row" : "tab:flex-row-reverse"
+                (!left && index % 2 === 0) || (left && index % 2 !== 0)
+                    ? "tab:flex-row"
+                    : "tab:flex-row-reverse"
             } tab:flex tab:justify-between tab:items-center prepc:items-stretch h-full`}
         >
             <h2 className="title-section tab:hidden tab:max-w-[360px] mb-6 max-w-[440px]">
                 {item.title}
             </h2>
-            {item.image && (
+
+            {(item.image || item.cta || item.logo) && (
                 <div className="tab:w-[calc(30%-6px)] prepc:w-[calc(50%-12px)]">
-                    <div className="tab:mx-auto pc:min-w-[477px] prepc:max-w-[477px] tab:aspect-square tab:mb-0 tab:rounded-full mb-5 aspect-[288/164] overflow-hidden rounded">
-                        <Image
-                            src={item.image}
-                            alt={item.title}
-                            width={652}
-                            height={373}
-                            className={`h-full w-full object-cover ${item.imagePosition ? item.imagePosition : "object-center"} `}
+                    {item.image && (
+                        <div className="tab:mx-auto pc:min-w-[477px] prepc:max-w-[477px] tab:aspect-square tab:mb-0 tab:rounded-full mb-5 aspect-[288/164] overflow-hidden rounded">
+                            <Image
+                                src={item.image}
+                                alt={item.title}
+                                width={652}
+                                height={373}
+                                className={`h-full w-full object-cover ${
+                                    item.imagePosition ?? "object-center"
+                                }`}
+                            />
+                        </div>
+                    )}
+                    {item.cta && (
+                        <CallUs
+                            className={
+                                (!left && index % 2 === 0) ||
+                                (left && index % 2 !== 0)
+                                    ? "tab:mr-auto tab:ml-0"
+                                    : ""
+                            }
                         />
-                    </div>
+                    )}
+                    {item.logo && <IconEye className="mx-auto" />}
                 </div>
             )}
+
             <div className="tab:w-[calc(70%-6px)] prepc:w-[calc(50%-12px)] prepc:min-h-[477px] tab:flex tab:flex-col">
                 <h2 className="title-section tab:block mb-6 hidden">
                     {item.title}
                 </h2>
+
                 <div className="tab:flex tab:flex-col prepc:h-full tab:justify-between">
                     {item.text && (
                         <div
-                            className={`prepc:gap-4 flex flex-col gap-2 ${item.btn ? "mb-8" : ""}`}
+                            className={`prepc:gap-4 flex flex-col gap-2 ${
+                                item.btn ? "mb-8" : ""
+                            }`}
                         >
-                            {item.text.map((block, index) => {
-                                if (block.list && block.content) {
-                                    return (
-                                        <div key={block.textBeforeList}>
-                                            {block.textBeforeList && (
-                                                <p className="pc:text-lg pc:leading-[22px] leading-5">
-                                                    {block.textBeforeList}
+                            {item.text.map((block, i) => (
+                                <div key={i} className="">
+                                    {block.content?.map((contentItem, j) => {
+                                        if (contentItem.type === "text") {
+                                            return (
+                                                <p
+                                                    key={j}
+                                                    className={`pc:text-lg pc:leading-[22px] leading-5 ${contentItem.gap ? "prepc:mb-4 mb-2" : ""}`}
+                                                >
+                                                    {renderTextSegment(
+                                                        contentItem.text
+                                                    )}
                                                 </p>
-                                            )}
-                                            <ul className="ml-4 list-disc">
-                                                {block.content.map(
-                                                    (item, i) => (
-                                                        <li
-                                                            key={i}
-                                                            className="pc:text-lg pc:leading-[22px] leading-5"
-                                                        >
-                                                            {item}
-                                                        </li>
-                                                    )
-                                                )}
-                                            </ul>
-                                        </div>
-                                    );
-                                }
-                                if (block.greenText) {
-                                    return (
-                                        <GreenText
-                                            key={block.greenText}
-                                            text={block.greenText}
-                                        />
-                                    );
-                                }
-                                if (block.content) {
-                                    return (
-                                        <div
-                                            key={index}
-                                            className="prepc:gap-4 flex flex-col gap-2"
-                                        >
-                                            {block.content.map(
-                                                (paragraph, i) => (
-                                                    <p
-                                                        key={i}
-                                                        className="pc:text-lg pc:leading-[22px] leading-5"
-                                                    >
-                                                        {paragraph}
-                                                    </p>
-                                                )
-                                            )}
-                                        </div>
-                                    );
-                                }
-                                return null;
-                            })}
+                                            );
+                                        }
+
+                                        if (contentItem.type === "list") {
+                                            const ListTag = contentItem.numeric
+                                                ? "ol"
+                                                : "ul";
+
+                                            return (
+                                                <ListTag
+                                                    key={j}
+                                                    className={`ml-4 ${
+                                                        contentItem.numeric
+                                                            ? "list-decimal"
+                                                            : "list-disc"
+                                                    } ${contentItem.gap ? "prepc:mb-4 mb-2" : ""}`}
+                                                >
+                                                    {contentItem.list.map(
+                                                        (listItem, k) => (
+                                                            <li
+                                                                key={k}
+                                                                className="pc:text-lg pc:leading-[22px] leading-5"
+                                                            >
+                                                                {renderTextSegment(
+                                                                    listItem
+                                                                )}
+                                                            </li>
+                                                        )
+                                                    )}
+                                                </ListTag>
+                                            );
+                                        }
+
+                                        return null;
+                                    })}
+                                    {block.greenText && (
+                                        <GreenText text={block.greenText} />
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     )}
+
                     {item.btn && (
                         <div
                             className={`${
                                 index % 2 === 0
                                     ? "tab:justify-end"
                                     : "tab:justify-start"
-                            } tab:flex-row tab:justify-end prepc:gap-5 gap-3" flex flex-col justify-center`}
+                            } tab:flex-row tab:justify-end prepc:gap-5 flex flex-col justify-center gap-3`}
                         >
                             {item.btn.map(btnItem => (
                                 <LinkAction

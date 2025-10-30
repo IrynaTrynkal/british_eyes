@@ -1,15 +1,21 @@
 import { useTranslations } from "next-intl";
+import { twMerge } from "tailwind-merge";
 
 import { IconLogo } from "./icons/IconLogo";
 import { LinkAction } from "./LinkAction";
 
-export const CallUs = () => {
+export const CallUs = ({ className }: { className?: string }) => {
     const t = useTranslations("ServicesPage");
     const tA = useTranslations("AboutPage");
     const tH = useTranslations("HomePage");
 
     return (
-        <div className="cta-green-gradient tab:mr-0 tab:ml-auto tab:max-w-[548px] prepc:p-6 relative mx-auto max-w-[500px] rounded-lg px-4 py-6">
+        <div
+            className={twMerge(
+                "cta-green-gradient tab:mr-0 tab:ml-auto tab:max-w-[548px] prepc:p-6 relative mx-auto max-w-[500px] rounded-lg px-4 py-6",
+                className
+            )}
+        >
             <h3 className="title-section-ivory prepc:mb-12 pc:mb-[78px] tab:mb-6 tab:w-[calc(100%-70px)] mb-8">
                 {t("callUsTitle")}
             </h3>

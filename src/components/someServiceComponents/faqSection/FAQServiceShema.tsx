@@ -1,7 +1,7 @@
 import {
     FAQServiceListType,
-    ListAnswer,
-    ParagraphAnswer,
+    ListContent,
+    ParagraphContent,
     TextSegment,
 } from "@/components/assets/servicesData";
 
@@ -10,7 +10,7 @@ export function FAQServiceSchema({
 }: {
     faqList: FAQServiceListType[];
 }) {
-    const extractText = (seg: ParagraphAnswer | ListAnswer): string => {
+    const extractText = (seg: ParagraphContent | ListContent): string => {
         if (seg.type === "text") {
             if (typeof seg.text === "string") return seg.text;
             return seg.text.map((t: TextSegment) => t.value).join(" ");
