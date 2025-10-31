@@ -14,7 +14,8 @@ export type SectionType =
     | { type: "giftCTA" }
     | { type: "hero"; data: HeroSomeServiceProps }
     | { type: "faq"; data: FAQServiceSectionType }
-    | { type: "textsColumns"; data: TextsColumnsSectionType };
+    | { type: "textsColumns"; data: TextsColumnsSectionType }
+    | { type: "global" };
 
 export type ServicesLocaleProps = {
     textMain?: string;
@@ -3685,6 +3686,7 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "global" },
                 { type: "doctors" },
                 {
                     type: "faq",
@@ -3881,6 +3883,8 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "global" },
+
                 { type: "doctors" },
                 {
                     type: "faq",
@@ -4075,6 +4079,7 @@ export const servicesData: ServicesProps[] = [
                         },
                     },
                 },
+                { type: "global" },
                 { type: "doctors" },
                 {
                     type: "faq",
