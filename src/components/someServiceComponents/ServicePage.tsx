@@ -2,6 +2,7 @@ import { LocaleType } from "@/types/LocaleType";
 
 import { ServicesProps } from "../assets/servicesData";
 import { AboutCTA } from "../pageAbout/cta/AboutCTA";
+import { Global } from "../shared/global/Global";
 import { AdvantagesService } from "./advantages/AdvantagesService";
 import { DoctorsServices } from "./Doctors/DoctorsServices";
 import { GiftCard } from "./GiftCard";
@@ -92,6 +93,8 @@ export const ServicePageContent = ({
                                 data={section.data}
                             />
                         );
+                    case "global":
+                        return <Global key={index} />;
                     default:
                         return null;
                 }
