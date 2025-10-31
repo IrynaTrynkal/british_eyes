@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { NumberListProps } from "@/components/assets/servicesData";
+import { DownloadPDF } from "@/components/shared/DownloadPDF";
 
 import { NumberListItem } from "./NumberListItem";
 
@@ -57,9 +58,19 @@ export const NumberListSection = ({ data }: { data: NumberListProps }) => {
                 </div>
             )}
             <div className="tab:max-w-full tab:px-6 pc:px-12 tab:flex tab:justify-between relative mx-auto max-w-[540px]">
-                <h2 className="title-section tab:self-start tab:sticky tab:top-24 tab:w-[40%] prepc:w-[32%] pc:min-w-[435px] prepc:max-w-[477px] tab:px-0 tab:max-w-[360px] mb-6 max-w-[440px] px-4">
-                    {data.listTitle}
-                </h2>
+                <div
+                    className={
+                        "tab:w-[40%] prepc:w-[32%] pc:min-w-[435px] prepc:max-w-[477px] tab:px-0 tab:max-w-[360px] relative max-w-[440px] px-4"
+                    }
+                >
+                    <h2
+                        className={`title-section tab:sticky tab:top-24 mb-6 ${
+                            data.pdfCard ? "tab:pb-44 prepc:pb-36 pc:pb-50" : ""
+                        }`}
+                    >
+                        {data.listTitle}
+                    </h2>
+                </div>
                 <ul className="tab:w-[57%] prepc:w-[66%] tab:gap-3 prepc:gap-5 flex flex-col gap-1">
                     {data.list.map((item, index) => (
                         <NumberListItem
@@ -69,6 +80,11 @@ export const NumberListSection = ({ data }: { data: NumberListProps }) => {
                         />
                     ))}
                 </ul>
+                {data.pdfCard && (
+                    <div className="content tab:mt-0 tab:absolute tab:bottom-0 tab:left-0 tab:w-[45%] prepc:w-[35%] mt-3">
+                        <DownloadPDF dataPDF={data.pdfCard} />
+                    </div>
+                )}
             </div>
         </section>
     );
