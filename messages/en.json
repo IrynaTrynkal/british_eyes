@@ -107,15 +107,30 @@
         "hirurgiya-povik-i-konyunktivi": "Eyelid and conjunctival surgery",
         "anesteziologichnij-posibnik": "Anesthesia benefit",
         "ksenonoterapiya": "Xenon therapy",
-        "informatsiya-dlya-inohorodnikh-patsiyentiv": "Information for nonresident patients",
-        "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu": "Пам’ятки та інструкції для пацієнтів",
+        "informatsiya-dlya-inohorodnikh-patsiyentiv": "for nonresident patients",
+        "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu": "Patient reminder before vitreoretinal surgery",
         "zakhvoryuvannya-ochey": "Eye diseases",
         "lazerna-korekcziya-zoru-smalText": "The «living vision» program after cataract, presbyopia, and refractive surgery.",
         "likuvannya-katarakti-smalText": "The «living vision» program after cataract, presbyopia, and refractive surgery.",
         "perevirka-zoru-smalText": "The «living vision» program after cataract, presbyopia, and refractive surgery.",
         "syndrom-sukhoho-oka-smalText": "The «living vision» program after cataract, presbyopia, and refractive surgery.",
         "sportlife-lasik": "SportLine LASEK",
-        "iq-lasik-oxygen-3d": "iQ-LASIK Oxygen 3D"
+        "iq-lasik-oxygen-3d": "iQ-LASIK Oxygen 3D",
+        "glaukoma": "Glaucoma",
+        "presbiopiya": "Presbyopia",
+        "dalekozorist": "Farsightedness",
+        "katarakta": "Cataract",
+        "simptomi-zahvoryuvannya-ochej": "Symptoms of Eye Diseases",
+        "kosookist": "Strabismus ",
+        "korotkozorist-miopiya": "Nearsightedness, myopia",
+        "astigmatizm": "Astigmatism",
+        "reminders-and-instructions-for patients": "Reminders and instructions for patients",
+        "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam": "Before microsurgical intervention",
+        "instruktsiyi-pislya-lazernoyi-korektsiyi-zoru": "Instructions after laser vision correction",
+        "pamyatka-patsiyenta-pislya-khirurhiyi-katarakty": "Patient memo after cataract surgery",
+        "preparation-for-surgery-for-strabismus": "Preparation for strabismus surgery",
+        "patient-information-before-IPL-therapy": "Patient information before IPL therapy",
+        "reminder-before-a-comprehensive-pediatric-examination": "Reminder before a comprehensive pediatric examination"
     },
     "Modals": {
         "callUs": "Contact us",
@@ -233,5 +248,10 @@
         "price": "Price in UAH",
         "newTechnology": "New technologies",
         "specialPrice": "Special price"
+    },
+    "PatientsPage": {
+        "title": "Information for \npatients",
+        "afterProcedure": "after the procedure:",
+        "beforeProcedure": "before the procedure:"
     }
 }
