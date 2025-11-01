@@ -80,6 +80,9 @@ a {
 .title-h1 {
     @apply font-oswald pc:text-7xl tab:text-5xl text-4xl leading-[90%];
 }
+.title-h1-up {
+    @apply font-oswald pc:text-7xl tab:text-5xl text-4xl leading-[100%];
+}
 
 .subtitle {
     @apply font-oswald text-grey tab:text-base text-sm leading-none font-medium uppercase;

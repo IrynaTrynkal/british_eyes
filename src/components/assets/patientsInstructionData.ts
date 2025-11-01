@@ -10,7 +10,7 @@ export type InstructionsSulgType =
     | "preparation-for-surgery-for-strabismus"
     | "patient-information-before-IPL-therapy"
     | "zakhvoryuvannya-ochey"
-    | "reminders-and-instructions-for patients";
+    | "reminders-and-instructions-for-patients";
 
 export type EyeDiseaseSulgType =
     | "glaukoma"
@@ -727,7 +727,7 @@ export const dataPatientsPage: DataPatientsPageType[] = [
         key: "informatsiya-dlya-inohorodnikh-patsiyentiv",
     },
     {
-        key: "reminders-and-instructions-for patients",
+        key: "reminders-and-instructions-for-patients",
         data: [
             {
                 listTitle: "before",
