@@ -74,5 +74,58 @@ export const routing = defineRouting({
             en: "/ophthalmologists",
             ru: "/oftalmologi",
         },
+        "/informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam":
+            {
+                en: "/information-for-patients-prior-to-microsurgery",
+                ru: "/informatsiya-dlya-patsiyentov-pered-mikrokhirurgicheskim-vmeshatelstvom",
+            },
+        "/informatsiya-dlya-inohorodnikh-patsiyentiv": {
+            en: "/information-for-nonresident-patients",
+            ru: "/inogorodnim-patsiyentam",
+        },
+        "/instruktsiyi-pislya-lazernoyi-korektsiyi-zoru": {
+            en: "/instructions-after-laser-vision-correction",
+            ru: "/instruktsii-posle-korrektsii-zreniya",
+        },
+        "/pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu": {
+            en: "/patient-reminder-before-vitreoretinal-surgery",
+            ru: "/pamyatki-patsiyentu-pered-vitreoretinalnoy-khirurgiyey",
+        },
+        "/pamyatka-patsiyenta-pislya-khirurhiyi-katarakty": {
+            en: "/pamyatka-patsiyenta-pislya-khirurhiyi-katarakty",
+            ru: "/pamyatki-paczienta-posle-hirurgii-katarakty",
+        },
+        "/zakhvoryuvannya-ochey/glaukoma": {
+            en: "/eye-diseases/glaucoma",
+            ru: "/glaznye-bolezni/glaukoma",
+        },
+        "/zakhvoryuvannya-ochey/presbiopiya": {
+            en: "/eye-diseases/presbyopia",
+            ru: "/glaznye-bolezni/presbiopiya",
+        },
+        "/zakhvoryuvannya-ochey/dalekozorist": {
+            en: "/eye-diseases/farsightedness",
+            ru: "/glaznye-bolezni/dalnozorkost",
+        },
+        "/zakhvoryuvannya-ochey/katarakta": {
+            en: "/eye-diseases/cataract",
+            ru: "/glaznye-bolezni/katarakta",
+        },
+        "/zakhvoryuvannya-ochey/simptomi-zahvoryuvannya-ochej": {
+            en: "/eye-diseases/symptoms-of-eye-disease",
+            ru: "/glaznye-bolezni/simptomy-zabolevaniya-glaz",
+        },
+        "/zakhvoryuvannya-ochey/kosookist": {
+            en: "/eye-diseases/strabismus",
+            ru: "/glaznye-bolezni/kosoglazie",
+        },
+        "/zakhvoryuvannya-ochey/korotkozorist-miopiya": {
+            en: "/eye-diseases/nearsightedness-myopia",
+            ru: "/glaznye-bolezni/blizorukost-miopiya",
+        },
+        "/zakhvoryuvannya-ochey/astigmatizm": {
+            en: "/eye-diseases/astigmatism",
+            ru: "/glaznye-bolezni/astigmatizm",
+        },
     },
 });
