@@ -106,8 +106,8 @@
         "hirurgiya-povik-i-konyunktivi": "Хірургія повік і кон’юнктиви",
         "anesteziologichnij-posibnik": "Анестезіологічний посібник",
         "ksenonoterapiya": "Ксенонотерапія",
-        "informatsiya-dlya-inohorodnikh-patsiyentiv": "Інформація для іногородніх пацієнтів",
-        "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu": "Пам’ятки та інструкції для пацієнтів",
+        "informatsiya-dlya-inohorodnikh-patsiyentiv": "для іногородніх пацієнтів",
+        "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu": "Пам’ятка пацієнта перед вітреоретинальною хірургією",
         "zakhvoryuvannya-ochey": "Захворювання очей",
         "socialMedia": "соцмережі",
         "lazerna-korekcziya-zoru-smalText": "Програма «живий зір» після операції з приводу катаракти, пресбіопії і з рефракційної метою.",
@@ -115,7 +115,22 @@
         "perevirka-zoru-smalText": "Програма «живий зір» після операції з приводу катаракти, пресбіопії і з рефракційної метою.",
         "syndrom-sukhoho-oka-smalText": "Програма «живий зір» після операції з приводу катаракти, пресбіопії і з рефракційної метою.",
         "sportlife-lasik": "SportLine LASEK",
-        "iq-lasik-oxygen-3d": "iQ-LASIK Oxygen 3D"
+        "iq-lasik-oxygen-3d": "iQ-LASIK Oxygen 3D",
+        "glaukoma": "Глаукома",
+        "presbiopiya": "Пресбіопія",
+        "dalekozorist": "Далекозорість",
+        "katarakta": "Катаракта",
+        "simptomi-zahvoryuvannya-ochej": "Симптоми захворювання очей",
+        "kosookist": "Косоокість",
+        "korotkozorist-miopiya": "Короткозорість, міопія",
+        "astigmatizm": "Астигматизм",
+        "reminders-and-instructions-for patients": "Пам’ятки та інструкції для пацієнтів",
+        "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam": "При підготовці до операції",
+        "instruktsiyi-pislya-lazernoyi-korektsiyi-zoru": "Інструкції після лазерної корекції зору",
+        "pamyatka-patsiyenta-pislya-khirurhiyi-katarakty": "Пам’ятка пацієнта після хірургії катаракти",
+        "preparation-for-surgery-for-strabismus": "підготовка до операціїї з приводу косоокості",
+        "patient-information-before-IPL-therapy": "Памʼятка пацієнта перед IPL-терапією",
+        "reminder-before-a-comprehensive-pediatric-examination": "Памʼятка перед дитячим комплексним оглядом"
     },
     "Modals": {
         "callUs": "Зв’язатись з нами",
@@ -233,5 +248,10 @@
         "price": "Ціна в грн",
         "newTechnology": "Нові технології",
         "specialPrice": "Спеціальна ціна"
+    },
+    "PatientsPage": {
+        "title": "Інформація для \nпацієнтів",
+        "beforeProcedure": "до процедури:",
+        "afterProcedure": "після процедури:"
     }
 }

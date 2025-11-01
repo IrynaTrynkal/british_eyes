@@ -107,15 +107,30 @@
         "hirurgiya-povik-i-konyunktivi": "Хирургия век и конъюнктивы",
         "anesteziologichnij-posibnik": "Анестезиологическое пособие",
         "ksenonoterapiya": "Ксенонотерапия",
-        "informatsiya-dlya-inohorodnikh-patsiyentiv": "Информация для иногородних пациентов",
-        "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu": "Пам’ятки та інструкції для пацієнтів",
-        "zakhvoryuvannya-ocheye": "Глазные болезни",
+        "informatsiya-dlya-inohorodnikh-patsiyentiv": "для иногородних пациентов",
+        "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu": "Памятки пациенту перед витреоретинальной хирургией",
+        "zakhvoryuvannya-ochey": "Глазные болезни",
         "lazerna-korekcziya-zoru-smalText": "Программа «живое зрение» после операции по поводу катаракты, пресбиопии и с рефракционной целью.",
         "likuvannya-katarakti-smalText": "Программа «живое зрение» после операции по поводу катаракты, пресбиопии и с рефракционной целью.",
         "perevirka-zoru-smalText": "Программа «живое зрение» после операции по поводу катаракты, пресбиопии и с рефракционной целью.",
         "syndrom-sukhoho-oka-smalText": "Программа «живое зрение» после операции по поводу катаракты, пресбиопии и с рефракционной целью.",
         "sportlife-lasik": "SportLine LASEK",
-        "iq-lasik-oxygen-3d": "iQ-LASIK Oxygen 3D"
+        "iq-lasik-oxygen-3d": "iQ-LASIK Oxygen 3D",
+        "glaukoma": "Глаукома",
+        "presbiopiya": "Пресбиопия",
+        "dalekozorist": "Дальнозоркость",
+        "katarakta": "Катаракта",
+        "simptomi-zahvoryuvannya-ochej": "Симптомы заболеваний глаз",
+        "kosookist": "Косоглазие",
+        "korotkozorist-miopiya": "Близорукость, миопия",
+        "astigmatizm": "Астигматизм",
+        "reminders-and-instructions-for patients": "Памятки и инструкции для пациентов",
+        "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam": "При подготовке к операции",
+        "instruktsiyi-pislya-lazernoyi-korektsiyi-zoru": "Инструкции после лазерной коррекции зрения",
+        "pamyatka-patsiyenta-pislya-khirurhiyi-katarakty": "Памятка пациента после операции катаракты",
+        "preparation-for-surgery-for-strabismus": "Подготовка к операции по поводу косоглазия",
+        "patient-information-before-IPL-therapy": "Памятка пациента перед IPL-терапией",
+        "reminder-before-a-comprehensive-pediatric-examination": "Памятка перед детским комплексным осмотром"
     },
     "Modals": {
         "callUs": "Связаться с нами",
@@ -233,5 +248,10 @@
         "price": "Цена в грн",
         "newTechnology": "Новые технологии",
         "specialPrice": "Специальная цена"
+    },
+    "PatientsPage": {
+        "title": "Информация для \nпациентов",
+        "beforeProcedure": "до процедуры:",
+        "afterProcedure": "после процедуры:"
     }
 }
