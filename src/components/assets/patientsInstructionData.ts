@@ -1261,7 +1261,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Короткозорість" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Короткозорість",
+                                },
+                            ],
                         },
                         { type: "image", image: "/images/blizorukost.webp" },
                         {
@@ -1272,7 +1278,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Далекозорість" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Далекозорість",
+                                },
+                            ],
                         },
                         { type: "image", image: "/images/farsightedness.jpg" },
                         {
@@ -1283,7 +1295,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Астигматизм" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Астигматизм",
+                                },
+                            ],
                         },
                         { type: "image", image: "/images/astigmatism.jpg" },
                         {
@@ -1294,7 +1312,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Пресбіопія" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Пресбіопія",
+                                },
+                            ],
                         },
                         {
                             type: "text",
@@ -1304,7 +1328,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Катаракта" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Катаракта",
+                                },
+                            ],
                         },
                         {
                             type: "text",
@@ -1343,7 +1373,9 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Myopia" }],
+                            text: [
+                                { bold: true, subtitle: true, value: "Myopia" },
+                            ],
                         },
                         { type: "image", image: "/images/blizorukost.webp" },
                         {
@@ -1354,7 +1386,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Farsightedness" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Farsightedness",
+                                },
+                            ],
                         },
                         { type: "image", image: "/images/farsightedness.jpg" },
                         {
@@ -1365,7 +1403,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Astigmatism" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Astigmatism",
+                                },
+                            ],
                         },
                         { type: "image", image: "/images/astigmatism.jpg" },
                         {
@@ -1376,7 +1420,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Presbyopia" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Presbyopia",
+                                },
+                            ],
                         },
                         {
                             type: "text",
@@ -1386,7 +1436,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Cataract" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Cataract",
+                                },
+                            ],
                         },
                         {
                             type: "text",
@@ -1425,7 +1481,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Короткозорість" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Короткозорість",
+                                },
+                            ],
                         },
                         { type: "image", image: "/images/blizorukost.webp" },
                         {
@@ -1436,7 +1498,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Далекозорість" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Далекозорість",
+                                },
+                            ],
                         },
                         { type: "image", image: "/images/farsightedness.jpg" },
                         {
@@ -1447,7 +1515,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Астигматизм" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Астигматизм",
+                                },
+                            ],
                         },
                         { type: "image", image: "/images/astigmatism.jpg" },
                         {
@@ -1458,7 +1532,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Пресбіопія" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Пресбіопія",
+                                },
+                            ],
                         },
                         {
                             type: "text",
@@ -1468,7 +1548,13 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         {
                             type: "text",
                             gap: true,
-                            text: [{ bold: true, value: "Катаракта" }],
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Катаракта",
+                                },
+                            ],
                         },
                         {
                             type: "text",
