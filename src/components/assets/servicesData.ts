@@ -194,7 +194,7 @@ export type ListContent = {
     numeric?: boolean;
 };
 
-export type ImageContent = { type: "image"; image: string };
+export type ImageContent = { type: "image"; gap?: boolean; image: string };
 
 export type TextType = ParagraphContent | ListContent | ImageContent;
 
