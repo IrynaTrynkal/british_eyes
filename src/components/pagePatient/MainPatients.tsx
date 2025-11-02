@@ -55,7 +55,7 @@ export const MainPatients = () => {
                                                                 ? `/zakhvoryuvannya-ochey/${itemList.key}`
                                                                 : (`/${itemList.key}` as any)
                                                         }
-                                                        className={`font-oswald leading-5 uppercase underline ${item.key === "zakhvoryuvannya-ochey" ? "prepc:w-[49%]" : ""}`}
+                                                        className={`font-oswald prepc:hover:underline prepc:no-underline leading-5 uppercase underline transition-all duration-300 ease-in-out ${item.key === "zakhvoryuvannya-ochey" ? "prepc:w-[49%]" : ""}`}
                                                     >
                                                         {tM(itemList.key)}
                                                     </Link>
