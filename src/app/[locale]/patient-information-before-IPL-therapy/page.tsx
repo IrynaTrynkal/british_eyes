@@ -1,4 +1,10 @@
+import { notFound } from "next/navigation";
+import { useLocale } from "next-intl";
+
+import { pationtsInstructionsData } from "@/components/assets/patientsInstructionData";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { HeroInstruction } from "@/components/someInstructionComponents/HeroInstruction";
+import { LocaleType } from "@/types/LocaleType";
 
 export default function PatientsIPLInstructionsPage() {
     const breadcrumb = [
@@ -7,13 +13,19 @@ export default function PatientsIPLInstructionsPage() {
             href: "/patient-information-before-IPL-therapy",
         },
     ];
+    const locale = useLocale();
+    const data = pationtsInstructionsData.find(
+        instr => instr.name.key === "patient-information-before-IPL-therapy"
+    );
+    if (!data) return notFound();
+
     return (
         <>
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}
                 className="prepc:mt-[104px] prepc:mb-12 mt-[72px] mb-6"
             />
-            <p>Памʼятка пацієнта перед IPL-терапією</p>
+            <HeroInstruction title={data[locale as LocaleType].title} />
         </>
     );
 }
