@@ -1,11 +1,8 @@
-import { useLocale } from "next-intl";
-
 import { MethodCardProps } from "@/components/assets/servicesData";
 import { IconArrow } from "@/components/shared/icons/IconArrow";
 import { Link } from "@/i18n/navigation";
 
 export const MethodCard = ({ data }: { data: MethodCardProps }) => {
-    const locale = useLocale();
     return (
         <Link
             href={`/poslugy/${data.link}` as any}

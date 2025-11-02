@@ -100,7 +100,7 @@ export const BookingCallForm = ({
     return (
         <form
             onSubmit={handleSubmit}
-            className="tab:flex-row tab:flex-wrap tab:justify-between prepc:gap-x-4 prepc:gap-y-8 flex flex-col gap-6"
+            className={`tab:flex-row tab:flex-wrap tab:justify-between prepc:gap-x-4 prepc:gap-y-8 flex flex-col gap-6 ${className}`}
         >
             <div className="group tab:w-[47%] pc:w-[318px] relative w-full">
                 <label htmlFor="name" className="sr-only">

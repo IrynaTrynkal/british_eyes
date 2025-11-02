@@ -1,5 +1,4 @@
 "use client";
-import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { SubmitFnType } from "@/types/modalProps";
@@ -12,7 +11,6 @@ import { BookingCallForm } from "./BookingCallForm";
 export const CallMeModal = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [modalContent, setModalContent] = useState<React.ReactNode>(null);
-    const t = useTranslations("Form");
     const notificationHandler = async (submitFn: SubmitFnType) => {
         try {
             await submitFn();

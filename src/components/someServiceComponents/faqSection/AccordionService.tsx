@@ -16,9 +16,6 @@ export function AccordionService({ item }: { item: FAQServiceListType }) {
         setAccordionOpen(prev => !prev);
     };
 
-    const getTextArray = (text: string | string[]) =>
-        Array.isArray(text) ? text : [text];
-
     return (
         <li
             className={`border-grey-70 group tab:px-3 tab:pt-3 tab:pb-2 rounded-md border p-2 transition-all duration-500 hover:border-black ${isAccordionOpen ? "bg-green-10" : "bg-white"}`}
@@ -79,12 +76,13 @@ export function AccordionService({ item }: { item: FAQServiceListType }) {
                             </ul>
                         );
                     }
-
-                    return (
-                        <p key={index} className={wrapperClasses}>
-                            {renderSegments(seg.text)}
-                        </p>
-                    );
+                    if (seg.type === "text") {
+                        return (
+                            <p key={index} className={wrapperClasses}>
+                                {renderSegments(seg.text)}
+                            </p>
+                        );
+                    }
                 })}
             </div>
         </li>
