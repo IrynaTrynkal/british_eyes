@@ -30,6 +30,7 @@ export type KeySlugPatientsType = {
 export type ContentType = {
     title?: string;
     text: TextType[];
+    btn?: { name: string; link: string; secondary?: boolean };
 };
 
 export type LocaleInstructionContent = {
@@ -157,6 +158,14 @@ export const keySlugPatientsInstruction: KeySlugPatientsType[] = [
             uk: "reminder-before-a-comprehensive-pediatric-examination",
             en: "reminder-before-a-comprehensive-pediatric-examination",
             ru: "reminder-before-a-comprehensive-pediatric-examination",
+        },
+    },
+    {
+        key: "reminders-and-instructions-for-patients",
+        slug: {
+            uk: "reminders-and-instructions-for-patients",
+            en: "reminders-and-instructions-for-patients",
+            ru: "reminders-and-instructions-for-patients",
         },
     },
 ];
@@ -349,6 +358,121 @@ export const pationtsInstructionsData: PationtsInstructionType[] = [
                 },
             ],
         },
+    },
+    {
+        name: keySlugPatientsInstruction.find(
+            k =>
+                k.key ===
+                "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam"
+        )!,
+        uk: {
+            title: "Інформація для пацієнтів перед мікрохірургічним втручанням",
+            content: [],
+        },
+        en: {
+            title: "Information for patients prior to microsurgery",
+            content: [],
+        },
+        ru: {
+            title: "Информация для пациентов перед микрохирургическим вмешательством",
+            content: [],
+        },
+    },
+    {
+        name: keySlugPatientsInstruction.find(
+            k => k.key === "preparation-for-surgery-for-strabismus"
+        )!,
+        uk: {
+            title: "Підготовка до операціїї з приводу косоокості",
+            content: [],
+        },
+        en: { title: "Preparing for strabismus surgery", content: [] },
+        ru: {
+            title: "Подготовка к операции по поводу косоглазия",
+            content: [],
+        },
+    },
+    {
+        name: keySlugPatientsInstruction.find(
+            k =>
+                k.key ===
+                "reminder-before-a-comprehensive-pediatric-examination"
+        )!,
+        uk: {
+            title: "Памʼятка перед дитячим комплексним оглядом",
+            content: [],
+        },
+        en: {
+            title: "Reminder before a comprehensive pediatric examination",
+            content: [],
+        },
+        ru: {
+            title: "Памятка перед детским комплексным осмотром",
+            content: [],
+        },
+    },
+    {
+        name: keySlugPatientsInstruction.find(
+            k => k.key === "patient-information-before-IPL-therapy"
+        )!,
+        uk: { title: "Памʼятка пацієнта перед IPL-терапією", content: [] },
+        en: { title: "Patient information before IPL therapy", content: [] },
+        ru: { title: "Памятка пациента перед IPL-терапией", content: [] },
+    },
+    {
+        name: keySlugPatientsInstruction.find(
+            k => k.key === "instruktsiyi-pislya-lazernoyi-korektsiyi-zoru"
+        )!,
+        uk: { title: "Інструкції після лазерної корекції зору", content: [] },
+        en: {
+            title: "Instructions after laser vision correction",
+            content: [],
+        },
+        ru: {
+            title: "Инструкции после лазерной коррекции зрения",
+            content: [],
+        },
+    },
+    {
+        name: keySlugPatientsInstruction.find(
+            k =>
+                k.key ===
+                "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu"
+        )!,
+        uk: {
+            title: "Пам’ятка пацієнта перед вітреоретинальною хірургією",
+            content: [],
+        },
+        en: {
+            title: "Patient reminder before vitreoretinal surgery",
+            content: [],
+        },
+        ru: {
+            title: "Памятки пациенту перед витреоретинальной хирургией",
+            content: [],
+        },
+    },
+    {
+        name: keySlugPatientsInstruction.find(
+            k => k.key === "pamyatka-patsiyenta-pislya-khirurhiyi-katarakty"
+        )!,
+        uk: {
+            title: "Пам’ятка пацієнта після хірургії катаракти",
+            content: [],
+        },
+        en: { title: "Patient note after cataract surgery", content: [] },
+        ru: { title: "Памятки пациента после хирургии катаракты", content: [] },
+    },
+    {
+        name: keySlugPatientsInstruction.find(
+            k => k.key === "reminders-and-instructions-for-patients"
+        )!,
+        uk: {
+            title: "Пам’ятки та інструкції для пацієнтів",
+            content: [],
+        },
+        en: { title: "Reminders and instructions for patients", content: [] },
+        ru: { title: "Памятки и инструкции для пациентов", content: [] },
     },
 ];
 
@@ -656,46 +780,453 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
     {
         name: keyEyeDisease.find(d => d.key === "korotkozorist-miopiya")!,
         uk: {
-            title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Короткозорість, міопія",
+            content: [
+                {
+                    title: "Симптоми та причини",
+                    text: [
+                        { type: "image", image: "/images/myopia800.webp" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Якщо у Вас короткозорість, зображення об’єктів на відстані здаються розмитими. Ви можете виявити, що зображення стають чіткішими, якщо прищулитися. Наприклад, короткозорі студенти могли б легко читати книги і бачити сидячих поруч сусідів, але викладачі і, що більш важливо, слова на дошці здавалися б розмитими. Короткозорість, інакше міопія, виникає, коли промені світла, що потрапляють в око, заломлюються занадто сильно і сходяться в точці, не досягаючи сітківки. При короткозорості очне яблуко може бути довше норми або рогівка може бути занадто зігнутою. В результаті зображення, які Ви бачите, не фокусуються на сітківці належним чином.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Зазвичай короткозорість розвивається в дитинстві й вперше виявляється, коли батьки помічають, що дитина відчуває труднощі з читанням написів на дошці в школі. Короткозорість продовжує посилюватися протягом усього підліткового віку і до часу дорослішання стабілізується. Деякі фахівці вважають, що короткозорість передається нам у спадок. Вона може супроводжуватися або не супроводжуватися астигматизмом. У типовому висновку при короткозорості пишуть знак мінус перед першою цифрою.",
+                        },
+                    ],
+                },
+                {
+                    title: "Варіанти лікування короткозорості:",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Лікування короткозорості залежить від декількох факторів, таких як вік, ступінь фізичної активності, рід занять. Лікування може полягати в призначенні контактних лінз або окулярів. Лікар також дасть поради щодо зміцнення зору. Якщо Ви бажаєте раз і назавжди позбутися від окулярів і контактних лінз, можна звернутися до хірургічних методів лікування.",
+                        },
+                        { type: "image", image: "/images/blizorukost.webp" },
+                    ],
+                },
+                {
+                    title: "Лазерна корекція зору",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Хоча окуляри й контактні лінзи допомагають впоратися з короткозорістю, їх можна порівняти з гіпсом і милицями, тобто це тимчасове рішення, яке дозволяє вийти з положення, але фактично не усуває причину проблеми так, як цього можна досягнути за допомогою хірургічного втручання.",
+                        },
+                    ],
+                    btn: {
+                        name: "детальніше",
+                        link: "/poslugy/lazerna-korekcziya-zoru",
+                    },
+                },
+                {
+                    title: "Інтраокулярна корекція",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Інтраокулярні лінзи призначені для корекції високого ступеня астигматизму. У тому випадку, якщо лазерна корекція Вам не підходить, не впадайте у відчай, тому що є й інші можливості досягнення бажаного. «Британський офтальмологічний центр» пропонує ряд операцій, які можуть Вам допомогти. Під час консультації, ми зможемо з’ясувати, чи не протипоказана Вам операція, і визначити найкращий варіант операції для Вас.",
+                        },
+                    ],
+                    btn: {
+                        name: "детальніше",
+                        link: "posluhy/refrakczijna-lensektomiya/",
+                    },
+                },
+            ],
         },
         en: {
-            title: "Glaucoma",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Nearsightedness, myopia",
+            content: [
+                {
+                    title: "Symptoms and Causes",
+
+                    text: [
+                        { type: "image", image: "/images/myopia800.webp" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "If you have myopia, distant objects appear blurry. You may find that squinting makes the image clearer. For example, nearsighted students can easily read books and see their neighbors sitting nearby, but teachers and, more importantly, words on the board would appear blurred. Myopia occurs when the light rays entering the eye refract too strongly and converge at a point before reaching the retina. The eyeball may be longer than normal or the cornea too curved. As a result, the images you see are not properly focused on the retina.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Myopia usually develops in childhood and is often first noticed when parents see that their child has trouble reading the board at school. It tends to progress during adolescence and stabilizes in adulthood. Some experts believe myopia is hereditary. It may or may not be accompanied by astigmatism. In typical prescriptions for myopia, a minus sign appears before the first number.",
+                        },
+                    ],
+                },
+                {
+                    title: "Treatment Options for Myopia:",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Treatment for myopia depends on several factors, such as age, level of physical activity, and occupation. It may include prescription contact lenses or glasses. The doctor will also recommend ways to strengthen your vision. If you want to permanently get rid of glasses and contact lenses, surgical treatment options are available.",
+                        },
+                        { type: "image", image: "/images/blizorukost.webp" },
+                    ],
+                },
+                {
+                    title: "Laser Vision Correction",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Although glasses and contact lenses help manage myopia, they can be compared to a cast or crutches — temporary solutions that help you cope but do not address the root cause, which can be corrected surgically.",
+                        },
+                    ],
+                    btn: {
+                        name: "learn more",
+                        link: "/services/laser-vision-correction",
+                    },
+                },
+                {
+                    title: "Intraocular Correction",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Intraocular lenses are designed to correct a high degree of astigmatism. If laser correction is not suitable for you, don’t worry — there are other ways to achieve the desired result. The 'British Ophthalmological Center' offers several surgical options that can help you. During a consultation, we can determine whether surgery is contraindicated for you and choose the best procedure option.",
+                        },
+                    ],
+                    btn: {
+                        name: "learn more",
+                        link: "/services/refractive-lensectomy/",
+                    },
+                },
+            ],
         },
         ru: {
-            title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Короткозорість, міопія",
+            content: [
+                {
+                    title: "Симптомы и причины",
+
+                    text: [
+                        { type: "image", image: "/images/myopia800.webp" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Если у вас близорукость, изображения удалённых предметов кажутся размытыми. Вы можете заметить, что изображение становится чётче, если прищуриться. Например, близорукие студенты легко читают книги и видят соседей рядом, но преподаватели и, что важнее, слова на доске будут расплываться. Близорукость, или миопия, возникает, когда лучи света, попадающие в глаз, преломляются слишком сильно и сходятся в точке перед сетчаткой. Глазное яблоко может быть длиннее нормы, а роговица — слишком изогнутой. В результате изображение не фокусируется на сетчатке должным образом.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Обычно близорукость развивается в детстве и впервые проявляется, когда родители замечают, что ребёнку трудно читать надписи на школьной доске. Близорукость прогрессирует в подростковом возрасте и стабилизируется к взрослому периоду. Некоторые специалисты считают, что миопия передаётся по наследству. Она может сопровождаться или не сопровождаться астигматизмом. В типичном рецепте при близорукости перед первой цифрой стоит знак минус.",
+                        },
+                    ],
+                },
+                {
+                    title: "Варианты лечения близорукости:",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Лечение близорукости зависит от нескольких факторов: возраста, уровня физической активности и рода занятий. Оно может включать назначение контактных линз или очков. Врач также даст рекомендации по укреплению зрения. Если вы хотите навсегда избавиться от очков и линз, можно рассмотреть хирургические методы коррекции.",
+                        },
+                        { type: "image", image: "/images/blizorukost.webp" },
+                    ],
+                },
+                {
+                    title: "Лазерная коррекция зрения",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Хотя очки и контактные линзы помогают справиться с близорукостью, их можно сравнить с гипсом или костылями — это временное решение, которое облегчает жизнь, но не устраняет причину проблемы, как это делает хирургическое вмешательство.",
+                        },
+                    ],
+                    btn: {
+                        name: "подробнее",
+                        link: "/uslugi/lazernaya-korrektsiya-zreniya",
+                    },
+                },
+                {
+                    title: "Интраокулярная коррекция",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Интраокулярные линзы предназначены для коррекции высокой степени астигматизма. Если лазерная коррекция вам не подходит — не отчаивайтесь, есть и другие способы достичь желаемого результата. «Британский офтальмологический центр» предлагает ряд операций, которые могут помочь вам. Во время консультации врач определит, нет ли противопоказаний, и подберёт лучший вариант операции.",
+                        },
+                    ],
+                    btn: {
+                        name: "подробнее",
+                        link: "/uslugi/refraktsionnaya-lensektomiya/",
+                    },
+                },
+            ],
         },
     },
     {
         name: keyEyeDisease.find(d => d.key === "kosookist")!,
         uk: {
-            title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Косоокість",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Гармонійне і правильне сприйняття навколишнього світу розвивається у людини з дитинства, за умови високої гостроти зору і рівного положення очей. Зоровий образ виходить чітким і об’ємним. Проте, нерідко очі відхиляються від паралельного положення зорових осей, і виникає косоокість. Косоокість є косметичною та функціональною проблемою, пов’язаною з порушенням балансу окорухових м’язів. Око може відхилятися до носа або назовні, більш рідкісні випадки відхилення ока по вертикалі. При гострому виникненні косоокості у підлітка або дорослої людини виникає дискомфорт і відчуття постійного двоїння, що значно порушує якість життя.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Своєчасне виявлення відхилення очей, правильна діагностика причин косоокості, вчасно розпочате лікування — це шанси на виправлення косметичного дефекту і досягнення високого зору обох очей.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Безсумнівно, лікування косоокості має починатися ще в дитинстві. Вчасно підібрані окуляри дозволяють зменшувати ступінь відхилення очей або навіть повністю усувають косоокість. Правильна очкова корекція в поєднанні з оклюзією (тимчасовим прикриванням здорового ока) дозволяє зберегти високий зір на проблемному оці. При недостатньому «вирівнюючому» ефекті очей, косоокість усувається хірургічною корекцією. Закріплення ефекту операції досягається тренуваннями на апаратах, які формують гармонію не тільки на рівні очних м’язів, а й на рівні зорового відділу головного мозку.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Таким чином, можливо виправлення косоокості з відновленням правильного бінокулярного зору. Важливо те, що навіть при неможливості поліпшення зору у деяких пацієнтів старшого віку (а це залежатиме від глибини змін в зоровій системі), досягнення гарного косметичного ефекту і гармонійне правильне положення очей також є нашою реальністю.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Сучасні щадні методи хірургічної корекції косоокості й можливість регулювання швів дозволяють нам усувати косоокість навіть у пацієнтів з невисокою гостротою зору. У «Британському офтальмологічному центрі» ми здатні комплексно допомагати пацієнтам з косоокістю. Точна діагностика, правильна лікувальна тактика, уважне спостереження за динамікою процесу та надійне закріплення результату лікування — всі ці етапи повністю забезпечені в стінах нашої клініки.",
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    value: "Косоокість можливо перемогти в будь-якому віці!",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         en: {
-            title: "Glaucoma",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Strabismus",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Harmonious and correct perception of the environment develops in childhood, with high visual acuity and an even position of the eyes. The visual image is clear and three-dimensional. However, often the eyes deviate from the parallel position of the visual axes, and strabismus occurs. Strabismus is a cosmetic and functional problem associated with an imbalance of the oculomotor muscles. The eye may be deviated toward the nose or outward, more rarely the eye is deviated vertically. When strabismus is acute, the teenager or adult has discomfort and a feeling of constant double vision which significantly impairs the quality of life.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Timely detection of eye deviation, correct diagnosis of the causes of strabismus, and early treatment are the chances of correcting the cosmetic defect and reaching high vision in both eyes.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Strabismus treatment should undoubtedly start in childhood. Glasses selected in time could reduce the degree of strabismus deviation or even eliminate it completely. Correct spectacle correction combined with occlusion (temporary covering of the healthy eye) allows you to keep high vision in the problematic eye. If the “leveling” effect of the glasses is insufficient, strabismus is corrected by surgical correction. Consolidation of the surgical effect is achieved by training with apparatuses which form harmony not only at the level of the eye muscles, but also at the level of the visual department of the brain.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Thus, it is possible to correct strabismus with restoration of correct binocular vision. What is important is that even if it is not possible to improve vision in some older patients (and this will depend on the depth of changes in the visual system), achieving a good cosmetic effect and a harmonious correct position of the eyes is also our reality.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "The modern sparing methods of surgical correction of strabismus and the possibility of adjusting stitches allow us to eliminate strabismus even in patients with low visual acuity. At the British Ophthalmological Center  we are able to provide comprehensive care for patients with strabismus. Perfect diagnostics, therapeutic tactics, careful observation of the dynamics of the process, and reliable consolidation of the treatment results – all these aspects are completely ensured within the walls of our clinic.",
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    value: "Strabismus can be conquered at any age!",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         ru: {
-            title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Косоглазие",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Гармоничное и правильное восприятие окружающего мира развивается у человека с детства, при условии высокой остроты зрения и ровного положения глаз. Зрительный образ получается четким и объемным. Однако, нередко глаза отклоняются от параллельного положения зрительных осей, и возникает косоглазие. Косоглазие является косметической и функциональной проблемой, связанной с нарушением баланса глазодвигательных мышц. Глаз может отклоняться к носу или кнаружи, более редкие случаи отклонения глаза по вертикали. При остром возникновении косоглазия у подростка или взрослого человека возникает дискомфорт и чувство постоянного двоения, что значительно нарушает качество жизни.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Своевременное обнаружение отклонения глаза, правильная диагностика причин косоглазия, рано начатое лечение – это шансы на исправление косметического дефекта и достижение высокого зрения обоих глаз.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Несомненно, лечение косоглазия должно начинаться еще в детстве. Вовремя подобранные очки позволяют уменьшать степень отклонения глаза или даже полностью устраняют косоглазие. Правильная очковая коррекция в сочетании с окклюзией (временным прикрыванием здорового глаза) позволяет сохранить высокое зрение на проблемном глазу. При недостаточном «выравнивающем» эффекте очков, косоглазие устраняется хирургической коррекцией. Закрепление эффекта операции достигается тренировками на аппаратах, которые формируют гармонию не только на уровне глазных мышц, но и на уровне зрительного отдела головного мозга.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Таким образом, возможно исправление косоглазия с восстановлением правильного бинокулярного зрения. Важно то, что даже при невозможности улучшения зрения у некоторых пациентов старшего возраста (а это будет зависеть от глубины изменений в зрительной системе), достижение хорошего косметического эффекта и гармоничное правильное положение глаз также является нашей реальностью.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Современные щадящие методы хирургической коррекции косоглазия и возможность регулировки швов позволяют нам устранять косоглазие даже у пациентов с невысокой остротой зрения. В Британском офтальмологическом центре мы способны комплексно помогать пациентам с косоглазием. Точная диагностика, правильная лечебная тактика, внимательное наблюдение за динамикой процесса и надежное закрепление результата лечения – все эти этапы полностью обеспечены в стенах нашей клиники.",
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    value: "Косоглазие возможно победить в любом возрасте!",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
     },
     {
         name: keyEyeDisease.find(d => d.key === "presbiopiya")!,
         uk: {
-            title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Пресбіопія",
+            content: [
+                {
+                    title: "Симптоми та причини",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Вам потрібні окуляри для читання? Існує ймовірність того, що у Вас пресбіопія (стареча далекозорість) – аномалія рефракції ока, при якій людина не може розглянути дрібний шрифт або маленькі предмети на близькій відстані. Так само, як сивина і зморшки, пресбіопія є одним з вікових симптомів природного механізму старіння. Ранні симптоми пресбіопії очей в середньому спостерігаються у людини в 40-45 років. Саме в цей період вона починає відчувати перші труднощі в роботі з дрібними предметами або при читанні.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Термін «пресбіопія» походить від грецького слова πρέσβυς, що означає «стара людина» або «старий» і новолатинського суфікса «-opia», що означає «короткозорість», а дослівний переклад буде звучати як «старі очі».",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "У той час як точна причина пресбіопиї все ще є предметом досліджень, прийнята теорія, що м’язові волокна навколо природного кришталика ока ущільнюються і втрачають еластичність, що знижує здатність ока змінювати форму кришталика. По мірі того як природний кришталик ока стає менш гнучким, око все гірше фокусується на близьких об’єктах. Перенесена травма, спосіб життя, рід занять, наприклад, багатогодинне сидіння перед комп’ютером, теж можуть грати роль у розвитку цього стану.",
+                        },
+                    ],
+                },
+                {
+                    title: "Варіанти лікування",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Пресбіопію іноді неформально називають «хворобою довгих рук», оскільки деякий час компенсувати пресбіопію можна за допомогою розміщення предмета на відстані витягнутої руки. Однак коли цей метод перестає спрацьовувати, доводиться задуматися про корекцію пресбіопії доступними сучасній медицині методами.",
+                        },
+                    ],
+                },
+                {
+                    title: "Хірургія пресбіопії",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Якщо Ви не бажаєте носити окуляри або контактні лінзи з тих чи інших причин, то на допомогу приходить хірургічне лікування пресбіопії. Таким методом є заміна природного кришталика штучним (інтраокулярною лінзою). При цьому штучний кришталик може бути як простим, так і мультифокальним. Зазвичай інтраокулярні лінзи (ІОЛ) імплантують при видаленні катаракти, і деякі ІОЛ розроблені для лікування катаракти і пресбіопії одночасно.",
+                        },
+                    ],
+                },
+            ],
         },
         en: {
-            title: "Glaucoma",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Presbyopia",
+            content: [
+                {
+                    title: "Symptoms and Causes",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Do you need reading glasses? Chances are you have presbyopia (senile farsightedness), an eye refractive abnormality in which a person cannot see small print or small objects at a close distance. Like gray hair and wrinkles, presbyopia is one of the age-related symptoms of the natural aging mechanism. The early symptoms of presbyopia eyes are on average seen in a person in their 40s and 45s. It is during this period that he or she begins to experience the first difficulties in handling small objects or reading",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "The term “presbyopia” comes from the Greek word πρέσβυς meaning “old man” or “old man” and the New Latin suffix “-opia” meaning “myopia”, and the literal translation would be “old eyes”.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "While the exact cause of presbyopia is still the subject of research, it is the accepted theory that the muscle fibers around the eye’s natural lens thicken and lose elasticity, which reduces the eye’s ability to reshape the lens. As the eye’s natural lens becomes less flexible, the eye has less and less ability to focus on close objects. Trauma, lifestyle, and occupation, such as sitting in front of a computer for hours on end, can also play a role in the development of this condition.",
+                        },
+                    ],
+                },
+                {
+                    title: "Treatment Options",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Presbyopia is sometimes informally called “the disease of the long arms,” because for a while it is possible to compensate for presbyopia by placing an object at arm’s length. But when this method no longer works, we have to think about the correction of presbyopia with the methods available in modern medicine.",
+                        },
+                    ],
+                },
+                {
+                    title: "Presbyopia surgery",
+                    text: [
+                        {
+                            type: "text",
+                            text: "If you do not want to wear glasses or contact lenses for one or another reason, then surgical treatment of presbyopia comes to the rescue. This method involves replacing the natural lens with an artificial one (intraocular lens). The artificial lens can be either simple or multifocal. Intraocular lenses (IOLs) are usually implanted during cataract removal, and some IOLs are designed to treat cataracts and presbyopia simultaneously.",
+                        },
+                    ],
+                },
+            ],
         },
         ru: {
-            title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Пресбиопия",
+            content: [
+                {
+                    title: "Симптомы и причины",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Вам нужны очки для чтения? Есть вероятность того, что у вас пресбиопия (старческая дальнозоркость) — аномалия рефракции глаза, при которой человек не может рассмотреть мелкий шрифт или маленькие предметы на близком расстоянии. Так же, как седина и морщины, пресбиопия является одним из возрастных симптомов естественного механизма старения. Ранние симптомы пресбиопии глаз в среднем наблюдаются у человека в 40-45 лет. Именно в этот период он начинает испытывать первые трудности в работе с мелкими предметами или при чтении.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Термин «пресбиопия» происходит от греческого слова πρέσβυς, означающего «старый человек» или «старик» и новолатинского суффикса «-opia», означающего «близорукость», а дословный перевод будет звучать как «старые глаза».",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "В то время как точная причина пресбиопии все еще является предметом исследований, принята теория, что мышечные волокна вокруг естественного хрусталика глаза уплотняются и теряют эластичность, что снижает способность глаза изменять форму хрусталика. По мере того как естественный хрусталик глаза становится менее гибким, глаз все хуже фокусируется на близких объектах. Перенесенная травма, образ жизни, род занятий, например, многочасовое сидение перед компьютером, тоже могут играть роль в развитии этого состояния.",
+                        },
+                    ],
+                },
+                {
+                    title: "Варианты лечения",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Пресбиопию иногда неформально называют «болезнью длинных рук», поскольку некоторое время компенсировать пресбиопию можно с помощью размещения предмета на расстоянии вытянутой руки. Однако когда этот метод перестает срабатывать, приходится задуматься о коррекции пресбиопии доступными современной медицине методами.",
+                        },
+                    ],
+                },
+                {
+                    title: "Хирургия пресбиопии",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Если Вы не хотите носить очки или контактные линзы из тех или других причин, то на помощь приходит хирургическое лечение пресбиопии. Таким методом является замена природного хрусталика искусственным (интраокулярной линзой). При этом искусственный хрусталик может быть как простым, так и мультифокальным. Обычно интраокулярные линзы (ИОЛ) имплантируют при удалении катаракты, и некоторые ИОЛ разработаны для лечения катаракты и пресбиопии одновременно.",
+                        },
+                    ],
+                },
+            ],
         },
     },
     {
@@ -703,16 +1234,250 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             d => d.key === "simptomi-zahvoryuvannya-ochej"
         )!,
         uk: {
-            title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Симптоми захворювання очей",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Якщо Ви читаєте цей текст, ймовірно, Ви вже знайомі з контактними лінзами або окулярами (або з тими й іншими) не один рік і занадто добре знаєте всю цю мороку і обмеження, які з ними пов’язані. Ось що насправді відбувається.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Переходячи з одного середовища в інше, наприклад, з повітря у воду, промені світла заломлюються. Це називається «рефракція». Коли промені проходять через тканини рогівки і кришталик, вони піддаються рефракції таким чином, який дозволяє їм фокусуватися на сітківці. Явище, коли око не може сфокусувати світло на сітківці, зазвичай через не зовсім правильну форму ока, називається порушенням рефракції.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Нижче коротко описані найбільш типові порушення рефракції й захворювання очей, які зобов’язані своїм виникненням, головним чином, старіння й ущільнення або помутніння кришталика, яке може відбуватися в похилі роки.",
+                        },
+                    ],
+                },
+                {
+                    title: "Захворювання очей:",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Короткозорість" }],
+                        },
+                        { type: "image", image: "/images/blizorukost.webp" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Короткозорість (розмитий зір вдалину), яка інакше називається міопія, — це найбільш часте порушення рефракції. Зазвичай вона виникає, коли очне яблуко занадто довге або рогівка занадто вигнута. Надлишкова довжина ока призводить до того, що промені світла від віддалених об’єктів фокусуються в точці, яка знаходиться ближче по осі і не досягає сітківки; при цьому промені світла розсіюються і в мозок потрапляє несфокусоване зображення.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Далекозорість" }],
+                        },
+                        { type: "image", image: "/images/farsightedness.jpg" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Далекозорість (тобто нездатність чітко бачити об’єкти поблизу) – це загальновживаний термін для гіперметропії, — викликається тим, що очне яблуко занадто коротке або рогівка занадто плоска. Через недостатню довжину ока, рогівці і кришталику не вистачає місця для перетину променів світла в фокальній точці на сітківці, і тому зображення фокусується за сітківкою, а в мозок знову і знову вирушають неякісні сигнали.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Астигматизм" }],
+                        },
+                        { type: "image", image: "/images/astigmatism.jpg" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Астигматизм — дефект зору, пов’язаний з порушенням форми кришталика, рогівки або ока, в результаті чого людина втрачає здатність до чіткого бачення на будь-якій відстані: і близько, і далеко. Якщо астигматизм не лікувати, він може призвести до косоокості і різкого падіння зору. Без корекції астигматизм може викликати головні болі і різь в очах.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Пресбіопія" }],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Пресбіопія — вікова далекозорість, викликана природним старінням людини. Це аномалія рефракції ока, при якій людина не може розглянути дрібний шрифт або маленькі предмети на близькій відстані. Пресбіопія зазвичай починає вражати людей у віці від 40 до 50 років. Її найбільш ймовірна причина — втрата еластичності кришталиком.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Катаракта" }],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Всупереч поширеному переконанню, катаракта — це не плівка, що утворюється на поверхні ока, а зміна прозорості кришталика всередині ока, яка не дає променям світла проходити через нього. Таке поступове помутніння робить зір менш гострим з часом. Промені світла, яким вдається проникнути до сітківки, розсіюються, і зір стає розмитим.",
+                        },
+                    ],
+                },
+            ],
         },
         en: {
-            title: "Glaucoma",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Symptoms of eye disease",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "If you’re reading this, you’ve probably already been familiar with contact lenses or glasses (or both) for years and know all too well the hassle and limitations that come with them. Here’s what’s really going on.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "As light rays move from one medium to another, from air to water, for example, they refract. This is called “refraction.” When rays pass through corneal and lens tissue, they undergo refraction in a way that allows them to focus on the retina. The phenomenon of the eye not being able to focus light onto the retina, usually because the eye is not quite rightly shaped, is called refractive impairment.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "The following briefly describes the most common refractive disorders and eye diseases, which owe their occurrence mainly to aging and thickening or clouding of the lens, which may occur in advanced years.",
+                        },
+                    ],
+                },
+                {
+                    title: "Eye diseases:",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Myopia" }],
+                        },
+                        { type: "image", image: "/images/blizorukost.webp" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Myopia (blurred vision in the distance), otherwise known as myopia, is the most common refractive disorder. It usually occurs when the eyeball is too long or the cornea is too curved. The excessive length of the eye causes light rays from distant objects to be focused at a point that is closer in axis and does not reach the retina; the light rays are scattered and an unfocused image reaches the brain.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Farsightedness" }],
+                        },
+                        { type: "image", image: "/images/farsightedness.jpg" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Farsightedness (that is, the inability to see objects clearly at close range) is the common term for hypermetropia, and is caused by the eyeball being too short or the cornea being too flat. Due to the insufficient length of the eye, the cornea and lens do not have enough space for the light rays to cross at the focal point on the retina, so the image is focused behind the retina, and poor quality signals are sent to the brain over and over again.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Astigmatism" }],
+                        },
+                        { type: "image", image: "/images/astigmatism.jpg" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Astigmatism is a vision defect associated with the distortion of the shape of the lens, cornea or eye, as a result of which the person loses the ability to see clearly at any distance: both near and far. If astigmatism is left untreated, it can lead to strabismus and a sharp decline in vision. Without correction, astigmatism can cause headaches and eye pain.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Presbyopia" }],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Presbyopia is age-related farsightedness caused by a person’s natural aging. It is an abnormality of refraction of the eye in which a person cannot see small print or small objects at close distances. Presbyopia usually begins to affect people between the ages of 40 and 50. It’s most likely cause is the loss of elasticity of the lens.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Cataract" }],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Contrary to popular belief, a cataract is not a film that forms on the surface of the eye, but a change in the transparency of the lens inside the eye that prevents light rays from passing through it. This gradual clouding makes vision less sharp over time. Rays of light that manage to penetrate to the retina are scattered, and vision becomes blurred.",
+                        },
+                    ],
+                },
+            ],
         },
         ru: {
-            title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            title: "Симптоми захворювання очей",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Якщо Ви читаєте цей текст, ймовірно, Ви вже знайомі з контактними лінзами або окулярами (або з тими й іншими) не один рік і занадто добре знаєте всю цю мороку і обмеження, які з ними пов’язані. Ось що насправді відбувається.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Переходячи з одного середовища в інше, наприклад, з повітря у воду, промені світла заломлюються. Це називається «рефракція». Коли промені проходять через тканини рогівки і кришталик, вони піддаються рефракції таким чином, який дозволяє їм фокусуватися на сітківці. Явище, коли око не може сфокусувати світло на сітківці, зазвичай через не зовсім правильну форму ока, називається порушенням рефракції.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Нижче коротко описані найбільш типові порушення рефракції й захворювання очей, які зобов’язані своїм виникненням, головним чином, старіння й ущільнення або помутніння кришталика, яке може відбуватися в похилі роки.",
+                        },
+                    ],
+                },
+                {
+                    title: "Захворювання очей:",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Короткозорість" }],
+                        },
+                        { type: "image", image: "/images/blizorukost.webp" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Короткозорість (розмитий зір вдалину), яка інакше називається міопія, — це найбільш часте порушення рефракції. Зазвичай вона виникає, коли очне яблуко занадто довге або рогівка занадто вигнута. Надлишкова довжина ока призводить до того, що промені світла від віддалених об’єктів фокусуються в точці, яка знаходиться ближче по осі і не досягає сітківки; при цьому промені світла розсіюються і в мозок потрапляє несфокусоване зображення.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Далекозорість" }],
+                        },
+                        { type: "image", image: "/images/farsightedness.jpg" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Далекозорість (тобто нездатність чітко бачити об’єкти поблизу) – це загальновживаний термін для гіперметропії, — викликається тим, що очне яблуко занадто коротке або рогівка занадто плоска. Через недостатню довжину ока, рогівці і кришталику не вистачає місця для перетину променів світла в фокальній точці на сітківці, і тому зображення фокусується за сітківкою, а в мозок знову і знову вирушають неякісні сигнали.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Астигматизм" }],
+                        },
+                        { type: "image", image: "/images/astigmatism.jpg" },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Астигматизм — дефект зору, пов’язаний з порушенням форми кришталика, рогівки або ока, в результаті чого людина втрачає здатність до чіткого бачення на будь-якій відстані: і близько, і далеко. Якщо астигматизм не лікувати, він може призвести до косоокості і різкого падіння зору. Без корекції астигматизм може викликати головні болі і різь в очах.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Пресбіопія" }],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Пресбіопія — вікова далекозорість, викликана природним старінням людини. Це аномалія рефракції ока, при якій людина не може розглянути дрібний шрифт або маленькі предмети на близькій відстані. Пресбіопія зазвичай починає вражати людей у віці від 40 до 50 років. Її найбільш ймовірна причина — втрата еластичності кришталиком.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ bold: true, value: "Катаракта" }],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Всупереч поширеному переконанню, катаракта — це не плівка, що утворюється на поверхні ока, а зміна прозорості кришталика всередині ока, яка не дає променям світла проходити через нього. Таке поступове помутніння робить зір менш гострим з часом. Промені світла, яким вдається проникнути до сітківки, розсіюються, і зір стає розмитим.",
+                        },
+                    ],
+                },
+            ],
         },
     },
 ];
