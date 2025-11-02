@@ -1,8 +1,7 @@
 import {
     FAQServiceListType,
-    ListContent,
-    ParagraphContent,
     TextSegment,
+    TextType,
 } from "@/components/assets/servicesData";
 
 export function FAQServiceSchema({
@@ -10,7 +9,7 @@ export function FAQServiceSchema({
 }: {
     faqList: FAQServiceListType[];
 }) {
-    const extractText = (seg: ParagraphContent | ListContent): string => {
+    const extractText = (seg: TextType): string => {
         if (seg.type === "text") {
             if (typeof seg.text === "string") return seg.text;
             return seg.text.map((t: TextSegment) => t.value).join(" ");
@@ -26,6 +25,7 @@ export function FAQServiceSchema({
                 .join(" ");
         }
 
+        // Якщо тип image — нічого не повертаємо
         return "";
     };
 
