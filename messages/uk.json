@@ -130,7 +130,9 @@
         "pamyatka-patsiyenta-pislya-khirurhiyi-katarakty": "Пам’ятка пацієнта після хірургії катаракти",
         "preparation-for-surgery-for-strabismus": "підготовка до операціїї з приводу косоокості",
         "patient-information-before-IPL-therapy": "Памʼятка пацієнта перед IPL-терапією",
-        "reminder-before-a-comprehensive-pediatric-examination": "Памʼятка перед дитячим комплексним оглядом"
+        "reminder-before-a-comprehensive-pediatric-examination": "Памʼятка перед дитячим комплексним оглядом",
+        "details": "детальніше",
+        "typesDiseases": "Види захворювань"
     },
     "Modals": {
         "callUs": "Зв’язатись з нами",

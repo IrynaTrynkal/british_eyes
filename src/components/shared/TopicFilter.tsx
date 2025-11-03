@@ -22,11 +22,9 @@ export const TopicFilter = <T extends { service: ServicesKeyType }>({
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
-    // читаємо вибраний service з URL, або all за замовчуванням
     const openedService =
         (searchParams.get("category") as ServicesKeyType) ?? "all";
 
-    // унікальні ключі сервісів + "all"
     const services = useMemo(() => {
         return Array.from(
             new Set<ServicesKeyType>(["all", ...list.map(f => f.service)])
