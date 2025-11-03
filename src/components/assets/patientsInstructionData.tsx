@@ -14,7 +14,7 @@ export type InstructionsSulgType =
     | "zakhvoryuvannya-ochey"
     | "reminders-and-instructions-for-patients";
 
-export type EyeDiseaseSulgType =
+export type EyeDiseaseSlugType =
     | "glaukoma"
     | "presbiopiya"
     | "dalekozorist"
@@ -24,8 +24,19 @@ export type EyeDiseaseSulgType =
     | "korotkozorist-miopiya"
     | "astigmatizm";
 
+export const eyeDiseases: EyeDiseaseSlugType[] = [
+    "glaukoma",
+    "presbiopiya",
+    "dalekozorist",
+    "katarakta",
+    "simptomi-zahvoryuvannya-ochej",
+    "kosookist",
+    "korotkozorist-miopiya",
+    "astigmatizm",
+];
+
 export type KeySlugPatientsType = {
-    key: InstructionsSulgType | EyeDiseaseSulgType;
+    key: InstructionsSulgType | EyeDiseaseSlugType;
     slug: { uk: string; en: string; ru: string };
 };
 
@@ -1274,10 +1285,6 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Катаракта – це захворювання, при якому порушується прозорість кришталика, що призводить до зниження гостроти зору. Назва цього захворювання походить від грецького слова katarrháktes, що означає «водоспад». Це з уявленнями древніх лікарів у тому, що захворювання розвивається внаслідок стікання каламутної рідини між райдужкою і кришталиком.",
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1285,6 +1292,7 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                         },
                     ],
                 },
+
                 {
                     text: [
                         {
@@ -1292,19 +1300,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Незважаючи на те, що катаракта найчастіше розвивається внаслідок вікових змін очей, захворювання все частіше виявляється у віці 40-50 років або навіть молодше. У пацієнтів віком понад 80 років частота виявлення катаракти становить майже 100%.",
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
                             text: "У більшості людей зі старечою (віковою) катарактою захворювання розвивається дуже повільно та безболісно протягом багатьох років, і часто початковий діагноз ставиться при звичайному обстеженні у офтальмолога.",
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1315,10 +1315,6 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                                 },
                             ],
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1338,10 +1334,6 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Cataract is a disease in which the transparency of the crystalline lens is affected, resulting in decreased visual acuity. The name of the disease comes from the Greek word katarrháktes, which means “waterfall. This is due to the belief of ancient healers that the disease develops due to the flow of turbid fluid between the iris and the lens.",
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1356,19 +1348,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "In spite of the fact that cataract most often develops as a result of age-related changes in the eye, the disease is more often detected at the age of 40-50 or even younger. In patients over the age of 80, the detection rate of cataracts is virtually 100%.",
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
                             text: "Most people with senile (age-related) cataracts develop the disease very slowly and painlessly over many years, and often the initial diagnosis is made during a routine examination by an ophthalmologist.",
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1379,10 +1363,6 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                                 },
                             ],
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1402,10 +1382,6 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Катаракта — это заболевание, при котором нарушается прозрачность хрусталика, что приводит к снижению остроты зрения. Название этого заболевания произошло от греческого слова katarrháktes, что означает «водопад». Это связано с представлениями древних врачевателей о том, что заболевание развивается вследствие стекания мутной жидкости между радужкой и хрусталиком.",
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1420,19 +1396,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Несмотря на то, что катаракта чаще всего развивается в результате возрастных изменений глаз, заболевание все чаще выявляется в возрасте 40-50 лет или даже младше. У пациентов старше 80 лет частота выявления катаракты составляет практически 100%.",
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
                             text: "У большинства людей со старческой (возрастной) катарактой заболевание развивается очень медленно и безболезненно на протяжении многих лет, и часто первоначальный диагноз ставится при обычном обследовании у офтальмолога.",
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1443,10 +1411,6 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                                 },
                             ],
                         },
-                    ],
-                },
-                {
-                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1685,6 +1649,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Безсумнівно, лікування косоокості має починатися ще в дитинстві. Вчасно підібрані окуляри дозволяють зменшувати ступінь відхилення очей або навіть повністю усувають косоокість. Правильна очкова корекція в поєднанні з оклюзією (тимчасовим прикриванням здорового ока) дозволяє зберегти високий зір на проблемному оці. При недостатньому «вирівнюючому» ефекті очей, косоокість усувається хірургічною корекцією. Закріплення ефекту операції досягається тренуваннями на апаратах, які формують гармонію не тільки на рівні очних м’язів, а й на рівні зорового відділу головного мозку.",
                         },
+                    ],
+                },
+                {
+                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -1728,6 +1696,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Strabismus treatment should undoubtedly start in childhood. Glasses selected in time could reduce the degree of strabismus deviation or even eliminate it completely. Correct spectacle correction combined with occlusion (temporary covering of the healthy eye) allows you to keep high vision in the problematic eye. If the “leveling” effect of the glasses is insufficient, strabismus is corrected by surgical correction. Consolidation of the surgical effect is achieved by training with apparatuses which form harmony not only at the level of the eye muscles, but also at the level of the visual department of the brain.",
                         },
+                    ],
+                },
+                {
+                    text: [
                         {
                             type: "text",
                             gap: true,
@@ -2301,7 +2273,7 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
 ];
 
 export type DataPatientsPageType = {
-    key: InstructionsSulgType | EyeDiseaseSulgType;
+    key: InstructionsSulgType | EyeDiseaseSlugType;
     data?: { listTitle?: string; list: KeySlugPatientsType[] }[];
 };
 

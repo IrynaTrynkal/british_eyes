@@ -130,7 +130,9 @@
         "pamyatka-patsiyenta-pislya-khirurhiyi-katarakty": "Patient memo after cataract surgery",
         "preparation-for-surgery-for-strabismus": "Preparation for strabismus surgery",
         "patient-information-before-IPL-therapy": "Patient information before IPL therapy",
-        "reminder-before-a-comprehensive-pediatric-examination": "Reminder before a comprehensive pediatric examination"
+        "reminder-before-a-comprehensive-pediatric-examination": "Reminder before a comprehensive pediatric examination",
+        "details": "more details",
+        "typesDiseases": "Types of diseases"
     },
     "Modals": {
         "callUs": "Contact us",

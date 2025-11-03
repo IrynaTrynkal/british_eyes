@@ -10,7 +10,7 @@ export default async function ReviewsPage({
 }: {
     searchParams?: Promise<{ page?: string; category?: string }>;
 }) {
-    const { page, category } = (await searchParams) || {}; // 👈 важливо await
+    const { page, category } = (await searchParams) || {};
     const pageNumber = page ? parseInt(page) : 1;
     const selectedCategory = category || "all";
     const breadcrumb = [{ name: "vidhuky", href: "/vidhuky" }];
