@@ -252,6 +252,10 @@
     "PatientsPage": {
         "title": "Information for \npatients",
         "afterProcedure": "after the procedure:",
-        "beforeProcedure": "before the procedure:"
+        "beforeProcedure": "before the procedure:",
+        "astygmatyzm": "Astigmatism",
+        "astLazer": "Laser vision correction",
+        "astRefl": "Intraocular vision correction",
+        "farsightedness": "Farsightedness"
     }
 }

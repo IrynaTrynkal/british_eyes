@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Fragment } from "react";
 
 import {
     eyeDiseaseData,
@@ -6,6 +7,7 @@ import {
 } from "@/components/assets/patientsInstructionData";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { LinkAction } from "@/components/shared/LinkAction";
 import { TextTypeRender } from "@/components/shared/TextTypeRender";
 import { HeroDisease } from "@/components/someDiseaseComponent/HeroDisease";
 import { LocaleType } from "@/types/LocaleType";
@@ -40,7 +42,27 @@ export default async function EyeDiseasePage({ params }: PageProps) {
                 <div className="bg-green-10 tab:mx-0 tab:max-w-[1117px] prepc:w-[83%] prepc:p-6 prepc:rounded-lg mx-auto max-w-[540px] rounded p-4">
                     {displayedDisease[locale as LocaleType].content.map(
                         (item, ind) => (
-                            <TextTypeRender key={ind} data={item.text} />
+                            <Fragment key={`${item.title || "block"}-${ind}`}>
+                                {item.title && (
+                                    <h3
+                                        key={item.title}
+                                        className="font-oswald prepc:text-2xl prepc:leading-7 mb-3 text-lg leading-[22px] font-medium uppercase"
+                                    >
+                                        {item.title}
+                                    </h3>
+                                )}
+                                <TextTypeRender
+                                    key={`text-${ind}`}
+                                    data={item.text}
+                                />
+                                {item.btn && (
+                                    <LinkAction
+                                        href={item.btn.link}
+                                        name={item.btn.name}
+                                        className="prepc:my-5 my-3"
+                                    />
+                                )}
+                            </Fragment>
                         )
                     )}
                 </div>

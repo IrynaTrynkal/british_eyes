@@ -194,9 +194,24 @@ export type ListContent = {
     numeric?: boolean;
 };
 
-export type ImageContent = { type: "image"; gap?: boolean; image: string };
+export type ImageContent = {
+    type: "image";
+    gap?: boolean;
+    maxH?: string;
+    image: string;
+};
 
-export type TextType = ParagraphContent | ListContent | ImageContent;
+export type ComponentContent = {
+    type: "component";
+    component: React.ReactNode;
+    gap?: boolean;
+};
+
+export type TextType =
+    | ParagraphContent
+    | ListContent
+    | ImageContent
+    | ComponentContent;
 
 export type TextSegment = {
     value: string;

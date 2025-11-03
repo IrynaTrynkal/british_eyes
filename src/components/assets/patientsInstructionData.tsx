@@ -1,3 +1,5 @@
+import { AstigmatismTable } from "../shared/AstigmatismTable";
+import { FarsightednessTable } from "../shared/FarsightednessTable";
 import { TextType } from "./servicesData";
 
 export type InstructionsSulgType =
@@ -481,15 +483,411 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
         name: keyEyeDisease.find(d => d.key === "glaukoma")!,
         uk: {
             title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            content: [
+                {
+                    title: "Що таке глаукома?",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Глаукома — це загальна назва для групи захворювань, що призводять до пошкодження зорового нерва і втрати зору. Глаукома в цілому є відстроченою формою втрати зору і при ранньому виявленні може бути вилікувана. На жаль, близько 10% людей, які отримують правильне лікування, тим не менше все ж втрачають зір. Глаукома часто не має очевидних ознак або симптомів до початку втрати зору. Кращим способом захисту є регулярна перевірка зору разом зі спеціальною перевіркою на глаукому.",
+                        },
+                    ],
+                },
+                {
+                    title: "Причини глаукоми",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "У більшості випадків пошкодження зорового нерва при глаукомі викликається підвищеним внутрішньоочним тиском, при якому зростає тиск рідини всередині ока, внаслідок чого здавлюється і пошкоджується зоровий нерв. Внутрішньоочний тиск підвищується, коли рідини, які виробляються в оці, втрачають здатність покидати око своїм звичайним шляхом, відомим як відкритий кут між райдужною оболонкою і рогівкою. Вони акумулюються в оці, що призводить до підвищення тиску. Однак у випадку глаукоми з нормальним тиском причина пошкодження зорового нерва не завжди ясна.",
+                        },
+                    ],
+                },
+                {
+                    title: "Фактори ризику глаукоми",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Глаукома є другою за поширеністю причиною сліпоти в світі. Так як ознаки і симптоми глаукоми часто незначні, її називають «тихим злодієм зору». Усім рекомендується регулярно проходити перевірки на глаукому в складі комплексної перевірки зору, особливо при наявності одного або декількох факторів ризику глаукоми.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Фактори ризику глаукоми різняться в залежності від виду глаукоми.",
+                        },
+                    ],
+                },
+                {
+                    title: "Первинна відкритокутова глаукома",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Первинна відкритокутова глаукома, при якій відкритий кут з часом закупорюється, — це найбільш поширена форма глаукоми. Фактори ризику глаукоми включають:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Вік. У осіб старше 60 років глаукома зустрічається в шість разів частіше.",
+                                "Сімейна історія. Якщо глаукома спостерігається в інших членів Вашої родини, Ваш ризик зростає в 4-9 разів.",
+                                "Медикаменти. Стероїди можуть підвищити ризик відкритокутової глаукоми на 40%.",
+                                "Стан здоров’я. Високий кров’яний тиск може підвищити ризик глаукоми.",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    title: "Закритокутова глаукома",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Закритокутова глаукома, також відома як гострокутна глаукома, виникає, коли райдужна оболонка виступає над кутом, блокуючи дренажні канали. Це призводить до швидкого і небезпечного зростання внутрішньоочного тиску. Фактори ризику глаукоми включають:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Зір. Якщо у Вас далекозорість, то Ваш ризик підвищений.",
+                                "Вік. Ризик виникнення глаукоми підвищується з віком.",
+                                "Стать. Підвищеному ризику схильні жінки.",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    title: "Вторинна глаукома",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Вторинна глаукома, при якій відкритий кут закупорюється через пошкодження ока, запалення, злоякісної пухлини, катаракти або діабету, може виникнути з наступних причин:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Пошкодження ока. Як тупа, так і проникаюча травма ока можуть призвести до вторинної глаукоми.",
+                                "Стан здоров’я. Діабет і катаракта можуть підвищити ризик вторинної глаукоми.",
+                                "Стать і колір шкіри. Світлошкірі жінки схильні до ризику вторинної глаукоми певного типу.",
+                                "Медикаменти. Деякі медикаменти можуть підвищити ризик виникнення відкритокутової або глаукоми вторинного типу.",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    title: "Захист зору",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Навіть якщо Ви не схильн до жодного з чинників ризику, у Вас все одно може розвинутися глаукома. Рекомендується проходити перевірки на глаукому.",
+                        },
+                    ],
+                },
+                {
+                    title: "Лікування глаукоми",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Лікування глаукоми може запобігти сильну втрату зору, якщо хвороба діагностована досить рано. Варіанти лікування включають:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Очні каплі.",
+                                "Хірургічне втручання.",
+                                "Селективну лазерну трабекулопластику (SLT).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "При виникненні глаукоми потрібно довічне лікування та спостереження. Якщо Вам призначили ліки від глаукоми, Вам необхідно приймати їх у відповідності з інструкціями лікаря. У глаукоми існують ознаки — її можна діагностувати до того, як Ви відчуєте які-небудь симптоми. Симптоми суб’єктивні і можуть бути чи не бути зрозумілі лікарю. Ознаки об’єктивні і зрозумілі лікарю, але можуть бути чи не бути помічені пацієнтом.",
+                        },
+                    ],
+                },
+            ],
         },
         en: {
             title: "Glaucoma",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            content: [
+                {
+                    title: "What is glaucoma?",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Glaucoma is the common name for a group of diseases that lead to optic nerve damage and vision loss. Glaucoma is generally a preventable form of vision loss and can be cured if detected early. Unfortunately, about 10% of people who receive proper treatment nevertheless still lose their vision. Glaucoma often has no obvious signs or symptoms before vision loss begins. The best way to protect yourself is to have regular eye exams along with a special glaucoma screening.",
+                        },
+                    ],
+                },
+                {
+                    title: "Causes of glaucoma",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "In most cases, optic nerve damage in glaucoma is caused by increased intraocular pressure, in which fluid pressure inside the eye increases, causing compression and damage to the optic nerve. Intraocular pressure increases when the fluids produced in the eye lose their ability to leave the eye through their normal pathway, known as the open angle between the iris and cornea. They accumulate in the eye, resulting in an increase in pressure. However, in the case of glaucoma with normal pressure, the cause of optic nerve damage is not always clear.",
+                        },
+                    ],
+                },
+                {
+                    title: "Risk factors for glaucoma",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Glaucoma is the second most common cause of blindness in the world. Because the signs and symptoms of glaucoma are often subtle, it is called the “silent thief of sight.” Everyone is advised to get regular glaucoma screenings as part of a comprehensive eye exam, especially if one or more glaucoma risk factors are present.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Risk factors for glaucoma vary depending on the type of glaucoma.",
+                        },
+                    ],
+                },
+                {
+                    title: "Primary open angle glaucoma",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Primary open angle glaucoma, in which the open angle eventually clogs up, is the most common form of glaucoma. Risk factors for open-angle glaucoma include:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Age. Individuals over age 60 are six times more likely to have glaucoma.",
+                                "Family history. If other members of your family have glaucoma, your risk increases four to nine times.",
+                                "Medications. Steroids can increase your risk of open-angle glaucoma by 40 percent.",
+                                "Health condition. High blood pressure can increase your risk of open-angle glaucoma.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: "Risk factors for glaucoma vary depending on the type of glaucoma.",
+                        },
+                    ],
+                },
+                {
+                    title: "Closed-angle glaucoma",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Closed angle glaucoma, also known as acute angle glaucoma, occurs when the iris protrudes over the angle, blocking the drainage channels. This leads to a rapid and dangerous increase in intraocular pressure. Risk factors for closed-angle glaucoma include:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Vision. If you have farsightedness, your risk is increased.",
+                                "Age. Your risk for closed-angle glaucoma increases with age.",
+                                "Gender. Women are at increased risk.",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    title: "Secondary glaucoma",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Secondary glaucoma, in which the open angle is occluded because of damage to the eye, inflammation, malignancy, cataracts, or diabetes, can occur for one of the following reasons:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Damage to the eye. Both blunt and penetrating trauma to the eye can lead to secondary glaucoma.",
+                                "Health condition. Diabetes and cataracts can increase the risk of secondary glaucoma.",
+                                "Gender and skin color. Light-skinned women are at risk for certain types of secondary glaucoma.",
+                                "Medications. Certain medications may increase the risk of open-angle or closed-angle glaucoma of a secondary type.",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    title: "Eye protection",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Even if you are not exposed to any of the risk factors, you may still develop glaucoma. It is recommended that you get checked for glaucoma.",
+                        },
+                    ],
+                },
+                {
+                    title: "Glaucoma treatment",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Treating glaucoma can prevent severe vision loss if the disease is diagnosed early enough. Treatment options include:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Eye drops;",
+                                "Surgery;",
+                                "Selective laser trabeculoplasty (SLT).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "When glaucoma occurs, lifelong treatment and monitoring is required. If you are prescribed glaucoma medication, you need to take it according to your doctor’s instructions. Glaucoma HAS signs – it can be diagnosed before you feel any symptoms. Symptoms are subjective and may or may not be understood by the doctor. Signs are objective and understood by the doctor, but may or may not be seen by the patient.",
+                        },
+                    ],
+                },
+            ],
         },
         ru: {
             title: "Глаукома",
-            content: [{ text: [{ type: "text", text: "" }] }],
+            content: [
+                {
+                    title: "Что такое глаукома?",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Глаукома – это общее название для группы заболеваний, приводящих к повреждению зрительного нерва и потере зрения. Глаукома в целом является предотвращаемой формой потери зрения и при раннем обнаружении может быть излечена. К сожалению, около 10% людей, получающих правильное лечение, тем не менее все же теряют зрение. Глаукома часто не имеет очевидных признаков или симптомов до начала потери зрения. Лучшим способом защиты является регулярная проверка зрения вместе со специальной проверкой на глаукому.",
+                        },
+                    ],
+                },
+                {
+                    title: "Причины глаукомы",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "В большинстве случаев повреждение зрительного нерва при глаукоме вызывается повышенным внутриглазным давлением, при котором растет давление жидкости внутри глаза, в результате чего сдавливается и повреждается зрительный нерв. Внутриглазное давление повышается, когда жидкости, производимые в глазу, теряют способность покидать глаз по своему обычному пути, известному как открытый угол между радужной оболочкой и роговицей. Они аккумулируются в глазу, что приводит к повышению давления. Однако в случае глаукомы с нормальным давлением причина повреждения зрительного нерва не всегда ясна.",
+                        },
+                    ],
+                },
+                {
+                    title: "Факторы риска глаукомы",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Глаукома является второй по распространенности причиной слепоты в мире. Так как признаки и симптомы глаукомы часто незначительны, ее называют «тихим вором зрения». Всем рекомендуется регулярно проходить проверки на глаукому в составе комплексной проверки зрения, в особенности при наличии одного или нескольких факторов риска глаукомы.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Факторы риска глаукомы различаются в зависимости от вида глаукомы.",
+                        },
+                    ],
+                },
+                {
+                    title: "Первичная открытоугольная глаукома",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Первичная открытоугольная глаукома, при которой открытый угол со временем закупоривается, — это наиболее распространенная форма глаукомы. Факторы риска открытоугольной глаукомы включают:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Возраст. У лиц старше 60 лет глаукома встречается в шесть раз чаще.",
+                                "Семейная история. Если глаукома наблюдается у других членов вашей семьи, ваш риск возрастает в 4-9 раз.",
+                                "Медикаменты. Стероиды могут повысить риск открытоугольной глаукомы на 40%.",
+                                "Состояние здоровья. Высокое кровяное давления может повысить риск открытоугольной глаукомы.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Факторы риска глаукомы различаются в зависимости от вида глаукомы.",
+                        },
+                    ],
+                },
+                {
+                    title: "Закрытоугольная глаукома",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Закрытоугольная глаукома, также известная как остроугольная глаукома, возникает, когда радужная оболочка выступает над углом, блокируя дренажные каналы. Это приводит к быстрому и опасному росту внутриглазного давления. Факторы риска закрытоугольной глаукомы включают:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Зрение. Если у вас дальнозоркость, то ваш риск повышен.",
+                                "Возраст. Риск возникновения закрытоугольной глаукомы повышается с возрастом.",
+                                "Пол. Повышенному риску подвержены женщины.",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    title: "Вторичная глаукома",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Вторичная глаукома, при которой открытый угол закупоривается из-за повреждения глаза, воспаления, злокачественной опухоли, катаракты или диабета, может возникнуть по одной из следующих причин:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Повреждение глаза. Как тупая, так и проникающая травма глаза могут привести к вторичной глаукоме.",
+                                "Состояние здоровья. Диабет и катаракта могут повысить риск вторичной глаукомы.",
+                                "Пол и цвет кожи. Светлокожие женщины подвержены риску вторичной глаукомы определенного типа.",
+                                "Медикаменты. Некоторые медикаменты могут повысить риск возникновения открытоугольной или закрытоугольной глаукомы вторичного типа.",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    title: "Защита зрения",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Даже если вы не подвержены ни одному из факторов риска, у вас все равно может развиться глаукома. Рекомендуется проходить проверки на глаукому.",
+                        },
+                    ],
+                },
+                {
+                    title: "Лечение глаукомы",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Лечение глаукомы может предотвратить сильную потерю зрения, если болезнь диагностирована достаточно рано. Варианты лечения включают:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Глазные капли.",
+                                "Хирургическое вмешательство.",
+                                "Селективную лазерную трабекулопластику (SLT).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "При возникновении глаукомы требуется пожизненное лечение и наблюдение. Если вам назначили лекарство от глаукомы, вам необходимо принимать его в соответствии с инструкциями врача. У глаукомы ЕСТЬ признаки – ее можно диагностировать до того, как вы почувствуете какие-либо симптомы. Симптомы субъективны и могут быть или не быть понятны врачу. Признаки объективны и понятны врачу, но могут быть или не быть замечены пациентом.",
+                        },
+                    ],
+                },
+            ],
         },
     },
     {
@@ -502,9 +900,51 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     text: [
                         {
                             type: "text",
+                            gap: true,
                             text: "Астигматизм є причиною розпливчастого зору незалежно від відстані. Очі не ідеально круглої форми, вони більше схожі на м’яч для регбі, і їх поверхня не симетрична. Вона фокусує світло в одній площині краще, ніж в іншїй. В результаті зір стає розпливчастим, з’являється двоїння.",
                         },
                     ],
+                },
+                {
+                    title: "Лікування астигматизма",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Погляньте на таблицю нижче, щоб зрозуміти, який тип операції може підійти особисто Вам.",
+                        },
+                        {
+                            type: "component",
+                            gap: true,
+                            component: <AstigmatismTable />,
+                        },
+                    ],
+                },
+                {
+                    title: "Лазерна корекція зору",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Хоча окуляри й контактні лінзи допомагають впоратися з астигматизмом, їх можна порівняти з гіпсом і милицями, тобто це тимчасове рішення, яке дозволяє вийти з положення, але фактично не усуває причину проблеми так, як цього можна досягнути за допомогою хірургічного втручання.",
+                        },
+                    ],
+                    btn: {
+                        name: "детальніше",
+                        link: "/poslugy/lazerna-korekcziya-zoru",
+                    },
+                },
+                {
+                    title: "Інтраокулярна корекція",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Інтраокулярні лінзи призначені для корекції високого ступеня астигматизму. У тому випадку, якщо лазерна корекція Вам не підходить, не впадайте у відчай, тому що є й інші можливості досягнення бажаного. «Британський офтальмологічний центр» пропонує ряд операцій, які можуть Вам допомогти. Під час консультації, ми зможемо з’ясувати, чи не протипоказана Вам операція, і визначити найкращий варіант операції для Вас.",
+                        },
+                    ],
+                    btn: {
+                        name: "детальніше",
+                        link: "posluhy/refrakczijna-lensektomiya/",
+                    },
                 },
             ],
         },
@@ -516,9 +956,51 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     text: [
                         {
                             type: "text",
-                            text: "Astigmatism causes blurry vision regardless of distance. The eye is not perfectly round, more like a rugby ball, and its surface is not symmetrical. It focuses light from one direction better than others. As a result, vision becomes blurry. For example, from one direction an object will be seen more clearly than from the others.",
+                            gap: true,
+                            text: "Astigmatism causes blurred vision regardless of distance. The eyes are not perfectly round — they are more like a rugby ball, and their surface is not symmetrical. It focuses light better in one plane than in another, resulting in blurred or double vision.",
                         },
                     ],
+                },
+                {
+                    title: "Astigmatism treatment",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Take a look at the table below to understand which type of surgery may be right for you.",
+                        },
+                        {
+                            type: "component",
+                            gap: true,
+                            component: <AstigmatismTable />,
+                        },
+                    ],
+                },
+                {
+                    title: "Laser vision correction",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Although glasses and contact lenses help to manage astigmatism, they can be compared to a cast and crutches — a temporary solution that helps you get by but doesn’t address the root cause of the problem as surgery can.",
+                        },
+                    ],
+                    btn: {
+                        name: "read more",
+                        link: "/services/laser-vision-correction",
+                    },
+                },
+                {
+                    title: "Intraocular correction",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Intraocular lenses are designed to correct a high degree of astigmatism. If laser correction is not suitable for you, don’t despair — there are other options available to achieve the desired result. The British Ophthalmology Center offers a number of surgical procedures that can help. During a consultation, we will determine whether surgery is contraindicated for you and identify the best surgical option for your needs.",
+                        },
+                    ],
+                    btn: {
+                        name: "read more",
+                        link: "/services/refractive-lensectomy",
+                    },
                 },
             ],
         },
@@ -526,13 +1008,55 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             title: "Астигматизм",
             content: [
                 {
-                    title: "Что это?",
+                    title: "Что это такое?",
                     text: [
                         {
                             type: "text",
-                            text: "Астигматизм является причиной расплывчатого зрения вне зависимости от расстояния. Глаз не идеально круглой формы, он больше походит на мяч для регби, и его поверхность не симметрична. Она фокусирует свет с одного направления лучше, чем с других. В результате зрение становится расплывчатым. К примеру, с одного направления предмет будет виден более чётко, чем с других.",
+                            gap: true,
+                            text: "Астигматизм вызывает размытое зрение независимо от расстояния. Глаза имеют не идеально круглую форму — они больше похожи на мяч для регби, и их поверхность несимметрична. Она лучше фокусирует свет в одной плоскости, чем в другой, в результате чего зрение становится размытым и появляется двоение.",
                         },
                     ],
+                },
+                {
+                    title: "Лечение астигматизма",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Посмотрите таблицу ниже, чтобы понять, какой тип операции может подойти именно вам.",
+                        },
+                        {
+                            type: "component",
+                            gap: true,
+                            component: <AstigmatismTable />,
+                        },
+                    ],
+                },
+                {
+                    title: "Лазерная коррекция зрения",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Хотя очки и контактные линзы помогают справиться с астигматизмом, их можно сравнить с гипсом и костылями — это временное решение, которое помогает выйти из положения, но не устраняет причину проблемы так, как это возможно с помощью хирургического вмешательства.",
+                        },
+                    ],
+                    btn: {
+                        name: "подробнее",
+                        link: "/uslugi/lazernaya-korrektsiya-zreniya",
+                    },
+                },
+                {
+                    title: "Интраокулярная коррекция",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Интраокулярные линзы предназначены для коррекции высокой степени астигматизма. Если лазерная коррекция вам не подходит, не отчаивайтесь — существуют и другие способы достичь желаемого результата. «Британский офтальмологический центр» предлагает ряд операций, которые могут вам помочь. Во время консультации мы определим, нет ли противопоказаний, и подберем оптимальный вариант операции для вас.",
+                        },
+                    ],
+                    btn: {
+                        name: "подробнее",
+                        link: "/uslugi/refraktsionnaya-lensektomiya",
+                    },
                 },
             ],
         },
@@ -547,9 +1071,61 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     text: [
                         {
                             type: "text",
+                            gap: true,
                             text: "Далекозорість, яка інакше називається гіперметропія, виникає при уплощенні рогівки або при занадто короткому очному яблуці. Ці стани не дозволяють променям світла, що потрапляє в око, переломлюватися в ступені, достатньому для їх фокусування на сітківці. Замість цього зображення, які ви бачите, фокусуються за сітківкою. Для далекозорих людей ближні об’єкти виглядають більш розмитими, ніж об’єкти на відстані. Наприклад, якби ви сиділи на літньому майданчику ресторану, меню здавалося б розмитим, а навколишній пейзаж — у фокусі. Однак думка, що далекозорі завжди добре бачать вдалину, помилкова. Часто далекозорі бачать погано і зблизька, і вдалину. Однак люди, які страждають лише вікової далекозорістю (пресбіопією), добре бачать вдалину, тому що у них немає аномалій рефракцій і кришталик завжди знаходиться в розслабленому стані. Далекозорі люди часто відчувають головний біль при виконанні роботи поблизу.",
                         },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/farsightedness.jpg",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Далекозорість розвивається набагато рідше, ніж короткозорість, і її поширення збільшується з віком пацієнтів. При далекозорості у висновку зазвичай стоїть цифра зі знаком плюс перед нею.",
+                        },
                     ],
+                },
+                {
+                    title: "Варіанти лікування далекозорості",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Далекозорість може бути виправлена за допомогою як окулярів, так і контактних лінз, щоб змінити напрям променів світла в оці. Хворі часто змушені носити окуляри або контактні лінзи або весь час, або тільки для читання, роботи на комп’ютері та іншої роботи поблизу. Незайвим буде додержуватися порад щодо зміцнення зору. Якщо ви бажаєте раз і назавжди позбутися від окулярів і контактних лінз, можна звернутися до хірургічних методів лікування.",
+                        },
+                        {
+                            type: "component",
+                            gap: true,
+                            component: <FarsightednessTable />,
+                        },
+                    ],
+                },
+                {
+                    title: "Лазерна корекція зору",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Хоча окуляри й контактні лінзи допомагають впоратися з далекозорістю, їх можна порівняти з гіпсом і милицями, тобто це тимчасове рішення, яке дозволяє вийти з положення, але фактично не усуває причину проблеми так, як цього можна досягнути за допомогою хірургічного втручання.",
+                        },
+                    ],
+                    btn: {
+                        name: "детальніше",
+                        link: "/poslugy/lazerna-korekcziya-zoru",
+                    },
+                },
+                {
+                    title: "Інтраокулярна корекція",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Інтраокулярні лінзи призначені для корекції високого ступеня астигматизму. У тому випадку, якщо лазерна корекція Вам не підходить, не впадайте у відчай, тому що є й інші можливості досягнення бажаного. «Британський офтальмологічний центр» пропонує ряд операцій, які можуть Вам допомогти. Під час консультації, ми зможемо з’ясувати, чи не протипоказана Вам операція, і визначити найкращий варіант операції для Вас.",
+                        },
+                    ],
+                    btn: {
+                        name: "детальніше",
+                        link: "posluhy/refrakczijna-lensektomiya/",
+                    },
                 },
             ],
         },
@@ -561,9 +1137,61 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     text: [
                         {
                             type: "text",
-                            text: "Long-sightedness, otherwise known as hyperopia, occurs when the cornea is flattened or the eyeball is too short. These conditions do not allow the rays of light entering the eye to refract to a degree sufficient to focus them on the retina. Instead, the images you see are focused behind the retina. For farsighted people, near objects appear more blurred than objects at a distance. For example, if you were sitting on a restaurant deck in the summer, the menu would appear blurry while the surrounding scenery is in focus. However, the notion that farsighted people always see well into the distance is mistaken. Often, farsighted people see poorly both near and far. However, people with only age-related farsightedness (presbyopia) can see well as far as they have no refraction abnormalities and the lens is always in a relaxed state. People with long-sightedness often experience headaches when working close up.",
+                            gap: true,
+                            text: "Farsightedness, also known as hypermetropia, occurs when the cornea is too flat or the eyeball is too short. These conditions prevent light entering the eye from being refracted enough to focus directly on the retina. Instead, the image you see is focused behind the retina. For farsighted people, nearby objects appear blurrier than those at a distance. For example, if you were sitting on a restaurant terrace, the menu would appear blurry while the surrounding landscape would be in focus. However, the belief that farsighted people always see well at a distance is incorrect. Often, farsighted individuals see poorly both near and far. People who suffer only from age-related farsightedness (presbyopia) can see well at a distance because they have no refractive anomalies and their lens remains in a relaxed state. Farsighted people often experience headaches when doing close-up work.",
+                        },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/farsightedness.jpg",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Farsightedness develops much less frequently than myopia, and its prevalence increases with age. In a medical report, farsightedness is usually indicated by a number preceded by a plus sign.",
                         },
                     ],
+                },
+                {
+                    title: "Treatment options for farsightedness",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Farsightedness can be corrected with glasses or contact lenses to change the direction of light rays in the eye. Patients often need to wear glasses or lenses either all the time or only for reading, computer work, or other close-up tasks. It is also beneficial to follow recommendations for strengthening eyesight. If you wish to get rid of glasses and contact lenses once and for all, surgical treatment options are available.",
+                        },
+                        {
+                            type: "component",
+                            gap: true,
+                            component: <FarsightednessTable />,
+                        },
+                    ],
+                },
+                {
+                    title: "Laser vision correction",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Although glasses and contact lenses help to manage farsightedness, they can be compared to a cast and crutches — a temporary solution that allows you to function but does not eliminate the root cause of the problem as surgical intervention can.",
+                        },
+                    ],
+                    btn: {
+                        name: "read more",
+                        link: "/services/laser-vision-correction",
+                    },
+                },
+                {
+                    title: "Intraocular correction",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Intraocular lenses are designed to correct a high degree of astigmatism. If laser correction is not suitable for you, don’t despair — there are other ways to achieve the desired result. The British Ophthalmology Center offers several types of surgeries that can help. During your consultation, we will determine whether surgery is contraindicated for you and choose the best surgical option for your case.",
+                        },
+                    ],
+                    btn: {
+                        name: "read more",
+                        link: "/services/refractive-lensectomy",
+                    },
                 },
             ],
         },
@@ -575,9 +1203,61 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     text: [
                         {
                             type: "text",
-                            text: "Дальнозоркость, которая иначе называется гиперметропия, возникает при уплощении роговицы или при слишком коротком глазном яблоке. Эти состояния не позволяют лучам света, попадающим в глаз, преломляться в степени, достаточной для их фокусирования на сетчатке. Вместо этого изображения, которые вы видите, фокусируются за сетчаткой. Для дальнозорких людей ближние объекты выглядят более размытыми, чем объекты на расстоянии. Например, если бы вы сидели на летней площадке ресторана, меню казалось бы размытым, а окружающий пейзаж — в фокусе. Однако мнение, что дальнозоркие всегда хорошо видят вдаль, ошибочно. Часто дальнозоркие видят плохо и вблизи, и вдаль. Однако люди, страдающие лишь возрастной дальнозоркостью (пресбиопией), хорошо видят вдаль, так как у них нет аномалий рефракции и хрусталик всегда находится в расслабленном состоянии. Дальнозоркие люди часто испытывают головные боли при выполнении работы вблизи.",
+                            gap: true,
+                            text: "Дальнозоркость, иначе называемая гиперметропией, возникает при уплощении роговицы или слишком коротком глазном яблоке. Эти состояния не позволяют световым лучам, попадающим в глаз, преломляться в достаточной степени, чтобы сфокусироваться на сетчатке. Вместо этого изображение фокусируется за сетчаткой. У дальнозорких людей близкие предметы выглядят более размытыми, чем дальние. Например, если вы сидите на летней террасе ресторана, меню будет казаться размытым, а окружающий пейзаж — в фокусе. Однако мнение, что дальнозоркие всегда хорошо видят вдаль, ошибочно. Часто дальнозоркие плохо видят и вблизи, и вдаль. Люди, страдающие только возрастной дальнозоркостью (пресбиопией), хорошо видят вдаль, так как у них нет аномалий рефракции и хрусталик находится в расслабленном состоянии. Дальнозоркие часто испытывают головные боли при работе на близком расстоянии.",
+                        },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/farsightedness.jpg",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Дальнозоркость развивается гораздо реже, чем близорукость, и её распространённость увеличивается с возрастом. В заключении врача дальнозоркость обычно указывается цифрой со знаком плюс перед ней.",
                         },
                     ],
+                },
+                {
+                    title: "Варианты лечения дальнозоркости",
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Дальнозоркость может быть скорректирована с помощью очков или контактных линз, чтобы изменить направление световых лучей в глазу. Пациентам часто приходится носить очки или линзы постоянно или только для чтения, работы за компьютером и других занятий вблизи. Также полезно следовать рекомендациям по укреплению зрения. Если вы хотите навсегда избавиться от очков и контактных линз, можно рассмотреть хирургические методы лечения.",
+                        },
+                        {
+                            type: "component",
+                            gap: true,
+                            component: <FarsightednessTable />,
+                        },
+                    ],
+                },
+                {
+                    title: "Лазерная коррекция зрения",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Хотя очки и контактные линзы помогают справиться с дальнозоркостью, их можно сравнить с гипсом и костылями — это временное решение, которое позволяет справляться с проблемой, но не устраняет её причину так, как это делает хирургическое вмешательство.",
+                        },
+                    ],
+                    btn: {
+                        name: "подробнее",
+                        link: "/uslugi/lazernaya-korrektsiya-zreniya",
+                    },
+                },
+                {
+                    title: "Интраокулярная коррекция",
+                    text: [
+                        {
+                            type: "text",
+                            text: "Интраокулярные линзы предназначены для коррекции высокой степени астигматизма. Если лазерная коррекция вам не подходит, не отчаивайтесь — существуют и другие способы достичь желаемого результата. «Британский офтальмологический центр» предлагает ряд операций, которые могут вам помочь. Во время консультации мы определим, нет ли противопоказаний, и подберём лучший вариант операции для вас.",
+                        },
+                    ],
+                    btn: {
+                        name: "подробнее",
+                        link: "/uslugi/refraktsionnaya-lensektomiya",
+                    },
                 },
             ],
         },
@@ -785,7 +1465,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                 {
                     title: "Симптоми та причини",
                     text: [
-                        { type: "image", image: "/images/myopia800.webp" },
+                        {
+                            type: "image",
+                            image: "/images/myopia800.webp",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -806,7 +1489,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Лікування короткозорості залежить від декількох факторів, таких як вік, ступінь фізичної активності, рід занять. Лікування може полягати в призначенні контактних лінз або окулярів. Лікар також дасть поради щодо зміцнення зору. Якщо Ви бажаєте раз і назавжди позбутися від окулярів і контактних лінз, можна звернутися до хірургічних методів лікування.",
                         },
-                        { type: "image", image: "/images/blizorukost.webp" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/blizorukost.webp",
+                        },
                     ],
                 },
                 {
@@ -846,7 +1533,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     title: "Symptoms and Causes",
 
                     text: [
-                        { type: "image", image: "/images/myopia800.webp" },
+                        {
+                            type: "image",
+                            image: "/images/myopia800.webp",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -867,7 +1557,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Treatment for myopia depends on several factors, such as age, level of physical activity, and occupation. It may include prescription contact lenses or glasses. The doctor will also recommend ways to strengthen your vision. If you want to permanently get rid of glasses and contact lenses, surgical treatment options are available.",
                         },
-                        { type: "image", image: "/images/blizorukost.webp" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/blizorukost.webp",
+                        },
                     ],
                 },
                 {
@@ -907,7 +1601,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     title: "Симптомы и причины",
 
                     text: [
-                        { type: "image", image: "/images/myopia800.webp" },
+                        {
+                            type: "image",
+                            image: "/images/myopia800.webp",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -928,7 +1625,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: "Лечение близорукости зависит от нескольких факторов: возраста, уровня физической активности и рода занятий. Оно может включать назначение контактных линз или очков. Врач также даст рекомендации по укреплению зрения. Если вы хотите навсегда избавиться от очков и линз, можно рассмотреть хирургические методы коррекции.",
                         },
-                        { type: "image", image: "/images/blizorukost.webp" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/blizorukost.webp",
+                        },
                     ],
                 },
                 {
@@ -1263,13 +1964,16 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: [
                                 {
-                                    bold: true,
                                     subtitle: true,
                                     value: "Короткозорість",
                                 },
                             ],
                         },
-                        { type: "image", image: "/images/blizorukost.webp" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/blizorukost.webp",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -1280,13 +1984,16 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: [
                                 {
-                                    bold: true,
                                     subtitle: true,
                                     value: "Далекозорість",
                                 },
                             ],
                         },
-                        { type: "image", image: "/images/farsightedness.jpg" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/farsightedness.jpg",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -1297,13 +2004,16 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: [
                                 {
-                                    bold: true,
                                     subtitle: true,
                                     value: "Астигматизм",
                                 },
                             ],
                         },
-                        { type: "image", image: "/images/astigmatism.jpg" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[260px]",
+                            image: "/images/astigmatism.jpg",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -1314,7 +2024,6 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: [
                                 {
-                                    bold: true,
                                     subtitle: true,
                                     value: "Пресбіопія",
                                 },
@@ -1330,7 +2039,6 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                             gap: true,
                             text: [
                                 {
-                                    bold: true,
                                     subtitle: true,
                                     value: "Катаракта",
                                 },
@@ -1377,7 +2085,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                                 { bold: true, subtitle: true, value: "Myopia" },
                             ],
                         },
-                        { type: "image", image: "/images/blizorukost.webp" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/blizorukost.webp",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -1394,7 +2106,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                                 },
                             ],
                         },
-                        { type: "image", image: "/images/farsightedness.jpg" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/farsightedness.jpg",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -1411,7 +2127,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                                 },
                             ],
                         },
-                        { type: "image", image: "/images/astigmatism.jpg" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[260px]",
+                            image: "/images/astigmatism.jpg",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -1489,7 +2209,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                                 },
                             ],
                         },
-                        { type: "image", image: "/images/blizorukost.webp" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/blizorukost.webp",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -1506,7 +2230,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                                 },
                             ],
                         },
-                        { type: "image", image: "/images/farsightedness.jpg" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[160px]",
+                            image: "/images/farsightedness.jpg",
+                        },
                         {
                             type: "text",
                             gap: true,
@@ -1523,7 +2251,11 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                                 },
                             ],
                         },
-                        { type: "image", image: "/images/astigmatism.jpg" },
+                        {
+                            type: "image",
+                            maxH: "max-h-[260px]",
+                            image: "/images/astigmatism.jpg",
+                        },
                         {
                             type: "text",
                             gap: true,
