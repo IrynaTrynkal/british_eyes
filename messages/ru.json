@@ -252,6 +252,10 @@
     "PatientsPage": {
         "title": "Информация для \nпациентов",
         "beforeProcedure": "до процедуры:",
-        "afterProcedure": "после процедуры:"
+        "afterProcedure": "после процедуры:",
+        "astygmatyzm": "Астигматизм",
+        "astLazer": "Лазерная хирургия глаза",
+        "astRefl": "Интраокулярная коррекция",
+        "farsightedness": "Дальнозоркость"
     }
 }

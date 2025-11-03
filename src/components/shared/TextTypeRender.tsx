@@ -74,7 +74,10 @@ export const TextTypeRender = ({ data }: { data: TextType[] }) => {
 
                 if (block.type === "image") {
                     return (
-                        <div className="mb-4 flex max-h-[500px] w-full justify-center overflow-hidden">
+                        <div
+                            key={block.image}
+                            className={`mb-4 flex w-full justify-center overflow-hidden ${block.maxH ? block.maxH : "prepc:max-h-[500px] max-h-[200px]"}`}
+                        >
                             <Image
                                 src={block.image}
                                 alt={`content image ${i}`}
@@ -83,6 +86,16 @@ export const TextTypeRender = ({ data }: { data: TextType[] }) => {
                                 sizes="100vw"
                                 className="h-auto w-full object-contain"
                             />
+                        </div>
+                    );
+                }
+                if (block.type === "component") {
+                    return (
+                        <div
+                            key={`component-${i}`}
+                            className={block.gap ? "prepc:mb-4 mb-2" : ""}
+                        >
+                            {block.component}
                         </div>
                     );
                 }
