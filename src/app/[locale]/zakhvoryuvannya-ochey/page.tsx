@@ -30,10 +30,6 @@ export default async function EyesDiseasePage({
     ];
     const selectedDisease = disease || "glaukoma";
     const data = eyeDiseaseData.find(dis => dis.name.key === selectedDisease);
-    console.log(
-        "🚀 ~ EyesDiseasePage ~ data:",
-        data?.[locale as LocaleType].content[0]
-    );
 
     return (
         <>

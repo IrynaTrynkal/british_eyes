@@ -1,3 +1,4 @@
+import { CataractGreenSection } from "../someServiceComponents/individualComponents/CataractGreenSection";
 import { ServicesKeyType, servicesList, ServicesListProps } from "./menu";
 import { PriceItemType, priceList } from "./priceList";
 
@@ -15,7 +16,8 @@ export type SectionType =
     | { type: "hero"; data: HeroSomeServiceProps }
     | { type: "faq"; data: FAQServiceSectionType }
     | { type: "textsColumns"; data: TextsColumnsSectionType }
-    | { type: "global" };
+    | { type: "global" }
+    | { type: "individual"; data: React.ReactNode };
 
 export type ServicesLocaleProps = {
     textMain?: string;
@@ -1637,9 +1639,28 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                { type: "individual", data: <CataractGreenSection /> },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на видалення катаракти у Києві",
+                        card: {
+                            premium: true,
+                            icon: "/icons/iq-life-white.svg",
+                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
+                            text: {
+                                premiumText:
+                                    "Акція преміальної операції по стандартній ціні",
+                                title: "iQ-Life Живий Зір",
+                                text: "Лікування від катаракти з відновленням зору молодості, без окулярів вдалину і поблизу.",
+                            },
+                        },
+                    },
+                },
                 {
                     type: "advantages",
                     data: {
+                        paddingTop: false,
                         title: "Переваги лікування катаракти в Києві у Британському Офтальмологічному Центрі",
                         text: "Ви можете бути впевнені в якості послуг, що надаються, так як довіряєте свій зір сучасній клініці",
                         list: [
@@ -1657,23 +1678,6 @@ export const servicesData: ServicesProps[] = [
                                 text: "Приймаємо пацієнтів від народження до старшого віку.",
                             },
                         ],
-                    },
-                },
-                {
-                    type: "priceSection",
-                    data: {
-                        title: "Ціни на видалення катаракти у Києві",
-                        card: {
-                            premium: true,
-                            icon: "/icons/iq-life-white.svg",
-                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
-                            text: {
-                                premiumText:
-                                    "Акція преміальної операції по стандартній ціні",
-                                title: "iQ-Life Живий Зір",
-                                text: "Лікування від катаракти з відновленням зору молодості, без окулярів вдалину і поблизу.",
-                            },
-                        },
                     },
                 },
                 { type: "doctors" },
@@ -1874,9 +1878,28 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                { type: "individual", data: <CataractGreenSection /> },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Prices for cataract removal in Kyiv",
+                        card: {
+                            premium: true,
+                            icon: "/icons/iq-life-white.svg",
+                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
+                            text: {
+                                premiumText:
+                                    "Premium transaction promotion at standard price",
+                                title: "iQ-Life Living Vision",
+                                text: "Cataract treatment with restoration of youthful vision, without glasses for distance and near.",
+                            },
+                        },
+                    },
+                },
                 {
                     type: "advantages",
                     data: {
+                        paddingTop: false,
                         title: "Advantages of cataract treatment in Kyiv at the British Ophthalmological Center",
                         text: "You can be confident in the quality of the services provided, as you are entrusting your vision to a modern clinic.",
                         list: [
@@ -1894,23 +1917,6 @@ export const servicesData: ServicesProps[] = [
                                 text: "We accept patients from birth to senior age.",
                             },
                         ],
-                    },
-                },
-                {
-                    type: "priceSection",
-                    data: {
-                        title: "Prices for cataract removal in Kyiv",
-                        card: {
-                            premium: true,
-                            icon: "/icons/iq-life-white.svg",
-                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
-                            text: {
-                                premiumText:
-                                    "Premium transaction promotion at standard price",
-                                title: "iQ-Life Living Vision",
-                                text: "Cataract treatment with restoration of youthful vision, without glasses for distance and near.",
-                            },
-                        },
                     },
                 },
                 { type: "doctors" },
@@ -2110,9 +2116,28 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                { type: "individual", data: <CataractGreenSection /> },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Цены на удаление катаракты в Киеве",
+                        card: {
+                            premium: true,
+                            icon: "/icons/iq-life-white.svg",
+                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
+                            text: {
+                                premiumText:
+                                    "Акция премиальной сделки по стандартной цене",
+                                title: "iQ-Life Живое Зрение",
+                                text: "Лечение от катаракты с восстановлением зрения молодости, без очков вдаль и поблизости.",
+                            },
+                        },
+                    },
+                },
                 {
                     type: "advantages",
                     data: {
+                        paddingTop: false,
                         title: "Преимущества лечения катаракты в Киеве в Британском Офтальмологическом Центре",
                         text: "Вы можете быть уверены в качестве предоставляемых услуг, ведь доверяете своё зрение современной клинике.",
                         list: [
@@ -2130,23 +2155,6 @@ export const servicesData: ServicesProps[] = [
                                 text: "Мы принимаем пациентов от рождения и до пожилого возраста.",
                             },
                         ],
-                    },
-                },
-                {
-                    type: "priceSection",
-                    data: {
-                        title: "Цены на удаление катаракты в Киеве",
-                        card: {
-                            premium: true,
-                            icon: "/icons/iq-life-white.svg",
-                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
-                            text: {
-                                premiumText:
-                                    "Акция премиальной сделки по стандартной цене",
-                                title: "iQ-Life Живое Зрение",
-                                text: "Лечение от катаракты с восстановлением зрения молодости, без очков вдаль и поблизости.",
-                            },
-                        },
                     },
                 },
                 { type: "doctors" },

@@ -236,7 +236,16 @@
         "priceSubpage": "Prices",
         "lazerEditionPriceText": "The technique is selected after the examination, individually for you, to obtain the best result",
         "callUsTitle": "Contact us",
-        "callUsText": "If you have any questions, call our friendly call center or make an appointment for diagnostics with further consultation."
+        "callUsText": "If you have any questions, call our friendly call center or make an appointment for diagnostics with further consultation.",
+        "catIndTitle": "We treat cataracts in complex cases:",
+        "catIndText": "In our center, cataract surgeries are performed by surgeons with experience of at least 50,000 successful operations.",
+        "catIndListItem1": "in children",
+        "catIndListItem2": "traumatic cataract",
+        "catIndListItem3": "we correct the consequences of unsuccessful surgeries in other clinics",
+        "catIndListItem4": "we take on the most difficult cases",
+        "raynerCardTitle": "We use only premium lenses (intraocular implants)",
+        "raynerCardText": "Lens No. 1 in the world for cataract treatment",
+        "learnMore": "learn more"
     },
     "PricePage": {
         "title": "Prices",

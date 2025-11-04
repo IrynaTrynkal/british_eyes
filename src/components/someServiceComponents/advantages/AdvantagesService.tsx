@@ -11,8 +11,13 @@ export const AdvantagesService = ({
     data: AdvantageServiceSectionProps;
 }) => {
     const t = useTranslations("ServicesPage");
+    const { paddingTop = true, paddingBottom = true } = data;
     return (
-        <section className="content pc:py-[120px] tab:py-12 relative py-[60px]">
+        <section
+            className={`content relative ${
+                paddingTop ? "pc:pt-[120px] tab:pt-12 pt-[60px]" : ""
+            } ${paddingBottom ? "pc:pb-[120px] tab:pb-12 pb-[60px]" : ""}`}
+        >
             <h3 className="subtitle tab:max-w-[318px] tab:mb-4 prepc:absolute prepc:top-12 pc:top-[120px] prepc:left-6 pc:left-12 mb-5">
                 {t("advantages")}
             </h3>

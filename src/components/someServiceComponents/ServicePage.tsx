@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import { LocaleType } from "@/types/LocaleType";
 
 import { ServicesProps } from "../assets/servicesData";
@@ -95,6 +97,8 @@ export const ServicePageContent = ({
                         );
                     case "global":
                         return <Global key={index} />;
+                    case "individual":
+                        return <Fragment key={index}>{section.data}</Fragment>;
                     default:
                         return null;
                 }
