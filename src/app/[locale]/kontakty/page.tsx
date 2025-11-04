@@ -107,7 +107,7 @@ export default function ContactsPage() {
                         {t("rules")}
                     </h3>
                     <div className="tab:flex-row tab:flex-wrap pc:gap-5 flex flex-col gap-3">
-                        <div className="border-grey prepc:w-[48%] pc:w-[321px] tab:max-w-[321px] rounded-lg border p-3">
+                        <div className="border-grey prepc:w-[48%] pc:w-[321px] max-w-[321px] rounded-lg border p-3">
                             <div className="prepc:flex-col prepc:items-start prepc:mb-[34px] mb-[22px] flex items-center gap-3">
                                 <div className="h-10 w-10">
                                     <IconInvalid />
@@ -118,7 +118,7 @@ export default function ContactsPage() {
                             </div>
                             <p className="leading-5">{t("rulesAutoText")}</p>
                         </div>
-                        <div className="border-grey prepc:w-[48%] pc:w-[321px] tab:max-w-[321px] rounded-lg border p-3">
+                        <div className="border-grey prepc:w-[48%] pc:w-[321px] max-w-[321px] rounded-lg border p-3">
                             <div className="prepc:flex-col prepc:items-start prepc:mb-[34px] mb-[22px] flex items-center gap-3">
                                 <div className="h-10 w-10">
                                     <IconNoParking />
