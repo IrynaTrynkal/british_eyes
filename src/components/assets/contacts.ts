@@ -15,3 +15,5 @@ export const gogleMapLink = "https://maps.app.goo.gl/4SRz8f9eztXPxMJ9A";
 
 export const aboutSertification =
     "https://eyes.ua/wp-content/uploads/2022/07/photo_2022-07-07-10.32.18.pdf";
+
+export const BOCemail = "kiev@eyes.ua";

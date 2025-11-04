@@ -259,5 +259,25 @@
         "astLazer": "Laser vision correction",
         "astRefl": "Intraocular vision correction",
         "farsightedness": "Farsightedness"
+    },
+    "Contacts": {
+        "contacts": "contacts",
+        "center": "“British Ophthalmologic Centre”",
+        "text": "You can make an appointment by filling out the form below.",
+        "call": "call",
+        "hotLine": "toll-free hotline in Ukraine",
+        "mode": "working hours",
+        "modeDay": "Mon - Sun 9:00 – 19:00",
+        "modeRest": "we work without days off",
+        "adress": "address",
+        "adressMap": "Kyiv, Krutyi Uzviz, 3a",
+        "adressDirection": "100 meters from Bessarabskiy Market",
+        "route": "get directions",
+        "attention": "Please note that Google Maps may show a route through military checkpoints with restricted access. We recommend setting your destination as Bessarabskiy Market — our center is located 100 m up Krutyi Uzviz from there.",
+        "rules": "entry rules:",
+        "rulesAutoTitle": "Vehicle access for patients with disabilities",
+        "rulesAutoText": "By prior arrangement with our Information and Registration Center, we allow vehicle access for visiting the clinic.",
+        "rulesParkingTitle": "no parking near the clinic",
+        "rulesParkingText": "Since the clinic is located in the very center of the city, in a historical building, parking near the clinic is prohibited."
     }
 }
