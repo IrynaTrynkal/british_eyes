@@ -211,11 +211,19 @@ export type ComponentContent = {
     gap?: boolean;
 };
 
+export type TableContent = {
+    type: "table";
+    gap?: boolean;
+    headers: string[];
+    rows: string[][];
+};
+
 export type TextType =
     | ParagraphContent
     | ListContent
     | ImageContent
-    | ComponentContent;
+    | ComponentContent
+    | TableContent;
 
 export type TextSegment = {
     value: string;
