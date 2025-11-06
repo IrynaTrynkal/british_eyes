@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { TextSegment, TextType } from "../assets/servicesData";
+import { InfoTable } from "./InfoTable";
 
 export const TextTypeRender = ({ data }: { data: TextType[] }) => {
     const renderTextSegment = (text: string | TextSegment[]) => {
@@ -96,6 +97,13 @@ export const TextTypeRender = ({ data }: { data: TextType[] }) => {
                             className={block.gap ? "prepc:mb-4 mb-2" : ""}
                         >
                             {block.component}
+                        </div>
+                    );
+                }
+                if (block.type === "table") {
+                    return (
+                        <div key={`component-${i}`}>
+                            <InfoTable data={block} />
                         </div>
                     );
                 }
