@@ -20,7 +20,7 @@ export const AdvantageServiceCard = ({
                     muted
                     playsInline
                 >
-                    <source src="/videos/about-advant.mp4" type="video/mp4" />
+                    <source src={data.videoOnly} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             ) : data.imageOnly ? (
