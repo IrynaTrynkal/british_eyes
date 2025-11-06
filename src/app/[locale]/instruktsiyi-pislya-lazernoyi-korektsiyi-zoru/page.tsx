@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { useLocale } from "next-intl";
 
 import { pationtsInstructionsData } from "@/components/assets/patientsInstructionData";
+import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { TextTypeRender } from "@/components/shared/TextTypeRender";
 import { HeroInstruction } from "@/components/someInstructionComponents/HeroInstruction";
@@ -9,6 +10,10 @@ import { LocaleType } from "@/types/LocaleType";
 
 export default function PatientsLazerInstructionPage() {
     const breadcrumb = [
+        {
+            name: "reminders-and-instructions-for-patients",
+            href: "/reminders-and-instructions-for-patients",
+        },
         {
             name: "instruktsiyi-pislya-lazernoyi-korektsiyi-zoru",
             href: "/instruktsiyi-pislya-lazernoyi-korektsiyi-zoru",
@@ -35,6 +40,7 @@ export default function PatientsLazerInstructionPage() {
                     ))}
                 </div>
             </section>
+            <Booking />
         </>
     );
 }
