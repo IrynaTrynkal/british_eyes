@@ -711,7 +711,7 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         data: [
                             {
-                                title: "Comprehensive Vision Diagnostics Includes",
+                                title: "Comprehensive vision diagnostics includes",
                                 image: "/images/perevirka-round.jpg",
                                 text: [
                                     {
@@ -750,7 +750,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "Regular Vision Check-ups – The Foundation of Disease Prevention",
+                                title: "Regular vision check-ups – the foundation of disease prevention",
                                 image: "/images/choice.jpg",
                                 text: [
                                     {
@@ -787,7 +787,7 @@ export const servicesData: ServicesProps[] = [
                         paddingTop: true,
                         paddingBottom: true,
                         image: "/images/choice.jpg",
-                        title: "Computer Vision Diagnostics: Why It’s Done and How the Procedure Works",
+                        title: "Computer vision diagnostics: why it’s done and how the procedure works",
                         text: [
                             "Before choosing the appropriate method of vision correction, it’s important to undergo a detailed examination.",
                             "One of the most effective and gentle methods today is considered to be computer-based eye diagnostics.",
@@ -825,7 +825,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "greenSliderSection",
                     data: {
-                        title: "Comprehensive Eye Examination: What Tests Are Performed",
+                        title: "Comprehensive eye examination: what tests are performed",
                         text: "During an eye diagnosis, a number of tests are performed to thoroughly assess the condition of the visual system:",
                         btn: {
                             btnName: "make an appointment",
@@ -878,7 +878,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "advantages",
                     data: {
-                        title: "Advantages of Computerized Eye Examination",
+                        title: "Advantages of computerized eye examination",
                         text: "In our ophthalmology clinic in Kyiv, diagnostics are performed using advanced technologies and EU-certified equipment.",
                         list: [
                             {
@@ -1845,7 +1845,7 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         data: [
                             {
-                                title: "What is Cataract?",
+                                title: "What is cataract?",
                                 image: "/images/cataract-round.jpg",
                                 imagePosition: "object-left",
                                 text: [
@@ -2668,7 +2668,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        title: "Dry Eye Syndrome: Diagnosis and Treatment",
+                        title: "Dry eye syndrome: diagnosis and treatment",
                         text: [
                             "Dry eye syndrome is a condition in which the tear film loses stability and no longer properly protects the cornea. This causes dryness, burning, a “sand-like” sensation, redness, and fluctuating vision clarity, especially at the end of the day. The reasons vary: meibomian gland dysfunction, infrequent or incomplete blinking while using screens, age- and hormone-related changes, dry air. Without accurate diagnostics, symptoms become chronic, so it is crucial to determine which tear film layer is affected and choose targeted treatment.",
                             "In our clinic, the diagnosis of dry eye syndrome is performed using unique certified equipment — IDRA — developed in Italy specifically for accurate assessment of all aspects of this condition.",
@@ -2678,7 +2678,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "greenSliderSection",
                     data: {
-                        title: "Diagnostic Features:",
+                        title: "Diagnostic features:",
                         text: "We use proven technologies and tailor the treatment approach for each patient individually. Diagnostics are performed using the professional ophthalmic device IDRA.",
                         slider: [
                             {
@@ -3479,7 +3479,7 @@ export const servicesData: ServicesProps[] = [
                         paddingTop: true,
                         data: [
                             {
-                                title: "Vitreoretinal Surgery — Advanced Vision Preservation Methods",
+                                title: "Vitreoretinal surgery — advanced vision preservation methods",
                                 cta: true,
                                 text: [
                                     {
@@ -3493,7 +3493,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "What is Vitrectomy and When It’s Needed",
+                                title: "What is vitrectomy and when it’s needed",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -3517,7 +3517,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "Retinal Detachment and Tears: Emergency Treatment",
+                                title: "Retinal detachment and tears: emergency treatment",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -3541,7 +3541,7 @@ export const servicesData: ServicesProps[] = [
                         paddingTop: true,
                         data: [
                             {
-                                title: "Other Directions: Macular Hole, Retinopathy, Floaters, Trauma",
+                                title: "Other directions: macular hole, retinopathy, floaters, trauma",
                                 logo: true,
                                 text: [
                                     {
@@ -3555,7 +3555,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "Why Choose Us: Expertise, Equipment, and Service",
+                                title: "Why choose us: expertise, equipment, and service",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -4125,7 +4125,7 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         paddingTop: false,
                         paddingBottom: true,
-                        listTitle: "How Does Laser Vision Correction Work?",
+                        listTitle: "How does laser vision correction work?",
                         list: [
                             {
                                 itemTitle: "Vision Diagnostics",
@@ -4162,9 +4162,8 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "advantages",
                     data: {
-                        title: "Advantages of Laser Vision Correction in Kyiv at the British Ophthalmology Center",
+                        title: "Advantages of laser vision correction in Kyiv at the British Ophthalmology Center",
                         text: "You can be confident in the quality of the services provided, as you entrust your vision to a modern clinic.",
-                        paddingBottom: false,
                         list: [
                             {
                                 title: "100% Safety",
@@ -6634,7 +6633,7 @@ export const servicesData: ServicesProps[] = [
                     type: "textsColumns",
                     data: {
                         paddingTop: true,
-                        title: "Innovative Vision Restoration: Refractive Lens Exchange (RLE)",
+                        title: "Innovative vision restoration: Refractive Lens Exchange (RLE)",
                         text: "Refractive Lens Exchange (RLE, refractive lensectomy) is a surgical method of vision correction in which the eye’s natural lens is replaced with an intraocular lens (IOL). RLE corrects myopia, hyperopia, presbyopia, and astigmatism. It is an ideal alternative when laser correction is contraindicated (thin cornea, scars, unstable refraction) and provides stable, clear vision without glasses or contact lenses.",
                         blocks: [
                             {
@@ -9826,7 +9825,7 @@ export const servicesData: ServicesProps[] = [
                         paddingTop: true,
                         data: [
                             {
-                                title: "Laser Blepharoplasty in Kyiv: a Fresh Look and Defined Eyelid Contours",
+                                title: "Laser blepharoplasty in Kyiv: a fresh look and defined eyelid contours",
                                 cta: true,
                                 text: [
                                     {
@@ -9840,7 +9839,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "When Surgery for Droopy Eyelids is Indicated and How the Laser Helps",
+                                title: "When surgery for droopy eyelids is indicated and how the laser helps",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -9854,7 +9853,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "How Laser Eyelid Correction Works:",
+                                title: "How laser eyelid correction works:",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -9893,7 +9892,7 @@ export const servicesData: ServicesProps[] = [
                         paddingTop: true,
                         data: [
                             {
-                                title: "How Much Does It Cost to Fix Droopy Eyelids in Kyiv: Price and Key Factors",
+                                title: "How much does it cost to fix droopy eyelids in Kyiv: price and key factors",
                                 logo: true,
                                 text: [
                                     {
@@ -9926,7 +9925,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "Why Choose Our Private Clinic: Experience, Technology, and Care",
+                                title: "Why choose our private clinic: experience, technology, and care",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -10516,7 +10515,7 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         data: [
                             {
-                                title: "Xenon Therapy in Kyiv: Natural Anti-Stress and Nervous System Reset",
+                                title: "Xenon therapy in Kyiv: natural anti-stress and nervous system reset",
                                 cta: true,
                                 text: [
                                     {
@@ -10530,7 +10529,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "Who Is Xenon Therapy For?",
+                                title: "Who is xenon therapy for?",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -10544,7 +10543,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "How a Xenon Therapy Session Works",
+                                title: "How a xenon therapy session works",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -10566,7 +10565,7 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         data: [
                             {
-                                title: "Results and Benefits: Fast, Gentle, and Drug-Free",
+                                title: "Results and benefits: fast, gentle, and drug-free",
                                 logo: true,
                                 text: [
                                     {
@@ -10600,7 +10599,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "Course, Contraindications, and Cost",
+                                title: "Course, contraindications, and cost",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -11139,7 +11138,7 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         data: [
                             {
-                                title: "Painless and Safe Surgeries in Kyiv",
+                                title: "Painless and safe surgeries in Kyiv",
                                 cta: true,
                                 text: [
                                     {
@@ -11158,7 +11157,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "Which Anesthesia to Choose: Local, Sedation, or General?",
+                                title: "Which anesthesia to choose: local, sedation, or general?",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -11172,7 +11171,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "Preparing for Anesthesia: Tests, Consultation, Medications",
+                                title: "Preparing for anesthesia: tests, consultation, medications",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
@@ -11196,7 +11195,7 @@ export const servicesData: ServicesProps[] = [
                         paddingBottom: false,
                         data: [
                             {
-                                title: "Safety Control: Equipment, Monitoring, Protocols",
+                                title: "Safety control: equipment, monitoring, protocols",
                                 logo: true,
                                 text: [
                                     {
@@ -11210,7 +11209,7 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                             {
-                                title: "Surgery Day: What to Expect, Recovery, and Cost",
+                                title: "Surgery day: what to expect, recovery, and cost",
                                 image: "/images/equipment1.jpg",
                                 text: [
                                     {
