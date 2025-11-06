@@ -915,7 +915,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions About Eye Examination",
+                        title: "Frequently asked questions about eye examination",
                         content: [
                             {
                                 question:
@@ -1925,7 +1925,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions About Cataracts",
+                        title: "Frequently asked questions about cataracts",
                         content: [
                             {
                                 question: "What is a cataract?",
@@ -2870,7 +2870,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions about Dry Eye Treatment",
+                        title: "Frequently asked questions about dry eye treatment",
                         content: [
                             {
                                 question:
@@ -3575,7 +3575,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions About Vitrectomy",
+                        title: "Frequently asked questions about vitrectomy",
                         content: [
                             {
                                 question:
@@ -4201,7 +4201,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions About Laser Vision Correction",
+                        title: "Frequently asked questions about laser vision correction",
                         content: [
                             {
                                 question: "What is laser vision correction?",
@@ -5739,7 +5739,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions about Keratoconus and Corneal Cross-Linking",
+                        title: "Frequently asked questions about keratoconus and corneal cross-linking",
                         content: [
                             {
                                 question:
@@ -6686,7 +6686,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions about Refractive Lens Exchange (RLE)",
+                        title: "Frequently asked questions about refractive lens exchange (RLE)",
                         content: [
                             {
                                 question:
@@ -7426,7 +7426,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions about Laser Eye Treatment",
+                        title: "Frequently asked questions about laser eye treatment",
                         content: [
                             {
                                 question:
@@ -8058,7 +8058,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions about Intravitreal Injections",
+                        title: "Frequently asked questions about intravitreal injections",
                         content: [
                             {
                                 question:
@@ -10626,7 +10626,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions about Eyelid and Conjunctival Surgery",
+                        title: "Frequently asked questions about eyelid and conjunctival surgery",
                         content: [
                             {
                                 question:
@@ -11241,7 +11241,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "faq",
                     data: {
-                        title: "Frequently Asked Questions About Anesthesia Support",
+                        title: "Frequently asked questions about anesthesia support",
                         content: [
                             {
                                 question: "Will it hurt during eye surgery?",
