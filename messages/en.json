@@ -132,7 +132,8 @@
         "patient-information-before-IPL-therapy": "Patient information before IPL therapy",
         "reminder-before-a-comprehensive-pediatric-examination": "Reminder before a comprehensive pediatric examination",
         "details": "more details",
-        "typesDiseases": "Types of diseases"
+        "typesDiseases": "Types of diseases",
+        "rayner-galaxy": "Rayner Galaxy"
     },
     "Modals": {
         "callUs": "Contact us",
@@ -248,6 +249,12 @@
         "raynerCardTitle": "We use only premium lenses (intraocular implants)",
         "raynerText": "<bold>the world's #1</bold> lens for cataract treatment",
         "raynerTextPC": "<bold>the world's #1</bold> intraocular lens for cataract treatment",
+        "raynerText1": "<bold>the world's #1</bold> intraocular lens",
+        "raynerText2": "for cataract treatment",
+        "reynerItem1": "developed with the involvement of artificial intelligence",
+        "reynerItem2": "restores youthful vision",
+        "reynerItem3": "clear vision at any distance",
+        "raynerAdv": "Rayner GALAXY is now available for implantation in our clinic",
         "learnMore": "learn more",
         "lansTitle": "Who is recommended for refractive lens exchange:",
         "lansText1": "The BiVision RLE procedure is most often recommended for people over 45 years old who begin to experience the first symptoms of age-related vision changes — blurred near vision, the need to move text further away, and rapid eye fatigue. Implanting a multifocal lens restores visual comfort and eliminates dependence on glasses.",

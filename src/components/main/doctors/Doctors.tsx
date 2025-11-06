@@ -13,7 +13,7 @@ import { LocaleType } from "@/types/LocaleType";
 
 import { DoctorsSlider } from "../../shared/doctors/DoctorsSlider";
 
-export const Doctors = () => {
+export const Doctors = ({ className }: { className?: string }) => {
     const [openedDepartment, setOpenedDepartment] =
         useState<DepartmentsType>("clinic-management");
 
@@ -26,7 +26,9 @@ export const Doctors = () => {
     const t = useTranslations("HomePage");
     const locale = useLocale();
     return (
-        <section className="green-gradient tab:px-6 pc:px-12 tab:max-w-full tab:pt-10 tab:pb-[42px] pt-4 pb-7">
+        <section
+            className={`green-gradient tab:px-6 pc:px-12 tab:max-w-full tab:pt-10 tab:pb-[42px] pt-4 pb-7 ${className}`}
+        >
             <div className="tab:flex tab:gap-5 tab:justify-between pc:justify-normal tab:mb-10">
                 <div className="tab:flex-col pc:w-[321px] tab:px-0 tab:mb-0 tab:mx-0 mx-auto mb-6 flex max-w-[540px] justify-between px-4">
                     <h3 className="subtitle-ivory">{t("doctorsSubtitle")}</h3>

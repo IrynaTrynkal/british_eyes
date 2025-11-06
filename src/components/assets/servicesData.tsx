@@ -11533,3 +11533,215 @@ export const servicesData: ServicesProps[] = [
         },
     },
 ];
+
+export const raynerAdvantageDataMob: {
+    uk: AdvantageServiceSectionProps;
+    en: AdvantageServiceSectionProps;
+    ru: AdvantageServiceSectionProps;
+} = {
+    uk: {
+        title: "Переваги встановлення Rayner GALAXY в Британському Офтальмологічному Центрі",
+        text: "Ми пропонуємо повний супровід пацієнта на всіх етапах — від діагностики до післяопераційного спостереження",
+        list: [
+            {
+                title: "ексклюзивними постачальниками лінз Rayner GALAXY",
+                text: "Ця технологія доступна в Україні лише у нашій клініці",
+            },
+            {
+                title: "Новітнє обладнання",
+                text: "Обладнання та операційні зали, що відповідають міжнародним стандартам",
+            },
+            {
+                title: "Індивідуальний підхід",
+                text: "Точна діагностика, підбір ІОЛ, контроль результату",
+            },
+            {
+                title: "Досвідчені хірурги",
+                text: "Сертифіковані для роботи з сучасними інтраокулярними лінзами",
+            },
+            { imageOnly: "/images/rayner-box.png" },
+            {
+                title: "100% безпеки",
+                text: "Максимальна безпека та комфорт під час кожного етапу лікування",
+            },
+            {
+                title: "Rayner GALAXY вже доступна до встановлення у нашій клініці",
+                text: "",
+                bgTransparent: true,
+            },
+        ],
+    },
+    en: {
+        title: "Advantages of Rayner GALAXY implantation at the British Ophthalmology Centre",
+        text: "We provide full patient support at every stage — from diagnosis to postoperative care",
+        list: [
+            {
+                title: "Exclusive suppliers of Rayner GALAXY lenses",
+                text: "This technology is available in Ukraine only at our clinic",
+            },
+            {
+                title: "State-of-the-art equipment",
+                text: "Facilities and operating rooms that meet international standards",
+            },
+            {
+                title: "Individual approach",
+                text: "Accurate diagnostics, IOL selection, and results monitoring",
+            },
+            {
+                title: "Experienced surgeons",
+                text: "Certified to work with modern intraocular lenses",
+            },
+            { imageOnly: "/images/rayner-box.png" },
+            {
+                title: "100% safety",
+                text: "Maximum safety and comfort at every stage of treatment",
+            },
+            {
+                title: "Rayner GALAXY is now available for implantation in our clinic",
+                text: "",
+                bgTransparent: true,
+            },
+        ],
+    },
+    ru: {
+        title: "Преимущества установки Rayner GALAXY в Британском Офтальмологическом Центре",
+        text: "Мы обеспечиваем полное сопровождение пациента на всех этапах — от диагностики до послеоперационного наблюдения",
+        list: [
+            {
+                title: "Эксклюзивные поставщики линз Rayner GALAXY",
+                text: "Эта технология доступна в Украине только в нашей клинике",
+            },
+            {
+                title: "Новейшее оборудование",
+                text: "Оборудование и операционные залы, соответствующие международным стандартам",
+            },
+            {
+                title: "Индивидуальный подход",
+                text: "Точная диагностика, подбор ИОЛ и контроль результата",
+            },
+            {
+                title: "Опытные хирурги",
+                text: "Сертифицированы для работы с современными интраокулярными линзами",
+            },
+            { imageOnly: "/images/rayner-box.png" },
+            {
+                title: "100% безопасность",
+                text: "Максимальная безопасность и комфорт на каждом этапе лечения",
+            },
+            {
+                title: "Rayner GALAXY уже доступна для установки в нашей клинике",
+                text: "",
+                bgTransparent: true,
+            },
+        ],
+    },
+};
+
+export const raynerAdvantageDataTab: {
+    uk: AdvantageServiceSectionProps;
+    en: AdvantageServiceSectionProps;
+    ru: AdvantageServiceSectionProps;
+} = {
+    uk: {
+        paddingBottom: false,
+        title: "Переваги встановлення Rayner GALAXY в Британському Офтальмологічному Центрі",
+        text: "Ми пропонуємо повний супровід пацієнта на всіх етапах — від діагностики до післяопераційного спостереження",
+        list: [
+            {
+                title: "ексклюзивними постачальниками лінз Rayner GALAXY",
+                text: "Ця технологія доступна в Україні лише у нашій клініці",
+            },
+            {
+                title: "Новітнє обладнання",
+                text: "Обладнання та операційні зали, що відповідають міжнародним стандартам",
+            },
+            { videoOnly: "/videos/rayner-spiral.mp4" },
+            {
+                title: "Індивідуальний підхід",
+                text: "Точна діагностика, підбір ІОЛ, контроль результату",
+            },
+            {
+                title: "Досвідчені хірурги",
+                text: "Сертифіковані для роботи з сучасними інтраокулярними лінзами",
+            },
+            { imageOnly: "/images/rayner-box.png" },
+            {
+                title: "100% безпеки",
+                text: "Максимальна безпека та комфорт під час кожного етапу лікування",
+            },
+            {
+                title: "Rayner GALAXY вже доступна до встановлення у нашій клініці",
+                text: "",
+                bgTransparent: true,
+            },
+        ],
+    },
+    en: {
+        paddingBottom: false,
+        title: "Advantages of Rayner GALAXY implantation at the British Ophthalmology Centre",
+        text: "We provide full patient support at every stage — from diagnosis to postoperative care",
+        list: [
+            {
+                title: "Exclusive suppliers of Rayner GALAXY lenses",
+                text: "This technology is available in Ukraine only at our clinic",
+            },
+            {
+                title: "State-of-the-art equipment",
+                text: "Facilities and operating rooms that meet international standards",
+            },
+            { videoOnly: "/videos/rayner-spiral.mp4" },
+            {
+                title: "Individual approach",
+                text: "Accurate diagnostics, IOL selection, and results monitoring",
+            },
+            {
+                title: "Experienced surgeons",
+                text: "Certified to work with modern intraocular lenses",
+            },
+            { imageOnly: "/images/rayner-box.png" },
+            {
+                title: "100% safety",
+                text: "Maximum safety and comfort at every stage of treatment",
+            },
+            {
+                title: "Rayner GALAXY is now available for implantation in our clinic",
+                text: "",
+                bgTransparent: true,
+            },
+        ],
+    },
+    ru: {
+        paddingBottom: false,
+        title: "Преимущества установки Rayner GALAXY в Британском Офтальмологическом Центре",
+        text: "Мы обеспечиваем полное сопровождение пациента на всех этапах — от диагностики до послеоперационного наблюдения",
+        list: [
+            {
+                title: "Эксклюзивные поставщики линз Rayner GALAXY",
+                text: "Эта технология доступна в Украине только в нашей клинике",
+            },
+            {
+                title: "Новейшее оборудование",
+                text: "Оборудование и операционные залы, соответствующие международным стандартам",
+            },
+            { videoOnly: "/videos/rayner-spiral.mp4" },
+            {
+                title: "Индивидуальный подход",
+                text: "Точная диагностика, подбор ИОЛ и контроль результата",
+            },
+            {
+                title: "Опытные хирурги",
+                text: "Сертифицированы для работы с современными интраокулярными линзами",
+            },
+            { imageOnly: "/images/rayner-box.png" },
+            {
+                title: "100% безопасность",
+                text: "Максимальная безопасность и комфорт на каждом этапе лечения",
+            },
+            {
+                title: "Rayner GALAXY уже доступна для установки в нашей клинике",
+                text: "",
+                bgTransparent: true,
+            },
+        ],
+    },
+};

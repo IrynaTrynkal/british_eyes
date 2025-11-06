@@ -7,8 +7,10 @@ import { AdvantagesSliderService } from "./AdvantagesSliderService";
 
 export const AdvantagesService = ({
     data,
+    className,
 }: {
     data: AdvantageServiceSectionProps;
+    className?: string;
 }) => {
     const t = useTranslations("ServicesPage");
     const { paddingTop = true, paddingBottom = true } = data;
@@ -16,7 +18,7 @@ export const AdvantagesService = ({
         <section
             className={`content relative ${
                 paddingTop ? "pc:pt-[120px] tab:pt-12 pt-[60px]" : ""
-            } ${paddingBottom ? "pc:pb-[120px] tab:pb-12 pb-[60px]" : ""}`}
+            } ${paddingBottom ? "pc:pb-[120px] tab:pb-12 pb-[60px]" : ""} ${className}`}
         >
             <h3 className="subtitle tab:max-w-[318px] tab:mb-4 prepc:absolute prepc:top-12 pc:top-[120px] prepc:left-6 pc:left-12 mb-5">
                 {t("advantages")}
