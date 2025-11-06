@@ -23,7 +23,10 @@ export const TextsColumnsSection = ({
                 {data.blocks.map((block, ind) => (
                     <TextColumnsBlock
                         key={ind}
-                        last={data.blocks.length === ind + 1}
+                        last={
+                            data.blocks.length % 2 !== 0 &&
+                            data.blocks.length === ind + 1
+                        }
                         block={block}
                     />
                 ))}

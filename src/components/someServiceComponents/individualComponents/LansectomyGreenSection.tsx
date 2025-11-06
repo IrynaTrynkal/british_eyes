@@ -1,19 +1,12 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { CustomList } from "@/components/shared/CustomList";
 import { IconRaynerLogo } from "@/components/shared/icons/IconRaynerLogo";
 import { LinkAction } from "@/components/shared/LinkAction";
 
-export const CataractGreenSection = () => {
+export const LansectomyGreenSection = () => {
     const t = useTranslations("ServicesPage");
 
-    const catList = [
-        t("catIndListItem1"),
-        t("catIndListItem2"),
-        t("catIndListItem3"),
-        t("catIndListItem4"),
-    ];
     const raynerText = t.rich("raynerText", {
         bold: chunk => <span className="font-bold">{chunk}</span>,
     });
@@ -37,15 +30,12 @@ export const CataractGreenSection = () => {
                     <div className="prepc:w-2/5 prepc:flex prepc:flex-col prepc:justify-between tab:max-w-[400px] prepc:max-w-full">
                         <div className="mb-[26px]">
                             <h2 className="title-section-ivory tab:max-w-[700px] pc:max-w-[890px] tab:mx-auto prepc:mx-0 prepc:mb-9 mb-6 text-left">
-                                {t("catIndTitle")}
+                                {t("lansTitle")}
                             </h2>
-                            <CustomList
-                                list={catList}
-                                className="prepc:flex-col prepc:gap-3 mb-[91px]"
-                            />
+                            <p className="mb-[91px]">{t("lansText1")}</p>
                         </div>
                         <p className="prepc:max-w-[321px] prepc:mb-0 prepc:text-lg mb-[26px] max-w-[400px] leading-[120%]">
-                            {t("catIndText")}
+                            {t("lansText2")}
                         </p>
                     </div>
                     <div className="cta-green-gradient tab:p-6 tab:max-w-[662px] prepc:w-3/5 prepc:mt-auto prepc:mb-0 mr-0 ml-auto max-w-[400px] rounded-lg p-3">

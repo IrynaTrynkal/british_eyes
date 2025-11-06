@@ -3,9 +3,12 @@ import { RoundBlock } from "@/components/assets/servicesData";
 import { RoundImageAndTextItem } from "./RoundImageAndTextItem";
 
 export const RoundImageAndTextSection = ({ data }: { data: RoundBlock }) => {
+    const { paddingTop = true, paddingBottom = true } = data;
     return (
         <section
-            className={`content tab:pb-12 pc:pb-[120px] flex flex-col gap-[60px] pb-[60px] ${data.paddingTop ? "tab:pt-12 pc:pt-[120px] pt-[60px]" : ""}`}
+            className={`content flex flex-col gap-[60px] ${
+                paddingTop ? "pc:pt-[120px] tab:pt-12 pt-[60px]" : ""
+            } ${paddingBottom ? "pc:pb-[120px] tab:pb-12 pb-[60px]" : ""}`}
         >
             {data.data.map((item, index) => (
                 <RoundImageAndTextItem
