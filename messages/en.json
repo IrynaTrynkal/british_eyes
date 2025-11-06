@@ -244,8 +244,12 @@
         "catIndListItem3": "we correct the consequences of unsuccessful surgeries in other clinics",
         "catIndListItem4": "we take on the most difficult cases",
         "raynerCardTitle": "We use only premium lenses (intraocular implants)",
-        "raynerCardText": "Lens No. 1 in the world for cataract treatment",
-        "learnMore": "learn more"
+        "raynerText": "<bold>the world's #1</bold> lens for cataract treatment",
+        "raynerTextPC": "<bold>the world's #1</bold> intraocular lens for cataract treatment",
+        "learnMore": "learn more",
+        "lansTitle": "Who is recommended for refractive lens exchange:",
+        "lansText1": "The BiVision RLE procedure is most often recommended for people over 45 years old who begin to experience the first symptoms of age-related vision changes — blurred near vision, the need to move text further away, and rapid eye fatigue. Implanting a multifocal lens restores visual comfort and eliminates dependence on glasses.",
+        "lansText2": "In our center, refractive lens exchange surgeries are performed by surgeons with experience of no less than 50,000 successful procedures."
     },
     "PricePage": {
         "title": "Prices",

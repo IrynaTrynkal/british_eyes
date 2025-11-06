@@ -58,7 +58,7 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
             )}
             <div className="content tab:pt-20 tab:pb-6 prepc:pt-[104px] prepc:pb-14 tab:items-start relative z-[1] flex h-full flex-col items-end pt-7 pb-6">
                 <div className="mt-auto mr-auto mb-0 ml-0">
-                    <h1 className="title-h1 text-white-100 prepc:max-w-[553px] tab:mb-5 prepc:mb-6 mb-4 max-w-[400px] whitespace-pre-line uppercase">
+                    <h1 className="title-h1 text-white-100 prepc:max-w-[703px] tab:mb-5 prepc:mb-6 mb-4 max-w-[400px] whitespace-pre-line uppercase">
                         {data.title}
                     </h1>
                     {data.text && (

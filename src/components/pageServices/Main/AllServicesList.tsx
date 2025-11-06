@@ -25,7 +25,7 @@ export const AllServicesList = () => {
     };
 
     return (
-        <ul className="tab:gap-5 prepc:mb-10 tab:justify-center mb-8 flex flex-wrap gap-2">
+        <ul className="tab:gap-5 prepc:mb-10 tab:justify-center pc:mx-auto mb-8 flex max-w-[1344px] flex-wrap gap-2">
             {servicesData.map((service, index) => (
                 <li
                     key={service.name.key}

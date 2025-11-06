@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import { LocaleType } from "@/types/LocaleType";
 
-import { ServicesProps } from "../assets/servicesData";
+import { servicesData, ServicesProps } from "../assets/servicesData";
 import { AboutCTA } from "../pageAbout/cta/AboutCTA";
 import { Global } from "../shared/global/Global";
 import { AdvantagesService } from "./advantages/AdvantagesService";
@@ -24,6 +24,15 @@ export const ServicePageContent = ({
     locale: LocaleType;
 }) => {
     const sections = serviceData[locale]?.sections ?? [];
+
+    const perevirkaZoruService = servicesData.find(
+        s => s.name.key === "perevirka-zoru"
+    );
+    const perevirkaZoruSections = perevirkaZoruService?.[locale]?.sections;
+    const perevirkaZoruPriceSection = perevirkaZoruSections?.find(
+        sec => sec.type === "priceSection"
+    );
+
     return (
         <>
             {sections.map((section, index) => {
@@ -74,8 +83,19 @@ export const ServicePageContent = ({
                         return (
                             <PriceSection
                                 key={index}
-                                slug={serviceData.name.key}
-                                data={section.data}
+                                slug={
+                                    serviceData.name.key ===
+                                    "dityache-viddilennya"
+                                        ? "perevirka-zoru"
+                                        : serviceData.name.key
+                                }
+                                data={
+                                    serviceData.name.key ===
+                                    "dityache-viddilennya"
+                                        ? (perevirkaZoruPriceSection?.data ??
+                                          section.data)
+                                        : section.data
+                                }
                             />
                         );
                     case "doctors":
