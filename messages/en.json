@@ -136,7 +136,9 @@
     },
     "Modals": {
         "callUs": "Contact us",
-        "hotLine": "free hotline in Ukraine"
+        "hotLine": "free hotline in Ukraine",
+        "globalTitle": "We welcome patients from other cities and countries",
+        "globalText": "Leave your contact information and we will get in touch with you shortly"
     },
     "Doctors": {
         "experienceSince": "Experience since {year}",

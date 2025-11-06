@@ -38,7 +38,7 @@ export const AdvantageServiceCard = ({
                     <div className="pc:w-[295px] tab:w-[208px] relative z-[1] mx-auto w-[224px]">
                         {data.title && (
                             <h4
-                                className={`font-oswald pc:text-xl pc:leading-6 pc:min-h-12 pc:mb-6 mb-4 min-h-10 w-[140px] leading-5 font-medium uppercase backdrop-blur-xs ${data.bgTransparent && "mx-auto text-center"}`}
+                                className={`font-oswald pc:text-xl pc:leading-6 pc:min-h-12 pc:mb-6 mb-4 min-h-10 leading-5 font-medium uppercase backdrop-blur-xs ${data.bgTransparent ? "mx-auto text-center" : "prepc:w-[80%] w-[140px]"}`}
                             >
                                 {data.title}
                             </h4>
