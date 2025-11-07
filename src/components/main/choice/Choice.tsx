@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { ButtonAction } from "@/components/shared/ButtonAction";
 import { GreenText } from "@/components/shared/GreenText";
+import { LinkAction } from "@/components/shared/LinkAction";
 
 export const Choice = () => {
     const t = useTranslations("HomePage");
@@ -30,7 +30,8 @@ export const Choice = () => {
                         text={t("choiceGreen")}
                         className="pc:max-w-[320px] pc:mb-0 mb-8 max-w-[370px]"
                     />
-                    <ButtonAction
+                    <LinkAction
+                        href="#booking"
                         className="pc:mx-0 mx-auto"
                         name={t("onlineButton")}
                     />
