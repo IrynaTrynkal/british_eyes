@@ -30,7 +30,7 @@ export const FeedbacksPageList = ({
     );
     return (
         <div className={className}>
-            <ul className="tab:px-6 prepc:px-0 tab:max-w-full mx-auto flex max-w-[540px] flex-col gap-4 px-4">
+            <ul className="tab:px-0 tab:max-w-full mx-auto flex max-w-[540px] flex-col gap-4 px-4">
                 {currentItems.map((fb, ind) => (
                     <li key={ind}>
                         <FeedbackPageCard feedback={fb} />
