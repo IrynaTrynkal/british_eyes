@@ -22,13 +22,13 @@ export const Modal = ({
     variant = "sidebar",
 }: ModalProps) => {
     const [isOpenPortal, setIsOpenPortal] = useState(false);
-    const onClosePortal = () => {
-        setIsOpenPortal(false);
-    };
 
     useEffect(() => {
         if (isOpen) {
             setIsOpenPortal(true);
+        } else {
+            const timer = setTimeout(() => setIsOpenPortal(false), 200);
+            return () => clearTimeout(timer);
         }
     }, [isOpen]);
 
@@ -36,7 +36,7 @@ export const Modal = ({
         if (!isOpen) return;
 
         const handleEsc = (e: KeyboardEvent) => {
-            if (e.key === "Escape") onClosePortal();
+            if (e.key === "Escape") onClose();
         };
 
         document.body.style.overflow = "hidden";
@@ -48,12 +48,8 @@ export const Modal = ({
     }, [isOpen, onClose]);
 
     return (
-        <AnimatePresence
-            onExitComplete={() => {
-                onClose();
-            }}
-        >
-            {isOpenPortal ? (
+        <AnimatePresence>
+            {isOpenPortal && (
                 <Portal id="modal">
                     <motion.div
                         className={`fixed inset-0 z-20 flex ${
@@ -114,7 +110,7 @@ export const Modal = ({
                         </motion.div>
                     </motion.div>
                 </Portal>
-            ) : null}
+            )}
         </AnimatePresence>
     );
 };
