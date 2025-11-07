@@ -13,9 +13,11 @@ import { SuccessMessage } from "./SuccessMessage";
 export const BookingOnlineForm = ({
     cta,
     btnName,
+    className,
 }: {
     cta?: boolean;
     btnName?: string;
+    className?: string;
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
@@ -56,14 +58,14 @@ export const BookingOnlineForm = ({
                     <ButtonAction
                         mob
                         header
-                        className="prepc:hidden"
+                        className={`prepc:hidden ${className}`}
                         name={t("onlineButtonMob")}
                         onClick={() => setIsOpen(true)}
                     />
                     <ButtonAction
                         header
                         name={t("onlineButtonPC")}
-                        className="prepc:flex hidden"
+                        className={`prepc:flex hidden ${className}`}
                         onClick={() => setIsOpen(true)}
                     />
                 </>
