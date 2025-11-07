@@ -55,7 +55,9 @@ export const RoundImageAndTextItem = ({
             </h2>
 
             {(item.image || item.cta || item.logo) && (
-                <div className="tab:w-[calc(30%-6px)] prepc:w-[calc(50%-12px)]">
+                <div
+                    className={`prepc:w-[calc(50%-12px)] ${item.cta ? "tab:w-[calc(40%-6px)]" : "tab:w-[calc(30%-6px)]"}`}
+                >
                     {item.image && (
                         <div className="tab:mx-auto pc:min-w-[477px] prepc:max-w-[477px] tab:aspect-square tab:mb-0 tab:rounded-full mb-5 aspect-[288/164] overflow-hidden rounded">
                             <Image
@@ -71,19 +73,21 @@ export const RoundImageAndTextItem = ({
                     )}
                     {item.cta && (
                         <CallUs
-                            className={
+                            className={`mb-5 ${
                                 (!left && index % 2 === 0) ||
                                 (left && index % 2 !== 0)
                                     ? "tab:mr-auto tab:ml-0"
                                     : ""
-                            }
+                            }`}
                         />
                     )}
-                    {item.logo && <IconEye className="mx-auto" />}
+                    {item.logo && <IconEye className="mx-auto h-auto w-full" />}
                 </div>
             )}
 
-            <div className="tab:w-[calc(70%-6px)] prepc:w-[calc(50%-12px)] prepc:min-h-[477px] tab:flex tab:flex-col">
+            <div
+                className={`prepc:min-h-[477px] tab:flex prepc:w-[calc(50%-12px)] tab:flex-col ${item.cta ? "tab:w-[calc(60%-6px)]" : "tab:w-[calc(70%-6px)]"}`}
+            >
                 <h2 className="title-section tab:block mb-6 hidden">
                     {item.title}
                 </h2>

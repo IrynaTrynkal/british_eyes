@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 
 import { DiscountType } from "@/components/assets/discount.Data";
-import { ButtonAction } from "@/components/shared/ButtonAction";
+import { BookingOnlineForm } from "@/components/shared/booking/BookingOnlineForm";
 import { IconPercent } from "@/components/shared/icons/IconPercent";
 import { LocaleType } from "@/types/LocaleType";
 
@@ -70,16 +70,7 @@ export const DiscountCard = ({ data }: { data: DiscountType }) => {
                         />
                     )
                 )}
-                <ButtonAction
-                    header
-                    className="tab:hidden absolute right-0 bottom-0 z-10 mx-0"
-                    name={tMenu("onlineButtonMob")}
-                />
-                <ButtonAction
-                    small
-                    className="tab:flex absolute right-0 bottom-0 z-10 mx-0 hidden"
-                    name={tMenu("onlineButtonMob")}
-                />
+                <BookingOnlineForm className="absolute right-0 bottom-0" />
             </div>
         </div>
     );

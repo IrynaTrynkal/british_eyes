@@ -2181,15 +2181,579 @@ export const pationtsInstructionsData: PationtsInstructionType[] = [
         )!,
         uk: {
             title: "Пам’ятка пацієнта перед вітреоретинальною хірургією",
-            content: [],
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Після операції ваше око заклеюють пов’язкою для того, щоб захистити його від випадкового забруднення. Пов’язку слід зняти як прибудете додому. Обробити повіки можна (не саме око) стерильною ватою, змоченою водним розчином фурациліну 0.02% або водним розчином левоміцетину 0.25% (продаються в аптеці). Починаючи з першого дня після операції, не слід постійно заклеювати опероване око пов’язкою, під якою око не може вільно моргати і рухатися.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "В день операції і в період реабілітації можуть виникнути больові відчуття в оперованому оці або в області навколо очей (надбрів’я, скроню). При больовому синдромі доцільно приймати таблетки «Кетанов», «Кеторол», «Анальгін» (згідно з інструкціями до цих препаратів) і звернутися до свого лікаря.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПЕРІОД РЕАБІЛІТАЦІЇ",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Запропоновані рекомендації є загальними, тобто розроблені для більшості пацієнтів. У випадках індивідуального перебігу післяопераційного періоду лікар може запропонувати індивідуальну схему лікування і графік оглядів пацієнта. Уточнюйте, будь ласка, рекомендації при кожному відвідуванні лікаря!",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                [
+                                    { bold: true, value: "Режим. " },
+                                    {
+                                        value: "Після проведеної операції дотримання режиму може мати певне лікувальне значення. Після операції, хірург або ваш лікуючий лікар дадуть рекомендації, як поводитися в першу добу після операції. Надалі вам слід уточнити особливості післяопераційного режиму у вашого лікуючого лікаря.",
+                                    },
+                                ],
+                                [
+                                    { bold: true, value: "Гігієна. " },
+                                    {
+                                        value: "Під час вмивання уникайте попадання мила і води в око. При митті голови нахиляйте голову назад, а не вперед. Якщо вода потрапила в опероване око, промийте його водним розчином фурациліну 0.02% або водним розчином левоміцетину 0.25% (продаються в аптеці).",
+                                    },
+                                ],
+                                [
+                                    {
+                                        bold: true,
+                                        value: "Обов’язково відвідуйте лікаря в призначений день!",
+                                    },
+                                ],
+                                [
+                                    {
+                                        bold: true,
+                                        value: "Очні краплі потрібні для більш швидкого загоєння і профілактики інфекційних ускладнень. ",
+                                    },
+                                    {
+                                        value: "Як правило, після проведеної операції хірург призначає закапування кількох препаратів: краплі з антибіотиком (наприклад, «Флоксал», «Офтаквікс», «Тобрекс» і ін.), Протизапальні краплі (наприклад, «Неванак», «Індоколлір» і ін.) Або комбіновані препарати ( «Макситрол», «Тобрадекс» і ін.).",
+                                    },
+                                ],
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Гострота ЗОРУ в післяопераційному періоді",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Поліпшення зору після операції відбувається поступово протягом перших 2 – 3 місяців. У деяких пацієнтів підвищення гостроти зору спостерігається протягом півроку. Як правило, повільніше цей процес протікає у пацієнтів з короткозорістю, цукровим діабетом,загальними захворюванням та  оперованим відшаруванням сітківки,розривами сітківки, мембрани на сітківці і у літніх людей.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "У період загоєння і реабілітації ваші очі можуть бути «різними». Вам можуть знадобитися тимчасові окуляри або контактні лінзи, щоб виправити цю ситуацію. Остаточну очкову корекцію доцільно проводити через 2-3 місяці після операції, хоча терміни підбору окулярів вирішуються індивідуально, якщо, наприклад, опероване єдине око.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "У міру відновлення зору у деяких пацієнтів можуть виникнути спотворення ліній і предметів, з’явитися двоїння. Як правило, ці симптоми слабшають поступово протягом декількох тижнів або місяців.",
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПОДАЛЬШИЙ ДОГЛЯД І РЕКОМЕНДАЦІЇ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Поступово обмеження, що накладаються в післяопераційному періоді, будуть зняті. Ми пропонуємо вам кілька корисних рекомендацій, які сприятимуть збереженню зору:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Не сідайте за кермо, поки око повністю не відновиться.",
+                                "Не тріть очей і не тисніть на опероване око.",
+                                "При перегляді телевізора чи читання частіше робіть перерви.",
+                                "По можливості носіть сонцезахисні окуляри для захисту очей від ультрафіолетового випромінювання.",
+                                "Дотримуйтесь встановленого графіка відвідування лікаря.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ДОДАТКОВА ІНФОРМАЦІЯ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                { bold: true, value: "ГАЗ. " },
+                                {
+                                    value: "Якщо на заключному етапі операції в око введений газ, післяопераційний період має ряд особливостей. У перші дні після операції гострота зору вкрай низька, так як газ не пропускає світло до сітківки. По мірі розсмоктування газу ( орієнтовно 10-15 днів) верхня частина поля зору починає світлішати, і пацієнт може помітити «рівень поділу середовищ», який змінює положення в залежності від руху голови. Через 7 – 10 днів після операції, коли газу залишається в оці менше третини обсягу склоподібного тіла, єдиний пухирець в оці може роздрібнитися на кілька дрібних. При індивідуальному перебігу процесу у деяких пацієнтів при розширенні газу (до 3 діб після операції) може підніматися внутрішньоочний тиск. Як правило, цей процес супроводжується болями і почервонінням ока. У таких випадках слід негайно звернутися до лікаря!",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                { bold: true, value: "СИЛІКОН. " },
+                                {
+                                    value: "Якщо на заключному етапі операції в око введений рідкий силікон, при підборі окулярів важливо пам’ятати, що в період знаходження силікону в оці гострота зору коригується окулярами (зазвичай від +4,0 до +6,0 дптр). Видалення силікону з порожнини склоподібного тіла, як правило, проводиться не раніше ніж через 3 місяці після операції. Вам слід знати, що наявність силікону в оці може призводити до прискорення процесу помутніння кришталика ока (розвиток катаракти) і провокувати підвищення внутрішньоочного тиску, особливо в ранньому післяопераційному періоді. Виведення силікону з ока є окремою операцією і оплачується окремо.",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    value: "ДЛЯ ПАЦІЄНТІВ З ЦУКРОВИМ ДІАБЕТОМ. ",
+                                },
+                                {
+                                    value: "На завершальному етапі операції і в післяопераційному періоді біля ока вводиться розчин протизапального препарату ( «Дексаметазон», «Дипроспан», «Кеналог»). Незважаючи на невелику дозу (не більше 0,5 мл), у ряду пацієнтів з цукровим діабетом спостерігається підвищення рівня глюкози крові протягом 1 – 2 діб після ін’єкції. Будьте уважні!",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПРАВИЛА ЗАКАПУВАННЯ КРАПЕЛЬ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "list",
+                            numeric: true,
+                            list: [
+                                "Ретельно вимийте руки.",
+                                "Відкрийте флакон.",
+                                "Закиньте голову або приляжте на спину і дивіться вгору.",
+                                "Розмістіть перевернутий догори флакон над оком, не торкайтеся до ока і вій.",
+                                "Обережно захопивши пальцями нижню повіку, злегка відтягніть його вниз.",
+                                "Заведіть очі вгору і злегка стисніть флакон, щоб крапля потрапила в простір, що утворився між очним яблуком і витягнутою нижньою повікою.",
+                                "Закрийте очі.",
+                                "Для посилення ефективності впливу і зведення до мінімуму системних побічних ефектів очних крапель притисніть вказівним пальцем (через стерильну серветку) внутрішній кут очної щілини.",
+                                "При призначенні декількох крапель проміжок між закапуванням повинен складати близько 5 хвилин. Останніми закапуються краплі, що знижують внутрішньоочний тиск.",
+                                "Закрийте флакон і зберігайте його у відповідності з приписом.",
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         en: {
             title: "Patient reminder before vitreoretinal surgery",
-            content: [],
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "After surgery, your eye will be covered with a bandage to protect it from accidental contamination. The bandage should be removed once you arrive home. You may clean your eyelids (not the eye itself) with sterile cotton moistened with a 0.02% furacilin solution or a 0.25% levomycetin solution (available at pharmacies). Starting from the first day after surgery, the operated eye should not remain constantly covered with a bandage, as this prevents free blinking and movement.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "On the day of surgery and during the rehabilitation period, you may experience pain in the operated eye or the surrounding area (eyebrow, temple). In case of pain, it is advisable to take tablets such as “Ketanov”, “Ketorol”, or “Analgin” (according to the instructions for these medications) and contact your doctor.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "REHABILITATION PERIOD",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "The recommendations provided are general and developed for most patients. In case of individual postoperative specifics, your doctor may suggest a personalized treatment plan and follow-up schedule. Please clarify the recommendations at each visit!",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                [
+                                    { bold: true, value: "Regimen. " },
+                                    {
+                                        value: "Following surgery, adhering to the prescribed regimen may have therapeutic value. After the operation, your surgeon or attending physician will provide instructions for the first 24 hours. Later, you should confirm the specific postoperative regimen with your doctor.",
+                                    },
+                                ],
+                                [
+                                    { bold: true, value: "Hygiene. " },
+                                    {
+                                        value: "Avoid getting soap and water into your eye when washing your face. When washing your hair, tilt your head back, not forward. If water gets into the operated eye, rinse it with a 0.02% furacilin solution or a 0.25% levomycetin solution (available at pharmacies).",
+                                    },
+                                ],
+                                [
+                                    {
+                                        bold: true,
+                                        value: "Be sure to visit your doctor on the appointed day!",
+                                    },
+                                ],
+                                [
+                                    {
+                                        bold: true,
+                                        value: "Eye drops are necessary for faster healing and to prevent infections. ",
+                                    },
+                                    {
+                                        value: "Typically, after surgery, your surgeon will prescribe several drops: antibiotic drops (e.g., “Floxal”, “Oftaquix”, “Tobrex”), anti-inflammatory drops (e.g., “Nevanac”, “Indocollyre”), or combined medications (“Maxitrol”, “Tobradex”, etc.).",
+                                    },
+                                ],
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "VISUAL ACUITY DURING THE POSTOPERATIVE PERIOD",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Vision improvement occurs gradually over the first 2–3 months after surgery. In some patients, visual acuity continues to improve for up to six months. This process may be slower in patients with myopia, diabetes, systemic diseases, retinal detachment, retinal tears, epiretinal membranes, or in elderly patients.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "During healing and rehabilitation, your eyes may differ in vision. You may need temporary glasses or contact lenses to compensate for this. Final correction with glasses is usually recommended 2–3 months after surgery, although this may vary individually, especially if the operated eye is your only seeing eye.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "As vision recovers, some patients may experience distortions of lines and objects or double vision. These symptoms usually diminish gradually over several weeks or months.",
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "FURTHER CARE AND RECOMMENDATIONS",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Postoperative restrictions will gradually be lifted. We offer several useful recommendations that will help preserve your vision:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Do not drive until your vision has fully recovered.",
+                                "Do not rub or press on the operated eye.",
+                                "Take regular breaks while reading or watching TV.",
+                                "Whenever possible, wear sunglasses to protect your eyes from ultraviolet radiation.",
+                                "Follow your scheduled follow-up visits with your doctor.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ADDITIONAL INFORMATION",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                { bold: true, value: "GAS. " },
+                                {
+                                    value: "If gas was introduced into your eye during the final stage of surgery, the postoperative period will have certain specifics. During the first few days, your visual acuity will be very low, as gas prevents light from reaching the retina. As the gas is absorbed (approximately 10–15 days), the upper part of your field of vision will begin to clear, and you may notice a visible “fluid level,” which changes with head movement. Around 7–10 days after surgery, when less than one-third of the gas remains, the single bubble may split into several smaller ones. In some patients, gas expansion (up to 3 days post-surgery) may cause an increase in intraocular pressure, accompanied by pain and redness. In such cases, contact your doctor immediately!",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                { bold: true, value: "SILICONE. " },
+                                {
+                                    value: "If liquid silicone was introduced into the eye, keep in mind that while it remains inside, your vision may require correction with glasses (usually from +4.0 to +6.0 diopters). Silicone removal is typically performed no earlier than 3 months after surgery. Please note that silicone may accelerate cataract formation and increase intraocular pressure, especially in the early postoperative period. Silicone removal is a separate procedure and is billed separately.",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    value: "FOR PATIENTS WITH DIABETES. ",
+                                },
+                                {
+                                    value: "At the final stage of surgery or during the postoperative period, an anti-inflammatory drug solution (“Dexamethasone”, “Diprospan”, “Kenalog”) may be injected near the eye. Despite the small dose (no more than 0.5 ml), some diabetic patients may experience a temporary increase in blood glucose levels for 1–2 days after the injection. Please be cautious!",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "RULES FOR APPLYING EYE DROPS",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "list",
+                            numeric: true,
+                            list: [
+                                "Wash your hands thoroughly.",
+                                "Open the bottle.",
+                                "Tilt your head back or lie down and look upward.",
+                                "Hold the bottle upside down above your eye without touching the eye or lashes.",
+                                "Gently pull down your lower eyelid.",
+                                "Look upward and squeeze the bottle slightly so that a drop falls into the space between the eye and the lower eyelid.",
+                                "Close your eyes.",
+                                "To increase absorption and reduce systemic side effects, press the inner corner of the eye with your index finger (through a sterile tissue).",
+                                "If multiple drops are prescribed, wait about 5 minutes between applications. Pressure-lowering drops should be applied last.",
+                                "Close the bottle and store it as directed.",
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         ru: {
             title: "Памятки пациенту перед витреоретинальной хирургией",
-            content: [],
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "После операции ваш глаз заклеивают повязкой, чтобы защитить его от случайного загрязнения. Повязку следует снять, когда вы вернётесь домой. Веки (не сам глаз) можно обработать стерильной ватой, смоченной водным раствором фурацилина 0.02% или левомицетина 0.25% (продаются в аптеке). Начиная с первого дня после операции, не следует постоянно держать глаз под повязкой, так как это мешает свободному морганию и движению глаза.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "В день операции и в период реабилитации могут возникать болевые ощущения в оперированном глазу или в области вокруг глаз (надбровье, висок). При болевом синдроме рекомендуется принимать таблетки «Кетанов», «Кеторол» или «Анальгин» (согласно инструкции) и обратиться к своему врачу.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПЕРИОД РЕАБИЛИТАЦИИ",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Предложенные рекомендации являются общими и разработаны для большинства пациентов. В случае индивидуального течения послеоперационного периода врач может предложить персональную схему лечения и график осмотров. Уточняйте, пожалуйста, рекомендации при каждом посещении врача!",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                [
+                                    { bold: true, value: "Режим. " },
+                                    {
+                                        value: "После проведённой операции соблюдение режима имеет лечебное значение. После операции хирург или ваш лечащий врач дадут рекомендации, как вести себя в первые сутки. В дальнейшем уточняйте особенности послеоперационного режима у своего врача.",
+                                    },
+                                ],
+                                [
+                                    { bold: true, value: "Гигиена. " },
+                                    {
+                                        value: "Во время умывания избегайте попадания мыла и воды в глаз. При мытье головы наклоняйте голову назад, а не вперёд. Если вода попала в глаз, промойте его водным раствором фурацилина 0.02% или левомицетина 0.25% (продаются в аптеке).",
+                                    },
+                                ],
+                                [
+                                    {
+                                        bold: true,
+                                        value: "Обязательно посещайте врача в назначенный день!",
+                                    },
+                                ],
+                                [
+                                    {
+                                        bold: true,
+                                        value: "Глазные капли необходимы для ускорения заживления и профилактики инфекционных осложнений. ",
+                                    },
+                                    {
+                                        value: "Как правило, после операции назначаются капли с антибиотиком («Флоксал», «Офтавикс», «Тобрекс»), противовоспалительные капли («Неванак», «Индоколлир») или комбинированные препараты («Макситрол», «Тобрадекс» и др.).",
+                                    },
+                                ],
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ОСТРОТА ЗРЕНИЯ В ПОСЛЕОПЕРАЦИОННЫЙ ПЕРИОД",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Улучшение зрения происходит постепенно в течение первых 2–3 месяцев после операции. У некоторых пациентов повышение остроты зрения продолжается до полугода. Как правило, этот процесс медленнее у пациентов с близорукостью, сахарным диабетом, общими заболеваниями, отслоением сетчатки, разрывами сетчатки, мембраной на сетчатке и у пожилых людей.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "В период заживления глаза могут различаться по зрению. Для временной коррекции могут потребоваться очки или контактные линзы. Окончательную коррекцию очками обычно проводят через 2–3 месяца, но сроки подбираются индивидуально, особенно если оперирован единственный глаз.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "В процессе восстановления зрения возможны искажения линий и предметов, двоение. Эти симптомы обычно ослабевают в течение нескольких недель или месяцев.",
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ДАЛЬНЕЙШИЙ УХОД И РЕКОМЕНДАЦИИ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Постепенно ограничения после операции будут сняты. Мы предлагаем несколько полезных рекомендаций, которые помогут сохранить зрение:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Не садитесь за руль, пока зрение полностью не восстановится.",
+                                "Не трите и не нажимайте на оперированный глаз.",
+                                "При чтении или просмотре телевизора делайте перерывы.",
+                                "По возможности носите солнцезащитные очки для защиты глаз от ультрафиолета.",
+                                "Соблюдайте график посещения врача.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                { bold: true, value: "ГАЗ. " },
+                                {
+                                    value: "Если во время операции в глаз был введён газ, послеоперационный период имеет особенности. В первые дни острота зрения будет очень низкой, так как газ не пропускает свет к сетчатке. По мере рассасывания газа (примерно 10–15 дней) верхняя часть поля зрения начнёт светлеть, и пациент может заметить «уровень раздела сред», который меняет положение в зависимости от движения головы. Через 7–10 дней, когда газа останется меньше трети, пузырь может раздробиться на несколько мелких. У некоторых пациентов при расширении газа (в течение 3 суток после операции) может повышаться внутриглазное давление, сопровождающееся болью и покраснением глаза. В таких случаях необходимо немедленно обратиться к врачу!",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                { bold: true, value: "СИЛИКОН. " },
+                                {
+                                    value: "Если в глаз введён жидкий силикон, при подборе очков учитывайте, что во время его нахождения в глазу острота зрения корректируется очками (обычно от +4,0 до +6,0 дптр). Удаление силикона проводится, как правило, не ранее чем через 3 месяца. Наличие силикона может ускорять развитие катаракты и повышать внутриглазное давление, особенно в ранний послеоперационный период. Удаление силикона — отдельная операция, оплачивается отдельно.",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    value: "ДЛЯ ПАЦИЕНТОВ С САХАРНЫМ ДИАБЕТОМ. ",
+                                },
+                                {
+                                    value: "На заключительном этапе операции или после неё под глаз вводится раствор противовоспалительного препарата («Дексаметазон», «Дипроспан», «Кеналог»). Несмотря на малую дозу (до 0,5 мл), у некоторых пациентов с диабетом наблюдается повышение уровня глюкозы в крови в течение 1–2 суток после инъекции. Будьте внимательны!",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПРАВИЛА ЗАКАПЫВАНИЯ КАПЕЛЬ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "list",
+                            numeric: true,
+                            list: [
+                                "Тщательно вымойте руки.",
+                                "Откройте флакон.",
+                                "Запрокиньте голову или лягте и смотрите вверх.",
+                                "Держите флакон перевёрнутым над глазом, не касаясь глаза и ресниц.",
+                                "Осторожно оттяните нижнее веко.",
+                                "Посмотрите вверх и слегка сожмите флакон, чтобы капля попала между глазным яблоком и нижним веком.",
+                                "Закройте глаза.",
+                                "Для усиления эффекта и уменьшения системных побочных действий прижмите внутренний угол глаза указательным пальцем (через стерильную салфетку).",
+                                "Если назначено несколько капель, делайте перерыв около 5 минут. Последними закапываются капли, снижающие внутриглазное давление.",
+                                "Закройте флакон и храните согласно инструкции.",
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
     },
     {
@@ -2198,10 +2762,410 @@ export const pationtsInstructionsData: PationtsInstructionType[] = [
         )!,
         uk: {
             title: "Пам’ятка пацієнта після хірургії катаракти",
-            content: [],
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПЕРЕД ОПЕРАЦІЄЮ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Записатися на передопераційний прийом до офтальмохірурга і анестезіолога потрібно заздалегідь (краще за тиждень). На огляді у лікаря бажано мати виписки після попередніх обстежень та попередніх хірургічних втручань.",
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "В ДЕНЬ ОПЕРАЦІЇ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "З’їжте легкий сніданок, виключаючи продукти з різким ароматом (цибуля, часник).",
+                                "Обов’язково прийміть всі препарати, які Ви приймаєте регулярно. Режим прийому лікарських препаратів в день операції і в післяопераційний період залишається незмінним.",
+                                "Після операції ваше око заклеюють пов’язкою для того, щоб захистити його від випадкового забруднення. Пов’язку слід зняти як прибудете додому.",
+                                "Обробити повіки можна (не саме око) стерильною ватою, змоченою водним розчином фурациліну 0.02% або водним розчином левоміцетину 0.25% (продаються в аптеці).",
+                                "Починаючи з першого дня після операції постійно заклеювати опероване око пов’язкою не потрібно.",
+                            ],
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПЕРІОД РЕАБІЛІТАЦІЇ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Запропоновані рекомендації є загальними, тобто розроблені для більшості пацієнтів. У випадках індивідуального перебігу післяопераційного періоду лікар може запропонувати індивідуальну схему лікування і графік оглядів пацієнта. Уточнюйте, будь ласка, рекомендації при кожному відвідуванні лікаря!",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                [
+                                    { bold: true, value: "Режим. " },
+                                    {
+                                        value: "Після проведеної операції дотримання режиму може мати певне лікувальне значення. Після операції, хірург або ваш лікуючий лікар дадуть рекомендації, як поводитися в першу добу після операції. Надалі вам слід уточнити особливості післяопераційного режиму у вашого лікуючого лікаря.",
+                                    },
+                                ],
+                                [
+                                    { bold: true, value: "Гігієна. " },
+                                    {
+                                        value: "Під час вмивання уникайте попадання мила і води в око. При митті голови нахиляйте голову назад, а не вперед. Якщо вода потрапила в опероване око, промийте його водним розчином фурациліну 0.02% або водним розчином левоміцетину 0.25% (продаються в аптеці).",
+                                    },
+                                ],
+                                [
+                                    {
+                                        bold: true,
+                                        value: "Обов’язково відвідуйте лікаря в призначений день!",
+                                    },
+                                ],
+
+                                "Очні краплі потрібні для швидкого загоєння і профілактики інфекційних ускладнень. Як правило, після проведеної операції хірург призначає закапування кількох препаратів: краплі з антибіотиком, протизапальні краплі, або комбіновані препарати.",
+                            ],
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ГОСТРОТА ЗОРУ В ПІСЛЯОПЕРАЦІЙНОМУ ПЕРІОДІ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Відновлення зору відбуватиметься поступово. В перші дні після операції зір може бути низьким за рахунок невеликого набряку рогівки, широкої зіниці (зазвичай проходить через тиждень). Остаточно зір прооперованого ока відновлюється через 1 місяць після операції, тому підбір окулярів (при монофокальній ІОЛ) доцільний по закінченню цього терміну. Ви можете підібрати собі окуляри за місцем проживання або в нашому медичному центрі.",
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПРАВИЛА ЗАКАПУВАННЯ КРАПЕЛЬ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "list",
+                            numeric: true,
+                            list: [
+                                "Ретельно вимийте руки.",
+                                "Відкрийте флакон.",
+                                "Закиньте голову або приляжте на спину і дивіться вгору.",
+                                "Розмістіть перевернутий догори флакон над оком, не торкайтеся до ока і вій.",
+                                "Обережно захопивши пальцями нижню повіку, злегка відтягніть його вниз.",
+                                "Підніміть очі вгору і злегка стисніть флакон, щоб крапля потрапила в простір, що утворився між очним яблуком і витягнутою нижньою повікою.",
+                                "Закрийте очі.",
+                                "Для посилення ефективності впливу і зведення до мінімуму системних побічних ефектів очних крапель притисніть вказівним пальцем (через стерильну серветку) внутрішній кут очної щілини.",
+                                "При призначенні декількох крапель проміжок між закапуванням повинен складати близько 5 хвилин.",
+                                "Закрийте флакон і зберігайте його у відповідності з приписом.",
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
-        en: { title: "Patient note after cataract surgery", content: [] },
-        ru: { title: "Памятки пациента после хирургии катаракты", content: [] },
+        en: {
+            title: "Patient note after cataract surgery",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "BEFORE THE SURGERY",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "You should schedule a preoperative appointment with an ophthalmic surgeon and an anesthesiologist in advance (preferably a week before). It is advisable to bring medical reports from previous examinations or surgeries to the consultation.",
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ON THE DAY OF SURGERY",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Have a light breakfast, avoiding foods with strong odors (such as onions or garlic).",
+                                "Be sure to take all medications you take regularly. The medication regimen remains unchanged on the day of surgery and during the postoperative period.",
+                                "After the surgery, your eye will be covered with a protective patch to prevent accidental contamination. You may remove the patch once you arrive home.",
+                                "You may clean your eyelids (but not the eye itself) with sterile cotton soaked in a 0.02% aqueous solution of furacilin or a 0.25% aqueous solution of chloramphenicol (available at pharmacies).",
+                                "Starting from the first day after surgery, there is no need to keep the eye covered with a patch continuously.",
+                            ],
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "REHABILITATION PERIOD",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "The following recommendations are general and designed for most patients. In specific cases, your doctor may suggest an individualized treatment plan and follow-up schedule. Please clarify the recommendations during each appointment.",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                [
+                                    { bold: true, value: "Regimen. " },
+                                    {
+                                        value: "Following the recommended regimen after surgery can have a therapeutic effect. Your surgeon or attending physician will advise you on what to do on the first day after surgery. Later, clarify any postoperative restrictions with your doctor.",
+                                    },
+                                ],
+                                [
+                                    { bold: true, value: "Hygiene. " },
+                                    {
+                                        value: "When washing your face, avoid getting soap or water into your eye. When washing your hair, tilt your head backward, not forward. If water gets into the operated eye, rinse it with a 0.02% furacilin solution or a 0.25% chloramphenicol solution (available at pharmacies).",
+                                    },
+                                ],
+                                [
+                                    {
+                                        bold: true,
+                                        value: "Be sure to visit your doctor on the scheduled day!",
+                                    },
+                                ],
+                                "Eye drops are needed for faster healing and to prevent infections. Typically, the surgeon will prescribe several types of drops — antibiotic drops, anti-inflammatory drops, or combination preparations.",
+                            ],
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "VISUAL ACUITY IN THE POSTOPERATIVE PERIOD",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Vision recovery occurs gradually. In the first few days after surgery, vision may be blurry due to mild corneal swelling or pupil dilation (which usually resolves within a week). The operated eye’s vision is usually fully restored within one month, so selecting glasses (for monofocal IOL) is recommended after this period. You may have your glasses prescribed locally or at our medical center.",
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "RULES FOR USING EYE DROPS",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "list",
+                            numeric: true,
+                            list: [
+                                "Wash your hands thoroughly.",
+                                "Open the bottle.",
+                                "Tilt your head back or lie down and look upward.",
+                                "Hold the bottle upside down above the eye, without touching the eye or eyelashes.",
+                                "Gently pull down your lower eyelid with your fingers.",
+                                "Look upward and squeeze the bottle slightly to release one drop into the space between the eyeball and the lower eyelid.",
+                                "Close your eyes.",
+                                "To enhance absorption and minimize systemic side effects, gently press the inner corner of your eye (through a sterile tissue) with your finger.",
+                                "If you are using multiple drops, wait about 5 minutes between each application.",
+                                "Close the bottle and store it as directed.",
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        ru: {
+            title: "Памятки пациента после хирургии катаракты",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПЕРЕД ОПЕРАЦИЕЙ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Записаться на предоперационный приём к офтальмохирургу и анестезиологу необходимо заранее (желательно за неделю). На осмотр желательно принести выписки из предыдущих обследований и операций.",
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "В ДЕНЬ ОПЕРАЦИИ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Съешьте лёгкий завтрак, исключая продукты с резким запахом (лук, чеснок).",
+                                "Обязательно примите все препараты, которые вы принимаете регулярно. Режим приёма лекарств в день операции и в послеоперационный период остаётся без изменений.",
+                                "После операции глаз заклеивают повязкой, чтобы защитить его от случайного загрязнения. Повязку можно снять, когда приедете домой.",
+                                "Веки можно обработать (но не сам глаз) стерильной ватой, смоченной водным раствором фурацилина 0.02% или левомицетина 0.25% (продаются в аптеке).",
+                                "Начиная с первого дня после операции, постоянно держать глаз заклеенным не нужно.",
+                            ],
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПЕРИОД РЕАБИЛИТАЦИИ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Следующие рекомендации являются общими и предназначены для большинства пациентов. В отдельных случаях врач может назначить индивидуальную схему лечения и график визитов. Уточняйте рекомендации на каждом приёме у врача.",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                [
+                                    { bold: true, value: "Режим. " },
+                                    {
+                                        value: "Соблюдение режима после операции имеет лечебное значение. Хирург или ваш лечащий врач дадут рекомендации, как вести себя в первые сутки после операции. В дальнейшем уточняйте особенности послеоперационного режима у своего врача.",
+                                    },
+                                ],
+                                [
+                                    { bold: true, value: "Гигиена. " },
+                                    {
+                                        value: "Во время умывания избегайте попадания мыла и воды в глаз. При мытье головы наклоняйте голову назад, а не вперёд. Если вода попала в прооперированный глаз, промойте его водным раствором фурацилина 0.02% или левомицетина 0.25% (продаются в аптеке).",
+                                    },
+                                ],
+                                [
+                                    {
+                                        bold: true,
+                                        value: "Обязательно посетите врача в назначенный день!",
+                                    },
+                                ],
+                                "Глазные капли необходимы для быстрого заживления и профилактики инфекционных осложнений. Обычно хирург назначает несколько препаратов: капли с антибиотиком, противовоспалительные или комбинированные средства.",
+                            ],
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ОСТРОТА ЗРЕНИЯ В ПОСЛЕОПЕРАЦИОННЫЙ ПЕРИОД",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Восстановление зрения происходит постепенно. В первые дни после операции зрение может быть снижено из-за небольшого отёка роговицы или расширенного зрачка (обычно проходит в течение недели). Окончательное восстановление зрения прооперированного глаза наступает примерно через месяц, поэтому подбор очков (при монофокальной ИОЛ) рекомендуется после этого срока. Подобрать очки можно по месту жительства или в нашем медицинском центре.",
+                        },
+
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "ПРАВИЛА ЗАКАПЫВАНИЯ КАПЕЛЬ",
+                                },
+                            ],
+                            gap: true,
+                        },
+                        {
+                            type: "list",
+                            numeric: true,
+                            list: [
+                                "Тщательно вымойте руки.",
+                                "Откройте флакон.",
+                                "Запрокиньте голову или лягте на спину и смотрите вверх.",
+                                "Держите флакон вверх дном над глазом, не касаясь глаза и ресниц.",
+                                "Аккуратно оттяните нижнее веко вниз.",
+                                "Посмотрите вверх и слегка сожмите флакон, чтобы капля попала в пространство между глазным яблоком и нижним веком.",
+                                "Закройте глаза.",
+                                "Чтобы повысить эффективность и снизить системное воздействие, аккуратно прижмите внутренний угол глаза (через стерильную салфетку) пальцем.",
+                                "Если назначено несколько видов капель, делайте перерыв около 5 минут между закапываниями.",
+                                "Закройте флакон и храните его в соответствии с инструкцией.",
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
     },
     {
         name: keySlugPatientsInstruction.find(

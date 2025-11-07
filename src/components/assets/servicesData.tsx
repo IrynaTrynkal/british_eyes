@@ -1641,7 +1641,8 @@ export const servicesData: ServicesProps[] = [
                                 btn: [
                                     {
                                         btnName: "читати про катаракту",
-                                        btnLink: "/tsiny",
+                                        btnLink:
+                                            "/zakhvoryuvannya-ochey/katarakta",
                                         btnSecondary: true,
                                     },
                                 ],
@@ -1880,7 +1881,8 @@ export const servicesData: ServicesProps[] = [
                                 btn: [
                                     {
                                         btnName: "read about cataract",
-                                        btnLink: "/tsiny",
+                                        btnLink:
+                                            "/zakhvoryuvannya-ochey/katarakta",
                                         btnSecondary: true,
                                     },
                                 ],
@@ -2118,7 +2120,8 @@ export const servicesData: ServicesProps[] = [
                                 btn: [
                                     {
                                         btnName: "читать о катаракте",
-                                        btnLink: "/tsiny",
+                                        btnLink:
+                                            "/zakhvoryuvannya-ochey/katarakta",
                                         btnSecondary: true,
                                     },
                                 ],
