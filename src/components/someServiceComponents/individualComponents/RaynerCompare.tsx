@@ -21,10 +21,10 @@ export const RaynerCompare = ({ locale }: { locale: LocaleType }) => {
     ];
     return (
         <section className="content tab:pt-12 pc:pt-[120px] pt-[60px]">
-            <h2 className="title-section tab:max-w-[700px] pc:max-w-[890px] tab:mx-auto mb-6 text-center">
+            <h2 className="title-section mb-6 text-center">
                 {t("raynerCompareTitle")}
             </h2>
-            <p className="tab:max-w-[500px] pc:text-lg pc:leading-[22px] tab:mx-auto prepc:mb-10 mb-6 text-center leading-5">
+            <p className="tab:max-w-[500px] prepc:max-w-[600px] pc:text-lg pc:leading-[22px] tab:mx-auto prepc:mb-10 mb-6 text-center leading-5">
                 {t("raynerCompareText")}
             </p>
             <div className="prepc:mb-[60px] pc:gap-5 relative mb-2 flex gap-2">
