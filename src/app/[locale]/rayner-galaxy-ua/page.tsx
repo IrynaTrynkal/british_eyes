@@ -12,6 +12,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
 import { AdvantagesService } from "@/components/someServiceComponents/advantages/AdvantagesService";
 import { HeroRayner } from "@/components/someServiceComponents/individualComponents/HeroRayner";
+import { RaynerCompare } from "@/components/someServiceComponents/individualComponents/RaynerCompare";
 import { RaynerVideo } from "@/components/someServiceComponents/individualComponents/RaynerVideo";
 import { LocaleType } from "@/types/LocaleType";
 
@@ -26,6 +27,7 @@ export default function RaynerPage() {
         <>
             <HeroRayner />
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
+            <RaynerCompare locale={locale as LocaleType} />
             <AdvantagesService
                 className="tab:hidden"
                 data={raynerAdvantageDataMob[locale as LocaleType]}
