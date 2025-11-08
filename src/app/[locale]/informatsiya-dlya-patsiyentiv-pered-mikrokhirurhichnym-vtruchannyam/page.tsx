@@ -30,7 +30,7 @@ export default function PatientsBeforeSurgeryPage() {
             "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam"
     );
     if (!data) return notFound();
-    const content = beforeSurgeryInstruction;
+    const content = beforeSurgeryInstruction[locale as LocaleType];
 
     return (
         <>
