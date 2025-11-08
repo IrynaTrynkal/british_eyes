@@ -38,10 +38,10 @@ export const HeroRayner = () => {
                     media="(min-width: 768px)"
                 />
             </video>
-            <div className="content tab:pb-6 prepc:pt-[104px] prepc:max-w-[920px] pc:max-w-[980px] prepc:pb-8 relative z-[1] flex h-full max-w-[840px] flex-col justify-between gap-10 pt-8 pb-[50px]">
+            <div className="content tab:pb-6 prepc:pt-[104px] prepc:max-w-fit prepc:pb-8 relative z-[1] flex h-full max-w-[840px] flex-col justify-between gap-10 pt-8 pb-[50px]">
                 <div className="prepc:flex-row prepc:items-center flex flex-grow flex-col justify-between">
                     <div className="">
-                        <p className="text-ivory prepc:w-[280px] w-[149px] leading-[120%] uppercase">
+                        <p className="text-ivory prepc:w-fit w-[149px] leading-[120%] uppercase">
                             {raynerText1}
                         </p>
                         <h1 className="text-white-100 prepc:text-8xl pc:text-[107px] font-oswald text-[44px] leading-[100%]">
@@ -49,7 +49,7 @@ export const HeroRayner = () => {
                         </h1>
                     </div>
                     <div className="prepc:w-[309px] mr-0 ml-auto w-fit text-right">
-                        <p className="text-ivory prepc:w-[222px] mr-0 ml-auto w-[130px] leading-[120%] uppercase">
+                        <p className="text-ivory prepc:w-fit mr-0 ml-auto w-[130px] leading-[120%] uppercase">
                             {t("raynerText2")}
                         </p>
                         <h1 className="text-white-100 font-oswald pc:text-[107px] prepc:text-8xl text-[44px] leading-[100%] uppercase">
