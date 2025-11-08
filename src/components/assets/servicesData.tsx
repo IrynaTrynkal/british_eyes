@@ -11756,3 +11756,38 @@ export const raynerAdvantageDataTab: {
         ],
     },
 };
+
+export const raynerCardsList = [
+    {
+        uk: {
+            title: "Значно менше відблисків і ореолів у темну пору доби",
+            text: "Мінімізована дисфотопія, особливо в умовах низької освітленості — для найвимогливіших пацієнтів.",
+        },
+        en: {
+            title: "Significantly fewer glares and halos at night",
+            text: "Minimized dysphotopsia, especially in low-light conditions — for the most demanding patients.",
+        },
+        ru: {
+            title: "Значительно меньше бликов и ореолов в тёмное время суток",
+            text: "Минимизирована дисфотопия, особенно в условиях низкой освещённости — для самых требовательных пациентов.",
+        },
+        imageBefore: "/images/rayner-dark.jpg",
+        imageAfter: "/images/rayner-dark-after.webp",
+    },
+    {
+        uk: {
+            title: "Недифракційна оптика для 0% втрати світла при передачі",
+            text: "Преміум-лінза, яка максимізує передачу світла до сітківки.",
+        },
+        en: {
+            title: "Non-diffractive optics for 0% light loss during transmission",
+            text: "A premium lens that maximizes light transmission to the retina.",
+        },
+        ru: {
+            title: "Недифракционная оптика для 0% потери света при передаче",
+            text: "Премиум-линза, которая максимизирует передачу света на сетчатку.",
+        },
+        imageBefore: "/images/rayner-day-before.jpg",
+        imageAfter: "/images/rayner-day.jpg",
+    },
+];
