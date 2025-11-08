@@ -13,7 +13,7 @@ export const MainAllInstrucrions = () => {
     )!;
     data.data;
     return (
-        <section className="tab:flex-row tab:pb-12 tab:px-6 pc:px-12 prepc:pb-[120px] flex flex-col gap-4 pb-[60px]">
+        <section className="tab:flex-row tab:pb-12 prepc:pt-7 tab:px-6 pc:px-12 prepc:pb-[120px] flex flex-col gap-4 pb-[60px]">
             {data.data?.map((content, ind) => (
                 <div
                     className="prepc:w-[49%] tab:max-w-[435px] tab:mx-0 bg-green-10 mx-auto w-full max-w-[540px] rounded-lg p-4"
