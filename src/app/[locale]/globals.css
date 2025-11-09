@@ -92,7 +92,7 @@ a {
 }
 
 .title-section {
-    @apply font-oswald tab:text-4xl pc:text-5xl text-[28px] leading-none text-black;
+    @apply font-oswald tab:text-4xl pc:text-5xl text-[28px] leading-[100%] text-black;
 }
 .title-section-ivory {
     @apply font-oswald tab:text-4xl pc:text-5xl text-ivory text-[28px] leading-none;
