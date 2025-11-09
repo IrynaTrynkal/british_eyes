@@ -8,12 +8,14 @@ interface PaginationProps {
     currentPage: number;
     totalPages: number;
     idScrollTo?: string;
+    className?: string;
 }
 
 export const Pagination = ({
     currentPage,
     totalPages,
     idScrollTo,
+    className,
 }: PaginationProps) => {
     const router = useRouter();
     const pathname = usePathname();
@@ -57,7 +59,9 @@ export const Pagination = ({
     const pagesToDisplay = getPagesToDisplay();
 
     return (
-        <div className="content prepc:mt-8 pc:mt-[60px] prepc:justify-center prepc:ml-[227px] mt-4 flex justify-between gap-2">
+        <div
+            className={`content prepc:mt-8 pc:mt-[60px] prepc:justify-center mt-4 flex justify-between gap-2 ${className}`}
+        >
             <button
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}

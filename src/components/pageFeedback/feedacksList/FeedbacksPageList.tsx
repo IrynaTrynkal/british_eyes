@@ -42,6 +42,7 @@ export const FeedbacksPageList = ({
                     idScrollTo={idScrollTo}
                     currentPage={pageNumber}
                     totalPages={totalPages}
+                    className="prepc:ml-[227px]"
                 />
             )}
         </div>
