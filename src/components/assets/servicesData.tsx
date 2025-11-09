@@ -1,6 +1,10 @@
 import { CataractGreenSection } from "../someServiceComponents/individualComponents/CataractGreenSection";
 import { LansectomyGreenSection } from "../someServiceComponents/individualComponents/LansectomyGreenSection";
-import { discountList } from "./discount.Data";
+import {
+    discountList,
+    DiscountLocale,
+    DiscountNoLocale,
+} from "./discount.Data";
 import { ServicesKeyType, servicesList, ServicesListProps } from "./menu";
 import { PriceItemType, priceList } from "./priceList";
 
@@ -153,21 +157,10 @@ export type AdvantageServiceSectionProps = {
     text: string;
     list: AdvantageServiceCardProps[];
 };
-export type DiscountText = {
-    premiumText?: string; // max 58 characters with spaces
-    title: string;
-    text?: string;
-};
 
 export type DiscountType = {
-    text?: {
-        premium?: boolean;
-        icon?: string;
-        bgimage?: string;
-        cost?: number;
-        period?: string;
-    };
-    textLocal?: DiscountText;
+    text?: DiscountNoLocale;
+    textLocal?: DiscountLocale;
 };
 
 export type PriceSectionProps = {
@@ -486,10 +479,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціни на консультацію та діагностику зору у Києві",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "perevirka-zoru"
+                                disk => disk.key === "perevirka-zoru"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "perevirka-zoru"
+                                disk => disk.key === "perevirka-zoru"
                             )?.localeText.uk,
                         },
                     },
@@ -919,10 +912,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Prices for consultation and vision diagnostics in Kyiv",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "perevirka-zoru"
+                                disk => disk.key === "perevirka-zoru"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "perevirka-zoru"
+                                disk => disk.key === "perevirka-zoru"
                             )?.localeText.en,
                         },
                     },
@@ -1354,10 +1347,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Цены на консультацию и диагностику зрения в Киеве",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "perevirka-zoru"
+                                disk => disk.key === "perevirka-zoru"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "perevirka-zoru"
+                                disk => disk.key === "perevirka-zoru"
                             )?.localeText.en,
                         },
                     },
@@ -1670,10 +1663,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціни на видалення катаракти у Києві",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "likuvannya-katarakti"
+                                disk => disk.key === "likuvannya-katarakti"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "likuvannya-katarakti"
+                                disk => disk.key === "likuvannya-katarakti"
                             )?.localeText.en,
                         },
                     },
@@ -1908,10 +1901,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Prices for cataract removal in Kyiv",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "likuvannya-katarakti"
+                                disk => disk.key === "likuvannya-katarakti"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "likuvannya-katarakti"
+                                disk => disk.key === "likuvannya-katarakti"
                             )?.localeText.en,
                         },
                     },
@@ -2145,10 +2138,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Цены на удаление катаракты в Киеве",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "likuvannya-katarakti"
+                                disk => disk.key === "likuvannya-katarakti"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "likuvannya-katarakti"
+                                disk => disk.key === "likuvannya-katarakti"
                             )?.localeText.en,
                         },
                     },
@@ -2580,10 +2573,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціни на лікування синдрому сухого ока у Києві",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                                disk => disk.key === "syndrom-sukhoho-oka"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                                disk => disk.key === "syndrom-sukhoho-oka"
                             )?.localeText.en,
                         },
                     },
@@ -2891,10 +2884,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Prices for dry eye syndrome treatment in Kyiv",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                                disk => disk.key === "syndrom-sukhoho-oka"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                                disk => disk.key === "syndrom-sukhoho-oka"
                             )?.localeText.en,
                         },
                     },
@@ -3203,10 +3196,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Цены на лечение синдрома сухого глаза в Киеве",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                                disk => disk.key === "syndrom-sukhoho-oka"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                                disk => disk.key === "syndrom-sukhoho-oka"
                             )?.localeText.en,
                         },
                     },
@@ -4031,12 +4024,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціна лазерної корекції зору у Києві",
                         card: {
                             text: discountList.find(
-                                disk =>
-                                    disk.text.key === "lazerna-korekcziya-zoru"
+                                disk => disk.key === "lazerna-korekcziya-zoru"
                             )?.text,
                             textLocal: discountList.find(
-                                disk =>
-                                    disk.text.key === "lazerna-korekcziya-zoru"
+                                disk => disk.key === "lazerna-korekcziya-zoru"
                             )?.localeText.en,
                         },
                     },
@@ -4230,12 +4221,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Price of laser vision correction in Kyiv",
                         card: {
                             text: discountList.find(
-                                disk =>
-                                    disk.text.key === "lazerna-korekcziya-zoru"
+                                disk => disk.key === "lazerna-korekcziya-zoru"
                             )?.text,
                             textLocal: discountList.find(
-                                disk =>
-                                    disk.text.key === "lazerna-korekcziya-zoru"
+                                disk => disk.key === "lazerna-korekcziya-zoru"
                             )?.localeText.en,
                         },
                     },
@@ -4428,12 +4417,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Цена лазерной коррекции зрения в Киеве",
                         card: {
                             text: discountList.find(
-                                disk =>
-                                    disk.text.key === "lazerna-korekcziya-zoru"
+                                disk => disk.key === "lazerna-korekcziya-zoru"
                             )?.text,
                             textLocal: discountList.find(
-                                disk =>
-                                    disk.text.key === "lazerna-korekcziya-zoru"
+                                disk => disk.key === "lazerna-korekcziya-zoru"
                             )?.localeText.en,
                         },
                     },
@@ -4720,10 +4707,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціна",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "dityache-viddilennya"
+                                disk => disk.key === "dityache-viddilennya"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "dityache-viddilennya"
+                                disk => disk.key === "dityache-viddilennya"
                             )?.localeText.en,
                         },
                     },
@@ -5026,10 +5013,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціна",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "dityache-viddilennya"
+                                disk => disk.key === "dityache-viddilennya"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "dityache-viddilennya"
+                                disk => disk.key === "dityache-viddilennya"
                             )?.localeText.en,
                         },
                     },
@@ -5331,10 +5318,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціна",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "dityache-viddilennya"
+                                disk => disk.key === "dityache-viddilennya"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "dityache-viddilennya"
+                                disk => disk.key === "dityache-viddilennya"
                             )?.localeText.en,
                         },
                     },
@@ -5575,12 +5562,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціна на лікування кератоконусу в Києві",
                         card: {
                             text: discountList.find(
-                                disk =>
-                                    disk.text.key === "likuvannya-keratokonusa"
+                                disk => disk.key === "likuvannya-keratokonusa"
                             )?.text,
                             textLocal: discountList.find(
-                                disk =>
-                                    disk.text.key === "likuvannya-keratokonusa"
+                                disk => disk.key === "likuvannya-keratokonusa"
                             )?.localeText.en,
                         },
                     },
@@ -5816,12 +5801,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Price for keratoconus treatment in Kyiv",
                         card: {
                             text: discountList.find(
-                                disk =>
-                                    disk.text.key === "likuvannya-keratokonusa"
+                                disk => disk.key === "likuvannya-keratokonusa"
                             )?.text,
                             textLocal: discountList.find(
-                                disk =>
-                                    disk.text.key === "likuvannya-keratokonusa"
+                                disk => disk.key === "likuvannya-keratokonusa"
                             )?.localeText.en,
                         },
                     },
@@ -6057,12 +6040,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Цена на лечение кератоконуса в Киеве",
                         card: {
                             text: discountList.find(
-                                disk =>
-                                    disk.text.key === "likuvannya-keratokonusa"
+                                disk => disk.key === "likuvannya-keratokonusa"
                             )?.text,
                             textLocal: discountList.find(
-                                disk =>
-                                    disk.text.key === "likuvannya-keratokonusa"
+                                disk => disk.key === "likuvannya-keratokonusa"
                             )?.localeText.en,
                         },
                     },
@@ -6427,14 +6408,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціна на рефракційну ленсектомію в Києві",
                         card: {
                             text: discountList.find(
-                                disk =>
-                                    disk.text.key ===
-                                    "refrakczijna-lensektomiya"
+                                disk => disk.key === "refrakczijna-lensektomiya"
                             )?.text,
                             textLocal: discountList.find(
-                                disk =>
-                                    disk.text.key ===
-                                    "refrakczijna-lensektomiya"
+                                disk => disk.key === "refrakczijna-lensektomiya"
                             )?.localeText.en,
                         },
                     },
@@ -6795,14 +6772,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Price for refractive lensectomy in Kyiv",
                         card: {
                             text: discountList.find(
-                                disk =>
-                                    disk.text.key ===
-                                    "refrakczijna-lensektomiya"
+                                disk => disk.key === "refrakczijna-lensektomiya"
                             )?.text,
                             textLocal: discountList.find(
-                                disk =>
-                                    disk.text.key ===
-                                    "refrakczijna-lensektomiya"
+                                disk => disk.key === "refrakczijna-lensektomiya"
                             )?.localeText.en,
                         },
                     },
@@ -7163,14 +7136,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Цена на рефракционную ленсектомию в Киеве",
                         card: {
                             text: discountList.find(
-                                disk =>
-                                    disk.text.key ===
-                                    "refrakczijna-lensektomiya"
+                                disk => disk.key === "refrakczijna-lensektomiya"
                             )?.text,
                             textLocal: discountList.find(
-                                disk =>
-                                    disk.text.key ===
-                                    "refrakczijna-lensektomiya"
+                                disk => disk.key === "refrakczijna-lensektomiya"
                             )?.localeText.en,
                         },
                     },
@@ -8622,12 +8591,12 @@ export const servicesData: ServicesProps[] = [
                         card: {
                             text: discountList.find(
                                 disk =>
-                                    disk.text.key ===
+                                    disk.key ===
                                     "hirurgichne-likuvannya-glaukomi"
                             )?.text,
                             textLocal: discountList.find(
                                 disk =>
-                                    disk.text.key ===
+                                    disk.key ===
                                     "hirurgichne-likuvannya-glaukomi"
                             )?.localeText.en,
                         },
@@ -8839,12 +8808,12 @@ export const servicesData: ServicesProps[] = [
                         card: {
                             text: discountList.find(
                                 disk =>
-                                    disk.text.key ===
+                                    disk.key ===
                                     "hirurgichne-likuvannya-glaukomi"
                             )?.text,
                             textLocal: discountList.find(
                                 disk =>
-                                    disk.text.key ===
+                                    disk.key ===
                                     "hirurgichne-likuvannya-glaukomi"
                             )?.localeText.en,
                         },
@@ -9056,12 +9025,12 @@ export const servicesData: ServicesProps[] = [
                         card: {
                             text: discountList.find(
                                 disk =>
-                                    disk.text.key ===
+                                    disk.key ===
                                     "hirurgichne-likuvannya-glaukomi"
                             )?.text,
                             textLocal: discountList.find(
                                 disk =>
-                                    disk.text.key ===
+                                    disk.key ===
                                     "hirurgichne-likuvannya-glaukomi"
                             )?.localeText.en,
                         },
@@ -9888,13 +9857,11 @@ export const servicesData: ServicesProps[] = [
                         card: {
                             text: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "hirurgiya-povik-i-konyunktivi"
+                                    disk.key === "hirurgiya-povik-i-konyunktivi"
                             )?.text,
                             textLocal: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "hirurgiya-povik-i-konyunktivi"
+                                    disk.key === "hirurgiya-povik-i-konyunktivi"
                             )?.localeText.en,
                         },
                     },
@@ -10139,13 +10106,11 @@ export const servicesData: ServicesProps[] = [
                         card: {
                             text: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "hirurgiya-povik-i-konyunktivi"
+                                    disk.key === "hirurgiya-povik-i-konyunktivi"
                             )?.text,
                             textLocal: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "hirurgiya-povik-i-konyunktivi"
+                                    disk.key === "hirurgiya-povik-i-konyunktivi"
                             )?.localeText.en,
                         },
                     },
@@ -10390,13 +10355,11 @@ export const servicesData: ServicesProps[] = [
                         card: {
                             text: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "hirurgiya-povik-i-konyunktivi"
+                                    disk.key === "hirurgiya-povik-i-konyunktivi"
                             )?.text,
                             textLocal: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "hirurgiya-povik-i-konyunktivi"
+                                    disk.key === "hirurgiya-povik-i-konyunktivi"
                             )?.localeText.en,
                         },
                     },
@@ -10623,10 +10586,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Ціни на ксенонотерапію в Києві",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "ksenonoterapiya"
+                                disk => disk.key === "ksenonoterapiya"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "ksenonoterapiya"
+                                disk => disk.key === "ksenonoterapiya"
                             )?.localeText.en,
                         },
                     },
@@ -10841,10 +10804,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Prices for xenotherapy in Kyiv",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "ksenonoterapiya"
+                                disk => disk.key === "ksenonoterapiya"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "ksenonoterapiya"
+                                disk => disk.key === "ksenonoterapiya"
                             )?.localeText.en,
                         },
                     },
@@ -11059,10 +11022,10 @@ export const servicesData: ServicesProps[] = [
                         title: "Цены на ксенонотерапию в Киеве",
                         card: {
                             text: discountList.find(
-                                disk => disk.text.key === "ksenonoterapiya"
+                                disk => disk.key === "ksenonoterapiya"
                             )?.text,
                             textLocal: discountList.find(
-                                disk => disk.text.key === "ksenonoterapiya"
+                                disk => disk.key === "ksenonoterapiya"
                             )?.localeText.en,
                         },
                     },
@@ -11275,13 +11238,11 @@ export const servicesData: ServicesProps[] = [
                         card: {
                             text: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "anesteziologichnij-posibnik"
+                                    disk.key === "anesteziologichnij-posibnik"
                             )?.text,
                             textLocal: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "anesteziologichnij-posibnik"
+                                    disk.key === "anesteziologichnij-posibnik"
                             )?.localeText.en,
                         },
                     },
@@ -11493,13 +11454,11 @@ export const servicesData: ServicesProps[] = [
                         card: {
                             text: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "anesteziologichnij-posibnik"
+                                    disk.key === "anesteziologichnij-posibnik"
                             )?.text,
                             textLocal: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "anesteziologichnij-posibnik"
+                                    disk.key === "anesteziologichnij-posibnik"
                             )?.localeText.en,
                         },
                     },
@@ -11710,13 +11669,11 @@ export const servicesData: ServicesProps[] = [
                         card: {
                             text: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "anesteziologichnij-posibnik"
+                                    disk.key === "anesteziologichnij-posibnik"
                             )?.text,
                             textLocal: discountList.find(
                                 disk =>
-                                    disk.text.key ===
-                                    "anesteziologichnij-posibnik"
+                                    disk.key === "anesteziologichnij-posibnik"
                             )?.localeText.en,
                         },
                     },

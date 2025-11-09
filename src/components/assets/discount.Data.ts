@@ -6,15 +6,17 @@ export type DiscountLocale = {
     text?: string;
 };
 
+export type DiscountNoLocale = {
+    premium?: boolean;
+    icon?: string;
+    bgimage?: string;
+    cost?: number;
+    period?: string;
+};
+
 export type DiscountType = {
-    text: {
-        key: ServicesKeyType;
-        premium?: boolean;
-        icon?: string;
-        bgimage?: string;
-        price?: number;
-        period?: string;
-    };
+    key: ServicesKeyType;
+    text: DiscountNoLocale;
     localeText: {
         uk: DiscountLocale;
         ru: DiscountLocale;
@@ -24,8 +26,8 @@ export type DiscountType = {
 
 export const discountList: DiscountType[] = [
     {
+        key: "likuvannya-katarakti",
         text: {
-            key: "likuvannya-katarakti",
             premium: true,
             icon: "/icons/iq-life-white.svg",
             bgimage: "/images/lazerna-korekcziya-zoru.jpg",
@@ -49,9 +51,9 @@ export const discountList: DiscountType[] = [
         },
     },
     {
+        key: "lazerna-korekcziya-zoru",
         text: {
-            key: "lazerna-korekcziya-zoru",
-            price: 14950,
+            cost: 14950,
             period: "15.08.2025",
         },
         localeText: {
@@ -67,7 +69,8 @@ export const discountList: DiscountType[] = [
         },
     },
     {
-        text: { key: "perevirka-zoru", price: 950, period: "15.08.2025" },
+        key: "perevirka-zoru",
+        text: { cost: 950, period: "15.08.2025" },
         localeText: {
             uk: {
                 title: "Повне комплексне обстеження зору",

@@ -48,13 +48,13 @@ export const DiscountCard = ({ data }: { data: DiscountType }) => {
                         </p>
                     )}
                 </div>
-                {data.text.price ? (
+                {data.text.cost ? (
                     <div>
                         <p className="tab:text-base tab:leading-5 text-sm leading-4 uppercase">
                             {t("discountOnly")}
                         </p>
                         <p className="font-oswald pc:text-5xl tab:text-4xl tab:font-medium tab:leading-none text-[32px] leading-9 uppercase">
-                            {data.text.price}
+                            {data.text.cost}
                             <span className="tab:text-2xl tab:leading-8 text-base uppercase">
                                 {t("discountUAH")}
                             </span>
