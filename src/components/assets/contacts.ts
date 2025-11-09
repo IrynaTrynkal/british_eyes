@@ -17,3 +17,5 @@ export const aboutSertification =
     "https://eyes.ua/wp-content/uploads/2022/07/photo_2022-07-07-10.32.18.pdf";
 
 export const BOCemail = "kiev@eyes.ua";
+
+export const raynerSiteLink = "https://rayner.com/global/en/iol/galaxy/";

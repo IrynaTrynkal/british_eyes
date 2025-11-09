@@ -287,6 +287,8 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingTop: false,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Повна діагностика зору включає",
@@ -717,6 +719,8 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingTop: false,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Comprehensive vision diagnostics includes",
@@ -1147,6 +1151,8 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingTop: false,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Полная диагностика зрения включает",
@@ -1612,6 +1618,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingTop: false,
                         data: [
                             {
                                 title: "Що таке катаракта?",
@@ -1852,6 +1859,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingTop: false,
                         data: [
                             {
                                 title: "What is cataract?",
@@ -2091,6 +2099,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingTop: false,
                         data: [
                             {
                                 title: "Что такое катаракта?",
@@ -2340,7 +2349,7 @@ export const servicesData: ServicesProps[] = [
                     type: "roundImageAndTextSection",
                     data: {
                         firstImageLeft: true,
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Як лікують синдром сухого ока в нашій клініці?",
@@ -2727,7 +2736,7 @@ export const servicesData: ServicesProps[] = [
                     type: "roundImageAndTextSection",
                     data: {
                         firstImageLeft: true,
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "How is dry eye syndrome treated in our clinic?",
@@ -3030,7 +3039,7 @@ export const servicesData: ServicesProps[] = [
                     type: "roundImageAndTextSection",
                     data: {
                         firstImageLeft: true,
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Как лечат синдром сухого глаза в нашей клинике?",
@@ -3290,7 +3299,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Вітреоретинальна хірургія — сучасні методи збереження зору",
@@ -3487,7 +3496,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Vitreoretinal surgery — advanced vision preservation methods",
@@ -3684,7 +3693,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Витреоретинальная хирургия — современные методы сохранения зрения",
@@ -3978,7 +3987,6 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Переваги лазерної корекції зору в Києві в Британському Офтальмологічному Центрі",
                         text: "Ви можете бути впевнені в якості послуг, що надаються, так як довіряєте свій зір сучасній клініці",
-                        paddingBottom: false,
                         list: [
                             {
                                 title: "100% безпеки",
@@ -4370,7 +4378,6 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Преимущества лазерной коррекции зрения в Киеве в Британском Офтальмологическом Центре",
                         text: "Вы можете быть уверены в качестве предоставляемых услуг, так как доверяете своё зрение современной клинике.",
-                        paddingBottom: false,
                         list: [
                             {
                                 title: "100% безопасность",
@@ -5388,7 +5395,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин",
@@ -5619,7 +5626,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Keratoconus treatment with the BritishX method – first results in 12 minutes",
@@ -5850,7 +5857,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Лечение кератоконуса методом BritishX — первый результат через 12 минут",
@@ -7159,7 +7166,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Лазерне лікування захворювань сучасні лазерні процедури для очей",
@@ -7348,7 +7355,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Laser treatment of eye diseases: modern laser procedures",
@@ -7537,7 +7544,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Лазерное лечение заболеваний глаз: современные лазерные процедуры",
@@ -7731,7 +7738,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Сучасний підхід до лікування макули та сітківки",
@@ -7950,7 +7957,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Modern approach to treating the macula and retina",
@@ -8169,7 +8176,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Современный подход к лечению макулы и сетчатки",
@@ -8394,7 +8401,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Хірургічне лікування глаукоми: мета, показання та результат",
@@ -8599,7 +8606,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Surgical treatment of glaucoma: purpose, indications, and outcomes",
@@ -8804,7 +8811,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Хирургическое лечение глаукомы: цель, показания и результаты",
@@ -9012,7 +9019,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Сучасна діагностика косоокості: точність, швидкість, план лікування",
@@ -9203,7 +9210,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Modern strabismus diagnostics: precision, speed, treatment plan",
@@ -9396,7 +9403,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Современная диагностика косоглазия: точность, скорость, план лечения",
@@ -9593,7 +9600,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Лазерна блефаропластика в Києві: свіжий погляд і чіткі контури повік",
@@ -9833,7 +9840,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Laser blepharoplasty in Kyiv: a fresh look and defined eyelid contours",
@@ -10072,7 +10079,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Лазерная блефаропластика в Киеве: свежий взгляд и чёткие контуры век",
@@ -10315,6 +10322,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Ксенонотерапія в Києві: природний антистрес і перезавантаження нервової системи",
@@ -10524,6 +10532,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Xenon therapy in Kyiv: natural anti-stress and nervous system reset",
@@ -10733,6 +10742,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Ксенон-терапия в Киеве: природный антистресс и перезагрузка нервной системы",
@@ -10947,7 +10957,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
-                        paddingTop: true,
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Безболісні й безпечні операції в Києві",
@@ -11147,6 +11157,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Painless and safe surgeries in Kyiv",
@@ -11351,6 +11362,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "roundImageAndTextSection",
                     data: {
+                        paddingBottom: false,
                         data: [
                             {
                                 title: "Безболезненные и безопасные операции в Киеве",
