@@ -151,6 +151,7 @@ export const doctorsData: DoctorProps[] = [
             "likuvannya-katarakti",
             "lazerna-korekcziya-zoru",
             "refrakczijna-lensektomiya",
+            "dityache-viddilennya",
         ],
         uk: {
             slug: "dikunova-darina-vasilivna",

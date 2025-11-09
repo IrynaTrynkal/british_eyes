@@ -81,12 +81,14 @@ export const RoundImageAndTextItem = ({
                             }`}
                         />
                     )}
-                    {item.logo && <IconEye className="mx-auto h-auto w-full" />}
+                    {item.logo && (
+                        <IconEye className="mx-auto h-auto w-full max-w-[477px]" />
+                    )}
                 </div>
             )}
 
             <div
-                className={`prepc:min-h-[477px] tab:flex prepc:w-[calc(50%-12px)] tab:flex-col ${item.cta ? "tab:w-[calc(60%-6px)]" : "tab:w-[calc(70%-6px)]"}`}
+                className={`tab:flex prepc:w-[calc(50%-12px)] tab:flex-col ${item.cta ? "tab:w-[calc(60%-6px)]" : "tab:w-[calc(70%-6px)]"}`}
             >
                 <h2 className="title-section tab:block mb-6 hidden">
                     {item.title}

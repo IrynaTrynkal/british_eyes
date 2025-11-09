@@ -6,7 +6,7 @@ import { BookingOnlineForm } from "@/components/shared/booking/BookingOnlineForm
 export const AboutCTA = () => {
     const t = useTranslations("AboutPage");
     return (
-        <section className="prepc:px-6 pc:px-12 pt-[60px]">
+        <section className="prepc:px-6 pc:px-12 tab:pt-12 pc:pt-[120px] pt-[60px]">
             <div className="green-gradient tab:h-[302px] tab:max-w-full tab:pt-6 prepc:rounded-lg relative mx-auto max-w-[540px] overflow-hidden rounded pt-[139px] pb-8">
                 <div className="tab:hidden absolute top-0 h-[115px] w-full overflow-hidden rounded">
                     <video
