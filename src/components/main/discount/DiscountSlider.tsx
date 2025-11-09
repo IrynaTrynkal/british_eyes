@@ -26,23 +26,18 @@ export const DiscountSlider = () => {
         const updateDots = () => {
             const windowWidth = window.innerWidth;
 
-            // падінги секції
             let sectionPadding = 0;
-            if (windowWidth >= 1440)
-                sectionPadding = 48 * 2; // ліво+право
+            if (windowWidth >= 1440) sectionPadding = 48 * 2;
             else if (windowWidth >= 768) sectionPadding = 24 * 2;
 
             const availableWidth = windowWidth - sectionPadding;
 
-            // ширина картки + відступ праворуч
-            const cardWidth = 433 + 22; // 455
+            const cardWidth = 433 + 22;
             const totalCardsWidth = discountList.length * cardWidth - 22;
 
             if (windowWidth < 768) {
-                // мобілка — завжди показуємо крапки якщо більше 1 акції
                 setShowDots(discountList.length > 1);
             } else {
-                // tablet+ — тільки якщо не влазять усі картки
                 setShowDots(totalCardsWidth > availableWidth);
             }
         };

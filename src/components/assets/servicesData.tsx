@@ -1,5 +1,6 @@
 import { CataractGreenSection } from "../someServiceComponents/individualComponents/CataractGreenSection";
 import { LansectomyGreenSection } from "../someServiceComponents/individualComponents/LansectomyGreenSection";
+import { discountList } from "./discount.Data";
 import { ServicesKeyType, servicesList, ServicesListProps } from "./menu";
 import { PriceItemType, priceList } from "./priceList";
 
@@ -159,12 +160,14 @@ export type DiscountText = {
 };
 
 export type DiscountType = {
-    premium?: boolean;
-    icon?: string;
-    bgimage?: string;
-    cost?: number;
-    period?: string;
-    text: DiscountText;
+    text?: {
+        premium?: boolean;
+        icon?: string;
+        bgimage?: string;
+        cost?: number;
+        period?: string;
+    };
+    textLocal?: DiscountText;
 };
 
 export type PriceSectionProps = {
@@ -482,11 +485,12 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Ціни на консультацію та діагностику зору у Києві",
                         card: {
-                            cost: 950,
-                            period: "15.08.2025",
-                            text: {
-                                title: "Повне комплексне обстеження зору",
-                            },
+                            text: discountList.find(
+                                disk => disk.text.key === "perevirka-zoru"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "perevirka-zoru"
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -914,11 +918,12 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Prices for consultation and vision diagnostics in Kyiv",
                         card: {
-                            cost: 950,
-                            period: "15.08.2025",
-                            text: {
-                                title: "Full comprehensive eye examination",
-                            },
+                            text: discountList.find(
+                                disk => disk.text.key === "perevirka-zoru"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "perevirka-zoru"
+                            )?.localeText.en,
                         },
                     },
                 },
@@ -1348,11 +1353,12 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Цены на консультацию и диагностику зрения в Киеве",
                         card: {
-                            cost: 950,
-                            period: "15.08.2025",
-                            text: {
-                                title: "Полное комплексное обследование зрения",
-                            },
+                            text: discountList.find(
+                                disk => disk.text.key === "perevirka-zoru"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "perevirka-zoru"
+                            )?.localeText.en,
                         },
                     },
                 },
@@ -1663,15 +1669,12 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Ціни на видалення катаракти у Києві",
                         card: {
-                            premium: true,
-                            icon: "/icons/iq-life-white.svg",
-                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
-                            text: {
-                                premiumText:
-                                    "Акція преміальної операції по стандартній ціні",
-                                title: "iQ-Life Живий Зір",
-                                text: "Лікування від катаракти з відновленням зору молодості, без окулярів вдалину і поблизу.",
-                            },
+                            text: discountList.find(
+                                disk => disk.text.key === "likuvannya-katarakti"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "likuvannya-katarakti"
+                            )?.localeText.en,
                         },
                     },
                 },
@@ -1904,15 +1907,12 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Prices for cataract removal in Kyiv",
                         card: {
-                            premium: true,
-                            icon: "/icons/iq-life-white.svg",
-                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
-                            text: {
-                                premiumText:
-                                    "Premium transaction promotion at standard price",
-                                title: "iQ-Life Living Vision",
-                                text: "Cataract treatment with restoration of youthful vision, without glasses for distance and near.",
-                            },
+                            text: discountList.find(
+                                disk => disk.text.key === "likuvannya-katarakti"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "likuvannya-katarakti"
+                            )?.localeText.en,
                         },
                     },
                 },
@@ -2144,15 +2144,12 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Цены на удаление катаракты в Киеве",
                         card: {
-                            premium: true,
-                            icon: "/icons/iq-life-white.svg",
-                            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
-                            text: {
-                                premiumText:
-                                    "Акция премиальной сделки по стандартной цене",
-                                title: "iQ-Life Живое Зрение",
-                                text: "Лечение от катаракты с восстановлением зрения молодости, без очков вдаль и поблизости.",
-                            },
+                            text: discountList.find(
+                                disk => disk.text.key === "likuvannya-katarakti"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "likuvannya-katarakti"
+                            )?.localeText.en,
                         },
                     },
                 },
@@ -2581,6 +2578,14 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Ціни на лікування синдрому сухого ока у Києві",
+                        card: {
+                            text: discountList.find(
+                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -2884,6 +2889,14 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Prices for dry eye syndrome treatment in Kyiv",
+                        card: {
+                            text: discountList.find(
+                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -3188,6 +3201,14 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Цены на лечение синдрома сухого глаза в Киеве",
+                        card: {
+                            text: discountList.find(
+                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "syndrom-sukhoho-oka"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -4009,11 +4030,14 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Ціна лазерної корекції зору у Києві",
                         card: {
-                            cost: 14950,
-                            period: "15.08.2025",
-                            text: {
-                                title: "Лазерна корекція зору будь-яким методом",
-                            },
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key === "lazerna-korekcziya-zoru"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key === "lazerna-korekcziya-zoru"
+                            )?.localeText.en,
                         },
                     },
                 },
@@ -4205,11 +4229,14 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Price of laser vision correction in Kyiv",
                         card: {
-                            cost: 14950,
-                            period: "15.08.2025",
-                            text: {
-                                title: "Laser vision correction by any method",
-                            },
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key === "lazerna-korekcziya-zoru"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key === "lazerna-korekcziya-zoru"
+                            )?.localeText.en,
                         },
                     },
                 },
@@ -4400,11 +4427,14 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Цена лазерной коррекции зрения в Киеве",
                         card: {
-                            cost: 14950,
-                            period: "15.08.2025",
-                            text: {
-                                title: "Лазерная коррекция зрения любым методом",
-                            },
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key === "lazerna-korekcziya-zoru"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key === "lazerna-korekcziya-zoru"
+                            )?.localeText.en,
                         },
                     },
                 },
@@ -4688,6 +4718,14 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Ціна",
+                        card: {
+                            text: discountList.find(
+                                disk => disk.text.key === "dityache-viddilennya"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "dityache-viddilennya"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "giftCTA" },
@@ -4986,6 +5024,14 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Ціна",
+                        card: {
+                            text: discountList.find(
+                                disk => disk.text.key === "dityache-viddilennya"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "dityache-viddilennya"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "giftCTA" },
@@ -5283,6 +5329,14 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Ціна",
+                        card: {
+                            text: discountList.find(
+                                disk => disk.text.key === "dityache-viddilennya"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "dityache-viddilennya"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "giftCTA" },
@@ -5519,6 +5573,16 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Ціна на лікування кератоконусу в Києві",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key === "likuvannya-keratokonusa"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key === "likuvannya-keratokonusa"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -5750,6 +5814,16 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Price for keratoconus treatment in Kyiv",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key === "likuvannya-keratokonusa"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key === "likuvannya-keratokonusa"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -5981,6 +6055,16 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Цена на лечение кератоконуса в Киеве",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key === "likuvannya-keratokonusa"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key === "likuvannya-keratokonusa"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -6341,6 +6425,18 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Ціна на рефракційну ленсектомію в Києві",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "refrakczijna-lensektomiya"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "refrakczijna-lensektomiya"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -6697,6 +6793,18 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Price for refractive lensectomy in Kyiv",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "refrakczijna-lensektomiya"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "refrakczijna-lensektomiya"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -7053,6 +7161,18 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Цена на рефракционную ленсектомию в Киеве",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "refrakczijna-lensektomiya"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "refrakczijna-lensektomiya"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -8499,6 +8619,18 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Ціни на лікування глаукоми в Києві",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgichne-likuvannya-glaukomi"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgichne-likuvannya-glaukomi"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -8704,6 +8836,18 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Prices for glaucoma treatment in Kyiv",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgichne-likuvannya-glaukomi"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgichne-likuvannya-glaukomi"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -8909,6 +9053,18 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Цены на лечение глаукомы в Киеве",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgichne-likuvannya-glaukomi"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgichne-likuvannya-glaukomi"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -9729,6 +9885,18 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Ціни на хірургію повік і кон'юнктиви в Києві",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgiya-povik-i-konyunktivi"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgiya-povik-i-konyunktivi"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -9968,6 +10136,18 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Prices for eyelid and conjunctival surgery in Kyiv",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgiya-povik-i-konyunktivi"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgiya-povik-i-konyunktivi"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -10207,6 +10387,18 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Цены на хирургию век и конъюнктивы в Киеве",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgiya-povik-i-konyunktivi"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "hirurgiya-povik-i-konyunktivi"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -10429,6 +10621,14 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Ціни на ксенонотерапію в Києві",
+                        card: {
+                            text: discountList.find(
+                                disk => disk.text.key === "ksenonoterapiya"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "ksenonoterapiya"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -10639,6 +10839,14 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Prices for xenotherapy in Kyiv",
+                        card: {
+                            text: discountList.find(
+                                disk => disk.text.key === "ksenonoterapiya"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "ksenonoterapiya"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -10849,6 +11057,14 @@ export const servicesData: ServicesProps[] = [
                     type: "priceSection",
                     data: {
                         title: "Цены на ксенонотерапию в Киеве",
+                        card: {
+                            text: discountList.find(
+                                disk => disk.text.key === "ksenonoterapiya"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk => disk.text.key === "ksenonoterapiya"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -11050,6 +11266,24 @@ export const servicesData: ServicesProps[] = [
                                 ],
                             },
                         ],
+                    },
+                },
+                {
+                    type: "priceSection",
+                    data: {
+                        title: "Ціни на анестезіологічний супровід в Києві",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "anesteziologichnij-posibnik"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "anesteziologichnij-posibnik"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -11255,7 +11489,19 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "priceSection",
                     data: {
-                        title: "Prices for xenotherapy in Kyiv",
+                        title: "Prices for anesthesia support in Kyiv",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "anesteziologichnij-posibnik"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "anesteziologichnij-posibnik"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
@@ -11460,7 +11706,19 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "priceSection",
                     data: {
-                        title: "Цены на ксенонотерапию в Киеве",
+                        title: "Цены на анестезиологическое сопровождение в Киеве",
+                        card: {
+                            text: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "anesteziologichnij-posibnik"
+                            )?.text,
+                            textLocal: discountList.find(
+                                disk =>
+                                    disk.text.key ===
+                                    "anesteziologichnij-posibnik"
+                            )?.localeText.en,
+                        },
                     },
                 },
                 { type: "doctors" },
