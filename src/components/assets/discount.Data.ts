@@ -1,15 +1,22 @@
+import { ServicesKeyType } from "./menu";
+
 export type DiscountLocale = {
     premiumText?: string; // max 58 characters with spaces
     title: string;
     text?: string;
 };
 
-export type DiscountType = {
+export type DiscountNoLocale = {
     premium?: boolean;
     icon?: string;
     bgimage?: string;
-    price?: number;
+    cost?: number;
     period?: string;
+};
+
+export type DiscountType = {
+    key: ServicesKeyType;
+    text: DiscountNoLocale;
     localeText: {
         uk: DiscountLocale;
         ru: DiscountLocale;
@@ -19,9 +26,12 @@ export type DiscountType = {
 
 export const discountList: DiscountType[] = [
     {
-        premium: true,
-        icon: "/icons/iq-life-white.svg",
-        bgimage: "/images/lazerna-korekcziya-zoru.jpg",
+        key: "likuvannya-katarakti",
+        text: {
+            premium: true,
+            icon: "/icons/iq-life-white.svg",
+            bgimage: "/images/lazerna-korekcziya-zoru.jpg",
+        },
         localeText: {
             uk: {
                 premiumText: "Акція преміальної операції по стандартній ціні",
@@ -41,8 +51,11 @@ export const discountList: DiscountType[] = [
         },
     },
     {
-        price: 14950,
-        period: "15.08.2025",
+        key: "lazerna-korekcziya-zoru",
+        text: {
+            cost: 14950,
+            period: "15.08.2025",
+        },
         localeText: {
             uk: {
                 title: "Лазерна корекція зору будь-яким методом",
@@ -56,8 +69,8 @@ export const discountList: DiscountType[] = [
         },
     },
     {
-        price: 950,
-        period: "15.08.2025",
+        key: "perevirka-zoru",
+        text: { cost: 950, period: "15.08.2025" },
         localeText: {
             uk: {
                 title: "Повне комплексне обстеження зору",
