@@ -13,9 +13,11 @@ export type BreadCrumbsType = {
 export const Breadcrumbs = ({
     breadcrumbsList,
     className,
+    doctors,
 }: {
     breadcrumbsList: BreadCrumbsType[];
     className?: string;
+    doctors?: boolean;
 }) => {
     const t = useTranslations("Menu");
 
@@ -54,7 +56,7 @@ export const Breadcrumbs = ({
                                     aria-current="page"
                                     className="prepc:min-h-9 flex min-h-6 cursor-default items-center whitespace-nowrap text-black"
                                 >
-                                    {t(crumb.name)}
+                                    {doctors ? crumb.name : t(crumb.name)}
                                 </span>
                             ) : (
                                 <>

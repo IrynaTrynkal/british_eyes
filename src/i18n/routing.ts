@@ -74,6 +74,10 @@ export const routing = defineRouting({
             en: "/ophthalmologists",
             ru: "/oftalmologi",
         },
+        "/oftalmolohy/[slug]": {
+            en: "/ophthalmologists/[slug]",
+            ru: "/oftalmologi/[slug]",
+        },
         "/informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam":
             {
                 en: "/information-for-patients-prior-to-microsurgery",

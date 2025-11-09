@@ -4,7 +4,13 @@ import { useLocale, useTranslations } from "next-intl";
 import { DoctorProps } from "@/components/assets/doctorsData";
 import { LocaleType } from "@/types/LocaleType";
 
-export const DoctorCard = ({ data }: { data: DoctorProps }) => {
+export const DoctorCard = ({
+    data,
+    className,
+}: {
+    data: DoctorProps;
+    className?: string;
+}) => {
     const locale = useLocale();
     const t = useTranslations("Doctors");
     const photo = data.image ? data.image : "/logo.svg";

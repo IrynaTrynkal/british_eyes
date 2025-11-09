@@ -143,6 +143,10 @@
         "globalText": "Leave your contact information and we will get in touch with you shortly"
     },
     "Doctors": {
+        "title": "doctors",
+        "heroText": "Our team consists of doctors and candidates of medical sciences, top-category specialists",
+        "heroTextDown": "experts",
+        "departmants": "Departments",
         "experienceSince": "Experience since {year}",
         "details": "more details"
     },
