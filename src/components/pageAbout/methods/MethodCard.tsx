@@ -1,12 +1,34 @@
+"use client";
+import { useLocale } from "next-intl";
+import { useState } from "react";
+
+import {
+    subpageCataractData,
+    subpageLazerData,
+} from "@/components/assets/laserMethodsData";
 import { MethodCardProps } from "@/components/assets/servicesData";
+import { Modal } from "@/components/shared/booking/Modal";
 import { IconArrow } from "@/components/shared/icons/IconArrow";
-import { Link } from "@/i18n/navigation";
+import { LazerSubpage } from "@/components/someServiceComponents/LazerSubpage/LazerSubpage";
+import { LocaleType } from "@/types/LocaleType";
 
 export const MethodCard = ({ data }: { data: MethodCardProps }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleOpen = () => setIsOpen(true);
+    const handleClose = () => setIsOpen(false);
+
+    const locale = useLocale();
+
+    const currentItem =
+        data.link === "lazerna-korekcziya-zoru"
+            ? subpageLazerData[0]
+            : subpageCataractData[1];
+
     return (
-        <Link
-            href={`/poslugy/${data.link}` as any}
-            className="border-grey group relative aspect-[288/189] w-full overflow-hidden rounded border"
+        <div
+            onClick={handleOpen}
+            className="border-grey group relative aspect-[288/189] w-full cursor-pointer overflow-hidden rounded border"
         >
             <div
                 className={
@@ -31,6 +53,12 @@ export const MethodCard = ({ data }: { data: MethodCardProps }) => {
                     <IconArrow className="transition-transform duration-300 ease-in-out group-hover:-rotate-90" />
                 </div>
             </div>
-        </Link>
+            <Modal isOpen={isOpen} onClose={handleClose}>
+                <LazerSubpage
+                    locale={locale as LocaleType}
+                    currentMethod={currentItem}
+                />
+            </Modal>
+        </div>
     );
 };
