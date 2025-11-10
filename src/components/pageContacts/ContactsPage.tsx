@@ -14,7 +14,7 @@ export const ContactsPage = () => {
 
     return (
         <section className="tab:flex tab:py-12 pc:pb-[120px] prepc:pt-[72px] tab:flex-row-reverse tab:gap-4 tab:items-stretch">
-            <div className="tab:mt-0 tab:min-h-full tab:w-[calc(50%-8px)] pc:min-h-[1010px] pc:max-h-[1010px] relative mt-12 h-[calc(100vh-48px)] bg-[url(/images/contact-hero.jpg)] bg-cover bg-bottom bg-no-repeat"></div>
+            <div className="tab:mt-0 tab:min-h-full tab:w-[calc(50%-8px)] pc:min-h-[1010px] pc:max-h-[1010px] relative mt-12 h-[calc(50vh-48px)] bg-[url(/images/contact-hero.jpg)] bg-cover bg-bottom bg-no-repeat"></div>
             <div className="tab:max-w-full tab:w-[calc(50%-8px)] tab:pt-4 tab:pr-0 prepc:pt-8 tab:pl-6 pc:pl-12 tab:pb-0 mx-auto max-w-[540px] px-4 py-[60px]">
                 <h1 className="font-oswald pc:text-7xl prepc:text-6xl mb-4 text-4xl leading-[90%] uppercase">
                     {t("contacts")}

@@ -15,8 +15,10 @@ export const Methods = () => {
         .find(item => item.name.key === "likuvannya-katarakti")
         ?.uk.sections?.find(item => item.type === "methodsSection")?.data
         .list[1];
-    const aboutMethodsList = [itemList1, itemList2];
-
+    const aboutMethodsList = [
+        itemList1 ? { ...itemList1, link: "lazerna-korekcziya-zoru" } : null,
+        itemList2 ? { ...itemList2, link: "likuvannya-katarakti" } : null,
+    ].filter(Boolean);
     return (
         <section className="content pc:pb-30 relative pb-[60px]">
             <div className="prepc:mb-0 mb-6 flex w-full justify-between">
