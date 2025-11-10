@@ -22,7 +22,7 @@ export const MethodCard = ({ data }: { data: MethodCardProps }) => {
 
     const currentItem =
         data.link === "lazerna-korekcziya-zoru"
-            ? subpageLazerData[0]
+            ? subpageLazerData[1]
             : subpageCataractData[1];
 
     return (
