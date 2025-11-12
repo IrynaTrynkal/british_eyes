@@ -47,7 +47,7 @@ export const Team = () => {
                     return (
                         <li
                             key={ser.key}
-                            className="border-grey group tab:max-w-[480px] prepc:w-[32%] prepc:max-w-[434px] pc:w-[434px] tab:w-[49%] link-gradient rounded-xl border p-3"
+                            className="border-grey tab:max-w-[480px] prepc:w-[32%] prepc:max-w-[434px] pc:w-[434px] tab:w-[49%] overflow-hidden rounded-xl border p-3"
                         >
                             <TeamCard ser={ser} price={price} discount={disc} />
                         </li>

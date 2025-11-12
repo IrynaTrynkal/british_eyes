@@ -17,7 +17,7 @@ export const ServicesList = () => {
     const serviceStyles: Record<string, string> = {
         "lazerna-korekcziya-zoru": "text-ivory",
         "perevirka-zoru":
-            "bg-cover bg-center hover:bg-[url(/images/perevirka-zoru.jpg)] active:bg-[url(/images/perevirka-zoru.jpg)] text-black ",
+            "bg-cover bg-center hover:bg-[url(/images/perevirka-zoru.jpg)] active:bg-[url(/images/perevirka-zoru.jpg)] ",
         "likuvannya-katarakti":
             "bg-cover bg-center hover:bg-[url(/images/likuvannya-katarakti.jpg)] active:bg-[url(/images/likuvannya-katarakti.jpg)] ",
         "syndrom-sukhoho-oka":
@@ -51,7 +51,7 @@ export const ServicesList = () => {
                         <div className="tab:h-full tab:flex tab:flex-col tab:justify-between">
                             <div className="tab:flex tab:justify-between">
                                 <h4
-                                    className={`font-oswald tab:text-lg group-hover:text-ivory group-active:text-ivory pc:text-2xl pc:leading-7 tab:leading-5 leading-4 font-medium uppercase transition-colors duration-300 ease-in-out ${service.price.discountPrice ? "tab:w-[55%] w-[75%]" : "tab:w-[70%] w-full"} `}
+                                    className={`font-oswald tab:text-lg group-hover:text-ivory group-focus-within:text-ivory group-active:text-ivory pc:text-2xl pc:leading-7 tab:leading-5 leading-4 font-medium uppercase transition-colors duration-300 ease-in-out ${service.price.discountPrice ? "tab:w-[55%] w-[75%]" : "tab:w-[70%] w-full"} `}
                                 >
                                     {tMenu(service.name.key)}
                                 </h4>
@@ -61,7 +61,7 @@ export const ServicesList = () => {
                                     </div>
                                 )}
 
-                                <p className="font-oswald tab:block group-hover:text-ivory group-active:text-ivory pc:text-base hidden text-sm leading-none uppercase transition-colors duration-300 ease-in-out">
+                                <p className="font-oswald tab:block group-hover:text-ivory group-focus-within:text-ivory group-active:text-ivory pc:text-base hidden text-sm leading-none uppercase transition-colors duration-300 ease-in-out">
                                     {service.price.discountPrice
                                         ? t("servicesDiscountPrice", {
                                               price: service.price
@@ -84,7 +84,7 @@ export const ServicesList = () => {
                                 </div>
                             )}
                             <div className="tab:flex tab:justify-between tab:items-end hidden w-full">
-                                <p className="tab:leading-5 pc:text-lg pc:leading-[22px] group-hover:text-ivory group-active:text-ivory w-[80%] transition-colors duration-300 ease-in-out">
+                                <p className="tab:leading-5 pc:text-lg pc:leading-[22px] group-focus-within:text-ivory group-hover:text-ivory group-active:text-ivory w-[80%] transition-colors duration-300 ease-in-out">
                                     {service[locale as LocaleType].textMain}
                                 </p>
                                 <div className="group-hover:bg-ivory group-active:bg-ivory border-ivory flex h-12 w-12 items-center justify-center rounded border transition-all duration-300 ease-in-out">
@@ -99,7 +99,7 @@ export const ServicesList = () => {
                                 "tab:hidden flex items-center justify-between"
                             }
                         >
-                            <p className="font-oswald group-hover:text-ivory group-active:text-ivory text-sm leading-none uppercase transition-colors duration-300 ease-in-out">
+                            <p className="font-oswald group-hover:text-ivory group-focus-within:text-ivory group-active:text-ivory text-sm leading-none uppercase transition-colors duration-300 ease-in-out">
                                 {service.price.discountPrice
                                     ? t("servicesDiscountPrice", {
                                           price: service.price.discountPrice,

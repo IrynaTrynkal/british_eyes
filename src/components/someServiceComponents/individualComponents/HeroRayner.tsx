@@ -27,7 +27,6 @@ export const HeroRayner = () => {
             >
                 <source src={videoSmallScreens} type="video/mp4" />
             </video>
-
             <video
                 className="tab:block absolute top-0 left-1/2 z-0 hidden h-full w-auto -translate-x-1/2 object-cover"
                 preload="auto"

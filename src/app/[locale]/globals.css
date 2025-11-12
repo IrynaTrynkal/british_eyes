@@ -62,7 +62,7 @@ a {
     cursor: pointer;
 }
 .link-gradient {
-    @apply transition-all duration-500;
+    @apply transition-all duration-300;
     background: none;
 }
 

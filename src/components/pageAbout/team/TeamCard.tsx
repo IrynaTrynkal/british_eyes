@@ -21,16 +21,16 @@ export const TeamCard = ({
     return (
         <Link
             href={ser.link as any}
-            className="tab:min-h-48 prepc:min-h-[245px] flex min-h-[157px] flex-col justify-between"
+            className="tab:min-h-48 group link-gradient prepc:min-h-[245px] flex min-h-[157px] flex-col justify-between"
         >
             <div className="relative flex justify-between">
                 <h4
-                    className={`font-oswald prepc:text-2xl prepc:leading-8 group-hover:text-ivory group-active:text-ivory leading-5 font-medium uppercase transition-colors duration-300 ease-in-out ${discount ? "prepc:max-w-[60%] max-w-[49.7%]" : "prepc:max-w-[70%] pc:max-w-[74.7%] max-w-[61.7%]"}`}
+                    className={`font-oswald prepc:text-2xl prepc:leading-8 group-hover:text-ivory group-focus-within:text-ivory group-active:text-ivory leading-5 font-medium uppercase transition-colors duration-300 ease-in-out ${discount ? "prepc:max-w-[60%] max-w-[49.7%]" : "prepc:max-w-[70%] pc:max-w-[74.7%] max-w-[61.7%]"}`}
                 >
                     {ser.data[locale as LocaleType].title}
                 </h4>
                 {price && (
-                    <p className="font-oswald group-hover:text-ivory group-active:text-ivory prepc:text-base text-sm leading-none whitespace-nowrap uppercase transition-colors duration-300 ease-in-out">
+                    <p className="font-oswald group-hover:text-ivory group-focus-within:text-ivory group-active:text-ivory prepc:text-base text-sm leading-none whitespace-nowrap uppercase transition-colors duration-300 ease-in-out">
                         {t("servicesPrice", {
                             price,
                         })}
@@ -43,7 +43,7 @@ export const TeamCard = ({
                 )}
             </div>
             <div className="flex items-end justify-between">
-                <p className="group-hover:text-ivory group-active:text-ivory prepc:text-xl prepc:leading-6 prepc:max-w-[80%] max-w-[83.3%] leading-5 transition-colors duration-300 ease-in-out">
+                <p className="group-hover:text-ivory group-active:text-ivory group-focus-within:text-ivory prepc:text-xl prepc:leading-6 prepc:max-w-[80%] max-w-[83.3%] leading-5 transition-colors duration-300 ease-in-out">
                     {ser.data[locale as LocaleType].text}
                 </p>
                 <div className="group-hover:bg-ivory group-active:bg-ivory prepc:h-12 prepc:w-12 flex h-6 w-6 items-center justify-center rounded transition-colors duration-300 ease-in-out">
