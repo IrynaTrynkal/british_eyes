@@ -49,6 +49,10 @@ export default [
       "build",
       "public",
       "next-env.d.ts",
+      "dist",
+      ".sanity",
+      "next-env.d.ts",
+      "sanity.types.ts",
     ],
   },
 ];
