@@ -37,7 +37,7 @@ export const Choice = () => {
                     />
                 </div>
             </div>
-            <div className="tab:block tab:w-[30%] tab:mr-16 pc:max-w-[434px] tab:max-w-[290px] hidden aspect-square overflow-hidden rounded-full">
+            <div className="tab:block tab:w-[30%] tab:mr-16 pc:max-w-[434px] tab:max-w-[290px] mx-auto hidden aspect-square overflow-hidden rounded-full">
                 <Image
                     src="/images/choice.jpg"
                     alt="Choosing an eye clinic is important for everyone"

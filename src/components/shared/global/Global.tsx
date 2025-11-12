@@ -12,6 +12,7 @@ export const Global = () => {
                 alt="map of the world"
                 width={1341}
                 height={782}
+                className="mx-auto"
             />
             <div className="tab:px-0 prepc:max-w-[706px] tab:max-w-[550px] tab:top-1/2 tab:-translate-y-3/5 absolute top-[76px] left-1/2 z-[1] w-full max-w-[360px] -translate-x-1/2 px-4">
                 <div className="cta-green-gradient prepc:px-6 prepc:py-10 w-full rounded-lg px-3 py-8">
