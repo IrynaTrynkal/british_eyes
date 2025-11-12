@@ -22,7 +22,7 @@ export const ServicesList = () => {
             "bg-cover bg-center hover:bg-[url(/images/likuvannya-katarakti.jpg)] active:bg-[url(/images/likuvannya-katarakti.jpg)] ",
         "syndrom-sukhoho-oka":
             "bg-cover bg-center hover:bg-[url(/images/syndrom-sukhoho-oka.jpg)] active:bg-[url(/images/syndrom-sukhoho-oka.jpg)] ",
-        default: "hover-green-gradient ",
+        default: "link-gradient  ",
     };
 
     return (
@@ -30,13 +30,13 @@ export const ServicesList = () => {
             {servicesData.slice(0, 5).map((service, index) => (
                 <li
                     key={service.name.key}
-                    className={`border-grey tab:min-h-[200px] pc:min-h-[246px] pc:rounded-lg tab:max-w-[397px] pc:max-w-[434.5px] min-h-[140px] overflow-hidden rounded border ${index === 4 ? "tab:w-[calc(50%-10px)] w-full" : "tab:w-[calc(50%-10px)] w-[calc(50%-4px)]"}`}
+                    className={`border-grey group tab:min-h-[200px] pc:min-h-[246px] pc:rounded-lg tab:max-w-[397px] pc:max-w-[434.5px] min-h-[140px] overflow-hidden rounded border ${index === 4 ? "tab:w-[calc(50%-10px)] w-full" : "tab:w-[calc(50%-10px)] w-[calc(50%-4px)]"}`}
                 >
                     <Link
                         href={
                             `/poslugy/${service.name.slug[locale as LocaleType]}` as any
                         }
-                        className={`group tab:p-3 relative flex h-full w-full flex-col justify-between p-2 transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
+                        className={`tab:p-3 relative flex h-full w-full flex-col justify-between p-2 transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
                     >
                         {service.name.key === "lazerna-korekcziya-zoru" && (
                             <div className="absolute inset-0 z-[-1] transform overflow-hidden transition-transform duration-500 ease-in-out group-hover:scale-110 group-active:scale-110">

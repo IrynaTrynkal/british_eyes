@@ -66,6 +66,7 @@ a {
     background: none;
 }
 
+.link-gradient:hover,
 .link-gradient:active {
     background: linear-gradient(
         -10deg,
