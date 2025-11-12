@@ -51,7 +51,7 @@ export const MenuPC = ({
                         onMouseLeave={() => hasSubmenu && closeSubmenus()}
                     >
                         <div
-                            className={`prepc:px-2.5 pc:px-3 flex items-center justify-center ${(item.key === "poslugy" && openMenus.poslugy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
+                            className={`prepc:px-2.5 pc:px-2 flex items-center justify-center ${(item.key === "poslugy" && openMenus.poslugy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
                         >
                             <Link
                                 href={`/${item.key}` as any}

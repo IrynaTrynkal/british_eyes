@@ -1,5 +1,6 @@
 export const menuList = [
     { key: "poslugy" },
+    { key: "rayner-galaxy-ua" },
     { key: "tsiny" },
     { key: "aktsiyi" },
     { key: "oftalmolohy" },
@@ -205,6 +206,7 @@ export const patientsList: PatientsListProps[] = [
 
 export const footerMainMenu = [
     { key: "main" },
+    { key: "rayner-galaxy-ua" },
     { key: "tsiny" },
     { key: "aktsiyi" },
     { key: "oftalmolohy" },
@@ -212,6 +214,7 @@ export const footerMainMenu = [
     { key: "informatsiya-dlya-patsiyentiv" },
     { key: "vidhuky" },
     { key: "blog" },
+    { key: "kontakty" },
 ];
 export type ServiceKey = keyof typeof serviceSlugs;
 export const serviceSlugs = {
