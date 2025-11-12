@@ -121,17 +121,7 @@ a {
 
 .hover-green-gradient {
     background: transparent;
-}
-
-.hover-green-gradient:hover {
-    background: linear-gradient(
-        -45deg,
-        #023f2c 0%,
-        #09684b 21%,
-        #0b7556 35%,
-        #08654a 52%,
-        #003626 83%
-    );
+    transition: all 0.3s;
 }
 
 .book-gradient {
@@ -240,6 +230,31 @@ option {
     -moz-appearance: none;
     outline: none;
     box-shadow: none;
+}
+@media (max-width: 767px) {
+    .hover-green-gradient:active {
+        background: linear-gradient(
+            -45deg,
+            #023f2c 0%,
+            #09684b 21%,
+            #0b7556 35%,
+            #08654a 52%,
+            #003626 83%
+        );
+    }
+}
+@media (min-width: 768px) {
+    .hover-green-gradient:hover,
+    .hover-green-gradient:active {
+        background: linear-gradient(
+            -45deg,
+            #023f2c 0%,
+            #09684b 21%,
+            #0b7556 35%,
+            #08654a 52%,
+            #003626 83%
+        );
+    }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
     .book-height {
