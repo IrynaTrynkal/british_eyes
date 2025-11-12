@@ -26,29 +26,38 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
             }
         >
             {hasVideo && (
-                <video
-                    className="absolute top-0 left-1/2 z-0 h-full w-auto -translate-x-1/2 object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    poster={data.image}
-                >
+                <>
                     {data.videoSmallScreens && (
-                        <source
-                            src={data.videoSmallScreens}
-                            type="video/mp4"
-                            media="(max-width: 767px)"
-                        />
+                        <video
+                            className="tab:hidden absolute top-0 left-1/2 z-0 h-full w-auto -translate-x-1/2 object-cover"
+                            preload="auto"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source
+                                src={data.videoSmallScreens}
+                                type="video/mp4"
+                            />
+                        </video>
                     )}
                     {data.videoBigScreens && (
-                        <source
-                            src={data.videoBigScreens}
-                            type="video/mp4"
-                            media="(min-width: 768px)"
-                        />
+                        <video
+                            className="tab:block absolute top-0 left-1/2 z-0 hidden h-full w-auto -translate-x-1/2 object-cover"
+                            preload="auto"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source
+                                src={data.videoBigScreens}
+                                type="video/mp4"
+                            />
+                        </video>
                     )}
-                </video>
+                </>
             )}
             {hasImage && (
                 <>
