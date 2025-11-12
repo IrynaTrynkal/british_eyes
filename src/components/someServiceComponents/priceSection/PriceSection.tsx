@@ -4,7 +4,6 @@ import { ServicesKeyType } from "@/components/assets/menu";
 import { priceList } from "@/components/assets/priceList";
 import { PriceSectionProps } from "@/components/assets/servicesData";
 import { PriceCard } from "@/components/pagePrice/PriceCard";
-import { LinkAction } from "@/components/shared/LinkAction";
 import { LocaleType } from "@/types/LocaleType";
 import { hasCardDiscountData } from "@/utils/hasCardDiscountData";
 
@@ -60,7 +59,7 @@ export const PriceSection = ({
                     <OfferCard data={data.card} />
                 )}
             </div>
-            {slug === "lazerna-korekcziya-zoru" && (
+            {/* {slug === "lazerna-korekcziya-zoru" && (
                 <div className="prepc:block pc:right-12 pc:bottom-[120px] absolute right-6 bottom-12 hidden w-[230px]">
                     <p className="mb-8 text-lg leading-[22px]">
                         {t("lazerEditionPriceText")}
@@ -71,7 +70,7 @@ export const PriceSection = ({
                         name={tH("bookingSubtitle")}
                     />
                 </div>
-            )}
+            )} */}
         </section>
     );
 };

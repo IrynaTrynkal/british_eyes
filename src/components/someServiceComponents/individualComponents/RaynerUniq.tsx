@@ -12,7 +12,7 @@ export const RaynerUniq = () => {
         { title: t("raynerUniqItem6Title"), text: t("raynerUniqItem6Text") },
     ];
     return (
-        <section className="bg-green-10 py-8">
+        <section className="bg-green-10 overflow-hidden py-8">
             <div className="content">
                 <h2 className="title-section tab:whitespace-normal tab:mb-8 prepc:mb-12 pc:mb-[60px] mb-6 text-center whitespace-pre-line">
                     {t("raynerUniqTitle")}

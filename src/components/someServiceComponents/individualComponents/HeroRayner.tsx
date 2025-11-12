@@ -14,7 +14,7 @@ export const HeroRayner = () => {
     return (
         <section
             className={
-                "tab:h-120 prepc:mt-[72px] relative mt-12 h-[calc(100vh-48px)] overflow-hidden bg-[#003626]"
+                "tab:h-120 prepc:mt-[72px] relative mt-12 h-[calc(90vh-48px)] overflow-hidden bg-[#003626]"
             }
         >
             <>
@@ -39,7 +39,7 @@ export const HeroRayner = () => {
                     <source src={videoBigScreens} type="video/mp4" />
                 </video>
             </>
-            <div className="content tab:pb-6 prepc:pt-[104px] prepc:max-w-fit prepc:pb-8 relative z-[1] flex h-full max-w-[840px] flex-col justify-between gap-10 pt-8 pb-[50px]">
+            <div className="content tab:pb-6 prepc:pt-[104px] prepc:max-w-fit prepc:pb-8 tab:max-w-[840px] relative z-[1] flex h-full flex-col justify-between gap-10 pt-8 pb-[50px]">
                 <div className="prepc:flex-row prepc:items-center flex flex-grow flex-col justify-between">
                     <div className="">
                         <p className="text-ivory prepc:w-fit w-[149px] leading-[120%] uppercase">
