@@ -21,7 +21,7 @@ export const TeamCard = ({
     return (
         <Link
             href={ser.link as any}
-            className="tab:min-h-48 group link-gradient prepc:min-h-[245px] flex min-h-[157px] flex-col justify-between"
+            className="tab:min-h-48 prepc:min-h-[245px] flex min-h-[157px] flex-col justify-between"
         >
             <div className="relative flex justify-between">
                 <h4
