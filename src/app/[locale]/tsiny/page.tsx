@@ -19,7 +19,7 @@ export default async function PricesPage({
         params: { language: locale },
         tags: [],
     });
-    console.log("🚀 ~ PricesPage ~ data:", data?.blocks);
+    console.log("🚀 ~ PricesPage:", data?.blocks);
 
     const breadcrumb = [{ name: "tsiny", href: "/tsiny" }];
     const titlesList = getUniqueTitles(priceList, locale as LocaleType);
