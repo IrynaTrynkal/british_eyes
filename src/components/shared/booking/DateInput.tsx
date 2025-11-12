@@ -1,9 +1,9 @@
 import "react-datepicker/dist/react-datepicker.css";
 
 import { format } from "date-fns";
-import { enGB } from "date-fns/locale/en-GB";
-import { ru } from "date-fns/locale/ru";
-import { uk } from "date-fns/locale/uk";
+import enGB from "date-fns/locale/en-GB";
+import ru from "date-fns/locale/ru";
+import uk from "date-fns/locale/uk";
 import { useTranslations } from "next-intl";
 import { forwardRef, useState } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";

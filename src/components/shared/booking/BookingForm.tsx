@@ -1,5 +1,5 @@
 "use client";
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
@@ -106,7 +106,9 @@ export const BookingForm = ({
 
         const formattedData = {
             ...formData,
-            date: formData.date ? format(formData.date, "dd.MM.yyyy") : "",
+            date: formData.date
+                ? format(parseISO(formData.date), "dd.MM.yyyy")
+                : "",
         };
 
         // TODO тимчасова заглушка замість реального onSendData
