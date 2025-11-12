@@ -37,7 +37,7 @@ const Navbar = () => {
                 <MenuPC className="prepc:flex hidden" />
             </div>
             <div className="prepc:flex hidden items-center gap-4">
-                <SocialLinks />
+                <SocialLinks className="pc:flex hidden" />
                 <PhoneButton
                     togglePhoneListOpen={togglePhoneListOpen}
                     isPhoneListOpened={isPhoneListOpened}

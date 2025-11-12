@@ -43,7 +43,7 @@ export const MenuMobContent = ({
                         className={` ${item.key === "tsiny" ? "relative" : ""}`}
                     >
                         <div
-                            className={`${item.key === "poslugy" ? "w-full" : "w-1/3"} font-oswald flex items-center justify-between ${item.key === "poslugy" ? "h-10 px-2 text-sm" : "text-base"} font-medium uppercase ${(item.key === "poslugy" && openMenus.poslugy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
+                            className={`${item.key === "poslugy" ? "w-full" : "w-[36%]"} font-oswald flex items-center justify-between ${item.key === "poslugy" ? "h-10 px-2 text-sm" : "text-base"} font-medium uppercase ${(item.key === "poslugy" && openMenus.poslugy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
                         >
                             <Link
                                 href={`/${item.key}` as any}
