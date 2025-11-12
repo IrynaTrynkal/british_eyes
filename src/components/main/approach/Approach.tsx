@@ -7,9 +7,9 @@ export const Approach = () => {
     const t = useTranslations("HomePage");
     const locale = useLocale();
     return (
-        <section className="text-ivory tab:py-12 pc:py-[120px] bg-[url(/images/approach.jpg)] bg-cover bg-center bg-no-repeat py-6">
+        <section className="text-ivory tab:py-12 bg-[url(/images/approach.jpg)] bg-cover bg-center bg-no-repeat py-6">
             <div className="content">
-                <h2 className="title-section-ivory tab:max-w-[560px] tab:mb-40 mb-[100px] max-w-[440px]">
+                <h2 className="title-section-ivory tab:max-w-[560px] tab:mb-20 max-w-[440px]">
                     {t("approachTitle")}
                 </h2>
                 <div className="mr-0 ml-auto max-w-[777px]">
