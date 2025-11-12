@@ -36,7 +36,7 @@ export const ServicesList = () => {
                         href={
                             `/poslugy/${service.name.slug[locale as LocaleType]}` as any
                         }
-                        className={`group tab:p-3 group-hover:text-ivory group-active:text-ivory relative flex h-full w-full flex-col justify-between p-2 text-black transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
+                        className={`group tab:p-3 relative flex h-full w-full flex-col justify-between p-2 transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
                     >
                         {service.name.key === "lazerna-korekcziya-zoru" && (
                             <div className="absolute inset-0 z-[-1] transform overflow-hidden transition-transform duration-500 ease-in-out group-hover:scale-110 group-active:scale-110">
@@ -51,7 +51,7 @@ export const ServicesList = () => {
                         <div className="tab:h-full tab:flex tab:flex-col tab:justify-between">
                             <div className="tab:flex tab:justify-between">
                                 <h4
-                                    className={`font-oswald tab:text-lg pc:text-2xl pc:leading-7 tab:leading-5 leading-4 font-medium uppercase ${service.price.discountPrice ? "tab:w-[55%] w-[75%]" : "tab:w-[70%] w-full"} `}
+                                    className={`font-oswald tab:text-lg group-hover:text-ivory group-active:text-ivory pc:text-2xl pc:leading-7 tab:leading-5 leading-4 font-medium uppercase transition-all duration-300 ease-in-out ${service.price.discountPrice ? "tab:w-[55%] w-[75%]" : "tab:w-[70%] w-full"} `}
                                 >
                                     {tMenu(service.name.key)}
                                 </h4>
@@ -61,7 +61,7 @@ export const ServicesList = () => {
                                     </div>
                                 )}
 
-                                <p className="font-oswald tab:block pc:text-base hidden text-sm leading-none uppercase">
+                                <p className="font-oswald tab:block pc:text-base group-hover:text-ivory group-active:text-ivory hidden text-sm leading-none uppercase transition-all duration-300 ease-in-out">
                                     {service.price.discountPrice
                                         ? t("servicesDiscountPrice", {
                                               price: service.price
@@ -84,7 +84,7 @@ export const ServicesList = () => {
                                 </div>
                             )}
                             <div className="tab:flex tab:justify-between tab:items-end hidden w-full">
-                                <p className="tab:leading-5 pc:text-lg pc:leading-[22px] w-[80%]">
+                                <p className="tab:leading-5 pc:text-lg group-hover:text-ivory group-active:text-ivory pc:leading-[22px] w-[80%] transition-all duration-300 ease-in-out">
                                     {service[locale as LocaleType].textMain}
                                 </p>
                                 <div className="group-hover:bg-ivory group-active:bg-ivory border-ivory flex h-12 w-12 items-center justify-center rounded border transition-all duration-300 ease-in-out">
@@ -99,7 +99,7 @@ export const ServicesList = () => {
                                 "tab:hidden flex items-center justify-between"
                             }
                         >
-                            <p className="font-oswald text-sm leading-none uppercase">
+                            <p className="font-oswald group-hover:text-ivory group-active:text-ivory text-sm leading-none uppercase transition-all duration-300 ease-in-out">
                                 {service.price.discountPrice
                                     ? t("servicesDiscountPrice", {
                                           price: service.price.discountPrice,
