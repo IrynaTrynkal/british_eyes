@@ -40,13 +40,13 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
                             media="(max-width: 767px)"
                         />
                     )}
-                    {data.videoBigScreens && (
+                    {/* {data.videoBigScreens && (
                         <source
                             src={data.videoBigScreens}
                             type="video/mp4"
                             media="(min-width: 768px)"
                         />
-                    )}
+                    )} */}
                 </video>
             )}
             {hasImage && (
