@@ -4,7 +4,7 @@ export const HeroServices = () => {
     const t = useTranslations("ServicesPage");
 
     return (
-        <section className="tab:mt-0 tab:h-120 prepc:h-[552px] relative mt-12 h-[calc(100vh-48px)] bg-[url(/images/services-hero.jpg)] bg-cover bg-center bg-no-repeat">
+        <section className="tab:mt-0 tab:h-120 prepc:h-[552px] relative mt-12 h-[calc(50vh-48px)] bg-[url(/images/services-hero.jpg)] bg-cover bg-center bg-no-repeat">
             <div className="prepc:hidden about-hero-gradient absolute bottom-0 z-0 h-full w-full" />
             <div className="services-hero-big prepc:block absolute bottom-0 z-0 hidden h-full w-full" />
             <div className="content tab:pt-20 tab:pb-6 prepc:pt-[104px] prepc:pb-14 tab:items-start relative z-[1] flex h-full flex-col items-end pt-7 pb-6">
