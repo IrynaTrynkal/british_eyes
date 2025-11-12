@@ -17,13 +17,12 @@ export const ServicesList = () => {
     const serviceStyles: Record<string, string> = {
         "lazerna-korekcziya-zoru": "text-ivory",
         "perevirka-zoru":
-            "bg-cover bg-center hover:bg-[url(/images/perevirka-zoru.jpg)] active:bg-[url(/images/perevirka-zoru.jpg)] text-black group-hover:text-ivory group-active:text-ivory",
+            "bg-cover bg-center hover:bg-[url(/images/perevirka-zoru.jpg)] active:bg-[url(/images/perevirka-zoru.jpg)] ",
         "likuvannya-katarakti":
-            "bg-cover bg-center hover:bg-[url(/images/likuvannya-katarakti.jpg)] active:bg-[url(/images/likuvannya-katarakti.jpg)] text-black group-hover:text-ivory group-active:text-ivory",
+            "bg-cover bg-center hover:bg-[url(/images/likuvannya-katarakti.jpg)] active:bg-[url(/images/likuvannya-katarakti.jpg)] ",
         "syndrom-sukhoho-oka":
-            "bg-cover bg-center hover:bg-[url(/images/syndrom-sukhoho-oka.jpg)] active:bg-[url(/images/syndrom-sukhoho-oka.jpg)] text-black group-hover:text-ivory group-active:text-ivory",
-        default:
-            "hover-green-gradient text-black hover:text-ivory active:text-ivory",
+            "bg-cover bg-center hover:bg-[url(/images/syndrom-sukhoho-oka.jpg)] active:bg-[url(/images/syndrom-sukhoho-oka.jpg)] ",
+        default: "hover-green-gradient ",
     };
 
     return (
@@ -37,7 +36,7 @@ export const ServicesList = () => {
                         href={
                             `/poslugy/${service.name.slug[locale as LocaleType]}` as any
                         }
-                        className={`group tab:p-3 relative flex h-full w-full flex-col justify-between p-2 transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
+                        className={`group tab:p-3 group-hover:text-ivory group-active:text-ivory relative flex h-full w-full flex-col justify-between p-2 text-black transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
                     >
                         {service.name.key === "lazerna-korekcziya-zoru" && (
                             <div className="absolute inset-0 z-[-1] transform overflow-hidden transition-transform duration-500 ease-in-out group-hover:scale-110 group-active:scale-110">
