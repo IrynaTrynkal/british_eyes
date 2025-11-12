@@ -18,26 +18,27 @@ export const HeroRayner = () => {
             }
         >
             <video
-                className={
-                    "absolute top-0 left-1/2 z-0 h-full w-auto -translate-x-1/2 object-cover"
-                }
+                className="tab:hidden absolute top-0 left-1/2 z-0 h-full w-auto -translate-x-1/2 object-cover"
+                preload="auto"
                 autoPlay
                 muted
                 loop
                 playsInline
             >
-                <source
-                    src={videoSmallScreens}
-                    type="video/mp4"
-                    media="(max-width: 767px)"
-                />
-
-                <source
-                    src={videoBigScreens}
-                    type="video/mp4"
-                    media="(min-width: 768px)"
-                />
+                <source src={videoSmallScreens} type="video/mp4" />
             </video>
+
+            <video
+                className="tab:block absolute top-0 left-1/2 z-0 hidden h-full w-auto -translate-x-1/2 object-cover"
+                preload="auto"
+                autoPlay
+                muted
+                loop
+                playsInline
+            >
+                <source src={videoBigScreens} type="video/mp4" />
+            </video>
+
             <div className="content tab:pb-6 prepc:pt-[104px] prepc:max-w-fit prepc:pb-8 relative z-[1] flex h-full max-w-[840px] flex-col justify-between gap-10 pt-8 pb-[50px]">
                 <div className="prepc:flex-row prepc:items-center flex flex-grow flex-col justify-between">
                     <div className="">
