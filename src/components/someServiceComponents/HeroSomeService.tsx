@@ -27,7 +27,7 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
         >
             {hasVideo && (
                 <video
-                    className="absolute top-0 left-1/2 z-0 h-full w-auto -translate-x-1/2 border border-red-500 object-cover"
+                    className="absolute top-0 left-1/2 z-0 h-full w-auto -translate-x-1/2 object-cover"
                     autoPlay
                     muted
                     loop
@@ -37,7 +37,7 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
                         <source
                             src={data.videoSmallScreens}
                             type="video/mp4"
-                            media="(max-width: 767px)"
+                            // media="(max-width: 767px)"
                         />
                     )}
                     {/* {data.videoBigScreens && (
