@@ -397,12 +397,162 @@ export const pationtsInstructionsData: PationtsInstructionType[] = [
         )!,
         uk: {
             title: "Підготовка до операціїї з приводу косоокості",
-            content: [],
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Перед операцією ви маєте пройти повне обстеження у офтальмолога. На огляді у лікаря бажано мати виписки після попередніх обстежень та попередніх хірургічних втручань. Перед можливим хірургічним втручанням лікар проводить корекцію та лікування всіх наявних очних захворювань та може призначити вам дообстеження у інших медичних спеціалістів.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Коли необхідний підготовчий період пройдено, ви разом з лікарем створюєте індивідуальний комфортний план лікування, проходите передопераційні обстеження, вам призначають день оперативного втручання. Разом з анестезіологом під час передопераційного огляду обирається комфортний метод знеболення та обговорюються нюанси передопераційної підготовки.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Після операції око може бути закрите пов’язкою. Пов’язка на оці залишається до контрольного огляду наступного дня. Ви узгоджуєте з операційною медсестрою час прибуття на контрольний огляд. ",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Наступного дня ви приїжджаєте в «Німецьку очну клініку» для першого контрольного огляду в призначений час. Вас супроводять в хірургічне відділення, на контрольному огляді лікар-хірург оцінить стан Вашого ока та призначить дату наступного огляду.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Після операції необхідно дотримуватись наступних правил:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            numeric: true,
+                            list: [
+                                "Післяопераційний захист ока: перші 3 тижні не можна торкатися очей руками (чесати, терти, натискати тощо), в приміщенні можна знаходитись без пов’язки та сонцезахисних окулярів; місяць після операції, виходячи на вулицю в будь-яку погоду, необхідні сонцезахисні окуляри.",
+                                "Особиста гігієна: в післяопераційному періоді протягом 1 тижня після операції бажано не мити голову та не вмивати обличчя, попереджуючи потрапляння мильного розчину в опероване око. Душ можна приймати одразу, але не вище підборіддя. Відвідування лазні, сауни, басейну, купання у відкритих водоймах протягом місяця після операції заборонено.",
+                                "Обмеження фізичних навантажень: протягом місяця після операції виключити тривалі нахили тулуба та голови (миття підлоги без швабри, ручне прання, робота на городі тощо), заняття силовими та ігровими видами спорту, підняття важких речей більше 10 кг для чоловіків та 5 кг для жінок.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: "Після закінчення лікування Вам буде видано епікриз з термінами лікування, назвою операції, даними контрольних оглядів, рекомендаціями по лікуванню в післяопераційному періоді, в тому числі рекомендації щодо тривалості непрацездатності.",
+                        },
+                    ],
+                },
+            ],
         },
-        en: { title: "Preparing for strabismus surgery", content: [] },
+        en: {
+            title: "Preparing for strabismus surgery",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Before surgery, you must undergo a full ophthalmological examination. It is recommended to bring previous medical records and reports of any earlier surgical procedures to your doctor’s appointment. Before any potential surgery, your doctor will treat and correct any existing eye conditions and may refer you to other medical specialists for additional tests.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Once the necessary preparation period is complete, you and your doctor will create an individual and comfortable treatment plan, undergo preoperative tests, and schedule the date of surgery. During the preoperative consultation with the anesthesiologist, the most suitable method of anesthesia will be chosen and the details of preoperative preparation will be discussed.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "After surgery, your eye may be covered with a bandage. The bandage remains on the eye until the follow-up examination the next day. You will arrange the time of this check-up with the operating nurse.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "The next day, you will come to the 'German Eye Clinic' for your first follow-up examination at the scheduled time. You will be accompanied to the surgical department, where the surgeon will assess the condition of your eye and schedule the next follow-up visit.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "After surgery, it is necessary to follow these rules:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            numeric: true,
+                            list: [
+                                "Postoperative eye protection: for the first 3 weeks, do not touch your eyes (no scratching, rubbing, or pressing). Indoors, you may be without a bandage or sunglasses; for one month after surgery, you must wear sunglasses outdoors in any weather.",
+                                "Personal hygiene: during the first week after surgery, avoid washing your head and face to prevent soap from entering the operated eye. You may take a shower immediately, but only up to chin level. Visiting baths, saunas, swimming pools, or open water is prohibited for one month after surgery.",
+                                "Physical activity restrictions: for one month after surgery, avoid prolonged bending of your body and head (such as washing floors without a mop, hand washing clothes, or gardening), strength or contact sports, and lifting objects heavier than 10 kg for men and 5 kg for women.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: "After completing the treatment, you will receive a discharge summary containing the treatment duration, name of the operation, results of control examinations, and postoperative treatment recommendations, including the duration of temporary disability if applicable.",
+                        },
+                    ],
+                },
+            ],
+        },
         ru: {
             title: "Подготовка к операции по поводу косоглазия",
-            content: [],
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Перед операцией необходимо пройти полное обследование у офтальмолога. На приём желательно принести выписки из предыдущих обследований и информацию о ранее проведённых хирургических вмешательствах. Перед возможной операцией врач проводит коррекцию и лечение всех имеющихся глазных заболеваний и может направить вас на дополнительные обследования к другим специалистам.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "После завершения подготовительного периода вы вместе с врачом составляете индивидуальный и комфортный план лечения, проходите предоперационные обследования, вам назначается день операции. Во время предоперационного осмотра с анестезиологом выбирается подходящий метод обезболивания и обсуждаются детали предоперационной подготовки.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "После операции глаз может быть закрыт повязкой. Повязка остаётся на глазу до контрольного осмотра на следующий день. Время осмотра согласовывается с операционной медсестрой.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "На следующий день вы приезжаете в «Немецкую глазную клинику» на первый контрольный осмотр в назначенное время. Вас проводят в хирургическое отделение, где врач-хирург оценит состояние вашего глаза и назначит дату следующего осмотра.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "После операции необходимо соблюдать следующие правила:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            numeric: true,
+                            list: [
+                                "Послеоперационная защита глаза: первые 3 недели нельзя трогать глаза руками (чесать, тереть, нажимать и т.д.), в помещении можно находиться без повязки и солнцезащитных очков; в течение месяца после операции при выходе на улицу в любую погоду необходимо носить солнцезащитные очки.",
+                                "Личная гигиена: в течение первой недели после операции желательно не мыть голову и не умывать лицо, чтобы избежать попадания мыльного раствора в прооперированный глаз. Душ можно принимать сразу, но не выше уровня подбородка. Посещение бани, сауны, бассейна и купание в открытых водоёмах запрещено в течение месяца после операции.",
+                                "Ограничения физических нагрузок: в течение месяца после операции следует избегать длительных наклонов туловища и головы (мытьё полов без швабры, ручная стирка, работа в огороде и т.п.), занятий силовыми и игровыми видами спорта, подъёма тяжестей более 10 кг для мужчин и 5 кг для женщин.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: "После завершения лечения вам выдадут эпикриз с указанием сроков лечения, названия операции, данных контрольных осмотров и рекомендаций по послеоперационному периоду, включая длительность временной нетрудоспособности.",
+                        },
+                    ],
+                },
+            ],
         },
     },
     {
@@ -413,24 +563,630 @@ export const pationtsInstructionsData: PationtsInstructionType[] = [
         )!,
         uk: {
             title: "Памʼятка перед дитячим комплексним оглядом",
-            content: [],
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "При зверненні в Дитячу клініку «Злата» з метою обстеження дитини профілактично  або при наявності скарг слідуйте, будь ласка, наступним рекомендаціям:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Оберіть час відвідування, який не співпадає зі сном або годуванням дитини.",
+                                "Поясніть дитині, що лікар оглядає очі, щоб допомогти їм  залишатися здоровими ",
+                                "Якщо дитина носить окуляри, візьміть їх з собою.",
+                                "При наявності рецептів для корекції окулярами або контактними лінзами, медичної документації про попередні обстеження, оперативні втручання, лікуваннями, візьміть її з собою.",
+                                "Уникайте тривалого зорового навантаження перед прийомом лікаря.",
+                                "При наявності гострих скарг (біль, почервоніння, закисання, свербіж очей) під час запису на прийом повідомте про це реєстратора.",
+                                "Якщо дитина напередодні або в день звернення була обстежена в інших клініках і ще триває ефект широкої зіниці, це не дасть можливість оцінити всі зорові функції і провести повне первинне обстеження.",
+                                "Перед початком обстеження повідомте які очні краплі, інші ліки застосовує дитина.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Обстеження проводиться з індивідуальним підходом, в закладі є ігрова дитяча кімната з іграшками та розмальовками. Ми робимо Ваше перебування в клініці комфортним. ",
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    value: "Після прийому дотримуйтесь рекомендацій лікаря.",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         en: {
             title: "Reminder before a comprehensive pediatric examination",
-            content: [],
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "When visiting the Children's Clinic «Zlata» for your child's examination, either for preventive purposes or due to complaints, please follow these recommendations:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Choose a visit time that does not coincide with your child’s sleep or feeding.",
+                                "Explain to your child that the doctor examines their eyes to help keep them healthy.",
+                                "If your child wears glasses, bring them with you.",
+                                "If you have prescriptions for glasses or contact lenses, medical records of previous examinations, surgeries, or treatments, please bring them with you.",
+                                "Avoid prolonged visual strain before seeing the doctor.",
+                                "If there are acute complaints (pain, redness, discharge, itching of the eyes), inform the receptionist when making an appointment.",
+                                "If your child was examined in another clinic the day before or on the same day, and the effect of dilated pupils is still present, it will not be possible to fully assess all visual functions and conduct a complete initial examination.",
+                                "Before starting the examination, inform the doctor about any eye drops or other medications your child is currently using.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "The examination is conducted with an individual approach. The clinic has a playroom with toys and coloring books. We make your stay in the clinic comfortable.",
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    value: "After the appointment, follow the doctor’s recommendations.",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         ru: {
             title: "Памятка перед детским комплексным осмотром",
-            content: [],
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "При обращении в Детскую клинику «Злата» с целью обследования ребёнка профилактически или при наличии жалоб, пожалуйста, следуйте следующим рекомендациям:",
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Выберите время посещения, которое не совпадает со сном или кормлением ребёнка.",
+                                "Объясните ребёнку, что врач осматривает глаза, чтобы помочь им оставаться здоровыми.",
+                                "Если ребёнок носит очки, возьмите их с собой.",
+                                "При наличии рецептов на очки или контактные линзы, медицинской документации о предыдущих обследованиях, операциях, лечении — возьмите её с собой.",
+                                "Избегайте длительной зрительной нагрузки перед приёмом у врача.",
+                                "При наличии острых жалоб (боль, покраснение, закисание, зуд глаз) сообщите об этом регистратору при записи на приём.",
+                                "Если ребёнок накануне или в день обращения проходил обследование в других клиниках и эффект широкого зрачка ещё сохраняется, это не позволит оценить все зрительные функции и провести полное первичное обследование.",
+                                "Перед началом обследования сообщите, какие глазные капли или другие лекарства применяет ребёнок.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "Обследование проводится с индивидуальным подходом. В клинике есть игровая комната с игрушками и раскрасками. Мы делаем ваше пребывание в клинике комфортным.",
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    value: "После приёма соблюдайте рекомендации врача.",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
     },
     {
         name: keySlugPatientsInstruction.find(
             k => k.key === "patient-information-before-IPL-therapy"
         )!,
-        uk: { title: "Памʼятка пацієнта перед IPL-терапією", content: [] },
-        en: { title: "Patient information before IPL therapy", content: [] },
-        ru: { title: "Памятка пациента перед IPL-терапией", content: [] },
+        uk: {
+            title: "Памʼятка пацієнта перед IPL-терапією",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "У нашому центрі процедура виконується на IPL-xenon апараті останнього покоління OPTICLEAR XL-DRY EYE MANAGEMENT, який був затверджений для цієї процедури в офтальмології в Україні.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Увага! ",
+                                },
+                                {
+                                    bold: true,
+                                    value: "З собою необхідно мати темні окуляри.",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "За 7–14 днів до процедури:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Уникати сонячного опромінення або солярію, щоб не було засмаги (високий ризик пігментації після IPL).",
+                                "Не використовувати ретиноїди, кислотні пілінги, відбілювальні креми в зоні навколо очей.",
+                                "Не проводити косметологічні процедури в ділянці обличчя (лазер, хімічні пілінги тощо).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                { subtitle: true, value: "У день процедури:" },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Очистити шкіру обличчя (без макіяжу, кремів чи олій).",
+                                "Уникати використання контактних лінз перед процедурою.",
+                                "Можна попередньо прийняти антигістамінний засіб, якщо є схильність до алергічних реакцій (за рекомендацією лікаря).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Одразу після процедури:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Може бути легке почервоніння або набряк — це нормально і проходить за кілька годин.",
+                                "За потреби можна прикласти прохолодний компрес (але не лід напряму на шкіру!).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Протягом 24–48 годин:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Не наносити макіяж на зону навколо очей.",
+                                "Уникати активного тертя повік або використання агресивних засобів.",
+                                "Не використовувати контактні лінзи, якщо повіки подразнені.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ subtitle: true, value: "Захист шкіри:" }],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Обов'язково наносити сонцезахисний крем SPF 30+ на обличчя, навіть якщо процедура була тільки на повіках (УФ-промені можуть спровокувати пігментацію).",
+                                "Уникати сонця та солярію протягом 1–2 тижнів.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Зволоження та відновлення:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "За рекомендацією лікаря можна використовувати заспокійливий крем (наприклад, з пантенолом).",
+                                "Можуть бути призначені краплі чи інші засоби для підтримки очної поверхні.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Уникати теплового навантаження:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Протягом кількох днів — не відвідувати сауну, лазню, гарячі ванни.",
+                            ],
+                        },
+                        {
+                            type: "text",
+
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Увага! ",
+                                },
+                                {
+                                    bold: true,
+                                    value: "IPL-терапія протипоказана під час вагітності, годування груддю, при активній шкірній інфекції, епілепсії, загальних захворювань у стадії декомпенсації.",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        en: {
+            title: "Patient information before IPL therapy",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "In our center, the procedure is performed using the latest-generation IPL-xenon device OPTICLEAR XL-DRY EYE MANAGEMENT, which has been approved for this ophthalmological procedure in Ukraine.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Attention! ",
+                                },
+                                {
+                                    bold: true,
+                                    value: "You must bring dark sunglasses with you.",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "7–14 days before the procedure:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Avoid sun exposure or tanning beds to prevent tanning (there is a high risk of pigmentation after IPL).",
+                                "Do not use retinoids, acid peels, or whitening creams in the eye area.",
+                                "Do not undergo cosmetic facial procedures (laser, chemical peels, etc.).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "On the day of the procedure:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Clean your facial skin (no makeup, creams, or oils).",
+                                "Avoid wearing contact lenses before the procedure.",
+                                "You may take an antihistamine in advance if you are prone to allergic reactions (as recommended by your doctor).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Immediately after the procedure:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Mild redness or swelling may occur — this is normal and should subside within a few hours.",
+                                "If necessary, you can apply a cool compress (but do not apply ice directly to the skin!).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Within 24–48 hours:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Do not apply makeup around the eyes.",
+                                "Avoid rubbing your eyelids or using harsh skincare products.",
+                                "Do not wear contact lenses if your eyelids are irritated.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                { subtitle: true, value: "Skin protection:" },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Always apply SPF 30+ sunscreen to your face, even if the procedure was performed only on the eyelids (UV rays may cause pigmentation).",
+                                "Avoid sun exposure and tanning beds for 1–2 weeks.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Moisturizing and recovery:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "As recommended by your doctor, you may use a soothing cream (for example, with panthenol).",
+                                "Eye drops or other products to support the ocular surface may be prescribed.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Avoid heat exposure:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "For several days, avoid saunas, steam baths, and hot baths.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Attention! ",
+                                },
+                                {
+                                    bold: true,
+                                    value: "IPL therapy is contraindicated during pregnancy, breastfeeding, in cases of active skin infection, epilepsy, or general diseases in the decompensation stage.",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        ru: {
+            title: "Памятка пациента перед IPL-терапией",
+            content: [
+                {
+                    text: [
+                        {
+                            type: "text",
+                            gap: true,
+                            text: "В нашем центре процедура выполняется на IPL-ксеноновом аппарате последнего поколения OPTICLEAR XL-DRY EYE MANAGEMENT, который был одобрен для проведения данной процедуры в офтальмологии в Украине.",
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Внимание! ",
+                                },
+                                {
+                                    bold: true,
+                                    value: "Необходимо иметь с собой тёмные солнцезащитные очки.",
+                                },
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "За 7–14 дней до процедуры:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Избегать солнечного излучения и солярия, чтобы не было загара (высокий риск пигментации после IPL).",
+                                "Не использовать ретиноиды, кислотные пилинги, отбеливающие кремы в области вокруг глаз.",
+                                "Не проводить косметологические процедуры в области лица (лазер, химические пилинги и т.п.).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                { subtitle: true, value: "В день процедуры:" },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Очистить кожу лица (без макияжа, кремов или масел).",
+                                "Избегать использования контактных линз перед процедурой.",
+                                "При склонности к аллергическим реакциям можно заранее принять антигистаминный препарат (по рекомендации врача).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Сразу после процедуры:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Возможно лёгкое покраснение или отёк — это нормально и проходит через несколько часов.",
+                                "При необходимости можно приложить прохладный компресс (но не лёд напрямую на кожу!).",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "В течение 24–48 часов:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Не наносить макияж на область вокруг глаз.",
+                                "Избегать активного трения век и использования агрессивных средств.",
+                                "Не использовать контактные линзы, если веки раздражены.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [{ subtitle: true, value: "Защита кожи:" }],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "Обязательно наносить солнцезащитный крем SPF 30+ на лицо, даже если процедура проводилась только на веках (УФ-лучи могут вызвать пигментацию).",
+                                "Избегать солнца и солярия в течение 1–2 недель.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Увлажнение и восстановление:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "По рекомендации врача можно использовать успокаивающий крем (например, с пантенолом).",
+                                "Могут быть назначены капли или другие средства для поддержания поверхности глаза.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            gap: true,
+                            text: [
+                                {
+                                    subtitle: true,
+                                    value: "Избегать тепловой нагрузки:",
+                                },
+                            ],
+                        },
+                        {
+                            type: "list",
+                            gap: true,
+                            list: [
+                                "В течение нескольких дней не посещать сауну, баню, не принимать горячие ванны.",
+                            ],
+                        },
+                        {
+                            type: "text",
+                            text: [
+                                {
+                                    bold: true,
+                                    subtitle: true,
+                                    value: "Внимание! ",
+                                },
+                                {
+                                    bold: true,
+                                    value: "IPL-терапия противопоказана во время беременности, кормления грудью, при активных кожных инфекциях, эпилепсии и общих заболеваниях в стадии декомпенсации.",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
     },
     {
         name: keySlugPatientsInstruction.find(
