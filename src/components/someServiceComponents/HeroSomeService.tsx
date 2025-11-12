@@ -27,12 +27,11 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
         >
             {hasVideo && (
                 <video
-                    className="absolute top-0 left-1/2 z-0 h-full w-auto -translate-x-1/2 object-cover"
+                    className="absolute top-0 left-1/2 z-0 h-full w-auto -translate-x-1/2 border border-red-500 object-cover"
                     autoPlay
                     muted
                     loop
                     playsInline
-                    poster={data.image}
                 >
                     {data.videoSmallScreens && (
                         <source
