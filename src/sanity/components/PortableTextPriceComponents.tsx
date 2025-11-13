@@ -1,14 +1,22 @@
 import { PortableText, PortableTextComponents } from "@portabletext/react";
+import { PortableTextBlock } from "@portabletext/types";
 
 import { AccentText } from "@/sanity/components/AccentText";
 import { MediumText } from "@/sanity/components/MediumText";
 import { Subtitle } from "@/sanity/components/Subtitle";
 
+import { BlackText } from "./BlackText";
+
+interface MyPortableTextBlock extends PortableTextBlock {
+    addSpacing?: boolean;
+}
+
 const components: PortableTextComponents = {
     marks: {
-        emerald: ({ children }) => <AccentText>{children}</AccentText>,
         bold: ({ children }) => <MediumText>{children}</MediumText>,
         subtitle: ({ children }) => <Subtitle>{children}</Subtitle>,
+        emerald: ({ children }) => <AccentText>{children}</AccentText>,
+        black: ({ children }) => <BlackText>{children}</BlackText>,
     },
     list: {
         bullet: ({ children }) => (
@@ -20,26 +28,64 @@ const components: PortableTextComponents = {
     },
     listItem: {
         bullet: ({ children }) => (
-            <li className="pc:text-lg text-grey pc:leading-[22px] leading-5">
-                {children}
-            </li>
+            <li className="pc:text-lg text-grey leading-[120%]">{children}</li>
         ),
         number: ({ children }) => (
-            <li className="pc:text-lg text-grey pc:leading-[22px] leading-5">
-                {children}
-            </li>
+            <li className="pc:text-lg text-grey leading-[120%]">{children}</li>
         ),
     },
     block: {
-        normal: ({ children }) => (
-            <p className="pc:text-lg text-grey pc:leading-[22px] prepc:mb-4 mb-2 leading-5">
-                {children}
-            </p>
-        ),
+        normal: (props: {
+            children?: React.ReactNode;
+            value: MyPortableTextBlock;
+        }) => {
+            const { children, value } = props;
+            const spacing = value.addSpacing ?? false;
+            if (
+                !children ||
+                (Array.isArray(children) &&
+                    children.length === 1 &&
+                    typeof children[0] === "string" &&
+                    children[0].trim() === "")
+            ) {
+                return null;
+            }
+
+            const spacingClass = spacing ? "mt-2 prepc:mt-4" : "";
+
+            return (
+                <p
+                    className={`pc:text-lg text-grey leading-[120%] ${spacingClass}`}
+                >
+                    {children}
+                </p>
+            );
+        },
     },
 };
 
 export const PortableTextPriceRenderer = ({ value }: { value: any }) => {
     if (!value) return null;
-    return <PortableText value={value} components={components} />;
+
+    // Позначаємо блоки після пустих, щоб створити відступ
+    const processedValue = [];
+    for (let i = 0; i < value.length; i++) {
+        const block = value[i];
+
+        // Якщо це пустий блок, пропускаємо, але помічаємо наступний
+        if (
+            block?._type === "block" &&
+            (!block.children ||
+                block.children.every(
+                    (child: any) => !child.text || !child.text.trim()
+                ))
+        ) {
+            if (value[i + 1]) value[i + 1].addSpacing = true;
+            continue;
+        }
+
+        processedValue.push(block);
+    }
+
+    return <PortableText value={processedValue} components={components} />;
 };

@@ -301,7 +301,8 @@
         "service": "Услуга",
         "price": "Цена в грн",
         "newTechnology": "Новые технологии",
-        "specialPrice": "Специальная цена"
+        "specialPrice": "Специальная цена",
+        "servicesPrice": "от {price}"
     },
     "PatientsPage": {
         "title": "Информация для \nпациентов",

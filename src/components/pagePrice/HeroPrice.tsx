@@ -2,12 +2,10 @@ import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
 
-import { ServicesKeyType } from "../assets/menu";
-
 export const HeroPrice = ({
     list,
 }: {
-    list: { title: string; key: ServicesKeyType }[];
+    list: { title: string; key: string }[];
 }) => {
     const t = useTranslations("PricePage");
     return (

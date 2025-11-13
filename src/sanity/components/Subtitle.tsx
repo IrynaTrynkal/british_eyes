@@ -1,13 +1,10 @@
-import { ReactNode } from "react";
-
-export const Subtitle = (props: { children: ReactNode }) => (
+export const Subtitle = ({ children }: { children: React.ReactNode }) => (
     <span
         style={{
             textTransform: "uppercase",
             fontFamily: "var(--font-oswald)",
-            color: "#151515",
         }}
     >
-        {props.children}
+        {children}
     </span>
 );

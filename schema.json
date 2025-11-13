@@ -397,10 +397,24 @@
                     },
                     "optional": true
                 },
+                "lowerPriceLimit": {
+                    "type": "objectAttribute",
+                    "value": {
+                        "type": "boolean"
+                    },
+                    "optional": true
+                },
                 "discountPrice": {
                     "type": "objectAttribute",
                     "value": {
                         "type": "number"
+                    },
+                    "optional": true
+                },
+                "lowerDiscountLimit": {
+                    "type": "objectAttribute",
+                    "value": {
+                        "type": "boolean"
                     },
                     "optional": true
                 },
