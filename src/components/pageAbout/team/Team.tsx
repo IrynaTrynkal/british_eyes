@@ -1,13 +1,23 @@
-import { useTranslations } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 
 import { aboutServicesList } from "@/components/assets/aboutData";
-import { priceList } from "@/components/assets/priceList";
 import { LinkAction } from "@/components/shared/LinkAction";
+import { sanityFetch } from "@/sanity/lib/client";
+import { pricesShortQuery } from "@/sanity/lib/queries";
+import { getLowestPrice } from "@/utils/getLowestPrice";
 
+import { PricesShortQueryResult } from "../../../../sanity.types";
 import { TeamCard } from "./TeamCard";
 
-export const Team = () => {
-    const t = useTranslations("AboutPage");
+export const Team = async () => {
+    const t = await getTranslations("AboutPage");
+    const locale = await getLocale();
+
+    const pricesList: PricesShortQueryResult = await sanityFetch({
+        query: pricesShortQuery,
+        params: { language: locale },
+        tags: [],
+    });
     const teamList = [t("teamLi1"), t("teamLi2"), t("teamLi3")];
     return (
         <section className="content pc:pb-30 relative pb-[60px]">
@@ -31,25 +41,25 @@ export const Team = () => {
             </div>
             <ul className="tab:flex-row tab:flex-wrap tab:justify-center prepc:gap-5 tab:mb-0 mb-6 flex flex-col gap-3">
                 {aboutServicesList.map(ser => {
-                    const priceBlock = priceList.find(
-                        block => block.key === ser.key
-                    );
-
-                    const firstPriceItem = priceBlock?.list?.[0];
+                    const priceItem = pricesList?.find(
+                        price => price.servicesKey === ser.key
+                    )?.list;
+                    const lowest = getLowestPrice(priceItem);
 
                     const price =
-                        firstPriceItem?.discountPrice ??
-                        firstPriceItem?.price ??
-                        null;
+                        lowest?.discountPrice ?? lowest?.price ?? null;
 
-                    const disc = firstPriceItem?.discountPrice ? true : false;
+                    const disc =
+                        lowest?.lowerDiscountLimit || lowest.lowerPriceLimit
+                            ? true
+                            : false;
 
                     return (
                         <li
                             key={ser.key}
                             className="border-grey group tab:max-w-[480px] prepc:w-[32%] prepc:max-w-[434px] pc:w-[434px] tab:w-[49%] hover-green-gradient rounded-xl border p-3"
                         >
-                            <TeamCard ser={ser} price={price} discount={disc} />
+                            <TeamCard ser={ser} priceData={lowest} />
                         </li>
                     );
                 })}

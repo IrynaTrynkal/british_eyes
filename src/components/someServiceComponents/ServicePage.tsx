@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 
+import { sanityFetch } from "@/sanity/lib/client";
+import { pricesPageQuery } from "@/sanity/lib/queries";
 import { LocaleType } from "@/types/LocaleType";
 
 import { servicesData, ServicesProps } from "../assets/servicesData";
@@ -16,13 +18,18 @@ import { PriceSection } from "./priceSection/PriceSection";
 import { RoundImageAndTextSection } from "./roundImageAndText/RoundImageAndTextSection";
 import { TextsColumnsSection } from "./textsColumnsSection/TextsColumnsSection";
 
-export const ServicePageContent = ({
+export const ServicePageContent = async ({
     serviceData,
     locale,
 }: {
     serviceData: ServicesProps;
     locale: LocaleType;
 }) => {
+    const pricesList = await sanityFetch({
+        query: pricesPageQuery,
+        params: { language: locale },
+        tags: [],
+    });
     const sections = serviceData[locale]?.sections ?? [];
 
     const perevirkaZoruService = servicesData.find(
@@ -33,6 +40,12 @@ export const ServicePageContent = ({
         sec => sec.type === "priceSection"
     );
 
+    const previewPrice = pricesList?.find(
+        item => item.servicesKey === serviceData.name.key
+    )?.list
+        ? true
+        : false;
+
     return (
         <>
             {sections.map((section, index) => {
@@ -41,7 +54,7 @@ export const ServicePageContent = ({
                         return (
                             <Preview
                                 key={index}
-                                price={serviceData.price}
+                                price={previewPrice}
                                 data={section.data}
                             />
                         );
@@ -84,6 +97,7 @@ export const ServicePageContent = ({
                             <PriceSection
                                 key={index}
                                 locale={locale}
+                                pricesList={pricesList}
                                 slug={
                                     serviceData.name.key ===
                                     "dityache-viddilennya"

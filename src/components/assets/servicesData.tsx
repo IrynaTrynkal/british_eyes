@@ -5,8 +5,7 @@ import {
     DiscountLocale,
     DiscountNoLocale,
 } from "./discount.Data";
-import { ServicesKeyType, servicesList, ServicesListProps } from "./menu";
-import { PriceItemType, priceList } from "./priceList";
+import { servicesList, ServicesListProps } from "./menu";
 
 export type SectionType =
     | { type: "preview"; data: PreviewProps }
@@ -33,19 +32,11 @@ export type ServicesLocaleProps = {
 export type ServicesProps = {
     name: ServicesListProps;
     additionalIcon?: string;
-    price: PriceItemType;
     uk: ServicesLocaleProps;
     en: ServicesLocaleProps;
     ru: ServicesLocaleProps;
 };
 
-const findPriceItem = (key: ServicesKeyType): PriceItemType => {
-    const item = priceList.find(p => p.key === key)?.list[0];
-    if (item) return item;
-    return {
-        price: 0,
-    };
-};
 export type PreviewProps = {
     fractionUp?: boolean;
     title: string;
@@ -252,7 +243,6 @@ export type FAQServiceSectionType = {
 export const servicesData: ServicesProps[] = [
     {
         name: servicesList.find(s => s.key === "perevirka-zoru")!,
-        price: findPriceItem("perevirka-zoru")!,
         uk: {
             textMain:
                 "Комплексне обстеження та перевірка зору з використанням сучасного обладнання.",
@@ -1560,7 +1550,6 @@ export const servicesData: ServicesProps[] = [
     {
         name: servicesList.find(s => s.key === "likuvannya-katarakti")!,
         additionalIcon: "/icons/iq-life.svg",
-        price: findPriceItem("likuvannya-katarakti")!,
         uk: {
             textMain:
                 "Хірургічне лікування катаракти, косоокості, кератоконуса та інших офтальмологічних патологій.",
@@ -2276,7 +2265,6 @@ export const servicesData: ServicesProps[] = [
     },
     {
         name: servicesList.find(s => s.key === "syndrom-sukhoho-oka")!,
-        price: findPriceItem("syndrom-sukhoho-oka")!,
         uk: {
             textMain:
                 "Ми забезпечуємо ефективний та індивідуальний підхід до усунення неприємних симптомів, щоб повернути комфорт та здоров'я вашим очам.",
@@ -3299,7 +3287,6 @@ export const servicesData: ServicesProps[] = [
     {
         name: servicesList.find(s => s.key === "vitreoretinalna-hirurgiya")!,
         additionalIcon: "/icons/iq-life.svg",
-        price: findPriceItem("vitreoretinalna-hirurgiya")!,
         uk: {
             textMain: "Лікування захворювань сітківки та склоподібного тіла.",
             sections: [
@@ -3896,7 +3883,6 @@ export const servicesData: ServicesProps[] = [
     {
         name: servicesList.find(s => s.key === "lazerna-korekcziya-zoru")!,
         additionalIcon: "/icons/iq-lasik.svg",
-        price: findPriceItem("lazerna-korekcziya-zoru")!,
         uk: {
             textMain:
                 "Сучасні методи виправлення рефракційних порушень відновлення чіткості зору.",
@@ -4499,7 +4485,6 @@ export const servicesData: ServicesProps[] = [
     },
     {
         name: servicesList.find(s => s.key === "dityache-viddilennya")!,
-        price: findPriceItem("dityache-viddilennya")!,
         uk: {
             textMain:
                 "У Дитячій клініці Злата проводимо перевірку зору у дітей від немовлят до підлітків.",
@@ -5421,7 +5406,6 @@ export const servicesData: ServicesProps[] = [
     },
     {
         name: servicesList.find(s => s.key === "likuvannya-keratokonusa")!,
-        price: findPriceItem("likuvannya-keratokonusa")!,
         uk: {
             textMain:
                 "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
@@ -6142,7 +6126,6 @@ export const servicesData: ServicesProps[] = [
     },
     {
         name: servicesList.find(s => s.key === "refrakczijna-lensektomiya")!,
-        price: findPriceItem("refrakczijna-lensektomiya")!,
         uk: {
             textMain:
                 "BiVision RLE (рефракційна ленсектомія) — ефективний метод корекції пресбіопії (вікова далекозорість).",
@@ -7240,7 +7223,6 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(
             s => s.key === "lazerne-likuvannya-zahvoryuvan-oka"
         )!,
-        price: findPriceItem("lazerne-likuvannya-zahvoryuvan-oka")!,
         uk: {
             textMain:
                 "Можливість чітко візуалізувати патологічні зміни дозволяє лікарю виконувати процедуру гранично точно.",
@@ -7812,7 +7794,6 @@ export const servicesData: ServicesProps[] = [
 
     {
         name: servicesList.find(s => s.key === "intravitrealni-inekczii")!,
-        price: findPriceItem("intravitrealni-inekczii")!,
         uk: {
             textMain:
                 "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
@@ -8475,7 +8456,6 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(
             s => s.key === "hirurgichne-likuvannya-glaukomi"
         )!,
-        price: findPriceItem("hirurgichne-likuvannya-glaukomi")!,
         uk: {
             textMain:
                 "Ми лікуємо всі види глаукоми із застосуванням найсучасніших і ефективних хірургічних методик.",
@@ -9130,7 +9110,6 @@ export const servicesData: ServicesProps[] = [
     },
     {
         name: servicesList.find(s => s.key === "likuvannya-kosookosti")!,
-        price: findPriceItem("likuvannya-kosookosti")!,
         uk: {
             textMain:
                 "Ми пропонуємо новітні методи діагностики та лікування косоокості, а також закріплення результату.",
@@ -9711,7 +9690,6 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(
             s => s.key === "hirurgiya-povik-i-konyunktivi"
         )!,
-        price: findPriceItem("hirurgiya-povik-i-konyunktivi")!,
         uk: {
             textMain:
                 "Хірургія повік і кон’юнктиви (блефаропластика та інші втручання).",
@@ -10463,7 +10441,6 @@ export const servicesData: ServicesProps[] = [
     },
     {
         name: servicesList.find(s => s.key === "ksenonoterapiya")!,
-        price: findPriceItem("ksenonoterapiya")!,
         uk: {
             textMain: "Методика «Янгельські сни».",
             sections: [
@@ -11121,7 +11098,6 @@ export const servicesData: ServicesProps[] = [
     },
     {
         name: servicesList.find(s => s.key === "anesteziologichnij-posibnik")!,
-        price: findPriceItem("anesteziologichnij-posibnik")!,
         uk: {
             textMain:
                 "Анестезіологічний супровід у нашій клініці забезпечує операції без болю та з максимальною безпекою.",
