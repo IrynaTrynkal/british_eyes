@@ -1,30 +1,26 @@
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 import { ServicesKeyType } from "@/components/assets/menu";
 import { PriceSectionProps } from "@/components/assets/servicesData";
 import { PriceCard } from "@/components/pagePrice/PriceCard";
-import { sanityFetch } from "@/sanity/lib/client";
-import { pricesPageQuery } from "@/sanity/lib/queries";
 import { LocaleType } from "@/types/LocaleType";
 import { hasCardDiscountData } from "@/utils/hasCardDiscountData";
 
+import { PricesPageQueryResult } from "../../../../sanity.types";
 import { OfferCard } from "./OfferCard";
 
-export const PriceSection = async ({
+export const PriceSection = ({
     data,
     slug,
     locale,
+    pricesList,
 }: {
     data: PriceSectionProps;
     slug: ServicesKeyType;
     locale: LocaleType;
+    pricesList: PricesPageQueryResult;
 }) => {
-    const pricesList = await sanityFetch({
-        query: pricesPageQuery,
-        params: { language: locale },
-        tags: [],
-    });
-    const t = await getTranslations("ServicesPage");
+    const t = useTranslations("ServicesPage");
 
     const priceListData = pricesList?.find(item => item.servicesKey === slug);
     if (!priceListData && !data.card) return null;

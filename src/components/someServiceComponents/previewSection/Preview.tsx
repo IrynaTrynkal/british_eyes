@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { PriceItemType } from "@/components/assets/priceList";
 import { PreviewProps } from "@/components/assets/servicesData";
 import { CallUs } from "@/components/shared/CallUs";
 import { Fraction } from "@/components/shared/Fraction";
@@ -12,7 +11,7 @@ export const Preview = ({
     price,
 }: {
     data?: PreviewProps;
-    price: PriceItemType;
+    price: boolean;
 }) => {
     const t = useTranslations("ServicesPage");
     const tH = useTranslations("HomePage");
@@ -99,7 +98,7 @@ export const Preview = ({
                                     />
                                 )}
                                 <div className="tab:flex-row tab:gap-6 tab:justify-end flex flex-col justify-center gap-2.5">
-                                    {price?.price ? (
+                                    {price ? (
                                         <LinkAction
                                             secondary
                                             href="/tsiny"
@@ -170,7 +169,7 @@ export const Preview = ({
                         </div>
                     ) : (
                         <div className="prepc:absolute tab:mr-6 prepc:mr-0 prepc:bottom-12 pc:bottom-[120px] pc:right-12 prepc:right-6 tab:flex-row tab:gap-6 tab:justify-end flex flex-col justify-center gap-2.5">
-                            {price?.price ? (
+                            {price ? (
                                 <LinkAction
                                     secondary
                                     href="/tsiny"
