@@ -6,14 +6,19 @@ import { IconPercent } from "@/components/shared/icons/IconPercent";
 import { Link } from "@/i18n/navigation";
 import { LocaleType } from "@/types/LocaleType";
 
+type PriceDataLowest = {
+    price: number | null;
+    lowerPriceLimit: boolean | null;
+    discountPrice: number | null;
+    lowerDiscountLimit: boolean | null;
+};
+
 export const TeamCard = ({
     ser,
-    price,
-    discount,
+    priceData,
 }: {
     ser: AboutServicesType;
-    price: number | null;
-    discount?: boolean;
+    priceData: PriceDataLowest;
 }) => {
     const t = useTranslations("HomePage");
     const locale = useLocale();
@@ -25,18 +30,32 @@ export const TeamCard = ({
         >
             <div className="relative flex justify-between">
                 <h4
-                    className={`font-oswald prepc:text-2xl prepc:leading-8 group-hover:text-ivory group-active:text-ivory leading-5 font-medium uppercase transition-colors duration-300 ease-in-out ${discount ? "prepc:max-w-[60%] max-w-[49.7%]" : "prepc:max-w-[70%] pc:max-w-[74.7%] max-w-[61.7%]"}`}
+                    className={`font-oswald prepc:text-2xl prepc:leading-8 group-hover:text-ivory group-active:text-ivory leading-5 font-medium uppercase transition-colors duration-300 ease-in-out ${priceData.discountPrice ? "prepc:max-w-[60%] max-w-[49.7%]" : "prepc:max-w-[70%] pc:max-w-[74.7%] max-w-[61.7%]"}`}
                 >
                     {ser.data[locale as LocaleType].title}
                 </h4>
-                {price && (
+                {priceData && (
                     <p className="font-oswald group-hover:text-ivory group-active:text-ivory prepc:text-base text-sm leading-none whitespace-nowrap uppercase transition-colors duration-300 ease-in-out">
-                        {t("servicesPrice", {
-                            price,
-                        })}
+                        {priceData.discountPrice
+                            ? priceData.lowerDiscountLimit
+                                ? t("servicesPrice", {
+                                      price: priceData.discountPrice,
+                                  })
+                                : t("servicesDiscountPrice", {
+                                      price: priceData.discountPrice,
+                                  })
+                            : priceData.price
+                              ? priceData.lowerPriceLimit
+                                  ? t("servicesPrice", {
+                                        price: priceData.price,
+                                    })
+                                  : t("servicesDiscountPrice", {
+                                        price: priceData.price,
+                                    })
+                              : t("details")}
                     </p>
                 )}
-                {discount && (
+                {priceData.discountPrice && (
                     <div className="text-ivory font-oswald pc:text-3xl tab:w-9 tab:h-10 tab:text-xl pc:h-12 pc:w-11 prepc:right-[27%] absolute -top-3 right-[36%] flex h-8 w-8 items-center justify-center bg-black leading-none font-bold uppercase">
                         <IconPercent className="pc:w-4 pc:h-[22px] tab:w-[14px] tab:h-5 h-4 w-3" />
                     </div>

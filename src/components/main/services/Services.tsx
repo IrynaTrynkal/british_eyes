@@ -1,12 +1,14 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { Fraction } from "@/components/shared/Fraction";
 import { LinkAction } from "@/components/shared/LinkAction";
+import { LocaleType } from "@/types/LocaleType";
 
 import { ServicesList } from "./ServicesList";
 
 export const Services = () => {
     const t = useTranslations("HomePage");
+    const locale = useLocale();
 
     return (
         <section className="content pc:pt-[120px] tab:pt-12 pt-[60px]">
@@ -26,7 +28,7 @@ export const Services = () => {
                     {t("servicesText")}
                 </p>
             </div>
-            <ServicesList />
+            <ServicesList locale={locale as LocaleType} />
             <LinkAction
                 secondary
                 className="tab:hidden pc:ml-auto pc:mr-0 mx-auto"
