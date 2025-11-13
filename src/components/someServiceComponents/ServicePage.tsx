@@ -83,6 +83,7 @@ export const ServicePageContent = ({
                         return (
                             <PriceSection
                                 key={index}
+                                locale={locale}
                                 slug={
                                     serviceData.name.key ===
                                     "dityache-viddilennya"

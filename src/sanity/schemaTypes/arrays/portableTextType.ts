@@ -1,6 +1,7 @@
 import { defineArrayMember, defineField } from "sanity";
 
 import { AccentText } from "@/sanity/components/AccentText";
+import { BlackText } from "@/sanity/components/BlackText";
 import { MediumText } from "@/sanity/components/MediumText";
 import { Subtitle } from "@/sanity/components/Subtitle";
 
@@ -18,6 +19,12 @@ export const portableTextType = defineField({
             ],
             marks: {
                 decorators: [
+                    {
+                        title: "Чорний",
+                        value: "black",
+                        icon: () => "⚫️",
+                        component: BlackText,
+                    },
                     {
                         title: "Зелений",
                         value: "emerald",

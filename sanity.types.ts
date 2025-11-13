@@ -86,7 +86,9 @@ export type PriceItem = {
         } & InternationalizedArrayStringValue
     >;
     price?: number;
+    lowerPriceLimit?: boolean;
     discountPrice?: number;
+    lowerDiscountLimit?: boolean;
     specialPrice?: boolean;
     new?: boolean;
     serviceDescription?: Array<
@@ -286,28 +288,28 @@ export type AllSanitySchemaTypes =
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./src/sanity/lib/queries.ts
 // Variable: pricesPageQuery
-// Query: *[_type == "pricesPage" && !(_id in path("drafts.**"))][0] { "blocks": priceBlocks[] {servicesKey, "servicesName": servicesName[_key == $language][0].value, linkToPage,    "list":list[]{new, price, discountPrice, specialPrice,                 "serviceName": serviceName[_key == $language][0].value,                 "serviceDescription":serviceDescription[_key == $language][0].value},    "servicesDescription":servicesDescription[_key == $language][0].value }}
-export type PricesPageQueryResult = {
-    blocks: Array<{
-        servicesKey: ServicesKey | null;
-        servicesName: string | null;
-        linkToPage: string | null;
-        list: Array<{
-            new: boolean | null;
-            price: number | null;
-            discountPrice: number | null;
-            specialPrice: boolean | null;
-            serviceName: string | null;
-            serviceDescription: PortableText | null;
-        }> | null;
-        servicesDescription: PortableText | null;
+// Query: *[_type == "pricesPage" && !(_id in path("drafts.**"))][0].priceBlocks[] {servicesKey, "servicesName": servicesName[_key == $language][0].value, linkToPage,    "list":list[]{new, price, lowerPriceLimit, discountPrice, lowerDiscountLimit, specialPrice,                 "serviceName": serviceName[_key == $language][0].value,                 "serviceDescription":serviceDescription[_key == $language][0].value},    "servicesDescription":servicesDescription[_key == $language][0].value }
+export type PricesPageQueryResult = Array<{
+    servicesKey: ServicesKey | null;
+    servicesName: string | null;
+    linkToPage: string | null;
+    list: Array<{
+        new: boolean | null;
+        price: number | null;
+        lowerPriceLimit: boolean | null;
+        discountPrice: number | null;
+        lowerDiscountLimit: boolean | null;
+        specialPrice: boolean | null;
+        serviceName: string | null;
+        serviceDescription: PortableText | null;
     }> | null;
-} | null;
+    servicesDescription: PortableText | null;
+}> | null;
 
 // Query TypeMap
 import "@sanity/client";
 declare module "@sanity/client" {
     interface SanityQueries {
-        '\n    *[_type == "pricesPage" && !(_id in path("drafts.**"))][0]\n { "blocks": priceBlocks[]\n {servicesKey, "servicesName": servicesName[_key == $language][0].value, linkToPage, \n   "list":list[]{new, price, discountPrice, specialPrice,\n                 "serviceName": serviceName[_key == $language][0].value,\n                 "serviceDescription":serviceDescription[_key == $language][0].value}, \n   "servicesDescription":servicesDescription[_key == $language][0].value }}': PricesPageQueryResult;
+        '\n    *[_type == "pricesPage" && !(_id in path("drafts.**"))][0].priceBlocks[]\n {servicesKey, "servicesName": servicesName[_key == $language][0].value, linkToPage, \n   "list":list[]{new, price, lowerPriceLimit, discountPrice, lowerDiscountLimit, specialPrice,\n                 "serviceName": serviceName[_key == $language][0].value,\n                 "serviceDescription":serviceDescription[_key == $language][0].value}, \n   "servicesDescription":servicesDescription[_key == $language][0].value }': PricesPageQueryResult;
     }
 }

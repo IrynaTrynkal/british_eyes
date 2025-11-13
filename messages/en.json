@@ -301,7 +301,8 @@
         "service": "service",
         "price": "Price in UAH",
         "newTechnology": "New technologies",
-        "specialPrice": "Special price"
+        "specialPrice": "Special price",
+        "servicesPrice": "from {price}"
     },
     "PatientsPage": {
         "title": "Information for \npatients",

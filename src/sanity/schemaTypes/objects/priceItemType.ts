@@ -22,9 +22,19 @@ export const priceItemType = defineType({
             type: "number",
         }),
         defineField({
+            name: "lowerPriceLimit",
+            title: "Ціна «від»?",
+            type: "boolean",
+        }),
+        defineField({
             name: "discountPrice",
             title: "Ціна зі знижкою",
             type: "number",
+        }),
+        defineField({
+            name: "lowerDiscountLimit",
+            title: "Знижка «від»?",
+            type: "boolean",
         }),
         defineField({
             name: "specialPrice",

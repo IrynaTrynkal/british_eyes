@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
-export const MediumText = (props: { children: ReactNode }) => (
-    <span style={{ fontWeight: 500, color: "#151515" }}>{props.children}</span>
+export const MediumText = ({ children }: { children: React.ReactNode }) => (
+    <span style={{ fontWeight: 500 }}>{children}</span>
 );

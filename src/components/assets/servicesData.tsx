@@ -1351,7 +1351,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "perevirka-zoru"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -1667,7 +1667,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "likuvannya-katarakti"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -2142,7 +2142,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "likuvannya-katarakti"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -2577,7 +2577,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "syndrom-sukhoho-oka"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -3200,7 +3200,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "syndrom-sukhoho-oka"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -4028,7 +4028,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "lazerna-korekcziya-zoru"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -4421,7 +4421,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "lazerna-korekcziya-zoru"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -4711,7 +4711,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "dityache-viddilennya"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -5322,7 +5322,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "dityache-viddilennya"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -5566,7 +5566,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "likuvannya-keratokonusa"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -6044,7 +6044,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "likuvannya-keratokonusa"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -6412,7 +6412,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "refrakczijna-lensektomiya"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -7140,7 +7140,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "refrakczijna-lensektomiya"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -8598,7 +8598,7 @@ export const servicesData: ServicesProps[] = [
                                 disk =>
                                     disk.key ===
                                     "hirurgichne-likuvannya-glaukomi"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -9032,7 +9032,7 @@ export const servicesData: ServicesProps[] = [
                                 disk =>
                                     disk.key ===
                                     "hirurgichne-likuvannya-glaukomi"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -9862,7 +9862,7 @@ export const servicesData: ServicesProps[] = [
                             textLocal: discountList.find(
                                 disk =>
                                     disk.key === "hirurgiya-povik-i-konyunktivi"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -10360,7 +10360,7 @@ export const servicesData: ServicesProps[] = [
                             textLocal: discountList.find(
                                 disk =>
                                     disk.key === "hirurgiya-povik-i-konyunktivi"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -10590,7 +10590,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "ksenonoterapiya"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -11026,7 +11026,7 @@ export const servicesData: ServicesProps[] = [
                             )?.text,
                             textLocal: discountList.find(
                                 disk => disk.key === "ksenonoterapiya"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },
@@ -11243,7 +11243,7 @@ export const servicesData: ServicesProps[] = [
                             textLocal: discountList.find(
                                 disk =>
                                     disk.key === "anesteziologichnij-posibnik"
-                            )?.localeText.en,
+                            )?.localeText.uk,
                         },
                     },
                 },
@@ -11674,7 +11674,7 @@ export const servicesData: ServicesProps[] = [
                             textLocal: discountList.find(
                                 disk =>
                                     disk.key === "anesteziologichnij-posibnik"
-                            )?.localeText.en,
+                            )?.localeText.ru,
                         },
                     },
                 },

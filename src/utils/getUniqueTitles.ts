@@ -1,18 +1,15 @@
-import { PriceBlockType } from "@/components/assets/priceList";
-import { LocaleType } from "@/types/LocaleType";
+import { PricesPageQueryResult } from "../../sanity.types";
 
-export function getUniqueTitles(
-    priceList: PriceBlockType[],
-    locale: LocaleType
-) {
+export function getUniqueTitles(priceList: PricesPageQueryResult) {
     const seen = new Set<string>();
-
+    if (!priceList) return [];
     return priceList
         .map(item => ({
-            title: item.title[locale],
-            key: item.key,
+            title: item.servicesName ?? "",
+            key: item.servicesKey ?? "",
         }))
         .filter(item => {
+            if (!item.title) return false;
             if (seen.has(item.title)) return false;
             seen.add(item.title);
             return true;
