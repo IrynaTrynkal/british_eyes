@@ -1,13 +1,15 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { Fraction } from "@/components/shared/Fraction";
 import { LinkAction } from "@/components/shared/LinkAction";
+import { LocaleType } from "@/types/LocaleType";
 
 import { AllServicesList } from "./AllServicesList";
 
 export const AllServicesMain = () => {
     const t = useTranslations("HomePage");
     const tServ = useTranslations("ServicesPage");
+    const locale = useLocale();
     return (
         <section className="content pc:pb-[120px] prepc:pt-12 pc:pt-[95px] pt-10 pb-[60px]">
             <div className="prepc:flex prepc:justify-between prepc:items-center prepc:mb-8 pc:mb-12">
@@ -27,7 +29,7 @@ export const AllServicesMain = () => {
                     </h2>
                 </div>
             </div>
-            <AllServicesList />
+            <AllServicesList locale={locale as LocaleType} />
             <LinkAction
                 className="mx-auto"
                 href="#booking"

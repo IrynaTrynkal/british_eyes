@@ -305,11 +305,23 @@ export type PricesPageQueryResult = Array<{
     }> | null;
     servicesDescription: PortableText | null;
 }> | null;
+// Variable: pricesShortQuery
+// Query: *[_type == "pricesPage" && !(_id in path("drafts.**"))][0].priceBlocks[] {servicesKey,    "list":list[]{price, lowerPriceLimit, discountPrice, lowerDiscountLimit}}
+export type PricesShortQueryResult = Array<{
+    servicesKey: ServicesKey | null;
+    list: Array<{
+        price: number | null;
+        lowerPriceLimit: boolean | null;
+        discountPrice: number | null;
+        lowerDiscountLimit: boolean | null;
+    }> | null;
+}> | null;
 
 // Query TypeMap
 import "@sanity/client";
 declare module "@sanity/client" {
     interface SanityQueries {
         '\n    *[_type == "pricesPage" && !(_id in path("drafts.**"))][0].priceBlocks[]\n {servicesKey, "servicesName": servicesName[_key == $language][0].value, linkToPage, \n   "list":list[]{new, price, lowerPriceLimit, discountPrice, lowerDiscountLimit, specialPrice,\n                 "serviceName": serviceName[_key == $language][0].value,\n                 "serviceDescription":serviceDescription[_key == $language][0].value}, \n   "servicesDescription":servicesDescription[_key == $language][0].value }': PricesPageQueryResult;
+        '\n    *[_type == "pricesPage" && !(_id in path("drafts.**"))][0].priceBlocks[]\n {servicesKey, \n   "list":list[]{price, lowerPriceLimit, discountPrice, lowerDiscountLimit}}': PricesShortQueryResult;
     }
 }

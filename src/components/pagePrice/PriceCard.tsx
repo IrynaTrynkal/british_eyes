@@ -54,7 +54,7 @@ export const PriceCard = ({
                     </p>
                 </div>
                 {data.list &&
-                    data.list.map(item => {
+                    data.list.map((item, ind) => {
                         const newTechnology = item.new;
                         const special = item.specialPrice;
                         const description = item.serviceDescription || [];
@@ -66,7 +66,11 @@ export const PriceCard = ({
 
                         return (
                             <div
-                                key={item.serviceName}
+                                key={
+                                    item.serviceName
+                                        ? item.serviceName + ind
+                                        : ind
+                                }
                                 className="border-grey-70 border-t"
                             >
                                 <div className="bg-green-10 flex">
