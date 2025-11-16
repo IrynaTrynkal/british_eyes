@@ -1,18 +1,31 @@
 "use client";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
 import { advantagesList } from "@/components/assets/advantagesData";
-import { discountList } from "@/components/assets/discount.Data";
 import { useDotButton } from "@/components/shared/slider/SliderDots";
 import { SliderDotsBox } from "@/components/shared/slider/SliderDotsBox";
-import { LocaleType } from "@/types/LocaleType";
 
+import { ServicesKey } from "../../../../sanity.types";
 import { DiscountCard } from "./DiscountCard";
 
-export const DiscountSlider = () => {
+type Props = Array<{
+    servicesKey: ServicesKey | null;
+    title: string | null;
+    discountShortData: {
+        bgimage: string | null;
+        icon: string | null;
+        premium: boolean | null;
+        premiumText: string | null;
+        shortText: string | null;
+        period: string | null;
+        cost: number | null;
+        learnMore: boolean | null;
+    } | null;
+}>;
+
+export const DiscountSlider = ({ list }: { list: Props }) => {
     const options: EmblaOptionsType = {
         loop: true,
         align: "start",
@@ -28,15 +41,16 @@ export const DiscountSlider = () => {
 
             let sectionPadding = 0;
             if (windowWidth >= 1440) sectionPadding = 48 * 2;
-            else if (windowWidth >= 768) sectionPadding = 24 * 2;
+            else if (windowWidth >= 768 && windowWidth < 1439)
+                sectionPadding = 24 * 2;
 
             const availableWidth = windowWidth - sectionPadding;
 
             const cardWidth = 433 + 22;
-            const totalCardsWidth = discountList.length * cardWidth - 22;
+            const totalCardsWidth = list.length * cardWidth - 22;
 
             if (windowWidth < 768) {
-                setShowDots(discountList.length > 1);
+                setShowDots(list.length > 1);
             } else {
                 setShowDots(totalCardsWidth > availableWidth);
             }
@@ -47,20 +61,19 @@ export const DiscountSlider = () => {
         return () => window.removeEventListener("resize", updateDots);
     }, []);
 
-    const locale = useLocale();
-
     return (
         <div className="embla relative mx-auto w-full max-w-[1344px]">
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex">
-                    {discountList.map(disc => (
-                        <div
-                            key={disc.localeText[locale as LocaleType].title}
-                            className="embla__slide w-full flex-[0_0_280px]"
-                        >
-                            <DiscountCard data={disc} />
-                        </div>
-                    ))}
+                    {list &&
+                        list.map(item => (
+                            <div
+                                key={item.title}
+                                className="embla__slide w-full flex-[0_0_280px]"
+                            >
+                                <DiscountCard data={item} />
+                            </div>
+                        ))}
                 </div>
                 {showDots && (
                     <div className="embla__controls tab:mt-6 mt-4">

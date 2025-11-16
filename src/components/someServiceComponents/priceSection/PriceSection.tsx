@@ -1,34 +1,35 @@
 import { useTranslations } from "next-intl";
 
-import { ServicesKeyType } from "@/components/assets/menu";
 import { PriceSectionProps } from "@/components/assets/servicesData";
 import { PriceCard } from "@/components/pagePrice/PriceCard";
 import { LocaleType } from "@/types/LocaleType";
 import { hasCardDiscountData } from "@/utils/hasCardDiscountData";
 
-import { PricesPageQueryResult } from "../../../../sanity.types";
+import {
+    OffersShortQueryResult,
+    PricesPageQueryResult,
+} from "../../../../sanity.types";
 import { OfferCard } from "./OfferCard";
 
 export const PriceSection = ({
     data,
-    slug,
     locale,
     pricesList,
+    offersShortList,
 }: {
     data: PriceSectionProps;
-    slug: ServicesKeyType;
     locale: LocaleType;
-    pricesList: PricesPageQueryResult;
+    pricesList: NonNullable<PricesPageQueryResult>[number] | undefined;
+    offersShortList: NonNullable<OffersShortQueryResult>[number] | undefined;
 }) => {
     const t = useTranslations("ServicesPage");
 
-    const priceListData = pricesList?.find(item => item.servicesKey === slug);
-    if (!priceListData && !data.card) return null;
+    if (!pricesList) return null;
 
     return (
         <section className="content tab:pb-12 pc:pb-[120px] relative pb-[60px]">
             <div
-                className={`prepc:flex prepc:flex-row-reverse prepc:justify-between ${hasCardDiscountData(data.card) ? "" : "prepc:hidden"}`}
+                className={`prepc:flex prepc:flex-row-reverse prepc:justify-between ${hasCardDiscountData(offersShortList) ? "" : "prepc:hidden"}`}
             >
                 <h3 className="subtitle tab:max-w-[318px] tab:mb-4 mb-5">
                     {t("priceSubpage")}
@@ -43,22 +44,22 @@ export const PriceSection = ({
             </div>
             <div className="prepc:flex prepc:justify-between prepc:items-start">
                 <div
-                    className={`${hasCardDiscountData(data.card) ? "hidden" : "prepc:block prepc:w-[32%] hidden"}`}
+                    className={`${hasCardDiscountData(offersShortList) ? "hidden" : "prepc:block prepc:w-[32%] hidden"}`}
                 >
                     <h2 className="title-section tab:max-w-[700px] pc:max-w-[890px] tab:mx-auto prepc:mx-0 text-left">
                         {data.title}
                     </h2>
                 </div>
-                {priceListData && (
+                {pricesList && (
                     <PriceCard
                         someService
-                        data={priceListData}
+                        data={pricesList}
                         locale={locale as LocaleType}
                         className="prepc:w-[66%] prepc:mx-0 prepc:mb-0 mx-auto mb-6 max-w-[889px]"
                     />
                 )}
-                {hasCardDiscountData(data.card) && data.card && (
-                    <OfferCard data={data.card} />
+                {hasCardDiscountData(offersShortList) && offersShortList && (
+                    <OfferCard data={offersShortList} />
                 )}
             </div>
             {/* {slug === "lazerna-korekcziya-zoru" && (

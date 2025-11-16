@@ -25,6 +25,7 @@ export const priceItemType = defineType({
             name: "lowerPriceLimit",
             title: "Ціна «від»?",
             type: "boolean",
+            initialValue: false,
         }),
         defineField({
             name: "discountPrice",
@@ -35,16 +36,19 @@ export const priceItemType = defineType({
             name: "lowerDiscountLimit",
             title: "Знижка «від»?",
             type: "boolean",
+            initialValue: false,
         }),
         defineField({
             name: "specialPrice",
             title: "Чи потрібен зеленим підпис що це Спеціальна ціна?",
             type: "boolean",
+            initialValue: false,
         }),
         defineField({
             name: "new",
             title: "Чи потрібен сірим підпис що це Нові технології?",
             type: "boolean",
+            initialValue: false,
         }),
         defineField({
             name: "serviceDescription",

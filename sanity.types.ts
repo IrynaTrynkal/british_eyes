@@ -30,6 +30,49 @@ export type ServicesKey =
     | "anesteziologichnij-posibnik"
     | "ksenonoterapiya";
 
+export type PortableTextAll = Array<
+    | {
+          children?: Array<{
+              marks?: Array<string>;
+              text?: string;
+              _type: "span";
+              _key: string;
+          }>;
+          style?: "normal";
+          listItem?: "bullet" | "number";
+          markDefs?: null;
+          level?: number;
+          _type: "block";
+          _key: string;
+      }
+    | {
+          asset?: {
+              _ref: string;
+              _type: "reference";
+              _weak?: boolean;
+              [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+          };
+          media?: unknown;
+          hotspot?: SanityImageHotspot;
+          crop?: SanityImageCrop;
+          alt?: string;
+          maxH?: string;
+          _type: "image";
+          _key: string;
+      }
+    | {
+          gap?: boolean;
+          headers?: Array<string>;
+          rows?: Array<{
+              cells?: Array<string>;
+              _type: "row";
+              _key: string;
+          }>;
+          _type: "table";
+          _key: string;
+      }
+>;
+
 export type PortableText = Array<{
     children?: Array<{
         marks?: Array<string>;
@@ -78,6 +121,89 @@ export type PriceBlock = {
     >;
 };
 
+export type DiscountData = {
+    _type: "discountData";
+    servicesKey?: ServicesKey;
+    title?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayStringValue
+    >;
+    discountShortData?: DiscountShortData;
+    discountFullData?: DiscountFullData;
+};
+
+export type DiscountFullData = {
+    _type: "discountFullData";
+    fractionUp?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayStringValue
+    >;
+    fractionDown?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayStringValue
+    >;
+    textLeft?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayStringValue
+    >;
+    textRight?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayPortableTextValue
+    >;
+    discountFullText?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayPortableTextAllValue
+    >;
+};
+
+export type DiscountShortData = {
+    _type: "discountShortData";
+    premium?: boolean;
+    premiumText?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayStringValue
+    >;
+    shortText?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayStringValue
+    >;
+    period?: string;
+    icon?: {
+        asset?: {
+            _ref: string;
+            _type: "reference";
+            _weak?: boolean;
+            [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+        };
+        media?: unknown;
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: "image";
+    };
+    bgimage?: {
+        asset?: {
+            _ref: string;
+            _type: "reference";
+            _weak?: boolean;
+            [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+        };
+        media?: unknown;
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: "image";
+    };
+    cost?: number;
+    learnMore?: boolean;
+};
+
 export type PriceItem = {
     _type: "priceItem";
     serviceName?: Array<
@@ -98,6 +224,19 @@ export type PriceItem = {
     >;
 };
 
+export type OffersPage = {
+    _id: string;
+    _type: "offersPage";
+    _createdAt: string;
+    _updatedAt: string;
+    _rev: string;
+    discountsData?: Array<
+        {
+            _key: string;
+        } & DiscountData
+    >;
+};
+
 export type PricesPage = {
     _id: string;
     _type: "pricesPage";
@@ -109,6 +248,11 @@ export type PricesPage = {
             _key: string;
         } & PriceBlock
     >;
+};
+
+export type InternationalizedArrayPortableTextAllValue = {
+    _type: "internationalizedArrayPortableTextAllValue";
+    value?: PortableTextAll;
 };
 
 export type InternationalizedArrayPortableTextValue = {
@@ -125,6 +269,12 @@ export type InternationalizedArrayStringValue = {
     _type: "internationalizedArrayStringValue";
     value?: string;
 };
+
+export type InternationalizedArrayPortableTextAll = Array<
+    {
+        _key: string;
+    } & InternationalizedArrayPortableTextAllValue
+>;
 
 export type InternationalizedArrayPortableText = Array<
     {
@@ -264,13 +414,20 @@ export type SanityAssetSourceData = {
 
 export type AllSanitySchemaTypes =
     | ServicesKey
+    | PortableTextAll
     | PortableText
     | PriceBlock
+    | DiscountData
+    | DiscountFullData
+    | DiscountShortData
     | PriceItem
+    | OffersPage
     | PricesPage
+    | InternationalizedArrayPortableTextAllValue
     | InternationalizedArrayPortableTextValue
     | InternationalizedArrayTextValue
     | InternationalizedArrayStringValue
+    | InternationalizedArrayPortableTextAll
     | InternationalizedArrayPortableText
     | InternationalizedArrayText
     | InternationalizedArrayString
@@ -316,6 +473,45 @@ export type PricesShortQueryResult = Array<{
         lowerDiscountLimit: boolean | null;
     }> | null;
 }> | null;
+// Variable: offersPageQuery
+// Query: *[_type == "offersPage" && !(_id in path("drafts.**"))][0].discountsData[]{servicesKey, "title":title[_key == $language][0].value, discountFullData{"textRight":textRight[_key == $language][0].value, "textLeft":textLeft[_key == $language][0].value,                   "fractionDown":fractionDown[_key == $language][0].value, "fractionUp":fractionUp[_key == $language][0].value,                   "discountFullText":discountFullText[_key == $language][0].value},  discountShortData{"bgimage":bgimage.asset->url, "icon":icon.asset->url, premium, "premiumText":premiumText[_key == $language][0].value, "shortText":shortText[_key == $language][0].value, period, cost, learnMore },}
+export type OffersPageQueryResult = Array<{
+    servicesKey: ServicesKey | null;
+    title: string | null;
+    discountFullData: {
+        textRight: PortableText | null;
+        textLeft: string | null;
+        fractionDown: string | null;
+        fractionUp: string | null;
+        discountFullText: PortableTextAll | null;
+    } | null;
+    discountShortData: {
+        bgimage: string | null;
+        icon: string | null;
+        premium: boolean | null;
+        premiumText: string | null;
+        shortText: string | null;
+        period: string | null;
+        cost: number | null;
+        learnMore: boolean | null;
+    } | null;
+}> | null;
+// Variable: offersShortQuery
+// Query: *[_type == "offersPage" && !(_id in path("drafts.**"))][0].discountsData[]{servicesKey, "title":title[_key == $language][0].value, discountShortData{"bgimage":bgimage.asset->url, "icon":icon.asset->url, premium, "premiumText":premiumText[_key == $language][0].value, "shortText":shortText[_key == $language][0].value, period, cost, learnMore },}
+export type OffersShortQueryResult = Array<{
+    servicesKey: ServicesKey | null;
+    title: string | null;
+    discountShortData: {
+        bgimage: string | null;
+        icon: string | null;
+        premium: boolean | null;
+        premiumText: string | null;
+        shortText: string | null;
+        period: string | null;
+        cost: number | null;
+        learnMore: boolean | null;
+    } | null;
+}> | null;
 
 // Query TypeMap
 import "@sanity/client";
@@ -323,5 +519,7 @@ declare module "@sanity/client" {
     interface SanityQueries {
         '\n    *[_type == "pricesPage" && !(_id in path("drafts.**"))][0].priceBlocks[]\n {servicesKey, "servicesName": servicesName[_key == $language][0].value, linkToPage, \n   "list":list[]{new, price, lowerPriceLimit, discountPrice, lowerDiscountLimit, specialPrice,\n                 "serviceName": serviceName[_key == $language][0].value,\n                 "serviceDescription":serviceDescription[_key == $language][0].value}, \n   "servicesDescription":servicesDescription[_key == $language][0].value }': PricesPageQueryResult;
         '\n    *[_type == "pricesPage" && !(_id in path("drafts.**"))][0].priceBlocks[]\n {servicesKey, \n   "list":list[]{price, lowerPriceLimit, discountPrice, lowerDiscountLimit}}': PricesShortQueryResult;
+        '\n    *[_type == "offersPage" && !(_id in path("drafts.**"))][0].discountsData[]\n{servicesKey, "title":title[_key == $language][0].value,\n discountFullData{"textRight":textRight[_key == $language][0].value, "textLeft":textLeft[_key == $language][0].value, \n                  "fractionDown":fractionDown[_key == $language][0].value, "fractionUp":fractionUp[_key == $language][0].value, \n                  "discountFullText":discountFullText[_key == $language][0].value}, \n discountShortData{"bgimage":bgimage.asset->url, "icon":icon.asset->url, premium, "premiumText":premiumText[_key == $language][0].value, "shortText":shortText[_key == $language][0].value, period, cost, learnMore },}': OffersPageQueryResult;
+        '\n    *[_type == "offersPage" && !(_id in path("drafts.**"))][0].discountsData[]\n{servicesKey, "title":title[_key == $language][0].value,\n discountShortData{"bgimage":bgimage.asset->url, "icon":icon.asset->url, premium, "premiumText":premiumText[_key == $language][0].value, "shortText":shortText[_key == $language][0].value, period, cost, learnMore },}': OffersShortQueryResult;
     }
 }

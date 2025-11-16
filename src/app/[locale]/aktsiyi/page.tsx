@@ -1,4 +1,5 @@
-import { Hero } from "@/components/pageOffers/HeroOffers/Hero";
+import { Hero } from "@/components/pageOffers/Hero";
+import { MainOffers } from "@/components/pageOffers/MainOffers";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
@@ -12,6 +13,7 @@ export default function OffersPage() {
                 breadcrumbsList={breadcrumb}
             />
             <Hero />
+            <MainOffers />
             <Booking />
         </>
     );

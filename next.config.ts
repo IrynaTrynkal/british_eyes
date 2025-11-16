@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
     },
     reactStrictMode: true,
     productionBrowserSourceMaps: true,
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "cdn.sanity.io",
+            },
+        ],
+    },
 };
 
 const withNextIntl = createNextIntlPlugin();

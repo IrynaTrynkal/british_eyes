@@ -7,7 +7,7 @@ import { Subtitle } from "@/sanity/components/Subtitle";
 
 import { BlackText } from "./BlackText";
 
-interface MyPortableTextBlock extends PortableTextBlock {
+export interface MyPortableTextBlock extends PortableTextBlock {
     addSpacing?: boolean;
 }
 
@@ -67,12 +67,10 @@ const components: PortableTextComponents = {
 export const PortableTextPriceRenderer = ({ value }: { value: any }) => {
     if (!value) return null;
 
-    // Позначаємо блоки після пустих, щоб створити відступ
     const processedValue = [];
     for (let i = 0; i < value.length; i++) {
         const block = value[i];
 
-        // Якщо це пустий блок, пропускаємо, але помічаємо наступний
         if (
             block?._type === "block" &&
             (!block.children ||

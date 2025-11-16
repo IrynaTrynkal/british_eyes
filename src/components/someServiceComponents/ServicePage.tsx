@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 import { sanityFetch } from "@/sanity/lib/client";
-import { pricesPageQuery } from "@/sanity/lib/queries";
+import { offersShortQuery, pricesPageQuery } from "@/sanity/lib/queries";
 import { LocaleType } from "@/types/LocaleType";
 
 import { servicesData, ServicesProps } from "../assets/servicesData";
@@ -25,11 +25,19 @@ export const ServicePageContent = async ({
     serviceData: ServicesProps;
     locale: LocaleType;
 }) => {
-    const pricesList = await sanityFetch({
-        query: pricesPageQuery,
-        params: { language: locale },
-        tags: [],
-    });
+    const [pricesList, offersShortList] = await Promise.all([
+        sanityFetch({
+            query: pricesPageQuery,
+            params: { language: locale },
+            tags: [],
+        }),
+        sanityFetch({
+            query: offersShortQuery,
+            params: { language: locale },
+            tags: [],
+        }),
+    ]);
+
     const sections = serviceData[locale]?.sections ?? [];
 
     const perevirkaZoruService = servicesData.find(
@@ -45,6 +53,18 @@ export const ServicePageContent = async ({
     )?.list
         ? true
         : false;
+
+    const changedSlug =
+        serviceData.name.key === "dityache-viddilennya"
+            ? "perevirka-zoru"
+            : serviceData.name.key;
+
+    const offerList = offersShortList?.find(
+        item => item.servicesKey === changedSlug
+    );
+    const priceListData = pricesList?.find(
+        item => item.servicesKey === changedSlug
+    );
 
     return (
         <>
@@ -97,13 +117,8 @@ export const ServicePageContent = async ({
                             <PriceSection
                                 key={index}
                                 locale={locale}
-                                pricesList={pricesList}
-                                slug={
-                                    serviceData.name.key ===
-                                    "dityache-viddilennya"
-                                        ? "perevirka-zoru"
-                                        : serviceData.name.key
-                                }
+                                pricesList={priceListData}
+                                offersShortList={offerList}
                                 data={
                                     serviceData.name.key ===
                                     "dityache-viddilennya"
