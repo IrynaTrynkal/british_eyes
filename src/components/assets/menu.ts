@@ -187,11 +187,11 @@ export const patientsList: PatientsListProps[] = [
         },
     },
     {
-        key: "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu",
+        key: "reminders-and-instructions-for-patients",
         slug: {
-            uk: "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu",
-            en: "patient-reminder-before-vitreoretinal-surgery",
-            ru: "pamyatki-patsiyentu-pered-vitreoretinalnoy-khirurgiyey",
+            uk: "reminders-and-instructions-for-patients",
+            en: "reminders-and-instructions-for-patients",
+            ru: "reminders-and-instructions-for-patients",
         },
     },
     {
