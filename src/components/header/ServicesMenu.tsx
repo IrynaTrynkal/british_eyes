@@ -72,7 +72,7 @@ export const ServicesMenu = ({
                                     }
                                     onClick={onClick}
                                     className={
-                                        "prepc:hidden group font-oswald prepc:text-lg prepc:pl-0 flex items-center gap-2 pl-2 text-sm font-medium text-black uppercase hover:underline"
+                                        "prepc:hidden group font-oswald prepc:text-lg prepc:pl-0 flex items-center gap-2 py-1.5 pl-2 text-sm font-medium text-black uppercase hover:underline"
                                     }
                                 >
                                     <div className="border-ivory rounded-full border transition-all duration-300 ease-in-out group-hover:border-black">

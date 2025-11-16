@@ -41,7 +41,7 @@ export const PatientsMenu = ({
                                 }
                                 onClick={onClick}
                                 className={
-                                    "prepc:px-3 prepc:py-1 prepc:justify-between prepc:w-[662px] prepc:leading-7 prepc:border prepc:border-grey font-oswald prepc:text-2xl hover:text-ivory link-gradient flex items-center gap-2 rounded-lg pl-2 text-sm font-medium text-black uppercase transition-all duration-500"
+                                    "prepc:px-3 prepc:py-1 prepc:justify-between prepc:w-[662px] prepc:leading-7 prepc:border prepc:border-grey font-oswald prepc:text-2xl hover:text-ivory link-gradient flex w-fit items-center gap-2 rounded-lg px-2 py-1.5 text-sm font-medium text-black uppercase transition-all duration-300"
                                 }
                             >
                                 {t(item.key)}
