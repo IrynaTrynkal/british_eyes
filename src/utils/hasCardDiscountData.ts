@@ -1,20 +1,18 @@
-import { DiscountType } from "@/components/assets/servicesData";
+import { OffersShortQueryResult } from "../../sanity.types";
 
-export const hasCardDiscountData = (card?: DiscountType) => {
-    if (!card) return false;
+export const hasCardDiscountData = (
+    offersShortList?: NonNullable<OffersShortQueryResult>[number]
+) => {
+    if (!offersShortList) return false;
 
     const hasTextFields =
-        card.text &&
-        (card.text.icon ||
-            card.text.bgimage ||
-            card.text.cost ||
-            card.text.period);
+        offersShortList.discountShortData &&
+        (offersShortList.discountShortData.icon ||
+            offersShortList.discountShortData.bgimage ||
+            offersShortList.discountShortData.cost ||
+            offersShortList.discountShortData.period);
 
-    const hasLocaleText =
-        card.textLocal &&
-        (card.textLocal.title ||
-            card.textLocal.text ||
-            card.textLocal.premiumText);
+    const hasLocaleText = offersShortList.title;
 
     return Boolean(hasTextFields || hasLocaleText);
 };

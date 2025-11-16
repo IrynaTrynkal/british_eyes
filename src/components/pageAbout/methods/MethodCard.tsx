@@ -53,7 +53,7 @@ export const MethodCard = ({ data }: { data: MethodCardProps }) => {
                     <IconArrow className="transition-transform duration-300 ease-in-out group-hover:-rotate-90" />
                 </div>
             </div>
-            <Modal isOpen={isOpen} onClose={handleClose}>
+            <Modal subpage isOpen={isOpen} onClose={handleClose}>
                 <LazerSubpage
                     locale={locale as LocaleType}
                     currentMethod={currentItem}

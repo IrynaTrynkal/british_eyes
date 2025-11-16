@@ -12,6 +12,7 @@ interface ModalProps {
     isOpen: boolean;
     variant?: "sidebar" | "center";
     subpage?: boolean;
+    offer?: boolean;
 }
 
 export const Modal = ({
@@ -19,6 +20,7 @@ export const Modal = ({
     onClose,
     isOpen,
     subpage,
+    offer,
     variant = "sidebar",
 }: ModalProps) => {
     const [isOpenPortal, setIsOpenPortal] = useState(false);
@@ -67,7 +69,9 @@ export const Modal = ({
                             className={`bg-ivory relative z-10 ${
                                 variant === "sidebar"
                                     ? "tab:max-w-[660px] prepc:max-w-[1210px] tab:rounded-bl-lg h-fit max-h-screen max-w-[540px] min-w-[320px] overflow-y-auto rounded-bl pt-3"
-                                    : "tab:rounded-lg tab:w-[472px] w-[288px] rounded text-center"
+                                    : offer
+                                      ? "tab:max-w-[660px] prepc:max-w-[950px] pc:max-w-[1210px] w-full max-w-[540px] rounded"
+                                      : "tab:rounded-lg tab:w-[472px] w-[288px] rounded text-center"
                             }`}
                             initial={
                                 variant === "sidebar"
@@ -87,25 +91,37 @@ export const Modal = ({
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             onClick={e => e.stopPropagation()}
                         >
-                            <button
-                                onClick={onClose}
-                                className={`${
-                                    subpage
-                                        ? "bg-ivory tab:right-10 pc:right-20 top-10 right-4 h-10 w-10 p-2"
-                                        : variant === "center"
-                                          ? "hover:border-ivory top-3 right-3 h-6 w-6"
-                                          : "top-3 right-3 h-6 w-6 hover:border-black"
-                                } absolute flex items-center justify-center rounded border border-transparent transition-all duration-300 ease-in-out`}
-                                aria-label="Close modal"
-                            >
-                                <IconClose
+                            {offer ? (
+                                <button
+                                    onClick={onClose}
                                     className={
-                                        variant === "center"
-                                            ? "text-ivory"
-                                            : "text-black"
+                                        "bg-ivory tab:top-6 tab:right-6 prepc:top-8 prepc:right-16 absolute top-3 right-3 flex h-10 w-10 items-center justify-center rounded border border-transparent p-2 transition-all duration-300 ease-in-out hover:border-black"
                                     }
-                                />
-                            </button>
+                                    aria-label="Close modal"
+                                >
+                                    <IconClose className="text-black" />
+                                </button>
+                            ) : (
+                                <button
+                                    onClick={onClose}
+                                    className={`${
+                                        subpage
+                                            ? "bg-ivory tab:right-10 pc:right-20 top-10 right-4 h-10 w-10 p-2 hover:border-black"
+                                            : variant === "center"
+                                              ? "hover:border-ivory top-3 right-3 h-6 w-6"
+                                              : "top-3 right-3 h-6 w-6 hover:border-black"
+                                    } absolute flex items-center justify-center rounded border border-transparent transition-all duration-300 ease-in-out`}
+                                    aria-label="Close modal"
+                                >
+                                    <IconClose
+                                        className={
+                                            variant === "center"
+                                                ? "text-ivory"
+                                                : "text-black"
+                                        }
+                                    />
+                                </button>
+                            )}
                             {children}
                         </motion.div>
                     </motion.div>

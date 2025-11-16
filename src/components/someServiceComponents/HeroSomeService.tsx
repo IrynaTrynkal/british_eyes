@@ -107,7 +107,10 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
                     )}
                 </div>
                 {data.adress && (
-                    <AboutAdress className="tab:top-16 prepc:top-[104px] tab:left-6 pc:left-12 absolute top-7 left-4" />
+                    <AboutAdress
+                        darkBG={data.adressDarkBG}
+                        className="tab:top-16 prepc:top-[104px] tab:left-6 pc:left-12 absolute top-7 left-4"
+                    />
                 )}
             </div>
             {!hasVideo && !hasImage && (

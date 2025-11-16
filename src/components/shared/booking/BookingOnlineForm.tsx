@@ -50,7 +50,7 @@ export const BookingOnlineForm = ({
             {cta ? (
                 <ButtonAction
                     name={btnName ? btnName : t("onlineButtonPC")}
-                    className="mx-auto"
+                    className={`mx-auto ${className}`}
                     onClick={() => setIsOpen(true)}
                 />
             ) : (
