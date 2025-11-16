@@ -42,7 +42,6 @@ export const BookingForm = ({
     const [errors, setErrors] = useState({
         name: "",
         phone: "",
-        topic: "",
         comment: "",
     });
     const [loading, setLoading] = useState(false);
@@ -51,7 +50,6 @@ export const BookingForm = ({
         const newErrors: typeof errors = {
             name: "",
             phone: "",
-            topic: "",
             comment: "",
         };
         let valid = true;
@@ -73,10 +71,6 @@ export const BookingForm = ({
             valid = false;
         }
 
-        if (!formData.topic) {
-            newErrors.topic = t("topicNull");
-            valid = false;
-        }
         if (formData.comment.length > 300) {
             newErrors.comment = t("messegeInvalid");
             valid = false;
@@ -244,11 +238,8 @@ export const BookingForm = ({
                         }
                         options={topicOptions}
                         placeholder={t("topic")}
-                        className={` ${inputClass} tab:h-[50px] h-[41.5px] ${formData.topic ? "bg-white-100 text-black" : "text-grey"} ${errors.topic ? "border-error bg-white-100" : "border-grey"}`}
+                        className={` ${inputClass} tab:h-[50px] h-[41.5px] ${formData.topic ? "bg-white-100 text-black" : "text-grey"} `}
                     />
-                    {errors.topic && (
-                        <p className={errorClass}>{errors.topic}</p>
-                    )}
                 </div>
                 <div className="group tab:w-[48%] pc:w-[660px] relative">
                     <label htmlFor="comment" className="sr-only">
