@@ -31,7 +31,7 @@ export const DoctorsFilteredList = ({
     );
     return (
         <div className={className}>
-            <ul className="tab:px-0 tab:max-w-full tab:flex-row tab:flex-wrap pc:gap-5 tab:justify-center prepc:justify-end mx-auto flex max-w-[540px] flex-col gap-4 px-4">
+            <ul className="tab:px-0 tab:max-w-full tab:flex-row tab:flex-wrap pc:gap-5 tab:justify-center prepc:justify-normal mx-auto flex max-w-[540px] flex-col gap-4 px-4">
                 {currentItems.map((doc, ind) => (
                     <li key={ind} className="prepc:w-[32%]">
                         <DoctorCardDoctorsPage data={doc} />
