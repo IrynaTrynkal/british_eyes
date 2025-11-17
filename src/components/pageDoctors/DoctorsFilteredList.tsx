@@ -16,12 +16,11 @@ export const DoctorsFilteredList = ({
     selectedDepartment?: DepartmentsKey;
     className?: string;
 }) => {
-    const filteredDoctorsList =
-        !selectedDepartment || selectedDepartment === "clinic-management"
-            ? list
-            : list.filter(item =>
-                  item.departments?.includes(selectedDepartment as any)
-              );
+    const filteredDoctorsList = !selectedDepartment
+        ? list
+        : list.filter(item =>
+              item.departments?.includes(selectedDepartment as any)
+          );
 
     const totalPages = Math.ceil(filteredDoctorsList.length / ITEMS_PER_PAGE);
 
