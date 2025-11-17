@@ -1,19 +1,26 @@
 "use client";
 import { useTranslations } from "next-intl";
 
-import { doctorsData } from "@/components/assets/doctorsData";
 import { ServicesKeyType } from "@/components/assets/menu";
 import { DoctorsSlider } from "@/components/shared/doctors/DoctorsSlider";
 import { Fraction } from "@/components/shared/Fraction";
 import { LinkAction } from "@/components/shared/LinkAction";
 
-export const DoctorsServices = ({ service }: { service: ServicesKeyType }) => {
-    const filteredDoctors = doctorsData.filter(doc =>
-        doc.services.includes(service)
-    );
+import { DoctorsListQueryResult } from "../../../../sanity.types";
+
+export const DoctorsServices = ({
+    service,
+    list,
+}: {
+    service: ServicesKeyType;
+    list: DoctorsListQueryResult;
+}) => {
     const t = useTranslations("ServicesPage");
     const tH = useTranslations("HomePage");
-
+    if (list === null) return null;
+    const filteredDoctors = list.filter(doc =>
+        doc.services?.includes(service as any)
+    );
     const upText = t.rich("doctorsTextUp", {
         small: chunk => <span className="pc:text-2xl text-sm">{chunk}</span>,
     });
@@ -57,7 +64,7 @@ export const DoctorsServices = ({ service }: { service: ServicesKeyType }) => {
             </div>
             <LinkAction
                 className="tab:absolute tab:bottom-[212px] pc:bottom-[240px] pc:right-12 tab:right-6 mx-auto"
-                href="/poslugy/lazerna-korekcziya-zoru#booking"
+                href="#booking"
                 name={tH("bookingSubtitle")}
             />
         </section>

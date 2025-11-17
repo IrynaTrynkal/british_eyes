@@ -11,8 +11,20 @@ import { HeroMain } from "@/components/main/hero/HeroMain";
 import { News } from "@/components/main/news/News";
 import { Services } from "@/components/main/services/Services";
 import { Booking } from "@/components/shared/booking/Booking";
+import { sanityFetch } from "@/sanity/lib/client";
+import { doctorsListQuery } from "@/sanity/lib/queries";
 
-export default function Home() {
+export default async function Home({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    const doctorsList = await sanityFetch({
+        query: doctorsListQuery,
+        params: { language: locale },
+        tags: [],
+    });
     return (
         <>
             <HeroMain />
@@ -22,7 +34,7 @@ export default function Home() {
             <Choice />
             <Approach />
             <AboutMain />
-            <Doctors />
+            <Doctors doctors={doctorsList} />
             <Feedbacks />
             <News />
             <FAQ faqList={faqMainList} />

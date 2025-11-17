@@ -13,6 +13,13 @@
  */
 
 // Source: schema.json
+export type DepartmentsKey =
+    | "clinic-management"
+    | "childrens-ophthalmologists"
+    | "consultation-and-diagnostic-ophthalmologists"
+    | "doctors-anesthesiologists"
+    | "ophthalmic-surgeons";
+
 export type ServicesKey =
     | "lazerna-korekcziya-zoru"
     | "perevirka-zoru"
@@ -224,6 +231,78 @@ export type PriceItem = {
     >;
 };
 
+export type Doctor = {
+    _id: string;
+    _type: "doctor";
+    _createdAt: string;
+    _updatedAt: string;
+    _rev: string;
+    name?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayStringValue
+    >;
+    slug?: Slug;
+    departments?: Array<
+        {
+            _key: string;
+        } & DepartmentsKey
+    >;
+    services?: Array<
+        {
+            _key: string;
+        } & ServicesKey
+    >;
+    position?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayPortableTextValue
+    >;
+    photo?: {
+        asset?: {
+            _ref: string;
+            _type: "reference";
+            _weak?: boolean;
+            [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+        };
+        media?: unknown;
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: "image";
+    };
+    experience?: string;
+    specialization?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayPortableTextValue
+    >;
+    education?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayPortableTextValue
+    >;
+    activity?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayPortableTextValue
+    >;
+    training?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayPortableTextValue
+    >;
+    conferences?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayPortableTextValue
+    >;
+    about?: Array<
+        {
+            _key: string;
+        } & InternationalizedArrayPortableTextValue
+    >;
+};
+
 export type OffersPage = {
     _id: string;
     _type: "offersPage";
@@ -413,6 +492,7 @@ export type SanityAssetSourceData = {
 };
 
 export type AllSanitySchemaTypes =
+    | DepartmentsKey
     | ServicesKey
     | PortableTextAll
     | PortableText
@@ -421,6 +501,7 @@ export type AllSanitySchemaTypes =
     | DiscountFullData
     | DiscountShortData
     | PriceItem
+    | Doctor
     | OffersPage
     | PricesPage
     | InternationalizedArrayPortableTextAllValue
@@ -512,6 +593,78 @@ export type OffersShortQueryResult = Array<{
         learnMore: boolean | null;
     } | null;
 }> | null;
+// Variable: doctorsListQuery
+// Query: *[_type == "doctor" && !(_id in path("drafts.**"))]{"name":name[_key == $language][0].value, "slug":slug.current, departments, services,   "position":position[_key == $language][0].value, "photo":photo,   experience, "specialization":specialization[_key == $language][0].value,   "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value,   "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value,   "about":about[_key == $language][0].value}
+export type DoctorsListQueryResult = Array<{
+    name: string | null;
+    slug: string | null;
+    departments: Array<
+        {
+            _key: string;
+        } & DepartmentsKey
+    > | null;
+    services: Array<
+        {
+            _key: string;
+        } & ServicesKey
+    > | null;
+    position: PortableText | null;
+    photo: {
+        asset?: {
+            _ref: string;
+            _type: "reference";
+            _weak?: boolean;
+            [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+        };
+        media?: unknown;
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: "image";
+    } | null;
+    experience: string | null;
+    specialization: PortableText | null;
+    education: PortableText | null;
+    activity: PortableText | null;
+    training: PortableText | null;
+    conferences: PortableText | null;
+    about: PortableText | null;
+}>;
+// Variable: doctorQuery
+// Query: *[_type == "doctor" && slug.current == $slug][0]{"name":name[_key == $language][0].value, "slug":slug.current, departments, services,   "position":position[_key == $language][0].value, "photo":photo,   experience, "specialization":specialization[_key == $language][0].value,   "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value,   "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value,   "about":about[_key == $language][0].value}
+export type DoctorQueryResult = {
+    name: string | null;
+    slug: string | null;
+    departments: Array<
+        {
+            _key: string;
+        } & DepartmentsKey
+    > | null;
+    services: Array<
+        {
+            _key: string;
+        } & ServicesKey
+    > | null;
+    position: PortableText | null;
+    photo: {
+        asset?: {
+            _ref: string;
+            _type: "reference";
+            _weak?: boolean;
+            [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+        };
+        media?: unknown;
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: "image";
+    } | null;
+    experience: string | null;
+    specialization: PortableText | null;
+    education: PortableText | null;
+    activity: PortableText | null;
+    training: PortableText | null;
+    conferences: PortableText | null;
+    about: PortableText | null;
+} | null;
 
 // Query TypeMap
 import "@sanity/client";
@@ -521,5 +674,7 @@ declare module "@sanity/client" {
         '\n    *[_type == "pricesPage" && !(_id in path("drafts.**"))][0].priceBlocks[]\n {servicesKey, \n   "list":list[]{price, lowerPriceLimit, discountPrice, lowerDiscountLimit}}': PricesShortQueryResult;
         '\n    *[_type == "offersPage" && !(_id in path("drafts.**"))][0].discountsData[]\n{servicesKey, "title":title[_key == $language][0].value,\n discountFullData{"textRight":textRight[_key == $language][0].value, "textLeft":textLeft[_key == $language][0].value, \n                  "fractionDown":fractionDown[_key == $language][0].value, "fractionUp":fractionUp[_key == $language][0].value, \n                  "discountFullText":discountFullText[_key == $language][0].value}, \n discountShortData{"bgimage":bgimage.asset->url, "icon":icon.asset->url, premium, "premiumText":premiumText[_key == $language][0].value, "shortText":shortText[_key == $language][0].value, period, cost, learnMore },}': OffersPageQueryResult;
         '\n    *[_type == "offersPage" && !(_id in path("drafts.**"))][0].discountsData[]\n{servicesKey, "title":title[_key == $language][0].value,\n discountShortData{"bgimage":bgimage.asset->url, "icon":icon.asset->url, premium, "premiumText":premiumText[_key == $language][0].value, "shortText":shortText[_key == $language][0].value, period, cost, learnMore },}': OffersShortQueryResult;
+        '\n    *[_type == "doctor" && !(_id in path("drafts.**"))]\n{"name":name[_key == $language][0].value, "slug":slug.current, departments, services, \n  "position":position[_key == $language][0].value, "photo":photo, \n  experience, "specialization":specialization[_key == $language][0].value, \n  "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value, \n  "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, \n  "about":about[_key == $language][0].value}': DoctorsListQueryResult;
+        '\n    *[_type == "doctor" && slug.current == $slug][0]\n{"name":name[_key == $language][0].value, "slug":slug.current, departments, services, \n  "position":position[_key == $language][0].value, "photo":photo, \n  experience, "specialization":specialization[_key == $language][0].value, \n  "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value, \n  "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, \n  "about":about[_key == $language][0].value}': DoctorQueryResult;
     }
 }

@@ -25,3 +25,21 @@ export const offersShortQuery = defineQuery(`
     *[_type == "offersPage" && !(_id in path("drafts.**"))][0].discountsData[]
 {servicesKey, "title":title[_key == $language][0].value,
  discountShortData{"bgimage":bgimage.asset->url, "icon":icon.asset->url, premium, "premiumText":premiumText[_key == $language][0].value, "shortText":shortText[_key == $language][0].value, period, cost, learnMore },}`);
+
+export const doctorsListQuery = defineQuery(`
+    *[_type == "doctor" && !(_id in path("drafts.**"))]
+{"name":name[_key == $language][0].value, "slug":slug.current, departments, services, 
+  "position":position[_key == $language][0].value, "photo":photo, 
+  experience, "specialization":specialization[_key == $language][0].value, 
+  "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value, 
+  "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, 
+  "about":about[_key == $language][0].value}`);
+
+export const doctorQuery = defineQuery(`
+    *[_type == "doctor" && slug.current == $slug][0]
+{"name":name[_key == $language][0].value, "slug":slug.current, departments, services, 
+  "position":position[_key == $language][0].value, "photo":photo, 
+  experience, "specialization":specialization[_key == $language][0].value, 
+  "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value, 
+  "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, 
+  "about":about[_key == $language][0].value}`);

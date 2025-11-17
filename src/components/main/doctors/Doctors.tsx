@@ -2,26 +2,29 @@
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
-import {
-    departments,
-    DepartmentsType,
-    doctorsData,
-} from "@/components/assets/doctorsData";
+import { departments, DepartmentsType } from "@/components/assets/doctorsData";
 import { Fraction } from "@/components/shared/Fraction";
 import { LinkAction } from "@/components/shared/LinkAction";
 import { LocaleType } from "@/types/LocaleType";
 
+import { DoctorsListQueryResult } from "../../../../sanity.types";
 import { DoctorsSlider } from "../../shared/doctors/DoctorsSlider";
 
-export const Doctors = ({ className }: { className?: string }) => {
+export const Doctors = ({
+    className,
+    doctors,
+}: {
+    className?: string;
+    doctors: DoctorsListQueryResult;
+}) => {
     const [openedDepartment, setOpenedDepartment] =
         useState<DepartmentsType>("clinic-management");
 
     const toggleSubmenu = (key: DepartmentsType) => {
         setOpenedDepartment(key);
     };
-    const filteredDoctors = doctorsData.filter(doc =>
-        doc.departments.includes(openedDepartment)
+    const filteredDoctors = doctors.filter(doc =>
+        doc.departments?.includes(openedDepartment as any)
     );
     const t = useTranslations("HomePage");
     const locale = useLocale();

@@ -14,8 +14,20 @@ import { Team } from "@/components/pageAbout/team/Team";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
+import { sanityFetch } from "@/sanity/lib/client";
+import { doctorsListQuery } from "@/sanity/lib/queries";
 
-export default function AboutPage() {
+export default async function AboutPage({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    const doctorsList = await sanityFetch({
+        query: doctorsListQuery,
+        params: { language: locale },
+        tags: [],
+    });
     const FEEDBACKS_SLIDES_TO_SHOW = 4;
     const breadcrumb = [{ name: "pro-kliniku", href: "/pro-kliniku" }];
 
@@ -33,7 +45,7 @@ export default function AboutPage() {
             <Advantages />
             <Methods />
             <Team />
-            <Doctors />
+            <Doctors doctors={doctorsList} />
             <AboutCTA />
             <FeedbackSection
                 className="prepc:pb-[60px]"

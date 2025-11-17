@@ -3,7 +3,6 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 
 import { advantagesList } from "@/components/assets/advantagesData";
-import { DoctorProps } from "@/components/assets/doctorsData";
 import {
     NextButton,
     PrevButton,
@@ -12,9 +11,14 @@ import {
 import { useDotButton } from "@/components/shared/slider/SliderDots";
 import { SliderDotsBox } from "@/components/shared/slider/SliderDotsBox";
 
+import { DoctorsListQueryResult } from "../../../../sanity.types";
 import { DoctorCard } from "./DoctorCard";
 
-export const DoctorsSlider = ({ doctors }: { doctors: DoctorProps[] }) => {
+export const DoctorsSlider = ({
+    doctors,
+}: {
+    doctors: DoctorsListQueryResult;
+}) => {
     const options: EmblaOptionsType = {
         loop: true,
         align: "start",
@@ -35,7 +39,7 @@ export const DoctorsSlider = ({ doctors }: { doctors: DoctorProps[] }) => {
                 <div className="flex">
                     {doctors.map(doctor => (
                         <div
-                            key={doctor.en.name}
+                            key={doctor.name}
                             className="embla__slide tab:flex-[0_0_250px] tab:pr-3 pc:pr-5 w-full flex-[0_0_240px] pr-[14px]"
                         >
                             <DoctorCard data={doctor} />

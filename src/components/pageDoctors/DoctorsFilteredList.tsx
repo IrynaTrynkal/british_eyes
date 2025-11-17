@@ -1,24 +1,26 @@
 import { Pagination } from "@/components/shared/Pagination";
 
-import { DepartmentsType, doctorsData } from "../assets/doctorsData";
+import { DepartmentsKey, DoctorsListQueryResult } from "../../../sanity.types";
 import { DoctorCardDoctorsPage } from "./DoctorCardDoctorsPage";
 
 const ITEMS_PER_PAGE = 6;
 
 export const DoctorsFilteredList = ({
     pageNumber = 1,
+    list,
     selectedDepartment,
     className,
 }: {
     pageNumber?: number;
-    selectedDepartment?: DepartmentsType;
+    list: DoctorsListQueryResult;
+    selectedDepartment?: DepartmentsKey;
     className?: string;
 }) => {
     const filteredDoctorsList =
         !selectedDepartment || selectedDepartment === "clinic-management"
-            ? doctorsData
-            : doctorsData.filter(item =>
-                  item.departments.includes(selectedDepartment)
+            ? list
+            : list.filter(item =>
+                  item.departments?.includes(selectedDepartment as any)
               );
 
     const totalPages = Math.ceil(filteredDoctorsList.length / ITEMS_PER_PAGE);
