@@ -1,14 +1,21 @@
+import { HeroBlog } from "@/components/pageBlog/HeroBlog";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
-export default function OffersPage() {
+export default async function NewsPage({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
     const breadcrumb = [{ name: "blog", href: "/blog" }];
 
     return (
-        <div className="content py-24">
-            <h1 className="font-oswald font-bold uppercase">
-                Сторінка Новини в розробці
-            </h1>
-            <Breadcrumbs breadcrumbsList={breadcrumb} />
-        </div>
+        <>
+            <Breadcrumbs
+                breadcrumbsList={breadcrumb}
+                className="prepc:mt-[104px] prepc:mb-12 mt-[72px] mb-6"
+            />
+            <HeroBlog />
+        </>
     );
 }
