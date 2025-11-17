@@ -39,6 +39,9 @@ export const blogPage = defineType({
             name: "publication",
             type: "date",
             title: "Дата публікації",
+            options: {
+                dateFormat: "DD.MM.YYYY",
+            },
         }),
         defineField({
             name: "image",

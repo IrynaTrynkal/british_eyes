@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
@@ -49,7 +50,8 @@ export const NewCard = ({
             </p>
             <div className="pc:gap-5 flex items-center justify-between">
                 <p className="pc:text-sm pc:py-[3px] w-full border-b border-black px-2 py-0.5 text-xs leading-none text-gray-500 uppercase">
-                    {news.publication}
+                    {news.publication &&
+                        format(new Date(news.publication), "dd.MM.yyyy")}
                 </p>
                 <Link
                     href={`/blog/${news.slug}` as any}
