@@ -299,7 +299,7 @@ export type Doctor = {
     about?: Array<
         {
             _key: string;
-        } & InternationalizedArrayPortableTextValue
+        } & InternationalizedArrayPortableTextAllValue
     >;
 };
 
@@ -627,7 +627,7 @@ export type DoctorsListQueryResult = Array<{
     activity: PortableText | null;
     training: PortableText | null;
     conferences: PortableText | null;
-    about: PortableText | null;
+    about: PortableTextAll | null;
 }>;
 // Variable: doctorQuery
 // Query: *[_type == "doctor" && slug.current == $slug][0]{"name":name[_key == $language][0].value, "slug":slug.current, departments, services,   "position":position[_key == $language][0].value, "photo":photo,   experience, "specialization":specialization[_key == $language][0].value,   "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value,   "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value,   "about":about[_key == $language][0].value}
@@ -663,7 +663,7 @@ export type DoctorQueryResult = {
     activity: PortableText | null;
     training: PortableText | null;
     conferences: PortableText | null;
-    about: PortableText | null;
+    about: PortableTextAll | null;
 } | null;
 
 // Query TypeMap

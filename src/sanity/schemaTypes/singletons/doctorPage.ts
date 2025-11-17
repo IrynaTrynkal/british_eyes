@@ -97,7 +97,7 @@ export const doctorPage = defineType({
         }),
         defineField({
             name: "about",
-            type: "internationalizedArrayPortableText",
+            type: "internationalizedArrayPortableTextAll",
             title: "Про лікаря",
         }),
     ],
