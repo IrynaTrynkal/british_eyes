@@ -135,7 +135,12 @@
         "details": "more details",
         "typesDiseases": "Types of diseases",
         "rayner-galaxy": "Rayner Galaxy",
-        "allInstructions": "all instructions"
+        "allInstructions": "all instructions",
+        "clinic-management": "Clinic Management",
+        "consultation-and-diagnostic-ophthalmologists": "Consultation and diagnostic ophthalmologists",
+        "childrens-ophthalmologists": "Children’s Ophthalmologists",
+        "doctors-anesthesiologists": "Doctors anesthesiologists",
+        "ophthalmic-surgeons": "Ophthalmic surgeons"
     },
     "Modals": {
         "callUs": "Contact us",
@@ -149,7 +154,14 @@
         "heroTextDown": "experts",
         "departmants": "Departments",
         "experienceSince": "Experience since {year}",
-        "details": "more details"
+        "details": "more details",
+        "about": "About the doctor",
+        "specialization": "Specialization",
+        "education": "Education",
+        "activity": "Professional activity",
+        "training": "Professional training",
+        "conferences": "Participation in international and Ukrainian conferences",
+        "categories": "categories"
     },
     "Form": {
         "title": "book a consultation",

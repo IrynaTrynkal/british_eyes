@@ -1,7 +1,11 @@
 import { Fragment } from "react";
 
 import { sanityFetch } from "@/sanity/lib/client";
-import { offersShortQuery, pricesPageQuery } from "@/sanity/lib/queries";
+import {
+    doctorsListQuery,
+    offersShortQuery,
+    pricesPageQuery,
+} from "@/sanity/lib/queries";
 import { LocaleType } from "@/types/LocaleType";
 
 import { servicesData, ServicesProps } from "../assets/servicesData";
@@ -25,7 +29,7 @@ export const ServicePageContent = async ({
     serviceData: ServicesProps;
     locale: LocaleType;
 }) => {
-    const [pricesList, offersShortList] = await Promise.all([
+    const [pricesList, offersShortList, doctorsList] = await Promise.all([
         sanityFetch({
             query: pricesPageQuery,
             params: { language: locale },
@@ -33,6 +37,11 @@ export const ServicePageContent = async ({
         }),
         sanityFetch({
             query: offersShortQuery,
+            params: { language: locale },
+            tags: [],
+        }),
+        sanityFetch({
+            query: doctorsListQuery,
             params: { language: locale },
             tags: [],
         }),
@@ -132,6 +141,7 @@ export const ServicePageContent = async ({
                         return (
                             <DoctorsServices
                                 key={index}
+                                list={doctorsList}
                                 service={serviceData.name.key}
                             />
                         );

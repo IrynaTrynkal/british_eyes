@@ -135,7 +135,12 @@
         "details": "детальніше",
         "typesDiseases": "Види захворювань",
         "rayner-galaxy": "Rayner Galaxy",
-        "allInstructions": "всі інструкції"
+        "allInstructions": "всі інструкції",
+        "clinic-management": "керівництво клініки",
+        "consultation-and-diagnostic-ophthalmologists": "Офтальмологи консультативно-діагностичного відділення",
+        "childrens-ophthalmologists": "Дитячі офтальмологи",
+        "doctors-anesthesiologists": "Лікарі-анестезіологи",
+        "ophthalmic-surgeons": "Хірурги офтальмологи"
     },
     "Modals": {
         "callUs": "Зв’язатись з нами",
@@ -149,7 +154,14 @@
         "heroTextDown": "експертів",
         "departmants": "Відділення",
         "experienceSince": "Стаж роботи з {year} року",
-        "details": "докладніше"
+        "details": "докладніше",
+        "about": "про лікаря",
+        "specialization": "Спеціалізація",
+        "education": "Освіта",
+        "activity": "Професійна діяльність",
+        "training": "Підвищення кваліфікації",
+        "conferences": "участь в міжнародних та всеукраїнських конференціях",
+        "categories": "категорії"
     },
     "Form": {
         "title": "запишіться на консультацію",

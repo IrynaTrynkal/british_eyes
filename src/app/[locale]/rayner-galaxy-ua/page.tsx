@@ -1,5 +1,3 @@
-import { useLocale } from "next-intl";
-
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import {
     raynerAdvantageDataMob,
@@ -16,14 +14,25 @@ import { RaynerAbout } from "@/components/someServiceComponents/individualCompon
 import { RaynerCompare } from "@/components/someServiceComponents/individualComponents/RaynerCompare";
 import { RaynerUniq } from "@/components/someServiceComponents/individualComponents/RaynerUniq";
 import { RaynerVideo } from "@/components/someServiceComponents/individualComponents/RaynerVideo";
+import { sanityFetch } from "@/sanity/lib/client";
+import { doctorsListQuery } from "@/sanity/lib/queries";
 import { LocaleType } from "@/types/LocaleType";
 
-export default function RaynerPage() {
+export default async function RaynerPage({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    const doctorsList = await sanityFetch({
+        query: doctorsListQuery,
+        params: { language: locale },
+        tags: [],
+    });
     const breadcrumb = [
         { name: "poslugy", href: "/poslugy" },
         { name: "rayner-galaxy", href: "/rayner-galaxy-ua" },
     ];
-    const locale = useLocale();
 
     return (
         <>
@@ -42,7 +51,10 @@ export default function RaynerPage() {
             />
             <RaynerVideo />
             <AboutCTA />
-            <Doctors className="tab:mt-12 pc:mt-[120px] mt-[60px]" />
+            <Doctors
+                doctors={doctorsList}
+                className="tab:mt-12 pc:mt-[120px] mt-[60px]"
+            />
             <FeedbackSection list={feedbacksList} slideAmount={4} />
             <Booking />
         </>
