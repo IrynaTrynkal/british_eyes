@@ -726,6 +726,17 @@ export type BlogQueryResult = {
     shortText: string | null;
     content: PortableTextAll | null;
 } | null;
+// Variable: blogShortByServiceQuery
+// Query: *[_type == "blog" && service == $service && slug.current != $slug]{   service, "title":title[_key == $language][0].value,     publication, "slug":slug.current, "image":image.asset->url,     "content": content[_key == $language][0].value,     "shortText":shortText[_key == $language][0].value }
+export type BlogShortByServiceQueryResult = Array<{
+    service: ServicesKey | null;
+    title: string | null;
+    publication: string | null;
+    slug: string | null;
+    image: string | null;
+    content: PortableTextAll | null;
+    shortText: string | null;
+}>;
 
 // Query TypeMap
 import "@sanity/client";
@@ -739,5 +750,6 @@ declare module "@sanity/client" {
         '\n    *[_type == "doctor" && slug.current == $slug][0]\n{"name":name[_key == $language][0].value, "slug":slug.current, departments, services, \n  "position":position[_key == $language][0].value, "photo":photo, \n  experience, "specialization":specialization[_key == $language][0].value, \n  "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value, \n  "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, \n  "about":about[_key == $language][0].value}': DoctorQueryResult;
         '\n     *[_type == "blog" && !(_id in path("drafts.**"))]{\n   service, "title":title[_key == $language][0].value,\n     "slug":slug.current, publication, "image":image.asset->url,\n     "shortText":shortText[_key == $language][0].value,\n     "content": content[_key == $language][0].value}': BlogsListQueryResult;
         '\n      *[_type == "blog" && slug.current == $slug][0]{\n   service, "title":title[_key == $language][0].value,\n     publication, "slug":slug.current, "image":image.asset->url,\n     "shortText":shortText[_key == $language][0].value,\n     "content": content[_key == $language][0].value}': BlogQueryResult;
+        '\n      *[_type == "blog" && service == $service && slug.current != $slug]{\n   service, "title":title[_key == $language][0].value,\n     publication, "slug":slug.current, "image":image.asset->url,\n     "content": content[_key == $language][0].value,\n     "shortText":shortText[_key == $language][0].value\n }': BlogShortByServiceQueryResult;
     }
 }

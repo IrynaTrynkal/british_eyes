@@ -369,6 +369,22 @@
     "Blog": {
         "title": "News ",
         "description": "Ми навчаємо та ділимось досвідом",
-        "allTopics": "всі теми"
+        "allTopics": "All topics",
+        "moreNews": "More news about {service}",
+        "lazerna-korekcziya-zoru": "laser vision correction",
+        "perevirka-zoru": "eye examination",
+        "likuvannya-katarakti": "cataract treatment",
+        "syndrom-sukhoho-oka": "dry eye syndrome treatment",
+        "dityache-viddilennya": "children’s department",
+        "likuvannya-keratokonusa": "keratoconus treatment",
+        "lazerne-likuvannya-zahvoryuvan-oka": "laser treatment of eye diseases",
+        "refrakczijna-lensektomiya": "refractive lensectomy",
+        "vitreoretinalna-hirurgiya": "vitreoretinal surgery",
+        "intravitrealni-inekczii": "intravitreal injections",
+        "hirurgichne-likuvannya-glaukomi": "surgical glaucoma treatment",
+        "likuvannya-kosookosti": "strabismus treatment",
+        "hirurgiya-povik-i-konyunktivi": "eyelid and conjunctival surgery",
+        "anesteziologichnij-posibnik": "anesthesiological support",
+        "ksenonoterapiya": "xenon therapy"
     }
 }

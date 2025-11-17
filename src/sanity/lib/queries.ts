@@ -57,3 +57,11 @@ export const blogQuery = defineQuery(`
      publication, "slug":slug.current, "image":image.asset->url,
      "shortText":shortText[_key == $language][0].value,
      "content": content[_key == $language][0].value}`);
+
+export const blogShortByServiceQuery = defineQuery(`
+      *[_type == "blog" && service == $service && slug.current != $slug]{
+   service, "title":title[_key == $language][0].value,
+     publication, "slug":slug.current, "image":image.asset->url,
+     "content": content[_key == $language][0].value,
+     "shortText":shortText[_key == $language][0].value
+ }`);

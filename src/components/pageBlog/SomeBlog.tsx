@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import { useTranslations } from "next-intl";
 
 import { PortableTextRenderer } from "@/sanity/components/PortableTextComponents";
@@ -9,7 +10,7 @@ export const SomeBlog = ({ blog }: { blog: BlogQueryResult }) => {
     if (!blog) return null;
 
     return (
-        <section className="tab:max-w-full tab:mx-0 mx-auto max-w-[540px] px-6 pb-[60px]">
+        <section className="content pb-[60px]">
             <div className="tab:flex tab:justify-between tab:mb-6 prepc:mb-8 prepc:gap-5 tab:gap-3">
                 <div className="tab:px-0 tab:flex tab:flex-col tab:justify-between tab:w-[74.5%] px-4">
                     <div className="pc:aspect-[435/220] tab:hidden relative mb-4 aspect-[288/146] w-full overflow-hidden rounded-tl-md rounded-tr-md">
@@ -41,7 +42,11 @@ export const SomeBlog = ({ blog }: { blog: BlogQueryResult }) => {
 
                     <div className="pc:gap-5 tab:mb-0 prepc:pb-4 mb-3 flex items-center justify-between border-b border-black pb-2">
                         <p className="w-fit leading-[100%] text-gray-500 uppercase">
-                            {blog.publication}
+                            {blog.publication &&
+                                format(
+                                    new Date(blog.publication),
+                                    "dd.MM.yyyy"
+                                )}
                         </p>
                         <p className="text-grey font-oswald text-sm leading-[100%] uppercase">
                             {blog.service ? t(blog.service) : ""}
