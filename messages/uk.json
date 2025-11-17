@@ -368,7 +368,22 @@
     },
     "Blog": {
         "title": "Новини ",
-        "description": "Ми навчаємо та ділимось досвідом",
-        "allTopics": "всі теми"
+        "allTopics": "всі теми",
+        "moreNews": "Більше новин про {service}",
+        "lazerna-korekcziya-zoru": "лазерну корекцію зору",
+        "perevirka-zoru": "перевірку зору",
+        "likuvannya-katarakti": "лікування катаракти",
+        "syndrom-sukhoho-oka": "лікування синдрому сухого ока",
+        "dityache-viddilennya": "дитяче відділення",
+        "likuvannya-keratokonusa": "лікування кератоконусу",
+        "lazerne-likuvannya-zahvoryuvan-oka": "лазерне лікування захворювань ока",
+        "refrakczijna-lensektomiya": "рефракційну ленсектомію",
+        "vitreoretinalna-hirurgiya": "вітреоретинальну хірургію",
+        "intravitrealni-inekczii": "інтравітреальні ін’єкції",
+        "hirurgichne-likuvannya-glaukomi": "хірургічне лікування глаукоми",
+        "likuvannya-kosookosti": "лікування косоокості",
+        "hirurgiya-povik-i-konyunktivi": "хірургію повік і кон’юнктиви",
+        "anesteziologichnij-posibnik": "анестезіологічний супровід",
+        "ksenonoterapiya": "ксенонотерапію"
     }
 }

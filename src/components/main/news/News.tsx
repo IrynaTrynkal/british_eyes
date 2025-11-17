@@ -7,7 +7,13 @@ import { NewCard } from "./NewCard";
 
 const MAX_NEWS = 3;
 
-export const News = ({ blogList }: { blogList: BlogsListQueryResult }) => {
+export const News = ({
+    blogList,
+    title,
+}: {
+    blogList: BlogsListQueryResult;
+    title?: string;
+}) => {
     const t = useTranslations("HomePage");
 
     if (!blogList) return null;
@@ -15,14 +21,16 @@ export const News = ({ blogList }: { blogList: BlogsListQueryResult }) => {
 
     return (
         <section className="content pc:pb-[120px] tab:pb-12 pb-[60px]">
-            <h3 className="subtitle tab:mb-10 mb-5">{t("newsSubtitle")}</h3>{" "}
+            <h3 className={`subtitle tab:mb-10 mb-5 ${title ? "hidden" : ""}`}>
+                {t("newsSubtitle")}
+            </h3>{" "}
             <div className="tab:flex tab:justify-between tab:mb-10">
                 <h2 className="title-section tab:mb-0 mb-6">
-                    {t("newsTitle")}
+                    {title ? title : t("newsTitle")}
                 </h2>
                 <LinkAction
                     secondary
-                    className="tab:flex hidden"
+                    className={` ${title ? "hidden" : "tab:flex hidden"}`}
                     href="/blog"
                     name={t("newsBtn")}
                 />
@@ -39,7 +47,7 @@ export const News = ({ blogList }: { blogList: BlogsListQueryResult }) => {
             </ul>
             <LinkAction
                 secondary
-                className="tab:hidden mx-auto"
+                className={`tab:hidden mx-auto ${title ? "hidden" : ""}`}
                 href="/blog"
                 name={t("newsBtn")}
             />
