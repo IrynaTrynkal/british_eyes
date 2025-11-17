@@ -15,6 +15,7 @@ import { discountFullDataType } from "./objects/discountFullDataType";
 import { discountShortDataType } from "./objects/discountShortDataType";
 import { priceBlockType } from "./objects/priceBlockType";
 import { priceItemType } from "./objects/priceItemType";
+import { blogPage } from "./singletons/blogPage";
 import { doctorPage } from "./singletons/doctorPage";
 import { offersPageType } from "./singletons/offersPage";
 import { pricesPageType } from "./singletons/pricePageType";
@@ -23,6 +24,7 @@ const singletons: DocumentDefinition[] = [
     pricesPageType,
     offersPageType,
     doctorPage,
+    blogPage,
 ];
 const objects: ObjectDefinition[] = [
     priceItemType,

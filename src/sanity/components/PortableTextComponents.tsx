@@ -9,6 +9,7 @@ import { InfoTable } from "@/components/shared/InfoTable";
 import { AccentText } from "@/sanity/components/AccentText";
 import { MediumText } from "@/sanity/components/MediumText";
 
+import { urlFor } from "../lib/image";
 import { BlackText } from "./BlackText";
 import { GreyText } from "./GreyText";
 import { MyPortableTextBlock } from "./PortableTextPriceComponents";
@@ -72,12 +73,13 @@ const components: PortableTextComponents = {
     types: {
         image: ({ value }) => {
             const maxH = value?.maxH || "prepc:max-h-[500px] max-h-[200px]";
+            const imageUrl = urlFor(value.asset).url();
             return (
                 <div
                     className={`mb-4 flex w-full justify-center overflow-hidden ${maxH}`}
                 >
                     <Image
-                        src={value.asset.url}
+                        src={imageUrl}
                         alt={value.alt || "content image"}
                         width={0}
                         height={0}

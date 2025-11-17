@@ -12,7 +12,7 @@ import { News } from "@/components/main/news/News";
 import { Services } from "@/components/main/services/Services";
 import { Booking } from "@/components/shared/booking/Booking";
 import { sanityFetch } from "@/sanity/lib/client";
-import { doctorsListQuery } from "@/sanity/lib/queries";
+import { blogsListQuery, doctorsListQuery } from "@/sanity/lib/queries";
 
 export default async function Home({
     params,
@@ -20,11 +20,19 @@ export default async function Home({
     params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
-    const doctorsList = await sanityFetch({
-        query: doctorsListQuery,
-        params: { language: locale },
-        tags: [],
-    });
+
+    const [blogList, doctorsList] = await Promise.all([
+        sanityFetch({
+            query: blogsListQuery,
+            params: { language: locale },
+            tags: [],
+        }),
+        sanityFetch({
+            query: doctorsListQuery,
+            params: { language: locale },
+            tags: [],
+        }),
+    ]);
     return (
         <>
             <HeroMain />
@@ -36,7 +44,7 @@ export default async function Home({
             <AboutMain />
             <Doctors doctors={doctorsList} />
             <Feedbacks />
-            <News />
+            <News blogList={blogList} />
             <FAQ faqList={faqMainList} />
             <Booking />
         </>

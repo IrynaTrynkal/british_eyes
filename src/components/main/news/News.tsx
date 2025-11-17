@@ -1,15 +1,17 @@
 import { useTranslations } from "next-intl";
 
-import { newsList } from "@/components/assets/newsData";
 import { LinkAction } from "@/components/shared/LinkAction";
 
+import { BlogsListQueryResult } from "../../../../sanity.types";
 import { NewCard } from "./NewCard";
 
 const MAX_NEWS = 3;
 
-export const News = () => {
+export const News = ({ blogList }: { blogList: BlogsListQueryResult }) => {
     const t = useTranslations("HomePage");
-    const showNews = newsList.slice(0, MAX_NEWS);
+
+    if (!blogList) return null;
+    const showNews = blogList.slice(0, MAX_NEWS);
 
     return (
         <section className="content pc:pb-[120px] tab:pb-12 pb-[60px]">
@@ -28,7 +30,7 @@ export const News = () => {
             <ul className="tab:flex-row tab:flex-wrap tab:justify-center mb-8 flex flex-col gap-5">
                 {showNews.map(news => (
                     <li
-                        key={news.en.title}
+                        key={news.title}
                         className="tab:w-[calc(50%-10px)] tab:max-w-[395px] pc:max-w-[434px] h-full overflow-hidden rounded-tl rounded-tr"
                     >
                         <NewCard btnName={t("readMore")} news={news} />

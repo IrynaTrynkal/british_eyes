@@ -74,7 +74,7 @@ export const portableTextAllType = defineField({
                     name: "maxH",
                     title: "Максимальна висота",
                     type: "string",
-                    description: "Наприклад: '300px', '500px', 'auto'",
+                    description: "Наприклад: prepc:max-h-[500px] max-h-[400px]",
                 }),
             ],
         }),
