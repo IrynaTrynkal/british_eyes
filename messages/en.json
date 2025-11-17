@@ -365,5 +365,10 @@
         "rulesAutoText": "By prior arrangement with our Information and Registration Center, we allow vehicle access for visiting the clinic.",
         "rulesParkingTitle": "no parking near the clinic",
         "rulesParkingText": "Since the clinic is located in the very center of the city, in a historical building, parking near the clinic is prohibited."
+    },
+    "Blog": {
+        "title": "News ",
+        "description": "Ми навчаємо та ділимось досвідом",
+        "allTopics": "всі теми"
     }
 }
