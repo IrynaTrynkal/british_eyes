@@ -43,3 +43,17 @@ export const doctorQuery = defineQuery(`
   "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value, 
   "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, 
   "about":about[_key == $language][0].value}`);
+
+export const blogsListQuery = defineQuery(`
+     *[_type == "blog" && !(_id in path("drafts.**"))]{
+   service, "title":title[_key == $language][0].value,
+     "slug":slug.current, publication, "image":image.asset->url,
+     "shortText":shortText[_key == $language][0].value,
+     "content": content[_key == $language][0].value}`);
+
+export const blogQuery = defineQuery(`
+      *[_type == "blog" && slug.current == $slug][0]{
+   service, "title":title[_key == $language][0].value,
+     publication, "slug":slug.current, "image":image.asset->url,
+     "shortText":shortText[_key == $language][0].value,
+     "content": content[_key == $language][0].value}`);

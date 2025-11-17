@@ -2,9 +2,9 @@ import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
 
-import { BlogsListQueryResult } from "../../../../sanity.types";
+import { BlogsListQueryResult } from "../../../sanity.types";
 
-export const NewCard = ({
+export const BlogCardForAllNewsPage = ({
     news,
     btnName,
 }: {
@@ -53,8 +53,6 @@ export const NewCard = ({
                 </p>
                 <Link
                     href={`/blog/${news.slug}` as any}
-                    target="_blank"
-                    rel="noreferrer"
                     className="font-oswald tab:text-sm pc:text-base pc:hover:underline-offset-[2.5px] text-sm leading-none font-medium whitespace-nowrap uppercase hover:underline hover:decoration-1 hover:underline-offset-[1.5px]"
                 >
                     {btnName}

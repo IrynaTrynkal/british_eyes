@@ -3,16 +3,21 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 
+import { ServicesKey } from "../../../sanity.types";
 import { ServicesKeyType } from "../assets/menu";
 import { IconArrow } from "./icons/IconArrow";
 
-type TopicFilterProps<T extends { service: ServicesKeyType }> = {
+type TopicFilterProps<
+    T extends { service: ServicesKeyType | ServicesKey | null },
+> = {
     list: T[];
     id?: string;
     className?: string;
 };
 
-export const TopicFilter = <T extends { service: ServicesKeyType }>({
+export const TopicFilter = <
+    T extends { service: ServicesKeyType | ServicesKey | null },
+>({
     list,
     id,
     className,
@@ -26,9 +31,11 @@ export const TopicFilter = <T extends { service: ServicesKeyType }>({
         (searchParams.get("category") as ServicesKeyType) ?? "all";
 
     const services = useMemo(() => {
-        return Array.from(
-            new Set<ServicesKeyType>(["all", ...list.map(f => f.service)])
-        );
+        const keys = list
+            .map(f => f.service)
+            .filter((s): s is ServicesKeyType => s !== null);
+
+        return Array.from(new Set<ServicesKeyType>(["all", ...keys]));
     }, [list]);
 
     const toggleSubmenu = (key: ServicesKeyType) => {
@@ -45,7 +52,7 @@ export const TopicFilter = <T extends { service: ServicesKeyType }>({
     return (
         <div
             id={id}
-            className={`green-gradient prepc:p-3 prepc:max-w-[207px] text-ivory mt-[60px] overflow-hidden rounded-lg py-4 ${className}`}
+            className={`green-gradient prepc:p-3 prepc:max-w-[207px] text-ivory overflow-hidden rounded-lg py-4 ${className}`}
         >
             <div className="prepc:p-0 mb-3 px-4">
                 <div className="border-ivory flex items-center justify-between border-b pb-3">

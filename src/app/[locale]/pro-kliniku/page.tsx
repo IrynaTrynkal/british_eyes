@@ -15,7 +15,7 @@ import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
 import { sanityFetch } from "@/sanity/lib/client";
-import { doctorsListQuery } from "@/sanity/lib/queries";
+import { blogsListQuery, doctorsListQuery } from "@/sanity/lib/queries";
 
 export default async function AboutPage({
     params,
@@ -23,11 +23,18 @@ export default async function AboutPage({
     params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
-    const doctorsList = await sanityFetch({
-        query: doctorsListQuery,
-        params: { language: locale },
-        tags: [],
-    });
+    const [blogList, doctorsList] = await Promise.all([
+        sanityFetch({
+            query: blogsListQuery,
+            params: { language: locale },
+            tags: [],
+        }),
+        sanityFetch({
+            query: doctorsListQuery,
+            params: { language: locale },
+            tags: [],
+        }),
+    ]);
     const FEEDBACKS_SLIDES_TO_SHOW = 4;
     const breadcrumb = [{ name: "pro-kliniku", href: "/pro-kliniku" }];
 
@@ -52,7 +59,7 @@ export default async function AboutPage({
                 list={feedbacksList}
                 slideAmount={FEEDBACKS_SLIDES_TO_SHOW}
             />
-            <News />
+            <News blogList={blogList} />
             <FAQ faqList={faqMainList} />
             <Booking />
         </>

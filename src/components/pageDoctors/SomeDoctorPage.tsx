@@ -47,8 +47,8 @@ export const SomeDoctorPageMain = ({
                     <Image
                         src={photo}
                         alt={doctorData.name!}
-                        width={450}
-                        height={450}
+                        width={700}
+                        height={700}
                     />
                 </div>
                 <div className="pc:mb-0 prepc:px-5 mb-3 px-3">
