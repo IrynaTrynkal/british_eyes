@@ -7,6 +7,7 @@ import { getTranslations } from "next-intl/server";
 
 import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
+import { BinotelChat } from "@/components/shared/BinotelChat";
 import { routing } from "@/i18n/routing";
 
 const oswald = Oswald({
@@ -74,6 +75,7 @@ export default async function RootLayout({
                     <Header />
                     <main className="flex-1">{children}</main>
                     <Footer />
+                    <BinotelChat />
                 </body>
             </NextIntlClientProvider>
         </html>
