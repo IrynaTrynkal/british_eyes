@@ -10904,7 +10904,7 @@ export const servicesData: ServicesProps[] = [
                     type: "roundImageAndTextSection",
                     data: {
                         firstImageLeft: true,
-                        paddingBottom: false,
+                        paddingBottom: true,
                         data: [
                             {
                                 title: "Контроль безпеки: обладнання, моніторинг, протоколи",
@@ -11110,7 +11110,7 @@ export const servicesData: ServicesProps[] = [
                     type: "roundImageAndTextSection",
                     data: {
                         firstImageLeft: true,
-                        paddingBottom: false,
+                        paddingBottom: true,
                         data: [
                             {
                                 title: "Safety control: equipment, monitoring, protocols",
@@ -11315,7 +11315,7 @@ export const servicesData: ServicesProps[] = [
                     type: "roundImageAndTextSection",
                     data: {
                         firstImageLeft: true,
-                        paddingBottom: false,
+                        paddingBottom: true,
                         data: [
                             {
                                 title: "Контроль безопасности: оборудование, мониторинг, протоколы",
