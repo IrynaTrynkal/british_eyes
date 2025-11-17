@@ -90,7 +90,7 @@ export const DoctorsServices = ({
                     </p>
                 )}
                 {filteredDoctors.length === 1 ? (
-                    <div className="prepc:max-w-[78%] tab:max-w-full pc:max-w-[86%] prepc:mx-0 tab:px-0 prepc:mb-0 mx-auto mb-8 max-w-[540px] px-4">
+                    <div className="prepc:w-[78%] tab:max-w-full pc:w-[86%] prepc:mx-0 tab:px-0 prepc:mb-0 mx-auto mb-8 max-w-[540px] px-4">
                         <DoctorOneCard data={filteredDoctors[0]} />
                     </div>
                 ) : (
