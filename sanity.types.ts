@@ -47,7 +47,12 @@ export type PortableTextAll = Array<
           }>;
           style?: "normal";
           listItem?: "bullet" | "number";
-          markDefs?: null;
+          markDefs?: Array<{
+              href?: string;
+              openInNewTab?: boolean;
+              _type: "link";
+              _key: string;
+          }>;
           level?: number;
           _type: "block";
           _key: string;

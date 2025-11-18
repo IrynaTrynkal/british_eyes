@@ -58,7 +58,28 @@ export const portableTextAllType = defineField({
                         component: BottomSpace,
                     },
                 ],
-                annotations: [],
+                annotations: [
+                    {
+                        name: "link",
+                        type: "object",
+                        title: "Link",
+                        fields: [
+                            {
+                                name: "href",
+                                type: "string",
+                                description:
+                                    "Якщо посилання по сайту, вказуйте починаючи з /, якщо посилання на інший сайт, то з https://",
+                                title: "URL",
+                            },
+                            {
+                                name: "openInNewTab",
+                                type: "boolean",
+                                title: "Відкрити у новій вкладці",
+                                initialValue: false,
+                            },
+                        ],
+                    },
+                ],
             },
         }),
         defineArrayMember({
