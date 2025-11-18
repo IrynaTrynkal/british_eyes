@@ -5,9 +5,11 @@ import { phoneList } from "../assets/contacts";
 export const PhoneNumberList = ({
     className,
     onClick,
+    dark,
 }: {
     className?: string;
     onClick?: () => void;
+    dark?: boolean;
 }) => {
     return (
         <ul className={className}>
@@ -16,7 +18,7 @@ export const PhoneNumberList = ({
                     <a
                         onClick={onClick}
                         href={`tel:${normalizePhone(item)}`}
-                        className="group-hover:text-grey-90 hover:!text-ivory transition-colors duration-300"
+                        className={`${dark ? "group-hover:text-grey-90 hover:text-black hover:underline" : "group-hover:text-grey-90 hover:!text-ivory"} transition-all duration-300`}
                     >
                         {item}
                     </a>
