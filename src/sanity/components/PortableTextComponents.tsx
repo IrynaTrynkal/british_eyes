@@ -6,6 +6,7 @@ import {
 import Image from "next/image";
 
 import { InfoTable } from "@/components/shared/InfoTable";
+import { Link } from "@/i18n/navigation";
 import { AccentText } from "@/sanity/components/AccentText";
 import { MediumText } from "@/sanity/components/MediumText";
 
@@ -27,6 +28,34 @@ const components: PortableTextComponents = {
         bottomSpace: ({ children }) => (
             <span className="prepc:mb-5 mb-3 block">{children}</span>
         ),
+        link: ({
+            children,
+            value,
+        }: {
+            children: React.ReactNode;
+            value?: { href: string; openInNewTab: boolean };
+        }) => {
+            if (!value) return null;
+            const { href, openInNewTab } = value;
+            const isAbsoluteUrl = /^https?:\/\//i.test(href);
+            if (isAbsoluteUrl) {
+                return (
+                    <a
+                        href={href}
+                        target={openInNewTab ? "_blank" : "_self"}
+                        rel={openInNewTab ? "noopener noreferrer" : ""}
+                        className="underline"
+                    >
+                        {children}
+                    </a>
+                );
+            }
+            return (
+                <Link href={href as any} className="underline">
+                    {children}
+                </Link>
+            );
+        },
     },
     list: {
         bullet: ({ children }) => (
@@ -112,12 +141,11 @@ export const PortableTextRenderer = ({ value }: { value: any }) => {
             const next = value[i + 1];
 
             if (next) {
-                // Додаємо клонований блок з addSpacing
                 processedValue.push({
                     ...next,
                     addSpacing: true,
                 });
-                i++; // <-- пропускаємо наступний блок (щойно клонований)
+                i++;
             }
 
             continue;
