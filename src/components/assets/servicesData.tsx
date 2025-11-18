@@ -4399,7 +4399,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        image: "/images/perevirka-zoru-preview.jpg",
+                        image: "/images/zlata3.jpg",
                         title: "Дитяча клініка Злата — дитяча офтальмологія у Києві",
                         text: [
                             "У Дитячій клініці Злата проводимо перевірку зору у дітей від немовлят до підлітків: точні обстеження, індивідуальне лікування, зрозумілі рекомендації для батьків. Якщо шукаєте, де перевірити дитині зір і як перевірити зір дитині швидко та без стресу — записуйтеся на консультацію лікаря. У реєстратурі Дитячої клініки Злата підкажуть актуальні ціни/вартість, наявні акції та знижки, допоможуть обрати зручний прийом у приватній офтальмологічній дитячій клініці.",
@@ -4417,7 +4417,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Коли звертатися: перші сигнали",
-                                image: "/images/zlata-page.jpg",
+                                image: "/images/zlata1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4436,7 +4436,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Комплексна перевірка: точна діагностика та план",
-                                image: "/images/facilities3.jpg",
+                                image: "/images/zlata2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4467,7 +4467,7 @@ export const servicesData: ServicesProps[] = [
                             "Приватна дитяча клініка зору у форматі «все в одному»: діагностика, лікування й контроль ефекту. Комфортний кабінет, сучасні прилади, ігрові методики, детальні висновки для школи/садка.",
                             "У Дитячій клініці Злата пояснюємо показання, переваги й можливі недоліки методик, даємо чесні рекомендації, відкрито говоримо про ціни та надаємо відгуки/коментарі пацієнтів.",
                         ],
-                        image: "/images/equipment5.jpg",
+                        image: "/images/children-hero.jpg",
                         listTitle:
                             "Етапи дитячої діагностики в Дитячій клініці Злата",
                         list: [
@@ -4698,7 +4698,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        image: "/images/perevirka-zoru-preview.jpg",
+                        image: "/images/zlata3.jpg",
                         title: "Zlata Children’s Clinic — pediatric ophthalmology in Kyiv",
                         text: [
                             "At Zlata Children’s Clinic, we perform eye examinations for children from infancy to adolescence: accurate diagnostics, personalized treatment, and clear recommendations for parents. If you’re looking for where and how to check your child’s vision quickly and without stress — book a consultation with our doctor. Our reception staff will provide up-to-date prices, available promotions, and help you choose a convenient appointment time at our private pediatric eye clinic.",
@@ -4716,7 +4716,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "When to visit: first warning signs",
-                                image: "/images/zlata-page.jpg",
+                                image: "/images/zlata1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4735,7 +4735,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Comprehensive check: accurate diagnosis and care plan",
-                                image: "/images/facilities3.jpg",
+                                image: "/images/zlata2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4765,7 +4765,7 @@ export const servicesData: ServicesProps[] = [
                             "A private children’s eye clinic in an “all-in-one” format: diagnostics, treatment, and follow-up. A comfortable office, modern equipment, playful testing methods, and detailed reports for school or kindergarten.",
                             "At Zlata Children’s Eye Clinic, we explain indications, advantages, and possible limitations of each method, give honest recommendations, are transparent about prices, and share real patient feedback.",
                         ],
-                        image: "/images/equipment5.jpg",
+                        image: "/images/children-hero.jpg",
                         listTitle:
                             "Stages of children’s eye diagnostics at Zlata Clinic",
                         list: [
@@ -4996,7 +4996,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        image: "/images/perevirka-zoru-preview.jpg",
+                        image: "/images/zlata3.jpg",
                         title: "Детская клиника Злата — детская офтальмология в Киеве",
                         text: [
                             "В Детской клинике Злата проводится проверка зрения у детей от младенцев до подростков: точные обследования, индивидуальное лечение и понятные рекомендации для родителей. Если вы ищете, где проверить зрение ребёнку быстро и без стресса — запишитесь на консультацию врача. Администраторы клиники подскажут актуальные цены, акции и скидки, а также помогут выбрать удобное время визита в частную детскую офтальмологическую клинику.",
@@ -5014,7 +5014,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Когда обращаться: первые сигналы",
-                                image: "/images/zlata-page.jpg",
+                                image: "/images/zlata1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -5033,7 +5033,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Комплексная проверка: точная диагностика и план лечения",
-                                image: "/images/facilities3.jpg",
+                                image: "/images/zlata2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -5063,7 +5063,7 @@ export const servicesData: ServicesProps[] = [
                             "Частная детская офтальмологическая клиника в формате «всё в одном»: диагностика, лечение и контроль результата. Комфортный кабинет, современное оборудование, игровые методики и подробные заключения для школы/детсада.",
                             "В Детской клинике Злата мы объясняем показания, преимущества и возможные ограничения методик, даем честные рекомендации, открыто говорим о ценах и предоставляем отзывы пациентов.",
                         ],
-                        image: "/images/equipment5.jpg",
+                        image: "/images/children-hero.jpg",
                         listTitle: "Этапы детской диагностики в клинике Злата",
                         list: [
                             {
