@@ -30,14 +30,14 @@ export const ContactsPage = () => {
                         <h3 className="font-oswald prepc:mb-4 text-grey mb-3 font-medium uppercase">
                             {t("call")}
                         </h3>
-                        <PhoneNumberList className="mb-3" />
+                        <PhoneNumberList dark className="group mb-3" />
                         <h3 className="font-oswald text-grey mb-2.5 text-xs leading-none font-medium uppercase">
                             {t("hotLine")}
                         </h3>
                         <div className="prepc:mb-0 mb-6">
                             <a
                                 href={`tel:${normalizePhone(hotLineNumber)}`}
-                                className="leading-none font-medium"
+                                className="leading-none font-medium transition-all duration-300 ease-in-out hover:underline"
                             >
                                 {hotLineNumber}
                             </a>
@@ -48,7 +48,10 @@ export const ContactsPage = () => {
                             <h3 className="font-oswald text-grey mb-3 font-medium uppercase">
                                 email
                             </h3>
-                            <a href={`mailto:${BOCemail}`} className="block">
+                            <a
+                                href={`mailto:${BOCemail}`}
+                                className="block transition-all duration-300 ease-in-out hover:underline"
+                            >
                                 {BOCemail}
                             </a>
                         </div>
