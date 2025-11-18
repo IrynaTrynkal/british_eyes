@@ -3831,10 +3831,10 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        title: "Лазерна корекція зору – це  прорив у галузі офтальмології, який допомагає мільйонам людей у всьому світі покращити свій зір",
+                        title: "Лазерна корекція зору в приватній клініці в Києві",
                         text: [
-                            "Цей процес включає використання точного лазера для зміни форми рогівки, що дозволяє світлу фокусуватися на сітківці і покращує зір.",
-                            "Якщо ви втомилися від окулярів або контактних лінз і хочете покращити своє життя, то лазерна корекція зору може бути ідеальним рішенням для вас.",
+                            "Лазерна корекція зору – це сучасне лазерне відновлення зору, яке допомагає зменшити залежність від окулярів та лінз. Якщо ви думаєте, як відновити зір, як виправити зір або як повернути зір без окулярів, лікар може запропонувати коригування зору лазером після повного обстеження. Під час консультації оцінюємо ваш тип порушення зору та вирішуємо, чи дійсно доцільно зробити лазерну корекцію саме зараз.",
+                            "Наш центр – приватна офтальмологічна клініка, де ви проходите повне обстеження та отримуєте детальну консультацію лікаря. Ми чесно говоримо про реальні переваги, можливі недоліки та протипоказання, пояснюємо, як проходитиме відновлення після лазерної корекції зору і які будуть обмеження після лазерної корекції зору. Ви отримуєте зрозумілий план лікування та відповіді на всі запитання.",
                         ],
                         image: "/images/lazer-preview.jpg",
                         textUp: "1 млн",
@@ -3859,7 +3859,71 @@ export const servicesData: ServicesProps[] = [
                                 image: "/images/lasek.png",
                                 link: "lazerna-korekcziya-zoru/sportlife-lasik",
                                 title: "SportLine LASEK",
-                                text: "Це «золотий стандарт» в сучасній офтальмології.",
+                                text: "Для тих, хто веде активний спосіб життя, професійних спортсменів. Рішення є.",
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "roundImageAndTextSection",
+                    data: {
+                        paddingTop: false,
+                        data: [
+                            {
+                                title: "Кому підходить лазерне відновлення зору",
+                                image: "/images/equipment4.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                text: "Лазерна корекція зору розглядається, коли людина хоче не просто «бачити трішки краще», а суттєво змінити якість життя: працювати за комп’ютером без перевтоми, займатися спортом, вільно подорожувати без запасних лінз.",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Вона може підходити пацієнтам із:",
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "короткозорістю (міопією);",
+                                                    "далекозорістю (гіперметропією);",
+                                                    "астигматизмом.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "На прийомі лікар відповідає на головні питання:як вилікувати зір, як можна відновити зір, чи можна відновити зір без операції, чи потрібна саме операція. Частині пацієнтів ми рекомендуємо спостереження, лікування супутніх захворювань, зміну режиму роботи очей або інші методи – чесно пояснюючи, чому зробити лазерну корекцію зараз рано або недоцільно.",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Тому рішення ухвалюється не за рекламою, а на основі реального стану очей, відгуків інших пацієнтів, медичних показань і ваших очікувань.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Скільки коштує лазерна корекція зору",
+                                image: "/images/equipment4.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Перше запитання більшості пацієнтів – скільки коштує лазерна корекція зору, яка ціна на лазерну корекцію зору та корекція очей лазером ціна саме в нашій клініці. Вартість залежить від обраного методу, складності вашого випадку, стану рогівки та обсягу спостереження після операції. Під час обстеження та консультації лікаря ви отримуєте прозорий розрахунок: що входить у ціну на корекцію зору та відновлення зору лазером (діагностика, лікування, контрольні огляди, спостереження в післяопераційний період).",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Найточнішу відповідь на питання «скільки коштує відновлення зору лазером у моєму випадку?» ви отримаєте після очного прийому: лікар оцінить стан очей, пояснить переваги, можливі недоліки та протипоказання, а також дасть чесну рекомендацію, чи варто робити лазерну корекцію зору саме зараз і який формат лікування буде для вас найкращим.",
+                                            },
+                                        ],
+                                        greenText:
+                                            "Окремо ми інформуємо про чинні акції та знижки, щоб ви могли обрати найкращий варіант за ціною та умовами саме для себе.",
+                                    },
+                                ],
                             },
                         ],
                     },
@@ -3874,22 +3938,19 @@ export const servicesData: ServicesProps[] = [
                             {
                                 itemTitle: "Діагностика зору",
                                 itemText: [
-                                    "Комплексне обстеження зору дає змогу досвідченому лікарю оцінити стан вашої зорової системи, поставити точний діагноз, підібрати найбільш ефективну методику та спрогнозувати результат. Тривалість обстеження 1,5 – 2 години.",
+                                    "Лазерна корекція зору завжди починається з повної діагностики та консультації. Спочатку пацієнт проходить комплексне обстеження: перевіряється гострота зору, робиться топографія рогівки, вимірюється її товщина та форма, лікар оглядає очне дно та оцінює загальний стан очей. На основі цих даних лікар пояснює, як у вашому випадку можна відновити зір, чи підходить вам лазерне відновлення зору, які є переваги, можливі недоліки та протипоказання, і дає попередні рекомендації щодо підготовки до процедури.",
                                 ],
                             },
                             {
                                 itemTitle: "лазерна корекція",
                                 itemText: [
-                                    "Підготовка, корекція та післяопераційний огляд займає, в середньому, 2-2,5 години. В операційній ви проведете 15-20 хвилин, а лазерний вплив триває всього 20-60 секунд. Процес безпечний і безболісний, повністю під контролем нашіх досвідчених фахівців. Використовується місцева крапельна анестезія, без уколів. Лікар озвучує кожен свій рух. Після огляду прооперованого ока ви повернетеся додому. Ми надамо необхідний пакет медикаментів і контакт лікаря для цілодобового зв’язку. Можна провести лазерну корекцію відразу після обстеження (узгодьте цей пункт під час запису по телефону!).",
+                                    "Це безпосередньо процедура лазерної корекції. Перед початком в очі закапують місцеву анестезію, щоб зняти дискомфорт. Після цього хірург проводить корекцію очей лазером за індивідуальними параметрами, змінюючи форму рогівки так, щоб світло правильно фокусувалось на сітківці. Робота лазера триває лічені хвилини, і більшість пацієнтів відзначають лише легкий тиск чи незвичні відчуття, а не виражений біль. Одразу після операції проводиться короткий огляд, лікар перевіряє стан очей та пояснює, як поводитися в перші години після втручання.",
                                 ],
                             },
                             {
                                 itemTitle: "контрольний огляд",
-                                list: true,
                                 itemText: [
-                                    "1-й контрольний огляд проводять через 30 хв. після лазерної корекції зору.",
-                                    "2-й контрольний огляд проводять через 1—4 дні після лазерної корекції зору (залежно від методу корекції зору).",
-                                    "3-й контрольний огляд проводять через місяць після лазерної корекції зору (при необхідності).",
+                                    "Відновлення після лазерної корекції зору та дотримання рекомендацій. Пацієнт отримує чіткі письмові інструкції: як закапувати краплі, скільки відпочивати, які саме обмеження після лазерної корекції зору діють у перші дні та тижні. Лікар розповідає, коли можна повернутися до роботи за комп’ютером, активного спорту, відвідування басейну та сауни, а також пояснює, які симптоми є нормальними в період загоєння, а в яких випадках потрібно звернутися за терміновою допомогою. Регулярні контрольні огляди допомагають відстежити процес загоєння, закріпити результат та довгостроково вилікувати зір.",
                                 ],
                             },
                         ],
@@ -3910,17 +3971,17 @@ export const servicesData: ServicesProps[] = [
                         text: "Ви можете бути впевнені в якості послуг, що надаються, так як довіряєте свій зір сучасній клініці",
                         list: [
                             {
-                                title: "100% безпеки",
-                                text: "Технологія та безпека цієї методики дають пацієнтам швидкий результат і здатність бачити світ у всіх його барвах без додаткових засобів – окулярів і контактних лінз.",
+                                title: "Досвідчені хірурги та команда",
+                                text: "Операції проводять офтальмохірурги, які спеціалізуються саме на лазерному відновленні зору. Постійне навчання, участь у конгресах і фахові курси – основа безпечного лікування.",
                             },
                             {
-                                title: "Без порушення ритму життя",
-                                text: "Не потрібно йти у відпустку, вже через кілька днів після лазерної корекції допускаються нормальні навантаження на очі.",
+                                title: "Відгуки та рекомендації пацієнтів",
+                                text: "Реальні відгуки, особисті історії, коментарі, відео- та текстові рекомендації допомагають побачити не лише медичну сторону, а й емоційний результат: як люди описують своє життя після того, як вирішили зробити лазерну корекцію.",
                             },
                             { imageOnly: "/images/safety3.jpg" },
                             {
-                                title: "стабільний результат",
-                                text: "Ефект від лазерної корекції не змінюється роками, якщо на нього не вплинуть  природні вікові зміни, супутні захворювання чи травми.",
+                                title: "Повний цикл: від обстеження до відновлення",
+                                text: "Наші пацієнти отримують все в одному місці: обстеження, консультацію лікаря, операцію, план відновлення після лазерної корекції зору та довгостроковий нагляд. Не потрібно шукати, «куди піти» і кого попросити порадити – у нас усе в одній клініці.",
                             },
                         ],
                     },
@@ -4019,10 +4080,10 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        title: "Laser vision correction is a breakthrough in ophthalmology that helps millions of people worldwide improve their eyesight",
+                        title: "Laser Vision Correction in a Private Clinic in Kyiv",
                         text: [
-                            "This process involves using a precise laser to reshape the cornea, allowing light to focus on the retina and improving vision.",
-                            "If you're tired of glasses or contact lenses and want to improve your life, laser vision correction may be the perfect solution for you.",
+                            "Laser vision correction is a modern laser eye treatment that helps reduce dependence on glasses and contact lenses. If you are wondering how to restore your vision, how to correct your eyesight, or how to improve your vision without glasses, the doctor may recommend laser vision correction after a full examination. During the consultation, we assess your type of refractive error and determine whether it is truly advisable to undergo laser correction at this time.",
+                            "Our center is a private ophthalmology clinic where you undergo a complete examination and receive a detailed consultation with a doctor. We openly discuss the real benefits, possible drawbacks, and contraindications, and we explain what the recovery after laser vision correction will look like and what restrictions you may have after the procedure. You receive a clear treatment plan and answers to all your questions.",
                         ],
                         image: "/images/lazer-preview.jpg",
                         textUp: "1 m",
@@ -4048,7 +4109,71 @@ export const servicesData: ServicesProps[] = [
                                 image: "/images/lasek.png",
                                 link: "lazerna-korekcziya-zoru/sportlife-lasik",
                                 title: "SportLine LASEK",
-                                text: "This is the «gold standard» in modern ophthalmology.",
+                                text: "For those who lead an active lifestyle, professional athletes. There is a solution.",
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "roundImageAndTextSection",
+                    data: {
+                        paddingTop: false,
+                        data: [
+                            {
+                                title: "Who Laser Vision Correction Is Suitable For",
+                                image: "/images/equipment4.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                text: "Laser vision correction is considered when a person wants not just to “see a bit better” but to significantly improve their quality of life: work at a computer without eye strain, play sports, travel freely without carrying spare lenses.",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "It may be suitable for patients with:",
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "myopia (nearsightedness);",
+                                                    "hyperopia (farsightedness);",
+                                                    "astigmatism.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "During the appointment, the doctor answers key questions: how to improve vision, whether vision can be restored without surgery, and whether surgery is actually necessary. For some patients, we recommend monitoring, treatment of accompanying conditions, adjusting visual habits, or other methods — honestly explaining why laser correction may be premature or not advisable right now.",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Therefore, the decision is not based on advertising, but on the actual condition of your eyes, feedback from other patients, medical indications, and your expectations.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "How Much Laser Vision Correction Costs",
+                                image: "/images/equipment4.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "The first question most patients ask is how much laser vision correction costs, what the price of laser eye correction is, and what the cost of laser eye surgery is specifically in our clinic. The price depends on the chosen method, the complexity of your case, the condition of the cornea, and the volume of postoperative follow-up. During your examination and consultation, you receive a transparent breakdown of what is included in the cost of laser correction and vision restoration (diagnostics, treatment, follow-up visits, postoperative care).",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "The most accurate answer to the question “how much will laser vision restoration cost in my case?” you will receive after an in-person visit: the doctor will evaluate the condition of your eyes, explain the benefits, possible risks, and contraindications, and give an honest recommendation on whether you should undergo laser correction now and which treatment approach will be best for you.",
+                                            },
+                                        ],
+                                        greenText:
+                                            "We also inform you about current promotions and discounts so you can choose the best option in terms of price and conditions.",
+                                    },
+                                ],
                             },
                         ],
                     },
@@ -4061,24 +4186,21 @@ export const servicesData: ServicesProps[] = [
                         listTitle: "How does laser vision correction work?",
                         list: [
                             {
-                                itemTitle: "Vision Diagnostics",
+                                itemTitle: "Vision diagnostics",
                                 itemText: [
-                                    "A comprehensive eye examination allows an experienced doctor to assess the condition of your visual system, make an accurate diagnosis, choose the most effective method, and predict the result. The examination lasts 1.5–2 hours.",
+                                    "Laser vision correction always begins with a full diagnostic examination and consultation. First, the patient undergoes a comprehensive check-up: visual acuity is tested, corneal topography is performed, its thickness and shape are measured, the doctor examines the fundus and assesses the overall condition of the eyes. Based on this data, the doctor explains how vision can be restored in your case, whether laser vision correction is suitable for you, what advantages, possible drawbacks, and contraindications there are, and provides preliminary preparation recommendations.",
                                 ],
                             },
                             {
-                                itemTitle: "Laser Correction",
+                                itemTitle: "Laser correction",
                                 itemText: [
-                                    "Preparation, correction, and postoperative examination take on average 2–2.5 hours. You’ll spend 15–20 minutes in the operating room, while the laser exposure itself lasts only 20–60 seconds. The process is safe and painless, fully controlled by our experienced specialists. Local drop anesthesia is used — no injections. The doctor explains each step during the procedure. After the postoperative eye check, you will return home. We will provide you with the necessary medication package and a contact number for 24/7 communication with your doctor. Laser correction can be performed immediately after the examination (please confirm this when scheduling your appointment!).",
+                                    "This is the laser correction procedure itself. Before starting, local anesthetic drops are applied to relieve discomfort. After that, the surgeon performs laser eye correction based on individual parameters, reshaping the cornea so that light focuses correctly on the retina. The laser work lasts only a few minutes, and most patients report only mild pressure or unusual sensations rather than real pain. Immediately after the procedure, a short examination is performed — the doctor checks the condition of the eyes and explains how to behave in the first hours after the intervention.",
                                 ],
                             },
                             {
-                                itemTitle: "Follow-Up Examination",
-                                list: true,
+                                itemTitle: "Follow-up examination",
                                 itemText: [
-                                    "1st follow-up examination — 30 minutes after laser vision correction.",
-                                    "2nd follow-up examination — 1–4 days after laser vision correction (depending on the correction method).",
-                                    "3rd follow-up examination — one month after laser vision correction (if necessary).",
+                                    "Recovery after laser vision correction and following the recommendations. The patient receives clear written instructions: how to use the eye drops, how much rest is needed, and what restrictions apply in the first days and weeks after laser correction. The doctor explains when you can return to computer work, active sports, swimming pool activities, or sauna visits, as well as which symptoms are normal during healing and in which cases you should seek urgent medical help. Regular follow-up visits help monitor the healing process, maintain the result, and ensure long-term vision improvement.",
                                 ],
                             },
                         ],
@@ -4099,17 +4221,17 @@ export const servicesData: ServicesProps[] = [
                         text: "You can be confident in the quality of the services provided, as you entrust your vision to a modern clinic.",
                         list: [
                             {
-                                title: "100% Safety",
-                                text: "The technology and safety of this method give patients quick results and the ability to see the world in all its colors without additional means — glasses or contact lenses.",
+                                title: "Experienced surgeons and team",
+                                text: "The procedures are performed by ophthalmic surgeons who specialize specifically in laser vision correction. Continuous training, participation in congresses, and professional courses form the foundation of safe treatment.",
                             },
                             {
-                                title: "No Disruption to Daily Life",
-                                text: "There’s no need to take a vacation — just a few days after laser correction, normal eye strain is allowed.",
+                                title: "Patient reviews and recommendations",
+                                text: "Real reviews, personal stories, comments, and video or text testimonials help you see not only the medical aspect but also the emotional result — how people describe their life after deciding to undergo laser vision correction.",
                             },
                             { imageOnly: "/images/safety3.jpg" },
                             {
-                                title: "Stable Result",
-                                text: "The effect of laser correction remains for years unless affected by natural age-related changes, accompanying diseases, or injuries.",
+                                title: "Full cycle: from diagnostics to recovery",
+                                text: "Our patients receive everything in one place: examination, doctor’s consultation, surgery, a recovery plan after laser vision correction, and long-term follow-up. There’s no need to search for where to go or whom to ask for advice — everything is provided within our clinic.",
                             },
                         ],
                     },
@@ -4208,10 +4330,10 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        title: "Лазерная коррекция зрения – это прорыв в области офтальмологии, который помогает миллионам людей по всему миру улучшить свое зрение",
+                        title: "Лазерная коррекция зрения в частной клинике в Киеве",
                         text: [
-                            "Этот процесс включает использование точного лазера для изменения формы роговицы, что позволяет свету фокусироваться на сетчатке и улучшает зрение.",
-                            "Если вы устали от очков или контактных линз и хотите улучшить свою жизнь, то лазерная коррекция зрения может быть идеальным решением для вас.",
+                            "Лазерная коррекция зрения — это современное лазерное восстановление зрения, которое помогает уменьшить зависимость от очков и контактных линз. Если вы задаётесь вопросом, как восстановить зрение, как улучшить остроту зрения или как обойтись без очков, врач может предложить лазерную коррекцию после полного обследования. Во время консультации мы оцениваем тип вашего нарушения зрения и определяем, действительно ли сейчас целесообразно выполнять лазерную коррекцию.",
+                            "Наш центр — частная офтальмологическая клиника, где вы проходите полное обследование и получаете детальную консультацию врача. Мы честно рассказываем о реальных преимуществах, возможных недостатках и противопоказаниях, объясняем, как будет проходить восстановление после лазерной коррекции и какие ограничения будут после процедуры. Вы получаете понятный план лечения и ответы на все вопросы.",
                         ],
                         image: "/images/lazer-preview.jpg",
                         textUp: "1 млн",
@@ -4236,7 +4358,71 @@ export const servicesData: ServicesProps[] = [
                                 image: "/images/lasek.png",
                                 link: "lazerna-korekcziya-zoru/sportlife-lasik",
                                 title: "SportLine LASEK",
-                                text: "Это «золотой стандарт» в современной офтальмологии.",
+                                text: "Для тех, кто ведет активный образ жизни профессиональных спортсменов. Решения есть.",
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "roundImageAndTextSection",
+                    data: {
+                        paddingTop: false,
+                        data: [
+                            {
+                                title: "Кому подходит лазерное восстановление зрения",
+                                image: "/images/equipment4.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                text: "Лазерная коррекция зрения рассматривается в тех случаях, когда человек хочет не просто «видеть немного лучше», а значительно улучшить качество жизни: работать за компьютером без переутомления глаз, заниматься спортом, свободно путешествовать без запасных линз.",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Она может подходить пациентам с:",
+                                            },
+                                            {
+                                                type: "list",
+                                                gap: true,
+                                                list: [
+                                                    "близорукостью (миопией);",
+                                                    "дальнозоркостью (гиперметропией);",
+                                                    "астигматизмом.",
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "На приёме врач отвечает на главные вопросы: как улучшить зрение, можно ли восстановить зрение без операции и нужна ли операция в вашем случае. Некоторым пациентам мы рекомендуем наблюдение, лечение сопутствующих заболеваний, изменение режима зрительной нагрузки или другие методы — честно объясняя, почему лазерную коррекцию пока рано или нецелесообразно выполнять.",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Поэтому решение принимается не по рекламе, а на основании реального состояния глаз, отзывов других пациентов, медицинских показаний и ваших ожиданий.",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Сколько стоит лазерная коррекция зрения",
+                                image: "/images/equipment4.jpg",
+                                text: [
+                                    {
+                                        content: [
+                                            {
+                                                type: "text",
+                                                gap: true,
+                                                text: "Первый вопрос, который задаёт большинство пациентов — сколько стоит лазерная коррекция зрения, какова цена на лазерную коррекцию зрения и сколько стоит лазерная коррекция глаз именно в нашей клинике. Стоимость зависит от выбранного метода, сложности вашего случая, состояния роговицы и объёма наблюдения после операции. Во время обследования и консультации вы получаете прозрачный расчёт: что входит в стоимость коррекции зрения и восстановления зрения лазером (диагностика, лечение, контрольные осмотры, послеоперационное наблюдение).",
+                                            },
+                                            {
+                                                type: "text",
+                                                text: "Наиболее точный ответ на вопрос «сколько стоит восстановление зрения лазером в моём случае?» вы получите после очного приёма: врач оценит состояние глаз, объяснит преимущества, возможные риски и противопоказания, а также даст честную рекомендацию, стоит ли делать лазерную коррекцию именно сейчас и какой формат лечения подойдёт вам лучше всего.",
+                                            },
+                                        ],
+                                        greenText:
+                                            "Отдельно мы информируем о действующих акциях и скидках, чтобы вы могли выбрать лучший вариант по цене и условиям.",
+                                    },
+                                ],
                             },
                         ],
                     },
@@ -4251,22 +4437,19 @@ export const servicesData: ServicesProps[] = [
                             {
                                 itemTitle: "Диагностика зрения",
                                 itemText: [
-                                    "Комплексное обследование зрения позволяет опытному врачу оценить состояние вашей зрительной системы, поставить точный диагноз, подобрать наиболее эффективную методику и спрогнозировать результат. Продолжительность обследования 1,5–2 часа.",
+                                    "Лазерная коррекция зрения всегда начинается с полной диагностики и консультации. Сначала пациент проходит комплексное обследование: проверяется острота зрения, выполняется топография роговицы, измеряется её толщина и форма, врач осматривает глазное дно и оценивает общее состояние глаз. На основании этих данных врач объясняет, как можно восстановить зрение в вашем случае, подходит ли вам лазерное восстановление зрения, какие есть преимущества, возможные недостатки и противопоказания, а также даёт предварительные рекомендации по подготовке к процедуре.",
                                 ],
                             },
                             {
                                 itemTitle: "Лазерная коррекция",
                                 itemText: [
-                                    "Подготовка, коррекция и послеоперационный осмотр занимают в среднем 2–2,5 часа. В операционной вы проведёте 15–20 минут, а воздействие лазера длится всего 20–60 секунд. Процесс безопасен и безболезнен, полностью под контролем наших опытных специалистов. Используется местная капельная анестезия, без уколов. Врач комментирует каждый свой шаг. После осмотра прооперированного глаза вы возвращаетесь домой. Мы предоставим необходимый набор медикаментов и контакт врача для круглосуточной связи. Лазерную коррекцию можно провести сразу после обследования (уточните этот момент при записи по телефону!).",
+                                    "Это непосредственно процедура лазерной коррекции. Перед началом в глаза закапывают местную анестезию, чтобы убрать дискомфорт. После этого хирург проводит коррекцию глаз лазером по индивидуальным параметрам, изменяя форму роговицы так, чтобы свет правильно фокусировался на сетчатке. Работа лазера занимает всего несколько минут, и большинство пациентов отмечают только лёгкое давление или необычные ощущения, а не выраженную боль. Сразу после операции проводится короткий осмотр, врач проверяет состояние глаз и объясняет, как себя вести в первые часы после вмешательства.",
                                 ],
                             },
                             {
                                 itemTitle: "Контрольный осмотр",
-                                list: true,
                                 itemText: [
-                                    "1-й контрольный осмотр проводится через 30 минут после лазерной коррекции зрения.",
-                                    "2-й контрольный осмотр проводится через 1–4 дня после лазерной коррекции зрения (в зависимости от метода коррекции).",
-                                    "3-й контрольный осмотр проводится через месяц после лазерной коррекции зрения (при необходимости).",
+                                    "Восстановление после лазерной коррекции зрения и соблюдение рекомендаций. Пациент получает чёткие письменные инструкции: как закапывать капли, сколько отдыхать, какие ограничения после лазерной коррекции действуют в первые дни и недели. Врач рассказывает, когда можно возвращаться к работе за компьютером, активному спорту, посещению бассейна и сауны, а также объясняет, какие симптомы являются нормальными в период заживления и в каких случаях нужно срочно обратиться за помощью. Регулярные контрольные осмотры помогают отслеживать процесс заживления, закреплять результат и надолго улучшать зрение.",
                                 ],
                             },
                         ],
@@ -4287,17 +4470,17 @@ export const servicesData: ServicesProps[] = [
                         text: "Вы можете быть уверены в качестве предоставляемых услуг, так как доверяете своё зрение современной клинике.",
                         list: [
                             {
-                                title: "100% безопасность",
-                                text: "Технология и безопасность этой методики обеспечивают пациентам быстрый результат и возможность видеть мир во всех его красках без дополнительных средств — очков и контактных линз.",
+                                title: "Опытные хирурги и команда",
+                                text: "Операции выполняют офтальмохирурги, которые специализируются именно на лазерном восстановлении зрения. Постоянное обучение, участие в конгрессах и профессиональные курсы — основа безопасного лечения.",
                             },
                             {
-                                title: "Без нарушения привычного ритма жизни",
-                                text: "Не нужно уходить в отпуск — уже через несколько дней после лазерной коррекции допускаются обычные нагрузки на глаза.",
+                                title: "Отзывы и рекомендации пациентов",
+                                text: "Реальные отзывы, личные истории, комментарии, видео- и текстовые рекомендации помогают увидеть не только медицинскую сторону, но и эмоциональный результат — как люди описывают свою жизнь после того, как решили сделать лазерную коррекцию зрения.",
                             },
                             { imageOnly: "/images/safety3.jpg" },
                             {
-                                title: "Стабильный результат",
-                                text: "Эффект от лазерной коррекции сохраняется годами, если на него не повлияют естественные возрастные изменения, сопутствующие заболевания или травмы.",
+                                title: "Полный цикл: от обследования до восстановления",
+                                text: "Наши пациенты получают всё в одном месте: обследование, консультацию врача, операцию, план восстановления после лазерной коррекции зрения и долгосрочное наблюдение. Не нужно искать, «куда пойти» и к кому обратиться за советом — всё есть в нашей клинике.",
                             },
                         ],
                     },
