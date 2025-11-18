@@ -1265,96 +1265,82 @@ export const servicesData: ServicesProps[] = [
                         title: "Часті запитання про катаракту",
                         content: [
                             {
-                                question: "Що таке катаракта?",
+                                question:
+                                    "Що таке катаракта і чому вона з’являється?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Катаракта — це захворювання ока, при якому відбувається помутніння природного кришталика, що призводить до поступового погіршення зору. У нормі кришталик є прозорим і забезпечує фокусування світлових променів на сітківці, але при катаракті цей процес порушується.",
+                                        text: "Катаракта — це помутніння природного кришталика ока, яке спричиняє поступове зниження гостроти зору. Найчастіше катаракта пов’язана з віковими змінами, порушенням обміну речовин, хронічними захворюваннями (цукровий діабет, гіпертонія), травмами ока або ускладненнями після інших операцій. Також існує травматична катаракта, коли кришталик ушкоджується після удару чи проникної рани. Без лікування катаракти зір продовжує погіршуватись, аж до повної втрати працездатного зору.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Які ознаки можуть вказувати на розвиток катаракти?",
+                                    "Які симптоми можуть свідчити про розвиток катаракти?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Катаракта розвивається поступово і на початкових етапах її симптоми можуть бути малопомітними. Проте з її прогресуванням людина починає відчувати труднощі із зором на різних відстанях. Спочатку це може проявлятися під час читання чи спробі розглянути дрібні деталі. Можуть виникати проблеми із зором у сутінках, відчуття туманності або димки перед очима, ніби Ви дивитесь через матове скло. При цьому навіть правильний підбір окулярів не забезпечує значного покращення гостроти зору.",
+                                        text: "Перші ознаки катаракти — це нечіткий, «запітнілий» зір, відчуття, що дивитесь крізь матове скло або туман. Можуть з’являтися труднощі при читанні, необхідність частіше змінювати окуляри, погіршення зору у сутінках і при яскравому світлі, ореоли та засліплення від фар автомобілів чи ліхтарів. Інколи люди відмічають зниження контрастності та спотворення кольорів. Якщо такі симптоми з’явилися, варто пройти діагностику та обговорити можливе лікування катаракти з офтальмологом.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Як дізнатися, чи мені потрібна операція?",
+                                    "Чи можна вилікувати катаракту без операції — краплями або таблетками?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Для вирішення питання проведення операції, необхідно пройти повне діагностичне обстеження, включаючи консультацію лікаря, який спрогнозує результат операції і підбере інтраокулярну лінзу, виходячи з Ваших індивідуальних особливостей очей.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Чому кришталик мутніє?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Помутніння кришталика ока відбувається через структурні та хімічні зміни в білках і волокнах, які його складають, найчастіше це пов’язано з віковими процесами в організмі, порушенням кровообігу та недостатнім живленням тканин.",
+                                        text: "Лікування катаракти без операції, на жаль, неможливе. Краплі, вітаміни чи інші препарати не здатні повернути прозорість помутнілому кришталику. Вони можуть лише на короткий час уповільнити прогресування процесу, але не усунути саму причину зниження зору. Єдиний метод лікування катаракти — хірургічне видалення кришталика з імплантацією інтраокулярної лінзи. Саме операція дозволяє реально відновити зір і повернути комфорт до повсякденного життя.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Чи можна вилікувати катаракту без операції?",
+                                    "Коли потрібно робити операцію з лікування катаракти?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Катаракту неможливо вилікувати без операції, оскільки це захворювання пов’язане з незворотним помутнінням природного кришталика ока. Жодні ліки, або краплі не здатні відновити прозорість кришталика. Операція по видаленню катаракти є єдиним ефективним способом лікування.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Скільки часу триває операція?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Саме завдяки високотехнологічному обладнанню та професійності хірурга, операція з видалення катаракти може займати до 5 хв. Але включаючи підготовку та післяопераційний огляд, орієнтуйтесь, що в центрі, в день операції, можете пробути 2-3 години.",
+                                        text: "Показання до операції визначає лікар-офтальмолог після повного обстеження очей. Операцію рекомендують тоді, коли катаракта починає суттєво заважати роботі, водінню авто, читанню, побутовій активності або коли з’являється ризик ускладнень. Не варто чекати, поки катаракта «дозріє» повністю: сучасні методи лікування катаракти дозволяють проводити операцію на більш ранніх етапах, коли структура кришталика ще не надто щільна, а відновлення зору проходить швидше та комфортніше.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Чи можливо зробити операцію одночасно на лівому та правому оці?",
+                                    "Як проходить операція «англійським водним потоком iQ-5 minutes»?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Одночасне проведення операції з видалення катаракти на обох очах не рекомендується. Інтервал між операціями зазвичай варіюється від одного дня до місяця, залежно від індивідуальних особливостей пацієнта та рекомендацій офтальмолога.",
+                                        text: "Операція з лікування катаракти виконується амбулаторно, через мікропрокол, без швів і, як правило, триває лише кілька хвилин. За технологією «англійський водний потік iQ-5 minutes» у око вводиться спеціальний збалансований розчин, що допомагає м’яко роздрібнити помутнілий кришталик. Далі фрагменти видаляються, а на їх місце імплантується прозора інтраокулярна лінза. Анестезія місцева, у вигляді крапель, тому лікування катаракти проходить безболісно, а пацієнт протягом того ж дня повертається додому.",
                                     },
                                 ],
                             },
                             {
-                                question: "Як відбувається операція?",
+                                question:
+                                    "Скільки триває відновлення після лікування катаракти і які є обмеження?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Видалення катаракти проводиться амбулаторно, без швів, без уколів, за новою технологією “Англійського водного потоку iQ-5 minutes” . Це найефективніший і комфортний метод. Робиться мікропрокол, вводиться спеціально – збалансований розчин, який дробить помутнілий кришталик, його видаляють і на його місце імплантується інтраокулярна лінза. Анестезія місцева, проводиться шляхом закапування знеболюючих крапель.",
+                                        text: "Після операції лікування катаракти перші покращення зору пацієнт відчуває вже в той самий або наступний день. Повне стабілізування зору зазвичай займає від кількох днів до кількох тижнів, залежно від індивідуальних особливостей очей. У післяопераційний період важливо дотримуватися рекомендацій лікаря: не терти око, не піднімати важкого, уникати пилу та бруду, правильно закапувати призначені краплі. Дотримання цих правил допомагає мінімізувати ризики та отримати найкращий результат лікування катаракти.",
                                     },
                                 ],
                             },
                             {
-                                question: "Чи потрібні окуляри після операції?",
+                                question:
+                                    "Чи потрібні окуляри після операції з видалення катаракти?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Після видалення кришталика, при катаракті, імплантуються різні типи інтраокулярних лінз. Якщо під час операції пацієнту імплантують монофокальні лінзи, після операції йому знадобляться окуляри для читання. У випадку, якщо пацієнт не бажає носити окуляри, ми використовуємо мультифокальні кришталики. Вибір кришталика здійснюється лікарем, після проведення діагностичного обстеження, виходячи з індивідуальних параметрів очей.",
+                                        text: "Після лікування катаракти результат залежить від типу імплантованої інтраокулярної лінзи. Якщо встановлюється монофокальна лінза, пацієнт добре бачить на одну дистанцію (зазвичай удалину), але для читання можуть знадобитися окуляри. За бажанням можна обрати мультифокальну або тріфокальну лінзу, яка забезпечує кращий зір на різних відстанях та мінімізує залежність від окулярів. Підбір лінзи для лікування катаракти здійснюється індивідуально, під час діагностики та консультації з хірургом.",
                                     },
                                 ],
                             },
                             {
-                                question: "Який період відновлення?",
+                                question:
+                                    "Чи лікуєте ви катаракту у дітей та складні, «проблемні» випадки?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Відновлення після операції з видалення катаракти, як правило, проходить швидко. Однак тривалість процесу може варіюватися залежно від індивідуальних характеристик пацієнта та складності проведеної операції.",
+                                        text: "Так, у нашому центрі проводиться лікування катаракти у дітей, включаючи травматичну катаракту, а також виправлення наслідків «невдалих» операцій з катаракти, виконаних в інших клініках. Ми беремося за складні випадки, коли є рубцеві зміни, супутні патології сітківки чи глаукома, а також коли попереднє лікування катаракти не дало очікуваного результату. Кожен клінічний випадок розглядається індивідуально, з ретельною діагностикою та детальним плануванням операції. Наша мета — максимально відновити зір і якість життя пацієнта, незалежно від складності ситуації.",
                                     },
                                 ],
                             },
@@ -1496,11 +1482,12 @@ export const servicesData: ServicesProps[] = [
                         title: "Frequently asked questions about cataracts",
                         content: [
                             {
-                                question: "What is a cataract?",
+                                question:
+                                    "What is cataract and why does it occur?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "A cataract is an eye condition in which the natural lens becomes cloudy, leading to gradual vision deterioration. Normally, the lens is transparent and focuses light on the retina, but with cataracts this process becomes impaired.",
+                                        text: "A cataract is a clouding of the eye’s natural lens, which leads to gradual vision loss. Most often, a cataract is associated with age-related changes, metabolic disorders, chronic diseases (such as diabetes or hypertension), eye injuries, or complications after previous surgeries. There is also traumatic cataract, which develops when the lens is damaged after an impact or penetrating injury. Without treatment, vision continues to deteriorate and may eventually result in significant visual impairment.",
                                     },
                                 ],
                             },
@@ -1510,81 +1497,66 @@ export const servicesData: ServicesProps[] = [
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Cataracts develop gradually, and at early stages symptoms may be barely noticeable. As the condition progresses, a person may experience vision difficulties at different distances. Initially, this can appear while reading or trying to see small details. Problems with vision in low light, foggy or hazy vision, as if looking through frosted glass, may also occur. Even properly selected glasses may not significantly improve visual acuity.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "How do I know if I need surgery?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "To determine whether surgery is necessary, you must undergo a full diagnostic examination, including a consultation with the doctor who will predict the outcome of the surgery and select an intraocular lens based on your individual eye characteristics.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Why does the lens become cloudy?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Lens clouding occurs due to structural and chemical changes in the proteins and fibers that make up the lens. This is most often related to age-related processes, impaired blood circulation, and insufficient nutrition of the eye tissues.",
+                                        text: "The first signs of cataract include blurry, “foggy” vision, the feeling of looking through frosted glass or mist. You may experience difficulty reading, the need to change your glasses more frequently, poor vision in low light or bright light, halos and glare from car headlights or street lamps. Some people notice reduced contrast sensitivity and changes in color perception. If such symptoms appear, it is important to undergo diagnostic testing and discuss possible treatment with an ophthalmologist.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Can a cataract be treated without surgery?",
+                                    "Can cataract be treated without surgery — with drops or pills?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "A cataract cannot be treated without surgery, because it is associated with irreversible clouding of the natural lens. No medications or eye drops can restore its transparency. Cataract removal surgery is the only effective treatment.",
+                                        text: "Unfortunately, cataract cannot be treated without surgery. Eye drops, vitamins, or other medications cannot restore the transparency of the clouded lens. They may temporarily slow the progression but cannot eliminate the cause of vision loss. The only effective cataract treatment is surgical removal of the lens with implantation of an intraocular lens. Surgery is the only way to truly restore vision and return comfort to daily life.",
                                     },
                                 ],
                             },
                             {
-                                question: "How long does the surgery take?",
+                                question: "When is cataract surgery necessary?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Thanks to advanced technologies and the surgeon’s expertise, cataract removal can take as little as 5 minutes. However, including preparation and postoperative check-up, expect to spend 2–3 hours at the center on the day of surgery.",
+                                        text: "The indications for surgery are determined by an ophthalmologist after a complete eye examination. Surgery is recommended when the cataract significantly interferes with work, driving, reading, daily activities, or when the risk of complications increases. You should not wait until the cataract becomes completely “mature”: modern surgical methods allow treatment at earlier stages, when the lens is less dense and recovery is quicker and more comfortable.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Can cataract surgery be done on both eyes at the same time?",
+                                    "How is the “English Water Flow iQ-5 minutes” cataract surgery performed?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Simultaneous cataract surgery on both eyes is not recommended. The interval between surgeries usually varies from one day to one month, depending on the patient’s condition and the ophthalmologist’s recommendation.",
+                                        text: "Cataract surgery is performed on an outpatient basis, through a micro-incision, without stitches, and usually takes only a few minutes. With the “English Water Flow iQ-5 minutes” technique, a special balanced solution is introduced into the eye to gently break up the cloudy lens. The fragments are then removed, and a clear intraocular lens is implanted in their place. Anesthesia is local, applied as drops, so the procedure is painless, and the patient can go home the same day.",
                                     },
                                 ],
                             },
                             {
-                                question: "How is the surgery performed?",
+                                question:
+                                    "How long does recovery take after cataract treatment and what restrictions exist?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Cataract removal is performed on an outpatient basis, without stitches or injections, using the new “English Water Flow iQ-5 minutes” technology. It is the most effective and comfortable method. A micro-incision is made, a special balanced solution is injected to break up the cloudy lens, it is removed, and an intraocular lens is implanted in its place. Local anesthesia is provided with numbing eye drops.",
+                                        text: "After cataract surgery, most patients notice improvements in vision on the same or the following day. Full stabilization of vision usually takes from several days to a few weeks, depending on individual characteristics. During the postoperative period, it is important to follow the doctor’s instructions: avoid rubbing the eye, lifting heavy objects, exposure to dust or dirt, and properly apply the prescribed drops. Following these rules minimizes risks and ensures the best treatment results.",
                                     },
                                 ],
                             },
                             {
-                                question: "Do I need glasses after surgery?",
+                                question:
+                                    "Will I need glasses after cataract removal?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "After cataract removal, different types of intraocular lenses can be implanted. If monofocal lenses are used, glasses will be needed for reading. If the patient wishes to avoid glasses, multifocal lenses can be implanted. The choice of lens is made by the doctor after diagnostic testing, based on the individual eye parameters.",
+                                        text: "The outcome after cataract surgery depends on the type of intraocular lens implanted. A monofocal lens provides clear vision at one distance (usually far), so reading glasses may still be needed. If desired, you can choose a multifocal or trifocal lens, which provides clearer vision at different distances and reduces dependence on glasses. Lens selection is personalized and determined during diagnostics and consultation with the surgeon.",
                                     },
                                 ],
                             },
                             {
-                                question: "What is the recovery period?",
+                                question:
+                                    "Do you treat cataracts in children and complex cases?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Recovery after cataract surgery is usually fast. However, the duration may vary depending on the patient’s individual characteristics and the complexity of the surgery.",
+                                        text: "Yes, our center treats cataracts in children, including traumatic cataracts, and performs correction of unsuccessful previous cataract surgeries performed elsewhere. We handle complex cases involving scar tissue, accompanying retinal pathologies, glaucoma, or situations where earlier treatment did not produce the expected results. Each clinical case is evaluated individually, with detailed diagnostics and surgical planning. Our goal is to restore vision and improve the patient’s quality of life, regardless of the complexity of the condition.",
                                     },
                                 ],
                             },
@@ -1726,95 +1698,82 @@ export const servicesData: ServicesProps[] = [
                         title: "Часто задаваемые вопросы о катаракте",
                         content: [
                             {
-                                question: "Что такое катаракта?",
+                                question:
+                                    "Что такое катаракта и почему она появляется?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Катаракта — это заболевание глаза, при котором происходит помутнение естественного хрусталика, что приводит к постепенному ухудшению зрения. В норме хрусталик прозрачный и обеспечивает фокусировку света на сетчатке, но при катаракте этот процесс нарушается.",
+                                        text: "Катаракта — это помутнение природного хрусталика глаза, которое вызывает постепенное снижение остроты зрения. Чаще всего катаракта связана с возрастными изменениями, нарушением обмена веществ, хроническими заболеваниями (сахарный диабет, гипертония), травмами глаза или осложнениями после других операций. Существует также травматическая катаракта, когда хрусталик повреждается после удара или проникающей раны. Без лечения зрение продолжает ухудшаться вплоть до значительной утраты функционального зрения.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Какие признаки могут указывать на развитие катаракты?",
+                                    "Какие симптомы могут указывать на развитие катаракты?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Катаракта развивается постепенно, и на ранних стадиях её симптомы могут быть малозаметными. По мере прогрессирования возникают трудности со зрением на разных расстояниях. Сначала это может проявляться при чтении или попытке рассмотреть мелкие детали. Возможны проблемы со зрением в сумерках, ощущение туманности или дымки перед глазами, будто вы смотрите через матовое стекло. Даже правильно подобранные очки не дают значительного улучшения остроты зрения.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Как узнать, нужна ли мне операция?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Чтобы решить вопрос о необходимости операции, требуется пройти полное диагностическое обследование, включая консультацию врача, который спрогнозирует результат операции и подберёт интраокулярную линзу с учётом индивидуальных особенностей ваших глаз.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Почему хрусталик мутнеет?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Помутнение хрусталика происходит из-за структурных и химических изменений белков и волокон, из которых он состоит. Чаще всего это связано с возрастными изменениями организма, нарушением кровообращения и недостаточным питанием тканей.",
+                                        text: "Первые признаки катаракты — это нечеткое, «затуманенное» зрение, ощущение, будто вы смотрите через матовое стекло или туман. Могут появляться трудности при чтении, необходимость чаще менять очки, ухудшение зрения в сумерках или при ярком свете, ореолы и ослепление от фар автомобилей и фонарей. Иногда люди отмечают снижение контрастности и искажение цветов. При появлении таких симптомов важно пройти диагностику и обсудить возможное лечение катаракты с офтальмологом.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Можно ли вылечить катаракту без операции?",
+                                    "Можно ли вылечить катаракту без операции — каплями или таблетками?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Вылечить катаракту без операции невозможно, поскольку она связана с необратимым помутнением естественного хрусталика. Ни препараты, ни капли не способны восстановить его прозрачность. Операция по удалению катаракты — единственный эффективный метод лечения.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Сколько длится операция?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Благодаря высокотехнологичному оборудованию и профессионализму хирурга, операция по удалению катаракты может занимать до 5 минут. Однако вместе с подготовкой и послеоперационным осмотром в центре вы проведёте 2–3 часа.",
+                                        text: "К сожалению, лечение катаракты без операции невозможно. Капли, витамины или другие препараты не могут вернуть прозрачность помутневшему хрусталику. Они лишь на короткое время могут замедлить прогрессирование, но не устраняют причину ухудшения зрения. Единственный метод лечения катаракты — хирургическое удаление хрусталика с имплантацией интраокулярной линзы. Только операция позволяет реально восстановить зрение и вернуть комфорт в повседневную жизнь.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Можно ли сделать операцию сразу на обоих глазах?",
+                                    "Когда нужно делать операцию по лечению катаракты?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Одновременное проведение операции на обоих глазах не рекомендуется. Интервал между операциями может варьироваться от одного дня до месяца, в зависимости от особенностей пациента и рекомендаций офтальмолога.",
+                                        text: "Показания к операции определяет офтальмолог после полного обследования глаз. Операция рекомендуется, когда катаракта начинает значительно мешать работе, вождению, чтению, бытовой деятельности или когда появляется риск осложнений. Не стоит ждать, пока катаракта полностью «созреет»: современные методы позволяют проводить операцию на более ранних этапах, когда хрусталик менее плотный, а восстановление проходит быстрее и комфортнее.",
                                     },
                                 ],
                             },
                             {
-                                question: "Как проходит операция?",
+                                question:
+                                    "Как проходит операция «английским водным потоком iQ-5 minutes»?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Удаление катаракты проводится амбулаторно, без швов и инъекций, по новой технологии «Английский водный поток iQ-5 minutes». Это самый эффективный и комфортный метод. Выполняется микроразрез, вводится специальный сбалансированный раствор, который дробит помутневший хрусталик, его удаляют и на его место имплантируют интраокулярную линзу. Местная анестезия проводится с помощью обезболивающих капель.",
+                                        text: "Операция по лечению катаракты проводится амбулаторно, через микропрокол, без швов и обычно занимает всего несколько минут. По технологии «английский водный поток iQ-5 minutes» в глаз вводится специальный сбалансированный раствор, который помогает мягко раздробить помутневший хрусталик. Затем фрагменты удаляются, а на их место имплантируется прозрачная интраокулярная линза. Анестезия местная, в виде капель, поэтому процедура проходит безболезненно, и пациент возвращается домой в тот же день.",
                                     },
                                 ],
                             },
                             {
-                                question: "Нужны ли очки после операции?",
+                                question:
+                                    "Сколько длится восстановление после лечения катаракты и какие есть ограничения?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "После удаления хрусталика могут имплантироваться различные типы интраокулярных линз. Если используются монофокальные линзы, очки для чтения будут необходимы. Если пациент хочет избежать очков, возможно использование мультифокальных хрусталиков. Выбор линзы осуществляет врач после диагностики, исходя из индивидуальных параметров глаз.",
+                                        text: "После операции первые улучшения зрения пациенты ощущают в тот же или на следующий день. Полная стабилизация зрения обычно занимает от нескольких дней до нескольких недель, в зависимости от индивидуальных особенностей. В послеоперационный период важно соблюдать рекомендации врача: не тереть глаз, не поднимать тяжести, избегать пыли и грязи, правильно закапывать назначенные капли. Соблюдение этих правил помогает минимизировать риски и достичь наилучшего результата лечения.",
                                     },
                                 ],
                             },
                             {
-                                question: "Каков период восстановления?",
+                                question:
+                                    "Нужны ли очки после удаления катаракты?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Восстановление после операции по удалению катаракты, как правило, проходит быстро. Однако длительность может варьироваться в зависимости от индивидуальных особенностей пациента и сложности проведённой операции.",
+                                        text: "Результат после операции зависит от типа установленной интраокулярной линзы. Монофокальная линза обеспечивает хорошее зрение на одной дистанции (обычно вдаль), поэтому для чтения могут понадобиться очки. По желанию можно выбрать мультифокальную или трифокальную линзу, которая обеспечивает хорошее зрение на разных расстояниях и уменьшает зависимость от очков. Подбор линзы проводится индивидуально во время диагностики и консультации с хирургом.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Лечите ли вы катаракту у детей и сложные, «проблемные» случаи?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Да, в нашем центре проводится лечение катаракты у детей, включая травматическую катаракту, а также коррекция последствий неудачных операций, выполненных в других клиниках. Мы беремся за сложные случаи, когда есть рубцовые изменения, сопутствующие патологии сетчатки, глаукома или когда предыдущее лечение не дало ожидаемого результата. Каждый клинический случай рассматривается индивидуально, с тщательной диагностикой и детальным планированием операции. Наша цель — максимально восстановить зрение и качество жизни пациента, независимо от сложности ситуации.",
                                     },
                                 ],
                             },
@@ -3617,50 +3576,61 @@ export const servicesData: ServicesProps[] = [
                         content: [
                             {
                                 question:
-                                    "Що представляє собою лазерна корекція зору?",
+                                    "Що таке лазерна корекція зору і чим вона відрізняється від «звичайного лікування»?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Лазерна корекція зору – це сучасна процедура, що дозволяє коригувати короткозорість, далекозорість та астигматизм. За допомогою лазера змінюється форма рогівки, що покращує фокусування світла на сітківці ока, забезпечуючи чітке зображення.",
+                                        text: "Лазерна корекція зору – це лазерне відновлення зору, під час якого змінюється форма рогівки, щоб світло правильно фокусувалося на сітківці. Це не просто «краплі чи вправи», а хірургічний метод для тих, хто хоче суттєво зменшити залежність від окулярів та лінз.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Чи потрібно проходити повне комплексне обстеження перед проведенням лазерної корекції зору?",
+                                    "Скільки коштує лазерна корекція зору?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Так, для вирішення питання можливості проведення лазерної корекції необхідно пройти повне діагностичне обстеження, включаючи консультацію лікаря. Виходячи з отриманих даних лікар спрогнозує точний результат операції і підбере індивідуальну методику лазерної корекції зору.",
+                                        text: "Ціна на лазерну корекцію зору, так само як і відновлення зору лазером ціна, залежить від методу, складності випадку та обсягу спостереження. Точну вартість ви дізнаєтеся після повного обстеження і консультації. Адміністратор також розповість про актуальні акції та знижки.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Чи є можливість пройти повне комплексне обстеження та лазерну корекцію зору в один день?",
+                                    "Чи можна відновити зір без операції?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Так, в нашому центрі Ви можете пройти повне комплексне обстеження та за наявності показань, виконати лазерну корекцію зору в той самий день (у середу, четвер, п’ятницю або суботу, за попереднім записом на ранок). В такому випадку плануйте, що в нашому центрі Ви проведете близько 4-6 годин. Якщо Ви з іншого міста, заплануйте післяопераційний огляд на наступний день.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Як обрати метод корекції?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Метод лазерної корекції зору підбирає виключно лікар, зважаючи на індивідуальні особливості Вашого зору та результати обстеження.",
+                                        text: "У деяких ситуаціях можна частково відновити зір без операції – за рахунок правильно підібраних окулярів, лінз, лікування супутніх захворювань, корекції режиму роботи. Але якщо ви хочете суттєво змінити якість зору, лікар може порадити корекцію очей лазером як найефективніший варіант.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Яка тривалість процедури лазерної корекції зору?",
+                                    "Які є протипоказання до лазерної корекції зору?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Завдяки новітньому обладнанню операція на обох очах триває не більше 7 хвилин. Загалом, разом із підготовкою та післяопераційним оглядом в центрі пробудете близько 2 годин.",
+                                        text: "Є ситуації, коли ми не рекомендуємо зробити лазерну корекцію: занадто тонка рогівка, активні запальні процеси, деякі системні захворювання, вагітність і лактація, нестабільний зір тощо. Лікар пояснить протипоказання саме у вашому випадку і, за потреби, запропонує альтернативне лікування.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Які обмеження після лазерної корекції зору?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Перший час важливо дотримуватися обмежень після лазерної корекції зору: не терти очі, уникати басейну, сауни, сильних фізичних навантажень, пилу та бруду. Ви отримаєте письмові рекомендації по відновленню після лазерної корекції зору та графік контрольних оглядів.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Які можливі побічні ефекти та коли потрібна термінова допомога?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Нормально, якщо тимчасово відчувається сухість, легке печіння, чутливість до світла. Якщо ж з’являється різкий біль, раптове погіршення зору, «затемнення» або сильний набряк – це привід негайно звернутися за терміновою допомогою в клініку.",
                                     },
                                 ],
                             },
@@ -3670,7 +3640,17 @@ export const servicesData: ServicesProps[] = [
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Процедура безболісна, проводиться під місцевою анестезією у вигляді крапель, які знеболюють рогівку. Після операції можуть бути тимчасові неприємні відчуття, такі як печіння, сухість або відчуття піску в очах, але це триває зазвичай кілька годин.",
+                                        text: "Процедура проходить під місцевою крапельною анестезією. Більшість пацієнтів відзначають лише відчуття тиску або легкого дискомфорту. У відгуках пацієнти часто пишуть, що процедура була значно легшою, ніж вони очікували.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Як обрати клініку для корекції очей лазером?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Зважайте на досвід лікарів, обладнання, прозорість інформації про вартість, наявність реальних відгуків та рекомендацій. Якщо ви не знаєте, куди піти і кого запитати, можна записатися на консультацію лікаря у нашу клініку: ви отримаєте професійний огляд, чесну оцінку стану очей і відповідь на питання «чи варто мені робити лазерну корекцію зору».",
                                     },
                                 ],
                             },
@@ -3867,51 +3847,62 @@ export const servicesData: ServicesProps[] = [
                         title: "Frequently asked questions about laser vision correction",
                         content: [
                             {
-                                question: "What is laser vision correction?",
+                                question:
+                                    "What is laser vision correction and how is it different from “regular treatment”?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Laser vision correction is a modern procedure that helps correct myopia, hyperopia and astigmatism. The laser changes the shape of the cornea, improving the eye’s ability to focus light on the retina, resulting in clear vision.",
+                                        text: "Laser vision correction is a laser eye procedure that reshapes the cornea so that light focuses properly on the retina. It is not just “drops or exercises”, but a surgical method for those who want to significantly reduce their dependence on glasses or contact lenses.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Is a full comprehensive examination required before laser vision correction?",
+                                    "How much does laser vision correction cost?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Yes, to determine whether laser correction is possible, you must undergo a full diagnostic examination, including a consultation with the doctor. Based on the results, the doctor will predict the expected outcome of the surgery and select an individual correction method.",
+                                        text: "The price of laser vision correction, as well as the cost of laser eye restoration, depends on the method, case complexity, and follow-up volume. You will learn the exact cost after a full examination and consultation. The administrator will also inform you about current promotions and discounts.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Is it possible to have a full examination and laser vision correction on the same day?",
+                                    "Is it possible to improve vision without surgery?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Yes, in our center, you can undergo a full comprehensive examination and, if there are indications, have laser correction on the same day (Wednesday–Saturday by prior morning appointment). In this case, plan to spend about 4–6 hours at our clinic. If you come from another city, schedule a postoperative check-up for the next day.",
+                                        text: "In some cases, vision can be partially improved without surgery—through properly selected glasses or lenses, treatment of related conditions, and adjusting visual workload. But if you want a significant improvement in vision quality, the doctor may recommend laser eye correction as the most effective option.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "How is the correction method chosen?",
+                                    "What are the contraindications for laser vision correction?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "The correction method is selected exclusively by the doctor, based on your individual eye characteristics and examination results.",
+                                        text: "There are situations in which we do not recommend undergoing laser correction: a cornea that is too thin, active inflammation, certain systemic diseases, pregnancy or breastfeeding, unstable vision, etc. The doctor will explain the contraindications in your specific case and offer alternative treatment if needed.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "How long does laser vision correction take?",
+                                    "What restrictions should be followed after laser vision correction?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Thanks to advanced equipment, surgery on both eyes takes no more than 7 minutes. In total, including preparation and postoperative check-up, you will spend about 2 hours in the center.",
+                                        text: "At first, it is important to follow restrictions after laser correction: avoid rubbing your eyes, swimming pools, saunas, intense physical activity, dust, and dirt. You will receive written postoperative recommendations and a schedule of follow-up visits.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "What side effects are possible and when is urgent help needed?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Temporary dryness, mild burning, or light sensitivity are normal. However, severe pain, sudden vision loss, “darkening”, or significant swelling are reasons to immediately seek urgent medical help at the clinic.",
                                     },
                                 ],
                             },
@@ -3920,7 +3911,17 @@ export const servicesData: ServicesProps[] = [
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "The procedure is painless and performed under local anesthesia in the form of eye drops that numb the cornea. After surgery, you may experience temporary discomfort such as burning, dryness or a feeling of sand in the eyes, but this usually lasts only a few hours.",
+                                        text: "The procedure is performed under local drop anesthesia. Most patients report only pressure or mild discomfort. Many note in their reviews that the procedure was much easier than they expected.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "How to choose a clinic for laser eye correction?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Consider the doctors’ experience, equipment, transparent pricing, real reviews, and recommendations. If you are unsure where to go, you can book a consultation at our clinic: you will receive a professional examination, an honest assessment of your eye condition, and an answer to the question “should I undergo laser vision correction?”.",
                                     },
                                 ],
                             },
@@ -4116,60 +4117,81 @@ export const servicesData: ServicesProps[] = [
                         content: [
                             {
                                 question:
-                                    "Что представляет собой лазерная коррекция зрения?",
+                                    "Что такое лазерная коррекция зрения и чем она отличается от «обычного лечения»?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Лазерная коррекция зрения — это современная процедура, позволяющая исправлять близорукость, дальнозоркость и астигматизм. С помощью лазера изменяется форма роговицы, что улучшает фокусировку света на сетчатке и обеспечивает чёткое изображение.",
+                                        text: "Лазерная коррекция зрения — это лазерное восстановление зрения, при котором изменяется форма роговицы, чтобы свет правильно фокусировался на сетчатке. Это не просто «капли или упражнения», а хирургический метод для тех, кто хочет значительно уменьшить зависимость от очков и линз.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Нужно ли проходить полное комплексное обследование перед процедурой?",
+                                    "Сколько стоит лазерная коррекция зрения?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Да, чтобы принять решение о возможности проведения лазерной коррекции, необходимо пройти полное диагностическое обследование, включая консультацию врача. На основании полученных данных врач спрогнозирует результат операции и подберёт индивидуальную методику коррекции.",
+                                        text: "Цена лазерной коррекции зрения, так же как и стоимость восстановления зрения лазером, зависит от метода, сложности случая и объёма наблюдения. Точную стоимость вы узнаете после полного обследования и консультации. Администратор также расскажет об актуальных акциях и скидках.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Можно ли пройти обследование и лазерную коррекцию в один день?",
+                                    "Можно ли восстановить зрение без операции?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Да, в нашем центре вы можете пройти комплексное обследование и при наличии показаний выполнить лазерную коррекцию в тот же день (в среду, четверг, пятницу или субботу по предварительной записи на утро). Планируйте провести у нас 4–6 часов. Если вы из другого города, запланируйте послеоперационный осмотр на следующий день.",
-                                    },
-                                ],
-                            },
-                            {
-                                question: "Как выбрать метод коррекции?",
-                                answer: [
-                                    {
-                                        type: "text",
-                                        text: "Метод лазерной коррекции зрения подбирает исключительно врач, учитывая индивидуальные особенности вашего зрения и результаты обследования.",
+                                        text: "В некоторых случаях можно частично восстановить зрение без операции — благодаря правильно подобранным очкам, линзам, лечению сопутствующих заболеваний и коррекции зрительной нагрузки. Но если вы хотите существенно улучшить качество зрения, врач может порекомендовать лазерную коррекцию как наиболее эффективный вариант.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Сколько длится лазерная коррекция зрения?",
+                                    "Какие противопоказания к лазерной коррекции зрения?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Благодаря современному оборудованию операция на обоих глазах занимает не более 7 минут. В целом, вместе с подготовкой и послеоперационным осмотром вы проведёте в центре около 2 часов.",
+                                        text: "Есть ситуации, когда мы не рекомендуем проводить лазерную коррекцию: слишком тонкая роговица, активные воспалительные процессы, некоторые системные заболевания, беременность и лактация, нестабильное зрение и др. Врач объяснит противопоказания именно в вашем случае и предложит альтернативное лечение, если это необходимо.",
                                     },
                                 ],
                             },
                             {
                                 question:
-                                    "Больно ли делать лазерную коррекцию?",
+                                    "Какие ограничения после лазерной коррекции зрения?",
                                 answer: [
                                     {
                                         type: "text",
-                                        text: "Процедура безболезненна, проводится под местной анестезией в виде капель, которые обезболивают роговицу. После операции возможны временные неприятные ощущения: жжение, сухость или ощущение песка в глазах, но обычно это проходит через несколько часов.",
+                                        text: "В первые дни важно соблюдать ограничения после лазерной коррекции: не тереть глаза, избегать бассейна, сауны, сильных физических нагрузок, пыли и грязи. Вы получите письменные рекомендации по восстановлению и график контрольных осмотров.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Какие возможны побочные эффекты и когда нужна срочная помощь?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Нормально, если временно ощущается сухость, лёгкое жжение или светочувствительность. Но если появляется резкая боль, внезапное ухудшение зрения, «потемнение» или сильный отек — это повод срочно обратиться за медицинской помощью в клинику.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Больно ли делать лазерную коррекцию зрения?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Процедура проводится под местной капельной анестезией. Большинство пациентов отмечают лишь ощущение давления или лёгкого дискомфорта. Во многих отзывах пациенты пишут, что процедура оказалась значительно легче, чем они ожидали.",
+                                    },
+                                ],
+                            },
+                            {
+                                question:
+                                    "Как выбрать клинику для лазерной коррекции зрения?",
+                                answer: [
+                                    {
+                                        type: "text",
+                                        text: "Обращайте внимание на опыт врачей, оборудование, прозрачность цен, наличие реальных отзывов и рекомендаций. Если вы не знаете, куда обратиться, можно записаться на консультацию в нашу клинику: вы получите профессиональный осмотр, честную оценку состояния глаз и ответ на вопрос «стоит ли мне делать лазерную коррекцию зрения».",
                                     },
                                 ],
                             },
