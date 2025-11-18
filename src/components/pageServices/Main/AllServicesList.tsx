@@ -25,11 +25,11 @@ export const AllServicesList = async ({ locale }: { locale: LocaleType }) => {
     const serviceStyles: Record<string, string> = {
         "lazerna-korekcziya-zoru": "text-ivory",
         "perevirka-zoru":
-            "bg-cover bg-center hover:bg-[url(/images/perevirka-zoru.jpg)] active:bg-[url(/images/perevirka-zoru.jpg)] text-black",
+            "bg-cover bg-center hover:bg-[linear-gradient(#065d43,#065d43),url(/images/perevirka-zoru-hero.jpg)] active:bg-[linear-gradient(#065d43,#065d43),url(/images/perevirka-zoru-hero.jpg)] text-black bg-blend-hard-light",
         "likuvannya-katarakti":
-            "bg-cover bg-center hover:bg-[url(/images/likuvannya-katarakti.jpg)] active:bg-[url(/images/likuvannya-katarakti.jpg)] text-black ",
+            "bg-cover bg-center hover:bg-[linear-gradient(#065d43,#065d43),url(/images/iq-5-minute.jpg)] active:bg-[linear-gradient(#065d43,#065d43),url(/images/iq-5-minute.jpg)] text-black bg-blend-hard-light",
         "syndrom-sukhoho-oka":
-            "bg-cover bg-center hover:bg-[url(/images/syndrom-sukhoho-oka.jpg)] active:bg-[url(/images/syndrom-sukhoho-oka.jpg)] text-black ",
+            "bg-cover bg-center hover:bg-[linear-gradient(#065d43,#065d43),url(/images/eyes-cta.jpg)] active:bg-[linear-gradient(#065d43,#065d43),url(/images/eyes-cta.jpg)] text-black bg-blend-hard-light",
         "dityache-viddilennya": "text-black",
         default: "hover-green-gradient text-black ",
     };
