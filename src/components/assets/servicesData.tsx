@@ -9,7 +9,7 @@ export type SectionType =
     | { type: "methodsSection"; data: MethodsSectionProps }
     | { type: "greenSliderSection"; data: GreenSliderSectionProps }
     | { type: "advantages"; data: AdvantageServiceSectionProps }
-    | { type: "cta" }
+    | { type: "cta"; data?: GreenCardType }
     | { type: "priceSection"; data: PriceSectionProps }
     | { type: "doctors" }
     | { type: "giftCTA" }
@@ -234,6 +234,7 @@ export type FAQServiceSectionType = {
 export type GreenCardType = {
     title: string;
     text: string;
+    bigText?: boolean;
     paddingTop?: boolean;
     paddingBottom?: boolean;
 };
@@ -11549,3 +11550,17 @@ export const raynerCardsList = [
         imageAfter: "/images/rayner-day.jpg",
     },
 ];
+
+export const raynerCTA: {
+    uk: GreenCardType;
+    ru: GreenCardType;
+    en: GreenCardType;
+} = {
+    uk: {
+        bigText: true,
+        title: "Поверніть собі якісний зір — легко та без окулярів",
+        text: "Ми дотримуємося високих стандартів безпеки та стерильності, приділяючи увагу кожному етапу лікування — від обстеження до післяопераційних оглядів, щоб забезпечити вам спокій та комфорт.",
+    },
+    en: { title: "", text: "" },
+    ru: { title: "", text: "" },
+};

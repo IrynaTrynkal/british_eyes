@@ -2,6 +2,7 @@ import { feedbacksList } from "@/components/assets/feedbacksData";
 import {
     raynerAdvantageDataMob,
     raynerAdvantageDataTab,
+    raynerCTA,
 } from "@/components/assets/servicesData";
 import { Doctors } from "@/components/main/doctors/Doctors";
 import { AboutCTA } from "@/components/pageAbout/cta/AboutCTA";
@@ -50,7 +51,7 @@ export default async function RaynerPage({
                 data={raynerAdvantageDataTab[locale as LocaleType]}
             />
             <RaynerVideo />
-            <AboutCTA />
+            <AboutCTA data={raynerCTA[locale as LocaleType]} />
             <Doctors
                 doctors={doctorsList}
                 className="tab:mt-12 pc:mt-[120px] mt-[60px]"
