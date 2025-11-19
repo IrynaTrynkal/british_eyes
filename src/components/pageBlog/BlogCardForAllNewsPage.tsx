@@ -42,26 +42,28 @@ export const BlogCardForAllNewsPage = ({
                     />
                 )}
             </div>
-            <div className="px-3">
-                {" "}
-                <h3 className="font-oswald tab:text-2xl pc:min-h-24 pc:mb-3 tab:leading-7 tab:min-h-[57px] pc:line-clamp-3 mb-6 line-clamp-2 [display:-webkit-box] overflow-hidden leading-5 font-medium break-words uppercase">
-                    {news.title}
-                </h3>
-                <p className="tab:text-base tab:leading-5 pc:mb-3 mb-2 line-clamp-3 [display:-webkit-box] overflow-hidden text-sm break-words">
-                    {news.shortText}
-                </p>
-            </div>
-            <div className="pc:gap-5 flex items-center justify-between">
-                <p className="pc:text-sm pc:py-[3px] w-full border-b border-black px-3 py-0.5 text-xs leading-none text-gray-500 uppercase">
-                    {news.publication &&
-                        format(new Date(news.publication), "dd.MM.yyyy")}
-                </p>
-                <Link
-                    href={`/blog/${news.slug}` as any}
-                    className="font-oswald tab:text-sm pc:text-base pc:hover:underline-offset-[2.5px] mr-3 text-sm leading-none font-medium whitespace-nowrap uppercase hover:underline hover:decoration-1 hover:underline-offset-[1.5px]"
-                >
-                    {btnName}
-                </Link>
+
+            <div className="flex flex-1 flex-col justify-between">
+                <div className="px-3">
+                    <h3 className="font-oswald tab:text-2xl pc:mb-3 tab:leading-7 tab:min-h-[57px] pc:line-clamp-3 mb-6 line-clamp-2 [display:-webkit-box] overflow-hidden leading-5 font-medium break-words uppercase">
+                        {news.title}
+                    </h3>
+                    <p className="tab:text-base tab:leading-5 pc:mb-3 mb-2 line-clamp-3 [display:-webkit-box] overflow-hidden text-sm break-words">
+                        {news.shortText}
+                    </p>
+                </div>
+                <div className="pc:gap-5 flex items-center justify-between">
+                    <p className="pc:text-sm pc:py-[3px] w-full border-b border-black px-3 py-0.5 text-xs leading-none text-gray-500 uppercase">
+                        {news.publication &&
+                            format(new Date(news.publication), "dd.MM.yyyy")}
+                    </p>
+                    <Link
+                        href={`/blog/${news.slug}` as any}
+                        className="font-oswald tab:text-sm pc:text-base pc:hover:underline-offset-[2.5px] mr-3 text-sm leading-none font-medium whitespace-nowrap uppercase hover:underline hover:decoration-1 hover:underline-offset-[1.5px]"
+                    >
+                        {btnName}
+                    </Link>
+                </div>
             </div>
         </>
     );
