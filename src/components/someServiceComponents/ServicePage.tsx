@@ -96,7 +96,12 @@ export const ServicePageContent = async ({
                             />
                         );
                     case "cta":
-                        return <AboutCTA key={index} />;
+                        return (
+                            <AboutCTA
+                                key={index}
+                                data={section.data && section.data}
+                            />
+                        );
                     case "numberListSection":
                         return (
                             <NumberListSection
