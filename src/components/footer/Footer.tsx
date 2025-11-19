@@ -15,7 +15,7 @@ import { UpButton } from "./UpButton";
 export const Footer = () => {
     const t = useTranslations("HomePage");
     const footerH3 =
-        "font-oswald text-grey text-sm prepc:text-base leading-none font-medium uppercase";
+        "font-oswald text-grey text-sm prepc:text-base leading-none mx-auto max-w-[1600px] font-medium uppercase";
     return (
         <footer className="text-ivory bg-black py-8">
             <section className="content relative">
