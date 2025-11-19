@@ -236,6 +236,21 @@ export type PriceItem = {
     >;
 };
 
+export type OrderDoctors = {
+    _id: string;
+    _type: "orderDoctors";
+    _createdAt: string;
+    _updatedAt: string;
+    _rev: string;
+    doctors?: Array<{
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        _key: string;
+        [internalGroqTypeReferenceTo]?: "doctor";
+    }>;
+};
+
 export type Blog = {
     _id: string;
     _type: "blog";
@@ -544,6 +559,7 @@ export type AllSanitySchemaTypes =
     | DiscountFullData
     | DiscountShortData
     | PriceItem
+    | OrderDoctors
     | Blog
     | Doctor
     | OffersPage
@@ -742,6 +758,43 @@ export type BlogShortByServiceQueryResult = Array<{
     content: PortableTextAll | null;
     shortText: string | null;
 }>;
+// Variable: doctorsOrderQuery
+// Query: *[_type == "orderDoctors"][0].  doctors[]->{    _id,  "name":name[_key == $language][0].value, "slug":slug.current, departments, services,   "position":position[_key == $language][0].value, "photo":photo,   experience, "specialization":specialization[_key == $language][0].value,   "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value,   "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value,   "about":about[_key == $language][0].value  }
+export type DoctorsOrderQueryResult = Array<{
+    _id: string;
+    name: string | null;
+    slug: string | null;
+    departments: Array<
+        {
+            _key: string;
+        } & DepartmentsKey
+    > | null;
+    services: Array<
+        {
+            _key: string;
+        } & ServicesKey
+    > | null;
+    position: PortableText | null;
+    photo: {
+        asset?: {
+            _ref: string;
+            _type: "reference";
+            _weak?: boolean;
+            [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+        };
+        media?: unknown;
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: "image";
+    } | null;
+    experience: string | null;
+    specialization: PortableText | null;
+    education: PortableText | null;
+    activity: PortableText | null;
+    training: PortableText | null;
+    conferences: PortableText | null;
+    about: PortableTextAll | null;
+}> | null;
 
 // Query TypeMap
 import "@sanity/client";
@@ -756,5 +809,6 @@ declare module "@sanity/client" {
         '\n     *[_type == "blog" && !(_id in path("drafts.**"))]{\n   service, "title":title[_key == $language][0].value,\n     "slug":slug.current, publication, "image":image.asset->url,\n     "shortText":shortText[_key == $language][0].value,\n     "content": content[_key == $language][0].value}': BlogsListQueryResult;
         '\n      *[_type == "blog" && slug.current == $slug][0]{\n   service, "title":title[_key == $language][0].value,\n     publication, "slug":slug.current, "image":image.asset->url,\n     "shortText":shortText[_key == $language][0].value,\n     "content": content[_key == $language][0].value}': BlogQueryResult;
         '\n      *[_type == "blog" && service == $service && slug.current != $slug]{\n   service, "title":title[_key == $language][0].value,\n     publication, "slug":slug.current, "image":image.asset->url,\n     "content": content[_key == $language][0].value,\n     "shortText":shortText[_key == $language][0].value\n }': BlogShortByServiceQueryResult;
+        '\n*[_type == "orderDoctors"][0].\n  doctors[]->{\n    _id,\n  "name":name[_key == $language][0].value, "slug":slug.current, departments, services, \n  "position":position[_key == $language][0].value, "photo":photo, \n  experience, "specialization":specialization[_key == $language][0].value, \n  "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value, \n  "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, \n  "about":about[_key == $language][0].value\n  }': DoctorsOrderQueryResult;
     }
 }

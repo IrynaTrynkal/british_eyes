@@ -1,6 +1,6 @@
 import { Pagination } from "@/components/shared/Pagination";
 
-import { DepartmentsKey, DoctorsListQueryResult } from "../../../sanity.types";
+import { DepartmentsKey, DoctorsOrderQueryResult } from "../../../sanity.types";
 import { DoctorCardDoctorsPage } from "./DoctorCardDoctorsPage";
 
 const ITEMS_PER_PAGE = 6;
@@ -12,13 +12,13 @@ export const DoctorsFilteredList = ({
     className,
 }: {
     pageNumber?: number;
-    list: DoctorsListQueryResult;
+    list: DoctorsOrderQueryResult;
     selectedDepartment?: DepartmentsKey;
     className?: string;
 }) => {
     const filteredDoctorsList = !selectedDepartment
-        ? list
-        : list.filter(item =>
+        ? (list ?? [])
+        : (list ?? []).filter(item =>
               item.departments?.includes(selectedDepartment as any)
           );
 

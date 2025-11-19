@@ -5,7 +5,7 @@ import { HeroDoctors } from "@/components/pageDoctors/HeroDoctors";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { sanityFetch } from "@/sanity/lib/client";
-import { doctorsListQuery } from "@/sanity/lib/queries";
+import { doctorsOrderQuery } from "@/sanity/lib/queries";
 
 export default async function OftalmolohyPage({
     searchParams,
@@ -25,7 +25,7 @@ export default async function OftalmolohyPage({
     const breadcrumb = [{ name: "oftalmolohy", href: "/oftalmolohy" }];
 
     const doctorsList = await sanityFetch({
-        query: doctorsListQuery,
+        query: doctorsOrderQuery,
         params: { language: locale },
         tags: [],
     });

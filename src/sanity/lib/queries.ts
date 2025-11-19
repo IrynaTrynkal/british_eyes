@@ -65,3 +65,15 @@ export const blogShortByServiceQuery = defineQuery(`
      "content": content[_key == $language][0].value,
      "shortText":shortText[_key == $language][0].value
  }`);
+
+export const doctorsOrderQuery = defineQuery(`
+*[_type == "orderDoctors"][0].
+  doctors[]->{
+    _id,
+  "name":name[_key == $language][0].value, "slug":slug.current, departments, services, 
+  "position":position[_key == $language][0].value, "photo":photo, 
+  experience, "specialization":specialization[_key == $language][0].value, 
+  "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value, 
+  "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, 
+  "about":about[_key == $language][0].value
+  }`);

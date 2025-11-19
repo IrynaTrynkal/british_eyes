@@ -12,7 +12,7 @@ import { News } from "@/components/main/news/News";
 import { Services } from "@/components/main/services/Services";
 import { Booking } from "@/components/shared/booking/Booking";
 import { sanityFetch } from "@/sanity/lib/client";
-import { blogsListQuery, doctorsListQuery } from "@/sanity/lib/queries";
+import { blogsListQuery, doctorsOrderQuery } from "@/sanity/lib/queries";
 
 export default async function Home({
     params,
@@ -28,7 +28,7 @@ export default async function Home({
             tags: [],
         }),
         sanityFetch({
-            query: doctorsListQuery,
+            query: doctorsOrderQuery,
             params: { language: locale },
             tags: [],
         }),

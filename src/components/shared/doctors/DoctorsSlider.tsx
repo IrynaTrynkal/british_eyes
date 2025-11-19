@@ -11,13 +11,13 @@ import {
 import { useDotButton } from "@/components/shared/slider/SliderDots";
 import { SliderDotsBox } from "@/components/shared/slider/SliderDotsBox";
 
-import { DoctorsListQueryResult } from "../../../../sanity.types";
+import { DoctorsOrderQueryResult } from "../../../../sanity.types";
 import { DoctorCard } from "./DoctorCard";
 
 export const DoctorsSlider = ({
     doctors,
 }: {
-    doctors: DoctorsListQueryResult;
+    doctors: DoctorsOrderQueryResult;
 }) => {
     const options: EmblaOptionsType = {
         loop: true,
@@ -37,14 +37,15 @@ export const DoctorsSlider = ({
         <div className="embla tab:px-0 tab:mb-0 mb-8 min-w-full px-4">
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex">
-                    {doctors.map(doctor => (
-                        <div
-                            key={doctor.name}
-                            className="embla__slide tab:flex-[0_0_250px] tab:pr-3 pc:pr-5 w-full flex-[0_0_240px] pr-[14px]"
-                        >
-                            <DoctorCard data={doctor} />
-                        </div>
-                    ))}
+                    {doctors &&
+                        doctors.map(doctor => (
+                            <div
+                                key={doctor.name}
+                                className="embla__slide tab:flex-[0_0_250px] tab:pr-3 pc:pr-5 w-full flex-[0_0_240px] pr-[14px]"
+                            >
+                                <DoctorCard data={doctor} />
+                            </div>
+                        ))}
                 </div>
                 <div className="embla__controls tab:absolute tab:bottom-0 pc:bottom-[14px] tab:right-0 mt-4">
                     <div className="embla__buttons text-ivory flex justify-between gap-4">

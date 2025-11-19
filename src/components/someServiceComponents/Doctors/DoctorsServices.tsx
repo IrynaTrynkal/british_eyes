@@ -7,14 +7,14 @@ import { DoctorsSlider } from "@/components/shared/doctors/DoctorsSlider";
 import { Fraction } from "@/components/shared/Fraction";
 import { LinkAction } from "@/components/shared/LinkAction";
 
-import { DoctorsListQueryResult } from "../../../../sanity.types";
+import { DoctorsOrderQueryResult } from "../../../../sanity.types";
 
 export const DoctorsServices = ({
     service,
     list,
 }: {
     service: ServicesKeyType;
-    list: DoctorsListQueryResult;
+    list: DoctorsOrderQueryResult;
 }) => {
     const t = useTranslations("ServicesPage");
     const tH = useTranslations("HomePage");
