@@ -17,7 +17,8 @@ export type SectionType =
     | { type: "faq"; data: FAQServiceSectionType }
     | { type: "textsColumns"; data: TextsColumnsSectionType }
     | { type: "global" }
-    | { type: "individual"; data: React.ReactNode };
+    | { type: "individual"; data: React.ReactNode }
+    | { type: "greenCard"; data: GreenCardType };
 
 export type ServicesLocaleProps = {
     textMain?: string;
@@ -228,6 +229,13 @@ export type FAQServiceListType = {
 export type FAQServiceSectionType = {
     title: string;
     content: FAQServiceListType[];
+};
+
+export type GreenCardType = {
+    title: string;
+    text: string;
+    paddingTop?: boolean;
+    paddingBottom?: boolean;
 };
 
 export const servicesData: ServicesProps[] = [
@@ -1157,8 +1165,8 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Катаракта в нашому центрі лікується «англійським водним потоком iQ-5 minutes»",
                         text: [
-                            "Ми використовуємо найпфередовішу методику факоемульсифікації катаракти — «Водний потік», яка вважається «золотим стандартом» в сучасній офтальмології.",
-                            "Це швидкий, безпечний і комфортний метод, що дозволяє пацієнтам повернутися до звичного життя вже за кілька днів.",
+                            "Це сучасний варіант факоемульсифікації катаракти, який вважається «золотим стандартом» у світовій офтальмології. Лікування катаракти проводиться через мікропрокол, без швів, під місцевою анестезією краплями. Такий підхід робить операцію швидкою, безпечною та максимально комфортною для пацієнта, а повернення до звичного життя можливе вже через кілька днів.",
+                            "Ми застосовуємо передові технології лікування катаракти, ретельно підбираємо інтраокулярну лінзу під кожного пацієнта, враховуючи стан рогівки, сітківки, тип катаракти (вікова, травматична, ускладнена) та особливості зору. Лікування катаракти в нашій клініці — це не просто видалення помутнілого кришталика, а відновлення максимально можливої якості зору на близькій, середній та далекій відстані.",
                         ],
                         image: "/images/cataract-preview.jpg",
                         textUp: "500 тис+",
@@ -1201,17 +1209,16 @@ export const servicesData: ServicesProps[] = [
                                             {
                                                 gap: true,
                                                 type: "text",
-                                                text: "Катаракта – це захворювання, при якому порушується прозорість кришталика, що призводить до зниження гостроти зору.",
+                                                text: "Катаракта — це захворювання, при якому природний кришталик ока втрачає прозорість, стає мутним і щільним. У нормі кришталик пропускає світло і фокусує його на сітківці, забезпечуючи чітке зображення. ",
                                             },
                                             {
                                                 gap: true,
                                                 type: "text",
-                                                text: "Простіше кажучи, помутніння кришталика. При цьому його структура стає більш щільною, що створює певні труднощі при видаленні.",
+                                                text: "При катаракті цей процес порушується, зір стає нечітким, з’являється відчуття «туману» або «димки» перед очима, погіршується якість зору при яскравому світлі та в сутінках, змінюється сприйняття кольорів. ",
                                             },
                                             {
-                                                gap: true,
                                                 type: "text",
-                                                text: "Виявити катаракту на стадії неможливо без офтальмологічного огляду. Видимих симптомів на ранній стадії взагалі немає. З розвитком захворювання погіршується зір: пацієнт починає бачити предмети нечітко, немов вони перебувають у тумані, підвищується чутливість при погляді яскраве світло, погіршується нічний зір, послаблюється колірне сприйняття.",
+                                                text: "Єдиний ефективний метод лікування катаракти — хірургічне видалення помутнілого кришталика з імплантацією штучної лінзи.",
                                             },
                                         ],
                                     },
@@ -1374,8 +1381,8 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Cataracts in our center are treated with the 'English Water Flow iQ-5 minutes'",
                         text: [
-                            "We use the most advanced phacoemulsification technique — the 'Water Flow', which is considered the 'gold standard' in modern ophthalmology.",
-                            "It is a fast, safe and comfortable method that allows patients to return to their normal lives within a few days.",
+                            "This is a modern variant of cataract phacoemulsification, considered the 'gold standard' in global ophthalmology. Cataract treatment is performed through a micro-incision, without sutures, under local anesthetic eye drops. This approach makes the operation quick, safe, and as comfortable as possible for the patient, with a return to normal life possible within just a few days.",
+                            "We use advanced cataract treatment technologies, carefully selecting an intraocular lens for each patient, taking into account the condition of the cornea, retina, type of cataract (age-related, traumatic, complicated), and individual vision characteristics. Cataract treatment in our clinic is not just about removing the clouded lens but restoring the best possible quality of vision at near, intermediate, and far distances.",
                         ],
                         image: "/images/cataract-preview.jpg",
                         textUp: "500 k+",
@@ -1418,17 +1425,16 @@ export const servicesData: ServicesProps[] = [
                                             {
                                                 gap: true,
                                                 type: "text",
-                                                text: "A cataract is a condition in which the transparency of the eye’s lens is impaired, leading to decreased visual acuity.",
+                                                text: "Cataract is a condition in which the natural lens of the eye loses its transparency, becomes cloudy and dense. Normally, the lens lets light pass through and focuses it on the retina, providing a clear image.",
                                             },
                                             {
                                                 gap: true,
                                                 type: "text",
-                                                text: "Simply put, it’s a clouding of the lens. Its structure becomes denser, which creates certain difficulties during removal.",
+                                                text: "With cataract, this process is disrupted: vision becomes blurry, there is a sensation of 'fog' or 'haze' in front of the eyes, visual quality deteriorates in bright light and at dusk, and color perception may change.",
                                             },
                                             {
-                                                gap: true,
                                                 type: "text",
-                                                text: "It is impossible to detect a cataract in its early stage without an ophthalmologic examination. There are no visible symptoms at first. As the disease progresses, vision deteriorates: objects appear blurry, as if seen through a fog; sensitivity to bright light increases; night vision worsens; and color perception becomes weaker.",
+                                                text: "The only effective method to treat cataract is surgical removal of the clouded lens with implantation of an artificial intraocular lens.",
                                             },
                                         ],
                                     },
@@ -1590,8 +1596,8 @@ export const servicesData: ServicesProps[] = [
                     data: {
                         title: "Катаракта в нашем центре лечится «английским водным потоком iQ-5 minutes»",
                         text: [
-                            "Мы используем передовую методику факоэмульсификации катаракты — «Водный поток», которая считается «золотым стандартом» в современной офтальмологии.",
-                            "Это быстрый, безопасный и комфортный метод, позволяющий пациентам вернуться к привычной жизни уже через несколько дней.",
+                            "Это современный вариант факоэмульсификации катаракты, который считается «золотым стандартом» в мировой офтальмологии. Лечение катаракты проводится через микроразрез, без швов, под местной анестезией в виде капель. Такой подход делает операцию быстрой, безопасной и максимально комфортной для пациента, а возвращение к привычной жизни возможно уже через несколько дней.",
+                            "Мы применяем передовые технологии лечения катаракты, тщательно подбираем интраокулярную линзу для каждого пациента, учитывая состояние роговицы, сетчатки, тип катаракты (возрастная, травматическая, осложненная) и особенности зрения. Лечение катаракты в нашей клинике — это не просто удаление помутневшего хрусталика, а восстановление максимально возможного качества зрения на близком, среднем и дальнем расстоянии.",
                         ],
                         image: "/images/cataract-preview.jpg",
                         textUp: "500 тыс+",
@@ -1634,17 +1640,16 @@ export const servicesData: ServicesProps[] = [
                                             {
                                                 gap: true,
                                                 type: "text",
-                                                text: "Катаракта — это заболевание, при котором нарушается прозрачность хрусталика глаза, что приводит к снижению остроты зрения.",
+                                                text: "Катаракта — это заболевание, при котором естественный хрусталик глаза теряет прозрачность, становится мутным и плотным. В норме хрусталик пропускает свет и фокусирует его на сетчатке, обеспечивая чёткое изображение.",
                                             },
                                             {
                                                 gap: true,
                                                 type: "text",
-                                                text: "Проще говоря, это помутнение хрусталика. Его структура становится более плотной, что создает определенные трудности при удалении.",
+                                                text: "При катаракте этот процесс нарушается: зрение становится нечетким, появляется ощущение 'тумана' или 'дымки' перед глазами, ухудшается качество зрения при ярком свете и в сумерках, изменяется восприятие цветов.",
                                             },
                                             {
-                                                gap: true,
                                                 type: "text",
-                                                text: "Обнаружить катаракту на ранней стадии невозможно без офтальмологического осмотра. На начальном этапе видимых симптомов нет. По мере развития заболевания зрение ухудшается: предметы становятся размытыми, будто окутаны туманом; повышается чувствительность к яркому свету; ухудшается ночное зрение и ослабляется восприятие цветов.",
+                                                text: "Единственный эффективный метод лечения катаракты — хирургическое удаление помутневшего хрусталика с имплантацией искусственной линзы.",
                                             },
                                         ],
                                     },
@@ -3542,6 +3547,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "advantages",
                     data: {
+                        paddingBottom: false,
                         title: "Переваги лазерної корекції зору в Києві в Британському Офтальмологічному Центрі",
                         text: "Ви можете бути впевнені в якості послуг, що надаються, так як довіряєте свій зір сучасній клініці",
                         list: [
@@ -3559,6 +3565,13 @@ export const servicesData: ServicesProps[] = [
                                 text: "Наші пацієнти отримують все в одному місці: обстеження, консультацію лікаря, операцію, план відновлення після лазерної корекції зору та довгостроковий нагляд. Не потрібно шукати, «куди піти» і кого попросити порадити – у нас усе в одній клініці.",
                             },
                         ],
+                    },
+                },
+                {
+                    type: "greenCard",
+                    data: {
+                        title: "Операція безболісна та триває не більше 7 хвилин",
+                        text: "Використовується високоточне лазерне обладнання та діагностичні системи, що дозволяють максимально індивідуалізувати коригування зору лазером і зменшити ризики.",
                     },
                 },
                 {
@@ -3813,6 +3826,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "advantages",
                     data: {
+                        paddingBottom: false,
                         title: "Advantages of laser vision correction in Kyiv at the British Ophthalmology Center",
                         text: "You can be confident in the quality of the services provided, as you entrust your vision to a modern clinic.",
                         list: [
@@ -3830,6 +3844,13 @@ export const servicesData: ServicesProps[] = [
                                 text: "Our patients receive everything in one place: examination, doctor’s consultation, surgery, a recovery plan after laser vision correction, and long-term follow-up. There’s no need to search for where to go or whom to ask for advice — everything is provided within our clinic.",
                             },
                         ],
+                    },
+                },
+                {
+                    type: "greenCard",
+                    data: {
+                        title: "The procedure is painless and lasts no more than 7 minutes",
+                        text: "High-precision laser equipment and diagnostic systems are used, allowing vision correction with a laser to be highly individualized and minimizing risks.",
                     },
                 },
                 {
@@ -4083,6 +4104,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "advantages",
                     data: {
+                        paddingBottom: false,
                         title: "Преимущества лазерной коррекции зрения в Киеве в Британском Офтальмологическом Центре",
                         text: "Вы можете быть уверены в качестве предоставляемых услуг, так как доверяете своё зрение современной клинике.",
                         list: [
@@ -4100,6 +4122,13 @@ export const servicesData: ServicesProps[] = [
                                 text: "Наши пациенты получают всё в одном месте: обследование, консультацию врача, операцию, план восстановления после лазерной коррекции зрения и долгосрочное наблюдение. Не нужно искать, «куда пойти» и к кому обратиться за советом — всё есть в нашей клинике.",
                             },
                         ],
+                    },
+                },
+                {
+                    type: "greenCard",
+                    data: {
+                        title: "Операция безболезненная и длится не более 7 минут",
+                        text: "Используется высокоточное лазерное оборудование и диагностические системы, которые позволяют максимально индивидуализировать лазерную коррекцию зрения и снизить риски.",
                     },
                 },
                 {

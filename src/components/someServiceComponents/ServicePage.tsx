@@ -14,6 +14,7 @@ import { Global } from "../shared/global/Global";
 import { AdvantagesService } from "./advantages/AdvantagesService";
 import { DoctorsServices } from "./Doctors/DoctorsServices";
 import { GiftCard } from "./GiftCard";
+import { GreenCard } from "./GreenCard";
 import { GreenSliderSection } from "./greenSliderSection/GreenSliderSection";
 import { MethodsService } from "./methodsSection/MethodsService";
 import { NumberListSection } from "./numberListSection/NumberListSection";
@@ -159,6 +160,8 @@ export const ServicePageContent = async ({
                         return <Global key={index} />;
                     case "individual":
                         return <Fragment key={index}>{section.data}</Fragment>;
+                    case "greenCard":
+                        return <GreenCard key={index} data={section.data} />;
                     default:
                         return null;
                 }
