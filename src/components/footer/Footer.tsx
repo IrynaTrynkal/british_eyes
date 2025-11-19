@@ -18,7 +18,7 @@ export const Footer = () => {
         "font-oswald text-grey text-sm prepc:text-base leading-none mx-auto max-w-[1600px] font-medium uppercase";
     return (
         <footer className="text-ivory bg-black py-8">
-            <section className="content relative">
+            <section className="content prepc:mx-auto relative max-w-[1600px]">
                 <div className="prepc:flex prepc:mb-5">
                     <div className="prepc:mr-[17.2%] w-[224px]">
                         <IconBigLogo />
