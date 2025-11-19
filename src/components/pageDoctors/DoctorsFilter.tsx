@@ -5,12 +5,12 @@ import { useMemo } from "react";
 
 import { LocaleType } from "@/types/LocaleType";
 
-import { DepartmentsKey, DoctorsListQueryResult } from "../../../sanity.types";
+import { DepartmentsKey, DoctorsOrderQueryResult } from "../../../sanity.types";
 import { departments, DepartmentsType } from "../assets/doctorsData";
 import { IconArrow } from "../shared/icons/IconArrow";
 
 type DepartmentFilterProps = {
-    list: DoctorsListQueryResult;
+    list: DoctorsOrderQueryResult;
     className?: string;
 };
 
@@ -26,7 +26,7 @@ export const DoctorsFilter = ({ list, className }: DepartmentFilterProps) => {
         "clinic-management";
 
     const departmentsList = useMemo<DepartmentsKey[]>(() => {
-        const all = list.flatMap(item => item.departments ?? []);
+        const all = (list ?? []).flatMap(item => item.departments ?? []);
         return Array.from(
             new Set<DepartmentsKey>(["clinic-management", ...all])
         );

@@ -18,6 +18,7 @@ import { priceItemType } from "./objects/priceItemType";
 import { blogPage } from "./singletons/blogPage";
 import { doctorPage } from "./singletons/doctorPage";
 import { offersPageType } from "./singletons/offersPage";
+import { orderDoctorsType } from "./singletons/orderDoctorsType";
 import { pricesPageType } from "./singletons/pricePageType";
 
 const singletons: DocumentDefinition[] = [
@@ -25,6 +26,7 @@ const singletons: DocumentDefinition[] = [
     offersPageType,
     doctorPage,
     blogPage,
+    orderDoctorsType,
 ];
 const objects: ObjectDefinition[] = [
     priceItemType,

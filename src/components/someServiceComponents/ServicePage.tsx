@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import { sanityFetch } from "@/sanity/lib/client";
 import {
-    doctorsListQuery,
+    doctorsOrderQuery,
     offersShortQuery,
     pricesPageQuery,
 } from "@/sanity/lib/queries";
@@ -42,7 +42,7 @@ export const ServicePageContent = async ({
             tags: [],
         }),
         sanityFetch({
-            query: doctorsListQuery,
+            query: doctorsOrderQuery,
             params: { language: locale },
             tags: [],
         }),

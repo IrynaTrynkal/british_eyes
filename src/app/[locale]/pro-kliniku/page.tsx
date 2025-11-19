@@ -15,7 +15,7 @@ import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
 import { sanityFetch } from "@/sanity/lib/client";
-import { blogsListQuery, doctorsListQuery } from "@/sanity/lib/queries";
+import { blogsListQuery, doctorsOrderQuery } from "@/sanity/lib/queries";
 
 export default async function AboutPage({
     params,
@@ -30,7 +30,7 @@ export default async function AboutPage({
             tags: [],
         }),
         sanityFetch({
-            query: doctorsListQuery,
+            query: doctorsOrderQuery,
             params: { language: locale },
             tags: [],
         }),

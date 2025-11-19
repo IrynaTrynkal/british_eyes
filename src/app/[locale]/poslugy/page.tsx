@@ -5,7 +5,7 @@ import { AllServicesMain } from "@/components/pageServices/Main/AllServicesMain"
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { sanityFetch } from "@/sanity/lib/client";
-import { doctorsListQuery } from "@/sanity/lib/queries";
+import { doctorsOrderQuery } from "@/sanity/lib/queries";
 
 export default async function ServicesPage({
     params,
@@ -14,7 +14,7 @@ export default async function ServicesPage({
 }) {
     const { locale } = await params;
     const doctorsList = await sanityFetch({
-        query: doctorsListQuery,
+        query: doctorsOrderQuery,
         params: { language: locale },
         tags: [],
     });

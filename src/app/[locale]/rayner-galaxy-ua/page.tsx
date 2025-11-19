@@ -16,7 +16,7 @@ import { RaynerCompare } from "@/components/someServiceComponents/individualComp
 import { RaynerUniq } from "@/components/someServiceComponents/individualComponents/RaynerUniq";
 import { RaynerVideo } from "@/components/someServiceComponents/individualComponents/RaynerVideo";
 import { sanityFetch } from "@/sanity/lib/client";
-import { doctorsListQuery } from "@/sanity/lib/queries";
+import { doctorsOrderQuery } from "@/sanity/lib/queries";
 import { LocaleType } from "@/types/LocaleType";
 
 export default async function RaynerPage({
@@ -26,7 +26,7 @@ export default async function RaynerPage({
 }) {
     const { locale } = await params;
     const doctorsList = await sanityFetch({
-        query: doctorsListQuery,
+        query: doctorsOrderQuery,
         params: { language: locale },
         tags: [],
     });

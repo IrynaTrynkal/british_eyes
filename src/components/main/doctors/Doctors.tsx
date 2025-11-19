@@ -7,7 +7,7 @@ import { Fraction } from "@/components/shared/Fraction";
 import { LinkAction } from "@/components/shared/LinkAction";
 import { LocaleType } from "@/types/LocaleType";
 
-import { DoctorsListQueryResult } from "../../../../sanity.types";
+import { DoctorsOrderQueryResult } from "../../../../sanity.types";
 import { DoctorsSlider } from "../../shared/doctors/DoctorsSlider";
 
 export const Doctors = ({
@@ -15,7 +15,7 @@ export const Doctors = ({
     doctors,
 }: {
     className?: string;
-    doctors: DoctorsListQueryResult;
+    doctors: DoctorsOrderQueryResult;
 }) => {
     const [openedDepartment, setOpenedDepartment] =
         useState<DepartmentsType>("clinic-management");
@@ -23,11 +23,13 @@ export const Doctors = ({
     const toggleSubmenu = (key: DepartmentsType) => {
         setOpenedDepartment(key);
     };
+
+    const t = useTranslations("HomePage");
+    const locale = useLocale();
+    if (!doctors) return null;
     const filteredDoctors = doctors.filter(doc =>
         doc.departments?.includes(openedDepartment as any)
     );
-    const t = useTranslations("HomePage");
-    const locale = useLocale();
     return (
         <section
             className={`green-gradient tab:px-6 pc:px-12 tab:max-w-full tab:pt-10 tab:pb-[42px] pt-4 pb-7 ${className}`}
