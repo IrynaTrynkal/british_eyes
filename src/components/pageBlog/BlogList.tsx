@@ -29,12 +29,12 @@ export const BlogList = ({
     );
 
     return (
-        <section className="tab:px-0 tab:max-w-full pc:pb-[120px] tab:pb-12 prepc:w-[calc(100%-224px)] prepc:mx-0 mx-auto max-w-[540px] px-4 pb-[60px]">
-            <ul className="tab:flex-row tab:flex-wrap tab:justify-center prepc:justify-normal prepc:gap-4 mb-8 flex flex-col gap-5">
+        <section className="tab:px-0 tab:max-w-full pc:pb-[120px] tab:pb-12 prepc:w-[calc(100%-224px)] prepc:mx-0 mx-auto w-full max-w-[540px] px-4 pb-[60px]">
+            <ul className="tab:grid-cols-2 prepc:grid-cols-3 mb-8 grid grid-cols-1 gap-5">
                 {currentItems.map(blog => (
                     <li
                         key={blog.title}
-                        className="tab:w-[calc(50%-10px)] prepc:w-[32.2%] tab:max-w-[390px] pc:max-w-full h-full overflow-hidden rounded-tl rounded-tr"
+                        className="flex flex-col overflow-hidden rounded-tl rounded-tr"
                     >
                         <BlogCardForAllNewsPage
                             btnName={t("readMore")}
