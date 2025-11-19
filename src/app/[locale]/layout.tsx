@@ -70,11 +70,11 @@ export default async function RootLayout({
             </head>
             <NextIntlClientProvider>
                 <body
-                    className={`${oswald.variable} ${arimo.variable} mx-auto flex min-h-screen flex-col antialiased`}
+                    className={`${oswald.variable} ${arimo.variable} flex min-h-screen flex-col antialiased`}
                 >
                     <Header />
-                    <main className="mx-auto max-w-[1600px] flex-1">
-                        {children}
+                    <main className="flex-1">
+                        <div className="mx-auto max-w-[1600px]">{children}</div>
                     </main>
                     <Footer />
                     <BinotelChat />

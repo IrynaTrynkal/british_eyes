@@ -15,10 +15,10 @@ import { UpButton } from "./UpButton";
 export const Footer = () => {
     const t = useTranslations("HomePage");
     const footerH3 =
-        "font-oswald text-grey text-sm prepc:text-base leading-none mx-auto max-w-[1600px] font-medium uppercase";
+        "font-oswald text-grey text-sm prepc:text-base leading-none font-medium uppercase";
     return (
         <footer className="text-ivory bg-black py-8">
-            <section className="content prepc:mx-auto relative max-w-[1600px]">
+            <section className="content prepc:max-w-[1600px] relative mx-auto">
                 <div className="prepc:flex prepc:mb-5">
                     <div className="prepc:mr-[17.2%] w-[224px]">
                         <IconBigLogo />
