@@ -25,15 +25,7 @@ export const SomeBlog = ({ blog }: { blog: BlogQueryResult }) => {
                                 }}
                             />
                         ) : (
-                            <div
-                                className={
-                                    "aspect-[435/220] h-auto w-full bg-cover bg-center bg-blend-hard-light"
-                                }
-                                style={{
-                                    backgroundImage:
-                                        "linear-gradient(#065d43, #065d43), url('/images/blog.jpg')",
-                                }}
-                            />
+                            <div className="aspect-[435/220] h-auto w-full bg-[url(/images/megaphone1.jpg)] bg-cover bg-center" />
                         )}
                     </div>
                     <h3 className="font-oswald tab:text-2xl prepc:text-3xl pc:text-5xl pc:min-h-24 pc:mb-3 tab:min-h-[57px] pc:line-clamp-3 mb-5 line-clamp-2 [display:-webkit-box] overflow-hidden leading-[100%] font-medium break-words">
@@ -65,15 +57,7 @@ export const SomeBlog = ({ blog }: { blog: BlogQueryResult }) => {
                             }}
                         />
                     ) : (
-                        <div
-                            className={
-                                "aspect-[435/220] h-auto w-full bg-cover bg-center bg-blend-hard-light"
-                            }
-                            style={{
-                                backgroundImage:
-                                    "linear-gradient(#065d43, #065d43), url('/images/blog.jpg')",
-                            }}
-                        />
+                        <div className="aspect-[435/220] h-auto w-full bg-[url(/images/megaphone1.jpg)] bg-cover bg-center" />
                     )}
                 </div>
             </div>
