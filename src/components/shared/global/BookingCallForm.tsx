@@ -19,6 +19,7 @@ export const BookingCallForm = ({
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
+        title: "Перезвоніть мені",
     });
     const [errors, setErrors] = useState({
         name: "",
@@ -54,32 +55,21 @@ export const BookingCallForm = ({
         return valid;
     };
 
-    // TODO: const onSendData = async () => {
-    //     const data = {
-    //         name: formData.name,
-    //         phone: formData.phone,
-    //         age: formData.age,
-    //         group: formData.group,
-    //         online: formData.online,
-    //         language: formData.language,
-    //     };
-
-    //     await axios.post("/api/application", data, {
-    //         headers: { "Content-Type": "application/json" },
-    //     });
+    const onSendData = async (data: typeof formData) => {
+        await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
+    };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!validate()) return;
 
-        // TODO тимчасова заглушка замість реального onSendData
-        const onSendData = async (): Promise<void> => {
-            return;
-        };
-
         try {
             setLoading(true);
-            await notificationHandler(onSendData);
+            await notificationHandler(() => onSendData(formData));
         } catch (error) {
             console.error("Відправка не вдалася:", error);
         } finally {
@@ -89,6 +79,7 @@ export const BookingCallForm = ({
         setFormData({
             name: "",
             phone: "",
+            title: "Перезвоніть мені",
         });
     };
 
@@ -151,7 +142,11 @@ export const BookingCallForm = ({
                 </div>
 
                 <div className="tab:justify-end tab:w-[47%] pc:w-[318px] flex justify-center">
-                    <ButtonAction name={t("submit")} type="submit" />
+                    <ButtonAction
+                        disabled={loading}
+                        name={loading ? t("loading") : t("submit")}
+                        type="submit"
+                    />
                 </div>
             </div>
         </form>

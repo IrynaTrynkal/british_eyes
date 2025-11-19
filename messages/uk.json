@@ -193,7 +193,8 @@
         "vision-diagnostics": "Діагностика зору",
         "cataract-treatment": "Лікування катаракти",
         "laser-vision-correction": "Лазерна корекція зору",
-        "other": "Інше"
+        "other": "Інше",
+        "loading": "Відправка..."
     },
     "FeedbackPage": {
         "title": "відгуки наших пацієнтів",

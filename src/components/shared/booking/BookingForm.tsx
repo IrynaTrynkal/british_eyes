@@ -1,5 +1,4 @@
 "use client";
-import { format, parseISO } from "date-fns";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
@@ -38,6 +37,7 @@ export const BookingForm = ({
         date: "",
         topic: "",
         comment: "",
+        title: "Онлайн запис",
     });
     const [errors, setErrors] = useState({
         name: "",
@@ -80,39 +80,21 @@ export const BookingForm = ({
         return valid;
     };
 
-    // TODO: const onSendData = async () => {
-    //     const data = {
-    //         name: formData.name,
-    //         phone: formData.phone,
-    //         age: formData.age,
-    //         group: formData.group,
-    //         online: formData.online,
-    //         language: formData.language,
-    //     };
-
-    //     await axios.post("/api/application", data, {
-    //         headers: { "Content-Type": "application/json" },
-    //     });
+    const onSendData = async (data: typeof formData) => {
+        await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
+    };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!validate()) return;
 
-        const formattedData = {
-            ...formData,
-            date: formData.date
-                ? format(parseISO(formData.date), "dd.MM.yyyy")
-                : "",
-        };
-
-        // TODO тимчасова заглушка замість реального onSendData
-        const onSendData = async (): Promise<void> => {
-            return;
-        };
-
         try {
             setLoading(true);
-            await notificationHandler(onSendData);
+            await notificationHandler(() => onSendData(formData));
         } catch (error) {
             console.error("Відправка не вдалася:", error);
         } finally {
@@ -127,6 +109,7 @@ export const BookingForm = ({
             date: "",
             topic: "",
             comment: "",
+            title: "Онлайн запис",
         });
     };
 
@@ -280,7 +263,11 @@ export const BookingForm = ({
                     </div>
 
                     <div className="pc:justify-end flex justify-center">
-                        <ButtonAction name={t("submit")} type="submit" />
+                        <ButtonAction
+                            disabled={loading}
+                            name={loading ? t("loading") : t("submit")}
+                            type="submit"
+                        />
                     </div>
                 </div>
             </form>

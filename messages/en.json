@@ -193,7 +193,8 @@
         "vision-diagnostics": "Vision diagnostics",
         "cataract-treatment": "Cataract treatment",
         "laser-vision-correction": "Laser vision correction",
-        "other": "Other"
+        "other": "Other",
+        "loading": "Sending..."
     },
     "FeedbackPage": {
         "title": "reviews of our patients",
