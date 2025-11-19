@@ -31,15 +31,7 @@ export const NewCard = ({
                         }}
                     />
                 ) : (
-                    <div
-                        className={
-                            "aspect-[435/220] h-auto w-full bg-cover bg-center bg-blend-hard-light"
-                        }
-                        style={{
-                            backgroundImage:
-                                "linear-gradient(#065d43, #065d43), url('/images/blog.jpg')",
-                        }}
-                    />
+                    <div className="aspect-[435/220] h-auto w-full bg-[url(/images/megaphone1.jpg)] bg-cover bg-center" />
                 )}
             </div>
             <div className="px-3">
