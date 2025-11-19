@@ -305,7 +305,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Регулярна перевірка зору – основа профілактики захворювань",
-                                image: "/images/choice.jpg",
+                                image: "/images/perevirka1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -602,7 +602,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Regular vision check-ups — the foundation of disease prevention",
-                                image: "/images/choice.jpg",
+                                image: "/images/perevirka1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -900,7 +900,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Регулярная проверка зрения — основа профилактики заболеваний",
-                                image: "/images/choice.jpg",
+                                image: "/images/perevirka1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -1202,7 +1202,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Що таке катаракта?",
-                                image: "/images/cataract-round.jpg",
+                                image: "/images/cataract1.jpg",
                                 imagePosition: "object-left",
                                 text: [
                                     {
@@ -1418,7 +1418,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "What is cataract?",
-                                image: "/images/cataract-round.jpg",
+                                image: "/images/cataract1.jpg",
                                 imagePosition: "object-left",
                                 text: [
                                     {
@@ -1633,7 +1633,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Что такое катаракта?",
-                                image: "/images/cataract-round.jpg",
+                                image: "/images/cataract1.jpg",
                                 imagePosition: "object-left",
                                 text: [
                                     {
@@ -1805,6 +1805,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
+                        image: "/images/dry-eye2.jpg",
                         title: "Синдром сухого ока: діагностика та лікування",
                         text: [
                             "Синдром сухого ока — це стан, коли слізна плівка втрачає стабільність і вже не захищає рогівку належним чином. Звідси сухість, печіння, «пісок», почервоніння і коливання чіткості зору, особливо наприкінці дня. Причини різні: дисфункція мейбомієвих залоз, рідке або неповне моргання за екранами, вікові та гормональні зміни, сухе повітря. Без точної діагностики симптоми закріплюються, тому важливо визначити, який шар сльози порушений, і підібрати цілеспрямоване лікування.",
@@ -1857,7 +1858,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Як лікують синдром сухого ока в нашій клініці?",
-                                image: "/images/perevirka-round.jpg",
+                                image: "/images/dry-eye12.jpg",
                                 text: [
                                     {
                                         content: [
@@ -2192,6 +2193,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
+                        image: "/images/dry-eye2.jpg",
                         title: "Dry eye syndrome: diagnosis and treatment",
                         text: [
                             "Dry eye syndrome is a condition in which the tear film loses stability and no longer properly protects the cornea. This causes dryness, burning, a “sand-like” sensation, redness, and fluctuating vision clarity, especially at the end of the day. The reasons vary: meibomian gland dysfunction, infrequent or incomplete blinking while using screens, age- and hormone-related changes, dry air. Without accurate diagnostics, symptoms become chronic, so it is crucial to determine which tear film layer is affected and choose targeted treatment.",
@@ -2244,7 +2246,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "How is dry eye syndrome treated in our clinic?",
-                                image: "/images/perevirka-round.jpg",
+                                image: "/images/dry-eye12.jpg",
                                 text: [
                                     {
                                         content: [
@@ -2353,9 +2355,12 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                { type: "cta" },
                 {
                     type: "numberListSection",
                     data: {
+                        paddingTop: true,
+                        paddingBottom: true,
                         listTitle: "Stages",
                         list: [
                             {
@@ -2495,6 +2500,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
+                        image: "/images/dry-eye2.jpg",
                         title: "Синдром сухого глаза: диагностика и лечение",
                         text: [
                             "Синдром сухого глаза — это состояние, при котором слёзная плёнка теряет стабильность и перестаёт должным образом защищать роговицу. Из-за этого возникают сухость, жжение, ощущение «песка», покраснение и колебания чёткости зрения, особенно к концу дня. Причины разные: дисфункция мейбомиевых желез, редкое или неполное моргание при работе за экранами, возрастные и гормональные изменения, сухой воздух. Без точной диагностики симптомы закрепляются, поэтому важно определить, какой слой слезы нарушен, и подобрать целенаправленное лечение.",
@@ -2547,7 +2553,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Как лечат синдром сухого глаза в нашей клинике?",
-                                image: "/images/perevirka-round.jpg",
+                                image: "/images/dry-eye12.jpg",
                                 text: [
                                     {
                                         content: [
@@ -2656,9 +2662,12 @@ export const servicesData: ServicesProps[] = [
                         ],
                     },
                 },
+                { type: "cta" },
                 {
                     type: "numberListSection",
                     data: {
+                        paddingTop: true,
+                        paddingBottom: true,
                         listTitle: "Этапы",
                         list: [
                             {
@@ -2820,7 +2829,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Що таке вітректомія і коли вона потрібна",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -2844,7 +2853,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Відшарування та розриви сітківки: термінове лікування",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -3017,7 +3026,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "What is vitrectomy and when it’s needed",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -3041,7 +3050,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Retinal detachment and tears: emergency treatment",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -3214,7 +3223,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Что такое витрэктомия и когда она необходима",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -3238,7 +3247,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Отслоение и разрывы сетчатки: неотложное лечение",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -3452,7 +3461,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Кому підходить лазерне відновлення зору",
-                                image: "/images/equipment4.jpg",
+                                image: "/images/lazer1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -3487,7 +3496,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Скільки коштує лазерна корекція зору",
-                                image: "/images/equipment4.jpg",
+                                image: "/images/lazer2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -3731,7 +3740,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Who Laser Vision Correction Is Suitable For",
-                                image: "/images/equipment4.jpg",
+                                image: "/images/lazer1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -3766,7 +3775,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "How Much Laser Vision Correction Costs",
-                                image: "/images/equipment4.jpg",
+                                image: "/images/lazer2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4009,7 +4018,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Кому подходит лазерное восстановление зрения",
-                                image: "/images/equipment4.jpg",
+                                image: "/images/lazer1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4044,7 +4053,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Сколько стоит лазерная коррекция зрения",
-                                image: "/images/equipment4.jpg",
+                                image: "/images/lazer2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4250,7 +4259,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        image: "/images/zlata3.jpg",
+                        image: "/images/zlata2.jpg",
                         title: "Дитяча клініка Злата — дитяча офтальмологія у Києві",
                         text: [
                             "У Дитячій клініці Злата проводимо перевірку зору у дітей від немовлят до підлітків: точні обстеження, індивідуальне лікування, зрозумілі рекомендації для батьків. Якщо шукаєте, де перевірити дитині зір і як перевірити зір дитині швидко та без стресу — записуйтеся на консультацію лікаря. У реєстратурі Дитячої клініки Злата підкажуть актуальні ціни/вартість, наявні акції та знижки, допоможуть обрати зручний прийом у приватній офтальмологічній дитячій клініці.",
@@ -4268,7 +4277,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Коли звертатися: перші сигнали",
-                                image: "/images/zlata1.jpg",
+                                image: "/images/zlata5.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4287,7 +4296,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Комплексна перевірка: точна діагностика та план",
-                                image: "/images/zlata2.jpg",
+                                image: "/images/perevirka3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4549,7 +4558,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        image: "/images/zlata3.jpg",
+                        image: "/images/zlata2.jpg",
                         title: "Zlata Children’s Clinic — pediatric ophthalmology in Kyiv",
                         text: [
                             "At Zlata Children’s Clinic, we perform eye examinations for children from infancy to adolescence: accurate diagnostics, personalized treatment, and clear recommendations for parents. If you’re looking for where and how to check your child’s vision quickly and without stress — book a consultation with our doctor. Our reception staff will provide up-to-date prices, available promotions, and help you choose a convenient appointment time at our private pediatric eye clinic.",
@@ -4567,7 +4576,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "When to visit: first warning signs",
-                                image: "/images/zlata1.jpg",
+                                image: "/images/zlata5.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4586,7 +4595,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Comprehensive check: accurate diagnosis and care plan",
-                                image: "/images/zlata2.jpg",
+                                image: "/images/perevirka3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4847,7 +4856,7 @@ export const servicesData: ServicesProps[] = [
                 {
                     type: "preview",
                     data: {
-                        image: "/images/zlata3.jpg",
+                        image: "/images/zlata2.jpg",
                         title: "Детская клиника Злата — детская офтальмология в Киеве",
                         text: [
                             "В Детской клинике Злата проводится проверка зрения у детей от младенцев до подростков: точные обследования, индивидуальное лечение и понятные рекомендации для родителей. Если вы ищете, где проверить зрение ребёнку быстро и без стресса — запишитесь на консультацию врача. Администраторы клиники подскажут актуальные цены, акции и скидки, а также помогут выбрать удобное время визита в частную детскую офтальмологическую клинику.",
@@ -4865,7 +4874,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Когда обращаться: первые сигналы",
-                                image: "/images/zlata1.jpg",
+                                image: "/images/zlata5.jpg",
                                 text: [
                                     {
                                         content: [
@@ -4884,7 +4893,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Комплексная проверка: точная диагностика и план лечения",
-                                image: "/images/zlata2.jpg",
+                                image: "/images/perevirka3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -5167,7 +5176,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Що буде, якщо ігнорувати лікування?",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/lazer1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -5196,7 +5205,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Звідки береться кератоконус?",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka4.jpg",
                                 text: [
                                     {
                                         content: [
@@ -5398,7 +5407,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "What happens if treatment is ignored?",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/lazer1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -5427,7 +5436,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "What causes keratoconus?",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka4.jpg",
                                 text: [
                                     {
                                         content: [
@@ -5629,7 +5638,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Что будет, если игнорировать лечение?",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/lazer1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -5658,7 +5667,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Откуда берётся кератоконус?",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka4.jpg",
                                 text: [
                                     {
                                         content: [
@@ -5840,7 +5849,7 @@ export const servicesData: ServicesProps[] = [
                     type: "preview",
                     data: {
                         title: "BiVision RLE — сучасна альтернатива лазерній корекції зору",
-                        image: "/images/facilities3.jpg",
+                        image: "/images/equipment1.jpg",
                         text: [
                             "BiVision RLE — сучасна мікроінвазивна операція, під час якої природний кришталик ока замінюють на інтраокулярну лінзу (ІОЛ), щоб відновити чіткий зір поблизу, на середній відстані та вдалину. Підходить, коли лазерна корекція протипоказана або очікуваний результат лазеру недостатній (тонка/нерівна рогівка, високі діоптрії, комбіновані вади зору).",
                             "Для кого: 45+ із пресбіопією, пацієнти з високою міопією/гіперметропією, астигматизмом, ранніми змінами кришталика або ризиком катаракти.",
@@ -5912,7 +5921,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Основні показання та симптоми, коли варто розглядати рефракційну заміну кришталика (RLE)",
-                                image: "/images/equipment4.jpg",
+                                image: "/images/perevirka2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -6196,7 +6205,7 @@ export const servicesData: ServicesProps[] = [
                     type: "preview",
                     data: {
                         title: "BiVision RLE — a modern alternative to laser vision correction",
-                        image: "/images/facilities3.jpg",
+                        image: "/images/equipment1.jpg",
                         text: [
                             "BiVision RLE is a modern microinvasive procedure in which the eye’s natural lens is replaced with an intraocular lens (IOL) to restore clear vision at near, intermediate, and far distances. It is suitable when laser correction is contraindicated or its expected results are insufficient (thin/irregular cornea, high diopters, combined visual defects).",
                             "Recommended for: people 45+ with presbyopia, patients with high myopia/hyperopia, astigmatism, early lens changes, or cataract risk.",
@@ -6268,7 +6277,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Main indications and symptoms when refractive lens exchange (RLE) should be considered",
-                                image: "/images/equipment4.jpg",
+                                image: "/images/perevirka2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -6552,7 +6561,7 @@ export const servicesData: ServicesProps[] = [
                     type: "preview",
                     data: {
                         title: "BiVision RLE — современная альтернатива лазерной коррекции зрения",
-                        image: "/images/facilities3.jpg",
+                        image: "/images/equipment1.jpg",
                         text: [
                             "BiVision RLE — это современная микроинвазивная операция, при которой естественный хрусталик глаза заменяется на интраокулярную линзу (ИОЛ) для восстановления чёткого зрения вблизи, на среднем расстоянии и вдаль. Подходит, когда лазерная коррекция противопоказана или ожидаемый результат лазера недостаточен (тонкая/неровная роговица, большие диоптрии, комбинированные нарушения зрения).",
                             "Кому подходит: людям 45+ с пресбиопией, пациентам с высокой миопией/гиперметропией, астигматизмом, начальными изменениями хрусталика или риском катаракты.",
@@ -6624,7 +6633,7 @@ export const servicesData: ServicesProps[] = [
                         data: [
                             {
                                 title: "Основные показания и симптомы, когда стоит рассмотреть рефракционную замену хрусталика (RLE)",
-                                image: "/images/equipment4.jpg",
+                                image: "/images/perevirka2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -6931,7 +6940,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Хто у групі ризику і коли варто звернутися?",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -6945,7 +6954,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Лазерна коагуляція сітківки: зміцнення й профілактика ускладнень",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -6982,7 +6991,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Лазерне лікування глаукоми та лазерна стимуляція: контроль тиску й підтримка функцій",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7120,7 +7129,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Who is at risk and when should you see a doctor?",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7134,7 +7143,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Retinal laser coagulation: strengthening and preventing complications",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7171,7 +7180,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Laser glaucoma treatment and laser stimulation: pressure control and functional support",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7309,7 +7318,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Кто в группе риска и когда стоит обратиться к врачу?",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7323,7 +7332,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Лазерная коагуляция сетчатки: укрепление и профилактика осложнений",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7360,7 +7369,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Лазерное лечение глаукомы и лазерная стимуляция: контроль давления и поддержка функций",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7502,7 +7511,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Айлія (Eylea, афліберцепт): коли «укол в око» допомагає зберегти зір",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7516,7 +7525,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Показання: макула, діабет, міопія та інші стани сітківки",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/equipment2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7721,7 +7730,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Eylea (Aflibercept): when an “eye shot” helps preserve vision",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7735,7 +7744,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Indications: macula, diabetes, myopia, and other retinal conditions",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/equipment2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7940,7 +7949,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Айлия (Eylea, афлиберцепт): когда «укол в глаз» помогает сохранить зрение",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/likuvanna2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -7954,7 +7963,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Показания: макула, диабет, миопия и другие состояния сетчатки",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/equipment2.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8169,7 +8178,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Непроникна глибока склеректомія (НГСЕ): щадний підхід при відкритокутовій глаукомі",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka-zoru-hero.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8188,7 +8197,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Проникна трабекулектомія: перевірений стандарт контролю тиску",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/facilities3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8374,7 +8383,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Non-penetrating deep sclerectomy (NPDS): a gentle approach for open-angle glaucoma",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka-zoru-hero.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8393,7 +8402,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Penetrating trabeculectomy: a proven standard for pressure control",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/facilities3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8579,7 +8588,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Непроникающая глубокая склерэктомия (НГСЭ): щадящий подход при открытоугольной глаукоме",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka-zoru-hero.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8598,7 +8607,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Проникающая трабекулэктомия: проверенный стандарт контроля давления",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/facilities3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8781,7 +8790,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Хірургічне лікування: регульовані шви, мікрохірургія, естетика та функція",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka5.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8795,7 +8804,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Апаратне та комп’ютерне лікування: тренування зору з відчутним результатом",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8972,7 +8981,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Surgical treatment: adjustable sutures, microsurgery, aesthetics and function",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka5.jpg",
                                 text: [
                                     {
                                         content: [
@@ -8986,7 +8995,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Hardware and computer-based treatment: vision training with tangible results",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -9165,7 +9174,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Хирургическое лечение: регулируемые швы, микрохирургия, эстетика и функция",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka5.jpg",
                                 text: [
                                     {
                                         content: [
@@ -9179,7 +9188,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Аппаратное и компьютерное лечение: тренировка зрения с ощутимым результатом",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/perevirka1.jpg",
                                 text: [
                                     {
                                         content: [
@@ -9361,7 +9370,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Коли показана операція на навислу повіку та чим допомагає лазер",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/blef4.jpg",
                                 text: [
                                     {
                                         content: [
@@ -9375,7 +9384,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Як проходить корекція повік лазером:",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/blef3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -9601,7 +9610,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "When surgery for droopy eyelids is indicated and how the laser helps",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/blef4.jpg",
                                 text: [
                                     {
                                         content: [
@@ -9615,7 +9624,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "How laser eyelid correction works:",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/blef3.jpg",
                                 text: [
                                     {
                                         content: [
@@ -9840,7 +9849,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Когда показана операция при нависшем веке и чем помогает лазер",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/blef4.jpg",
                                 text: [
                                     {
                                         content: [
@@ -9854,7 +9863,7 @@ export const servicesData: ServicesProps[] = [
                             },
                             {
                                 title: "Как проходит коррекция век лазером:",
-                                image: "/images/equipment1.jpg",
+                                image: "/images/blef3.jpg",
                                 text: [
                                     {
                                         content: [
