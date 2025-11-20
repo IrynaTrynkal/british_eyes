@@ -14,11 +14,11 @@ import { HeroDisease } from "@/components/someDiseaseComponent/HeroDisease";
 import { LocaleType } from "@/types/LocaleType";
 
 type Props = {
-    params: { locale: string; slug: string };
+    params: Promise<{ locale: string; slug: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { locale, slug } = params;
+    const { locale, slug } = await params;
     const displayedDisease: EyeDiseaseType | undefined = eyeDiseaseData.find(
         disease => disease.name.slug[locale as LocaleType] === slug
     );

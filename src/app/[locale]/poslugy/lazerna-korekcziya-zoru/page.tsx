@@ -14,11 +14,11 @@ import { ServicePageContent } from "@/components/someServiceComponents/ServicePa
 import { LocaleType } from "@/types/LocaleType";
 
 type Props = {
-    params: { locale: string; slug: string };
+    params: Promise<{ locale: string; slug: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { locale } = params;
+    const { locale } = await params;
 
     const displayedService: ServicesListProps | undefined = servicesList.find(
         service => service.key === "lazerna-korekcziya-zoru"

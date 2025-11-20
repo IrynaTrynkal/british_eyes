@@ -11,14 +11,14 @@ import { LocaleType } from "@/types/LocaleType";
 import { toPlainText } from "@/utils/toPlainText";
 
 type Props = {
-    params: { locale: string; slug: string };
+    params: Promise<{ locale: string; slug: string }>;
 };
 
 export async function generateMetadata(
     { params }: Props,
-    parent?: ResolvingMetadata
+    parent: ResolvingMetadata
 ): Promise<Metadata> {
-    const { locale, slug } = params;
+    const { locale, slug } = await params;
 
     const doctor = await sanityFetch({
         query: doctorQuery,

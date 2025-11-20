@@ -7,11 +7,11 @@ import { LazerSubpage } from "@/components/someServiceComponents/LazerSubpage/La
 import { LocaleType } from "@/types/LocaleType";
 
 type Props = {
-    params: { locale: string; subpage: string };
+    params: Promise<{ locale: string; subpage: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { locale, subpage } = params;
+    const { locale, subpage } = await params;
     const currentMethod = subpageCataractData.find(
         sub => sub.content[locale as LocaleType].slug === subpage
     );
