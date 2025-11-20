@@ -18,7 +18,7 @@ export const FeedbackSection = ({
     className?: string;
 }) => {
     const t = useTranslations("HomePage");
-    const shuffledFeedbacks = useMemo(() => shuffleArray(list), []);
+    const shuffledFeedbacks = useMemo(() => shuffleArray(list), [list]);
     const feedbacksToShow = shuffledFeedbacks.slice(0, slideAmount);
 
     return (
