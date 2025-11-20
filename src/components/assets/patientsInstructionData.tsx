@@ -50,6 +50,12 @@ export type LocaleInstructionContent = {
     title: string;
     content: ContentType[];
 };
+export type LocaleDiseaseContent = {
+    titleSEO: string;
+    descriptionSEO: string;
+    title: string;
+    content: ContentType[];
+};
 
 export type PationtsInstructionType = {
     name: KeySlugPatientsType;
@@ -60,9 +66,9 @@ export type PationtsInstructionType = {
 
 export type EyeDiseaseType = {
     name: KeySlugPatientsType;
-    uk: LocaleInstructionContent;
-    en: LocaleInstructionContent;
-    ru: LocaleInstructionContent;
+    uk: LocaleDiseaseContent;
+    en: LocaleDiseaseContent;
+    ru: LocaleDiseaseContent;
 };
 
 export const keyEyeDisease: KeySlugPatientsType[] = [
@@ -3940,6 +3946,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
     {
         name: keyEyeDisease.find(d => d.key === "glaukoma")!,
         uk: {
+            titleSEO:
+                "Глаукома - симптоми, причини та лікування | Британський офтальмологічний центр | EYES",
+            descriptionSEO:
+                "➔ Глаукома: основні фактори виникнення та сучасні підходи до ефективного лікування ✅ Інформація від провідних офтальмологів Києва ✅ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід і бездоганна репутація ☎️ 0 800 507 077",
             title: "Глаукома",
             content: [
                 {
@@ -4073,6 +4083,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         en: {
+            titleSEO:
+                "Glaucoma – Symptoms, Causes, and Treatment | British Ophthalmology Center | EYES",
+            descriptionSEO:
+                "➔ Glaucoma: main causes and modern approaches to effective treatment ✅ Information from leading ophthalmologists in Kyiv ✅ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
             title: "Glaucoma",
             content: [
                 {
@@ -4210,6 +4224,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         ru: {
+            titleSEO:
+                "Глаукома - симптомы, причины и лечение | Британский офтальмологический центр | EYES",
+            descriptionSEO:
+                "➔ Глаукома: основные факторы возникновения и современные подходы к эффективному лечению ✅ Информация от ведущих офтальмологов Киева ✅ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
             title: "Глаукома",
             content: [
                 {
@@ -4351,6 +4369,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
     {
         name: keyEyeDisease.find(d => d.key === "astigmatizm")!,
         uk: {
+            titleSEO:
+                "Астигматизм - симптоми, причини та лікування | Британський офтальмологічний центр | EYES",
+            descriptionSEO:
+                "➔ Астигматизм: основні фактори виникнення та сучасні підходи до ефективного лікування ✅ Інформація від провідних офтальмологів Києва ✅ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід і бездоганна репутація ☎️ 0 800 507 077",
             title: "Астигматизм",
             content: [
                 {
@@ -4407,6 +4429,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         en: {
+            titleSEO:
+                "Astigmatism – Symptoms, Causes, and Treatment | British Ophthalmology Center | EYES",
+            descriptionSEO:
+                "➔ Astigmatism: main causes and modern approaches to effective treatment ✅ Information from leading ophthalmologists in Kyiv ✅ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
             title: "Astigmatism",
             content: [
                 {
@@ -4463,6 +4489,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         ru: {
+            titleSEO:
+                "Астигматизм - симптомы, причины и лечение | Британский офтальмологический центр | EYES",
+            descriptionSEO:
+                "➔ Астигматизм: основные факторы возникновения и современные подходы к эффективному лечению ✅ Информация от ведущих офтальмологов Киева ✅ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
             title: "Астигматизм",
             content: [
                 {
@@ -4522,6 +4552,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
     {
         name: keyEyeDisease.find(d => d.key === "dalekozorist")!,
         uk: {
+            titleSEO:
+                "Далекозорість - симптоми, причини та лікування | Британський офтальмологічний центр | EYES",
+            descriptionSEO:
+                "➔ Далекозорість: основні фактори виникнення та сучасні підходи до ефективного лікування ✅ Інформація від провідних офтальмологів Києва ✅ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід і бездоганна репутація ☎️ 0 800 507 077",
             title: "Далекозорість",
             content: [
                 {
@@ -4588,6 +4622,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         en: {
+            titleSEO:
+                "Farsightedness – Symptoms, Causes, and Treatment | British Ophthalmology Center | EYES",
+            descriptionSEO:
+                "➔ Farsightedness: main causes and modern approaches to effective treatment ✅ Information from leading ophthalmologists in Kyiv ✅ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
             title: "Farsightedness",
             content: [
                 {
@@ -4654,6 +4692,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         ru: {
+            titleSEO:
+                "Дальнозоркость - симптомы, причины и лечение | Британский офтальмологический центр | EYES",
+            descriptionSEO:
+                "➔ Дальнозоркость: основные факторы возникновения и современные подходы к эффективному лечению ✅ Информация от ведущих офтальмологов Киева ✅ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
             title: "Дальнозоркость",
             content: [
                 {
@@ -4723,6 +4765,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
     {
         name: keyEyeDisease.find(d => d.key === "katarakta")!,
         uk: {
+            titleSEO:
+                "Катаракта - симптоми, причини та лікування | Британський офтальмологічний центр | EYES",
+            descriptionSEO:
+                "➔ Катаракта: основні фактори виникнення та сучасні підходи до ефективного лікування ✅ Інформація від провідних офтальмологів Києва ✅ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід і бездоганна репутація ☎️ 0 800 507 077",
             title: "Катаракта",
             content: [
                 {
@@ -4772,6 +4818,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         en: {
+            titleSEO:
+                "Cataract – Symptoms, Causes, and Treatment | British Ophthalmology Center | EYES",
+            descriptionSEO:
+                "➔ Cataract: main causes and modern approaches to effective treatment ✅ Information from leading ophthalmologists in Kyiv ✅ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
             title: "Cataract",
             content: [
                 {
@@ -4820,6 +4870,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         ru: {
+            titleSEO:
+                "Катаракта - симптомы, причины и лечение | Британский офтальмологический центр | EYES",
+            descriptionSEO:
+                "➔ Катаракта: основные факторы возникновения и современные подходы к эффективному лечению ✅ Информация от ведущих офтальмологов Киева ✅ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
             title: "Катаракта",
             content: [
                 {
@@ -4871,6 +4925,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
     {
         name: keyEyeDisease.find(d => d.key === "korotkozorist-miopiya")!,
         uk: {
+            titleSEO:
+                "Короткозорість, міопія - симптоми, причини та лікування | Британський офтальмологічний центр | EYES",
+            descriptionSEO:
+                "➔ Короткозорість, міопія: основні фактори виникнення та сучасні підходи до ефективного лікування ✅ Інформація від провідних офтальмологів Києва ✅ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід і бездоганна репутація ☎️ 0 800 507 077",
             title: "Короткозорість, міопія",
             content: [
                 {
@@ -4938,6 +4996,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         en: {
+            titleSEO:
+                "Myopia – Symptoms, Causes, and Treatment | British Ophthalmology Center | EYES",
+            descriptionSEO:
+                "➔ Myopia: main causes and modern approaches to effective treatment ✅ Information from leading ophthalmologists in Kyiv ✅ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
             title: "Nearsightedness, myopia",
             content: [
                 {
@@ -5006,6 +5068,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         ru: {
+            titleSEO:
+                "Близорукость, миопия - симптомы, причины и лечение | Британский офтальмологический центр | EYES",
+            descriptionSEO:
+                "➔ Близорукость, миопия: основные факторы возникновения и современные подходы к эффективному лечению ✅ Информация от ведущих офтальмологов Киева ✅ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
             title: "Короткозорість, міопія",
             content: [
                 {
@@ -5077,6 +5143,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
     {
         name: keyEyeDisease.find(d => d.key === "kosookist")!,
         uk: {
+            titleSEO:
+                "Косоокість - симптоми, причини та лікування | Британський офтальмологічний центр | EYES",
+            descriptionSEO:
+                "➔ Косоокість: основні фактори виникнення та сучасні підходи до ефективного лікування ✅ Інформація від провідних офтальмологів Києва ✅ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід і бездоганна репутація ☎️ 0 800 507 077",
             title: "Косоокість",
             content: [
                 {
@@ -5124,6 +5194,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         en: {
+            titleSEO:
+                "Strabismus – Symptoms, Causes, and Treatment | British Ophthalmology Center | EYES",
+            descriptionSEO:
+                "➔ Strabismus: main causes and modern approaches to effective treatment ✅ Information from leading ophthalmologists in Kyiv ✅ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
             title: "Strabismus",
             content: [
                 {
@@ -5171,6 +5245,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         ru: {
+            titleSEO:
+                "Косоглазие - симптомы, причины и лечение | Британский офтальмологический центр | EYES",
+            descriptionSEO:
+                "➔ Косоглазие: основные факторы возникновения и современные подходы к эффективному лечению ✅ Информация от ведущих офтальмологов Киева ✅ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
             title: "Косоглазие",
             content: [
                 {
@@ -5217,6 +5295,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
     {
         name: keyEyeDisease.find(d => d.key === "presbiopiya")!,
         uk: {
+            titleSEO:
+                "Пресбіопія - симптоми, причини та лікування | Британський офтальмологічний центр | EYES",
+            descriptionSEO:
+                "➔ Пресбіопія: основні фактори виникнення та сучасні підходи до ефективного лікування ✅ Інформація від провідних офтальмологів Києва ✅ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід і бездоганна репутація ☎️ 0 800 507 077",
             title: "Пресбіопія",
             content: [
                 {
@@ -5261,6 +5343,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         en: {
+            titleSEO:
+                "Presbyopia – Symptoms, Causes, and Treatment | British Ophthalmology Center | EYES",
+            descriptionSEO:
+                "➔ Presbyopia: main causes and modern approaches to effective treatment ✅ Information from leading ophthalmologists in Kyiv ✅ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
             title: "Presbyopia",
             content: [
                 {
@@ -5305,6 +5391,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         ru: {
+            titleSEO:
+                "Пресбиопия - симптомы, причины и лечение | Британский офтальмологический центр | EYES",
+            descriptionSEO:
+                "➔ Пресбиопия: основные факторы возникновения и современные подходы к эффективному лечению ✅ Информация от ведущих офтальмологов Киева ✅ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
             title: "Пресбиопия",
             content: [
                 {
@@ -5354,6 +5444,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             d => d.key === "simptomi-zahvoryuvannya-ochej"
         )!,
         uk: {
+            titleSEO:
+                "Симптоми захворювання очей - причини та лікування | Британський офтальмологічний центр | EYES",
+            descriptionSEO:
+                "➔ Симптоми захворювання очей: основні фактори виникнення та сучасні підходи до ефективного лікування ✅ Інформація від провідних офтальмологів Києва ✅ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід і бездоганна репутація ☎️ 0 800 507 077",
             title: "Симптоми захворювання очей",
             content: [
                 {
@@ -5473,6 +5567,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         en: {
+            titleSEO:
+                "Eye Disease Symptoms – Causes and Treatment | British Ophthalmology Center | EYES",
+            descriptionSEO:
+                "➔ Eye disease symptoms: main causes and modern approaches to effective treatment ✅ Information from leading ophthalmologists in Kyiv ✅ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
             title: "Symptoms of eye disease",
             content: [
                 {
@@ -5593,6 +5691,10 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
             ],
         },
         ru: {
+            titleSEO:
+                "Симптомы заболевания глаз - причины и лечение | Британский офтальмологический центр | EYES",
+            descriptionSEO:
+                "➔ Симптомы заболевания глаз: основные факторы возникновения и современные подходы к эффективному лечению ✅ Информация от ведущих офтальмологов Киева ✅ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
             title: "Симптоми захворювання очей",
             content: [
                 {

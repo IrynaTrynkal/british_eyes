@@ -29,9 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
               ? "/ru/glaznye-bolezni"
               : "/zakhvoryuvannya-ochey";
     const title =
-        displayedDisease && displayedDisease[locale as LocaleType].title;
+        displayedDisease && displayedDisease[locale as LocaleType].titleSEO;
     const description =
-        displayedDisease && displayedDisease[locale as LocaleType].title;
+        displayedDisease &&
+        displayedDisease[locale as LocaleType].descriptionSEO;
 
     const end = displayedDisease?.name.slug[locale as LocaleType];
 
