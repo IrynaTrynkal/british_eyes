@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { Arimo, Oswald } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -8,6 +9,7 @@ import { getTranslations } from "next-intl/server";
 import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
 import { BinotelChat } from "@/components/shared/BinotelChat";
+import { GoogleAds } from "@/components/shared/GoogleAds";
 import { routing } from "@/i18n/routing";
 
 const oswald = Oswald({
@@ -64,12 +66,17 @@ export default async function RootLayout({
     if (!hasLocale(routing.locales, locale)) {
         notFound();
     }
+    const GAid = process.env.GA_ID || "";
+    const GATM = process.env.GTM_ID || "";
+    const GoogleAdsId = process.env.GOOGLE_ADS_ID || "";
     return (
         <html lang={locale} suppressHydrationWarning>
             <head>
                 <link rel="icon" href="/favicon.ico" sizes="any" />
                 <meta property="og:image" content="<generated>" />
+                <GoogleAds GoogleAdsId={GoogleAdsId} />
             </head>
+            <GoogleTagManager gtmId={GATM} />
             <NextIntlClientProvider>
                 <body
                     className={`${oswald.variable} ${arimo.variable} flex min-h-screen flex-col antialiased`}
@@ -80,6 +87,7 @@ export default async function RootLayout({
                     </main>
                     <Footer />
                     <BinotelChat />
+                    <GoogleAnalytics gaId={GAid} />
                 </body>
             </NextIntlClientProvider>
         </html>
