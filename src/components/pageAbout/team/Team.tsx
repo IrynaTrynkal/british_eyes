@@ -46,14 +46,6 @@ export const Team = async () => {
                     )?.list;
                     const lowest = getLowestPrice(priceItem);
 
-                    const price =
-                        lowest?.discountPrice ?? lowest?.price ?? null;
-
-                    const disc =
-                        lowest?.lowerDiscountLimit || lowest.lowerPriceLimit
-                            ? true
-                            : false;
-
                     return (
                         <li
                             key={ser.key}

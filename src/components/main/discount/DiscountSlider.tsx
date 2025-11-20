@@ -59,7 +59,7 @@ export const DiscountSlider = ({ list }: { list: Props }) => {
         updateDots();
         window.addEventListener("resize", updateDots);
         return () => window.removeEventListener("resize", updateDots);
-    }, []);
+    }, [list.length]);
 
     return (
         <div className="embla relative mx-auto w-full max-w-[1344px]">
