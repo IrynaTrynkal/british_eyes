@@ -6,6 +6,23 @@ import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { sanityFetch } from "@/sanity/lib/client";
 import { doctorsOrderQuery } from "@/sanity/lib/queries";
+import { LocaleType } from "@/types/LocaleType";
+import { generatePageMetadata } from "@/utils/generatePageMetadata";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const resolvedParams = await params;
+    const { locale } = resolvedParams;
+
+    return generatePageMetadata(locale as LocaleType, "ServicesPage", {
+        uk: "/poslugy",
+        en: "/en/services",
+        ru: "/ru/uslugi",
+    });
+}
 
 export default async function ServicesPage({
     params,

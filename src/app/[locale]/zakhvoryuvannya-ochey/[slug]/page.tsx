@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Fragment } from "react";
 
@@ -11,6 +12,48 @@ import { LinkAction } from "@/components/shared/LinkAction";
 import { TextTypeRender } from "@/components/shared/TextTypeRender";
 import { HeroDisease } from "@/components/someDiseaseComponent/HeroDisease";
 import { LocaleType } from "@/types/LocaleType";
+
+type Props = {
+    params: Promise<{ locale: string; slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale, slug } = await params;
+    const displayedDisease: EyeDiseaseType | undefined = eyeDiseaseData.find(
+        disease => disease.name.slug[locale as LocaleType] === slug
+    );
+    const langPrefix =
+        locale === "en"
+            ? "/en/eye-diseases"
+            : locale === "ru"
+              ? "/ru/glaznye-bolezni"
+              : "/zakhvoryuvannya-ochey";
+    const title =
+        displayedDisease && displayedDisease[locale as LocaleType].title;
+    const description =
+        displayedDisease && displayedDisease[locale as LocaleType].title;
+
+    const end = displayedDisease?.name.slug[locale as LocaleType];
+
+    return {
+        metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
+        alternates: {
+            canonical: `${langPrefix}/${end}`,
+            languages: {
+                "en-US": `/en/eye-diseases/${displayedDisease?.name.slug.en}`,
+                "uk-UA": `/zakhvoryuvannya-ochey/${displayedDisease?.name.slug.uk}`,
+                "ru-RU": `/ru/glaznye-bolezni/${displayedDisease?.name.slug.ru}`,
+            },
+        },
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            type: "website",
+        },
+    };
+}
 
 interface PageProps {
     params: Promise<{ locale: string; slug: string }>;

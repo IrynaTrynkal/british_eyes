@@ -1,5 +1,7 @@
 {
     "HomePage": {
+        "titleSEO": "British Ophthalmology Center. Vision Clinic (Ophthalmologist Consultation) in Kyiv | EYES",
+        "descriptionSEO": "British Vision Clinic Kyiv (hardware eye treatment) — Trust your vision to professionals. 👁 The #1 Eye Clinic in Ukraine. ✅ The best ophthalmologists in Kyiv ✅ Advanced diagnostics and effective treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077",
         "title": "British Ophthalmological Center",
         "description": "Laser vision correction, treatment of cataract, retinal diseases and glaucoma – our mission, which we solve safely, professionally and effectively.",
         "slogan": "Laser vision correction, treatment of cataract, retinal diseases and glaucoma – our mission, which we solve safely, professionally and effectively.",
@@ -149,6 +151,8 @@
         "globalText": "Leave your contact information and we will get in touch with you shortly"
     },
     "Doctors": {
+        "titleSEO": "Doctors. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ Doctors. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077",
         "title": "doctors",
         "heroText": "Our team consists of doctors and candidates of medical sciences, top-category specialists",
         "heroTextDown": "experts",
@@ -197,12 +201,16 @@
         "loading": "Sending..."
     },
     "FeedbackPage": {
+        "titleSEO": "Reviews. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ Reviews. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077",
         "title": "reviews of our patients",
         "subtitle": "Leave your review",
         "description": "Join tens of thousands of our patients who have already helped us become the best in our field!",
         "leaveFeedbackBtn": "leave a review"
     },
     "AboutPage": {
+        "titleSEO": "About the Clinic. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ About the Clinic. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077",
         "title": "About the Clinic",
         "description": "Since 2006, we have been restoring vision and a full life without glasses",
         "aboutTitle": "«British Ophthalmology Center» is an impeccable medical service with special attention to the control of the medical process.",
@@ -237,10 +245,14 @@
         "teamBtn": "all services"
     },
     "OffersPage": {
+        "titleSEO": "Promotions and Discounts. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ Promotions and Discounts. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077",
         "title": "offers and discounts",
         "description": "Our clinic does not pay any fees to outside doctors for referring patients for surgical treatment"
     },
     "ServicesPage": {
+        "titleSEO": "Ophthalmology Services in Kyiv | British Ophthalmology Center",
+        "descriptionSEO": "Full list of ophthalmology services in Kyiv – 🇺🇦🇬🇧 British Ophthalmology Center. ✴️ Individual approach to every patient! ✅ Our eye clinic provides a full range of ophthalmology services.",
         "title": "Ophthalmology services",
         "description": "The British Ophthalmology Center provides a full range of modern high-tech ophthalmological services for the treatment of eye diseases in people of all ages.",
         "sectionTitle": "We diagnose all eye diseases and perform microsurgical treatment",
@@ -325,6 +337,8 @@
         "raynerAboutItem": "It is the world’s first intraocular lens developed with the involvement of artificial intelligence"
     },
     "PricePage": {
+        "titleSEO": "Prices. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ Prices. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077",
         "title": "Prices",
         "paymentTitle": "Payment in installments",
         "paymentText": "We strive to make our services more accessible. Now you have the option to pay for your treatment in installments, without extra financial burden.",
@@ -339,6 +353,8 @@
         "servicesPrice": "from {price}"
     },
     "PatientsPage": {
+        "titleSEO": "For Patients. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ For Patients. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077",
         "title": "Information for \npatients",
         "afterProcedure": "after the procedure:",
         "beforeProcedure": "before the procedure:",
@@ -348,6 +364,8 @@
         "farsightedness": "Farsightedness"
     },
     "Contacts": {
+        "titleSEO": "Contacts. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ Contacts. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077",
         "contacts": "contacts",
         "center": "“British Ophthalmologic Centre”",
         "text": "You can make an appointment by filling out the form below.",
@@ -368,6 +386,8 @@
         "rulesParkingText": "Since the clinic is located in the very center of the city, in a historical building, parking near the clinic is prohibited."
     },
     "Blog": {
+        "titleSEO": "Ophthalmology News | British Ophthalmology Center",
+        "descriptionSEO": "Latest ophthalmology news and updates from the British Ophthalmology Center. 🇺🇦🇬🇧 Modern treatment methods, new equipment, promotions, doctor’s tips, and useful materials for patients.",
         "title": "News ",
         "description": "Ми навчаємо та ділимось досвідом",
         "allTopics": "All topics",
@@ -387,5 +407,21 @@
         "hirurgiya-povik-i-konyunktivi": "eyelid and conjunctival surgery",
         "anesteziologichnij-posibnik": "anesthesiological support",
         "ksenonoterapiya": "xenon therapy"
+    },
+    "Disease": {
+        "titleSEO": "Eye Diseases. General Information from Leading Ophthalmologists in Kyiv | EYES",
+        "descriptionSEO": "➔ Learn more about your eye condition from the best ophthalmologists in Kyiv ✅ Symptoms, causes, and treatment ✅ Advanced diagnostics and effective therapy 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077"
+    },
+    "Rayner": {
+        "titleSEO": "Rayner GALAXY Intraocular Lens | #1 Choice Worldwide for Cataract Treatment | EYES",
+        "descriptionSEO": "➔ Rayner GALAXY — the new standard of vision, available exclusively at our clinic. Forget about glasses and contact lenses! ➡️ Advanced diagnostics and effective treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077"
+    },
+    "ForentInstr": {
+        "titleSEO": "For Out-of-Town Patients. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ For out-of-town patients. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077"
+    },
+    "Instructions": {
+        "titleSEO": "Patient Guides and Instructions. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ Patient guides and instructions. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077"
     }
 }

@@ -18,6 +18,22 @@ import { RaynerVideo } from "@/components/someServiceComponents/individualCompon
 import { sanityFetch } from "@/sanity/lib/client";
 import { doctorsOrderQuery } from "@/sanity/lib/queries";
 import { LocaleType } from "@/types/LocaleType";
+import { generatePageMetadata } from "@/utils/generatePageMetadata";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const resolvedParams = await params;
+    const { locale } = resolvedParams;
+
+    return generatePageMetadata(locale as LocaleType, "Rayner", {
+        uk: "/rayner-galaxy-ua",
+        en: "/en/rayner-galaxy-a-new-level-of-vision-is-now-available-at-our-clinic",
+        ru: "/ru/rayner-galaxy-novoe-izmerenie-zreniya-uzhe-v-nashej-klinike",
+    });
+}
 
 export default async function RaynerPage({
     params,

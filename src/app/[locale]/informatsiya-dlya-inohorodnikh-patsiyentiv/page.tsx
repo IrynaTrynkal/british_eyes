@@ -7,6 +7,22 @@ import { Global } from "@/components/shared/global/Global";
 import { TextTypeRender } from "@/components/shared/TextTypeRender";
 import { HeroInstruction } from "@/components/someInstructionComponents/HeroInstruction";
 import { LocaleType } from "@/types/LocaleType";
+import { generateInstructionMetadata } from "@/utils/generateInstructionMetadata";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const resolvedParams = await params;
+    const { locale } = resolvedParams;
+
+    return generateInstructionMetadata(
+        locale as LocaleType,
+        "ForentInstr",
+        "informatsiya-dlya-inohorodnikh-patsiyentiv"
+    );
+}
 
 export default function PatientsNonresidentPage() {
     const breadcrumb = [

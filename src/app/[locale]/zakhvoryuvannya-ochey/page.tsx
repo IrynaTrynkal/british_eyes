@@ -11,6 +11,22 @@ import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { HeroDisease } from "@/components/someDiseaseComponent/HeroDisease";
 import { LocaleType } from "@/types/LocaleType";
+import { generatePageMetadata } from "@/utils/generatePageMetadata";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const resolvedParams = await params;
+    const { locale } = resolvedParams;
+
+    return generatePageMetadata(locale as LocaleType, "Disease", {
+        uk: "/zakhvoryuvannya-ochey",
+        en: "/en/eye-diseases",
+        ru: "/ru/glaznye-bolezni",
+    });
+}
 
 export default async function EyesDiseasePage({
     searchParams,

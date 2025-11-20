@@ -11,6 +11,22 @@ import { BeforeSurgeryCard } from "@/components/someInstructionComponents/Before
 import { BeforeSurgeryMain } from "@/components/someInstructionComponents/BeforeSurgeryMain";
 import { HeroInstruction } from "@/components/someInstructionComponents/HeroInstruction";
 import { LocaleType } from "@/types/LocaleType";
+import { generateInstructionMetadata } from "@/utils/generateInstructionMetadata";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const resolvedParams = await params;
+    const { locale } = resolvedParams;
+
+    return generateInstructionMetadata(
+        locale as LocaleType,
+        "Instructions",
+        "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam"
+    );
+}
 
 export default function PatientsBeforeSurgeryPage() {
     const breadcrumb = [

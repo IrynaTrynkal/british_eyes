@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { feedbacksList } from "@/components/assets/feedbacksData";
@@ -11,6 +12,57 @@ import { HeroSomeService } from "@/components/someServiceComponents/HeroSomeServ
 import { ServicePageContent } from "@/components/someServiceComponents/ServicePage";
 import { LocaleType } from "@/types/LocaleType";
 
+type Props = {
+    params: Promise<{ locale: string; slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale, slug } = await params;
+
+    const displayedService: ServicesListProps | undefined = servicesList.find(
+        service => service.slug[locale as LocaleType] === slug
+    );
+    const serviceData =
+        displayedService &&
+        servicesData.find(service => service.name.key === displayedService.key);
+    const langPrefix =
+        locale === "en"
+            ? "/en/services"
+            : locale === "ru"
+              ? "/ru/uslugi"
+              : "/poslugy";
+    const title =
+        serviceData &&
+        serviceData[locale as LocaleType].sections?.find(
+            item => item.type === "meta"
+        )?.data.titleSEO;
+    const description =
+        serviceData &&
+        serviceData[locale as LocaleType].sections?.find(
+            item => item.type === "meta"
+        )?.data.descriptionSEO;
+
+    const end = displayedService?.slug[locale as LocaleType];
+
+    return {
+        metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
+        alternates: {
+            canonical: `${langPrefix}/${end}`,
+            languages: {
+                "en-US": `/en/services/${displayedService?.slug.en}`,
+                "uk-UA": `/poslugy/${displayedService?.slug.uk}`,
+                "ru-RU": `/ru/uslugi/${displayedService?.slug.ru}`,
+            },
+        },
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            type: "website",
+        },
+    };
+}
 interface ServicePageProps {
     params: Promise<{ locale: string; slug: string }>;
 }
