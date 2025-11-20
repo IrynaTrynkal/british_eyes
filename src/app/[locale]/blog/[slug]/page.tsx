@@ -8,15 +8,11 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { sanityFetch } from "@/sanity/lib/client";
 import { blogQuery, blogShortByServiceQuery } from "@/sanity/lib/queries";
 
-type Props = {
-    params: { locale: string; slug: string };
-};
-
 export async function generateMetadata(
-    { params }: Props,
+    params: Promise<{ locale: string; slug: string }>,
     parent?: ResolvingMetadata
 ): Promise<Metadata> {
-    const { locale, slug } = params;
+    const { locale, slug } = await params;
 
     const blog = await sanityFetch({
         query: blogQuery,
