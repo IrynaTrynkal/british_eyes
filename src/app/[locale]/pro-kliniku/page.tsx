@@ -16,6 +16,23 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { FeedbackSection } from "@/components/shared/feedbackSection.tsx/FeedbackSection";
 import { sanityFetch } from "@/sanity/lib/client";
 import { blogsListQuery, doctorsOrderQuery } from "@/sanity/lib/queries";
+import { LocaleType } from "@/types/LocaleType";
+import { generatePageMetadata } from "@/utils/generatePageMetadata";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const resolvedParams = await params;
+    const { locale } = resolvedParams;
+
+    return generatePageMetadata(locale as LocaleType, "AboutPage", {
+        uk: "/pro-kliniku",
+        en: "/en/about-clinic",
+        ru: "/ru/o-klinike",
+    });
+}
 
 export default async function AboutPage({
     params,

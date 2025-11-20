@@ -4,8 +4,25 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { TopicFilter } from "@/components/shared/TopicFilter";
 import { sanityFetch } from "@/sanity/lib/client";
 import { blogsListQuery } from "@/sanity/lib/queries";
+import { LocaleType } from "@/types/LocaleType";
+import { generatePageMetadata } from "@/utils/generatePageMetadata";
 
 import { BlogsListQueryResult } from "../../../../sanity.types";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const resolvedParams = await params;
+    const { locale } = resolvedParams;
+
+    return generatePageMetadata(locale as LocaleType, "Blog", {
+        uk: "/blog",
+        en: "/en/blog",
+        ru: "/ru/blog",
+    });
+}
 
 export default async function NewsPage({
     params,

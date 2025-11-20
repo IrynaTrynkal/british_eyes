@@ -28,21 +28,23 @@ export async function generateMetadata({
     const resolvedParams = await params;
     const { locale } = resolvedParams;
     const t = await getTranslations({ locale, namespace: "HomePage" });
+    const langPrefix = locale === "en" ? "/en" : locale === "ru" ? "/ru" : "/";
 
     return {
         metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
         alternates: {
+            canonical: langPrefix,
             languages: {
                 "en-US": "/en",
                 "uk-UA": "/",
-                "ru-Ru": "/ru",
+                "ru-RU": "/ru",
             },
         },
-        title: t("title"),
-        description: t("description"),
+        title: t("titleSEO"),
+        description: t("descriptionSEO"),
         openGraph: {
-            title: t("title"),
-            description: t("description"),
+            title: t("titleSEO"),
+            description: t("descriptionSEO"),
             type: "website",
         },
     };

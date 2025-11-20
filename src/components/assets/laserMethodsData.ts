@@ -4,8 +4,11 @@ export type ContentLazerSubpageType = {
 };
 
 export type LocaleSubLazerPageType = {
+    slug: string;
     title: string;
     subtitle: string;
+    titleSEO: string;
+    descriptionSEO: string;
     data: ContentLazerSubpageType[];
 };
 
@@ -25,8 +28,13 @@ export const subpageLazerData: SubPageType[] = [
         image: "/images/lasek.png",
         content: {
             uk: {
+                slug: "sportlife-lasik",
                 title: "SportLine LASEK",
                 subtitle: "Безкомпромісне рішення для професійних спортсменів",
+                titleSEO:
+                    "SportLine LASEK - Лазерна корекція для спортсменів | Корекція зору спортсменам та для для активних людей - EYES ",
+                descriptionSEO:
+                    "➔ SportLineLASEK - удосконалений метод лазерної корекції зору для спортсменів, військових та людей, які активно ведуть спосіб життя. ➡️ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід та бездоганна репутація ☎️ 0 800 507 077",
                 data: [
                     {
                         textTitle: "Максимальна свобода руху без оптики",
@@ -56,7 +64,12 @@ export const subpageLazerData: SubPageType[] = [
                 ],
             },
             ru: {
+                slug: "sportlife-lasik",
                 title: "SportLine LASEK",
+                titleSEO:
+                    "SportLine LASEK – Лазерная коррекция для спортсменов | Коррекция зрения спортсменам и активным людям – EYES",
+                descriptionSEO:
+                    "➔ SportLineLASEK – усовершенствованный метод лазерной коррекции зрения для спортсменов, военных и людей с активным образом жизни. ➡️ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
                 subtitle:
                     "Бескомпромиссное решение для профессиональных спортсменов",
                 data: [
@@ -88,8 +101,12 @@ export const subpageLazerData: SubPageType[] = [
                 ],
             },
             en: {
+                slug: "sportlife-lasik",
                 title: "SportLine LASEK",
-
+                titleSEO:
+                    "SportLine LASEK – Laser Vision Correction for Athletes | Vision Correction for Athletes and Active People – EYES",
+                descriptionSEO:
+                    "➔ SportLineLASEK – an advanced laser vision correction method for athletes, military personnel, and people with an active lifestyle. ➡️ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
                 subtitle:
                     "The uncompromising solution for professional athletes",
                 data: [
@@ -127,8 +144,13 @@ export const subpageLazerData: SubPageType[] = [
         image: "/images/eagle.jpg",
         content: {
             uk: {
+                slug: "iq-lasik-oxygen-3d",
                 title: "IQ-LASIK Oxygen 3D",
                 subtitle: "корекція без підвищення температури рогівки ока",
+                titleSEO:
+                    "Холодна лазерна корекція iQ‑LASIK Oxygen 3D | Щадна лазерна корекція зору | EYES ",
+                descriptionSEO:
+                    "➔ Інноваційний метод холодної лазерної корекції зору (iQ‑LASIK Oxygen 3D ): 3D‑моніторинг, відсутність термічного пошкодження рогівки, реабілітація за 1–2 дні. Без окулярів та лінз! ➡️ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід та бездоганна репутація ☎️ 0 800 507 077",
                 data: [
                     {
                         textTitle:
@@ -149,7 +171,12 @@ export const subpageLazerData: SubPageType[] = [
                 ],
             },
             ru: {
+                slug: "iq-lasik-oxygen-3d",
                 title: "IQ-LASIK Oxygen 3D",
+                titleSEO:
+                    "Холодная лазерная коррекция iQ-LASIK Oxygen 3D | Щадящая лазерная коррекция зрения | EYES",
+                descriptionSEO:
+                    "➔ Инновационный метод холодной лазерной коррекции зрения (iQ-LASIK Oxygen 3D): 3D-мониторинг, отсутствие термического повреждения роговицы, реабилитация за 1–2 дня. Без очков и линз! ➡️ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
                 subtitle: "коррекция без повышения температуры роговицы глаза",
                 data: [
                     {
@@ -172,7 +199,12 @@ export const subpageLazerData: SubPageType[] = [
                 ],
             },
             en: {
+                slug: "iq-lasik-oxygen-3d",
                 title: "IQ-LASIK Oxygen 3D",
+                titleSEO:
+                    "Cold Laser Vision Correction iQ-LASIK Oxygen 3D | Gentle Laser Vision Correction | EYES",
+                descriptionSEO:
+                    "➔ Innovative cold laser vision correction method (iQ-LASIK Oxygen 3D): 3D monitoring, no thermal damage to the cornea, recovery in 1–2 days. No glasses or lenses! ➡️ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
                 subtitle: "correction without increasing corneal temperature",
                 data: [
                     {
@@ -204,7 +236,12 @@ export const subpageCataractData: SubPageType[] = [
         image: "/images/iq-5-minute.jpg",
         content: {
             uk: {
+                slug: "iq-5-minutes",
                 title: "iq-5-minutes",
+                titleSEO:
+                    "iQ‑5 MINUTES – надшвидка операція катаракти за 5 хвилин | Британський офтальмологічний центр",
+                descriptionSEO:
+                    "➔ Нова методика видалення катаракти дисперсними розчинами 5 хвилин! Мінімум ультразвуку, реабілітація без стресу. ➡️ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід та бездоганна репутація ☎️ 0 800 507 077",
                 subtitle: "Безкомпромісне рішення для професійних спортсменів",
                 data: [
                     {
@@ -235,7 +272,12 @@ export const subpageCataractData: SubPageType[] = [
                 ],
             },
             ru: {
+                slug: "iq-5-minutes",
                 title: "SportLine LASEK",
+                titleSEO:
+                    "iQ-5 MINUTES – сверхбыстрая операция по удалению катаракты за 5 минут | Британский офтальмологический центр",
+                descriptionSEO:
+                    "➔ Новая методика удаления катаракты дисперсными растворами за 5 минут! Минимум ультразвука, восстановление без стресса. ➡️ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
                 subtitle:
                     "Бескомпромиссное решение для профессиональных спортсменов",
                 data: [
@@ -267,8 +309,12 @@ export const subpageCataractData: SubPageType[] = [
                 ],
             },
             en: {
+                slug: "iq-5-minutes",
                 title: "SportLine LASEK",
-
+                titleSEO:
+                    "iQ-5 MINUTES – ultra-fast cataract surgery in 5 minutes | British Ophthalmology Centre",
+                descriptionSEO:
+                    "➔ New cataract removal technique using dispersive solutions in just 5 minutes! Minimal ultrasound, stress-free recovery. ➡️ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
                 subtitle:
                     "The uncompromising solution for professional athletes",
                 data: [
@@ -306,7 +352,12 @@ export const subpageCataractData: SubPageType[] = [
         image: "/images/live.jpg",
         content: {
             uk: {
+                slug: "iq-life-3d-vodnij-potik",
                 title: "iQ-Life 3D «водний потік»",
+                titleSEO:
+                    "iQ‑Life 3D «водний потік» - видалення катаракти без ультразвуку Живий зір у Британському офтальмологічному центрі",
+                descriptionSEO:
+                    "➔ Видаліть катаракту за методикою iQ‑Life 3D «водний потік» – без ультразвуку, болю та ускладнень. ➡️ Сучасна діагностика та ефективне лікування 👍 Перевірений досвід та бездоганна репутація ☎️ 0 800 507 077",
                 subtitle: "корекція без підвищення температури рогівки ока",
                 data: [
                     {
@@ -328,7 +379,12 @@ export const subpageCataractData: SubPageType[] = [
                 ],
             },
             ru: {
+                slug: "iq-life-3d",
                 title: "iQ-Life 3D «водный поток»",
+                titleSEO:
+                    "iQ-Life 3D «водный поток» – удаление катаракты без ультразвука | Живое зрение в Британском офтальмологическом центре",
+                descriptionSEO:
+                    "➔ Удалите катаракту по методике iQ-Life 3D «водный поток» – без ультразвука, боли и осложнений. ➡️ Современная диагностика и эффективное лечение 👍 Проверенный опыт и безупречная репутация ☎️ 0 800 507 077",
                 subtitle: "коррекция без повышения температуры роговицы глаза",
                 data: [
                     {
@@ -351,7 +407,12 @@ export const subpageCataractData: SubPageType[] = [
                 ],
             },
             en: {
+                slug: "iq-life-3d-water-flow",
                 title: "iQ-Life 3D «water flow»",
+                titleSEO:
+                    "iQ-Life 3D “water flow” – ultrasound-free cataract removal | Natural vision at the British Ophthalmology Centre",
+                descriptionSEO:
+                    "➔ Remove cataracts using the iQ-Life 3D “water flow” method – no ultrasound, no pain, no complications. ➡️ Modern diagnostics and effective treatment 👍 Proven experience and impeccable reputation ☎️ 0 800 507 077",
                 subtitle: "correction without increasing corneal temperature",
                 data: [
                     {

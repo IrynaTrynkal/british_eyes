@@ -8,6 +8,22 @@ import { TextTypeRender } from "@/components/shared/TextTypeRender";
 import { BottomLinkButtons } from "@/components/someInstructionComponents/BottomLinkButtons";
 import { HeroInstruction } from "@/components/someInstructionComponents/HeroInstruction";
 import { LocaleType } from "@/types/LocaleType";
+import { generateInstructionMetadata } from "@/utils/generateInstructionMetadata";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const resolvedParams = await params;
+    const { locale } = resolvedParams;
+
+    return generateInstructionMetadata(
+        locale as LocaleType,
+        "Instructions",
+        "patient-information-before-IPL-therapy"
+    );
+}
 
 export default function PatientsIPLInstructionsPage() {
     const breadcrumb = [
