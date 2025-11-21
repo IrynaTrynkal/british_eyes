@@ -20,7 +20,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale, slug } = await params;
     const displayedDisease: EyeDiseaseType | undefined = eyeDiseaseData.find(
-        disease => disease.name.slug[locale as LocaleType] === slug
+        disease => disease.name.key === slug
     );
     const langPrefix =
         locale === "en"
@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
               : "/zakhvoryuvannya-ochey";
     const title =
         displayedDisease && displayedDisease[locale as LocaleType].titleSEO;
+
     const description =
         displayedDisease &&
         displayedDisease[locale as LocaleType].descriptionSEO;

@@ -1,32 +1,32 @@
 {
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
 
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always"
-  },
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always"
+    },
 
-  "eslint.enable": true,
-  "eslint.run": "onSave",
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "javascriptreact"
-  ],
-  "eslint.options": {
-    "extensions": [".js", ".jsx", ".ts", ".tsx"]
-  },
+    "eslint.enable": true,
+    "eslint.run": "onSave",
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "javascriptreact"
+    ],
+    "eslint.options": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+    },
 
-  "prettier.enableDebugLogs": false,
+    "prettier.enableDebugLogs": false,
 
-  "editor.autoClosingBrackets": "always",
-  "editor.autoClosingQuotes": "always",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
 
-  "files.exclude": {
-    "**/node_modules": true,
-    "**/.next": true,
-    "**/out": true,
-    "**/build": true
-  }
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/.next": false,
+        "**/out": true,
+        "**/build": true
+    }
 }
