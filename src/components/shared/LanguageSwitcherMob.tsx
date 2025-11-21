@@ -27,12 +27,12 @@ export default function LanguageSwitcherMob() {
 
     if (
         segments[0] &&
-        ["poslugy", "uslugi", "services"].includes(segments[0])
+        ["posluhy", "uslugi", "services"].includes(segments[0])
     ) {
         slug = segments[1];
     } else if (
         segments[1] &&
-        ["poslugy", "uslugi", "services"].includes(segments[1])
+        ["posluhy", "uslugi", "services"].includes(segments[1])
     ) {
         slug = segments[2];
     }
@@ -52,7 +52,7 @@ export default function LanguageSwitcherMob() {
                                 href={
                                     slug
                                         ? ({
-                                              pathname: "/poslugy/[slug]",
+                                              pathname: "/posluhy/[slug]",
                                               params: { slug: localizedSlug },
                                               search: searchParams.toString(),
                                               hash,

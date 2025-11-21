@@ -4410,7 +4410,7 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     ],
                     btn: {
                         name: "детальніше",
-                        link: "/poslugy/lazerna-korekcziya-zoru",
+                        link: "/posluhy/lazerna-korekcziya-zoru",
                     },
                 },
                 {
@@ -4603,7 +4603,7 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     ],
                     btn: {
                         name: "детальніше",
-                        link: "/poslugy/lazerna-korekcziya-zoru",
+                        link: "/posluhy/lazerna-korekcziya-zoru",
                     },
                 },
                 {
@@ -4976,7 +4976,7 @@ export const eyeDiseaseData: EyeDiseaseType[] = [
                     ],
                     btn: {
                         name: "детальніше",
-                        link: "/poslugy/lazerna-korekcziya-zoru",
+                        link: "/posluhy/lazerna-korekcziya-zoru",
                     },
                 },
                 {

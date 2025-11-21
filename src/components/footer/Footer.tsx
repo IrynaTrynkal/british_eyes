@@ -33,7 +33,7 @@ export const Footer = () => {
                         <MenuMain />
                     </div>
                     <div className="prepc:w-[445px] prepc:mb-0 mb-6">
-                        <h3 className={`${footerH3} mb-1.5`}>{t("poslugy")}</h3>
+                        <h3 className={`${footerH3} mb-1.5`}>{t("posluhy")}</h3>
                         <div className="bg-grey prepc:hidden mb-1.5 h-[1px] w-full" />
                         <ServicesMenu />
                     </div>

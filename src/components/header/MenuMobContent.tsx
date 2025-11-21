@@ -22,7 +22,7 @@ export const MenuMobContent = ({
     const t = useTranslations("Menu");
 
     const [openMenus, setOpenMenus] = useState<{ [key: string]: boolean }>({
-        poslugy: true,
+        posluhy: true,
         "informatsiya-dlya-patsiyentiv": false,
     });
 
@@ -34,7 +34,7 @@ export const MenuMobContent = ({
         <ul className={`relative flex flex-col gap-4 ${className} `}>
             {menuList.map((item, idx) => {
                 const hasSubmenu =
-                    item.key === "poslugy" ||
+                    item.key === "posluhy" ||
                     item.key === "informatsiya-dlya-patsiyentiv";
 
                 return (
@@ -43,7 +43,7 @@ export const MenuMobContent = ({
                         className={` ${item.key === "tsiny" ? "relative" : ""}`}
                     >
                         <div
-                            className={`${item.key === "poslugy" ? "w-full" : "w-[36%]"} font-oswald flex items-center justify-between ${item.key === "poslugy" ? "h-10 px-2 text-sm" : "text-base"} font-medium uppercase ${(item.key === "poslugy" && openMenus.poslugy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
+                            className={`${item.key === "posluhy" ? "w-full" : "w-[36%]"} font-oswald flex items-center justify-between ${item.key === "posluhy" ? "h-10 px-2 text-sm" : "text-base"} font-medium uppercase ${(item.key === "posluhy" && openMenus.posluhy) || (item.key === "informatsiya-dlya-patsiyentiv" && openMenus["informatsiya-dlya-patsiyentiv"]) ? "text-ivory bg-black" : "hover:text-ivory text-black hover:bg-black"}`}
                         >
                             <Link
                                 href={`/${item.key}` as any}
@@ -70,9 +70,9 @@ export const MenuMobContent = ({
                         )}
 
                         <AnimatePresence initial={false}>
-                            {item.key === "poslugy" && openMenus.poslugy && (
+                            {item.key === "posluhy" && openMenus.posluhy && (
                                 <motion.div
-                                    key="poslugy"
+                                    key="posluhy"
                                     initial={{ height: 0 }}
                                     animate={{ height: "auto" }}
                                     exit={{ height: 0 }}

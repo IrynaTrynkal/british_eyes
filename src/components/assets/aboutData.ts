@@ -126,7 +126,7 @@ export type AboutServicesType = {
 export const aboutServicesList: AboutServicesType[] = [
     {
         key: "vitreoretinalna-hirurgiya",
-        link: "/poslugy/vitreoretinalna-hirurgiya",
+        link: "/posluhy/vitreoretinalna-hirurgiya",
         data: {
             uk: {
                 title: "Вітреоретинальна хірургія",
@@ -144,7 +144,7 @@ export const aboutServicesList: AboutServicesType[] = [
     },
     {
         key: "likuvannya-kosookosti",
-        link: "/poslugy/likuvannya-kosookosti",
+        link: "/posluhy/likuvannya-kosookosti",
 
         data: {
             uk: {
@@ -163,7 +163,7 @@ export const aboutServicesList: AboutServicesType[] = [
     },
     {
         key: "refrakczijna-lensektomiya",
-        link: "/poslugy/refrakczijna-lensektomiya",
+        link: "/posluhy/refrakczijna-lensektomiya",
         data: {
             uk: {
                 title: "Альтернатива лазерної корекції зору RLE",

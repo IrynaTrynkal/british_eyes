@@ -34,7 +34,7 @@ export const ServicesMenu = ({
                                 <Link
                                     href={
                                         {
-                                            pathname: `/poslugy/${item.slug[locale as LocaleType]}`,
+                                            pathname: `/posluhy/${item.slug[locale as LocaleType]}`,
                                         } as any
                                     }
                                     onClick={onClick}
@@ -67,7 +67,7 @@ export const ServicesMenu = ({
                                 <Link
                                     href={
                                         {
-                                            pathname: `/poslugy/${item.slug[locale as LocaleType]}`,
+                                            pathname: `/posluhy/${item.slug[locale as LocaleType]}`,
                                         } as any
                                     }
                                     onClick={onClick}
@@ -97,7 +97,7 @@ export const ServicesMenu = ({
                                     <Link
                                         href={
                                             {
-                                                pathname: `/poslugy/${item.slug[locale as LocaleType]}`,
+                                                pathname: `/posluhy/${item.slug[locale as LocaleType]}`,
                                             } as any
                                         }
                                         onClick={onClick}

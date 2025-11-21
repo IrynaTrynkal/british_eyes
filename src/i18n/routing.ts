@@ -10,31 +10,31 @@ export const routing = defineRouting({
     // Used when no locale matches
     defaultLocale: "uk",
     pathnames: {
-        "/poslugy": {
+        "/posluhy": {
             en: "/services",
             ru: "/uslugi",
         },
-        "/poslugy/[slug]": {
+        "/posluhy/[slug]": {
             en: "/services/[slug]",
             ru: "/uslugi/[slug]",
         },
-        "/poslugy/lazerna-korekcziya-zoru": {
+        "/posluhy/lazerna-korekcziya-zoru": {
             en: "/services/laser-vision-correction",
             ru: "/uslugi/lazernaya-korrekciya-zreniya",
         },
-        "/poslugy/lazerna-korekcziya-zoru/[subpage]": {
+        "/posluhy/lazerna-korekcziya-zoru/[subpage]": {
             en: "/services/laser-vision-correction/[subpage]",
             ru: "/uslugi/lazernaya-korrekciya-zreniya/[subpage]",
         },
-        "/poslugy/likuvannya-katarakti": {
+        "/posluhy/likuvannya-katarakti": {
             en: "/services/cataract-treatment",
             ru: "/uslugi/lechenie-katarakty",
         },
-        "/poslugy/likuvannya-katarakti/[subpage]": {
+        "/posluhy/likuvannya-katarakti/[subpage]": {
             en: "/services/cataract-treatment/[subpage]",
             ru: "/uslugi/lechenie-katarakty/[subpage]",
         },
-        "/poslugy/likuvannya-katarakti/iq-life-3d-vodnij-potik": {
+        "/posluhy/likuvannya-katarakti/iq-life-3d-vodnij-potik": {
             en: "/services/cataract-treatment/iq-life-3d-water-flow",
             ru: "/uslugi/lechenie-katarakty/iq-life-3d",
         },

@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 export const MethodServiceCard = ({ data }: { data: MethodCardProps }) => {
     return (
         <Link
-            href={`/poslugy/${data.link}` as any}
+            href={`/posluhy/${data.link}` as any}
             scroll={false}
             className="border-grey group relative aspect-[288/189] w-full overflow-hidden rounded border"
         >

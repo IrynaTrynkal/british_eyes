@@ -12,7 +12,7 @@ export const getLink = (key: string | undefined, locale: LocaleType) => {
     }
     const service = servicesList.find(s => s.key === key);
     if (service) {
-        return `/poslugy/${service.slug[locale]}`;
+        return `/posluhy/${service.slug[locale]}`;
     }
 
     return "#";

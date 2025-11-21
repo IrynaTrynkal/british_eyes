@@ -49,7 +49,7 @@ export const ServicesList = async ({ locale }: { locale: LocaleType }) => {
                     >
                         <Link
                             href={
-                                `/poslugy/${service.name.slug[locale as LocaleType]}` as any
+                                `/posluhy/${service.name.slug[locale as LocaleType]}` as any
                             }
                             className={`group tab:p-3 relative flex h-full w-full flex-col justify-between p-2 transition-all duration-300 ease-in-out ${serviceStyles[service.name.key] ?? serviceStyles.default} `}
                         >
@@ -167,7 +167,7 @@ export const ServicesList = async ({ locale }: { locale: LocaleType }) => {
                 <LinkAction
                     secondary
                     className="mx-auto"
-                    href="/poslugy"
+                    href="/posluhy"
                     name={t("servicesBtn")}
                 />
             </li>

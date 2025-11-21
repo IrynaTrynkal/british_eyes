@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { subpageCataractData } from "@/components/assets/laserMethodsData";
+import { subpageLazerData } from "@/components/assets/laserMethodsData";
 import { ModalPage } from "@/components/shared/ModalPage";
 import { LazerSubpage } from "@/components/someServiceComponents/LazerSubpage/LazerSubpage";
 import { LocaleType } from "@/types/LocaleType";
@@ -12,16 +12,16 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale, subpage } = await params;
-    const currentMethod = subpageCataractData.find(
+    const currentMethod = subpageLazerData.find(
         sub => sub.content[locale as LocaleType].slug === subpage
     );
 
     const langPrefix =
         locale === "en"
-            ? "/en/services/cataract-treatment"
+            ? "/en/services/laser-vision-correction"
             : locale === "ru"
-              ? "/ru/uslugi/lechenie-katarakty"
-              : "/poslugy/likuvannya-katarakti";
+              ? "/ru/uslugi/lazernaya-korrekciya-zreniya"
+              : "/posluhy/lazerna-korekcziya-zoru";
     const title =
         currentMethod && currentMethod.content[locale as LocaleType].titleSEO;
     const description =
@@ -35,9 +35,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         alternates: {
             canonical: `${langPrefix}/${end}`,
             languages: {
-                "en-US": `/en/services/cataract-treatment/${currentMethod?.content.en.slug}`,
-                "uk-UA": `/poslugy/likuvannya-katarakti/${currentMethod?.content.uk.slug}`,
-                "ru-RU": `/ru/uslugi/lechenie-katarakty/${currentMethod?.content.ru.slug}`,
+                "en-US": `/en/services/laser-vision-correction/${currentMethod?.content.en.slug}`,
+                "uk-UA": `/posluhy/lazerna-korekcziya-zoru/${currentMethod?.content.uk.slug}`,
+                "ru-RU": `/ru/uslugi/lazernaya-korrekciya-zreniya/${currentMethod?.content.ru.slug}`,
             },
         },
         title,
@@ -49,14 +49,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
     };
 }
-
 interface SubpageProps {
     params: Promise<{ locale: string; subpage: string }>;
 }
 
-export default async function CataractSubpage({ params }: SubpageProps) {
+export default async function LaserSubpage({ params }: SubpageProps) {
     const { locale, subpage } = await params;
-    const currentMethod = subpageCataractData.find(sub => sub.key === subpage);
+    const currentMethod = subpageLazerData.find(sub => sub.key === subpage);
 
     if (!currentMethod) {
         notFound();

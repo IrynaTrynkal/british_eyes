@@ -33,7 +33,7 @@ export const PriceCard = ({
                         {data.servicesName}
                     </h2>
                     <Link
-                        href={`/poslugy/${link}` as any}
+                        href={`/posluhy/${link}` as any}
                         className="group tab:w-[186px] prepc:w-[209px] flex h-10 items-center gap-2"
                     >
                         <IconArrow className="pc:h-4 pc:w-4 h-4 w-4 transition-all duration-300 group-hover:mr-0 group-hover:translate-x-1" />
