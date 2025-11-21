@@ -47,7 +47,7 @@ export default async function RaynerPage({
         tags: [],
     });
     const breadcrumb = [
-        { name: "poslugy", href: "/poslugy" },
+        { name: "posluhy", href: "/posluhy" },
         { name: "rayner-galaxy", href: "/rayner-galaxy-ua" },
     ];
 

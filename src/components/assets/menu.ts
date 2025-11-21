@@ -1,5 +1,5 @@
 export const menuList = [
-    { key: "poslugy" },
+    { key: "posluhy" },
     { key: "rayner-galaxy-ua" },
     { key: "tsiny" },
     { key: "aktsiyi" },

@@ -18,7 +18,7 @@ export async function generateMetadata({
     const { locale } = resolvedParams;
 
     return generatePageMetadata(locale as LocaleType, "ServicesPage", {
-        uk: "/poslugy",
+        uk: "/posluhy",
         en: "/en/services",
         ru: "/ru/uslugi",
     });
@@ -35,7 +35,7 @@ export default async function ServicesPage({
         params: { language: locale },
         tags: [],
     });
-    const breadcrumb = [{ name: "poslugy", href: "/poslugy" }];
+    const breadcrumb = [{ name: "posluhy", href: "/posluhy" }];
 
     return (
         <>

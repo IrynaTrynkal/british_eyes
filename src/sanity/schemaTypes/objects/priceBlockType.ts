@@ -40,7 +40,7 @@ export const priceBlockType = defineType({
             name: "linkToPage",
             title: "Посилання на сторінку послуги (українська версія)",
             description:
-                "Має починатись з /poslugy. Посилання краще скопіювати в адресному рядку в браузері.",
+                "Має починатись з /posluhy. Посилання краще скопіювати в адресному рядку в браузері.",
             type: "string",
         }),
         defineField({

@@ -36,7 +36,7 @@ export const Team = async () => {
                     className="tab:flex hidden"
                     secondary
                     name={t("teamBtn")}
-                    href="/poslugy"
+                    href="/posluhy"
                 />
             </div>
             <ul className="tab:flex-row tab:flex-wrap tab:justify-center prepc:gap-5 tab:mb-0 mb-6 flex flex-col gap-3">
@@ -60,7 +60,7 @@ export const Team = async () => {
                 className="tab:hidden mx-auto"
                 secondary
                 name={t("teamBtn")}
-                href="/poslugy"
+                href="/posluhy"
             />
         </section>
     );

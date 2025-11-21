@@ -21,19 +21,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
 
     const displayedService: ServicesListProps | undefined = servicesList.find(
-        service => service.key === "likuvannya-katarakti"
+        service => service.key === "lazerna-korekcziya-zoru"
     );
     const serviceData =
         displayedService &&
         servicesData.find(
-            service => service.name.key === "likuvannya-katarakti"
+            service => service.name.key === "lazerna-korekcziya-zoru"
         );
     const langPrefix =
         locale === "en"
             ? "/en/services"
             : locale === "ru"
               ? "/ru/uslugi"
-              : "/poslugy";
+              : "/posluhy";
     const title =
         serviceData &&
         serviceData[locale as LocaleType].sections?.find(
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             canonical: `${langPrefix}/${end}`,
             languages: {
                 "en-US": `/en/services/${displayedService?.slug.en}`,
-                "uk-UA": `/poslugy/${displayedService?.slug.uk}`,
+                "uk-UA": `/posluhy/${displayedService?.slug.uk}`,
                 "ru-RU": `/ru/uslugi/${displayedService?.slug.ru}`,
             },
         },
@@ -67,9 +67,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default function CataractPage() {
+export default function LazerPage() {
     const displayedService: ServicesListProps | undefined = servicesList.find(
-        service => service.key === "likuvannya-katarakti"
+        service => service.key === "lazerna-korekcziya-zoru"
     );
 
     if (!displayedService) {
@@ -77,10 +77,10 @@ export default function CataractPage() {
     }
 
     const breadcrumb = [
-        { name: "poslugy", href: "/poslugy" },
+        { name: "posluhy", href: "/posluhy" },
         {
             name: displayedService.key,
-            href: "/poslugy/likuvannya-katarakti",
+            href: "/posluhy/lazerna-korekcziya-zoru",
         },
     ];
     const feedbackList = feedbacksList.filter(

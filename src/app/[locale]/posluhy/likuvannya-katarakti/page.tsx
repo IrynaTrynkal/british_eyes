@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { useLocale } from "next-intl";
 
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
@@ -17,20 +18,22 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { locale, slug } = await params;
+    const { locale } = await params;
 
     const displayedService: ServicesListProps | undefined = servicesList.find(
-        service => service.slug[locale as LocaleType] === slug
+        service => service.key === "likuvannya-katarakti"
     );
     const serviceData =
         displayedService &&
-        servicesData.find(service => service.name.key === displayedService.key);
+        servicesData.find(
+            service => service.name.key === "likuvannya-katarakti"
+        );
     const langPrefix =
         locale === "en"
             ? "/en/services"
             : locale === "ru"
               ? "/ru/uslugi"
-              : "/poslugy";
+              : "/posluhy";
     const title =
         serviceData &&
         serviceData[locale as LocaleType].sections?.find(
@@ -50,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             canonical: `${langPrefix}/${end}`,
             languages: {
                 "en-US": `/en/services/${displayedService?.slug.en}`,
-                "uk-UA": `/poslugy/${displayedService?.slug.uk}`,
+                "uk-UA": `/posluhy/${displayedService?.slug.uk}`,
                 "ru-RU": `/ru/uslugi/${displayedService?.slug.ru}`,
             },
         },
@@ -63,42 +66,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
     };
 }
-interface ServicePageProps {
-    params: Promise<{ locale: string; slug: string }>;
-}
 
-export default async function ServicePage({ params }: ServicePageProps) {
-    const { locale, slug } = await params;
-
-    if (slug === "lazerna-korekcziya-zoru" || slug === "likuvannya-katarakti") {
-        notFound();
-    }
-
+export default function CataractPage() {
     const displayedService: ServicesListProps | undefined = servicesList.find(
-        service => service.slug[locale as LocaleType] === slug
+        service => service.key === "likuvannya-katarakti"
     );
 
     if (!displayedService) {
         notFound();
     }
-    const breadcrumb = [
-        { name: "poslugy", href: "/poslugy" },
-        { name: displayedService.key, href: `/${displayedService.key}` },
-    ];
 
+    const breadcrumb = [
+        { name: "posluhy", href: "/posluhy" },
+        {
+            name: displayedService.key,
+            href: "/posluhy/likuvannya-katarakti",
+        },
+    ];
     const feedbackList = feedbacksList.filter(
         fb => fb.service === displayedService.key
     );
+    const locale = useLocale();
 
-    const showedFeedbacks =
-        feedbackList.length > 0 ? feedbackList : feedbacksList;
     const serviceData = servicesData.find(
         service => service.name.key === displayedService.key
     );
     if (!serviceData) {
         notFound();
     }
-
     const heroData = serviceData[locale as LocaleType].sections?.find(
         item => item.type === "hero"
     )?.data;
@@ -115,7 +110,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 locale={locale as LocaleType}
                 serviceData={serviceData}
             />
-            <FeedbackSection list={showedFeedbacks} slideAmount={4} />
+            {feedbackList.length > 0 && (
+                <FeedbackSection list={feedbackList} slideAmount={4} />
+            )}
             {faqList && faqList.content.length > 0 && (
                 <FAQService faqList={faqList} />
             )}

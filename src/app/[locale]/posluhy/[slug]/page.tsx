@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { useLocale } from "next-intl";
 
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
@@ -18,22 +17,20 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { locale } = await params;
+    const { locale, slug } = await params;
 
     const displayedService: ServicesListProps | undefined = servicesList.find(
-        service => service.key === "lazerna-korekcziya-zoru"
+        service => service.slug[locale as LocaleType] === slug
     );
     const serviceData =
         displayedService &&
-        servicesData.find(
-            service => service.name.key === "lazerna-korekcziya-zoru"
-        );
+        servicesData.find(service => service.name.key === displayedService.key);
     const langPrefix =
         locale === "en"
             ? "/en/services"
             : locale === "ru"
               ? "/ru/uslugi"
-              : "/poslugy";
+              : "/posluhy";
     const title =
         serviceData &&
         serviceData[locale as LocaleType].sections?.find(
@@ -53,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             canonical: `${langPrefix}/${end}`,
             languages: {
                 "en-US": `/en/services/${displayedService?.slug.en}`,
-                "uk-UA": `/poslugy/${displayedService?.slug.uk}`,
+                "uk-UA": `/posluhy/${displayedService?.slug.uk}`,
                 "ru-RU": `/ru/uslugi/${displayedService?.slug.ru}`,
             },
         },
@@ -66,34 +63,42 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
     };
 }
+interface ServicePageProps {
+    params: Promise<{ locale: string; slug: string }>;
+}
 
-export default function LazerPage() {
+export default async function ServicePage({ params }: ServicePageProps) {
+    const { locale, slug } = await params;
+
+    if (slug === "lazerna-korekcziya-zoru" || slug === "likuvannya-katarakti") {
+        notFound();
+    }
+
     const displayedService: ServicesListProps | undefined = servicesList.find(
-        service => service.key === "lazerna-korekcziya-zoru"
+        service => service.slug[locale as LocaleType] === slug
     );
 
     if (!displayedService) {
         notFound();
     }
-
     const breadcrumb = [
-        { name: "poslugy", href: "/poslugy" },
-        {
-            name: displayedService.key,
-            href: "/poslugy/lazerna-korekcziya-zoru",
-        },
+        { name: "posluhy", href: "/posluhy" },
+        { name: displayedService.key, href: `/${displayedService.key}` },
     ];
+
     const feedbackList = feedbacksList.filter(
         fb => fb.service === displayedService.key
     );
-    const locale = useLocale();
 
+    const showedFeedbacks =
+        feedbackList.length > 0 ? feedbackList : feedbacksList;
     const serviceData = servicesData.find(
         service => service.name.key === displayedService.key
     );
     if (!serviceData) {
         notFound();
     }
+
     const heroData = serviceData[locale as LocaleType].sections?.find(
         item => item.type === "hero"
     )?.data;
@@ -110,9 +115,7 @@ export default function LazerPage() {
                 locale={locale as LocaleType}
                 serviceData={serviceData}
             />
-            {feedbackList.length > 0 && (
-                <FeedbackSection list={feedbackList} slideAmount={4} />
-            )}
+            <FeedbackSection list={showedFeedbacks} slideAmount={4} />
             {faqList && faqList.content.length > 0 && (
                 <FAQService faqList={faqList} />
             )}
