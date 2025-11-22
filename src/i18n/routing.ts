@@ -131,5 +131,9 @@ export const routing = defineRouting({
             en: "/eye-diseases/astigmatism",
             ru: "/glaznye-bolezni/astigmatizm",
         },
+        "/politika-konfidenczijnosti": {
+            en: "/privacy-policy",
+            ru: "/privacy-policy",
+        },
     },
 });

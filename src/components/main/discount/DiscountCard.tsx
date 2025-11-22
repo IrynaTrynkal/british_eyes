@@ -78,7 +78,12 @@ export const DiscountCard = ({
                     )
                 )}
                 {data.discountShortData?.learnMore ? (
-                    <LinkAction small href="/aktsiyi" name={t("details")} />
+                    <LinkAction
+                        small
+                        href="/aktsiyi"
+                        name={t("details")}
+                        className="absolute right-0 bottom-0"
+                    />
                 ) : (
                     <BookingOnlineForm className="absolute right-0 bottom-0" />
                 )}
