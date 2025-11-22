@@ -7,14 +7,19 @@ export const phoneList = [
 export const hotLineNumber = "0 800 507 077";
 
 export const socialLinks = [
-    { name: "instagram", link: "https://www.instagram.com/" },
-    { name: "facebook", link: "https://www.facebook.com/" },
+    {
+        name: "instagram",
+        link: "https://www.instagram.com/eyes.ua",
+    },
+    {
+        name: "facebook",
+        link: "https://www.facebook.com/share/1BwqtDUNuU",
+    },
 ];
 
 export const gogleMapLink = "https://maps.app.goo.gl/4SRz8f9eztXPxMJ9A";
 
-export const aboutSertification =
-    "https://eyes.ua/wp-content/uploads/2022/07/photo_2022-07-07-10.32.18.pdf";
+export const aboutSertification = "/files/serteficate.pdf";
 
 export const BOCemail = "kiev@eyes.ua";
 

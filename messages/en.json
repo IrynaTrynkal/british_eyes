@@ -142,7 +142,8 @@
         "consultation-and-diagnostic-ophthalmologists": "Consultation and diagnostic ophthalmologists",
         "childrens-ophthalmologists": "Children’s Ophthalmologists",
         "doctors-anesthesiologists": "Doctors anesthesiologists",
-        "ophthalmic-surgeons": "Ophthalmic surgeons"
+        "ophthalmic-surgeons": "Ophthalmic surgeons",
+        "politika-konfidenczijnosti": "Privacy Policy"
     },
     "Modals": {
         "callUs": "Contact us",
@@ -423,5 +424,10 @@
     "Instructions": {
         "titleSEO": "Patient Guides and Instructions. British Ophthalmology Center | EYES",
         "descriptionSEO": "➔ Patient guides and instructions. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077"
+    },
+    "PolicyPage": {
+        "title": "Privacy Policy",
+        "titleSEO": "Privacy Policy | Британський офтальмологічний центр",
+        "descriptionSEO": "British Eye Center LLC (“Company”, “We”) respects your privacy and is committed to protecting the personal data of users of www.eyes.ua (“Website”). This Privacy Policy explains what data we collect, how we process it, for what purpose, who we may share it with, and what rights you have."
     }
 }

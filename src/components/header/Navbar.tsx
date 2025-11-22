@@ -9,6 +9,7 @@ import { MenuBurgerButton } from "./MenuBurgerButton";
 import { MenuMobWindow } from "./MenuMobWindow";
 import { MenuPC } from "./MenuPC";
 import { PhoneButton } from "./PhoneButton";
+import { PhoneButtonMob } from "./PhoneButtonMob";
 import { PhoneList } from "./PhoneList";
 
 const Navbar = () => {
@@ -47,10 +48,7 @@ const Navbar = () => {
             </div>
 
             <div className="prepc:hidden flex items-center gap-6">
-                <PhoneButton
-                    togglePhoneListOpen={togglePhoneListOpen}
-                    isPhoneListOpened={isPhoneListOpened}
-                />
+                <PhoneButtonMob />
                 <BookingOnlineForm />
                 <MenuBurgerButton
                     isHeaderMenuOpened={isHeaderMenuOpened}
