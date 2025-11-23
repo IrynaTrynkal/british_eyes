@@ -77,3 +77,10 @@ export const doctorsOrderQuery = defineQuery(`
   "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, 
   "about":about[_key == $language][0].value
   }`);
+
+export const blogMetaSlugsQuery = defineQuery(`
+      *[_type == "blog" && !(_id in path("drafts.**"))].slug.current
+`);
+export const doctorMetaSlugsQuery = defineQuery(`
+      *[_type == "doctor" && !(_id in path("drafts.**"))].slug.current
+`);
