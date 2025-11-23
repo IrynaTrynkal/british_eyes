@@ -122,7 +122,7 @@ export const Footer = () => {
                         </a>
                     </div>
                     <p className="pc:ml-auto pc:mr-0 text-sm leading-[18px]">
-                        &copy; 2025 БОЦ
+                        &copy;
                     </p>
                 </div>
                 <div className="prepc:hidden absolute top-0 right-4">

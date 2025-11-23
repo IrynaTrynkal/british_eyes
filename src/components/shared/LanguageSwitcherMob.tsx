@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 "use client";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
@@ -14,6 +15,22 @@ export default function LanguageSwitcherMob() {
     const searchParams = useSearchParams();
     const pathName = usePathname();
     const [hash, setHash] = useState("");
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+
+        delete window.BinotelChat;
+        delete window.binotel_chat_config;
+
+        document
+            .querySelectorAll('script[src*="binotel.com"]')
+            .forEach(s => s.remove());
+
+        const chat = document.createElement("script");
+        chat.src = "//widgets.binotel.com/chat/widgets/nYlU4dOMPLM1vnvhEoRB.js";
+        chat.async = true;
+        document.body.appendChild(chat);
+    }, [locale]);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
