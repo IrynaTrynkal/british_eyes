@@ -795,6 +795,12 @@ export type DoctorsOrderQueryResult = Array<{
     conferences: PortableText | null;
     about: PortableTextAll | null;
 }> | null;
+// Variable: blogMetaSlugsQuery
+// Query: *[_type == "blog" && !(_id in path("drafts.**"))].slug.current
+export type BlogMetaSlugsQueryResult = Array<string | null>;
+// Variable: doctorMetaSlugsQuery
+// Query: *[_type == "doctor" && !(_id in path("drafts.**"))].slug.current
+export type DoctorMetaSlugsQueryResult = Array<string | null>;
 
 // Query TypeMap
 import "@sanity/client";
@@ -810,5 +816,7 @@ declare module "@sanity/client" {
         '\n      *[_type == "blog" && slug.current == $slug][0]{\n   service, "title":title[_key == $language][0].value,\n     publication, "slug":slug.current, "image":image.asset->url,\n     "shortText":shortText[_key == $language][0].value,\n     "content": content[_key == $language][0].value}': BlogQueryResult;
         '\n      *[_type == "blog" && service == $service && slug.current != $slug]{\n   service, "title":title[_key == $language][0].value,\n     publication, "slug":slug.current, "image":image.asset->url,\n     "content": content[_key == $language][0].value,\n     "shortText":shortText[_key == $language][0].value\n }': BlogShortByServiceQueryResult;
         '\n*[_type == "orderDoctors"][0].\n  doctors[]->{\n    _id,\n  "name":name[_key == $language][0].value, "slug":slug.current, departments, services, \n  "position":position[_key == $language][0].value, "photo":photo, \n  experience, "specialization":specialization[_key == $language][0].value, \n  "education":education[_key == $language][0].value, "activity":activity[_key == $language][0].value, \n  "training":training[_key == $language][0].value, "conferences":conferences[_key == $language][0].value, \n  "about":about[_key == $language][0].value\n  }': DoctorsOrderQueryResult;
+        '\n      *[_type == "blog" && !(_id in path("drafts.**"))].slug.current\n': BlogMetaSlugsQueryResult;
+        '\n      *[_type == "doctor" && !(_id in path("drafts.**"))].slug.current\n': DoctorMetaSlugsQueryResult;
     }
 }
