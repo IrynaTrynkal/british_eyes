@@ -3,6 +3,8 @@ import type { MetadataRoute } from "next";
 import { sanityFetch } from "@/sanity/lib/live";
 import { blogMetaSlugsQuery, doctorMetaSlugsQuery } from "@/sanity/lib/queries";
 
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
