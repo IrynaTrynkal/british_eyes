@@ -24,7 +24,6 @@ export async function POST(req: Request) {
                 body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
             }
         );
-        console.log("TOKEN апі", recaptchaToken);
 
         const g = await googleRes.json();
 
