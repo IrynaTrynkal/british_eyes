@@ -1,312 +1,372 @@
-/*Цвет кнопки GetCall : */
+/* =============================================
+   1. Верхні блоки (години / хвилини / день)
+   — перекриття theme_10.css
+============================================= */
 
+/* ГОДИНИ + ХВИЛИНИ — ПАСИВНА */
+body #bingc-passive#bingc-passive div.bingc-passive-date-selection-select-hour,
 body
-    #bingc-phone-button
-    svg.bingc-phone-button-circle
-    circle.bingc-phone-button-circle-inside {
-    fill: #065d43 !important;
-}
-
-body
-    #bingc-phone-button:hover
-    svg.bingc-phone-button-circle
-    circle.bingc-phone-button-circle-inside {
-    fill: #065d43 !important;
-}
-body
-    #bingc-phone-button
-    svg.bingc-phone-button-circle
-    circle.bingc-phone-button-circle-outside {
-    fill: #fffff6 !important;
-    fill-opacity: 0.5 !important;
-}
-
-/* Цвет выпадающего комментария при наведении на кнопку GetCall: */
-
-body #bingc-phone-button div.bingc-phone-button-tooltip {
-    background: #065d43 !important;
-}
-
-body
-    #bingc-phone-button
-    div.bingc-phone-button-tooltip
-    svg.bingc-phone-button-arrow
-    polyline {
-    fill: #065d43 !important;
-}
-
-/*Цвет фона пассивной/активной формы: */
-
-body #bingc-passive > div.bingc-passive-overlay {
-    background: #dddddc !important;
-}
-body #bingc-active {
-    background: #fffff6 !important;
-}
-/*Цвет фона кнопки "Перезвоните" на пассивной/активной форме: */
-
-body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    a.bingc-passive-phone-form-button {
-    background: #0a7052 !important;
-}
-
-body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    a.bingc-passive-phone-form-button:hover {
-    background: #06412f !important;
-}
-
-/*Цвет фона окна “введения номера” на пассивной/активной форме и цвет вводимого текста:*/
-
-body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    input.bingc-passive-get-phone-form-input {
-    color: #000000 !important;
-    font-weight: 500;
-    background: #ffffff !important;
-}
-
-body
-    #bingc-active
-    div.bingc-active-overlay
-    div.bingc-active-content
-    div.bingc-active-get-phone-form
-    form.bingc-active-get-phone-form
-    input.bingc-active-get-phone-form-input {
-    color: #000000 !important;
-    font-weight: 500;
-    background: #ffffff !important;
-}
-
-/*Изменение цвета фона выпадающих списков дней и времени перезвона в нерабочее время в пассивной/активной формах GetCall:*/
-/* body
-    #bingc-active
-    div.bingc-active-overlay
-    div.bingc-active-content
-    div.bingc-active-get-phone-form
-    form.bingc-active-get-phone-form
-    div.bingc-active-get-phone-form-date-selection
-    div.bingc-active-date-selection-select-hour:hover,
-#bingc-active
-    div.bingc-active-overlay
-    div.bingc-active-content
-    div.bingc-active-get-phone-form
-    form.bingc-active-get-phone-form
-    div.bingc-active-get-phone-form-date-selection
-    div.bingc-active-date-selection-select-minutes:hover {
-    background: #065d43 !important;
-}
-body
-    #bingc-active
-    div.bingc-active-overlay
-    div.bingc-active-content
-    div.bingc-active-get-phone-form
-    form.bingc-active-get-phone-form
-    div.bingc-active-get-phone-form-date-selection
-    div.bingc-active-date-selection-select-hour,
-#bingc-active
-    div.bingc-active-overlay
-    div.bingc-active-content
-    div.bingc-active-get-phone-form
-    form.bingc-active-get-phone-form
-    div.bingc-active-get-phone-form-date-selection
-    div.bingc-active-date-selection-select-minutes {
-    background: #065d43 !important;
-}
-body
-    #bingc-active
-    div.bingc-active-overlay
-    div.bingc-active-content
-    div.bingc-active-get-phone-form
-    form.bingc-active-get-phone-form
-    div.bingc-active-get-phone-form-date-selection
-    div.bingc-active-date-selection-select-hour
-    div.bingc-active-date-selection-select-hour-list-of-hours-container
-    ul.bingc-active-date-selection-select-hour-list-of-hours
-    li:hover {
-    background: #065d43 !important;
-}
-body
-    #bingc-active
-    div.bingc-active-overlay
-    div.bingc-active-content
-    div.bingc-active-get-phone-form
-    form.bingc-active-get-phone-form
-    div.bingc-active-get-phone-form-date-selection
-    div.bingc-active-date-selection-select-minutes
-    div.bingc-active-date-selection-select-minutes-list-of-minutes-container
-    ul.bingc-active-date-selection-select-minutes-list-of-minutes
-    li:hover {
-    background: #065d43 !important;
-}
-body
-    #bingc-active
-    div.bingc-active-overlay
-    div.bingc-active-content
-    div.bingc-we-will-call-you.bingc-offline-form
-    div.bingc-active-date-selection-select-day:hover {
-    background: #065d43 !important;
-}
-#bingc-active
-    div.bingc-active-overlay
-    div.bingc-active-content
-    div.bingc-we-will-call-you.bingc-offline-form
-    div.bingc-active-date-selection-select-day
-    div.bingc-active-date-selection-select-day-list-of-days-container
-    ul.bingc-active-date-selection-select-day-list-of-days
-    li:hover {
-    background: #065d43 !important;
-} */
-
-body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    div.bingc-passive-get-phone-form-date-selection
-    div.bingc-passive-date-selection-select-hour,
-body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    div.bingc-passive-get-phone-form-date-selection
+    #bingc-passive#bingc-passive
     div.bingc-passive-date-selection-select-minutes {
-    background: #065d43 !important;
+    background: #0a7052 !important;
     color: #fff !important;
 }
 body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    div.bingc-passive-get-phone-form-date-selection
+    #bingc-passive#bingc-passive
     div.bingc-passive-date-selection-select-hour:hover,
 body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    div.bingc-passive-get-phone-form-date-selection
+    #bingc-passive#bingc-passive
     div.bingc-passive-date-selection-select-minutes:hover {
     background: #06412f !important;
     color: #fff !important;
 }
 
-body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    div.bingc-passive-get-phone-form-date-selection
-    div.bingc-passive-date-selection-select-hour
-    div.bingc-passive-date-selection-select-hour-list-of-hours-container
-    ul.bingc-passive-date-selection-select-hour-list-of-hours
-    li:hover,
-body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    div.bingc-passive-get-phone-form-date-selection
-    div.bingc-passive-date-selection-select-minutes
-    div.bingc-passive-date-selection-select-minutes-list-of-minutes-container
-    ul.bingc-passive-date-selection-select-minutes-list-of-minutes
-    li:hover {
-    background: #06412f !important;
+/* ДЕНЬ — ПАСИВНА */
+body #bingc-passive#bingc-passive div.bingc-passive-date-selection-select-day {
+    background: #0a7052 !important;
     color: #fff !important;
 }
 body
-    #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    div.bingc-passive-get-phone-form-date-selection
+    #bingc-passive#bingc-passive
     div.bingc-passive-date-selection-select-day:hover {
     background: #06412f !important;
     color: #fff !important;
 }
+body
+    #bingc-passive#bingc-passive
+    span.bingc-passive-date-selection-selected-day {
+    color: #fff !important;
+}
+
+/* ГОДИНИ/ХВИЛИНИ/ДЕНЬ — АКТИВНА */
+body #bingc-active#bingc-active div.bingc-active-date-selection-select-hour,
+body #bingc-active#bingc-active div.bingc-active-date-selection-select-minutes,
+body #bingc-active#bingc-active div.bingc-active-date-selection-select-day {
+    background: #0a7052 !important;
+    color: #fff !important;
+}
+body
+    #bingc-active#bingc-active
+    div.bingc-active-date-selection-select-hour:hover,
+body
+    #bingc-active#bingc-active
+    div.bingc-active-date-selection-select-minutes:hover,
+body
+    #bingc-active#bingc-active
+    div.bingc-active-date-selection-select-day:hover {
+    background: #06412f !important;
+    color: #fff !important;
+}
+body #bingc-active#bingc-active span.bingc-active-date-selection-selected-day {
+    color: #fff !important;
+}
+
+/* =============================================
+   2. Випадаючі списки (LI) – ПАСИВНА + АКТИВНА
+   — завжди білі з чорним текстом
+============================================= */
 
 body
     #bingc-passive
-    div.bingc-passive-overlay
-    div.bingc-passive-content
-    div.bingc-passive-get-phone-form
-    form.bingc-passive-get-phone-form
-    div.bingc-passive-get-phone-form-date-selection
-    div.bingc-passive-date-selection-select-day
-    div.bingc-passive-date-selection-select-day-list-of-days-container
+    ul.bingc-passive-date-selection-select-hour-list-of-hours
+    li,
+body
+    #bingc-passive
+    ul.bingc-passive-date-selection-select-minutes-list-of-minutes
+    li,
+body #bingc-passive ul.bingc-passive-date-selection-select-day-list-of-days li,
+body #bingc-active ul.bingc-active-date-selection-select-hour-list-of-hours li,
+body
+    #bingc-active
+    ul.bingc-active-date-selection-select-minutes-list-of-minutes
+    li,
+body #bingc-active ul.bingc-active-date-selection-select-day-list-of-days li {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Hover — теж білий, чорний (забираємо зелене) */
+body
+    #bingc-passive
+    ul.bingc-passive-date-selection-select-hour-list-of-hours
+    li:hover,
+body
+    #bingc-passive
+    ul.bingc-passive-date-selection-select-minutes-list-of-minutes
+    li:hover,
+body
+    #bingc-passive
     ul.bingc-passive-date-selection-select-day-list-of-days
+    li:hover,
+body
+    #bingc-active
+    ul.bingc-active-date-selection-select-hour-list-of-hours
+    li:hover,
+body
+    #bingc-active
+    ul.bingc-active-date-selection-select-minutes-list-of-minutes
+    li:hover,
+body
+    #bingc-active
+    ul.bingc-active-date-selection-select-day-list-of-days
+    li:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* =============================================
+   3. Кнопки “Перезвоните”
+============================================= */
+
+body #bingc-passive a.bingc-passive-phone-form-button,
+body #bingc-active a.bingc-active-phone-form-button {
+    background: #0a7052 !important;
+    color: #ffffff !important;
+}
+body #bingc-passive a.bingc-passive-phone-form-button:hover,
+body #bingc-active a.bingc-active-phone-form-button:hover {
+    background: #06412f !important;
+    color: #ffffff !important;
+}
+
+/* =============================================
+   4. Поле введення номера
+============================================= */
+
+body #bingc-passive input.bingc-passive-get-phone-form-input,
+body #bingc-active input.bingc-active-get-phone-form-input {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* =============================================
+   5. Фон форм
+============================================= */
+
+body #bingc-passive > .bingc-passive-overlay,
+body #bingc-active {
+    background: #ffffff !important;
+}
+
+/* =============================================
+   6. Кругла кнопка GetCall
+============================================= */
+
+body
+    #bingc-phone-button
+    svg.bingc-phone-button-circle
+    circle.bingc-phone-button-circle-inside {
+    fill: #0a7052 !important;
+}
+body
+    #bingc-phone-button:hover
+    svg.bingc-phone-button-circle
+    circle.bingc-phone-button-circle-inside {
+    fill: #06412f !important;
+}
+
+body
+    #bingc-phone-button
+    svg.bingc-phone-button-circle
+    circle.bingc-phone-button-circle-outside {
+    fill: #0a7052 !important;
+    fill-opacity: 0.5 !important;
+}
+body
+    #bingc-phone-button:hover
+    svg.bingc-phone-button-circle
+    circle.bingc-phone-button-circle-outside {
+    fill: #06412f !important;
+    fill-opacity: 0.5 !important;
+}
+
+body #bingc-phone-button svg.bingc-phone-button-icon-icon path {
+    fill: #ffffff !important;
+}
+
+body #bingc-phone-button div.bingc-phone-button-tooltip {
+    background: #0a7052 !important;
+    color: #ffffff !important;
+}
+body
+    #bingc-phone-button
+    div.bingc-phone-button-tooltip
+    svg.bingc-phone-button-arrow
+    polyline {
+    fill: #0a7052 !important;
+}
+/* === 1. Верхня смужка (обране значення) у відкритому списку === */
+/* Години / хвилини / день — ПАСИВНА + АКТИВНА форми */
+body #bingc-passive#bingc-passive div.bingc-passive-date-selection-select-hour,
+body
+    #bingc-passive#bingc-passive
+    div.bingc-passive-date-selection-select-minutes,
+body #bingc-passive#bingc-passive div.bingc-passive-date-selection-select-day,
+body #bingc-active#bingc-active div.bingc-active-date-selection-select-hour,
+body #bingc-active#bingc-active div.bingc-active-date-selection-select-minutes,
+body #bingc-active#bingc-active div.bingc-active-date-selection-select-day {
+    background: #0a7052 !important; /* зелений як кнопка */
+    color: #ffffff !important; /* білий текст */
+}
+
+/* === 2. Елементи випадаючих списків (рядки 15/16/17/...) === */
+/* ПАСИВНА форма */
+body
+    #bingc-passive#bingc-passive
+    ul.bingc-passive-date-selection-select-hour-list-of-hours
+    li,
+body
+    #bingc-passive#bingc-passive
+    ul.bingc-passive-date-selection-select-minutes-list-of-minutes
+    li,
+body
+    #bingc-passive#bingc-passive
+    ul.bingc-passive-date-selection-select-day-list-of-days
+    li {
+    background: #ffffff !important; /* білий фон */
+    color: #000000 !important; /* чорний текст */
+}
+
+/* АКТИВНА форма */
+body
+    #bingc-active#bingc-active
+    ul.bingc-active-date-selection-select-hour-list-of-hours
+    li,
+body
+    #bingc-active#bingc-active
+    ul.bingc-active-date-selection-select-minutes-list-of-minutes
+    li,
+body
+    #bingc-active#bingc-active
+    ul.bingc-active-date-selection-select-day-list-of-days
+    li {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Hover по елементах списків – залишаємо таким самим (без зеленої заливки) */
+body
+    #bingc-passive#bingc-passive
+    ul.bingc-passive-date-selection-select-hour-list-of-hours
+    li:hover,
+body
+    #bingc-passive#bingc-passive
+    ul.bingc-passive-date-selection-select-minutes-list-of-minutes
+    li:hover,
+body
+    #bingc-passive#bingc-passive
+    ul.bingc-passive-date-selection-select-day-list-of-days
+    li:hover,
+body
+    #bingc-active#bingc-active
+    ul.bingc-active-date-selection-select-hour-list-of-hours
+    li:hover,
+body
+    #bingc-active#bingc-active
+    ul.bingc-active-date-selection-select-minutes-list-of-minutes
+    li:hover,
+body
+    #bingc-active#bingc-active
+    ul.bingc-active-date-selection-select-day-list-of-days
     li:hover {
     background: #06412f !important;
     color: #fff !important;
 }
 
-/*Изменения цвета текста на активной и пассивной форме GetCall*/
+/* ===== КНОПКА "ЧЕКАЮ НА ДЗВІНОК" (після відправки номера) ===== */
 
+/* ПАСИВНА */
 body
-    #bingc-passive
+    #bingc-passive#bingc-passive
     div.bingc-passive-overlay
     div.bingc-passive-content
-    div.bingc-we-will-call-you
-    div.bingc-we-will-call-you-alignment
-    div.bingc-we-will-call-you-restriction {
-    color: #151515 !important;
+    div.bingc-we-already-call-you,
+body
+    #bingc-passive#bingc-passive
+    div.bingc-passive-overlay
+    div.bingc-passive-content
+    div.bingc-we-already-call-you
+    div {
+    background: #0a7052 !important;
+    color: #ffffff !important;
 }
 
+/* АКТИВНА */
 body
-    #bingc-active
+    #bingc-active#bingc-active
     div.bingc-active-overlay
     div.bingc-active-content
-    div.bingc-we-will-call-you {
-    color: #151515 !important;
-}
-
+    div.bingc-we-already-call-you,
 body
-    #bingc-active
+    #bingc-active#bingc-active
     div.bingc-active-overlay
     div.bingc-active-content
-    div.bingc-we-will-call-you
-    span {
-    color: #151515 !important;
+    div.bingc-we-already-call-you
+    div {
+    background: #0a7052 !important;
+    color: #ffffff !important;
 }
 
+/* Hover */
 body
-    #bingc-passive
+    #bingc-passive#bingc-passive
     div.bingc-passive-overlay
     div.bingc-passive-content
-    div.bingc-we-will-call-you
-    span.small-text {
-    color: #000 !important;
+    div.bingc-we-already-call-you:hover,
+body
+    #bingc-active#bingc-active
+    div.bingc-active-overlay
+    div.bingc-active-content
+    div.bingc-we-already-call-you:hover {
+    background: #06412f !important;
+    color: #ffffff !important;
 }
+/* === ПЕРЕМАЛЬОВУЄМО КНОПКУ "ПЕРЕЗВОНИТЕ" ПОВНІСТЮ === */
+
+/* ПАСИВНА ФОРМА */
 body
-    #bingc-passive
+    #bingc-passive#bingc-passive
     div.bingc-passive-overlay
     div.bingc-passive-content
-    div.bingc-we-will-call-you.bingc-offline-form {
-    color: #000 !important;
+    div.bingc-passive-get-phone-form
+    form.bingc-passive-get-phone-form
+    a.bingc-passive-phone-form-button.bingc-passive-phone-form-button {
+    background: #0a7052 !important;
+    color: #ffffff !important;
 }
 
-body #bwc-widget-action button.bwc-get-call {
-    display: none !important;
+/* hover */
+body
+    #bingc-passive#bingc-passive
+    div.bingc-passive-overlay
+    div.bingc-passive-content
+    div.bingc-passive-get-phone-form
+    form.bingc-passive-get-phone-form
+    a.bingc-passive-phone-form-button.bingc-passive-phone-form-button:hover {
+    background: #06412f !important;
+    color: #ffffff !important;
+}
+
+/* === АКТИВНА ФОРМА === */
+body
+    #bingc-active#bingc-active
+    div.bingc-active-overlay
+    div.bingc-active-content
+    div.bingc-active-get-phone-form
+    form.bingc-active-get-phone-form
+    a.bingc-active-phone-form-button.bingc-active-phone-form-button {
+    background: #0a7052 !important;
+    color: #ffffff !important;
+}
+
+/* hover */
+body
+    #bingc-active#bingc-active
+    div.bingc-active-overlay
+    div.bingc-active-content
+    div.bingc-active-get-phone-form
+    form.bingc-active-get-phone-form
+    a.bingc-active-phone-form-button.bingc-active-phone-form-button:hover {
+    background: #06412f !important;
+    color: #ffffff !important;
 }
