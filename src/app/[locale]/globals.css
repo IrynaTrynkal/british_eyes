@@ -298,3 +298,6 @@ option {
 /* * {
     outline: 1px solid red;
 } */
+.grecaptcha-badge {
+    display: none !important;
+}

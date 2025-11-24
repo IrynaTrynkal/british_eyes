@@ -49,11 +49,11 @@ export default function DateInput({
 
     return (
         <DatePicker
-            selected={value ? new Date(value) : null}
+            selected={value ? new Date(`${value}T00:00:00`) : null}
             locale={locale}
             minDate={new Date()}
             onChange={date => {
-                onChange(date ? date.toISOString() : "");
+                onChange(date ? format(date, "yyyy-MM-dd") : "");
             }}
             onClickOutside={() => setOpen(false)}
             open={open}
