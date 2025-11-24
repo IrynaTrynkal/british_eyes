@@ -1,6 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { FormInModalProps } from "@/types/modalProps";
 
@@ -14,12 +15,15 @@ export const BookingCallForm = ({
     notificationHandler,
     className,
 }: FormInModalProps) => {
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
+
     const t = useTranslations("Form");
 
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
         title: "Перезвоніть мені",
+        recaptchaToken: "",
     });
     const [errors, setErrors] = useState({
         name: "",
@@ -68,8 +72,17 @@ export const BookingCallForm = ({
         if (!validate()) return;
 
         try {
+            const token = await recaptchaRef.current?.executeAsync();
+            recaptchaRef.current?.reset();
+            if (!token) {
+                console.error("Recaptcha token missing");
+                setLoading(false);
+                return;
+            }
             setLoading(true);
-            await notificationHandler(() => onSendData(formData));
+            await notificationHandler(() =>
+                onSendData({ ...formData, recaptchaToken: token })
+            );
         } catch (error) {
             console.error("Відправка не вдалася:", error);
         } finally {
@@ -80,6 +93,7 @@ export const BookingCallForm = ({
             name: "",
             phone: "",
             title: "Перезвоніть мені",
+            recaptchaToken: "",
         });
     };
 
@@ -142,6 +156,11 @@ export const BookingCallForm = ({
                 </div>
 
                 <div className="tab:justify-end tab:w-[47%] pc:w-[318px] flex justify-center">
+                    <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                        size="invisible"
+                    />
                     <ButtonAction
                         disabled={loading}
                         name={loading ? t("loading") : t("submit")}

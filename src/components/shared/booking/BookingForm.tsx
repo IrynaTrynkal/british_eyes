@@ -1,6 +1,7 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { LocaleType } from "@/types/LocaleType";
 import { FormInModalProps } from "@/types/modalProps";
@@ -20,6 +21,8 @@ export const BookingForm = ({
     online,
     title,
 }: FormInModalProps) => {
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
+
     const t = useTranslations("Form");
     const locale = useLocale();
     const topicOptions = [
@@ -38,6 +41,7 @@ export const BookingForm = ({
         topic: "",
         comment: "",
         title: "Онлайн запис",
+        recaptchaToken: "",
     });
     const [errors, setErrors] = useState({
         name: "",
@@ -93,8 +97,18 @@ export const BookingForm = ({
         if (!validate()) return;
 
         try {
+            const token = await recaptchaRef.current?.executeAsync();
+            recaptchaRef.current?.reset();
+            if (!token) {
+                console.error("Recaptcha token missing");
+                setLoading(false);
+                return;
+            }
+
             setLoading(true);
-            await notificationHandler(() => onSendData(formData));
+            await notificationHandler(() =>
+                onSendData({ ...formData, recaptchaToken: token })
+            );
         } catch (error) {
             console.error("Відправка не вдалася:", error);
         } finally {
@@ -110,6 +124,7 @@ export const BookingForm = ({
             topic: "",
             comment: "",
             title: "Онлайн запис",
+            recaptchaToken: "",
         });
     };
 
@@ -263,6 +278,13 @@ export const BookingForm = ({
                     </div>
 
                     <div className="pc:justify-end flex justify-center">
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey={
+                                process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!
+                            }
+                            size="invisible"
+                        />
                         <ButtonAction
                             disabled={loading}
                             name={loading ? t("loading") : t("submit")}
