@@ -23,6 +23,8 @@ body
 
 /* ДЕНЬ — ПАСИВНА */
 body #bingc-passive#bingc-passive div.bingc-passive-date-selection-select-day {
+    display: flex;
+    justify-content: center;
     background: #0a7052 !important;
     color: #fff !important;
 }
