@@ -9,7 +9,6 @@ import { getTranslations } from "next-intl/server";
 
 import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
-import { BinotelChat } from "@/components/shared/BinotelChat";
 import { GoogleAds } from "@/components/shared/GoogleAds";
 import { routing } from "@/i18n/routing";
 
@@ -88,7 +87,7 @@ export default async function RootLayout({
                         <div className="mx-auto max-w-[1600px]">{children}</div>
                     </main>
                     <Footer />
-                    <BinotelChat />
+                    {/* <BinotelChat /> */}
                     <GoogleAnalytics gaId={GAid} />
                 </body>
             </NextIntlClientProvider>
