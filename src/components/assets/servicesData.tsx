@@ -3667,7 +3667,7 @@ export const servicesData: ServicesProps[] = [
                         pdfCard: {
                             title: "відновлення та догляд за очима після лазерної корекції зору",
                             description: "інструкція",
-                            link: "/files/plati_chastinami__rozstrochka_•_a_bank.pdf",
+                            link: "/files/ELK.pdf",
                             btnName: "завантажити",
                             downloadingName:
                                 "Відновлення_та_догляд_за_очима_після_лазерної_корекції_зору.pdf",
@@ -3955,7 +3955,7 @@ export const servicesData: ServicesProps[] = [
                         pdfCard: {
                             title: "eye recovery and care after laser vision correction",
                             description: "instruction",
-                            link: "/files/plati_chastinami__rozstrochka_•_a_bank.pdf",
+                            link: "/files/ELK ENG.pdf",
                             btnName: "download",
                             downloadingName:
                                 "Eye_recovery_and_care_after_laser_vision_correction.pdf",
@@ -4242,7 +4242,7 @@ export const servicesData: ServicesProps[] = [
                         pdfCard: {
                             title: "восстановление и уход за глазами после лазерной коррекции зрения",
                             description: "инструкция",
-                            link: "/files/plati_chastinami__rozstrochka_•_a_bank.pdf",
+                            link: "/files/ELK RU.pdf",
                             btnName: "скачать",
                             downloadingName:
                                 "Восстановление_и_уход_за_глазами_после_лазерной_коррекции_зрения.pdf",
