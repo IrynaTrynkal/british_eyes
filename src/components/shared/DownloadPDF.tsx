@@ -1,6 +1,6 @@
 import { PDFType } from "../assets/servicesData";
 import { IconPDF } from "./icons/IconPDF";
-import { LinkAction } from "./LinkAction";
+import { LinkDownload } from "./LinkDownload";
 
 export const DownloadPDF = ({ dataPDF }: { dataPDF: PDFType }) => {
     return (
@@ -15,7 +15,7 @@ export const DownloadPDF = ({ dataPDF }: { dataPDF: PDFType }) => {
                         {dataPDF.description}
                     </p>
                 </div>
-                <LinkAction
+                <LinkDownload
                     href={dataPDF.link}
                     secondary
                     ivory
@@ -25,13 +25,7 @@ export const DownloadPDF = ({ dataPDF }: { dataPDF: PDFType }) => {
                     className="mr-1 mb-1"
                 />
             </div>
-            {/* <a
-                href="/files/brochure.pdf"
-                download="Anvil_Brochure.pdf"
-                className="flex items-center gap-2"
-            >
-                Завантажити PDF
-            </a> */}
+
             <div className="border-ivory bg-white-100/10 pc:px-3 absolute top-3 right-3 rounded border px-2 py-1.5">
                 <IconPDF />
             </div>
