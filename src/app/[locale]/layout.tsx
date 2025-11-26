@@ -1,7 +1,6 @@
 import "./globals.css";
 import "./wbinotel.css";
 
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { Arimo, Oswald } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -66,8 +65,8 @@ export default async function RootLayout({
     if (!hasLocale(routing.locales, locale)) {
         notFound();
     }
-    const GAid = process.env.GA_ID || "";
-    const GATM = process.env.GTM_ID || "";
+    // const GAid = process.env.GA_ID || "";
+    // const GATM = process.env.GTM_ID || "";
     // const GoogleAdsId = process.env.GOOGLE_ADS_ID || "";
     return (
         <html lang={locale} suppressHydrationWarning>
@@ -77,7 +76,7 @@ export default async function RootLayout({
                 {/* <GoogleAds GoogleAdsId={GoogleAdsId} /> */}
                 <meta name="robots" content="noindex,nofollow" />
             </head>
-            <GoogleTagManager gtmId={GATM} />
+            {/* <GoogleTagManager gtmId={GATM} /> */}
             <NextIntlClientProvider>
                 <body
                     className={`${oswald.variable} ${arimo.variable} flex min-h-screen flex-col antialiased`}
@@ -88,7 +87,7 @@ export default async function RootLayout({
                     </main>
                     <Footer />
                     <BinotelChat />
-                    <GoogleAnalytics gaId={GAid} />
+                    {/* <GoogleAnalytics gaId={GAid} /> */}
                 </body>
             </NextIntlClientProvider>
         </html>
