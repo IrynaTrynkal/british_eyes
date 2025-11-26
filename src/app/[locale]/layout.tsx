@@ -9,7 +9,7 @@ import { getTranslations } from "next-intl/server";
 
 import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
-import { GoogleAds } from "@/components/shared/GoogleAds";
+import { BinotelChat } from "@/components/shared/BinotelChat";
 import { routing } from "@/i18n/routing";
 
 const oswald = Oswald({
@@ -68,13 +68,13 @@ export default async function RootLayout({
     }
     const GAid = process.env.GA_ID || "";
     const GATM = process.env.GTM_ID || "";
-    const GoogleAdsId = process.env.GOOGLE_ADS_ID || "";
+    // const GoogleAdsId = process.env.GOOGLE_ADS_ID || "";
     return (
         <html lang={locale} suppressHydrationWarning>
             <head>
                 <link rel="icon" href="/favicon.ico" sizes="any" />
                 <meta property="og:image" content="<generated>" />
-                <GoogleAds GoogleAdsId={GoogleAdsId} />
+                {/* <GoogleAds GoogleAdsId={GoogleAdsId} /> */}
                 <meta name="robots" content="noindex,nofollow" />
             </head>
             <GoogleTagManager gtmId={GATM} />
@@ -87,7 +87,7 @@ export default async function RootLayout({
                         <div className="mx-auto max-w-[1600px]">{children}</div>
                     </main>
                     <Footer />
-                    {/* <BinotelChat /> */}
+                    <BinotelChat />
                     <GoogleAnalytics gaId={GAid} />
                 </body>
             </NextIntlClientProvider>
