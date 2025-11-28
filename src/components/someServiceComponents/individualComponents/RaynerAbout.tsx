@@ -31,7 +31,7 @@ export const RaynerAbout = () => {
                                     <a
                                         href={raynerSiteLink}
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                        rel="noopener noreferrer nofollow"
                                         className="underline"
                                     >
                                         {chunk}
