@@ -28,7 +28,7 @@ export const HeroMain = () => {
                             className="prepc:gap-4 prepc:pr-4 flex items-center gap-2.5 pr-2.5"
                         >
                             <span className="font-oswald prepc:text-xl leading-[120%] font-medium uppercase">
-                                Безкоштовна перевірка зору
+                                {t("promoText")}
                             </span>
                             <IconForPromo />
                         </div>
@@ -75,7 +75,7 @@ export const HeroMain = () => {
                         className="prepc:gap-4 prepc:pr-4 flex items-center gap-2.5 pr-2.5"
                     >
                         <span className="font-oswald prepc:text-xl leading-[120%] font-medium uppercase">
-                            Безкоштовна перевірка зору
+                            {t("promoText")}
                         </span>
                         <IconForPromo />
                     </div>
