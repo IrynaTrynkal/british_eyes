@@ -17,6 +17,7 @@
     --color-error: #900b09;
     --color-light-logo: #f9f9f9;
     --color-logo: #0b755509;
+    --color-promo: #f6df29;
 
     /* 🔠 Шрифти */
     --font-oswald: var(--font-oswald);
@@ -300,4 +301,20 @@ option {
 } */
 .grecaptcha-badge {
     display: none !important;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation-name: marquee;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
 }
