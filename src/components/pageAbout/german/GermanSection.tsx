@@ -52,7 +52,7 @@ export const GermanSection = () => {
                 <a
                     href="https://klinika.ua/"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className={
                         "font-oswald prepc:ml-auto prepc:mr-0 hover:text-ivory active:text-ivory shadow-button tab:h-11 tab:w-[200px] mx-auto flex h-10 w-[288px] items-center justify-center rounded-sm border border-black font-medium uppercase transition-all duration-300 ease-in-out hover:translate-y-1 hover:bg-black hover:shadow-none active:translate-y-1 active:bg-black active:shadow-none"
                     }

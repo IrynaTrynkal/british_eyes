@@ -101,7 +101,7 @@ export const Footer = () => {
                     <a
                         href="https://klinika.ua/"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer nofollow"
                         className="prepc:text-base prepc:px-2.5 pc:mr-[45.5%] hover:bg-ivory tab:mx-0 tab:mb-0 mx-auto mb-6 block w-fit border px-3 py-2.5 text-sm font-medium uppercase transition-all duration-300 ease-in-out hover:text-black"
                     >
                         {t("german")}
