@@ -14,7 +14,7 @@ export const AdressHero = ({
 }) => {
     return (
         <div
-            className={`group mb-[150px] w-[174px] overflow-hidden rounded-sm bg-white/10 px-2 py-1 backdrop-blur-sm ${className}`}
+            className={`group mt-[158px] mb-2.5 w-[174px] overflow-hidden rounded-sm bg-white/10 px-2 py-1 backdrop-blur-sm ${className}`}
         >
             <a
                 href={gogleMapLink}
