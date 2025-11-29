@@ -44,12 +44,12 @@ export default async function AboutPage({
         sanityFetch({
             query: blogsListQuery,
             params: { language: locale },
-            tags: [],
+            tags: ["blog"],
         }),
         sanityFetch({
             query: doctorsOrderQuery,
             params: { language: locale },
-            tags: [],
+            tags: ["doctor", "orderDoctors"],
         }),
     ]);
     const FEEDBACKS_SLIDES_TO_SHOW = 4;
@@ -58,7 +58,6 @@ export default async function AboutPage({
     return (
         <>
             <HeroAbout />
-
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}
                 className="tab:mt-5 prepc:mb-12 my-5"

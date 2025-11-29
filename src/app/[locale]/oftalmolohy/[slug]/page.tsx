@@ -23,7 +23,7 @@ export async function generateMetadata(
     const doctor = await sanityFetch({
         query: doctorQuery,
         params: { language: locale, slug },
-        tags: [],
+        tags: ["doctor", "orderDoctors"],
     });
 
     const previousImages = parent ? (await parent).openGraph?.images || [] : [];
@@ -70,7 +70,7 @@ export default async function SomeDoctorPage({ params }: PageProps) {
     const doctorData = await sanityFetch({
         query: doctorQuery,
         params: { language: locale, slug: slug },
-        tags: [],
+        tags: ["doctor", "orderDoctors"],
     });
 
     if (!doctorData) {
@@ -87,7 +87,7 @@ export default async function SomeDoctorPage({ params }: PageProps) {
     return (
         <>
             <Breadcrumbs
-                className="prepc:mt-[104px] prepc:mb-12 mt-[72px] mb-6"
+                className="prepc:mt-[176px] prepc:mb-12 mt-30 mb-6"
                 breadcrumbsList={breadcrumb}
                 doctors
             />

@@ -25,12 +25,12 @@ export default async function Home({
         sanityFetch({
             query: blogsListQuery,
             params: { language: locale },
-            tags: [],
+            tags: ["blog"],
         }),
         sanityFetch({
             query: doctorsOrderQuery,
             params: { language: locale },
-            tags: [],
+            tags: ["doctor", "orderDoctors"],
         }),
     ]);
     return (

@@ -11,7 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const blogsSlugsList = await sanityFetch({
         query: blogMetaSlugsQuery,
         params: {},
-        tags: [],
+        tags: ["blog"],
     });
 
     const blogsSlugs = blogsSlugsList.data.flatMap(item => [
@@ -38,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const doctorsSlugsList = await sanityFetch({
         query: doctorMetaSlugsQuery,
         params: {},
-        tags: [],
+        tags: ["doctor"],
     });
 
     const doctorsSlugs = doctorsSlugsList.data.flatMap(item => [

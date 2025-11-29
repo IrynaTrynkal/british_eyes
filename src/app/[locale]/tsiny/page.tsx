@@ -32,7 +32,7 @@ export default async function PricesPage({
     const pricesList = await sanityFetch({
         query: pricesPageQuery,
         params: { language: locale },
-        tags: [],
+        tags: ["pricesPage"],
     });
 
     const breadcrumb = [{ name: "tsiny", href: "/tsiny" }];
@@ -41,7 +41,7 @@ export default async function PricesPage({
     return (
         <>
             <Breadcrumbs
-                className="prepc:mt-[104px] mt-[72px]"
+                className="prepc:mt-[176px] mt-[120px]"
                 breadcrumbsList={breadcrumb}
             />
             <HeroPrice list={titlesList} />

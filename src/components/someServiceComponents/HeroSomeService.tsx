@@ -29,7 +29,7 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
                 <>
                     {data.videoSmallScreens && (
                         <video
-                            className="tab:hidden absolute top-0 left-1/2 z-0 h-full w-auto -translate-x-1/2 object-cover"
+                            className="tab:hidden absolute top-10 left-1/2 z-0 h-full w-auto -translate-x-1/2 object-cover"
                             preload="auto"
                             autoPlay
                             muted
@@ -44,7 +44,7 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
                     )}
                     {data.videoBigScreens && (
                         <video
-                            className="tab:block absolute top-0 left-1/2 z-0 hidden h-full w-auto -translate-x-1/2 object-cover"
+                            className="tab:block absolute top-10 left-1/2 z-0 hidden h-full w-auto -translate-x-1/2 object-cover"
                             preload="auto"
                             autoPlay
                             muted
@@ -109,7 +109,7 @@ export const HeroSomeService = ({ data }: { data: HeroSomeServiceProps }) => {
                 {data.adress && (
                     <AboutAdress
                         darkBG={data.adressDarkBG}
-                        className="tab:top-16 prepc:top-[104px] tab:left-6 pc:left-12 absolute top-7 left-4"
+                        className="tab:top-30 prepc:top-40 tab:left-6 pc:left-12 absolute top-20 left-4"
                     />
                 )}
             </div>

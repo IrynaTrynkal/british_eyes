@@ -34,17 +34,17 @@ export const ServicePageContent = async ({
         sanityFetch({
             query: pricesPageQuery,
             params: { language: locale },
-            tags: [],
+            tags: ["pricesPage"],
         }),
         sanityFetch({
             query: offersShortQuery,
             params: { language: locale },
-            tags: [],
+            tags: ["offersPage"],
         }),
         sanityFetch({
             query: doctorsOrderQuery,
             params: { language: locale },
-            tags: [],
+            tags: ["doctor", "orderDoctors"],
         }),
     ]);
 

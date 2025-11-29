@@ -19,7 +19,7 @@ export const AllServicesList = async ({ locale }: { locale: LocaleType }) => {
     const pricesList: PricesShortQueryResult = await sanityFetch({
         query: pricesShortQuery,
         params: { language: locale },
-        tags: [],
+        tags: ["pricesPage"],
     });
 
     const serviceStyles: Record<string, string> = {

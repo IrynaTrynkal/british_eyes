@@ -12,7 +12,7 @@ export const Discount = async () => {
     const offersList: OffersShortQueryResult = await sanityFetch({
         query: offersShortQuery,
         params: { language: locale },
-        tags: [],
+        tags: ["offersPage"],
     });
 
     return (

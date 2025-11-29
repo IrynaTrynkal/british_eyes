@@ -17,23 +17,7 @@ export const HeroMain = () => {
     });
     return (
         <>
-            <section className="pc:bg-[url(/images/main-hero.jpg)] tab:mt-0 mt-12 bg-[url(/images/main-hero-tab.jpg)] bg-cover bg-top-left bg-no-repeat">
-                <RunningPromo
-                    speed={30}
-                    className="bg-promo tab:mt-12 prepc:mt-[72px] w-full"
-                >
-                    {Array.from({ length: 10 }).map((_, i) => (
-                        <div
-                            key={i}
-                            className="prepc:gap-4 prepc:pr-4 flex items-center gap-2.5 pr-2.5"
-                        >
-                            <span className="font-oswald prepc:text-xl leading-[120%] font-medium uppercase">
-                                {t("promoText")}
-                            </span>
-                            <IconForPromo />
-                        </div>
-                    ))}
-                </RunningPromo>
+            <section className="pc:bg-[url(/images/main-hero.jpg)] mt-12 bg-[url(/images/main-hero-tab.jpg)] bg-cover bg-top-left bg-no-repeat">
                 <div className="content tab:flex tab:pb-9 pc:pb-10 tab:pt-[176px] pt-4 pb-7">
                     <AdressHero
                         className="tab:max-w-[312px] tab:aspect-[240/84] tab:p-0 tab:rounded-lg tab:mb-0 tab:mt-auto tab:w-1/3"

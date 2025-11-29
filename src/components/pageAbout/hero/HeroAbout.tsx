@@ -6,7 +6,7 @@ export const HeroAbout = () => {
     const t = useTranslations("AboutPage");
 
     return (
-        <section className="tab:mt-0 tab:h-120 prepc:h-[552px] prepc:bg-bottom relative mt-12 h-[calc(60vh-48px)] bg-[url(/images/about-hero1.jpg)] bg-cover bg-center bg-no-repeat">
+        <section className="tab:h-120 prepc:h-[552px] prepc:bg-bottom relative mt-12 h-[calc(60vh-48px)] bg-[url(/images/about-hero1.jpg)] bg-cover bg-center bg-no-repeat">
             <div className="prepc:hidden about-hero-gradient absolute bottom-0 z-0 h-full w-full" />
             <div className="services-hero-big prepc:block absolute bottom-0 z-0 hidden h-full w-full" />
 

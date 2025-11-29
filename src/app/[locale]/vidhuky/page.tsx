@@ -36,7 +36,7 @@ export default async function ReviewsPage({
         <>
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}
-                className="tab:hidden mt-[72px] mb-6"
+                className="tab:hidden mt-[120px] mb-6"
             />
             <HeroFB />
             <Breadcrumbs

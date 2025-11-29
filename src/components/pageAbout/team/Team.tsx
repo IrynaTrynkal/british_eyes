@@ -16,7 +16,7 @@ export const Team = async () => {
     const pricesList: PricesShortQueryResult = await sanityFetch({
         query: pricesShortQuery,
         params: { language: locale },
-        tags: [],
+        tags: ["pricesPage"],
     });
     const teamList = [t("teamLi1"), t("teamLi2"), t("teamLi3")];
     return (
