@@ -44,7 +44,7 @@ export default async function OftalmolohyPage({
     const doctorsList = await sanityFetch({
         query: doctorsOrderQuery,
         params: { language: locale },
-        tags: [],
+        tags: ["doctor", "orderDoctors"],
     });
 
     return (

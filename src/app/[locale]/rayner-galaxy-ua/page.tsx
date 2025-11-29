@@ -44,7 +44,7 @@ export default async function RaynerPage({
     const doctorsList = await sanityFetch({
         query: doctorsOrderQuery,
         params: { language: locale },
-        tags: [],
+        tags: ["doctor", "orderDoctors"],
     });
     const breadcrumb = [
         { name: "posluhy", href: "/posluhy" },

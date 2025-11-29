@@ -13,7 +13,7 @@ export const HeroDoctors = () => {
                     ivory
                     textUp="20"
                     textDown={t("heroTextDown")}
-                    className="w-fit"
+                    className="mt-12 w-fit"
                 />
                 <div>
                     <h1 className="title-h1 text-white-100 tab:mb-5 prepc:mb-6 mb-7 w-[140px] uppercase">

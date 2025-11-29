@@ -41,7 +41,7 @@ export default function PatientsAllInstructionsPage() {
         <>
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}
-                className="prepc:mt-[104px] prepc:mb-12 mt-[72px] mb-6"
+                className="prepc:mt-[176px] prepc:mb-12 mt-30 mb-6"
             />
             <HeroInstruction title={data[locale as LocaleType].title} />
             <MainAllInstrucrions />

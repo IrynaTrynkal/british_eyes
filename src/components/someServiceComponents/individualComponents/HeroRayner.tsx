@@ -14,7 +14,7 @@ export const HeroRayner = () => {
     return (
         <section
             className={
-                "tab:h-120 prepc:mt-[72px] relative mt-12 h-[calc(90vh-48px)] overflow-hidden bg-[#003626]"
+                "tab:h-120 prepc:mt-[92px] relative mt-24 h-[calc(90vh-48px)] overflow-hidden bg-[#003626]"
             }
         >
             <>

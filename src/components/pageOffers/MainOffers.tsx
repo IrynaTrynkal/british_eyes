@@ -14,7 +14,7 @@ export const MainOffers = async () => {
     const offersList: OffersPageQueryResult = await sanityFetch({
         query: offersPageQuery,
         params: { language: locale },
-        tags: [],
+        tags: ["offersPage"],
     });
 
     return (
