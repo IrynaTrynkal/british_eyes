@@ -432,8 +432,8 @@
         "descriptionSEO": "British Eye Center LLC (“Company”, “We”) respects your privacy and is committed to protecting the personal data of users of www.eyes.ua (“Website”). This Privacy Policy explains what data we collect, how we process it, for what purpose, who we may share it with, and what rights you have."
     },
     "NotFound": {
-        "titleSEO": "",
-        "descriptionSEO": "",
+        "titleSEO": "Oops! Nothing to see here…",
+        "descriptionSEO": "We couldn't find a page matching this request. Check the address or return to the homepage to continue searching for information.",
         "title": "Oops! Page not found",
         "text": "This page does not exist or has been moved. We suggest returning home.",
         "btn": "go back to the homepage"
