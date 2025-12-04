@@ -6,23 +6,25 @@ export const client = createClient({
     projectId,
     dataset,
     apiVersion,
-    useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
+    useCdn: true,
     perspective: "published",
 });
 
-export async function sanityFetch<const QueryString extends string>({
+export async function sanityFetch<const Q extends string>({
     query,
     params = {},
     tags = [],
 }: {
-    query: QueryString;
+    query: Q;
     params?: QueryParams;
     tags?: string[];
 }) {
+    const isProd = process.env.NODE_ENV === "production";
+
     return client.fetch(query, params, {
-        cache: "force-cache",
+        cache: isProd ? "force-cache" : "no-store",
         next: {
-            revalidate: false,
+            revalidate: isProd ? false : 0,
             tags,
         },
     });
