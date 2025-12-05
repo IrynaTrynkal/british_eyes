@@ -20,10 +20,17 @@ export async function generateMetadata({
 }) {
     const resolvedParams = await params;
     const { locale } = resolvedParams;
+    const data = pationtsInstructionsData.find(
+        instr =>
+            instr.name.key ===
+            "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam"
+    );
+    if (!data) return notFound();
+    const title = data[locale as LocaleType].title;
 
     return generateInstructionMetadata(
         locale as LocaleType,
-        "Instructions",
+        title,
         "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam"
     );
 }
