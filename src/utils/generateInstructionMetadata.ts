@@ -6,10 +6,10 @@ import { LocaleType } from "@/types/LocaleType";
 
 export async function generateInstructionMetadata(
     locale: LocaleType,
-    namespace: string,
+    title: string,
     instructionKey: string
 ): Promise<Metadata> {
-    const t = await getTranslations({ locale, namespace });
+    const t = await getTranslations({ locale, namespace: "Instructions" });
 
     const slugItem = keySlugPatientsInstruction.find(
         i => i.key === instructionKey
@@ -41,11 +41,11 @@ export async function generateInstructionMetadata(
             canonical,
             languages,
         },
-        title: t("titleSEO"),
-        description: t("descriptionSEO"),
+        title: t("titleSEO", { title: title }),
+        description: t("descriptionSEO", { title: title }),
         openGraph: {
-            title: t("titleSEO"),
-            description: t("descriptionSEO"),
+            title: t("titleSEO", { title: title }),
+            description: t("descriptionSEO", { title: title }),
             type: "website",
         },
     };

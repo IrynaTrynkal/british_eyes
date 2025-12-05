@@ -423,8 +423,8 @@
         "descriptionSEO": "➔ For out-of-town patients. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077"
     },
     "Instructions": {
-        "titleSEO": "Patient Guides and Instructions. British Ophthalmology Center | EYES",
-        "descriptionSEO": "➔ Patient guides and instructions. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077"
+        "titleSEO": "{title}. British Ophthalmology Center | EYES",
+        "descriptionSEO": "➔ {title}. Premium care for your vision. ✅ The best ophthalmologists in Kyiv ✅ A comprehensive approach to diagnostics and treatment 👍 Proven experience and an impeccable reputation ☎️ 0 800 507 077"
     },
     "PolicyPage": {
         "title": "Privacy Policy",
