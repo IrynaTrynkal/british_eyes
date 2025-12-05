@@ -47,14 +47,14 @@ export const Feedbacks = ({
                 {feedbacksPhotoList.slice(0, visibleCount).map((photo, ind) => (
                     <li
                         key={ind}
-                        className="border-emerald -ml-[18px] h-11 w-11 rounded-full border-2 first:ml-0"
+                        className="border-emerald -ml-[18px] h-11 w-11 overflow-hidden rounded-full border-2 first:ml-0"
                     >
                         <Image
                             src={photo}
                             alt="feedback photo"
                             width={44}
                             height={44}
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                         />
                     </li>
                 ))}

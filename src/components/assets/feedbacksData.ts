@@ -1,14 +1,14 @@
 import { ServicesKeyType } from "./menu";
 
 export const feedbacksPhotoList = [
-    "/feedbacks/feedback1.png",
-    "/feedbacks/feedback2.png",
-    "/feedbacks/feedback3.png",
-    "/feedbacks/feedback4.png",
-    "/feedbacks/feedback5.png",
-    "/feedbacks/feedback6.png",
-    "/feedbacks/feedback7.png",
-    "/feedbacks/feedback8.png",
+    "/feedbacks/kantemyrov.webp",
+    "/feedbacks/roshchina.webp",
+    "/feedbacks/fedorenko.jpg",
+    "/feedbacks/gushhina.jpg",
+    "/feedbacks/bobko.jpg",
+    "/feedbacks/dvornyk-s.webp",
+    "/feedbacks/efremenkov.webp",
+    "/feedbacks/grigorev.jpg",
 ];
 export type FeedbackType = {
     service: ServicesKeyType;
@@ -1822,7 +1822,7 @@ export const feedbacksList: FeedbackType[] = [
     },
     {
         service: "lazerna-korekcziya-zoru",
-        photo: "/feedbacks/bahmєtєva.webp",
+        photo: "/feedbacks/bahmeteva.webp",
         uk: {
             name: "Бахмєтьєва Христина В'ячеславівна",
             text: "Я, Бахмєтьєва Христина В'ячеславівна, дуже дякую Британському офтальмологічному центру за те, що знову можу чітко бачити без окулярів та лінз. Особисто дякую своєму хірургу, Бурдею Артему В'ячеславовичу, за якісну консультацію та лазерну корекцію зору!",
@@ -3309,7 +3309,7 @@ export const feedbacksList: FeedbackType[] = [
 
     {
         service: "refrakczijna-lensektomiya",
-        photo: "/feedbacks/grigorєv.jpg",
+        photo: "/feedbacks/grigorev.jpg",
         uk: {
             name: "Григор’єв Іван Степанович",
             text: "Я, Григор’єв Іван Степанович, 21.01.2025 року мені проводили операцію по заміні кришталика і видаленню катаракти на правому оці в Британському офтальмологічному центрі. \nВідмінна клініка зору. Професійні лікарі, доброзичливий персонал (просто янголи). \nОбстеження пройшов швидко і якісно, операція повністю безболісна. Буду рекомендувати Вас всім знайомим. \nВелика подяка і низький уклін всьому персоналу центру.",
