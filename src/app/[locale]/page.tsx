@@ -1,4 +1,12 @@
+import Script from "next/script";
+import { getTranslations } from "next-intl/server";
+
 import { faqMainList } from "@/components/assets/faqData";
+import {
+    breadcrumbsMainSchema,
+    mainWebPageSchema,
+    mainWebSiteSchema,
+} from "@/components/assets/schemas";
 import { AboutMain } from "@/components/main/about/AboutMain";
 import { Advantages } from "@/components/main/advantages/Advantages";
 import { Approach } from "@/components/main/approach/Approach";
@@ -33,8 +41,51 @@ export default async function Home({
             tags: ["doctor", "orderDoctors"],
         }),
     ]);
+    const [t, tM] = await Promise.all([
+        getTranslations("HomePage"),
+        getTranslations("Menu"),
+    ]);
+
+    const webPageSchema = mainWebPageSchema({
+        locale,
+        title: t("titleSEO"),
+        name: t("title"),
+        description: t("descriptionSEO"),
+    });
+    const breadcrumbsSchema = breadcrumbsMainSchema({
+        locale,
+        name: tM("home"),
+    });
+
+    const webSiteSchema = mainWebSiteSchema({
+        locale,
+        title: t("titleSEO"),
+        description: t("descriptionSEO"),
+    });
+
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(webPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
+            <Script
+                id="website-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(webSiteSchema),
+                }}
+            />
             <HeroMain />
             <Discount />
             <Services />
