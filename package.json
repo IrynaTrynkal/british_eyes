@@ -33,7 +33,7 @@
         "embla-carousel": "^8.6.0",
         "embla-carousel-react": "^8.6.0",
         "framer-motion": "^12.23.12",
-        "next": "15.5.2",
+        "next": "^15.5.7",
         "next-intl": "^4.3.5",
         "next-sanity": "^11.6.5",
         "nodemailer": "^7.0.10",
