@@ -5,7 +5,6 @@ import { toPlainText } from "@/utils/toPlainText";
 
 import { DoctorQueryResult } from "../../../sanity.types";
 import { hotLineNumber, phoneList, socialLinks } from "./contacts";
-import { departments } from "./doctorsData";
 import { LocalizedRouteKey, localizedRoutes } from "./localizedRoutes";
 import { servicesList } from "./menu";
 import {
@@ -237,11 +236,14 @@ export const innerCollectionPageSchema = ({
         },
         ...(items
             ? {
-                  hasPart: items.map(item => ({
-                      "@type": item.type,
-                      name: item.name,
-                      url: `https://eyes.ua/${languagePath}/${item.url}`,
-                  })),
+                  mainEntity: {
+                      "@type": "ItemList",
+                      itemListElement: items.map(item => ({
+                          "@type": item.type ?? "Thing",
+                          name: item.name,
+                          url: `https://eyes.ua/${locale === "uk" ? "" : locale}${item.url}`,
+                      })),
+                  },
               }
             : {}),
     };
@@ -357,7 +359,6 @@ export const instructionPageSchema = ({
             "@type": "Article",
             headline: t("titleSEO", { title: data[locale].title }),
             description: t("descriptionSEO", { title: data[locale].title }),
-            inLanguage,
             datePublished,
             dateModified: finalDateModified,
             mainEntityOfPage: fullUrl,
@@ -433,33 +434,15 @@ export const eyeDiseasePageSchema = ({
             "@id": `${fullUrl}#condition`,
             name: data[locale].titleSEO,
             description: data[locale].descriptionSEO,
-            inLanguage,
             url: fullUrl,
-
             associatedAnatomy: {
                 "@type": "AnatomicalStructure",
                 name: "Eye",
             },
-
-            datePublished,
-            dateModified: finalDateModified,
-
             image: {
                 "@type": "ImageObject",
                 url: `https://eyes.ua${mainImage}`,
                 contentUrl: `https://eyes.ua${mainImage}`,
-            },
-
-            publisher: {
-                "@type": "MedicalClinic",
-                "@id": "https://eyes.ua/#organization",
-                name: nameOrganization,
-                url: "https://eyes.ua/",
-                logo: {
-                    "@type": "ImageObject",
-                    url: "https://eyes.ua/images/logo.jpg",
-                    contentUrl: "https://eyes.ua/images/logo.jpg",
-                },
             },
         },
     };
@@ -469,12 +452,10 @@ export const doctorPageSchema = ({
     locale,
     data,
     nameOrganization,
-    t,
 }: {
     locale: LocaleType;
     data: DoctorQueryResult;
     nameOrganization: string;
-    t: (key: string) => string;
 }) => {
     if (!data) return null;
 
@@ -487,7 +468,7 @@ export const doctorPageSchema = ({
     const fullUrl = `https://eyes.ua/${languagePath}${basePath}/${slug}`;
 
     const imageUrl = data.photo
-        ? urlFor(data.photo)
+        ? urlFor(data.photo).url
         : "https://eyes.ua/images/doctors-hero2.jpg";
 
     const specialization = toPlainText(data.specialization || []) || undefined;
@@ -497,30 +478,6 @@ export const doctorPageSchema = ({
         toPlainText(data.position || []) ||
         specialization ||
         "";
-
-    const departmentsList =
-        data.departments
-            ?.map(dep => {
-                const found = departments.find(item => item.key === dep);
-                return found ? found.translations[locale] : null;
-            })
-            .filter(Boolean) ?? [];
-
-    const servicesList =
-        data.services?.map(serv => t(serv)).filter(Boolean) ?? [];
-
-    const yearsOfExperience = (() => {
-        if (!data.experience) return undefined;
-
-        const match = data.experience.match(/^(\d{4})$/);
-        if (match) {
-            const startYear = Number(match[1]);
-            const currentYear = new Date().getFullYear();
-            const experience = currentYear - startYear;
-            return experience > 0 ? experience : undefined;
-        }
-        return undefined;
-    })();
 
     return {
         "@context": "https://schema.org",
@@ -549,14 +506,8 @@ export const doctorPageSchema = ({
             url: fullUrl,
             image: imageUrl,
             description: about,
-            inLanguage,
-
-            medicalSpecialty: specialization,
-            department: departmentsList,
-            availableService: servicesList,
-            yearsOfExperience,
-            employer: {
-                "@type": "MedicalClinic",
+            hospitalAffiliation: {
+                "@type": "Hospital",
                 "@id": "https://eyes.ua/#organization",
                 name: nameOrganization,
                 url: "https://eyes.ua/",
@@ -796,13 +747,6 @@ export const servicePageSchema = ({
             name: meta?.titleSEO || "",
             description: meta?.descriptionSEO || "",
             url: fullUrl,
-            inLanguage,
-            provider: {
-                "@type": "MedicalClinic",
-                "@id": "https://eyes.ua/#organization",
-                name: nameOrganization,
-                url: "https://eyes.ua/",
-            },
             image: {
                 "@type": "ImageObject",
                 url: `https://eyes.ua${imageUrl}`,
@@ -872,7 +816,6 @@ export const raynerPageSchema = ({
             name: title,
             description,
             url: fullUrl,
-            inLanguage,
             provider: {
                 "@type": "MedicalClinic",
                 "@id": "https://eyes.ua/#organization",
