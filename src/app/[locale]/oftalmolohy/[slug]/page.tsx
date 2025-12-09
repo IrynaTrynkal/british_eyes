@@ -96,7 +96,6 @@ export default async function SomeDoctorPage({ params }: PageProps) {
         locale: locale as LocaleType,
         data: doctorData,
         nameOrganization: ti("title"),
-        t,
     });
 
     const breadcrumbsSchema = breadcrumbsInnerSchema({
