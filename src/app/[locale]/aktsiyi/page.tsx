@@ -1,3 +1,10 @@
+import Script from "next/script";
+import { useLocale, useTranslations } from "next-intl";
+
+import {
+    breadcrumbsInnerSchema,
+    innerWebPageSchema,
+} from "@/components/assets/schemas";
 import { Hero } from "@/components/pageOffers/Hero";
 import { MainOffers } from "@/components/pageOffers/MainOffers";
 import { Booking } from "@/components/shared/booking/Booking";
@@ -20,10 +27,40 @@ export async function generateMetadata({
 }
 
 export default function OffersPage() {
+    const locale = useLocale();
     const breadcrumb = [{ name: "aktsiyi", href: "/aktsiyi" }];
+    const t = useTranslations("Menu");
+    const ti = useTranslations("OffersPage");
+    const webPageSchema = innerWebPageSchema({
+        locale,
+        title: ti("titleSEO"),
+        description: ti("descriptionSEO"),
+        image: "/public/images/green-percent.webp",
+        path: "/aktsiyi",
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
 
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(webPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <Breadcrumbs
                 className="prepc:mt-[176px] mt-[120px]"
                 breadcrumbsList={breadcrumb}

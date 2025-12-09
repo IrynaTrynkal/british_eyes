@@ -1,3 +1,10 @@
+import Script from "next/script";
+import { getTranslations } from "next-intl/server";
+
+import {
+    breadcrumbsInnerSchema,
+    innerWebPageSchema,
+} from "@/components/assets/schemas";
 import { HeroPrice } from "@/components/pagePrice/HeroPrice";
 import { PriceList } from "@/components/pagePrice/PriceList";
 import { Booking } from "@/components/shared/booking/Booking";
@@ -34,12 +41,44 @@ export default async function PricesPage({
         params: { language: locale },
         tags: ["pricesPage"],
     });
+    const [t, ti] = await Promise.all([
+        getTranslations("Menu"),
+        getTranslations("PricePage"),
+    ]);
 
     const breadcrumb = [{ name: "tsiny", href: "/tsiny" }];
     const titlesList = getUniqueTitles(pricesList);
 
+    const webPageSchema = innerWebPageSchema({
+        locale,
+        title: ti("titleSEO"),
+        description: ti("descriptionSEO"),
+        image: "/public/images/green-percent.webp",
+        path: "/tsiny",
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
+
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(webPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <Breadcrumbs
                 className="prepc:mt-[176px] mt-[120px]"
                 breadcrumbsList={breadcrumb}

@@ -57,7 +57,7 @@ export const TopicFilter = <
             <div className="prepc:p-0 mb-3 px-4">
                 <div className="border-ivory flex items-center justify-between border-b pb-3">
                     <h4 className="font-oswald prepc:text-2xl prepc:leading-7 text-lg leading-[22px] uppercase">
-                        Тема
+                        {t("topic")}
                     </h4>
                     <div className="prepc:hidden flex gap-2.5">
                         <IconArrow className="h-4 w-4 rotate-180" />
