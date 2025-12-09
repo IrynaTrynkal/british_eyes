@@ -188,6 +188,64 @@ export const keySlugPatientsInstruction: KeySlugPatientsType[] = [
         },
     },
 ];
+export const keySlugPatientsInstructionSchema: KeySlugPatientsType[] = [
+    {
+        key: "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam",
+        slug: {
+            uk: "informatsiya-dlya-patsiyentiv-pered-mikrokhirurhichnym-vtruchannyam",
+            en: "information-for-patients-prior-to-microsurgery",
+            ru: "informatsiya-dlya-patsiyentov-pered-mikrokhirurgicheskim-vmeshatelstvom",
+        },
+    },
+    {
+        key: "instruktsiyi-pislya-lazernoyi-korektsiyi-zoru",
+        slug: {
+            uk: "instruktsiyi-pislya-lazernoyi-korektsiyi-zoru",
+            en: "instructions-after-laser-vision-correction",
+            ru: "instruktsii-posle-korrektsii-zreniya",
+        },
+    },
+    {
+        key: "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu",
+        slug: {
+            uk: "pamyatka-patsiyenta-pered-vitreoretynalnoyu-khirurhiyeyu",
+            en: "patient-reminder-before-vitreoretinal-surgery",
+            ru: "pamyatki-patsiyentu-pered-vitreoretinalnoy-khirurgiyey",
+        },
+    },
+    {
+        key: "pamyatka-patsiyenta-pislya-khirurhiyi-katarakty",
+        slug: {
+            uk: "pamyatka-patsiyenta-pislya-khirurhiyi-katarakty",
+            en: "pamyatka-patsiyenta-pislya-khirurhiyi-katarakty",
+            ru: "pamyatki-paczienta-posle-hirurgii-katarakty",
+        },
+    },
+    {
+        key: "patient-information-before-IPL-therapy",
+        slug: {
+            uk: "patient-information-before-IPL-therapy",
+            en: "patient-information-before-IPL-therapy",
+            ru: "patient-information-before-IPL-therapy",
+        },
+    },
+    {
+        key: "preparation-for-surgery-for-strabismus",
+        slug: {
+            uk: "preparation-for-surgery-for-strabismus",
+            en: "preparation-for-surgery-for-strabismus",
+            ru: "preparation-for-surgery-for-strabismus",
+        },
+    },
+    {
+        key: "reminder-before-a-comprehensive-pediatric-examination",
+        slug: {
+            uk: "reminder-before-a-comprehensive-pediatric-examination",
+            en: "reminder-before-a-comprehensive-pediatric-examination",
+            ru: "reminder-before-a-comprehensive-pediatric-examination",
+        },
+    },
+];
 
 export const pationtsInstructionsData: PationtsInstructionType[] = [
     {

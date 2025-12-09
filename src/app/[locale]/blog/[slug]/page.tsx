@@ -1,7 +1,12 @@
 import { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { getTranslations } from "next-intl/server";
 
+import {
+    breadcrumbsInnerSchema,
+    newsPageSchema,
+} from "@/components/assets/schemas";
 import { News } from "@/components/main/news/News";
 import { SomeBlog } from "@/components/pageBlog/SomeBlog";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
@@ -84,11 +89,41 @@ export default async function BlogPage({ params }: PageProps) {
             href: `/${slug}`,
         },
     ];
-    const t = await getTranslations("Blog");
-    const newTitle = t("moreNews", { service: t(blog.service as string) });
+    const [t, ti] = await Promise.all([
+        getTranslations("Menu"),
+        getTranslations("Blog"),
+    ]);
+    const newTitle = ti("moreNews", { service: ti(blog.service as string) });
+    const someNewsPageSchema = newsPageSchema({
+        locale,
+        title: blog.title!,
+        description: blog.shortText || "",
+        image: blog.image || "/images/megaphone1.jpg",
+        slug: `/${slug}`,
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
 
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(someNewsPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <Breadcrumbs
                 className="prepc:mt-[176px] prepc:mb-12 mt-30 mb-6"
                 breadcrumbsList={breadcrumb}

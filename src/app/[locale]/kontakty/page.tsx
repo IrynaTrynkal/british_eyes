@@ -1,3 +1,10 @@
+import Script from "next/script";
+import { useLocale, useTranslations } from "next-intl";
+
+import {
+    breadcrumbsInnerSchema,
+    contactPageSchema,
+} from "@/components/assets/schemas";
 import { ContactsPage } from "@/components/pageContacts/ContactsPage";
 import { Booking } from "@/components/shared/booking/Booking";
 import { LocaleType } from "@/types/LocaleType";
@@ -19,8 +26,40 @@ export async function generateMetadata({
 }
 
 export default function ContactPage() {
+    const t = useTranslations("Menu");
+    const ti = useTranslations("Contacts");
+    const tH = useTranslations("HomePage");
+    const breadcrumb = [{ name: "kontakty", href: "/kontakty" }];
+
+    const locale = useLocale();
+    const webPageSchema = contactPageSchema({
+        locale: locale as LocaleType,
+        title: ti("titleSEO"),
+        description: ti("descriptionSEO"),
+        nameOrganization: tH("title"),
+        t: ti,
+    });
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(webPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <ContactsPage />
             <Booking />
         </>

@@ -1,10 +1,17 @@
+import Script from "next/script";
 import { getTranslations } from "next-intl/server";
 
+import { localizedRoutes } from "@/components/assets/localizedRoutes";
 import {
     eyeDiseaseData,
     eyeDiseases,
     EyeDiseaseSlugType,
+    keyEyeDisease,
 } from "@/components/assets/patientsInstructionData";
+import {
+    breadcrumbsInnerSchema,
+    innerCollectionPageSchema,
+} from "@/components/assets/schemas";
 import { EyeDiseaseFilter } from "@/components/pagePatient/EyeDiseaseFilter";
 import { MainAllDiseases } from "@/components/pagePatient/MainAllDiseases";
 import { Booking } from "@/components/shared/booking/Booking";
@@ -37,7 +44,10 @@ export default async function EyesDiseasePage({
 }) {
     const { disease } = (await searchParams) || {};
     const { locale } = await params;
-    const t = await getTranslations("Menu");
+    const [t, ti] = await Promise.all([
+        getTranslations("Menu"),
+        getTranslations("Disease"),
+    ]);
     const breadcrumb = [
         {
             name: "zakhvoryuvannya-ochey",
@@ -47,8 +57,46 @@ export default async function EyesDiseasePage({
     const selectedDisease = disease || "glaukoma";
     const data = eyeDiseaseData.find(dis => dis.name.key === selectedDisease);
 
+    const itemsSchema = keyEyeDisease.map(disease => {
+        const base =
+            localizedRoutes["/zakhvoryuvannya-ochey"][locale as LocaleType];
+        return {
+            name: t(disease.key),
+            url: `${base}/${disease.slug[locale as LocaleType]}`,
+            type: "MedicalCondition",
+        };
+    });
+    const collectionPageSchema = innerCollectionPageSchema({
+        locale,
+        title: ti("titleSEO"),
+        description: ti("descriptionSEO"),
+        image: "/images/dry-eye2.jpg",
+        path: "/zakhvoryuvannya-ochey",
+        items: itemsSchema,
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
+
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(collectionPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <HeroDisease title={t("zakhvoryuvannya-ochey")} />
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}

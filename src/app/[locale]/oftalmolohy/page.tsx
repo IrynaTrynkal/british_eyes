@@ -1,4 +1,12 @@
+import Script from "next/script";
+import { getTranslations } from "next-intl/server";
+
 import { DepartmentsType } from "@/components/assets/doctorsData";
+import { localizedRoutes } from "@/components/assets/localizedRoutes";
+import {
+    breadcrumbsInnerSchema,
+    innerCollectionPageSchema,
+} from "@/components/assets/schemas";
 import { DoctorsFilter } from "@/components/pageDoctors/DoctorsFilter";
 import { DoctorsFilteredList } from "@/components/pageDoctors/DoctorsFilteredList";
 import { HeroDoctors } from "@/components/pageDoctors/HeroDoctors";
@@ -47,8 +55,50 @@ export default async function OftalmolohyPage({
         tags: ["doctor", "orderDoctors"],
     });
 
+    const itemsSchema = doctorsList?.map(doctor => {
+        const base = localizedRoutes["/oftalmolohy"][locale as LocaleType];
+        return {
+            name: doctor.name!,
+            url: `${base}/${doctor.slug}`,
+            type: "Physician",
+        };
+    });
+
+    const [t, ti] = await Promise.all([
+        getTranslations("Menu"),
+        getTranslations("Doctors"),
+    ]);
+    const collectionPageSchema = innerCollectionPageSchema({
+        locale,
+        title: ti("titleSEO"),
+        description: ti("descriptionSEO"),
+        image: "/images/doctors-hero1.jpg",
+        path: "/oftalmolohy",
+        items: itemsSchema,
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
+
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(collectionPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <HeroDoctors />
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}

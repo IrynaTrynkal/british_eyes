@@ -1,6 +1,12 @@
 import { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
+import { getTranslations } from "next-intl/server";
 
+import {
+    breadcrumbsInnerSchema,
+    doctorPageSchema,
+} from "@/components/assets/schemas";
 import { SomeDoctorPageMain } from "@/components/pageDoctors/SomeDoctorPage";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
@@ -66,7 +72,10 @@ interface PageProps {
 
 export default async function SomeDoctorPage({ params }: PageProps) {
     const { locale, slug } = await params;
-
+    const [t, ti] = await Promise.all([
+        getTranslations("Menu"),
+        getTranslations("HomePage"),
+    ]);
     const doctorData = await sanityFetch({
         query: doctorQuery,
         params: { language: locale, slug: slug },
@@ -83,9 +92,35 @@ export default async function SomeDoctorPage({ params }: PageProps) {
             href: `/${slug}`,
         },
     ];
+    const someDoctorPageSchema = doctorPageSchema({
+        locale: locale as LocaleType,
+        data: doctorData,
+        nameOrganization: ti("title"),
+        t,
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
 
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(someDoctorPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <Breadcrumbs
                 className="prepc:mt-[176px] prepc:mb-12 mt-30 mb-6"
                 breadcrumbsList={breadcrumb}
