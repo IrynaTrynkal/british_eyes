@@ -1,6 +1,6 @@
 import { LocaleType } from "@/types/LocaleType";
 
-import { localizedRoutes } from "./localizedRoutes";
+import { LocalizedRouteKey, localizedRoutes } from "./localizedRoutes";
 
 export const mainWebPageSchema = ({
     locale,
@@ -100,7 +100,7 @@ export const breadcrumbsMainSchema = ({
     };
 };
 
-export const breadcrumbsSchema = ({
+export const breadcrumbsInnerSchema = ({
     locale,
     items,
     t,
@@ -122,5 +122,54 @@ export const breadcrumbsSchema = ({
                 localizedRoutes[item.href]?.[locale as LocaleType] ?? item.href
             }`,
         })),
+    };
+};
+
+export const innerWebPageSchema = ({
+    locale,
+    title,
+    description,
+    path,
+    image,
+    datePublished = "2020-01-01T00:00:00+00:00",
+    dateModified,
+}: {
+    locale: string;
+    title: string;
+    description: string;
+    path: LocalizedRouteKey;
+    image: string;
+    datePublished?: string;
+    dateModified?: string;
+}) => {
+    const finalDateModified = dateModified ?? new Date().toISOString();
+
+    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const inLanguage =
+        locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
+    const localizedPath = localizedRoutes[path]?.[locale as LocaleType] ?? path;
+
+    const fullUrl = `https://eyes.ua/${languagePath}${localizedPath}`;
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${fullUrl}#webpage`,
+        url: fullUrl,
+        name: title,
+        description,
+        inLanguage,
+        datePublished,
+        dateModified: finalDateModified,
+        primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: `https://eyes.ua/${image}`,
+            contentUrl: `https://eyes.ua/${image}`,
+        },
+        thumbnailUrl: "https://eyes.ua/images/logo.jpg",
+        isPartOf: {
+            "@type": "WebSite",
+            "@id": "https://eyes.ua/#website",
+        },
     };
 };

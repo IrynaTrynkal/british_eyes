@@ -1,4 +1,5 @@
 import { LocaleType } from "@/types/LocaleType";
+export type LocalizedRouteKey = keyof typeof localizedRoutes;
 
 export type LocalizedRoutes = {
     [key: string]: Record<LocaleType, string>;
