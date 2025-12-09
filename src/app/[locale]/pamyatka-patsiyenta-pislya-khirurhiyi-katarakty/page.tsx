@@ -1,7 +1,12 @@
 import { notFound } from "next/navigation";
-import { useLocale } from "next-intl";
+import Script from "next/script";
+import { useLocale, useTranslations } from "next-intl";
 
 import { pationtsInstructionsData } from "@/components/assets/patientsInstructionData";
+import {
+    breadcrumbsInnerSchema,
+    instructionPageSchema,
+} from "@/components/assets/schemas";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { TextTypeRender } from "@/components/shared/TextTypeRender";
@@ -32,6 +37,9 @@ export async function generateMetadata({
 }
 
 export default function PatientsCataractInstructionPage() {
+    const t = useTranslations("Menu");
+    const ti = useTranslations("Instructions");
+    const tH = useTranslations("HomePage");
     const breadcrumb = [
         {
             name: "reminders-and-instructions-for-patients",
@@ -49,8 +57,35 @@ export default function PatientsCataractInstructionPage() {
     );
     if (!data) return notFound();
 
+    const someInstructionPageSchema = instructionPageSchema({
+        locale: locale as LocaleType,
+        data,
+        nameOrganization: tH("title"),
+        t: ti,
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
+
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(someInstructionPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}
                 className="prepc:mt-[176px] prepc:mb-12 mt-30 mb-6"

@@ -1,5 +1,12 @@
+import Script from "next/script";
+import { getTranslations } from "next-intl/server";
+
 import { faqMainList } from "@/components/assets/faqData";
 import { feedbacksList } from "@/components/assets/feedbacksData";
+import {
+    aboutClinicPageSchema,
+    breadcrumbsInnerSchema,
+} from "@/components/assets/schemas";
 import { Doctors } from "@/components/main/doctors/Doctors";
 import { FAQ } from "@/components/main/faq/FAQ";
 import { News } from "@/components/main/news/News";
@@ -52,11 +59,43 @@ export default async function AboutPage({
             tags: ["doctor", "orderDoctors"],
         }),
     ]);
+    const [t, ti, tH] = await Promise.all([
+        getTranslations("Menu"),
+        getTranslations("AboutPage"),
+        getTranslations("HomePage"),
+    ]);
     const FEEDBACKS_SLIDES_TO_SHOW = 4;
     const breadcrumb = [{ name: "pro-kliniku", href: "/pro-kliniku" }];
 
+    const webPageSchema = aboutClinicPageSchema({
+        locale: locale as LocaleType,
+        title: ti("titleSEO"),
+        description: ti("descriptionSEO"),
+        nameOrganization: tH("title"),
+        t: ti,
+    });
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
+
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(webPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <HeroAbout />
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}

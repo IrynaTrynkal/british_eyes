@@ -54,6 +54,7 @@ export default async function ServicesPage({
         return {
             name: t(service.key),
             url: `${base}/${service.slug[locale as LocaleType]}`,
+            type: service.type,
         };
     });
     const collectionPageSchema = innerCollectionPageSchema({
@@ -63,7 +64,6 @@ export default async function ServicesPage({
         image: "/images/services-hero.jpg",
         path: "/posluhy",
         items: itemsSchema,
-        hasPartType: "MedicalProcedure",
     });
 
     const breadcrumbsSchema = breadcrumbsInnerSchema({

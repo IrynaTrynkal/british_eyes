@@ -57,7 +57,11 @@ export default async function OftalmolohyPage({
 
     const itemsSchema = doctorsList?.map(doctor => {
         const base = localizedRoutes["/oftalmolohy"][locale as LocaleType];
-        return { name: doctor.name!, url: `${base}/${doctor.slug}` };
+        return {
+            name: doctor.name!,
+            url: `${base}/${doctor.slug}`,
+            type: "Physician",
+        };
     });
 
     const [t, ti] = await Promise.all([
@@ -71,7 +75,6 @@ export default async function OftalmolohyPage({
         image: "/images/doctors-hero1.jpg",
         path: "/oftalmolohy",
         items: itemsSchema,
-        hasPartType: "Physician",
     });
 
     const breadcrumbsSchema = breadcrumbsInnerSchema({

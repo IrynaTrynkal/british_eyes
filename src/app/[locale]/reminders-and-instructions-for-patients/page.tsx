@@ -57,6 +57,7 @@ export default function PatientsAllInstructionsPage() {
         return {
             name: t(instr.key),
             url: `/${instr.slug[locale as LocaleType]}`,
+            type: "Article",
         };
     });
     const collectionPageSchema = innerCollectionPageSchema({
@@ -66,7 +67,6 @@ export default function PatientsAllInstructionsPage() {
         image: "/images/about.jpg",
         path: "/reminders-and-instructions-for-patients",
         items: itemsSchema,
-        hasPartType: "Article",
     });
 
     const breadcrumbsSchema = breadcrumbsInnerSchema({

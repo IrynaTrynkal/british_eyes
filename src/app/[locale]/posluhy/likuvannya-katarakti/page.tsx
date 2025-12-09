@@ -1,9 +1,14 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { useLocale } from "next-intl";
+import Script from "next/script";
+import { useLocale, useTranslations } from "next-intl";
 
 import { feedbacksList } from "@/components/assets/feedbacksData";
 import { servicesList, ServicesListProps } from "@/components/assets/menu";
+import {
+    breadcrumbsInnerSchema,
+    servicePageSchema,
+} from "@/components/assets/schemas";
 import { servicesData } from "@/components/assets/servicesData";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
@@ -68,6 +73,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function CataractPage() {
+    const t = useTranslations("Menu");
+    const tH = useTranslations("HomePage");
     const displayedService: ServicesListProps | undefined = servicesList.find(
         service => service.key === "likuvannya-katarakti"
     );
@@ -102,8 +109,34 @@ export default function CataractPage() {
         item => item.type === "faq"
     )?.data;
 
+    const webPageSchema = servicePageSchema({
+        locale: locale as LocaleType,
+        data: serviceData,
+        nameOrganization: tH("title"),
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
+
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(webPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             {heroData && <HeroSomeService data={heroData} />}
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
             <ServicePageContent

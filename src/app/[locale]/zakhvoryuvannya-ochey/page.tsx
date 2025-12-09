@@ -63,6 +63,7 @@ export default async function EyesDiseasePage({
         return {
             name: t(disease.key),
             url: `${base}/${disease.slug[locale as LocaleType]}`,
+            type: "MedicalCondition",
         };
     });
     const collectionPageSchema = innerCollectionPageSchema({
@@ -72,7 +73,6 @@ export default async function EyesDiseasePage({
         image: "/images/dry-eye2.jpg",
         path: "/zakhvoryuvannya-ochey",
         items: itemsSchema,
-        hasPartType: "MedicalCondition",
     });
 
     const breadcrumbsSchema = breadcrumbsInnerSchema({

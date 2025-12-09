@@ -1,11 +1,17 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
+import { getTranslations } from "next-intl/server";
 import { Fragment } from "react";
 
 import {
     eyeDiseaseData,
     EyeDiseaseType,
 } from "@/components/assets/patientsInstructionData";
+import {
+    breadcrumbsInnerSchema,
+    eyeDiseasePageSchema,
+} from "@/components/assets/schemas";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { LinkAction } from "@/components/shared/LinkAction";
@@ -63,7 +69,10 @@ interface PageProps {
 
 export default async function EyeDiseasePage({ params }: PageProps) {
     const { locale, slug } = await params;
-
+    const [t, ti] = await Promise.all([
+        getTranslations("Menu"),
+        getTranslations("HomePage"),
+    ]);
     const displayedDisease: EyeDiseaseType | undefined = eyeDiseaseData.find(
         disease => disease.name.key === slug
     );
@@ -78,9 +87,34 @@ export default async function EyeDiseasePage({ params }: PageProps) {
             href: `/${displayedDisease.name.key}`,
         },
     ];
+    const someDiseasePageSchema = eyeDiseasePageSchema({
+        locale: locale as LocaleType,
+        data: displayedDisease,
+        nameOrganization: ti("title"),
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
 
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(someDiseasePageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <HeroDisease title={displayedDisease[locale as LocaleType].title} />
             <Breadcrumbs className="mt-5" breadcrumbsList={breadcrumb} />
             <section className="tab:pb-12 prepc:pt-10 tab:px-6 pc:px-12 pc:pb-[120px] pt-5 pb-[60px]">
