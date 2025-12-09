@@ -237,11 +237,15 @@ export const innerCollectionPageSchema = ({
         },
         ...(items
             ? {
-                  hasPart: items.map(item => ({
-                      "@type": item.type,
-                      name: item.name,
-                      url: `https://eyes.ua/${languagePath}/${item.url}`,
-                  })),
+                  mainEntity: {
+                      "@type": "ItemList",
+                      itemListElement: items.map((item, index) => ({
+                          "@type": item.type ?? "Thing",
+                          position: index + 1,
+                          name: item.name,
+                          url: `https://eyes.ua/${languagePath}${item.url}`,
+                      })),
+                  },
               }
             : {}),
     };
