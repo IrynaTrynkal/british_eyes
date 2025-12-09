@@ -173,3 +173,66 @@ export const innerWebPageSchema = ({
         },
     };
 };
+
+export const innerCollectionPageSchema = ({
+    locale,
+    title,
+    description,
+    path,
+    image,
+    items,
+    hasPartType = "WebPage",
+    datePublished = "2020-01-01T00:00:00+00:00",
+    dateModified,
+}: {
+    locale: string;
+    title: string;
+    description: string;
+    path: LocalizedRouteKey;
+    image: string;
+    items?: { name: string; url: string }[];
+    hasPartType?: string;
+    datePublished?: string;
+    dateModified?: string;
+}) => {
+    const finalDateModified = dateModified ?? new Date().toISOString();
+
+    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const inLanguage =
+        locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
+
+    const localizedPath = localizedRoutes[path]?.[locale as LocaleType] ?? path;
+
+    const fullUrl = `https://eyes.ua/${languagePath}${localizedPath}`;
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": `${fullUrl}#collection`,
+        url: fullUrl,
+        name: title,
+        description,
+        inLanguage,
+        datePublished,
+        dateModified: finalDateModified,
+        primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: `https://eyes.ua/${image}`,
+            contentUrl: `https://eyes.ua/${image}`,
+        },
+        thumbnailUrl: "https://eyes.ua/images/logo.jpg",
+        isPartOf: {
+            "@type": "WebSite",
+            "@id": "https://eyes.ua/#website",
+        },
+        ...(items
+            ? {
+                  hasPart: items.map(item => ({
+                      "@type": hasPartType,
+                      name: item.name,
+                      url: `https://eyes.ua/${languagePath}/${item.url}`,
+                  })),
+              }
+            : {}),
+    };
+};

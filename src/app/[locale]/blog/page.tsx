@@ -1,3 +1,10 @@
+import Script from "next/script";
+import { getTranslations } from "next-intl/server";
+
+import {
+    breadcrumbsInnerSchema,
+    innerCollectionPageSchema,
+} from "@/components/assets/schemas";
 import { BlogList } from "@/components/pageBlog/BlogList";
 import { HeroBlog } from "@/components/pageBlog/HeroBlog";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
@@ -42,9 +49,40 @@ export default async function NewsPage({
     const pageNumber = page ? parseInt(page) : 1;
     const selectedCategory = category || "all";
     const breadcrumb = [{ name: "blog", href: "/blog" }];
+    const [t, ti] = await Promise.all([
+        getTranslations("Menu"),
+        getTranslations("Blog"),
+    ]);
+    const collectionPageSchema = innerCollectionPageSchema({
+        locale,
+        title: ti("titleSEO"),
+        description: ti("descriptionSEO"),
+        image: "/images/blog.jpg",
+        path: "/blog",
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
 
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(collectionPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}
                 className="prepc:mt-[176px] prepc:mb-12 mt-30 mb-6"

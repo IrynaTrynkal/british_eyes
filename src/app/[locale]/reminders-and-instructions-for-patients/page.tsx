@@ -1,7 +1,15 @@
 import { notFound } from "next/navigation";
-import { useLocale } from "next-intl";
+import Script from "next/script";
+import { useLocale, useTranslations } from "next-intl";
 
-import { pationtsInstructionsData } from "@/components/assets/patientsInstructionData";
+import {
+    keySlugPatientsInstructionSchema,
+    pationtsInstructionsData,
+} from "@/components/assets/patientsInstructionData";
+import {
+    breadcrumbsInnerSchema,
+    innerCollectionPageSchema,
+} from "@/components/assets/schemas";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { HeroInstruction } from "@/components/someInstructionComponents/HeroInstruction";
@@ -30,6 +38,8 @@ export async function generateMetadata({
 }
 
 export default function PatientsAllInstructionsPage() {
+    const t = useTranslations("Menu");
+    const ti = useTranslations("Instructions");
     const breadcrumb = [
         {
             name: "reminders-and-instructions-for-patients",
@@ -41,9 +51,46 @@ export default function PatientsAllInstructionsPage() {
         instr => instr.name.key === "reminders-and-instructions-for-patients"
     );
     if (!data) return notFound();
+    const title = data[locale as LocaleType].title;
+
+    const itemsSchema = keySlugPatientsInstructionSchema.map(instr => {
+        return {
+            name: t(instr.key),
+            url: `/${instr.slug[locale as LocaleType]}`,
+        };
+    });
+    const collectionPageSchema = innerCollectionPageSchema({
+        locale,
+        title: ti("titleSEO", { title }),
+        description: ti("descriptionSEO", { title }),
+        image: "/images/about.jpg",
+        path: "/reminders-and-instructions-for-patients",
+        items: itemsSchema,
+        hasPartType: "Article",
+    });
+
+    const breadcrumbsSchema = breadcrumbsInnerSchema({
+        locale,
+        items: breadcrumb,
+        t,
+    });
 
     return (
         <>
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(collectionPageSchema),
+                }}
+            />
+            <Script
+                id="breadcrumbs-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbsSchema),
+                }}
+            />
             <Breadcrumbs
                 breadcrumbsList={breadcrumb}
                 className="prepc:mt-[176px] prepc:mb-12 mt-30 mb-6"

@@ -35,7 +35,7 @@ export default function OffersPage() {
         locale,
         title: ti("titleSEO"),
         description: ti("descriptionSEO"),
-        image: "/public/images/green-percent.webp",
+        image: "/images/green-percent.webp",
         path: "/aktsiyi",
     });
 
