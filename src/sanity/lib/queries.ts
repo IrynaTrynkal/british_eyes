@@ -45,11 +45,16 @@ export const doctorQuery = defineQuery(`
   "about":about[_key == $language][0].value}`);
 
 export const blogsListQuery = defineQuery(`
-     *[_type == "blog" && !(_id in path("drafts.**"))]{
-   service, "title":title[_key == $language][0].value,
-     "slug":slug.current, publication, "image":image.asset->url,
-     "shortText":shortText[_key == $language][0].value,
-     "content": content[_key == $language][0].value}`);
+     *[_type == "blog" && !(_id in path("drafts.**"))]
+    | order(publication desc) {
+      service,
+      "title": title[_key == $language][0].value,
+      "slug": slug.current,
+      publication,
+      "image": image.asset->url,
+      "shortText": shortText[_key == $language][0].value,
+      "content": content[_key == $language][0].value
+    }`);
 
 export const blogQuery = defineQuery(`
       *[_type == "blog" && slug.current == $slug][0]{
