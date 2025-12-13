@@ -6,31 +6,102 @@ export type LocalizedRoutes = {
 };
 
 export const localizedRoutes: LocalizedRoutes = {
-    "/posluhy": { uk: "/posluhy", en: "/services", ru: "/uslugi" },
-    "/posluhy/[slug]": {
-        uk: "/posluhy/[slug]",
-        en: "/services/[slug]",
-        ru: "/uslugi/[slug]",
+    "/blog": { uk: "/blog", en: "/blog", ru: "/blog" },
+    "/blog/[slug]": {
+        uk: "/blog/[slug]",
+        en: "/blog/[slug]",
+        ru: "/blog/[slug]",
     },
+    "/posluhy": { uk: "/posluhy", en: "/services", ru: "/uslugi" },
     "/posluhy/lazerna-korekcziya-zoru": {
         uk: "/posluhy/lazerna-korekcziya-zoru",
         en: "/services/laser-vision-correction",
         ru: "/uslugi/lazernaya-korrekciya-zreniya",
     },
-    "/posluhy/lazerna-korekcziya-zoru/[subpage]": {
-        uk: "/posluhy/lazerna-korekcziya-zoru/[subpage]",
-        en: "/services/laser-vision-correction/[subpage]",
-        ru: "/uslugi/lazernaya-korrekciya-zreniya/[subpage]",
+    "/posluhy/perevirka-zoru": {
+        uk: "/posluhy/perevirka-zoru",
+        en: "/services/eye-exam",
+        ru: "/uslugi/proverka-zreniya",
     },
     "/posluhy/likuvannya-katarakti": {
         uk: "/posluhy/likuvannya-katarakti",
         en: "/services/cataract-treatment",
         ru: "/uslugi/lechenie-katarakty",
     },
-    "/posluhy/likuvannya-katarakti/[subpage]": {
-        uk: "/posluhy/likuvannya-katarakti/[subpage]",
-        en: "/services/cataract-treatment/[subpage]",
-        ru: "/uslugi/lechenie-katarakty/[subpage]",
+    "/posluhy/syndrom-sukhoho-oka": {
+        uk: "/posluhy/syndrom-sukhoho-oka",
+        en: "/services/dry-eye-syndrome",
+        ru: "/uslugi/lechenie-sindroma-suhogo-glaza",
+    },
+    "/posluhy/dityache-viddilennya": {
+        uk: "/posluhy/dityache-viddilennya",
+        en: "/services/children-department",
+        ru: "/uslugi/detskoye-otdeleniye",
+    },
+    "/posluhy/likuvannya-keratokonusa": {
+        uk: "/posluhy/likuvannya-keratokonusa",
+        en: "/services/keratoconus-treatment",
+        ru: "/uslugi/lecheniye-keratokonusa",
+    },
+    "/posluhy/lazerne-likuvannya-zahvoryuvan-oka": {
+        uk: "/posluhy/lazerne-likuvannya-zahvoryuvan-oka",
+        en: "/services/laser-treatment-of-eye-diseases",
+        ru: "/uslugi/lazernoye-lecheniye-zabolevaniy-glaza",
+    },
+    "/posluhy/refrakczijna-lensektomiya": {
+        uk: "/posluhy/refrakczijna-lensektomiya",
+        en: "/services/refractive-lensectomy",
+        ru: "/uslugi/intraokuliarnaya-korrekciya",
+    },
+    "/posluhy/vitreoretinalna-hirurgiya": {
+        uk: "/posluhy/vitreoretinalna-hirurgiya",
+        en: "/services/vitreoretinal-surgery",
+        ru: "/uslugi/vitreoretinalnaya-khirurgiya",
+    },
+    "/posluhy/intravitrealni-inekczii": {
+        uk: "/posluhy/intravitrealni-inekczii",
+        en: "/services/intravitreal-injections",
+        ru: "/uslugi/intravitrealnyye-inyektsii",
+    },
+    "/posluhy/hirurgichne-likuvannya-glaukomi": {
+        uk: "/posluhy/hirurgichne-likuvannya-glaukomi",
+        en: "/services/surgical-glaucoma-treatment",
+        ru: "/uslugi/khirurgicheskoye-lecheniye-glaukomy",
+    },
+    "/posluhy/likuvannya-kosookosti": {
+        uk: "/posluhy/likuvannya-kosookosti",
+        en: "/services/strabismus-treatment",
+        ru: "/uslugi/lecheniye-kosoglaziya",
+    },
+    "/posluhy/hirurgiya-povik-i-konyunktivi": {
+        uk: "/posluhy/hirurgiya-povik-i-konyunktivi",
+        en: "/services/eyelid-and-conjunctival-surgery",
+        ru: "/uslugi/khirurgiya-vek-i-konyunktivy",
+    },
+    "/posluhy/anesteziologichnij-posibnik": {
+        uk: "/posluhy/anesteziologichnij-posibnik",
+        en: "/services/anesthesia-benefit",
+        ru: "/uslugi/anesteziologicheskoye-posobiye",
+    },
+    "/posluhy/ksenonoterapiya": {
+        uk: "/posluhy/ksenonoterapiya",
+        en: "/services/xenon-therapy",
+        ru: "/uslugi/ksenonoterapiya",
+    },
+    "/posluhy/lazerna-korekcziya-zoru/sportlife-lasik": {
+        uk: "/posluhy/lazerna-korekcziya-zoru/sportlife-lasik",
+        en: "/services/laser-vision-correction/sportlife-lasik",
+        ru: "/uslugi/lazernaya-korrekciya-zreniya/sportlife-lasik",
+    },
+    "/posluhy/lazerna-korekcziya-zoru/iq-lasik-oxygen-3d": {
+        uk: "/posluhy/lazerna-korekcziya-zoru/iq-lasik-oxygen-3d",
+        en: "/services/laser-vision-correction/iq-lasik-oxygen-3d",
+        ru: "/uslugi/lazernaya-korrekciya-zreniya/iq-lasik-oxygen-3d",
+    },
+    "/posluhy/likuvannya-katarakti/iq-5-minutes": {
+        uk: "/posluhy/likuvannya-katarakti/iq-5-minutes",
+        en: "/services/cataract-treatment/iq-5-minutes",
+        ru: "/uslugi/lechenie-katarakty/iq-5-minutes",
     },
     "/posluhy/likuvannya-katarakti/iq-life-3d-vodnij-potik": {
         uk: "/posluhy/likuvannya-katarakti/iq-life-3d-vodnij-potik",

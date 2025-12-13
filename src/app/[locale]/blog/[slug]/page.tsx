@@ -4,7 +4,7 @@ import Script from "next/script";
 import { getTranslations } from "next-intl/server";
 
 import {
-    breadcrumbsInnerSchema,
+    breadcrumbsSlugSchema,
     newsPageSchema,
 } from "@/components/assets/schemas";
 import { News } from "@/components/main/news/News";
@@ -89,10 +89,8 @@ export default async function BlogPage({ params }: PageProps) {
             href: `/${slug}`,
         },
     ];
-    const [t, ti] = await Promise.all([
-        getTranslations("Menu"),
-        getTranslations("Blog"),
-    ]);
+    const ti = await getTranslations("Blog");
+
     const newTitle = ti("moreNews", { service: ti(blog.service as string) });
     const someNewsPageSchema = newsPageSchema({
         locale,
@@ -102,10 +100,9 @@ export default async function BlogPage({ params }: PageProps) {
         slug: `/${slug}`,
     });
 
-    const breadcrumbsSchema = breadcrumbsInnerSchema({
+    const breadcrumbsSchema = breadcrumbsSlugSchema({
         locale,
         items: breadcrumb,
-        t,
     });
 
     return (

@@ -120,19 +120,75 @@ export const breadcrumbsInnerSchema = ({
     items: { name: string; href: string }[];
     t: (key: string) => string;
 }) => {
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
+
+    const resolvedItems = items.map((item, index) => {
+        if (index === 0) {
+            return { ...item };
+        }
+
+        const prev = items[index - 1];
+
+        if (item.href.startsWith(`${prev.href}/`)) {
+            return { ...item };
+        }
+
+        return {
+            ...item,
+            href: `${prev.href.replace(/\/$/, "")}/${item.href.replace(/^\//, "")}`,
+        };
+    });
 
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        itemListElement: items.map((item, index) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            name: t(item.name),
-            item: `https://eyes.ua/${languagePath}/${
-                localizedRoutes[item.href]?.[locale as LocaleType] ?? item.href
-            }`,
-        })),
+        itemListElement: resolvedItems.map((item, index) => {
+            const localizedHref =
+                localizedRoutes[item.href]?.[locale as LocaleType] ?? item.href;
+
+            return {
+                "@type": "ListItem",
+                position: index + 1,
+                name: t(item.name),
+                item: `https://eyes.ua/${languagePath}${localizedHref}`,
+            };
+        }),
+    };
+};
+export const breadcrumbsSlugSchema = ({
+    locale,
+    items,
+}: {
+    locale: string;
+    items: { name: string; href: string }[];
+}) => {
+    const languagePath = locale === "uk" ? "" : locale;
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: items.map((item, index) => {
+            let finalHref = item.href;
+
+            if (index === 0) {
+                finalHref =
+                    localizedRoutes[item.href]?.[locale as LocaleType] ??
+                    item.href;
+            } else {
+                const parentLocalized =
+                    localizedRoutes[items[0].href]?.[locale as LocaleType] ??
+                    items[0].href;
+
+                finalHref = `${parentLocalized}/${item.href.replace(/^\//, "")}`;
+            }
+
+            return {
+                "@type": "ListItem",
+                position: index + 1,
+                name: item.name,
+                item: `https://eyes.ua/${languagePath}${finalHref}`,
+            };
+        }),
     };
 };
 
@@ -155,7 +211,7 @@ export const innerWebPageSchema = ({
 }) => {
     const finalDateModified = dateModified ?? new Date().toISOString();
 
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
     const localizedPath = localizedRoutes[path]?.[locale as LocaleType] ?? path;
@@ -206,7 +262,7 @@ export const innerCollectionPageSchema = ({
 }) => {
     const finalDateModified = dateModified ?? new Date().toISOString();
 
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
 
@@ -241,7 +297,7 @@ export const innerCollectionPageSchema = ({
                       itemListElement: items.map(item => ({
                           "@type": item.type ?? "Thing",
                           name: item.name,
-                          url: `https://eyes.ua/${locale === "uk" ? "" : locale}${item.url}`,
+                          url: `https://eyes.ua/${languagePath}${item.url}`,
                       })),
                   },
               }
@@ -267,11 +323,11 @@ export const newsPageSchema = ({
     dateModified?: string;
 }) => {
     const finalDateModified = dateModified ?? new Date().toISOString();
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
 
-    const fullUrl = `https://eyes.ua/${languagePath}blog/${slug}`;
+    const fullUrl = `https://eyes.ua/${languagePath}/blog/${slug}`;
 
     return {
         "@context": "https://schema.org",
@@ -328,7 +384,7 @@ export const instructionPageSchema = ({
     dateModified?: string;
 }) => {
     const finalDateModified = dateModified ?? new Date().toISOString();
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
 
@@ -385,7 +441,6 @@ export const instructionPageSchema = ({
 export const eyeDiseasePageSchema = ({
     locale,
     data,
-    nameOrganization,
     datePublished = "2020-01-01T00:00:00+00:00",
     dateModified,
 }: {
@@ -397,7 +452,7 @@ export const eyeDiseasePageSchema = ({
 }) => {
     const finalDateModified = dateModified ?? new Date().toISOString();
 
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
     const base = localizedRoutes["/zakhvoryuvannya-ochey"][locale];
@@ -459,7 +514,7 @@ export const doctorPageSchema = ({
 }) => {
     if (!data) return null;
 
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
     const basePath = localizedRoutes["/oftalmolohy"][locale];
@@ -538,7 +593,7 @@ export const contactPageSchema = ({
     dateModified?: string;
 }) => {
     const finalDateModified = dateModified ?? new Date().toISOString();
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
 
@@ -613,7 +668,7 @@ export const aboutClinicPageSchema = ({
     dateModified?: string;
 }) => {
     const finalDateModified = dateModified ?? new Date().toISOString();
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
 
@@ -689,7 +744,7 @@ export const servicePageSchema = ({
     dateModified?: string;
 }) => {
     const finalDateModified = dateModified ?? new Date().toISOString();
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
 
@@ -772,7 +827,7 @@ export const raynerPageSchema = ({
     dateModified?: string;
 }) => {
     const finalDateModified = dateModified ?? new Date().toISOString();
-    const languagePath = locale === "uk" ? "" : `${locale}/`;
+    const languagePath = locale === "uk" ? "" : locale;
     const inLanguage =
         locale === "en" ? "en-US" : locale === "ru" ? "ru-RU" : "uk-UA";
 
