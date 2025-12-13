@@ -38,18 +38,28 @@ export const DoctorOneCard = ({
                     <div className="text-ivory prepc:mb-4 mb-1 leading-[120%] opacity-80">
                         <PortableTextRenderer value={data.position} />
                     </div>
-                    <h3 className="text-ivory font-oswald prepc:mb-4 prepc:text-sm mb-2 text-xs leading-[120%] uppercase underline">
-                        {t("specialization")}
-                    </h3>
-                    <div className="text-ivory">
-                        <PortableTextRenderer value={data.specialization} />
-                    </div>
-                    <h3 className="text-ivory font-oswald prepc:mb-4 prepc:text-sm mb-2 text-xs leading-[120%] uppercase underline">
-                        {t("activity")}
-                    </h3>
-                    <div className="text-ivory tab:block hidden">
-                        <PortableTextRenderer value={data.activity} />
-                    </div>
+                    {data.specialization && (
+                        <>
+                            <h3 className="text-ivory font-oswald prepc:mb-4 prepc:text-sm mb-2 text-xs leading-[120%] uppercase underline">
+                                {t("specialization")}
+                            </h3>
+                            <div className="text-ivory">
+                                <PortableTextRenderer
+                                    value={data.specialization}
+                                />
+                            </div>
+                        </>
+                    )}
+                    {data.activity && (
+                        <>
+                            <h3 className="text-ivory font-oswald prepc:mb-4 prepc:text-sm mb-2 text-xs leading-[120%] uppercase underline">
+                                {t("activity")}
+                            </h3>
+                            <div className="text-ivory tab:block hidden">
+                                <PortableTextRenderer value={data.activity} />
+                            </div>
+                        </>
+                    )}
                 </div>
                 <Link
                     href={`/oftalmolohy/${data.slug}` as any}
