@@ -4,7 +4,7 @@ import Script from "next/script";
 import { getTranslations } from "next-intl/server";
 
 import {
-    breadcrumbsInnerSchema,
+    breadcrumbsSlugSchema,
     doctorPageSchema,
 } from "@/components/assets/schemas";
 import { SomeDoctorPageMain } from "@/components/pageDoctors/SomeDoctorPage";
@@ -72,10 +72,8 @@ interface PageProps {
 
 export default async function SomeDoctorPage({ params }: PageProps) {
     const { locale, slug } = await params;
-    const [t, ti] = await Promise.all([
-        getTranslations("Menu"),
-        getTranslations("HomePage"),
-    ]);
+    const ti = await getTranslations("HomePage");
+
     const doctorData = await sanityFetch({
         query: doctorQuery,
         params: { language: locale, slug: slug },
@@ -98,10 +96,9 @@ export default async function SomeDoctorPage({ params }: PageProps) {
         nameOrganization: ti("title"),
     });
 
-    const breadcrumbsSchema = breadcrumbsInnerSchema({
+    const breadcrumbsSchema = breadcrumbsSlugSchema({
         locale,
         items: breadcrumb,
-        t,
     });
 
     return (
