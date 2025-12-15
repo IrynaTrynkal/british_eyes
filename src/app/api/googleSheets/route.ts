@@ -3,10 +3,8 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
     try {
         const data = await req.json();
-        console.log("Received data:", data);
 
         const { recaptchaToken, ...safeData } = data;
-        console.log("safeData data:", safeData);
         const res = await fetch(
             process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL!,
             {
@@ -19,6 +17,7 @@ export async function POST(req: NextRequest) {
         let result;
         try {
             result = await res.json();
+            console.log("Sheets response:", result);
         } catch {
             throw new Error("Invalid response from Google Sheets");
         }
