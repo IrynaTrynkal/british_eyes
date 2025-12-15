@@ -80,16 +80,14 @@ export const BookingCallForm = ({
 
         setLoading(true);
         try {
-            const token = await recaptchaRef.current?.executeAsync();
-            recaptchaRef.current?.reset();
-            if (!token) {
-                console.error("Recaptcha token missing");
-                return;
-            }
+            // const token = await recaptchaRef.current?.executeAsync();
+            // recaptchaRef.current?.reset();
+            // if (!token) {
+            //     console.error("Recaptcha token missing");
+            //     return;
+            // }
 
-            await notificationHandler(() =>
-                onSendData({ ...formData, recaptchaToken: token })
-            );
+            await notificationHandler(() => onSendData({ ...formData }));
 
             setFormData({
                 name: "",
