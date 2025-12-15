@@ -85,24 +85,38 @@ export const BookingForm = ({
     };
 
     const onSendData = async (data: typeof formData) => {
-        const res = await fetch("/api/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-        });
-
-        let result;
         try {
-            result = await res.json();
-        } catch {
-            throw new Error("Server response error");
-        }
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
 
-        if (!res.ok) {
-            throw new Error(result?.error || "Send failed");
-        }
+            const result = await res.json();
 
-        return result;
+            if (!res.ok) {
+                throw new Error(result?.error || "Send failed");
+            }
+
+            return result;
+        } catch (error) {
+            console.error("SMTP failed, saving to Sheets:", error);
+
+            try {
+                await fetch(
+                    process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL!,
+                    {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(data),
+                    }
+                );
+            } catch (sheetError) {
+                console.error("Failed to save to Sheets:", sheetError);
+            }
+
+            throw error;
+        }
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
