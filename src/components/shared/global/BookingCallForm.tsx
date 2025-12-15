@@ -60,40 +60,20 @@ export const BookingCallForm = ({
     };
 
     const onSendData = async (data: typeof formData) => {
-        try {
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
+        const res = await fetch("/api/googleSheets", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
 
-            const result = await res.json();
+        const result = await res.json();
 
-            if (!res.ok) {
-                throw new Error(result?.error || "Send failed");
-            }
-
-            return result;
-        } catch (error) {
-            console.error("SMTP failed, saving to Sheets:", error);
-
-            try {
-                await fetch(
-                    process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL!,
-                    {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(data),
-                    }
-                );
-            } catch (sheetError) {
-                console.error("Failed to save to Sheets:", sheetError);
-            }
-
-            throw error;
+        if (!res.ok) {
+            throw new Error(result?.error || "Send failed");
         }
-    };
 
+        return result;
+    };
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!validate()) return;
@@ -102,27 +82,23 @@ export const BookingCallForm = ({
         try {
             const token = await recaptchaRef.current?.executeAsync();
             recaptchaRef.current?.reset();
-
             if (!token) {
                 console.error("Recaptcha token missing");
                 return;
             }
 
-            await notificationHandler(async () => {
-                try {
-                    await onSendData({ ...formData, recaptchaToken: token });
-                    setFormData({
-                        name: "",
-                        phone: "",
-                        title: "Перезвоніть мені",
-                        recaptchaToken: "",
-                    });
-                } catch (err) {
-                    console.error("Помилка при відправці:", err);
-                }
+            await notificationHandler(() =>
+                onSendData({ ...formData, recaptchaToken: token })
+            );
+
+            setFormData({
+                name: "",
+                phone: "",
+                title: "Перезвоніть мені",
+                recaptchaToken: "",
             });
         } catch (error) {
-            console.error("Невідома помилка:", error);
+            console.error("Відправка не вдалася:", error);
         } finally {
             setLoading(false);
         }
