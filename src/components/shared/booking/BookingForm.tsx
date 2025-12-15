@@ -111,19 +111,22 @@ export const BookingForm = ({
                         body: JSON.stringify(data),
                     }
                 );
+                console.log("Дані збережено в Google Sheets");
             } catch (sheetError) {
                 console.error("Failed to save to Sheets:", sheetError);
             }
 
-            throw error;
+            throw new Error(
+                "Відправка на пошту не вдалася, але дані збережено в Google Sheets"
+            );
         }
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!validate()) return;
-        setLoading(true);
 
+        setLoading(true);
         try {
             const token = await recaptchaRef.current?.executeAsync();
             recaptchaRef.current?.reset();
@@ -131,23 +134,21 @@ export const BookingForm = ({
                 console.error("Recaptcha token missing");
                 return;
             }
-            await notificationHandler(async () => {
-                try {
-                    await onSendData({ ...formData, recaptchaToken: token });
-                    setFormData({
-                        name: "",
-                        surname: "",
-                        email: "",
-                        phone: "",
-                        date: "",
-                        topic: "",
-                        comment: "",
-                        title: "Онлайн запис",
-                        recaptchaToken: "",
-                    });
-                } catch (err) {
-                    console.error("Помилка при відправці:", err);
-                }
+
+            await notificationHandler(() =>
+                onSendData({ ...formData, recaptchaToken: token })
+            );
+
+            setFormData({
+                name: "",
+                surname: "",
+                email: "",
+                phone: "",
+                date: "",
+                topic: "",
+                comment: "",
+                title: "Онлайн запис",
+                recaptchaToken: "",
             });
         } catch (error) {
             console.error("Відправка не вдалася:", error);
