@@ -83,6 +83,7 @@ export const BookingForm = ({
         setErrors(newErrors);
         return valid;
     };
+
     const onSendData = async (data: typeof formData) => {
         const res = await fetch("/api/contact", {
             method: "POST",
@@ -94,19 +95,6 @@ export const BookingForm = ({
         try {
             result = await res.json();
         } catch {
-            try {
-                await fetch(
-                    process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL!,
-                    {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(data),
-                    }
-                );
-                console.log("Дані збережено в Google Sheets");
-            } catch (sheetError) {
-                console.error("Failed to save to Sheets:", sheetError);
-            }
             throw new Error("Server response error");
         }
 
