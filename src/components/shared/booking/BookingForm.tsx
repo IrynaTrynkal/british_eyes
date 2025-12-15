@@ -86,11 +86,20 @@ export const BookingForm = ({
 
     const onSendData = async (data: typeof formData) => {
         try {
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
+            // const res = await fetch("/api/contact", {
+            //     method: "POST",
+            //     headers: { "Content-Type": "application/json" },
+            //     body: JSON.stringify(data),
+            // });
+
+            const res = await fetch(
+                process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL!,
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                }
+            );
 
             let result;
             try {
@@ -107,23 +116,23 @@ export const BookingForm = ({
         } catch (error) {
             console.error("SMTP failed, saving to Sheets:", error);
 
-            try {
-                await fetch(
-                    process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL!,
-                    {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(data),
-                    }
-                );
-                console.log("Дані збережено в Google Sheets");
-            } catch (sheetError) {
-                console.error("Failed to save to Sheets:", sheetError);
-            }
+            // try {
+            //     await fetch(
+            //         process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL!,
+            //         {
+            //             method: "POST",
+            //             headers: { "Content-Type": "application/json" },
+            //             body: JSON.stringify(data),
+            //         }
+            //     );
+            //     console.log("Дані збережено в Google Sheets");
+            // } catch (sheetError) {
+            //     console.error("Failed to save to Sheets:", sheetError);
+            // }
 
-            throw new Error(
-                "Відправка на пошту не вдалася, але дані збережено в Google Sheets"
-            );
+            // throw new Error(
+            //     "Відправка на пошту не вдалася, але дані збережено в Google Sheets"
+            // );
         }
     };
 
