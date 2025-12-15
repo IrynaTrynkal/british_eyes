@@ -6064,22 +6064,6 @@ export const servicesData: ServicesProps[] = [
                         text: "Рефракційна хірургія в офтальмології підходить як при далекозорості , так і при короткозорості , включаючи астигматизм.",
                         slider: [
                             {
-                                title: "Комплексна автоматизована діагностика",
-                                text: "Дозволяє визначити гостроту зору за допомогою спеціальних таблиць з цифрами, літерами або знаками.",
-                            },
-                            {
-                                title: "IPL терапія",
-                                text: "Вимір внутрішньоочного тиску. Підвищений внутрішньоочний тиск є основною причиною виникнення глаукоми.",
-                            },
-                            {
-                                title: "Масаж повік із застосуванням спеціальних методик",
-                                text: "Вимір внутрішньоочного тиску. Підвищений внутрішньоочний тиск є основною причиною виникнення глаукоми.",
-                            },
-                            {
-                                title: "Діагностика та лікування супутніх захворювань",
-                                text: "Вимір внутрішньоочного тиску. Підвищений внутрішньоочний тиск є основною причиною виникнення глаукоми.",
-                            },
-                            {
                                 title: "Довготривалий зір без окулярів",
                                 text: "За допомогою технології BiVision можна відновити зір як поблизу, так і вдалину, повністю позбавившись очкової залежності навіть за вікової далекозорості.",
                             },
@@ -6429,22 +6413,6 @@ export const servicesData: ServicesProps[] = [
                         text: "Refractive surgery in ophthalmology is suitable for both farsightedness and nearsightedness, including astigmatism.",
                         slider: [
                             {
-                                title: "Comprehensive automated diagnostics",
-                                text: "Allows determining visual acuity using special charts with numbers, letters, or symbols.",
-                            },
-                            {
-                                title: "IPL therapy",
-                                text: "Measures intraocular pressure. Elevated pressure is the main cause of glaucoma.",
-                            },
-                            {
-                                title: "Eyelid massage using special techniques",
-                                text: "Measures intraocular pressure. Elevated pressure is the main cause of glaucoma.",
-                            },
-                            {
-                                title: "Diagnosis and treatment of related diseases",
-                                text: "Measures intraocular pressure. Elevated pressure is the main cause of glaucoma.",
-                            },
-                            {
                                 title: "Long-term vision without glasses",
                                 text: "With BiVision technology, it’s possible to restore both near and distance vision, completely eliminating dependence on glasses even with age-related farsightedness.",
                             },
@@ -6793,22 +6761,6 @@ export const servicesData: ServicesProps[] = [
                         title: "Почему стоит выбрать метод BiVision RLE: ключевые преимущества",
                         text: "Рефракционная хирургия в офтальмологии подходит как при дальнозоркости, так и при близорукости, включая астигматизм.",
                         slider: [
-                            {
-                                title: "Комплексная автоматизированная диагностика",
-                                text: "Позволяет определить остроту зрения с помощью специальных таблиц с цифрами, буквами или символами.",
-                            },
-                            {
-                                title: "IPL-терапия",
-                                text: "Измерение внутриглазного давления. Повышенное давление является основной причиной глаукомы.",
-                            },
-                            {
-                                title: "Массаж век с применением специальных методик",
-                                text: "Измерение внутриглазного давления. Повышенное давление является основной причиной глаукомы.",
-                            },
-                            {
-                                title: "Диагностика и лечение сопутствующих заболеваний",
-                                text: "Измерение внутриглазного давления. Повышенное давление является основной причиной глаукомы.",
-                            },
                             {
                                 title: "Долговременное зрение без очков",
                                 text: "С помощью технологии BiVision можно восстановить зрение как вблизи, так и вдаль, полностью избавившись от очковой зависимости даже при возрастной дальнозоркости.",
