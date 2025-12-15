@@ -97,26 +97,32 @@ export const BookingCallForm = ({
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!validate()) return;
+
         setLoading(true);
         try {
             const token = await recaptchaRef.current?.executeAsync();
             recaptchaRef.current?.reset();
+
             if (!token) {
                 console.error("Recaptcha token missing");
                 return;
             }
 
-            await notificationHandler(() =>
-                onSendData({ ...formData, recaptchaToken: token })
-            );
-            setFormData({
-                name: "",
-                phone: "",
-                title: "Перезвоніть мені",
-                recaptchaToken: "",
+            await notificationHandler(async () => {
+                try {
+                    await onSendData({ ...formData, recaptchaToken: token });
+                    setFormData({
+                        name: "",
+                        phone: "",
+                        title: "Перезвоніть мені",
+                        recaptchaToken: "",
+                    });
+                } catch (err) {
+                    console.error("Помилка при відправці:", err);
+                }
             });
         } catch (error) {
-            console.error("Відправка не вдалася:", error);
+            console.error("Невідома помилка:", error);
         } finally {
             setLoading(false);
         }

@@ -131,20 +131,23 @@ export const BookingForm = ({
                 console.error("Recaptcha token missing");
                 return;
             }
-
-            await notificationHandler(() =>
-                onSendData({ ...formData, recaptchaToken: token })
-            );
-            setFormData({
-                name: "",
-                surname: "",
-                email: "",
-                phone: "",
-                date: "",
-                topic: "",
-                comment: "",
-                title: "Онлайн запис",
-                recaptchaToken: "",
+            await notificationHandler(async () => {
+                try {
+                    await onSendData({ ...formData, recaptchaToken: token });
+                    setFormData({
+                        name: "",
+                        surname: "",
+                        email: "",
+                        phone: "",
+                        date: "",
+                        topic: "",
+                        comment: "",
+                        title: "Онлайн запис",
+                        recaptchaToken: "",
+                    });
+                } catch (err) {
+                    console.error("Помилка при відправці:", err);
+                }
             });
         } catch (error) {
             console.error("Відправка не вдалася:", error);
