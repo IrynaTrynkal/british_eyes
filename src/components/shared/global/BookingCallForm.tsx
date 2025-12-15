@@ -60,41 +60,52 @@ export const BookingCallForm = ({
     };
 
     const onSendData = async (data: typeof formData) => {
-        await fetch("/api/contact", {
+        const res = await fetch("/api/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
         });
+
+        let result;
+        try {
+            result = await res.json();
+        } catch {
+            throw new Error("Server response error");
+        }
+
+        if (!res.ok) {
+            throw new Error(result?.error || "Send failed");
+        }
+
+        return result;
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!validate()) return;
-
+        setLoading(true);
         try {
             const token = await recaptchaRef.current?.executeAsync();
             recaptchaRef.current?.reset();
             if (!token) {
                 console.error("Recaptcha token missing");
-                setLoading(false);
                 return;
             }
-            setLoading(true);
+
             await notificationHandler(() =>
                 onSendData({ ...formData, recaptchaToken: token })
             );
+            setFormData({
+                name: "",
+                phone: "",
+                title: "Перезвоніть мені",
+                recaptchaToken: "",
+            });
         } catch (error) {
             console.error("Відправка не вдалася:", error);
         } finally {
             setLoading(false);
         }
-
-        setFormData({
-            name: "",
-            phone: "",
-            title: "Перезвоніть мені",
-            recaptchaToken: "",
-        });
     };
 
     const inputClass =
