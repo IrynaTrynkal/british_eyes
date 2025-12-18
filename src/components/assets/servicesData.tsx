@@ -2394,7 +2394,7 @@ export const servicesData: ServicesProps[] = [
                                                     "Age-related changes and natural reduction of tear secretion;",
                                                     "Hormonal fluctuations (menopause, pregnancy, endocrine disorders);",
                                                     "Systemic diseases and autoimmune conditions (including Sjögren’s syndrome);",
-                                                    "Medications that ‘dry out’ mucous membranes (antihistamines, antidepressants, diuretics, etc.);",
+                                                    "Medications that “dry out” mucous membranes (antihistamines, antidepressants, diuretics, etc.);",
                                                     "Dehydration, low fluid intake, chronic illnesses, postoperative conditions.",
                                                 ],
                                             },
@@ -2460,6 +2460,86 @@ export const servicesData: ServicesProps[] = [
                                 itemText: [
                                     "After completing the diagnostics, you will receive an official report with an assessment of all vision parameters and eye health. The doctor will provide recommendations for further steps — from prevention to a specific treatment plan.",
                                     "If surgical intervention is planned, its discussion will be a key part of the consultation. It is important to ask and clarify all critical questions before the operation to make an informed decision.",
+                                ],
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: "textsColumns",
+                    data: {
+                        title: "Innovative IPL Treatment",
+                        text: "A modern device-based approach that specifically reduces inflammation of the eyelid margins and restores tear film stability. Combined with diagnostics and supportive care, it ensures predictable outcomes and patient comfort.",
+                        blocks: [
+                            {
+                                title: "Indications for IPL Therapy:",
+                                text: [
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "Dry eye syndrome with a predominantly evaporative component.",
+                                            "Meibomian gland dysfunction and stagnation of secretions that cannot be corrected with eye drops alone.",
+                                            "Chronic blepharitis, recurrent styes, and chalazia.",
+                                            "Telangiectasia and eyelid margin inflammation associated with ocular rosacea.",
+                                            "Demodicosis as part of combination therapy.",
+                                            "Reduced comfort during screen use, sensations of “grittiness”, burning, and redness despite regular eyelid hygiene.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Benefits of IPL Therapy",
+                                text: [
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "Pathogenetic action: targeted impact on microvessels and inflammatory mechanisms that sustain dryness.",
+                                            "Short session without anesthesia or recovery period; patients can immediately return to daily activities.",
+                                            "Controlled cooling ensures safety for the sensitive periorbital area and reduces discomfort.",
+                                            "Can be combined with device-assisted eyelid massage to enhance effectiveness.",
+                                            "Objective monitoring of results using instrumental measurements and photographic documentation.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "IPL Procedure Structure",
+                                text: [
+                                    {
+                                        type: "list",
+                                        numeric: true,
+                                        list: [
+                                            "Initial consultation and assessment of indications: medical history, eyelid examination, and instrumental diagnostics of the ocular surface.",
+                                            "Preparation of the treatment area: skin cleansing, protective eyewear, and application of contact gel.",
+                                            "Treatment session: a series of light pulses applied along the projection of the eyelid margins according to an ophthalmic protocol.",
+                                            "If necessary — device-assisted warming and expression of meibomian gland secretions, along with home care recommendations.",
+                                            "Documentation of results and planning of the next visit.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Treatment Course and Results:",
+                                text: [
+                                    {
+                                        type: "list",
+                                        list: [
+                                            "Number of sessions: usually 3–4 procedures for a lasting result; the regimen may be adjusted individually.",
+                                            "Intervals: 2–3 weeks between sessions to consolidate the anti-inflammatory effect and gland recovery.",
+                                            "Duration: approximately 10–15 minutes per session (+ preparation time and, if indicated, eyelid massage).",
+                                            "During and after the procedure: mild warmth or tingling, temporary skin redness that resolves on its own.",
+                                            "Expected outcome: reduced dryness and irritation, more stable tear film, improved comfort during reading and computer work, and fewer episodes of blepharitis and styes.",
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                title: "Safety and Post-Procedure Care:",
+                                text: [
+                                    {
+                                        type: "text",
+                                        text: "The method has a favorable safety profile when protocols are followed and contraindications are considered. After the session, we recommend using SPF 50+ on the treated area for 7–10 days, avoiding sun exposure, saunas, and swimming pools for 24–48 hours, and postponing aggressive peels or scrubs; makeup in the periorbital area should be avoided for at least 12–24 hours. It is important to maintain eyelid hygiene and adhere to the prescribed eye drop regimen. Follow-up examinations allow assessment of progress and, if necessary, supportive procedures every 6–12 months to maintain comfort and result stability.",
+                                    },
                                 ],
                             },
                         ],

@@ -91,7 +91,7 @@ export default async function NewsPage({
             <div className="prepc:flex prepc:flex-row-reverse prepc:justify-between tab:px-6 pc:px-12 prepc:overflow-visible tab:pb-12 pc:pb-[120px] relative pb-[60px]">
                 <TopicFilter
                     list={blogsList as BlogsListQueryResult}
-                    className="prepc:mb-0 prepc:sticky prepc:top-24 prepc:w-[207px] prepc:mt-0 prepc:h-fit mb-6"
+                    className="prepc:mb-0 prepc:sticky prepc:top-36 prepc:w-[207px] prepc:mt-0 prepc:h-fit mb-6"
                 />
                 <BlogList
                     blogList={blogsList}
