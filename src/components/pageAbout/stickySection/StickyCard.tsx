@@ -31,7 +31,7 @@ export const StickyCard = ({
                 }
             >
                 <p className="tab:mb-7 prepc:w-[24%] prepc:mb-0 prepc:max-w-[321px] mb-5 max-w-[500px] leading-5">
-                    {data.data.uk.text}
+                    {data.data[locale].text}
                 </p>
                 <SliderSticky images={data.images} />
                 <StickyGallery images={data.images} />

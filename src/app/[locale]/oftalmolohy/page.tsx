@@ -107,7 +107,7 @@ export default async function OftalmolohyPage({
             <div className="prepc:flex prepc:flex-row prepc:justify-between tab:px-6 pc:px-12 prepc:overflow-visible tab:pb-12 pc:pb-[120px] relative pb-[60px]">
                 <DoctorsFilter
                     list={doctorsList}
-                    className="prepc:mb-0 prepc:top-24 prepc:w-[25%] prepc:max-w-[318px] prepc:mt-0 prepc:h-fit sticky top-12 z-10 mb-6"
+                    className="prepc:mb-0 prepc:top-36 prepc:w-[25%] prepc:max-w-[318px] prepc:mt-0 prepc:h-fit sticky top-12 z-10 mb-6"
                 />
                 <DoctorsFilteredList
                     list={doctorsList}

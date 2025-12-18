@@ -105,7 +105,7 @@ export default async function EyesDiseasePage({
             <div className="tab:flex tab:flex-row-reverse tab:justify-between tab:px-6 pc:px-12 tab:overflow-visible tab:pb-12 pc:pb-[120px] relative pb-[60px]">
                 <EyeDiseaseFilter
                     list={eyeDiseases}
-                    className="tab:mb-0 tab:sticky prepc:top-24 tab:w-[207px] tab:mt-0 tab:h-fit mb-5"
+                    className="tab:mb-0 tab:sticky prepc:top-36 tab:w-[207px] tab:mt-0 tab:h-fit mb-5"
                 />
                 {data && (
                     <MainAllDiseases

@@ -89,7 +89,7 @@ export default async function ReviewsPage({
                 <TopicFilter
                     id="feedbacks-list"
                     list={feedbacksList}
-                    className="prepc:mb-0 prepc:sticky prepc:top-24 prepc:w-[207px] prepc:mt-0 prepc:h-fit mb-6"
+                    className="prepc:mb-0 prepc:sticky prepc:top-36 prepc:w-[207px] prepc:mt-0 prepc:h-fit mb-6"
                 />
                 <FeedbacksPageList
                     idScrollTo="#feedbacks-list"
