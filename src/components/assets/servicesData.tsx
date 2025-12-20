@@ -250,7 +250,7 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(s => s.key === "perevirka-zoru")!,
         uk: {
             textMain:
-                "Комплексне обстеження та перевірка зору з використанням сучасного обладнання.",
+                "Комплексна діагностика зору на сучасному обладнанні: гострота, рефракція, очний тиск та стан очного дна. Результат — точний діагноз і персональні рекомендації.",
             sections: [
                 {
                     type: "meta",
@@ -558,7 +558,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "Comprehensive examination and vision test using modern equipment.",
+                "Comprehensive eye examination using modern equipment: visual acuity, refraction, intraocular pressure, and fundus evaluation. The result is an accurate diagnosis and personalized recommendations.",
             sections: [
                 {
                     type: "meta",
@@ -865,7 +865,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Комплексное обследование и проверка зрения с использованием современного оборудования.",
+                "Комплексная диагностика зрения на современном оборудовании: острота зрения, рефракция, внутриглазное давление и состояние глазного дна. Результат — точный диагноз и персональные рекомендации.",
             sections: [
                 {
                     type: "meta",
@@ -1176,7 +1176,7 @@ export const servicesData: ServicesProps[] = [
         additionalIcon: "/icons/iq-life.svg",
         uk: {
             textMain:
-                "Хірургічне лікування катаракти, косоокості, кератоконуса та інших офтальмологічних патологій.",
+                "Мікрохірургічне видалення помутнілого кришталика з імплантацією інтраокулярної лінзи. Допомагає повернути чіткість зору та якість життя.",
             sections: [
                 {
                     type: "meta",
@@ -1401,7 +1401,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "Surgical treatment of cataracts, strabismus, keratoconus and other ophthalmological pathologies.",
+                "Microsurgical removal of the clouded lens with implantation of an intraocular lens. Helps restore clear vision and improve quality of life.",
             sections: [
                 {
                     type: "meta",
@@ -1625,7 +1625,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Хирургическое лечение катаракты, косоглазия, кератоконуса и других офтальмологических патологий.",
+                "Микрохирургическое удаление помутневшего хрусталика с имплантацией интраокулярной линзы. Помогает вернуть чёткость зрения и улучшить качество жизни.",
             sections: [
                 {
                     type: "meta",
@@ -1853,7 +1853,7 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(s => s.key === "syndrom-sukhoho-oka")!,
         uk: {
             textMain:
-                "Ми забезпечуємо ефективний та індивідуальний підхід до усунення неприємних симптомів, щоб повернути комфорт та здоров'я вашим очам.",
+                "Діагностика причин сухості та підбір терапії для зменшення печіння, «піску» та втоми очей. Програма лікування підбирається індивідуально.",
             sections: [
                 {
                     type: "meta",
@@ -2249,7 +2249,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "We provide an effective and individual approach to eliminating unpleasant symptoms to restore comfort and health to your eyes.",
+                "Diagnosis of the causes of dry eye and selection of therapy to reduce burning, «gritty» sensations, and eye fatigue. The treatment program is tailored individually.",
             sections: [
                 {
                     type: "meta",
@@ -2644,7 +2644,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Мы обеспечиваем эффективный и индивидуальный подход к устранению неприятных симптомов, чтобы вернуть комфорт и здоровье вашим глазам.",
+                "Диагностика причин сухости глаз и подбор терапии для уменьшения жжения, ощущения «песка» и усталости глаз. Программа лечения подбирается индивидуально.",
             sections: [
                 {
                     type: "meta",
@@ -2963,7 +2963,8 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(s => s.key === "vitreoretinalna-hirurgiya")!,
         additionalIcon: "/icons/iq-life.svg",
         uk: {
-            textMain: "Лікування захворювань сітківки та склоподібного тіла.",
+            textMain:
+                "Операції на склоподібному тілі та сітківці при складних захворюваннях. Проводиться з використанням мікрохірургічних технологій.",
             sections: [
                 {
                     type: "meta",
@@ -3170,7 +3171,8 @@ export const servicesData: ServicesProps[] = [
             ],
         },
         en: {
-            textMain: "Treatment of diseases of the retina and vitreous body.",
+            textMain:
+                "Surgical treatment of the vitreous body and retina for complex eye diseases. Performed using advanced microsurgical technologies.",
             sections: [
                 {
                     type: "meta",
@@ -3376,7 +3378,8 @@ export const servicesData: ServicesProps[] = [
             ],
         },
         ru: {
-            textMain: "Лечение заболеваний сетчатки и стекловидного тела.",
+            textMain:
+                "Операции на стекловидном теле и сетчатке при сложных заболеваниях глаза. Проводятся с использованием микрохирургических технологий.",
             sections: [
                 {
                     type: "meta",
@@ -3587,7 +3590,7 @@ export const servicesData: ServicesProps[] = [
         additionalIcon: "/icons/iq-lasik.svg",
         uk: {
             textMain:
-                "Сучасні методи виправлення рефракційних порушень відновлення чіткості зору.",
+                "Високоточне відновлення зору при короткозорості, далекозорості та астигматизмі. Процедура амбулаторна, швидка, з коротким періодом відновлення.",
 
             sections: [
                 {
@@ -3884,7 +3887,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "Modern methods of correcting refractive errors and restoring visual acuity.",
+                "High-precision vision correction for myopia, hyperopia, and astigmatism. The procedure is outpatient, fast, and involves a short recovery period.",
             sections: [
                 {
                     type: "meta",
@@ -4172,7 +4175,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Современные методы устранения рефракционных нарушений восстановления четкости зрения.",
+                "Высокоточное восстановление зрения при близорукости, дальнозоркости и астигматизме. Процедура амбулаторная, быстрая, с коротким периодом восстановления.",
             sections: [
                 {
                     type: "meta",
@@ -4462,7 +4465,7 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(s => s.key === "dityache-viddilennya")!,
         uk: {
             textMain:
-                "У Дитячій клініці Злата проводимо перевірку зору у дітей від немовлят до підлітків.",
+                "Огляд і лікування дітей від раннього віку: діагностика, профілактика та корекція порушень зору. Пояснюємо батькам план лікування просто і зрозуміло.",
             sections: [
                 {
                     type: "meta",
@@ -4770,7 +4773,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "At Zlata Children's Clinic, we provide eye examinations for children — from infants to teenagers.",
+                "Examination and treatment of children from an early age: diagnostics, prevention, and correction of visual disorders. We explain the treatment plan to parents in a clear and understandable way.",
             sections: [
                 {
                     type: "meta",
@@ -5077,7 +5080,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "В Детской клинике Злата проводится проверка зрения у детей — от младенцев до подростков.",
+                "Осмотр и лечение детей с раннего возраста: диагностика, профилактика и коррекция нарушений зрения. Родителям понятным языком объясняется план лечения.",
             sections: [
                 {
                     type: "meta",
@@ -5386,7 +5389,7 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(s => s.key === "likuvannya-keratokonusa")!,
         uk: {
             textMain:
-                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+                "Сучасні методи стабілізації рогівки та покращення зору, включно з підбором спеціальної корекції. Мета — зупинити прогресування та зберегти зір.",
             sections: [
                 {
                     type: "meta",
@@ -5626,7 +5629,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+                "Modern methods to stabilize the cornea and improve vision, including the selection of specialized vision correction. The goal is to stop progression and preserve vision.",
             sections: [
                 {
                     type: "meta",
@@ -5866,7 +5869,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+                "Современные методы стабилизации роговицы и улучшения зрения, включая подбор специализированной коррекции. Цель — остановить прогрессирование и сохранить зрение.",
             sections: [
                 {
                     type: "meta",
@@ -6109,7 +6112,7 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(s => s.key === "refrakczijna-lensektomiya")!,
         uk: {
             textMain:
-                "BiVision RLE (рефракційна ленсектомія) — ефективний метод корекції пресбіопії (вікова далекозорість).",
+                "Заміна кришталика для корекції зору, коли лазерна корекція не показана. Дозволяє отримати стабільний зір на різних дистанціях.",
             sections: [
                 {
                     type: "meta",
@@ -6458,7 +6461,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "BiVision RLE (refractive lensectomy) is an effective method of correcting presbyopia (age-related farsightedness).",
+                "Lens replacement for vision correction when laser correction is not indicated. Allows achieving stable vision at different distances.",
             sections: [
                 {
                     type: "meta",
@@ -6807,7 +6810,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "BiVision RLE (рефракционная ленсектомия) – эффективный метод коррекции пресбиопии (возрастная дальнозоркость).",
+                "Замена хрусталика для коррекции зрения в случаях, когда лазерная коррекция не показана. Позволяет получить стабильное зрение на разных дистанциях.",
             sections: [
                 {
                     type: "meta",
@@ -7161,7 +7164,7 @@ export const servicesData: ServicesProps[] = [
         )!,
         uk: {
             textMain:
-                "Можливість чітко візуалізувати патологічні зміни дозволяє лікарю виконувати процедуру гранично точно.",
+                "Амбулаторні лазерні процедури для лікування та профілактики ускладнень при патологіях сітківки й інших станах. Точно, швидко та контрольовано.",
             sections: [
                 {
                     type: "meta",
@@ -7359,7 +7362,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "The ability to clearly visualize pathological changes allows the doctor to perform the procedure with extreme precision.",
+                "Outpatient laser procedures for treatment and prevention of complications in retinal pathologies and other conditions. Precise, fast, and controlled.",
             sections: [
                 {
                     type: "meta",
@@ -7557,7 +7560,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Возможность четко визуализировать патологические изменения позволяет врачу выполнять процедуру предельно точно.",
+                "Амбулаторные лазерные процедуры для лечения и профилактики осложнений при патологиях сетчатки и других состояниях. Точно, быстро и контролируемо.",
             sections: [
                 {
                     type: "meta",
@@ -7759,7 +7762,7 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(s => s.key === "intravitrealni-inekczii")!,
         uk: {
             textMain:
-                "Лікування кератоконусу методом BritishX - перший результат за 12 хвилин.",
+                "Введення препарату в порожнину ока для лікування захворювань сітківки (за показаннями). Процедура виконується стерильно та під контролем лікаря.",
             sections: [
                 {
                     type: "meta",
@@ -7987,7 +7990,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "Keratoconus treatment with the BritishX method - first results in 12 minutes.",
+                "Administration of medication into the eye cavity for the treatment of retinal diseases (according to indications). The procedure is performed under sterile conditions and physician supervision.",
             sections: [
                 {
                     type: "meta",
@@ -8215,7 +8218,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Лечение кератоконуса методом BritishX – первый результат за 12 минут.",
+                "Введение препарата в полость глаза для лечения заболеваний сетчатки (по показаниям). Процедура выполняется в стерильных условиях под контролем врача.",
             sections: [
                 {
                     type: "meta",
@@ -8448,7 +8451,7 @@ export const servicesData: ServicesProps[] = [
         )!,
         uk: {
             textMain:
-                "Ми лікуємо всі види глаукоми із застосуванням найсучасніших і ефективних хірургічних методик.",
+                "Операції для зниження внутрішньоочного тиску та збереження зорового нерва. Підбір методу — індивідуально за результатами обстеження.",
             sections: [
                 {
                     type: "meta",
@@ -8662,7 +8665,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "We treat all types of glaucoma using the most modern and effective surgical techniques.",
+                "Procedures aimed at reducing intraocular pressure and preserving the optic nerve. The method is selected individually based on examination results.",
             sections: [
                 {
                     type: "meta",
@@ -8876,7 +8879,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Мы лечим все виды глаукомы с применением самых современных и эффективных хирургических методик.",
+                "Операции, направленные на снижение внутриглазного давления и сохранение зрительного нерва. Метод подбирается индивидуально по результатам обследования.",
             sections: [
                 {
                     type: "meta",
@@ -9093,7 +9096,7 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(s => s.key === "likuvannya-kosookosti")!,
         uk: {
             textMain:
-                "Ми пропонуємо новітні методи діагностики та лікування косоокості, а також закріплення результату.",
+                "Діагностика причин та комплексне лікування: від підбору корекції до хірургії. Мета — правильне положення очей і краща якість зору.",
             sections: [
                 {
                     type: "meta",
@@ -9293,7 +9296,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "We offer the latest methods of diagnosing and treating strabismus, as well as consolidating the result.",
+                "Diagnosis of underlying causes and comprehensive treatment, from optical correction to surgery. The goal is proper eye alignment and improved visual quality.",
             sections: [
                 {
                     type: "meta",
@@ -9495,7 +9498,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Мы предлагаем новейшие методы диагностики и лечения косоглазия, а также закрепление результата.",
+                "Диагностика причин и комплексное лечение: от подбора коррекции до хирургического вмешательства. Цель — правильное положение глаз и улучшение качества зрения.",
             sections: [
                 {
                     type: "meta",
@@ -9700,7 +9703,7 @@ export const servicesData: ServicesProps[] = [
         )!,
         uk: {
             textMain:
-                "Хірургія повік і кон’юнктиви (блефаропластика та інші втручання).",
+                "Естетичні та функціональні операції на повіках і поверхневих тканинах ока. Допомагає усунути дискомфорт і покращити зовнішній вигляд.",
             sections: [
                 {
                     type: "meta",
@@ -9949,7 +9952,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "Eyelid and conjunctival surgery (blepharoplasty and other interventions).",
+                "Aesthetic and functional procedures on the eyelids and ocular surface tissues. Helps relieve discomfort and improve appearance.",
             sections: [
                 {
                     type: "meta",
@@ -10197,7 +10200,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Хирургия век и конъюнктивы (блефаропластика и другие вмешательства).",
+                "Эстетические и функциональные операции на веках и поверхностных тканях глаза. Помогают устранить дискомфорт и улучшить внешний вид.",
             sections: [
                 {
                     type: "meta",
@@ -10447,7 +10450,8 @@ export const servicesData: ServicesProps[] = [
     {
         name: servicesList.find(s => s.key === "ksenonoterapiya")!,
         uk: {
-            textMain: "Методика «Янгельські сни».",
+            textMain:
+                "Інгаляційна терапія ксеноном за показаннями для підтримки відновлення та зниження стресового навантаження. Проводиться під медичним контролем.",
             sections: [
                 {
                     type: "meta",
@@ -10666,7 +10670,8 @@ export const servicesData: ServicesProps[] = [
             ],
         },
         en: {
-            textMain: "«Angel Dreams» Method.",
+            textMain:
+                "Inhalation therapy with xenon, used according to indications to support recovery and reduce stress load. Performed under medical supervision.",
             sections: [
                 {
                     type: "meta",
@@ -10885,7 +10890,8 @@ export const servicesData: ServicesProps[] = [
             ],
         },
         ru: {
-            textMain: "Методика «Ангельские сны».",
+            textMain:
+                "Ингаляционная терапия ксеноном по показаниям для поддержки восстановления и снижения стрессовой нагрузки. Проводится под медицинским контролем.",
             sections: [
                 {
                     type: "meta",
@@ -11108,7 +11114,7 @@ export const servicesData: ServicesProps[] = [
         name: servicesList.find(s => s.key === "anesteziologichnij-posibnik")!,
         uk: {
             textMain:
-                "Анестезіологічний супровід у нашій клініці забезпечує операції без болю та з максимальною безпекою.",
+                "Безпечне знеболення та анестезіологічний супровід під час операцій. Контроль стану пацієнта на всіх етапах.",
             sections: [
                 {
                     type: "meta",
@@ -11323,7 +11329,7 @@ export const servicesData: ServicesProps[] = [
         },
         en: {
             textMain:
-                "Anesthesia support in our clinic ensures pain-free surgeries with maximum safety.",
+                "Safe pain management and anesthetic care during surgical procedures. Continuous monitoring of the patient’s condition at all stages.",
             sections: [
                 {
                     type: "meta",
@@ -11537,7 +11543,7 @@ export const servicesData: ServicesProps[] = [
         },
         ru: {
             textMain:
-                "Анестезиологическое сопровождение в нашей клинике обеспечивает операции без боли и с максимальной безопасностью.",
+                "Безопасное обезболивание и анестезиологическая поддержка во время операций. Контроль состояния пациента на всех этапах.",
             sections: [
                 {
                     type: "meta",
