@@ -12016,6 +12016,14 @@ export const raynerCTA: {
         title: "Поверніть собі якісний зір — легко та без окулярів",
         text: "Ми дотримуємося високих стандартів безпеки та стерильності, приділяючи увагу кожному етапу лікування — від обстеження до післяопераційних оглядів, щоб забезпечити вам спокій та комфорт.",
     },
-    en: { title: "", text: "" },
-    ru: { title: "", text: "" },
+    en: {
+        bigText: true,
+        title: "Restore clear, high-quality vision — easily and without glasses",
+        text: "We adhere to the highest standards of safety and sterility, paying close attention to every stage of treatment — from examination to post-operative follow-ups — to ensure your peace of mind and comfort.",
+    },
+    ru: {
+        bigText: true,
+        title: "Верните себе качественное зрение — легко и без очков",
+        text: "Мы придерживаемся высоких стандартов безопасности и стерильности, уделяя внимание каждому этапу лечения — от обследования до послеоперационных осмотров, чтобы обеспечить вам спокойствие и комфорт.",
+    },
 };
