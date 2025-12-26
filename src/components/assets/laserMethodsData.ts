@@ -631,7 +631,7 @@ export const subpageCataractData: SubPageType[] = [
             },
             ru: {
                 slug: "iq-5-minutes",
-                title: "SportLine LASEK",
+                title: "iq-5-minutes",
                 titleSEO:
                     "iQ-5 MINUTES – сверхбыстрая операция по удалению катаракты за 5 минут | Британский офтальмологический центр",
                 descriptionSEO:
@@ -699,7 +699,7 @@ export const subpageCataractData: SubPageType[] = [
             },
             en: {
                 slug: "iq-5-minutes",
-                title: "SportLine LASEK",
+                title: "iq-5-minutes",
                 titleSEO:
                     "iQ-5 MINUTES – ultra-fast cataract surgery in 5 minutes | British Ophthalmology Centre",
                 descriptionSEO:
