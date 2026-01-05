@@ -4,7 +4,6 @@ export async function POST(req: NextRequest) {
     try {
         const data = await req.json();
 
-        // const { recaptchaToken, ...safeData } = data;
         const res = await fetch(
             process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL!,
             {

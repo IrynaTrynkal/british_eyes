@@ -60,16 +60,38 @@ export const BookingCallForm = ({
     };
 
     const onSendData = async (data: typeof formData) => {
+        const { recaptchaToken, ...safeData } = data;
         const res = await fetch("/api/googleSheets", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
+            body: JSON.stringify(safeData),
         });
 
         const result = await res.json();
 
-        if (!res.ok) {
+        if (!res.ok || !result.success) {
             throw new Error(result?.error || "Send failed");
+        }
+        try {
+            if (recaptchaRef.current) {
+                const token = await recaptchaRef.current.executeAsync();
+                recaptchaRef.current.reset();
+
+                if (token) {
+                    fetch("/api/contact", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            ...safeData,
+                            recaptchaToken: token,
+                        }),
+                    }).catch(err => {
+                        console.warn("Email skipped:", err);
+                    });
+                }
+            }
+        } catch (err) {
+            console.warn("Recaptcha/email error:", err);
         }
 
         return result;
@@ -80,13 +102,6 @@ export const BookingCallForm = ({
 
         setLoading(true);
         try {
-            // const token = await recaptchaRef.current?.executeAsync();
-            // recaptchaRef.current?.reset();
-            // if (!token) {
-            //     console.error("Recaptcha token missing");
-            //     return;
-            // }
-
             await notificationHandler(() => onSendData({ ...formData }));
 
             setFormData({
