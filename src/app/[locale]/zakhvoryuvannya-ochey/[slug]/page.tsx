@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Script from "next/script";
 import { getTranslations } from "next-intl/server";
 import { Fragment } from "react";
@@ -69,10 +69,24 @@ interface PageProps {
 
 export default async function EyeDiseasePage({ params }: PageProps) {
     const { locale, slug } = await params;
+
     const [t, ti] = await Promise.all([
         getTranslations("Menu"),
         getTranslations("HomePage"),
     ]);
+    const decodedSlug = decodeURIComponent(slug);
+
+    const legacySlugsMap: Record<string, string> = {
+        астигматизм: "astigmatizm",
+        далекозорість: "dalekozorist",
+        катаракта: "katarakta",
+        "короткозорість-міопія": "korotkozorist-miopiya",
+        косоокість: "kosookist",
+    };
+
+    if (decodedSlug in legacySlugsMap) {
+        redirect(`/zakhvoryuvannya-ochey/${legacySlugsMap[decodedSlug]}`);
+    }
     const displayedDisease: EyeDiseaseType | undefined = eyeDiseaseData.find(
         disease => disease.name.key === slug
     );
