@@ -199,31 +199,27 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/en/service-prices/eye-exam",
-                destination: "https://eyes.ua/en/services/eye-exam/",
+                destination: "/en/services/eye-exam/",
                 permanent: true,
             },
             {
                 source: "/en/service-prices/laser-treatment-of-eye-diseases",
-                destination:
-                    "https://eyes.ua/en/services/laser-treatment-of-eye-diseases/",
+                destination: "/en/services/laser-treatment-of-eye-diseases/",
                 permanent: true,
             },
             {
                 source: "/en/service-prices/laser-vision-correction",
-                destination:
-                    "https://eyes.ua/en/services/laser-vision-correction/",
+                destination: "/en/services/laser-vision-correction/",
                 permanent: true,
             },
             {
                 source: "/en/service-prices/refractive-lensectomy",
-                destination:
-                    "https://eyes.ua/en/services/refractive-lensectomy/",
+                destination: "/en/services/refractive-lensectomy/",
                 permanent: true,
             },
             {
                 source: "/en/service-prices/vitreoretinal-surgery",
-                destination:
-                    "https://eyes.ua/en/services/vitreoretinal-surgery/",
+                destination: "/en/services/vitreoretinal-surgery/",
                 permanent: true,
             },
             {
@@ -234,36 +230,6 @@ const nextConfig: NextConfig = {
             {
                 source: "/posluhy/likuvannya-katarakti/iq-life-zhyvyy-zir",
                 destination: "/posluhy/likuvannya-katarakti",
-                permanent: true,
-            },
-            {
-                source: "/posluhy/вітреоретинальна-хірургія",
-                destination: "/posluhy/vitreoretinalna-hirurgiya",
-                permanent: true,
-            },
-            {
-                source: "/posluhy/лазерна-корекція-зору",
-                destination: "/posluhy/lazerna-korekcziya-zoru",
-                permanent: true,
-            },
-            {
-                source: "/posluhy/лазерна-корекція-зору/iq-lasik-oxygen-3d",
-                destination: "/posluhy/lazerna-korekcziya-zoru",
-                permanent: true,
-            },
-            {
-                source: "/posluhy/лазерна-корекція-зору/sportlife-lasik",
-                destination: "/posluhy/lazerna-korekcziya-zoru",
-                permanent: true,
-            },
-            {
-                source: "/posluhy/лікування-катаракти/iq-5-minutes",
-                destination: "/posluhy/likuvannya-katarakti",
-                permanent: true,
-            },
-            {
-                source: "/posluhy/рефракційна-ленсектомія",
-                destination: "/posluhy/refrakczijna-lensektomiya",
                 permanent: true,
             },
             {
@@ -309,31 +275,6 @@ const nextConfig: NextConfig = {
             {
                 source: "/viddilennya/oftalmologi-konsultativno-diagnostichnogo-viddilennya",
                 destination: "/oftalmolohy",
-                permanent: true,
-            },
-            {
-                source: "/zakhvoryuvannya-ochey/астигматизм",
-                destination: "/zakhvoryuvannya-ochey/astigmatizm",
-                permanent: true,
-            },
-            {
-                source: "/zakhvoryuvannya-ochey/далекозорість",
-                destination: "/zakhvoryuvannya-ochey/dalekozorist",
-                permanent: true,
-            },
-            {
-                source: "/zakhvoryuvannya-ochey/катаракта",
-                destination: "/zakhvoryuvannya-ochey/katarakta",
-                permanent: true,
-            },
-            {
-                source: "/zakhvoryuvannya-ochey/короткозорість-міопія",
-                destination: "/zakhvoryuvannya-ochey/korotkozorist-miopiya",
-                permanent: true,
-            },
-            {
-                source: "/zakhvoryuvannya-ochey/косоокість",
-                destination: "/zakhvoryuvannya-ochey/kosookist",
                 permanent: true,
             },
         ];

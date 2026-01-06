@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Script from "next/script";
 import { getTranslations } from "next-intl/server";
 
@@ -79,6 +79,29 @@ export default async function ServicePage({ params }: ServicePageProps) {
         getTranslations("Menu"),
         getTranslations("HomePage"),
     ]);
+    const decodedSlug = decodeURIComponent(slug);
+    const oldLaserSlugs = [
+        "лазерна-корекція-зору",
+        "лазерна-корекція-зору/iq-lasik-oxygen-3d",
+        "лазерна-корекція-зору/sportlife-lasik",
+    ];
+    const oldCataractSlugs = [
+        "лікування-катаракти",
+        "лікування-катаракти/iq-5-minutes",
+    ];
+
+    if (oldLaserSlugs.includes(decodedSlug)) {
+        redirect("/posluhy/lazerna-korekcziya-zoru");
+    }
+    if (oldCataractSlugs.includes(decodedSlug)) {
+        redirect("/posluhy/likuvannya-katarakti");
+    }
+    if (decodedSlug === "вітреоретинальна-хірургія") {
+        redirect("/posluhy/vitreoretinalna-hirurgiya");
+    }
+    if (decodedSlug === "рефракційна-ленсектомія") {
+        redirect("/posluhy/refrakczijna-lensektomiya");
+    }
     if (slug === "lazerna-korekcziya-zoru" || slug === "likuvannya-katarakti") {
         notFound();
     }
