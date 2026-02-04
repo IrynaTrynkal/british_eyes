@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
+import { urlFor } from "@/sanity/lib/image";
 
 import { BlogsListQueryResult } from "../../../sanity.types";
 
@@ -13,6 +14,15 @@ export const BlogCardForAllNewsPage = ({
     btnName: string;
 }) => {
     const t = useTranslations("Menu");
+    const imageUrl = news.image
+        ? urlFor(news.image)
+              .width(640)
+              .height(320)
+              .fit("crop")
+              .quality(75)
+              .auto("format")
+              .url()
+        : null;
 
     return (
         <>
@@ -27,7 +37,7 @@ export const BlogCardForAllNewsPage = ({
                             "aspect-[435/220] w-full bg-cover bg-blend-hard-light"
                         }
                         style={{
-                            backgroundImage: `linear-gradient(#065d43, #065d43), url(${news.image})`,
+                            backgroundImage: `linear-gradient(#065d43, #065d43), url(${imageUrl})`,
                         }}
                     />
                 ) : (
