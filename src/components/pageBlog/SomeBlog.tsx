@@ -2,12 +2,21 @@ import { format } from "date-fns";
 import { useTranslations } from "next-intl";
 
 import { PortableTextRenderer } from "@/sanity/components/PortableTextComponents";
+import { urlFor } from "@/sanity/lib/image";
 
 import { BlogQueryResult } from "../../../sanity.types";
 
 export const SomeBlog = ({ blog }: { blog: BlogQueryResult }) => {
     const t = useTranslations("Menu");
     if (!blog) return null;
+    const imageUrl = blog.image
+        ? urlFor(blog.image)
+              .width(640)
+              .fit("crop")
+              .quality(75)
+              .auto("format")
+              .url()
+        : null;
 
     return (
         <section className="content pb-[60px]">
@@ -21,7 +30,7 @@ export const SomeBlog = ({ blog }: { blog: BlogQueryResult }) => {
                                     "aspect-[435/220] w-full bg-cover bg-blend-hard-light"
                                 }
                                 style={{
-                                    backgroundImage: `linear-gradient(#065d43, #065d43), url(${blog.image})`,
+                                    backgroundImage: `linear-gradient(#065d43, #065d43), url(${imageUrl})`,
                                 }}
                             />
                         ) : (
