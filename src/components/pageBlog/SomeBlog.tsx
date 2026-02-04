@@ -12,7 +12,6 @@ export const SomeBlog = ({ blog }: { blog: BlogQueryResult }) => {
     const imageUrl = blog.image
         ? urlFor(blog.image)
               .width(640)
-              .height(320)
               .fit("crop")
               .quality(75)
               .auto("format")

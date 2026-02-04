@@ -17,7 +17,6 @@ export const BlogCardForAllNewsPage = ({
     const imageUrl = news.image
         ? urlFor(news.image)
               .width(640)
-              .height(320)
               .fit("crop")
               .quality(75)
               .auto("format")
