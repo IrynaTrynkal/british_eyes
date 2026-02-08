@@ -37,9 +37,9 @@ export const SomeBlog = ({ blog }: { blog: BlogQueryResult }) => {
                             <div className="aspect-[435/220] h-auto w-full bg-[url(/images/megaphone1.jpg)] bg-cover bg-center" />
                         )}
                     </div>
-                    <h3 className="font-oswald tab:text-2xl prepc:text-3xl pc:text-5xl pc:min-h-24 pc:mb-3 tab:min-h-[57px] pc:line-clamp-3 mb-5 line-clamp-2 [display:-webkit-box] overflow-hidden leading-[100%] font-medium break-words">
+                    <h1 className="font-oswald tab:text-2xl prepc:text-3xl pc:text-5xl pc:min-h-24 pc:mb-3 tab:min-h-[57px] pc:line-clamp-3 mb-5 line-clamp-2 [display:-webkit-box] overflow-hidden leading-[100%] font-medium break-words">
                         {blog.title}
-                    </h3>
+                    </h1>
 
                     <div className="pc:gap-5 tab:mb-0 prepc:pb-4 mb-3 flex items-center justify-between border-b border-black pb-2">
                         <p className="w-fit leading-[100%] text-gray-500 uppercase">
