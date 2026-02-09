@@ -1,14 +1,40 @@
-# *
-User-agent: *
+# === AI / AGGREGATOR BOTS (BLOCK) ===
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# === ALLOW SEARCH ENGINES ===
+User-agent: Googlebot
 Allow: /
 
-# *
-User-agent: *
-Disallow: /api/*
-Disallow: /studio/*
+User-agent: Bingbot
+Allow: /
 
-# Host
+User-agent: Yandex
+Allow: /
+
+# === DEFAULT RULES ===
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /studio/
+
+# === HOST ===
 Host: http://localhost:3000
 
-# Sitemaps
+# === SITEMAP ===
 Sitemap: http://localhost:3000/sitemap.xml
