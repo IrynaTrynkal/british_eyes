@@ -53,9 +53,9 @@ export const HeroRayner = () => {
                         <p className="text-ivory prepc:w-fit mr-0 ml-auto w-[130px] leading-[120%] uppercase">
                             {t("raynerText2")}
                         </p>
-                        <h1 className="text-white-100 font-oswald pc:text-[107px] prepc:text-8xl text-[44px] leading-[100%] uppercase">
+                        <h2 className="text-white-100 font-oswald pc:text-[107px] prepc:text-8xl text-[44px] leading-[100%] uppercase">
                             Galaxy
-                        </h1>
+                        </h2>
                     </div>
                 </div>
                 <CustomList className="prepc:gap-4 mx-auto" list={list} />

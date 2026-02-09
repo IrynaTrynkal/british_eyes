@@ -277,6 +277,26 @@ const nextConfig: NextConfig = {
                 destination: "/oftalmolohy",
                 permanent: true,
             },
+            {
+                source: "/ru/uslugi/likuvannya-katarakti",
+                destination: "/ru/uslugi/lechenie-katarakty",
+                permanent: true,
+            },
+            {
+                source: "/ru/uslugi/lazerna-korekcziya-zoru",
+                destination: "/ru/uslugi/lazernaya-korrekciya-zreniya",
+                permanent: true,
+            },
+            {
+                source: "/en/services/lazerna-korekcziya-zoru",
+                destination: "/en/services/laser-vision-correction",
+                permanent: true,
+            },
+            {
+                source: "/en/services/likuvannya-katarakti",
+                destination: "/en/services/cataract-treatment",
+                permanent: true,
+            },
         ];
     },
 };

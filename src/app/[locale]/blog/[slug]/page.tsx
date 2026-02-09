@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { getTranslations } from "next-intl/server";
@@ -17,10 +17,7 @@ type Props = {
     params: Promise<{ locale: string; slug: string }>;
 };
 
-export async function generateMetadata(
-    { params }: Props,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale, slug } = await params;
 
     const blog = await sanityFetch({
@@ -29,9 +26,6 @@ export async function generateMetadata(
         tags: ["blog"],
     });
 
-    const previousImages = parent ? (await parent).openGraph?.images || [] : [];
-
-    const blogImage = blog?.image ? blog.image : "";
     const langPrefix = locale === "en" ? "/en" : locale === "ru" ? "/ru" : "";
 
     return {
@@ -49,7 +43,6 @@ export async function generateMetadata(
         openGraph: {
             title: blog?.title || "",
             description: blog?.shortText || "",
-            images: [blogImage, ...previousImages],
             type: "website",
         },
     };

@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { getTranslations } from "next-intl/server";
@@ -11,7 +11,6 @@ import { SomeDoctorPageMain } from "@/components/pageDoctors/SomeDoctorPage";
 import { Booking } from "@/components/shared/booking/Booking";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { sanityFetch } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
 import { doctorQuery } from "@/sanity/lib/queries";
 import { LocaleType } from "@/types/LocaleType";
 import { toPlainText } from "@/utils/toPlainText";
@@ -20,10 +19,7 @@ type Props = {
     params: Promise<{ locale: string; slug: string }>;
 };
 
-export async function generateMetadata(
-    { params }: Props,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale, slug } = await params;
 
     const doctor = await sanityFetch({
@@ -31,10 +27,6 @@ export async function generateMetadata(
         params: { language: locale, slug },
         tags: ["doctor", "orderDoctors"],
     });
-
-    const previousImages = parent ? (await parent).openGraph?.images || [] : [];
-
-    const photo = doctor?.photo ? urlFor(doctor.photo).url() : "";
 
     const langPrefix =
         locale === "en"
@@ -60,7 +52,6 @@ export async function generateMetadata(
         openGraph: {
             title: doctor?.name!,
             description: description,
-            images: [photo, ...previousImages],
             type: "website",
         },
     };
