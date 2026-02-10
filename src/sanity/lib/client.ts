@@ -8,6 +8,7 @@ export const client = createClient({
     apiVersion,
     useCdn: true,
     perspective: "published",
+    // token: process.env.SANITY_READ_TOKEN,
 });
 
 export async function sanityFetch<const Q extends string>({

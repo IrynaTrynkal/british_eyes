@@ -12,9 +12,9 @@ export const MainPatients = () => {
 
     return (
         <section className="content tab:pb-12 pc:pb-[120px] tab:flex tab:justify-between relative pb-[60px]">
-            <h2 className="title-section tab:w-[30%] prepc:w-[33%] mb-6 whitespace-pre-line">
+            <h1 className="title-section tab:w-[30%] prepc:w-[33%] mb-6 whitespace-pre-line">
                 {t("title")}
-            </h2>
+            </h1>
             <ul className="tab:w-[68%] prepc:w-[66%] prepc:gap-5 flex flex-col gap-3">
                 {dataPatientsPage.map(item => (
                     <li key={item.key}>
