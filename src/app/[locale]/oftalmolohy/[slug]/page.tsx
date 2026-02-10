@@ -13,7 +13,6 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { sanityFetch } from "@/sanity/lib/client";
 import { doctorQuery } from "@/sanity/lib/queries";
 import { LocaleType } from "@/types/LocaleType";
-import { toPlainText } from "@/utils/toPlainText";
 
 type Props = {
     params: Promise<{ locale: string; slug: string }>;
@@ -28,6 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         tags: ["doctor", "orderDoctors"],
     });
 
+    const t = await getTranslations("Doctors");
+
     const langPrefix =
         locale === "en"
             ? "/en/ophthalmologists"
@@ -35,7 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
               ? "/ru/oftalmologi"
               : "oftalmolohy";
 
-    const description = doctor?.position ? toPlainText(doctor.position) : "";
+    const title = `${doctor?.name!} - ${t("titleDocSEO")}`;
+    const description = `${doctor?.name!} - ${t("descriptionDocSEO")}`;
 
     return {
         metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
@@ -47,11 +49,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 "ru-RU": `/ru/oftalmologi/${slug}`,
             },
         },
-        title: doctor?.name,
-        description: description,
+        title,
+        description,
         openGraph: {
-            title: doctor?.name!,
-            description: description,
+            title,
+            description,
             type: "website",
         },
     };
