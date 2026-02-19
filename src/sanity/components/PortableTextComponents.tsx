@@ -13,6 +13,8 @@ import { MediumText } from "@/sanity/components/MediumText";
 import { urlFor } from "../lib/image";
 import { BlackText } from "./BlackText";
 import { GreyText } from "./GreyText";
+import { H2Text } from "./H2Text";
+import { H3Text } from "./H3Text";
 import { MyPortableTextBlock } from "./PortableTextPriceComponents";
 import { SubtitleWithGap } from "./SubtitleWithGap";
 
@@ -98,6 +100,8 @@ const components: PortableTextComponents = {
                 </p>
             );
         },
+        h2: ({ children }: any) => <H2Text>{children}</H2Text>,
+        h3: ({ children }: any) => <H3Text>{children}</H3Text>,
     },
     types: {
         image: ({ value }) => {

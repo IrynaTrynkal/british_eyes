@@ -14,7 +14,11 @@ export const portableTextAllType = defineField({
     of: [
         defineArrayMember({
             type: "block",
-            styles: [],
+            styles: [
+                { title: "Звичайний текст", value: "normal" },
+                { title: "H2", value: "h2", icon: () => "H2" },
+                { title: "H3", value: "h3", icon: () => "H3" },
+            ],
             lists: [
                 { title: "З крапками", value: "bullet" },
                 { title: "Нумерований", value: "number" },
